@@ -111,6 +111,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://github.com/sofaugeras/1NSI/T3_Type_construit/3.1_Listes/manipulation/</loc>
+         <lastmod>2023-01-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://github.com/sofaugeras/1NSI/T3_Type_construit/3.2_Tuples/Tuples/</loc>
          <lastmod>2023-01-19</lastmod>
          <changefreq>daily</changefreq>
@@ -121,12 +126,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://github.com/sofaugeras/1NSI/T3_Type_construit/3.2_Tuples/exercices/</loc>
+         <lastmod>2023-01-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://github.com/sofaugeras/1NSI/T3_Type_construit/3.3_Dictionnaires/Dictionnaires/</loc>
          <lastmod>2023-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T3_Type_construit/3.3_Dictionnaires/cours/</loc>
+         <lastmod>2023-01-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/sofaugeras/1NSI/T3_Type_construit/3.4_bilan/cours/</loc>
          <lastmod>2023-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -262,11 +277,6 @@
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T6_Traitement_de_donnees/6.3_Pandas/cours/</loc>
-         <lastmod>2023-01-19</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/sofaugeras/1NSI/T7_IHM_Web/pagesperso/</loc>
          <lastmod>2023-01-19</lastmod>
          <changefreq>daily</changefreq>
     </url>

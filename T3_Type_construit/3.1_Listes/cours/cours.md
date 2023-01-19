@@ -127,8 +127,7 @@ for k in famille:
 ```
 En effet le nom de variable ```k``` est habituellement utilisé pour les nombres (les indices, les compteurs...).
 
-{{ initexo(0)}}
-!!! example "{{ exercice() }}"
+!!! example "exercice 3"
     === "Énoncé"
         Après un référendum, la liste ```urne``` contient uniquement des ```'oui'``` ou des ```'non'```.
         Déterminer le vainqueur de ce référendum.
@@ -225,9 +224,7 @@ Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste)
 - la complexité : il faut connaître le nombre d'éléments de la liste (ou le récupérer par la fonction ```len()``` )
 - le risque d'erreur : encore et toujours le ```index out of range```...
 
-
-{{initexo(0)}}
-!!! example "{{ exercice() }}"
+!!! example "exercice 4"
     === "Énoncé"
         On donne la liste :
         ```python
@@ -252,7 +249,7 @@ Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste)
         "
         ) }}
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 5"
     === "Énoncé"
         Trouvez le nombre qui est **exactement à la même place** dans la liste `list1` et dans la liste `list2`, sachant que les deux listes ont la même taille.
 
@@ -288,7 +285,7 @@ Chaque élément étant accessible par son indice (de ```0``` à   ```len(liste)
 
         Inconvénient : on part du principe que ce nombre existe vraiment. Si on ne le trouve pas, on aura une erreur...
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 6"
     === "Énoncé"
         Dans la liste 
 
@@ -352,7 +349,7 @@ Il suffit d'écraser la valeur actuelle avec une nouvelle valeur
 ```
 
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 7"
     === "Énoncé"
         Construire une liste contenant tous les nombres inférieurs à 100 qui sont divisibles par 7.
     === "Correction"
@@ -368,7 +365,7 @@ Il suffit d'écraser la valeur actuelle avec une nouvelle valeur
         ) }}
 
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 8"
     === "Énoncé"
         On considère la liste ```temp = [4, -5, 8, 10, -1, -2, 7, 13]```.  
         Construire la liste ```temp_pos``` qui ne contient que les éléments positifs de  ```temp```. 
@@ -429,7 +426,7 @@ L'instruction `del`  (qui n'est pas une fonction) permet de supprimer un éléme
 
 
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 9"
     === "Énoncé"
         [Exercice](https://sofaugeras.github.io/TNSI/T6_6_Epreuve_pratique/BNS_2022/#exercice-361) de la BNS.
     
@@ -457,7 +454,7 @@ mais on préfèrera ce code :
 qui produira la liste ```[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]``` 
 
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 10"
     === "Énoncé"
         Que fait le code ci-dessous ?
         ```python
@@ -526,7 +523,7 @@ Il est pourtant éventuel : que se passe-t-il s'il n'y a pas de filtre ?
 On se retrouve évidemment avec une nouvelle liste qui contient exactement les éléments de la liste de départ, ce qui n'est pas très intéressant.
 Pourtant les listes en compréhension *sans filtre* sont très fréquentes, nous le verrons plus loin.
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 11"
     === "Énoncé"
         On considère la variable ```phrase = 'Bonjour les vacances sont finies'``` et la variable ```voyelles = 'aeiouy'```.
 
@@ -584,7 +581,7 @@ Les listes en compréhension deviennent encore plus intéressantes lorsqu'on com
     [1, 4, 9, 16, 25, 36, 49, 64, 81]
     ```
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 12"
     === "Énoncé"
         1. On considère la fonction mathématique $f : x \mapsto 2x+3$. Coder la fonction ```f```.
         2. Créer (en compréhension) une liste contenant l'image des entiers de 1 à 10 par la fonction $f$.
@@ -600,7 +597,7 @@ Les listes en compréhension deviennent encore plus intéressantes lorsqu'on com
         "
         ) }}
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 13"
     === "Énoncé"
         On considère la liste ```lst = [51, 52, 66, 91, 92, 82, 65, 53, 86, 42, 79, 95]```. Seuls les nombres entre 60 et 90 ont une signification : ce sont des codes ASCII (récupérables par la fonction ```chr``` ).  
         Créer (en compréhension) une liste ```sol``` qui contient les lettres correspondants aux nombres ayant une signification.
@@ -672,7 +669,7 @@ Pour en savoir plus sur les variables, vous pouvez revenir sur la [partie option
     D'autres possibilités existent, comme ```listA.copy()```, ou encore ```listA[::]```...  
 
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 14"
     === "Énoncé"
         Effectuer les tests nécessaires pour prouver que l'exemple précédent a bien produit deux objets différents.
     === "Correction"
@@ -720,7 +717,7 @@ Nous avons vu qu'une liste pouvait contenir des éléments de tous types : des e
 La liste `a` est composée de 3 éléments qui sont eux-même des listes de 3 éléments.
 
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 15"
     === "Énoncé"
         On considère le jeu du Morpion (ou *Tic-Tac-Toe*) dont la surface de jeu vierge est representée par le tableau :  
         ```tab = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]``` 
@@ -764,7 +761,7 @@ La liste `a` est composée de 3 éléments qui sont eux-même des listes de 3 é
             print(tab[i][j])
     ```
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 2"
     === "Énoncé"
         On considère la liste ```m``` ('m' comme *matrice*) suivante :  
 

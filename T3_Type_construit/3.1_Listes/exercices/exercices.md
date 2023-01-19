@@ -1,7 +1,6 @@
 
-{{initexo(0)}}
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 1"
     === "Énoncé"
         ![image](data/sanglier.jpg){: .center width=60%}
         Résolvez le **Pydéfi** proposé à [cette adresse](https://pydefis.callicode.fr/defis/Herculito04Sanglier/txt)
@@ -22,7 +21,7 @@
         print(total)
         ```
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 2"
 
     === "Énoncé"
         On donne la liste ```jours``` suivante :
@@ -69,12 +68,7 @@
 
 
 
-
-
-
-
-
-!!! example "{{ exercice() }}"
+!!! example "exercice 3"
     === "Énoncé"
         On donne le tableau ```m``` suivant :
         ```python linenums='1'
@@ -126,7 +120,7 @@
         ) }}
 
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 4"
     === "Énoncé"
         Résolvez le pydéfi **Insaisissable matrice** proposé à [cette adresse](https://pydefis.callicode.fr/defis/AlgoMat/txt)        
     === "Correction"
@@ -155,80 +149,7 @@
         ) }}
 
 
-!!! example "{{ exercice() }}"
-    === "Énoncé"
-        **D'après Advent Of Code 2021, day02**
+et pour vous entraîner encore et encore : 
 
-        ![image](data/aoc.png){: .center}
-        
-
-        Un sous-marin peut se déplacer horizontalement (toujours vers la droite) grâce à l'instruction ```forward``` suivie d'un nombre.
-
-        Il peut aussi monter ou descendre, grâce aux instructions ```up``` ou ```down```, elles aussi suivies d'un nombre.
-
-        Un grand nombre d'instructions successives sont données. Le but de l'exercice est de trouver le produit final de l'abscisse du sous-marin et de sa profondeur.
-
-        Exemple :
-
-        ```
-        forward 5
-        down 5
-        forward 8
-        up 3
-        down 8
-        forward 2
-        ``` 
-
-        Après ces déplacements, le sous-marin se trouve à l'abscisse 15 et à la profondeur 10. La réponse à l'énigme serait donc 150.
-
-        - [énoncé orginal](https://adventofcode.com/2021/day/2){. target="_blank"}
-
-       
-        - Téléchargez le fichier [input1.txt](https://raw.githubusercontent.com/glassus/aoc2021/main/day02/input1.txt). Votre fichier ```.py``` de travail doit se situer dans le même répertoire que le fichier ```input1.txt```.
-
-        **Q1.** Nous allons récupérer toutes les données (on dit *parser les données*) dans une liste, grâce à l'instruction :
-        ```python
-        data_str = open('input1.txt').read().splitlines()
-        ```
-        Combien cette liste comporte-t-elle d'éléments ?
-
-        **Q2.** Afficher successivement tous les éléments de cette liste.
-
-        **Q3.**  Pour séparer une chaine de caractères en une **liste** de plusieurs chaines de caractères, nous pouvons utiliser la fonction ```split``` :
-
-        ```python
-        >>> "hello world".split(" ")
-        ['hello', 'world']
-        ``` 
-        Grâce à cette fonction ```split```,  affichez successivement uniquement les instructions ```forward```, ```up``` ou ```down```. 
-
-        **Q4**. Appelons ```x``` et ```y``` l'abscisse et l'ordonnée (initialisées à 0) du sous-marin. 
-        Que valent ```x``` et ```y``` à la fin des instructions ?
-
-        On rappelle que la fonction ```int``` permet de convertir une chaine de caractères en nombre :
-
-        ```python
-        >>> int('4')
-        4
-        ```   
-
-
-    === "Correction"
-        {{ correction(True,
-        "
-        ```python
-        data_str = open('input1.txt').read().splitlines()
-
-        for ligne in data_str:
-            lst = ligne.split(' ')
-            if lst[0] == 'forward':
-                x += int(lst[1])
-            elif lst[0] == 'down':
-                y += int(lst[1])
-            else:
-                y -= int(lst[1])
-
-        print(x*y)
-        ```
-        "
-        ) }}
+- [Recherche dans un tableau](https://e-nsi.gitlab.io/pratique/A/10-tab_recherche/)
+- [Parcours de tableau](https://e-nsi.gitlab.io/pratique/A/15-tab_parcours/)
