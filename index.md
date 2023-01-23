@@ -1,6 +1,17 @@
 
 !!! abstract ":star: Thèmes en cours d'étude :star: "
-    - [Liste](./T3_Type_construit/3.1_Listes/cours/)
+    - [tuple](./T3_Type_construit/3.2_tuples/cours/)
+    - [Spécifications](T5_algorithmique/5.0_specifications/cours.md)
+
+!!! info "Actualités"
+    - Site d'entrainement : [ici](https://e-nsi.gitlab.io/pratique/tags/){. target="_blank"}
+
+!!! note "*Thèmes traités*"
+    - [Thème 1 : démarrer en python](T1_demarrer_en_python/sommaire.md)
+    - [Thème 2 : Type de base](T2_Type_de_base/sommaire.md)
+    - [Thème 7 : IHM Web : HTML et CSS](T7_IHM_Web/7.1_Interactions_page_web/cours.md)
+    - [Thème 4 : Architecture de Von Neumann](T4_Architecture_materielle/Architecture_von_neumann/cours.md)
+    - [Thème 3 : Type Construit : les Listes](T3_Type_construit/3.1_Listes/cours.md)
 
 <!--
 !!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
