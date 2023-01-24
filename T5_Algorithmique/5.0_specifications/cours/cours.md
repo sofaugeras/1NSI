@@ -1,5 +1,9 @@
 # 5.0 Mise au point de programme : spécification
 
+![image](data/bo.jpg){: .center}
+
+![yoda](data/yoda_specs.jpg){: .center width=30%}
+
 ##	1. Introduction 
 
 En tant que codeur débutant, il est indispensable de prendre les bonnes habitudes dès le départ. De nombreuses conventions se sont imposées au fil du temps devant la complexité, la taille croissante du code mais aussi parce que le partage du travail devient de plus en plus indispensable. L'accroissement de la mémoire a aussi permis d'améliorer la lisibilité du code. Et oui, il fut un temps où chaque octet était important et une variable à une lettre moins couteuse qu'une de 20, où un commentaire prenait trop de place dans le fichier...Aujourd'hui, la longueur du nom d'une variable ou d'un commentaire ne doit plus vous effrayer.
@@ -288,7 +292,9 @@ def mettre_au_carre(x):
 
 ## 7. Mise au point de programme : Les tests
 
-De toute évidence, le code qu'on écrit n'a aucune assurance de fonctionner si on ne le teste pas…
+![Les tests](data/testing_meme3.png){: .center width=30%}
+
+De toute évidence, le code qu'on écrit n'a aucune assurance de fonctionner si on ne le teste pas ... Un programmme peut fonctionner, dans le sens où il ne plante pas mais où il ne fait pas du tout ce qu'on lui demande ...
 
 Ce qui doit être Tester : <br />
     :arrow_right: Cas correct <br />
