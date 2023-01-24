@@ -2747,13 +2747,12 @@
 <p>En tant que codeur débutant, il est indispensable de prendre les bonnes habitudes dès le départ. De nombreuses conventions se sont imposées au fil du temps devant la complexité, la taille croissante du code mais aussi parce que le partage du travail devient de plus en plus indispensable. L'accroissement de la mémoire a aussi permis d'améliorer la lisibilité du code. Et oui, il fut un temps où chaque octet était important et une variable à une lettre moins couteuse qu'une de 20, où un commentaire prenait trop de place dans le fichier...Aujourd'hui, la longueur du nom d'une variable ou d'un commentaire ne doit plus vous effrayer.</p>
 <p>Votre code doit être facile à lire par une autre personne. Et cette autre personne peut très bien être-vous 2 ans plus tard....on est parfois surpris de ne pas comprendre ce que l'on a bien pu faire! </p>
 <h2 id="2-idees-generales">2.  Idées générales<a class="headerlink" href="#2-idees-generales" title="Permanent link">⚓︎</a></h2>
-<p>Voici quelques conventions propres à Python mais qui fonctionnent pour tous les langages. Elles sont disponibles sur le <a href="https://peps.python.org/pep-0020/">site de python</a>. Allez voir !</p>
-<p>Je les résume en français : <strong>beau est mieux que laid</strong>, <strong>explicite c'est mieux qu'implicite</strong> (oui, le truc qu'on ne sait plus pourquoi...), <strong>simple mieux que complexe</strong>, <strong>complexe mieux que compliqué</strong>, éviter si possible trop d'imbrications, aérer, etc.…</p>
+<p>Voici quelques conventions propres à Python mais qui fonctionnent pour tous les langages. Elles sont disponibles sur le site de Python : <a href="https://peps.python.org/pep-0008/">PEP 8 – Style Guide for Python Code</a>. Allez voir !</p>
+<p>Je les résume en français : <strong>beau est mieux que laid</strong>, <strong>explicite c'est mieux qu'implicite</strong> (C'est évident, mais ca va mieux en le disant !), <strong>simple mieux que complexe</strong>, éviter si possible trop d'imbrications, aérer le code, nommer correctement les variables (i,j,k pour un increment, elt pour désigner un élément ...) etc.…</p>
 <p>Je vais isoler la dernière idée : <mark>maintenant c'est mieux que jamais mais jamais est parfois préférable à immédiatement.</mark></p>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.75 0a.75.75 0 0 1 .75.75V3h3.634c.414 0 .814.147 1.13.414l2.07 1.75a1.75 1.75 0 0 1 0 2.672l-2.07 1.75a1.75 1.75 0 0 1-1.13.414H8.5v5.25a.75.75 0 1 1-1.5 0V10H2.75A1.75 1.75 0 0 1 1 8.25v-3.5C1 3.784 1.784 3 2.75 3H7V.75A.75.75 0 0 1 7.75 0zm0 8.5h4.384a.25.25 0 0 0 .161-.06l2.07-1.75a.25.25 0 0 0 0-.38l-2.07-1.75a.25.25 0 0 0-.161-.06H2.75a.25.25 0 0 0-.25.25v3.5c0 .138.112.25.25.25h5z"/></svg></span> Oui, bien souvent, on veut tellement finir et tester notre code que l'on en oublie d'être propre et judicieux, mieux vaut faire une pause. </p>
 <h2 id="3-idees-en-pratique-sur-python">3. Idées en pratique sur Python<a class="headerlink" href="#3-idees-en-pratique-sur-python" title="Permanent link">⚓︎</a></h2>
-<p>Elles sont disponibles sur le site de python. Allez voir !
-Je les résume au maximum. Pour bien comprendre l'intérêt de tout cela, gardez à l'esprit que vous passerez plus de temps à relire votre code qu'à l’écrire !</p>
+<p>Je les résume au maximum. Pour bien comprendre l'intérêt de tout cela, gardez à l'esprit que vous passerez plus de temps à relire votre code qu'à l’écrire !</p>
 <p><img alt="➡" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/27a1.svg" title=":arrow_right:" />   En python ne mélangez jamais tabulations et espaces<br />
 <img alt="➡" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/27a1.svg" title=":arrow_right:" />   Une ligne de code ne devrait pas dépasser 79 caractères.<br />
 <img alt="➡" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/27a1.svg" title=":arrow_right:" />   Encoder en Utf-8 <br />
@@ -2765,11 +2764,11 @@ Je les résume au maximum. Pour bien comprendre l'intérêt de tout cela, gardez
 <p><img alt="➡" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/27a1.svg" title=":arrow_right:" />   Pensez à mettre à jour vos commentaires si vous modifiez le code !</p>
 <p>Commenter ce n'est pas commenter chaque ligne mais plutôt indiquer les grandes étapes lorsque le code s'allonge et expliquer certaines lignes qui vous paraissent techniques.</p>
 <h2 id="5-dans-les-fonctions">5. Dans les fonctions<a class="headerlink" href="#5-dans-les-fonctions" title="Permanent link">⚓︎</a></h2>
-<p>Nous verrons en terminale la programmation orienté objet. Pour différencier les objets des fonctions, variables et méthodes (des objets) on utilise deux conventions de nommage différentes.</p>
-<p><mark>nom_de_ma_fonction</mark> : pour les fonctions, variables et méthodes tout en minuscule avec _ pour séparer les mots.<br />
-<mark>MaClasse</mark> : pour le nom des classes (en terminale). Majuscule pour chaque nouveau mot et mots collés. Norme appelée <strong>CamelCase</strong>, ultilisé dans bien des langages.</p>
+<p>Nous verrons en terminale la programmation orienté objet. Pour différencier les fonctions, variables et constantes on utilise des conventions de nommage différentes.</p>
+<p><mark>nomDeMaFonction</mark> : pour les fonctions, variables et méthodes tout en minuscule avec _ pour séparer les mots ou en <strong>CamelCase</strong>.<br /></p>
+<p><mark>maVariable</mark> : la variable est explicite pour son rôle dans la fonction. On utilise le <strong>CamelCase</strong>. Usuellement, les lettres i, j, k désigne des incréments et donc des entiers. Eviter de les utiliser pour autre chose.</p>
 <p>Les <mark>constantes</mark> sont entièrement en majuscule : NOM_DE_MA_CONSTANTE. Une constante est une variable à laquelle on donne une valeur qui ne changera pas dans tout le programme. Par exemple, on code un jeu et au début, on préfère s'en tenir à deux joueurs. On peut créer <code>NB_MAX_JOUEURS=2</code> et on utilisera cette variable dans tout le programme sans jamais la changer. Imaginons que le code permette de jouer à trois joueurs. Il suffit de changer la valeur de la constante <code>NB_MAX_JOUEURS=3</code>.</p>
-<p>Intéressons-nous maintenant à la <strong>documentation des fonctions</strong>. Lorsque vous créez une fonction, vous devez la documenter. C'est le rôle du <mark>docstring</mark>. Le docstring se place juste après la création de la fonction par def. Il commence et termine par trois guillemets ```.</p>
+<p>Intéressons-nous maintenant à la <strong>documentation des fonctions</strong>. Lorsque vous créez une fonction, vous devez la documenter. C'est le rôle du <mark>docstring</mark>. Le docstring se place juste après la création de la fonction par def. Il commence et termine par trois guillemets <strong>```</strong>.</p>
 <p>Votre docstring doit décrire le rôle de la fonction, puis les paramètres passés en arguments (type et rôle), ainsi que le type de ce qui est retourné</p>
 <p>Ce docstring, peut être lu en tapant en console : 
 <code>nom_de_ma_fonction.__doc__</code> (deux underscores de chaque côté). </p>
@@ -2786,12 +2785,15 @@ Je les résume au maximum. Pour bien comprendre l'intérêt de tout cela, gardez
 <p class="admonition-title">A faire</p>
 <ul>
 <li>Copier le code de la fonction mettre_au_carre dans votre editeur.</li>
-<li>Testez la docstring sous spyder. Si on tape print(mettre_au_carre.<strong>doc</strong>) ou help(nom_de_la_fonction) on lira "renvoie le ....quelconque".</li>
+<li>Testez la docstring sur la console. Si on tape <code>print(mettre_au_carre.__doc__)</code> ou <code>help(nom_de_la_fonction)</code> en console, on lira "renvoie le ....quelconque".</li>
 </ul>
 </div>
 <h2 id="6exercices">6.Exercices<a class="headerlink" href="#6exercices" title="Permanent link">⚓︎</a></h2>
 <div class="admonition note">
 <p class="admonition-title">exercice 1 : mesure d'une angle</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Enoncé</label><label for="__tabbed_1_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>La mesure d'un angle peut être donnée en degrés ou en radian. L'unité de calcul naturelle pour les angles est le radian. La bibliothèque math ne sait donc calculer le cosinus que d'un angle donné en radian. <code>ma_fontion1</code>, convertit des degrés en radians car <strong>pi</strong> radians correspondent à 180°. <br />
 <img alt="➡" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/27a1.svg" title=":arrow_right:" /> Modifier les noms des fonctions, variables et créez la docstring selon les normes énoncées plus haut.</p>
 <p><div class="highlight"><pre><span></span><code>    <span class="c1"># import math</span>
@@ -2803,28 +2805,101 @@ Je les résume au maximum. Pour bien comprendre l'intérêt de tout cela, gardez
         <span class="k">return</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">ma_fonction1</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
 </code></pre></div>
 Petite remarque, on a importé le module math de la bibliothèque standard (la bibliothèque de Python) avec <code>import math</code>. Dans ce cas, le programme charge en mémoire toutes les fonctions de la bibliothèque <code>math</code>. Ce qui est bien inutile dans notre cas, ou l on a besoin que de la fonction <code>pi</code> et <code>cos</code>.
-J importe uniquement ce que je vais utiliser. Les fonctions sont chargées en mémoire et donc directement connues dans mon programme (je tape cos directement, plus math.cos). </p>
+J importe uniquement ce que je vais utiliser. Les fonctions sont chargées en mémoire et donc directement connues dans mon programme (je tape <code>cos</code> directement, plus <code>math.cos</code>). </p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">cos</span><span class="p">,</span> <span class="n">pi</span>
+
+<span class="k">def</span> <span class="nf">conversion_degre_radian</span><span class="p">(</span><span class="n">angle</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;renvoie la conversion des données en radians</span>
+
+<span class="sd">    Paramètres d&#39;entrée : x -&gt; int ou decimal : valeur de l&#39;angle de degré à convertir</span>
+<span class="sd">    Paramètres de sortie : retourne --&gt; int ou float : valeur de l&#39;angle en radian</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">calcul_cosinus</span><span class="p">(</span><span class="n">angle</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;renvoie le cosinus d&#39;un angle</span>
+
+<span class="sd">    Paramètres d&#39;entrée : x -&gt; int ou decimal : valeur de l&#39;angle en radian</span>
+<span class="sd">    Paramètres de sortie : retourne --&gt; int ou float : cosinus en radian</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="n">conversion_degre_radian</span><span class="p">(</span><span class="n">angle</span><span class="p">)))</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">exercice 2 : Mystère</p>
-<p>Comprendre ce que fait le code suivant et corriger tous les problèmes de spécification.
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Enoncé</label><label for="__tabbed_2_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Comprendre ce que fait le code suivant et corriger tous les problèmes de spécification.</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">fonction</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
     <span class="k">return</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="n">b</span><span class="p">)</span>
-</code></pre></div></p>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">pourcentage</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    renvoie le pourcentage de a par rapport à b</span>
+<span class="sd">    Paramètres d&#39;entrée : </span>
+<span class="sd">        a -&gt; int ou decimal : valeur du sous-ensemble</span>
+<span class="sd">        b -&gt; int ou decimal, b&gt;0 : valeur de l&#39;ensemble</span>
+<span class="sd">    Paramètres de sortie : retourne --&gt; int ou float : pourcentage</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">assert</span> <span class="n">b</span> <span class="o">!=</span> <span class="mi">0</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="n">b</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">exercice 3 : Mystère</p>
-<p>Comprendre ce que fait le code suivant et corriger tous les problèmes de spécification
-import math
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Enoncé</label><label for="__tabbed_3_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Comprendre ce que fait le code suivant et corriger tous les problèmes de spécification</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">fonction1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">):</span>
     <span class="k">return</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="o">+</span><span class="n">d</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">fonction2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">):</span>
     <span class="k">return</span><span class="p">(</span><span class="n">fonction1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span>
-</code></pre></div></p>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">addition</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;renvoie l&#39;addition des 4 paramètres</span>
+<span class="sd">    Paramètres d&#39;entrée : </span>
+<span class="sd">        a,b,c,d -&gt; int ou decimal : valeur à additionner</span>
+<span class="sd">    Paramètres de sortie : retourne --&gt; int ou float : addition</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="o">+</span><span class="n">d</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">division</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;renvoie la moyenne des 4 paramètres</span>
+<span class="sd">    Paramètres d&#39;entrée : </span>
+<span class="sd">        a,b,c,d -&gt; int ou decimal : valeur</span>
+<span class="sd">    Paramètres de sortie : retourne --&gt; int ou float : moyenne</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">addition</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">exercice 4 : Mystère</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Enoncé</label><label for="__tabbed_4_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>Comprendre ce que fait le code suivant et corriger tous les problèmes de spécification.<br />
 Que dois-je taper pour avoir l'aire d'un rectangle de côté 3 et 4, agrandit 10 fois? <br />
 Que dois-je taper pour que le programme affiche le volume d'un pavé droit de mesure 5 ; 7 ; 6 cm, agrandit 3 fois?</p>
@@ -2840,9 +2915,41 @@ Que dois-je taper pour que le programme affiche le volume d'un pavé droit de me
     <span class="k">return</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="o">*</span><span class="n">d</span><span class="o">*</span><span class="n">d</span><span class="o">*</span><span class="n">d</span><span class="p">)</span>
 </code></pre></div>
 </div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">aire</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;renvoie l&#39;aire d&#39;un rectangle dont les 2 côtés adjacents sont passés en paramètres</span>
+<span class="sd">    Paramètres d&#39;entrée : </span>
+<span class="sd">        a -&gt; int ou decimal : côté</span>
+<span class="sd">        b -&gt; int ou decimal : côté adjacent</span>
+<span class="sd">    Paramètres de sortie : retourne --&gt; none</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">COEFFICIENT</span><span class="o">=</span><span class="mi">10</span>
+    <span class="n">aire_rectangle</span><span class="o">=</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">COEFFICIENT</span><span class="o">**</span><span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;L&#39;aire d&#39;un rectangle de mesure&quot;</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="s2">&quot;et&quot;</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="s2">&quot;qui subit un agrandissement de coefficient&quot;</span><span class="p">,</span><span class="n">COEFFICIENT</span><span class="p">,</span><span class="s2">&quot;est&quot;</span><span class="p">,</span><span class="n">aire_rectangle</span><span class="p">)</span>
+
+<span class="c1">#volume d&#39;un parallélépipède de coté a,b,c qui subit un agrandissement de coefficient d</span>
+<span class="k">def</span> <span class="nf">volume</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;renvoie le volume d&#39;un parallépipède dont les 2 côtés adjacents sont passés en paramètres</span>
+<span class="sd">    Paramètres d&#39;entrée : </span>
+<span class="sd">        a -&gt; int ou decimal : côté</span>
+<span class="sd">        b -&gt; int ou decimal : côté adjacent</span>
+<span class="sd">        c -&gt; int ou decimal : hauteur</span>
+<span class="sd">        d -&gt; Coefficient multiplicateur</span>
+<span class="sd">    Paramètres de sortie : retourne --&gt; volume du parallépipède doté d&#39;un cef multiplicateur</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">COEFFICIENT</span><span class="o">=</span><span class="n">d</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="o">*</span><span class="n">COEFFICIENT</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
 <div class="admonition note">
 <p class="admonition-title">exercice 5 : Mystère</p>
-<p>Comprendre ce que fait le code suivant et corriger tous les problèmes de spécification
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Enoncé</label><label for="__tabbed_5_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Comprendre ce que fait le code suivant et corriger tous les problèmes de spécification</p>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">fonction1</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1 - jouer à la bataille navale&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2 - jouer au puissance 4&quot;</span><span class="p">)</span>
@@ -2851,11 +2958,33 @@ Que dois-je taper pour que le programme affiche le volume d'un pavé droit de me
     <span class="k">while</span> <span class="n">a</span><span class="o">!=</span><span class="s2">&quot;1&quot;</span> <span class="ow">or</span> <span class="n">a</span><span class="o">!=</span><span class="s2">&quot;2&quot;</span> <span class="ow">or</span> <span class="n">a</span><span class="o">!=</span><span class="s2">&quot;3&quot;</span><span class="p">:</span>
         <span class="n">a</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Taper votre choix :&quot;</span><span class="p">)</span>
     <span class="k">return</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-</code></pre></div></p>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">console_jeu_choix</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Fonction de menu de la console de jeu</span>
+<span class="sd">    Paramètres d&#39;entrée : none</span>
+<span class="sd">    Paramètres de sortie : retourne --&gt; choix</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1 - jouer à la bataille navale&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2 - jouer au puissance 4&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3 - quitter&quot;</span><span class="p">)</span>
+    <span class="n">a</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Taper votre choix 1 ou 2 ou 3:&quot;</span><span class="p">))</span>
+    <span class="c1">#Tant que l&#39;utilisateur n&#39;a pas choisi son menu correctement, on l&#39;interroge</span>
+    <span class="k">while</span> <span class="n">a</span><span class="o">!=</span><span class="s2">&quot;1&quot;</span> <span class="ow">or</span> <span class="n">a</span><span class="o">!=</span><span class="s2">&quot;2&quot;</span> <span class="ow">or</span> <span class="n">a</span><span class="o">!=</span><span class="s2">&quot;3&quot;</span> <span class="p">:</span>
+        <span class="n">a</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Taper votre choix :&quot;</span><span class="p">))</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">exercice 6 : Coder à partir de la spécification</p>
-<p>Vous devez être capable de programmer une fonction à partir de sa spécification.
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Enoncé</label><label for="__tabbed_6_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Vous devez être capable de programmer une fonction à partir de sa spécification.</p>
 <div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">encoder</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Encode une chaîne de caractère en son équivalent ASCII </span>
@@ -2864,7 +2993,27 @@ Que dois-je taper pour que le programme affiche le volume d'un pavé droit de me
 <span class="sd">    Paramètre de sortie : encodage ASCII -&gt; int</span>
 <span class="sd">    &#39;&#39;&#39;</span>
         <span class="c1"># votre code ici</span>
-</code></pre></div></p>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">encoder</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span> 
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Encode une chaîne de caractère en son équivalent ASCII </span>
+<span class="sd">    Paramètres d’entrée : chaine de caractère -&gt; char </span>
+<span class="sd">    Paramètre de sortie : encodage ASCII -&gt; int</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">#Initialisation de la chaine de caractère que l&#39;on utiliser pour concaténer</span>
+    <span class="n">machAscii</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="c1">#Parcours par élément de la chaine de caractère passée en paramètre</span>
+    <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">chaine</span> <span class="p">:</span>
+        <span class="c1">#ord renvoie un entier, il faut caster en string pour pour concaténer</span>
+        <span class="n">machAscii</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">lettre</span><span class="p">))</span>
+    <span class="c1">#On doit renvoyer un entier conformément aux spécifications, on caste en int la chaine de caractère</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">machAscii</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 </div>
 <h2 id="7-mise-au-point-de-programme-les-tests">7. Mise au point de programme : Les tests<a class="headerlink" href="#7-mise-au-point-de-programme-les-tests" title="Permanent link">⚓︎</a></h2>
 <p>De toute évidence, le code qu'on écrit n'a aucune assurance de fonctionner si on ne le teste pas…</p>
@@ -2912,7 +3061,7 @@ Il est préférable de les remplacer par de vrais tests… </p>
 Il ne faut pas intégrer les assertions à la fonction elle-même. Il est préférable de les intégrer à des fonctions de tests indépendantes du programme.</p>
 <div class="admonition example">
 <p class="admonition-title">Un exemple sur la suite de Fibonacci</p>
-<p>Prenons la fonction qui affiche la suite de Fibonacci. Elle utilise une structure que vous connaissez la liste.
+<p>Prenons la fonction qui affiche la suite de Fibonacci. Elle utilise une structure que vous connaissez la liste.</p>
 <div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Liste des termes de la suite de Fibonacci de l&#39;indice 0 à l&#39;indice n inclus</span>
@@ -2931,7 +3080,7 @@ Il ne faut pas intégrer les assertions à la fonction elle-même. Il est préf�
         <span class="n">suite_fibonacci</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
         <span class="n">indice</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="n">suite_fibonacci</span>
-</code></pre></div></p>
+</code></pre></div>
 <p>On peut tester plusieurs choses :<br />
 <img alt="➡" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/27a1.svg" title=":arrow_right:" />   La taille de la liste : n + 1 <br />
 <img alt="➡" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/27a1.svg" title=":arrow_right:" />   Différents résultats : 0, 1, 5 etc.<br />
@@ -2973,25 +3122,23 @@ Il ne faut pas intégrer les assertions à la fonction elle-même. Il est préf�
 <p>Note : La rédaction de la Docstring est libre. Les deux notations suivantes sont correctes. Prenez celle qui vous paraît naturelle.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Doctest de fibonacci</p>
-<p>'''python</p>
-<div class="highlight"><pre><span></span><code>&#39;&#39;&#39;
-Teste certaines propriétés de la fonction Fibonacci
+<div class="highlight"><pre><span></span><code>    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Teste certaines propriétés de la fonction Fibonacci</span>
 
-Paramètres de sortie : None
-Conditions d’utilisation : lève une exception AssertionError 
-        si la fonction est mal programmée
-&#39;&#39;&#39;
-ou
+<span class="sd">    Paramètres de sortie : None</span>
+<span class="sd">    Conditions d’utilisation : lève une exception AssertionError </span>
+<span class="sd">            si la fonction est mal programmée</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">ou</span>
 
-&quot;&quot;&quot;
-Calcule produit de a et b
-@param a: (number, str, list) premier facteur
-@param b: (number, str, list) second facteur
-@return: (number, str, list) le produit
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calcule produit de a et b</span>
+<span class="sd">    @param a: (number, str, list) premier facteur</span>
+<span class="sd">    @param b: (number, str, list) second facteur</span>
+<span class="sd">    @return: (number, str, list) le produit</span>
 
-&quot;&quot;&quot;
+<span class="sd">    &quot;&quot;&quot;</span>
 </code></pre></div>
-<p>```</p>
 </div>
 <p>Mais revenons à l’utilisation de <code>Doctest</code>, qui s’intègre naturellement à la <strong>docstring</strong>.
 Python permet grâce au module <code>doctest</code> d'intégrer les tests à la <ins>documentation</ins>.
@@ -3034,7 +3181,7 @@ Quand on exécute le programme, il ne se passe rien.</p>
     <span class="kn">import</span> <span class="nn">doctest</span>
     <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>  <span class="c1"># s&#39;il ne se passe rien, les tests sont justes.</span>
 </code></pre></div>
-<p>Voici la sortie d'un exemple qui échoue
+<p>Voici la sortie d'un exemple qui échoue</p>
 <div class="highlight"><pre><span></span><code>&gt;&gt;&gt; python3 2_tester_doctest.py
 **********************************************************************
 File &quot;/home/quentin/realiser_des_tests/2_tester_doctest.py&quot;, line 5,
@@ -3050,7 +3197,31 @@ Got:
 1 items had failures:
 1 of   1 in __main__.Fonction_mal_testee
 ***Test Failed*** 1 failures.
-</code></pre></div></p>
+</code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">A faire</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Enoncé</label><label for="__tabbed_7_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Reprendre le code de la fonction <code>mettre_au_carre</code> et indiquer les asserts nécessaires pour tester la fonction.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">mettre_au_carre</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;renvoie le carré de x</span>
+
+<span class="sd">    Paramètres d’entrée : x -&gt; (int, float ou decimal) : un nombre quelconque</span>
+<span class="sd">    Paramètre de sortie : Un nombre -&gt; (int, float ou decimal)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">assert</span> <span class="n">mettre_au_carre</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">==</span><span class="mi">4</span>
+<span class="k">assert</span> <span class="n">mettre_au_carre</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span>
+<span class="k">assert</span> <span class="n">mettre_au_carre</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="o">==</span><span class="mi">9</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Pour aller plus loin : </p>

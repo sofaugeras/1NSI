@@ -9,9 +9,9 @@ Votre code doit être facile à lire par une autre personne. Et cette autre pers
 
 ##	2.  Idées générales
 
-Voici quelques conventions propres à Python mais qui fonctionnent pour tous les langages. Elles sont disponibles sur le [site de python](https://peps.python.org/pep-0020/). Allez voir !
+Voici quelques conventions propres à Python mais qui fonctionnent pour tous les langages. Elles sont disponibles sur le site de Python : [PEP 8 – Style Guide for Python Code](https://peps.python.org/pep-0008/). Allez voir !
 
-Je les résume en français : **beau est mieux que laid**, **explicite c'est mieux qu'implicite** (oui, le truc qu'on ne sait plus pourquoi...), **simple mieux que complexe**, **complexe mieux que compliqué**, éviter si possible trop d'imbrications, aérer, etc.…
+Je les résume en français : **beau est mieux que laid**, **explicite c'est mieux qu'implicite** (C'est évident, mais ca va mieux en le disant !), **simple mieux que complexe**, éviter si possible trop d'imbrications, aérer le code, nommer correctement les variables (i,j,k pour un increment, elt pour désigner un élément ...) etc.…
 
 Je vais isoler la dernière idée : ==maintenant c'est mieux que jamais mais jamais est parfois préférable à immédiatement.==
 
@@ -19,7 +19,6 @@ Je vais isoler la dernière idée : ==maintenant c'est mieux que jamais mais jam
 
 ##	3. Idées en pratique sur Python
 
-Elles sont disponibles sur le site de python. Allez voir !
 Je les résume au maximum. Pour bien comprendre l'intérêt de tout cela, gardez à l'esprit que vous passerez plus de temps à relire votre code qu'à l’écrire !
 
 :arrow_right:	En python ne mélangez jamais tabulations et espaces<br />
@@ -42,15 +41,16 @@ Commenter ce n'est pas commenter chaque ligne mais plutôt indiquer les grandes 
 
 ##	5. Dans les fonctions
 
-Nous verrons en terminale la programmation orienté objet. Pour différencier les objets des fonctions, variables et méthodes (des objets) on utilise deux conventions de nommage différentes.
+Nous verrons en terminale la programmation orienté objet. Pour différencier les fonctions, variables et constantes on utilise des conventions de nommage différentes.
 
-==nom_de_ma_fonction== : pour les fonctions, variables et méthodes tout en minuscule avec _ pour séparer les mots.<br />
-==MaClasse== : pour le nom des classes (en terminale). Majuscule pour chaque nouveau mot et mots collés. Norme appelée **CamelCase**, ultilisé dans bien des langages.
+==nomDeMaFonction== : pour les fonctions, variables et méthodes tout en minuscule avec _ pour séparer les mots ou en **CamelCase**.<br />
+
+==maVariable== : la variable est explicite pour son rôle dans la fonction. On utilise le **CamelCase**. Usuellement, les lettres i, j, k désigne des incréments et donc des entiers. Eviter de les utiliser pour autre chose.
 
 Les ==constantes== sont entièrement en majuscule : NOM_DE_MA_CONSTANTE. Une constante est une variable à laquelle on donne une valeur qui ne changera pas dans tout le programme. Par exemple, on code un jeu et au début, on préfère s'en tenir à deux joueurs. On peut créer ```NB_MAX_JOUEURS=2``` et on utilisera cette variable dans tout le programme sans jamais la changer. Imaginons que le code permette de jouer à trois joueurs. Il suffit de changer la valeur de la constante ```NB_MAX_JOUEURS=3```.
 
 
-Intéressons-nous maintenant à la **documentation des fonctions**. Lorsque vous créez une fonction, vous devez la documenter. C'est le rôle du ==docstring==. Le docstring se place juste après la création de la fonction par def. Il commence et termine par trois guillemets ```.
+Intéressons-nous maintenant à la **documentation des fonctions**. Lorsque vous créez une fonction, vous devez la documenter. C'est le rôle du ==docstring==. Le docstring se place juste après la création de la fonction par def. Il commence et termine par trois guillemets **```**.
 
 Votre docstring doit décrire le rôle de la fonction, puis les paramètres passés en arguments (type et rôle), ainsi que le type de ce qui est retourné
 
@@ -72,89 +72,219 @@ def mettre_au_carre(x):
 
 !!! faq "A faire" 
     - Copier le code de la fonction mettre_au_carre dans votre editeur.
-    - Testez la docstring sous spyder. Si on tape print(mettre_au_carre.__doc__) ou help(nom_de_la_fonction) on lira "renvoie le ....quelconque".
+    - Testez la docstring sur la console. Si on tape `print(mettre_au_carre.__doc__)` ou `help(nom_de_la_fonction)` en console, on lira "renvoie le ....quelconque".
 
 
 ##	6.Exercices
 
 !!! note "exercice 1 : mesure d'une angle"
-    La mesure d'un angle peut être donnée en degrés ou en radian. L'unité de calcul naturelle pour les angles est le radian. La bibliothèque math ne sait donc calculer le cosinus que d'un angle donné en radian. `ma_fontion1`, convertit des degrés en radians car **pi** radians correspondent à 180°. <br />
-    :arrow_right: Modifier les noms des fonctions, variables et créez la docstring selon les normes énoncées plus haut.
+    === "Enoncé"
+        La mesure d'un angle peut être donnée en degrés ou en radian. L'unité de calcul naturelle pour les angles est le radian. La bibliothèque math ne sait donc calculer le cosinus que d'un angle donné en radian. `ma_fontion1`, convertit des degrés en radians car **pi** radians correspondent à 180°. <br />
+        :arrow_right: Modifier les noms des fonctions, variables et créez la docstring selon les normes énoncées plus haut.
 
-    ```python
-        # import math
-        from math import pi,cos
-        def ma_fonction1(x):
-            return(x*math.pi/180)
+        ```python
+            # import math
+            from math import pi,cos
+            def ma_fonction1(x):
+                return(x*math.pi/180)
 
-        def ma_fonction2(x):
-            return(math.cos(ma_fonction1(x)))
-    ```
-    Petite remarque, on a importé le module math de la bibliothèque standard (la bibliothèque de Python) avec `import math`. Dans ce cas, le programme charge en mémoire toutes les fonctions de la bibliothèque `math`. Ce qui est bien inutile dans notre cas, ou l on a besoin que de la fonction `pi` et `cos`.
-    J importe uniquement ce que je vais utiliser. Les fonctions sont chargées en mémoire et donc directement connues dans mon programme (je tape cos directement, plus math.cos). 
+            def ma_fonction2(x):
+                return(math.cos(ma_fonction1(x)))
+        ```
+        Petite remarque, on a importé le module math de la bibliothèque standard (la bibliothèque de Python) avec `import math`. Dans ce cas, le programme charge en mémoire toutes les fonctions de la bibliothèque `math`. Ce qui est bien inutile dans notre cas, ou l on a besoin que de la fonction `pi` et `cos`.
+        J importe uniquement ce que je vais utiliser. Les fonctions sont chargées en mémoire et donc directement connues dans mon programme (je tape `cos` directement, plus `math.cos`). 
+
+    === "Correction"
+
+        ```python
+        from math import cos, pi
+ 
+        def conversion_degre_radian(angle):
+            """renvoie la conversion des données en radians
+            
+            Paramètres d'entrée : x -> int ou decimal : valeur de l'angle de degré à convertir
+            Paramètres de sortie : retourne --> int ou float : valeur de l'angle en radian
+            
+            """
+            return(angle*pi/180)
+
+        def calcul_cosinus(angle):
+            """renvoie le cosinus d'un angle
+            
+            Paramètres d'entrée : x -> int ou decimal : valeur de l'angle en radian
+            Paramètres de sortie : retourne --> int ou float : cosinus en radian
+            
+            """
+            return(cos(conversion_degre_radian(angle)))
+        ```
 
 !!! note "exercice 2 : Mystère"
-    Comprendre ce que fait le code suivant et corriger tous les problèmes de spécification.
-    ```python
-    def fonction(a,b):
-        return(a*100/b)
-    ```
+    === "Enoncé"
+        Comprendre ce que fait le code suivant et corriger tous les problèmes de spécification.
+
+        ```python
+        def fonction(a,b):
+            return(a*100/b)
+        ```
+    === "Correction"
+
+        ```python
+        def pourcentage(a,b):
+            """
+            renvoie le pourcentage de a par rapport à b
+            Paramètres d'entrée : 
+                a -> int ou decimal : valeur du sous-ensemble
+                b -> int ou decimal, b>0 : valeur de l'ensemble
+            Paramètres de sortie : retourne --> int ou float : pourcentage
+            
+            """
+            assert b != 0
+            return(a*100/b)
+        ```
 
 !!! note "exercice 3 : Mystère"
-    Comprendre ce que fait le code suivant et corriger tous les problèmes de spécification
-    import math
-    ```python
-    def fonction1(a,b,c,d):
-        return(a+b+c+d)
+    === "Enoncé"
+        Comprendre ce que fait le code suivant et corriger tous les problèmes de spécification
 
-    def fonction2(a,b,c,d):
-        return(fonction1(a,b,c,d)/4)
-    ```
+        ```python
+        def fonction1(a,b,c,d):
+            return(a+b+c+d)
+
+        def fonction2(a,b,c,d):
+            return(fonction1(a,b,c,d)/4)
+        ```
+    === "Correction"
+
+        ```python
+        def addition(a,b,c,d):
+            """renvoie l'addition des 4 paramètres
+            Paramètres d'entrée : 
+                a,b,c,d -> int ou decimal : valeur à additionner
+            Paramètres de sortie : retourne --> int ou float : addition
+            
+            """
+            return(a+b+c+d)
+
+        def division(a,b,c,d):
+            """renvoie la moyenne des 4 paramètres
+            Paramètres d'entrée : 
+                a,b,c,d -> int ou decimal : valeur
+            Paramètres de sortie : retourne --> int ou float : moyenne
+            
+            """
+            return(addition(a,b,c,d)/4)
+        ```
 
 !!! note "exercice 4 : Mystère"
-    Comprendre ce que fait le code suivant et corriger tous les problèmes de spécification.<br />
-    Que dois-je taper pour avoir l'aire d'un rectangle de côté 3 et 4, agrandit 10 fois? <br />
-    Que dois-je taper pour que le programme affiche le volume d'un pavé droit de mesure 5 ; 7 ; 6 cm, agrandit 3 fois?
+    === "Enoncé"
+        Comprendre ce que fait le code suivant et corriger tous les problèmes de spécification.<br />
+        Que dois-je taper pour avoir l'aire d'un rectangle de côté 3 et 4, agrandit 10 fois? <br />
+        Que dois-je taper pour que le programme affiche le volume d'un pavé droit de mesure 5 ; 7 ; 6 cm, agrandit 3 fois?
 
-    ```python
-    import math
+        ```python
+        import math
 
-    def fonction1(a,b):
-        coefficient=10
-        c=coefficient*coefficient*a*b
-        print("L'aire d'un rectangle de mesure",a,"et",b,"qui subit un agrandissement de coefficient",coefficient,"est",c)
+        def fonction1(a,b):
+            coefficient=10
+            c=coefficient*coefficient*a*b
+            print("L'aire d'un rectangle de mesure",a,"et",b,"qui subit un agrandissement de coefficient",coefficient,"est",c)
 
-    #volume d'un parallélépipède de coté a,b,c qui subit un agrandissement de coefficient d
-    def fonction2(a,b,c,d):
-        return(a*b*c*d*d*d)
-    ```
+        #volume d'un parallélépipède de coté a,b,c qui subit un agrandissement de coefficient d
+        def fonction2(a,b,c,d):
+            return(a*b*c*d*d*d)
+        ```
+    === "Correction"
+
+        ```python
+        def aire(a,b):
+            """renvoie l'aire d'un rectangle dont les 2 côtés adjacents sont passés en paramètres
+            Paramètres d'entrée : 
+                a -> int ou decimal : côté
+                b -> int ou decimal : côté adjacent
+            Paramètres de sortie : retourne --> none
+            """
+            COEFFICIENT=10
+            aire_rectangle=a*b*COEFFICIENT**2
+            print("L'aire d'un rectangle de mesure",a,"et",b,"qui subit un agrandissement de coefficient",COEFFICIENT,"est",aire_rectangle)
+
+        #volume d'un parallélépipède de coté a,b,c qui subit un agrandissement de coefficient d
+        def volume(a,b,c,d):
+            """renvoie le volume d'un parallépipède dont les 2 côtés adjacents sont passés en paramètres
+            Paramètres d'entrée : 
+                a -> int ou decimal : côté
+                b -> int ou decimal : côté adjacent
+                c -> int ou decimal : hauteur
+                d -> Coefficient multiplicateur
+            Paramètres de sortie : retourne --> volume du parallépipède doté d'un cef multiplicateur
+            """
+            COEFFICIENT=d
+            return(a*b*c*COEFFICIENT**3)
+        ```
 
 !!! note "exercice 5 : Mystère"
-    Comprendre ce que fait le code suivant et corriger tous les problèmes de spécification
-    ```python
-    def fonction1(a):
-        print("1 - jouer à la bataille navale")
-        print("2 - jouer au puissance 4")
-        print("3 - quitter")
-        a=input("Taper votre choix 1 ou 2 ou 3:")
-        while a!="1" or a!="2" or a!="3":
-            a=input("Taper votre choix :")
-        return(a)
-    ```
+    === "Enoncé"
+        Comprendre ce que fait le code suivant et corriger tous les problèmes de spécification
+
+        ```python
+        def fonction1(a):
+            print("1 - jouer à la bataille navale")
+            print("2 - jouer au puissance 4")
+            print("3 - quitter")
+            a=input("Taper votre choix 1 ou 2 ou 3:")
+            while a!="1" or a!="2" or a!="3":
+                a=input("Taper votre choix :")
+            return(a)
+        ```
+    === "Correction"
+
+        ```python
+        def console_jeu_choix():
+            """Fonction de menu de la console de jeu
+            Paramètres d'entrée : none
+            Paramètres de sortie : retourne --> choix
+            """
+            print("1 - jouer à la bataille navale")
+            print("2 - jouer au puissance 4")
+            print("3 - quitter")
+            a=int(input("Taper votre choix 1 ou 2 ou 3:"))
+            #Tant que l'utilisateur n'a pas choisi son menu correctement, on l'interroge
+            while a!="1" or a!="2" or a!="3" :
+                a=int(input("Taper votre choix :"))
+            return(a)
+        ```
 
 !!! note "exercice 6 : Coder à partir de la spécification"
-    Vous devez être capable de programmer une fonction à partir de sa spécification.
-    ```python
-        def encoder(chaine):
-        '''
-        Encode une chaîne de caractère en son équivalent ASCII 
+    === "Enoncé"
+        Vous devez être capable de programmer une fonction à partir de sa spécification.
 
-        Paramètres d’entrée : chaine de caractère -> char
-        Paramètre de sortie : encodage ASCII -> int
-        '''
-            # votre code ici
-    ```
-  
+        ```python
+            def encoder(chaine):
+            '''
+            Encode une chaîne de caractère en son équivalent ASCII 
+
+            Paramètres d’entrée : chaine de caractère -> char
+            Paramètre de sortie : encodage ASCII -> int
+            '''
+                # votre code ici
+        ```
+    === "Correction"
+
+        ```python
+        def encoder(chaine): 
+            """
+            Encode une chaîne de caractère en son équivalent ASCII 
+            Paramètres d’entrée : chaine de caractère -> char 
+            Paramètre de sortie : encodage ASCII -> int
+            """
+            #Initialisation de la chaine de caractère que l'on utiliser pour concaténer
+            machAscii = ''
+            #Parcours par élément de la chaine de caractère passée en paramètre
+            for lettre in chaine :
+                #ord renvoie un entier, il faut caster en string pour pour concaténer
+                machAscii += str(ord(lettre))
+            #On doit renvoyer un entier conformément aux spécifications, on caste en int la chaine de caractère
+            return int(machAscii)
+        ```
 
 ## 7. Mise au point de programme : Les tests
 
@@ -218,6 +348,7 @@ Il ne faut pas intégrer les assertions à la fonction elle-même. Il est préf�
 
 !!! example "Un exemple sur la suite de Fibonacci"
     Prenons la fonction qui affiche la suite de Fibonacci. Elle utilise une structure que vous connaissez la liste.
+
     ```python
         def fibonacci(n):
         '''
@@ -283,8 +414,7 @@ Il ne faut pas intégrer les assertions à la fonction elle-même. Il est préf�
 Note : La rédaction de la Docstring est libre. Les deux notations suivantes sont correctes. Prenez celle qui vous paraît naturelle.
 
 !!! abstract "Doctest de fibonacci"
-    '''python
-
+    ```python
         '''
         Teste certaines propriétés de la fonction Fibonacci
 
@@ -309,6 +439,7 @@ Il est parfois délicat de tester certaines fonctions, en particulier les affich
 Pour les fonctions qui réalisent des calculs cela reste pratique.
 
 !!! example "Un exemple qui fonctionne bien : "
+
     ```python
     def multiple (a, b):
         """
@@ -331,6 +462,7 @@ Pour les fonctions qui réalisent des calculs cela reste pratique.
     Quand on exécute le programme, il ne se passe rien.
 
 !!! example "Un exemple qui échoue :"
+
     ```python
     def Fonction_mal_testee():
         '''
@@ -347,6 +479,7 @@ Pour les fonctions qui réalisent des calculs cela reste pratique.
     ```
 
     Voici la sortie d'un exemple qui échoue
+
     ```
     >>> python3 2_tester_doctest.py
     **********************************************************************
@@ -364,6 +497,29 @@ Pour les fonctions qui réalisent des calculs cela reste pratique.
     1 of   1 in __main__.Fonction_mal_testee
     ***Test Failed*** 1 failures.
     ```
+
+!!! note "A faire"
+    === "Enoncé"
+        Reprendre le code de la fonction `mettre_au_carre` et indiquer les asserts nécessaires pour tester la fonction.
+
+        ```python
+        def mettre_au_carre(x):
+            """renvoie le carré de x
+
+            Paramètres d’entrée : x -> (int, float ou decimal) : un nombre quelconque
+            Paramètre de sortie : Un nombre -> (int, float ou decimal)
+            """
+            return(x*x)
+
+        ```
+
+    === "Correction"
+
+        ```python
+        assert mettre_au_carre(2)==4
+        assert mettre_au_carre(0)==0
+        assert mettre_au_carre(-3)==9
+        ```
 
 !!! info "Pour aller plus loin : "
     [Des tests unitaires en python](https://www.test-recette.fr/tests-techniques/deployer-tests-unitaires/comprendre-tests-unitaires-exemples-en-pythton/)

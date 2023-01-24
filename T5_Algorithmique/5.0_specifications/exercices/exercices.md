@@ -27,10 +27,11 @@ Vous pouvez télécharger le fichier [notebook d'exercice](data/Exercices_specif
         ```
 
         ici, avec le module random, est il possible de rédiger un test d'égalité 
-        exemple ``` assert tirer_une_carte() == 1 ```
+        exemple ``` assert tirer_une_carte() == 1 ``` <br />
         Si non, Comment peut-on  faire autrement ?
 
     === "correction"
+
         ```python
         import random
 
@@ -57,6 +58,7 @@ Vous pouvez télécharger le fichier [notebook d'exercice](data/Exercices_specif
         3. Rédiger le test pour la liste `[50*i for i in range(7)]`
 
     === "Correction"
+    
         ```python
         def compter_occurences_sup100(uneliste):
         """
