@@ -2493,14 +2493,14 @@
       
       
         <label class="md-nav__link" for="__nav_9_1">
-          Conseils généraux
+          1 Conseils generaux
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Conseils généraux" data-md-level="2">
+      <nav class="md-nav" aria-label="1 Conseils generaux" data-md-level="2">
         <label class="md-nav__title" for="__nav_9_1">
           <span class="md-nav__icon md-icon"></span>
-          Conseils généraux
+          1 Conseils generaux
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2511,7 +2511,21 @@
   
     <li class="md-nav__item">
       <a href="../../../T8_Divers/1_Conseils_generaux/cours/" class="md-nav__link">
-        Conseils de travail
+        Cours
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T8_Divers/1_Conseils_generaux/methodo/" class="md-nav__link">
+        Méthodologie
       </a>
     </li>
   
@@ -2684,16 +2698,20 @@ Si non, Comment peut-on  faire autrement ?</p>
 <span class="k">def</span> <span class="nf">tirer_une_carte</span><span class="p">():</span>
     <span class="n">couleurs</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;pique&#39;</span><span class="p">,</span><span class="s1">&#39;trèfle&#39;</span><span class="p">,</span><span class="s1">&#39;coeur&#39;</span><span class="p">,</span><span class="s1">&#39;carreau&#39;</span><span class="p">)</span>
     <span class="n">valeurs</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;7&#39;</span><span class="p">,</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span> <span class="s1">&#39;9&#39;</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;AS&#39;</span><span class="p">)</span>
-    <span class="n">indice_c</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
-    <span class="n">indice_v</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+    <span class="n">indice_c</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">couleurs</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">indice_v</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">valeurs</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">coul</span> <span class="o">=</span> <span class="n">couleurs</span><span class="p">[</span><span class="n">indice_c</span><span class="p">]</span>
     <span class="n">val</span> <span class="o">=</span> <span class="n">valeurs</span><span class="p">[</span><span class="n">indice_v</span><span class="p">]</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">coul</span><span class="p">)</span>
+    <span class="c1"># ou return (couleurs[indice_c],valeurs[indice_v])</span>
 
-<span class="k">assert</span> <span class="n">tirer_une_carte</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-<span class="k">assert</span> <span class="n">tirer_une_carte</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">tirer_une_carte</span><span class="p">())</span><span class="o">==</span><span class="mi">2</span> <span class="c1">#Test sur la longueur de la valeur de retour</span>
+<span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">tirer_une_carte</span><span class="p">())</span> <span class="o">==</span> <span class="nb">tuple</span>  <span class="c1">#Test sur le type de la valeur de retour</span>
+<span class="k">assert</span> <span class="n">tirer_une_carte</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;7&#39;</span><span class="p">,</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span> <span class="s1">&#39;9&#39;</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;AS&#39;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">tirer_une_carte</span><span class="p">()[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;pique&#39;</span><span class="p">,</span><span class="s1">&#39;trèfle&#39;</span><span class="p">,</span><span class="s1">&#39;coeur&#39;</span><span class="p">,</span><span class="s1">&#39;carreau&#39;</span><span class="p">)</span>
 <span class="c1">#ou</span>
-<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">tirer_une_carte</span><span class="p">())</span><span class="o">==</span><span class="mi">2</span>
+<span class="n">carte</span><span class="o">=</span><span class="n">tirer_une_carte</span><span class="p">()</span>
+<span class="k">assert</span> <span class="n">carte</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;7&#39;</span><span class="p">,</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span> <span class="s1">&#39;9&#39;</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;AS&#39;</span><span class="p">)</span>
 </code></pre></div>
 </div>
 </div>
@@ -2704,7 +2722,7 @@ Si non, Comment peut-on  faire autrement ?</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Enoncé</label><label for="__tabbed_2_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>On vous donne une liste et on veut écrire une fonction qui donne le nombre d'élément dans cette liste qui sont supérieurs ou égaux à 100. <br />
+<p>On vous donne une liste et on veut écrire une fonction qui retourne le <strong>nombre</strong> d'élément de cette liste qui sont supérieurs ou égaux à 100. <br />
 1. Ecrire la fonction documentée correspondant à ce besoin<br />
 2. rédiger les tests nécessaires pour tester tous les cas.<br />
 3. Rédiger le test pour la liste <code>[50*i for i in range(7)]</code></p>
@@ -2727,14 +2745,11 @@ Si non, Comment peut-on  faire autrement ?</p>
             <span class="n">compteur</span> <span class="o">=</span> <span class="n">compteur</span> <span class="o">+</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="n">compteur</span>
 
-<span class="n">li1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">150</span><span class="p">,</span><span class="mi">240</span><span class="p">,</span><span class="mi">99</span><span class="p">]</span>
-<span class="k">assert</span> <span class="n">compter_occurences_sup100</span><span class="p">(</span><span class="n">li1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span>
-<span class="n">li2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">200</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">300</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">compter_occurences_sup100</span><span class="p">([</span><span class="mi">100</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">150</span><span class="p">,</span><span class="mi">240</span><span class="p">,</span><span class="mi">99</span><span class="p">])</span> <span class="o">==</span> <span class="mi">3</span>
 <span class="c1">#Cas limite toutes les occurrences &gt; 100</span>
-<span class="k">assert</span> <span class="n">compter_occurences_sup100</span><span class="p">(</span><span class="n">li2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span>
-<span class="n">li3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">compter_occurences_sup100</span><span class="p">([</span><span class="mi">200</span><span class="p">,</span><span class="mi">500</span><span class="p">,</span><span class="mi">300</span><span class="p">])</span> <span class="o">==</span> <span class="mi">3</span>
 <span class="c1">#Cas limite aucune occurrence &gt; 100</span>
-<span class="k">assert</span> <span class="n">compter_occurences_sup100</span><span class="p">(</span><span class="n">li3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="k">assert</span> <span class="n">compter_occurences_sup100</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span>
 <span class="c1">#Cas limite de la liste vide</span>
 <span class="k">assert</span> <span class="n">compter_occurences_sup100</span><span class="p">([])</span> <span class="o">==</span> <span class="mi">0</span>
 
@@ -2750,8 +2765,32 @@ Si non, Comment peut-on  faire autrement ?</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:6"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><input id="__tabbed_3_4" name="__tabbed_3" type="radio" /><input id="__tabbed_3_5" name="__tabbed_3" type="radio" /><input id="__tabbed_3_6" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Fonction 1</label><label for="__tabbed_3_2">Fonction 2</label><label for="__tabbed_3_3">Fonction 3</label><label for="__tabbed_3_4">Correction 1</label><label for="__tabbed_3_5">Correction 2</label><label for="__tabbed_3_6">Correction 3</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Sur les fonctions suivantes, déterminer les assertions à mettre en oeuvre pour tester ces fonctions.
-Et corriger si nécessaire le code de la fonction pour qu'elle fonctionne comme l'indique sa spécifications</p>
+<p>Sur les fonctions suivantes, <strong>Documentez</strong> la fonction et déterminer les <strong>assertions</strong> à mettre en oeuvre pour tester ces fonctions. <strong>Corriger</strong> si nécessaire le code de la fonction pour qu'elle fonctionne comme l'indique le bref commentaire.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">echange_v1</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;modifie la liste, la met dans l&#39;ordre inverse&quot;&quot;&quot;</span>
+    <span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">liste</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">liste</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">liste</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">i</span><span class="p">],</span> <span class="n">liste</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">echange_v2</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;modifie la liste, la met dans l&#39;ordre inverse&quot;&quot;&quot;</span>
+    <span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">):</span>
+        <span class="n">liste</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">liste</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">liste</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">liste</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">ajoutUnListe</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;modifie la liste, ajoute 1 à chacun des termes&quot;&quot;&quot;</span>
+    <span class="n">n</span><span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">liste</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">liste</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">echange_v1</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">modifie la liste, la met dans l&#39;ordre inverse</span>
@@ -2764,6 +2803,15 @@ Et corriger si nécessaire le code de la fonction pour qu'elle fonctionne comme 
         <span class="n">liste</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">liste</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">liste</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">i</span><span class="p">],</span> <span class="n">liste</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
     <span class="c1">#il faut retourner la liste</span>
     <span class="k">return</span> <span class="n">liste</span>
+
+<span class="c1">#cas 1 : liste avec un nombre pair d&#39;items</span>
+<span class="n">l1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">echange_v1</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="c1">#cas 2 : liste avec un nombre impair d&#39;items</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">echange_v1</span><span class="p">(</span><span class="n">l2</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="c1">#Cas limite : liste vide</span>
+<span class="k">assert</span> <span class="n">echange_v1</span><span class="p">([])</span> <span class="o">==</span> <span class="p">[]</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -2777,7 +2825,15 @@ Et corriger si nécessaire le code de la fonction pour qu'elle fonctionne comme 
         <span class="n">liste</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">liste</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">i</span><span class="p">]</span>
         <span class="n">liste</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">temp</span>
     <span class="c1">#il faut retourner la liste</span>
-    <span class="k">return</span> <span class="n">liste</span>
+
+<span class="c1">#cas 1 : liste avec un nombre pair d&#39;items</span>
+<span class="n">l1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">echange_v2</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="c1">#cas 2 : liste avec un nombre impair d&#39;items</span>
+<span class="n">l2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="k">assert</span> <span class="n">echange_v2</span><span class="p">(</span><span class="n">l2</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="c1">#Cas limite : liste vide</span>
+<span class="k">assert</span> <span class="n">echange_v2</span><span class="p">([])</span> <span class="o">==</span> <span class="p">[]</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -2790,32 +2846,8 @@ Et corriger si nécessaire le code de la fonction pour qu'elle fonctionne comme 
         <span class="n">liste</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">liste</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span>
     <span class="c1">#il faut retourner la liste</span>
     <span class="k">return</span> <span class="n">liste</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="c1">#cas 1 : liste avec un nombre pair d&#39;items</span>
-<span class="n">l1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
-<span class="k">assert</span> <span class="n">echange_v1</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
-<span class="c1">#cas 2 : liste avec un nombre impair d&#39;items</span>
-<span class="n">l2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
-<span class="k">assert</span> <span class="n">echange_v1</span><span class="p">(</span><span class="n">l2</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
-<span class="c1">#Cas limite : liste vide</span>
-<span class="k">assert</span> <span class="n">echange_v1</span><span class="p">([])</span> <span class="o">==</span> <span class="p">[]</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="c1">#cas 1 : liste avec un nombre pair d&#39;items</span>
-<span class="n">l1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
-<span class="k">assert</span> <span class="n">echange_v2</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
-<span class="c1">#cas 2 : liste avec un nombre impair d&#39;items</span>
-<span class="n">l2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
-<span class="k">assert</span> <span class="n">echange_v2</span><span class="p">(</span><span class="n">l2</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
-<span class="c1">#Cas limite : liste vide</span>
-<span class="k">assert</span> <span class="n">echange_v2</span><span class="p">([])</span> <span class="o">==</span> <span class="p">[]</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="n">l3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="n">l3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
 <span class="k">assert</span> <span class="n">ajoutUnListe</span><span class="p">(</span><span class="n">l3</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
 <span class="c1">#Cas limite : liste vide</span>
 <span class="k">assert</span> <span class="n">ajoutUnListe</span><span class="p">([])</span> <span class="o">==</span> <span class="p">[]</span>
@@ -2835,10 +2867,14 @@ Et corriger si nécessaire le code de la fonction pour qu'elle fonctionne comme 
 <p><img alt="➡" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/27a1.svg" title=":arrow_right:" /> Exprimer oralement l'algorithme permettant de trouver quelle est la carte portant la valeur maximale.</p>
 </div>
 <div class="tabbed-block">
-<p><em>Attention : nous allons recréer une fonction qui, bien sûr, existe déjà en Python, sous le nom <code>max()</code>.</em>
+<p><em>Attention : nous allons recréer une fonction qui, bien sûr, existe déjà en Python, sous le nom <code>max()</code>.</em></p>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">maxi</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+<span class="c1">#Un peu trop simple, n&#39;est ce pas !!</span>
+</code></pre></div>
 <br />
 Ecrire l'algorithme en Python.  </p>
-<p>Il est expressément demandé de construire une fonction nommée <code>maximum()</code>, qui prenne en argument une liste, et qui renvoie le plus grand nombre de cette liste.</p>
+<p>Il vous est demandé de construire une fonction nommée <code>maximum()</code>, qui prenne en argument une liste, et qui renvoie le plus grand nombre de cette liste.</p>
 <p>Vous prendrez soin de <strong>documenter</strong> et <strong>tester</strong> votre fonction.</p>
 <p><strong>Exemple d'utilisation :</strong></p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maximum</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
@@ -2853,9 +2889,9 @@ Ecrire l'algorithme en Python.  </p>
     <span class="c1">#par defaut, le plus petit élt est le premier de la liste</span>
     <span class="n">m</span> <span class="o">=</span> <span class="n">liste</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="c1">#Parcours de la liste, et on compare chaque elt avec le dernier maximum trouvé</span>
-    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">liste</span> <span class="p">:</span>
-        <span class="k">if</span> <span class="n">k</span> <span class="o">&gt;</span> <span class="n">m</span> <span class="p">:</span>
-            <span class="n">m</span> <span class="o">=</span> <span class="n">k</span>
+    <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">liste</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="n">element</span> <span class="o">&gt;</span> <span class="n">m</span> <span class="p">:</span>
+            <span class="n">m</span> <span class="o">=</span> <span class="n">element</span>
     <span class="c1">#On retourne le dernier maximum trouvé</span>
     <span class="k">return</span> <span class="n">m</span>    
 
@@ -2882,16 +2918,84 @@ Ecrire l'algorithme en Python.  </p>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+    <span class="c1">#Cas de la liste vide</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span> <span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>
     <span class="c1">#Initialisation de la somme des termes de la liste</span>
     <span class="n">som</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1">#Parcours de la liste par élément</span>
     <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">liste</span> <span class="p">:</span>
+        <span class="c1">#On somme les élément de la liste</span>
         <span class="n">som</span> <span class="o">+=</span> <span class="n">k</span>
     <span class="k">return</span> <span class="n">som</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
 
 <span class="k">assert</span> <span class="n">moyenne</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span> <span class="o">==</span> <span class="mi">3</span>
 <span class="k">assert</span> <span class="n">moyenne</span><span class="p">([])</span> <span class="o">==</span> <span class="mi">0</span> 
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">#Autre solution plus simple en utilisant la fonction somme de Python ...</span>
+<span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+    <span class="c1">#Cas de la liste vide</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">moyenne</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span> <span class="o">==</span> <span class="mi">3</span> <span class="c1">#Cas normal</span>
+<span class="k">assert</span> <span class="n">moyenne</span><span class="p">([])</span> <span class="o">==</span> <span class="mi">0</span>  <span class="c1">#Cas limite de la liste vide</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Recherche d'un élément dans une liste <img alt="💙" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f499.svg" title=":blue_heart:" /></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Enoncé</label><label for="__tabbed_6_2">Correction avec for</label><label for="__tabbed_6_3">Correction avec While</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Créer une fonction <code>recherche()</code> qui prenne en argument une liste et qui renvoie la moyenne des nombres de cette liste.</p>
+<p>Vous prendrez soin de <strong>documenter</strong> et <strong>tester</strong> votre fonction.<br />
+Vous ne devez pas utilisez la mot clé <code>in</code> ...</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">elt</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">return</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">liste</span>
+<span class="c1">#Un peu trop simple, n&#39;est ce pas !!</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">elt</span><span class="p">):</span>
+    <span class="c1">#Cas de la liste vide</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="c1">#On parcourt la liste par élément</span>
+    <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">liste</span> <span class="p">:</span>
+        <span class="c1">#Si on trouve l&#39;élément, on s&#39;arrête et on renvoie Vrai</span>
+        <span class="k">if</span> <span class="n">element</span> <span class="o">==</span> <span class="n">elt</span> <span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+    <span class="c1">#Si on a parcouru la liste sans le trouver, c&#39;est qu&#39;il n&#39;est pas présent, on renvoie donc False</span>
+    <span class="k">return</span> <span class="k">return</span> <span class="kc">False</span>
+
+<span class="k">assert</span> <span class="n">recherche</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span> <span class="c1">#Cas normal : l&#39;élément est présent </span>
+<span class="k">assert</span> <span class="n">recherche</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="mi">8</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span> <span class="c1">#Cas Faux : l&#39;élément n&#39;est pas présent </span>
+<span class="k">assert</span> <span class="n">recherche</span><span class="p">([],</span> <span class="mi">8</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span> <span class="c1">#Cas limite de la liste vide</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">elt</span><span class="p">):</span>
+    <span class="c1">#Cas de la liste vide</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="c1">#Initialisation du compteur pour la boucle While</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1">#On parcours la liste tant que l&#39;on n&#39;a pas trouvé la liste ou que l&#39;on n&#39;est pas à la fin de la liste</span>
+    <span class="k">while</span> <span class="n">liste</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">elt</span> <span class="ow">and</span> <span class="n">i</span><span class="o">&lt;</span><span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span> <span class="p">:</span>
+        <span class="n">i</span> <span class="o">+=</span><span class="mi">1</span>
+    <span class="c1">#On est sorti de la boucle soit parce que l&#39;on a trouvé l&#39;élément</span>
+    <span class="k">if</span> <span class="n">liste</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">elt</span> <span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="c1">#Soit parce que l&#39;on est à la fin de la liste</span>
+    <span class="k">else</span> <span class="p">:</span> <span class="k">return</span> <span class="kc">False</span>
+
+<span class="k">assert</span> <span class="n">recherche</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">recherche</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="mi">8</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
+<span class="k">assert</span> <span class="n">recherche</span><span class="p">([],</span> <span class="mi">8</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span> 
 </code></pre></div>
 </div>
 </div>
