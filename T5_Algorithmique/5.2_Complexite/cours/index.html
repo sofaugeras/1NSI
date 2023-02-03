@@ -1851,6 +1851,47 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#3-les-differentes-complexites" class="md-nav__link">
+    3. Les différentes complexités
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-preuve-dun-algorithme" class="md-nav__link">
+    4. Preuve d’un algorithme
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Preuve d’un algorithme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-definition" class="md-nav__link">
+    4.1 Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-comment-prouver" class="md-nav__link">
+    4.2 Comment ≪prouver≫ ?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-quelques-exemples" class="md-nav__link">
+    4.3 Quelques exemples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2770,8 +2811,47 @@
 
 <h1 id="42-complexite-dun-algorithme">4.2 Complexité d'un algorithme<a class="headerlink" href="#42-complexite-dun-algorithme" title="Permanent link">⚓︎</a></h1>
 <p><img alt="image" class="center" src="../data/meme.png" width="40%" /></p>
+<details class="cite" open="open"><summary>Activité</summary><p><img alt="Machine de Turing en papier" class="center" src="../data/machineTuring.jpg" width="40%" />
+<a href="https://www.espace-turing.fr/IMG/pdf/computerpaper.pdf">Computer Paper - Do It Yourself </a></p>
+<p>Dans un article qui fera date, « On Computable Numbers with an Application to the Entscheidungsproblem » publié en 1936, <strong>Alan Turing</strong>, jeune mathématicien anglais, jette les bases de ce qui deviendra la <emphrase>théorie de la calculabilité</emphrase> en répondant par la négative à la question de savoir si toute proposition peut être démontrée dans un système formel. Pour ce faire, il imagine une machine à calcul universelle ... en papier.</p>
+<p>Cette machine est composée d’un « ruban » supposé infini, chaque case contenant un symbole parmi un _alphabet fini, d’une tête de lecture/écriture, d’un registre d’états, d’une liste d’instructions.</p>
+<p>L’ordinateur - <strong>théorique</strong> - est né !</p>
+<p>Turing définit le calcul sous la forme d’une liste finie d’instructions, itérables un nombre indéfini de fois. Il vient de poser les fondements de la science informatique. Il n’a que 24 ans !</p>
+<p>Pour le centenaire de sa naissance, nous vous proposons de faire un voyage dans le temps, en construisant votre propre ordinateur en papier, à la manière d’Alan Turing il y a 76 ans.</p>
+</details>
+<div class="admonition tldr">
+<p class="admonition-title">Pour résumé</p>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/P66h8D5Lkwk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>{: .center}
+<br />
+<a href="https://www.youtube.com/watch?v=P66h8D5Lkwk">La machine de Turing, une révolution des mathématiques et de l'informatique - Passe-science</a> (début à 3’30)</p>
+<p>On retiendra ici, que le modèle de la machine de Turing, sert d'étalon pour mesurer la complexité d'un algorithme : C'est l'ordre de grandeur du nombre d'opérations élémentaires (lire, déplacer la tête de lecture) qu'effectuerait une machine de Turing pour effectuer l'algorithme.</p>
+</div>
 <p>La <strong>complexité</strong> d'un algorithme est une notion qui nous éclaire sur la manière dont cet algorithme va être sensible à la taille des données passées en paramètre. Il y a plusieurs types de complexités étudiables (nombre d'opérations, temps nécessaire, espace-mémoire nécessaire...).</p>
 <p>En NSI, nous nous contenterons d'estimer (lorsque cela est possible) le nombre d'opérations effectuées par l'algorithme, et nous mesurerons les temps d'exécution de ces algortihmes. </p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">fonction1</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">a</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">a</span><span class="o">=</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span>
+    <span class="k">return</span> <span class="n">a</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">fonction2</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">a</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">a</span><span class="o">=</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">a</span><span class="o">=</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span>
+    <span class="k">return</span> <span class="n">a</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">fonction3</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">a</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+            <span class="n">a</span><span class="o">=</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span>
+    <span class="k">return</span> <span class="n">a</span>
+</code></pre></div></p>
+</div>
 <p>Nous observerons surtout comment évolue ce temps d'exécution en fonction de la taille des données passées en paramètre (la taille d'une liste, par exemple). Cela nous permettra dans ce cours de classer nos algorithmes en deux catégories : les algorithmes de complexité <strong>linéaire</strong> et ceux de complexité <strong>quadratique</strong>.</p>
 <h2 id="1-complexite-lineaire">1. Complexité linéaire<a class="headerlink" href="#1-complexite-lineaire" title="Permanent link">⚓︎</a></h2>
 <h3 id="11-exemple">1.1 Exemple<a class="headerlink" href="#11-exemple" title="Permanent link">⚓︎</a></h3>
@@ -2892,6 +2972,146 @@ Dans ce cas, c'est souvent une très bonne nouvelle.</p>
 («grand O de 1»)</em></li>
 </ul>
 <p>Toutes ces formulations renvoient à la même idée : le nombre d'opérations nécessaires (et donc le temps nécessaire à la terminaison de l'algorithme) est constant quelle que soit la taille des données d'entrée de l'algorithme.</p>
+</div>
+<h2 id="3-les-differentes-complexites">3. Les différentes complexités<a class="headerlink" href="#3-les-differentes-complexites" title="Permanent link">⚓︎</a></h2>
+<p>On peut classer les algorithmes selon leur complexité.</p>
+<ul>
+<li>Complexité <strong>constante</strong> : <strong><span class="arithmatex">\(O(1)\)</span></strong></li>
+<li>Complexité <strong>logarithmique</strong> : <strong><span class="arithmatex">\(O(log_{2}(n))\)</span></strong></li>
+<li>Complexité <strong>linéaire</strong> : <strong><span class="arithmatex">\(O(n)\)</span></strong></li>
+<li>Complexité <strong>quasi-linéaire</strong> : <strong><span class="arithmatex">\(O(nlog_{2}(n))\)</span></strong></li>
+<li>Complexité <strong>polynomiale</strong> : <strong><span class="arithmatex">\(O(n^k)\)</span></strong></li>
+<li>Complexité <strong>exponentielle</strong> : <strong><span class="arithmatex">\(O(2^n)\)</span></strong></li>
+</ul>
+<h2 id="4-preuve-dun-algorithme">4. Preuve d’un algorithme<a class="headerlink" href="#4-preuve-dun-algorithme" title="Permanent link">⚓︎</a></h2>
+<p>Il est important de pouvoir montrer qu’un programme termine, afin de savoir si son exécution se fera sans problème.
+ Parmi les instructions ci-dessous, quelles sont celles qui ne peuvent pas engendrer d’exécution infinie d’un algorithme ? Quelle est/sont la/les seule(s) instruction(s) problématique(s) ?<br />
+- Affectation 
+- Instruction conditionnelle (if … Then …else …)
+- Boucle Pour (for)
+- Boucle Tant que (While)</p>
+<p>On suppose maintenant que l’on est capable d’écrire un algorithme, appelé Terminator, dont la fonction est de répondre vrai si un programme termine et faux si un programme ne termine pas. Ainsi, l’instruction  <code>Terminator(P)</code> renvoie <code>vrai</code> si le programme P termine toujours et <code>faux</code> si P est capable de boucler.</p>
+<div class="highlight"><pre><span></span><code>Algorithme : SarahConnor
+    Tant que _terminator_(sarahConnor) faire
+        rien
+    fin tant que
+</code></pre></div>
+<p>À quelle condition le programme <code>SarahConnor</code> termine-t-il ? <br />
+On comprend donc que le problème de la terminaison des algorithmes n’est pas si simple. On peut énoncer le théorème suivant :</p>
+<div class="admonition danger">
+<p class="admonition-title">Problème de l'arrêt</p>
+<p>Il n'existe pas de programme permettant de dire si un algorithme termine toujours ou non.</p>
+</div>
+<p>On dit en théorie de l’informatique que le problème de l’arrêt est <strong>indécidable</strong>. En fait, le théorème de Rice dit même que toute propriété non triviale sur les programmes est indécidable. Bien que ce soit vrai dans le cas général, on peut cependant s’intéresser à des cas particuliers et utiliser des propriétés mathématiques pour démontrer que des algorithmes simples terminent.</p>
+<h3 id="41-definition">4.1 Définition<a class="headerlink" href="#41-definition" title="Permanent link">⚓︎</a></h3>
+<div class="admonition danger">
+<p class="admonition-title">Définition de la preuve</p>
+<p>On appelle preuve d’un algorithme, la propriété qui assure à ce dernier :<br />
+- de se terminer. On appelle cela la <strong>terminaison</strong> de l’algorithme<br />
+- de réaliser ce qu’’on attend de lui. On appelle cela la <strong>correction</strong> de l’algorithme.<br /></p>
+</div>
+<h3 id="42-comment-prouver">4.2 Comment ≪prouver≫ ?<a class="headerlink" href="#42-comment-prouver" title="Permanent link">⚓︎</a></h3>
+<h4 id="421-terminaison">4.2.1 Terminaison<a class="headerlink" href="#421-terminaison" title="Permanent link">⚓︎</a></h4>
+<p>Il est fréquent dans l’établissement d’un algorithme, qu’un programmeur ait recours a une structure de boucle.
+Lorsque cette dernière est conditionnelle (<strong>while</strong>), et que l’algorithme exécute une première fois les instructions contenues dans la boucle, il est important de s’assurer que l’algorithme sortira de la boucle et se terminera.
+Cette propriété de l’algorithme s’appelle la terminaison</p>
+<p>Ainsi :
+Le groupe d’instructions de la boucle doit permettre une modification de la condition de boucle.</p>
+<div class="admonition danger">
+<p class="admonition-title">Définition</p>
+<p>On appelle <strong>convergent</strong> (ou <strong>variant de boucle</strong>) une quantité qui prend ses valeurs dans un ensemble bien fondé et qui diminue strictement à chaque passage dans une boucle.<br />
+<em>Remarque</em> : Un ensemble bien-fondé est un ensemble totalement ordonné dans lequel il n’existe pas de suite infinie strictement décroissante.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Propriété</p>
+<p>L’existence d’un convergent pour une boucle garantit que l’algorithme finit par en sortir.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Propriété</p>
+<p>On assure la <strong>terminaison</strong> d’un algorithme lorsque toutes les structures de boucles conditionnelles de celui-ci <strong>≪terminent≫</strong>.</p>
+</div>
+<p>Pour la boucle For en Python, on utilise la fonction range qui est strictement décroissante et positive. La boucle For se termine donc toujours.
+En effet, on peut toujours construire un variant simple. 
+Si la boucle est donnée par la structure : Pour <code>i</code> allant de <code>a</code> à <code>b</code>, un variant simple est <code>b − i</code></p>
+<h4 id="422-correction">4.2.2 Correction<a class="headerlink" href="#422-correction" title="Permanent link">⚓︎</a></h4>
+<p>En outre, la seconde préoccupation du programmeur sera d’assurer que son algorithme réalise bien le travail demande. Cette propriété de l’algorithme s’appelle la correction. Elle est généralement plus délicate à établir.</p>
+<div class="admonition info">
+<p class="admonition-title">Propriété</p>
+<p>On assure la correction d’un algorithme avec boucle en dégageant une propriété vérifiée avant l’entrée dans la boucle et qui le restera durant chaque itération <code>i</code> de boucle ; soit <span class="arithmatex">\(P_i\)</span> cette propriété au rang <code>i</code>. Cette propriété doit permettre de renvoyer le résultat attendu au dernier rang de boucle. On l’appelle l’<strong>invariant de boucle</strong>.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Définition</p>
+<p>L’invariant de boucle est une formule logique qui :<br />
+— est vérifiée à l’initialisation de la boucle<br />
+— reste vraie à chaque itération de la boucle</p>
+</div>
+<h3 id="43-quelques-exemples">4.3 Quelques exemples<a class="headerlink" href="#43-quelques-exemples" title="Permanent link">⚓︎</a></h3>
+<h4 id="431-factorielle">4.3.1 Factorielle<a class="headerlink" href="#431-factorielle" title="Permanent link">⚓︎</a></h4>
+<p>On considère le script python suivant :</p>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Enoncé</label><label for="__tabbed_1_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>On note <code>n!</code> le nombre entier défini par  <code>n! = n x (n - 1) x (n - 2) x … x 3 x 2 x 1</code>.  (on dira « n factorielle »)</p>
+<blockquote>
+<p>Calculer factorielle(4) et 4!, puis factorielle(7) et 7!</p>
+</blockquote>
+</div>
+<div class="tabbed-block">
+<p>• Terminaison:
+- Si n entre au clavier est négatif, le programme termine sur un message ("impossible").<br />
+- Si n est nul la boucle n’est pas exécutée, 1 est renvoyé et le programme termine.<br />
+- Si n &gt; 0 k étant initialement a 1, la boucle est exécutée. A chaque itération, k est incrémenté de 1 et finit par être supérieur a n donc pour k=n+1, on sort de la boucle, le programme renvoie f, et termine.<br />
+<strong>CONCLUSION</strong> : la terminaison est assurée.<br /></p>
+<p>• Correction:
+Un invariant de boucle Pi est par exemple :<br />
+<strong>≪après la iieme itération k contient i + 1 et f contient i!≫</strong><br />
+Cette propriété est vraie au rang 0. Supposons la vraie au rang i, et montrons qu’’elle est héréditaire :<br />
+- Au rang i + 1, on a : k qui contient i + 1 en début d’itération et f = i! × (i + 1) = (i + 1)!<br />
+- En fin d’itération k contient i + 2<br />
+Ceci est bien la propriété au rang i + 1<br />
+<strong>CONCLUSION</strong> : la correction est assurée.</p>
+</div>
+</div>
+</div>
+</div>
+<h4 id="432-puissance-de-2">4.3.2 Puissance de 2<a class="headerlink" href="#432-puissance-de-2" title="Permanent link">⚓︎</a></h4>
+<div class="admonition abstract">
+<p class="admonition-title">Exercice : Puissance de 2</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Enoncé</label><label for="__tabbed_2_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>On considère le code python calculant la puissance nieme de 2 :</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">puissance2</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">==</span><span class="nb">int</span> <span class="ow">and</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">:</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">while</span> <span class="n">n</span><span class="o">&gt;</span><span class="mi">0</span> <span class="p">:</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">*</span><span class="mi">2</span>
+            <span class="n">n</span><span class="o">=</span><span class="n">n1</span><span class="o">-</span><span class="mi">1</span>
+    <span class="k">return</span> <span class="n">p</span>
+</code></pre></div>
+<blockquote>
+<p>A Faire : Donner la preuve de cet algorithme </p>
+</blockquote>
+</div>
+<div class="tabbed-block">
+<p>• Terminaison:<br />
+- Si n entre au clavier n’est pas un entier positif ou nul le programme termine sur un message ("impossible").<br />
+- Si n est nul la boucle n’est pas exécutée, 1 est renvoyé et le programme termine.<br />
+- Si n &gt; 0, la boucle est exécutée. A chaque itération, n est décrémente de 1 et finit par être nul, on sort de la boucle, le programme renvoie p, et termine.<br />
+<strong>Conclusion</strong> : la terminaison est assurée.</p>
+<p>• Correction:<br />
+Un invariant de boucle est par exemple : <br />
+≪apres la iieme iteration p contient 2n0−(n0−i) = 2i et n contient ni = n0 − i≫<br />
+Les conditions initiales assurent qu’’au rang 0 la propriété est vraie. Supposons la vraie au rang i, et montrons Qu’elle est héréditaire :<br />
+- Au rang i + 1, on a : p qui contient 2 × 2n0−(n0−(i+1)) = 2i+1<br />
+- En fin d’itération n contient ni+1 = n0 − (i + 1)<br />
+Ceci est bien la propriété au rang i + 1<br />
+<strong>Conclusion</strong> : la correction est assurée.</p>
+</div>
+</div>
+</div>
 </div>
 
 
