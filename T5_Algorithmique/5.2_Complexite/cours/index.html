@@ -2814,7 +2814,7 @@
 <details class="cite" open="open"><summary>Activité</summary><p><img alt="Machine de Turing en papier" class="center" src="../data/machineTuring.jpg" width="40%" />
 <a href="https://www.espace-turing.fr/IMG/pdf/computerpaper.pdf">Computer Paper - Do It Yourself </a></p>
 <p>Dans un article qui fera date, « On Computable Numbers with an Application to the Entscheidungsproblem » publié en 1936, <strong>Alan Turing</strong>, jeune mathématicien anglais, jette les bases de ce qui deviendra la <emphrase>théorie de la calculabilité</emphrase> en répondant par la négative à la question de savoir si toute proposition peut être démontrée dans un système formel. Pour ce faire, il imagine une machine à calcul universelle ... en papier.</p>
-<p>Cette machine est composée d’un « ruban » supposé infini, chaque case contenant un symbole parmi un _alphabet fini, d’une tête de lecture/écriture, d’un registre d’états, d’une liste d’instructions.</p>
+<p>Cette machine est composée d’un « ruban » supposé infini, chaque case contenant un symbole parmi un alphabet fini, d’une tête de lecture/écriture, d’un registre d’états, d’une liste d’instructions.</p>
 <p>L’ordinateur - <strong>théorique</strong> - est né !</p>
 <p>Turing définit le calcul sous la forme d’une liste finie d’instructions, itérables un nombre indéfini de fois. Il vient de poser les fondements de la science informatique. Il n’a que 24 ans !</p>
 <p>Pour le centenaire de sa naissance, nous vous proposons de faire un voyage dans le temps, en construisant votre propre ordinateur en papier, à la manière d’Alan Turing il y a 76 ans.</p>
@@ -2823,7 +2823,7 @@
 <p class="admonition-title">Pour résumé</p>
 <p><iframe width="560" height="315" src="https://www.youtube.com/embed/P66h8D5Lkwk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>{: .center}
 <br />
-<a href="https://www.youtube.com/watch?v=P66h8D5Lkwk">La machine de Turing, une révolution des mathématiques et de l'informatique - Passe-science</a> (début à 3’30)</p>
+<a href="https://www.youtube.com/watch?v=P66h8D5Lkwk">La machine de Turing, une révolution des mathématiques et de l'informatique - Passe-science</a></p>
 <p>On retiendra ici, que le modèle de la machine de Turing, sert d'étalon pour mesurer la complexité d'un algorithme : C'est l'ordre de grandeur du nombre d'opérations élémentaires (lire, déplacer la tête de lecture) qu'effectuerait une machine de Turing pour effectuer l'algorithme.</p>
 </div>
 <p>La <strong>complexité</strong> d'un algorithme est une notion qui nous éclaire sur la manière dont cet algorithme va être sensible à la taille des données passées en paramètre. Il y a plusieurs types de complexités étudiables (nombre d'opérations, temps nécessaire, espace-mémoire nécessaire...).</p>
@@ -2968,8 +2968,7 @@ Dans ce cas, c'est souvent une très bonne nouvelle.</p>
 <ul>
 <li>L'algorithme est de <strong>complexité constante</strong>.</li>
 <li>L'algorithme est <strong>d'ordre 1</strong>.  </li>
-<li>L'algorithme est en <strong><span class="arithmatex">\(O(1)\)</span></strong> <em><br />
-(«grand O de 1»)</em></li>
+<li>L'algorithme est en <strong><span class="arithmatex">\(O(1)\)</span></strong> («de l'ordre de 1»)*</li>
 </ul>
 <p>Toutes ces formulations renvoient à la même idée : le nombre d'opérations nécessaires (et donc le temps nécessaire à la terminaison de l'algorithme) est constant quelle que soit la taille des données d'entrée de l'algorithme.</p>
 </div>
@@ -2985,11 +2984,13 @@ Dans ce cas, c'est souvent une très bonne nouvelle.</p>
 </ul>
 <h2 id="4-preuve-dun-algorithme">4. Preuve d’un algorithme<a class="headerlink" href="#4-preuve-dun-algorithme" title="Permanent link">⚓︎</a></h2>
 <p>Il est important de pouvoir montrer qu’un programme termine, afin de savoir si son exécution se fera sans problème.
- Parmi les instructions ci-dessous, quelles sont celles qui ne peuvent pas engendrer d’exécution infinie d’un algorithme ? Quelle est/sont la/les seule(s) instruction(s) problématique(s) ?<br />
-- Affectation 
-- Instruction conditionnelle (if … Then …else …)
-- Boucle Pour (for)
-- Boucle Tant que (While)</p>
+ Parmi les instructions ci-dessous, quelles sont celles qui ne peuvent pas engendrer d’exécution infinie d’un algorithme ? Quelle est/sont la/les seule(s) instruction(s) problématique(s) ?<br /></p>
+<ul>
+<li>Affectation </li>
+<li>Instruction conditionnelle (if … Then …else …)</li>
+<li>Boucle Pour (for)</li>
+<li>Boucle Tant que (While)</li>
+</ul>
 <p>On suppose maintenant que l’on est capable d’écrire un algorithme, appelé Terminator, dont la fonction est de répondre vrai si un programme termine et faux si un programme ne termine pas. Ainsi, l’instruction  <code>Terminator(P)</code> renvoie <code>vrai</code> si le programme P termine toujours et <code>faux</code> si P est capable de boucler.</p>
 <div class="highlight"><pre><span></span><code>Algorithme : SarahConnor
     Tant que _terminator_(sarahConnor) faire
@@ -3006,9 +3007,11 @@ On comprend donc que le problème de la terminaison des algorithmes n’est pas 
 <h3 id="41-definition">4.1 Définition<a class="headerlink" href="#41-definition" title="Permanent link">⚓︎</a></h3>
 <div class="admonition danger">
 <p class="admonition-title">Définition de la preuve</p>
-<p>On appelle preuve d’un algorithme, la propriété qui assure à ce dernier :<br />
-- de se terminer. On appelle cela la <strong>terminaison</strong> de l’algorithme<br />
-- de réaliser ce qu’’on attend de lui. On appelle cela la <strong>correction</strong> de l’algorithme.<br /></p>
+<p>On appelle preuve d’un algorithme, la propriété qui assure à ce dernier :<br /></p>
+<ul>
+<li>de se terminer. On appelle cela la <strong>terminaison</strong> de l’algorithme</li>
+<li>de réaliser ce qu’’on attend de lui. On appelle cela la <strong>correction</strong> de l’algorithme.</li>
+</ul>
 </div>
 <h3 id="42-comment-prouver">4.2 Comment ≪prouver≫ ?<a class="headerlink" href="#42-comment-prouver" title="Permanent link">⚓︎</a></h3>
 <h4 id="421-terminaison">4.2.1 Terminaison<a class="headerlink" href="#421-terminaison" title="Permanent link">⚓︎</a></h4>

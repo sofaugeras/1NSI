@@ -8,7 +8,7 @@
 
     Dans un article qui fera date, « On Computable Numbers with an Application to the Entscheidungsproblem » publié en 1936, **Alan Turing**, jeune mathématicien anglais, jette les bases de ce qui deviendra la <emphrase>théorie de la calculabilité</emphrase> en répondant par la négative à la question de savoir si toute proposition peut être démontrée dans un système formel. Pour ce faire, il imagine une machine à calcul universelle ... en papier.
 
-    Cette machine est composée d’un « ruban » supposé infini, chaque case contenant un symbole parmi un _alphabet fini, d’une tête de lecture/écriture, d’un registre d’états, d’une liste d’instructions.
+    Cette machine est composée d’un « ruban » supposé infini, chaque case contenant un symbole parmi un alphabet fini, d’une tête de lecture/écriture, d’un registre d’états, d’une liste d’instructions.
 
     L’ordinateur - **théorique** - est né !
 
@@ -19,7 +19,7 @@
 !!! tldr "Pour résumé"
     <iframe width="560" height="315" src="https://www.youtube.com/embed/P66h8D5Lkwk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>{: .center}
     <br />
-    [La machine de Turing, une révolution des mathématiques et de l'informatique - Passe-science](https://www.youtube.com/watch?v=P66h8D5Lkwk) (début à 3’30)
+    [La machine de Turing, une révolution des mathématiques et de l'informatique - Passe-science](https://www.youtube.com/watch?v=P66h8D5Lkwk)
 
     On retiendra ici, que le modèle de la machine de Turing, sert d'étalon pour mesurer la complexité d'un algorithme : C'est l'ordre de grandeur du nombre d'opérations élémentaires (lire, déplacer la tête de lecture) qu'effectuerait une machine de Turing pour effectuer l'algorithme.
 
@@ -87,6 +87,7 @@ On dit que l'algorithme ci-dessus est de complexité **linéaire**.
     Toutes ces formulations renvoient à la même idée : le nombre d'opérations nécessaires (et donc le temps nécessaire à la terminaison de l'algorithme) évolue **proportionnellement** avec le nombre de données à traiter.
 
 ### 1.3 Formulation mathématique
+
 Si un employé A met 3 secondes par enveloppe, on aura $T_A=3n$.  
 Si un employé B met 20 secondes par enveloppe, on aura $T_B=20n$.  
 
@@ -219,8 +220,7 @@ Observons l'accès au 1er élément d'une liste :
     
     - L'algorithme est de **complexité constante**.
     - L'algorithme est **d'ordre 1**.  
-    - L'algorithme est en **$O(1)$** *  
-    («grand O de 1»)*
+    - L'algorithme est en **$O(1)$** («de l'ordre de 1»)*
 
     Toutes ces formulations renvoient à la même idée : le nombre d'opérations nécessaires (et donc le temps nécessaire à la terminaison de l'algorithme) est constant quelle que soit la taille des données d'entrée de l'algorithme.
 
@@ -239,6 +239,7 @@ On peut classer les algorithmes selon leur complexité.
 
 Il est important de pouvoir montrer qu’un programme termine, afin de savoir si son exécution se fera sans problème.
  Parmi les instructions ci-dessous, quelles sont celles qui ne peuvent pas engendrer d’exécution infinie d’un algorithme ? Quelle est/sont la/les seule(s) instruction(s) problématique(s) ?<br />
+
 - Affectation 
 - Instruction conditionnelle (if … Then …else …)
 - Boucle Pour (for)
@@ -264,8 +265,9 @@ On dit en théorie de l’informatique que le problème de l’arrêt est **ind�
 !!! danger "Définition de la preuve" 
 
     On appelle preuve d’un algorithme, la propriété qui assure à ce dernier :<br />
-    - de se terminer. On appelle cela la **terminaison** de l’algorithme<br />
-    - de réaliser ce qu’’on attend de lui. On appelle cela la **correction** de l’algorithme.<br />
+
+    - de se terminer. On appelle cela la **terminaison** de l’algorithme
+    - de réaliser ce qu’’on attend de lui. On appelle cela la **correction** de l’algorithme.
 
  
 ### 4.2 Comment ≪prouver≫ ?

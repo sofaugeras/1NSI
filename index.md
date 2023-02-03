@@ -1,7 +1,6 @@
 
 !!! abstract ":star: Thèmes en cours d'étude :star: "
-    - [tuple](./T3_Type_construit/3.2_tuples/cours/)
-    - [Spécifications](T5_algorithmique/5.0_specifications/cours.md)
+    - [Complexité](T5_algorithmique/5.2_complexite/cours.md)
 
 !!! info "Actualités"
     - Site d'entrainement : [ici](https://e-nsi.gitlab.io/pratique/tags/){. target="_blank"}
@@ -12,6 +11,8 @@
     - [Thème 7 : IHM Web : HTML et CSS](T7_IHM_Web/7.1_Interactions_page_web/cours.md)
     - [Thème 4 : Architecture de Von Neumann](T4_Architecture_materielle/Architecture_von_neumann/cours.md)
     - [Thème 3 : Type Construit : les Listes](T3_Type_construit/3.1_Listes/cours.md)
+    - [tuple](./T3_Type_construit/3.2_tuples/cours/)
+    - [Spécifications](T5_algorithmique/5.0_specifications/cours.md)
 
 <!--
 !!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
