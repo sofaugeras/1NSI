@@ -2,6 +2,9 @@
 
 ![image](data/BO.png){: .center}
 
+!!!- info "Crédits"
+    - [Gilles Lassus](https://glassus.github.io/premiere_nsi/)
+
 ![image](data/meme.jpg){: .center width=30%}
 
 

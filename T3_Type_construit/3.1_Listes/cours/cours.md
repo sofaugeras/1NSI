@@ -2,7 +2,8 @@
 
 ![image](data/BO.png){: .center}
 
-
+!!!- info "Crédits"
+    - [Gilles Lassus](https://glassus.github.io/premiere_nsi/)
 
 Les listes font partie de ce qu'on appelle les *données composites* (nous verrons plus tard les *tuples* et les *dictionnaires*). Elles permettent de regrouper de manière structurée un **ensemble de valeurs** (et non plus une valeur unique).
 On les appelle *listes* en Python, ou bien *tableaux* de manière plus générale.

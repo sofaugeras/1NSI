@@ -2,6 +2,9 @@
 
 ![image](data/BO.png){: .center}
 
+!!!- info "Crédits"
+    - [Gilles Lassus](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.3_Architecture_reseau/cours/)
+
 Ce cours a pour but de présenter la constitution classique d'un réseau, et les équipements associés. La partie relative aux protocoles utilisés lors des échanges entre deux machines est détaillée dans le cours sur les protocoles de communication.
 
 ### 1. Premier réseau local

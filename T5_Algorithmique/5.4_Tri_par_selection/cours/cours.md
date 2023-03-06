@@ -2,6 +2,9 @@
 
 ![image](data/BO.png){: .center}
 
+!!!- info "Crédits"
+    - [Gilles Lassus](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.3_Architecture_reseau/cours/)
+
 
 ## 1. Animation
 Considérons la liste `[5, 4, 2, 1]`  

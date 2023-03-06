@@ -2,6 +2,9 @@
 
 ![image](data/BO.png){: .center}
 
+!!!- info "Crédits"
+    - [Gilles Lassus](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.3_Architecture_reseau/cours/)
+
 # Méthode du K-Nearest-Neighbours (KNN), aka les k-plus-proches-voisins
 La méthode KNN est une méthode simple et efficace de classification. La classification est un enjeu majeur de l'Intelligence Artificielle :
 

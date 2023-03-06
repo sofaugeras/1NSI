@@ -4,6 +4,8 @@
 
 ![image](data/color_bars.svg){: .center width=30%}
 
+!!!- info "Crédits"
+    - [Gilles Lassus](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.3_Architecture_reseau/cours/)
 
 ## 0. Préambule
 Pourquoi étudier des algorithmes de tri ?  

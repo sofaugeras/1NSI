@@ -1,4 +1,4 @@
-!!! example "{{ exercice() }}"
+!!! example "exercice"
     === "Énoncé"
         ![image](data/sanglier.jpg){: .center width=60%}
         Résolvez le **Pydéfi** proposé à [cette adresse](https://pydefis.callicode.fr/defis/Herculito04Sanglier/txt)

@@ -4,6 +4,10 @@
 
 ![image](data/BO.png){: .center}
 
+!!!- info "Crédits"
+    - [Gilles Lassus](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.3_Architecture_reseau/cours/)
+
+
 ![image](data/meme.jpg){: .center}
 
 «dichotomie» se dit en anglais *binary search*.

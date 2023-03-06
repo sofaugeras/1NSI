@@ -3,6 +3,8 @@ en anglais : _greedy algorithms_
 
 ![image](data/BO.png){: .center}
 
+!!!- info "Crédits"
+    - [Gilles Lassus](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.3_Architecture_reseau/cours/)
 
 
 ![](data/greedy.png){: .center}
