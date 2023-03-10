@@ -258,16 +258,13 @@ Vous pourrez utiliser le site [https://www.coordonnees-gps.fr/](https://www.coor
     print(data['GPS GPSLongitude'])
     ```
     soit `N[44, 51, 24163/1250]W[0, 34, 169537/10000]`
-`   En DMS, la latitude est <mark>44°51'19.3304''Nord</mark>. La longitude est <mark>0°34'16.9537'' Ouest</mark>.
-
+    En DMS, la latitude est <mark>44°51'19.3304''Nord</mark>. La longitude est <mark>0°34'16.9537'' Ouest</mark>.
     Ce qui donne :
-    ![image](data/localisation_liberty.png){: .center width=30%}
-
+    ![localisation](data/localisation_liberty.png){: .center width=30%}
     En effet, cette photographie a été prise **Place Picard, à Bordeaux**, où se trouve une Statue de la Liberté.
-
     ![image](data/place_picard.png){: .center width=30%}
 
-## Exercice 5 : : résolution du pydéfi Pokémons "le seul et unique"
+## Exercice 5 : résolution du pydéfi Pokémons "le seul et unique"
 
 D'après le [défi](https://callicode.fr/pydefis/PokePlusRare/txt) proposé par L.Signac .
 
