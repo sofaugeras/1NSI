@@ -1,5 +1,8 @@
 # Liens utiles
 
+??? abstract "source"
+    - site de [Cédric Gouygou](https://cgouygou.github.io/1NSI/)
+
 ## À propos de la spécialité NSI
 
 - [Le site Eduscol](https://eduscol.education.fr/2068/programmes-et-ressources-en-numerique-et-sciences-informatiques-voie-g){:target="_blank"} 
@@ -30,5 +33,3 @@ Au cas où vous vous ennuieriez...
 - [CodinGame](https://www.codingame.com/start){:target="_blank"} 
 
 
-??? abstract "source"
-    - site de [Cédric Gouygou](https://cgouygou.github.io/1NSI/)

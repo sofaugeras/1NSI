@@ -3,10 +3,8 @@
 ## Ada Lovelace
 ![image](data/adalovelace.jpg){: .center width=30%}
 
-
 ## Alan Turing
 ![image](data/turing.jpg){: .center width=30%}
-
 
 ## Donald Knuth
 ![image](data/knuth.jpg){: .center width=30%}
@@ -49,3 +47,18 @@
 
 ## John Conway
 ![image](data/conway.jpg){: .center width=30%}
+
+## Dorothy Vaughan
+![image](data/Vaughan.jpg){: .center width=30%}
+
+## Charles Babbage
+![image](data/Babbage.jpg){: .center width=30%}
+
+## John Von Neumann
+![image](data/vonneumann.jpg){: .center width=30%}
+
+## Georges Boole
+![image](data/boole.jpg){: .center width=30%}
+
+## Gordon Moore 
+![image](data/moore.JPG){: .center width=30%}

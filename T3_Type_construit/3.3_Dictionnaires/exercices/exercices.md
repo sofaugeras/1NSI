@@ -303,7 +303,7 @@ Si le Pokémon est en double dans la liste, sa valeur sera alors la chaîne de c
     ```
 
 
-**Question 2 **  Les données d'entrée du pydéfi ont été enregistrées dans le fichier [input_defi.txt](data/input_defi.txt). Les lignes suivantes permettent de parcourir chacun des personnages de la liste.
+**Question 2**  Les données d'entrée du pydéfi ont été enregistrées dans le fichier [input_defi.txt](data/input_defi.txt). Les lignes suivantes permettent de parcourir chacun des personnages de la liste.
 
 
 ```python
