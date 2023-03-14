@@ -24,7 +24,7 @@
     A partir d’une source de données choisies ou créées par vous, créer un programme Python d’acquisition (à partir d’un fichier CSV) et de restitution de données. La restitution pourra être source forme de tableaux (bibliothèque panda), de graphique (bibliothèque matplotlib) ou de carte (bibliothèque folium)
  
 ## Les données : 
-Bibliothèques de données (la liste est donnée à titre indicative, il existe d’autres sources de données) :
+Bibliothèques de données (la liste est donnée à titre indicative, il existe d’autres sources de données) :<br />
 ▶️ [openData Gouv](https://www.data.gouv.fr/fr/datasets/)<br />
 ▶️ [openData Bretagne](https://data.bretagne.bzh/explore/?sort=modified)<br />
 ▶️ [Kaggle](https://www.kaggle.com/datasets)<br />
@@ -33,7 +33,7 @@ Bibliothèques de données (la liste est donnée à titre indicative, il existe 
 ## AIDE : 
 Tutoriel bibliothèque Panda : <br />
 - [cours](T6_Traitement_de_donnees/6.3_Pandas/cours.md)<br />
-- [tuto d initiation panda et matplotlib] https://www.actuia.com/tutoriel/tutoriel-dinitiation-a-lia-python-pandas-et-matplotlib-partie-2/
+- [tuto d initiation panda et matplotlib](https://www.actuia.com/tutoriel/tutoriel-dinitiation-a-lia-python-pandas-et-matplotlib-partie-2/)
 
 ## IDEE de PROJET : 
 :bulb: Evolution du nombre de morts par épisodes dans Games of Thrones<br />

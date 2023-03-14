@@ -1,5 +1,7 @@
 # Conseils de travail
 
+!!! abstract "Crédit"
+    - site de [Cédric Gouygou](https://cgouygou.github.io/1NSI/)
 
 ## Conditions matérielles
 

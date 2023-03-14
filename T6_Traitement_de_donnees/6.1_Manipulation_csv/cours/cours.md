@@ -1,12 +1,13 @@
-# 6.1 Manipulation de fichiers csv
+# Manipulation de fichiers csv
 
 ![image](data/BO.png){: .center}
 
 !!! info "définition"   
     Les fichiers CSV (pour `Comma Separated Values`) sont des fichiers-texte (ils ne contiennent aucune mise en forme) utilisés pour stocker des données, séparées par des virgules (ou des points-virgules, ou des espaces...). Il n'y a pas de norme officielle du CSV.  
 
+🔽 Télécharger le notebook de cours correspondant [ici](data/6.1_Manipulation_csv.zip)
 
-## 1. Ouverture d'un fichier CSV par des logiciels classiques
+## Ouverture d'un fichier CSV par des logiciels classiques
 
 - Télécharger le fichier [eleve.csv](data/eleve.csv)
 - Ouvrir avec le Bloc-Notes ce fichier.
@@ -20,14 +21,14 @@
     ![eleve](data/elevetexte.jpg){: .center}
 
 
-## 2. Exploitation d'un fichier CSV en Python avec le module CSV
+## Exploitation d'un fichier CSV en Python avec le module CSV
 
 L'utilisation d'un tableur peut être délicate lorsque le fichier CSV comporte un très grand nombre de lignes. 
 Python permet de lire et d'extraire des informations d'un fichier CSV même très volumineux, grâce à des modules dédiés, comme le bien-nommé `csv` (utilisé ici) ou bien `pandas` (qui sera vu plus tard).
 
 Le logiciel `Jupyter Notebook` se prête parfaitement à la consultation et l'exploitation de données structurées, nous l'utiliserons préféremment à `Spyder`. 
 
-### 2.1 Première méthode
+### Première méthode
 
 Le script suivant :
 
@@ -56,7 +57,7 @@ donne :
     2. La variable `donnees` n'est pas exploitable en l'état. Ce n'est pas une structure connue. C'est un `objet` un peu complexe.
 
 
-### 2.2 Améliorations
+### Améliorations
 
 Au lieu d'utiliser la fonction `csv.reader()`, utilisons `csv.DictReader()`. Comme son nom l'indique, elle renverra une variable contenant des dictionnaires.
 
@@ -99,7 +100,7 @@ C'est mieux ! Les données sont maintenant des dictionnaires. Mais nous avons ju
 
 Pas simple à parcourir, non ?
 
-### 2.3 Une liste de dictionnaires
+### Une liste de dictionnaires
 
 Nous allons donc créer une liste de dictionnaires.
 
@@ -142,13 +143,13 @@ permet de faire ceci :
 ```
 
 
-## 3. Un fichier un peu plus intéressant : les joueurs de rugby du TOP14
+## Un fichier un peu plus intéressant : les joueurs de rugby du TOP14
 
 Le fichier [`top14.csv `](../data/top14.csv)  contient tous les joueurs du Top14 de rugby, saison 2019-2020, avec leur date de naissance, leur poste, et leurs mensurations. 
 
 _Ce fichier a été généré par Rémi Deniaud, de l'académie de Bordeaux._
 
-**Q1.** Stocker dans  une variable `joueurs`  les renseignements de tous les joueurs présents dans ce fichier csv.
+**Question 1.** Stocker dans  une variable `joueurs`  les renseignements de tous les joueurs présents dans ce fichier csv.
 
 
 ??? tip "réponse"
@@ -163,9 +164,9 @@ _Ce fichier a été généré par Rémi Deniaud, de l'académie de Bordeaux._
     f.close()
     ```
 
-### 3.1 Première analyse
+### Première analyse
 
-**Q2.** Combien de joueurs sont présents dans ce fichier ?
+**Question 2.** Combien de joueurs sont présents dans ce fichier ?
 
 ??? tip "réponse"
     ```python
@@ -173,9 +174,7 @@ _Ce fichier a été généré par Rémi Deniaud, de l'académie de Bordeaux._
      595
     ```
 
-
-
-**Q3.** Quel est le prénom du joueur n°486 ?
+**Question 3.** Quel est le prénom du joueur n°486 ?
 
 ??? tip "réponse"
     ```python
@@ -183,13 +182,12 @@ _Ce fichier a été généré par Rémi Deniaud, de l'académie de Bordeaux._
       'Wenceslas LAURET'
     ```
 
-### 3.2 Extraction de données particulières
+### Extraction de données particulières
 
 
-**Q4.**  Où joue Baptiste SERIN ?  
+**Question 4.**  Où joue Baptiste SERIN ?  
 
 La méthode la plus naturelle est de parcourir toute la liste jusqu'à trouver le bon joueur, puis d'afficher son équipe.
-
 
 ??? tip "réponse"
     ```python
@@ -197,7 +195,6 @@ La méthode la plus naturelle est de parcourir toute la liste jusqu'à trouver l
             if joueur['Nom'] == 'Baptiste SERIN' :
                 print(joueur['Equipe'])
     ```
-
 
 Une méthode plus efficace est d'utiliser une liste par compréhension incluant un test. 
 
@@ -207,9 +204,7 @@ Une méthode plus efficace est d'utiliser une liste par compréhension incluant 
     >>> clubSerin
     ```
 
-
-
-**Q5.**  Qui sont les joueurs de plus de 140 kg ?
+**Question 5.**  Qui sont les joueurs de plus de 140 kg ?
 
 Attention à bien convertir en entier la chaine de caractère renvoyée par la clé ```Poids``` 
 
@@ -220,11 +215,10 @@ Attention à bien convertir en entier la chaine de caractère renvoyée par la c
     ```
 
 
-### 4. Exploitation graphique
+### Exploitation graphique
 Nous allons utiliser le module Matplotlib pour illustrer les données de notre fichier csv.
 
-### 4.1 Exemple 
-
+### Exemple 
 
 ```python linenums='1'
 %matplotlib inline
@@ -235,13 +229,12 @@ plt.plot(X,Y,'ro') # r pour red, o pour un cercle. voir https://matplotlib.org/a
 plt.show()
 ```
 
+![png](data/01_Manipulation_csv_34_0.png){: .center}
 
-![png](01_Manipulation_csv_files/01_Manipulation_csv_34_0.png){: .center}
 
+### Application
 
-### 4.2 Application
-
-**Q1.** Afficher sur un graphique tous les joueurs de rugby du top14, en mettant le poids en abscisse et la taille en ordonnée.
+**Question 1.** Afficher sur un graphique tous les joueurs de rugby du top14, en mettant le poids en abscisse et la taille en ordonnée.
 
 ??? tip "réponse"
 
@@ -254,10 +247,10 @@ plt.show()
     ```
 
 
-    ![png](01_Manipulation_csv_files/01_Manipulation_csv_37_0.png){: .center}
+    ![png](data/01_Manipulation_csv_37_0.png){: .center}
 
 
-**Q2.** Faire apparaître ensuite les joueurs évoluant au poste de Centre en bleu, et les 2ème lignes en vert.
+**Question 2.** Faire apparaître ensuite les joueurs évoluant au poste de Centre en bleu, et les 2ème lignes en vert.
 
 ??? tip "réponse"
     ```python linenums='1'
@@ -282,6 +275,6 @@ plt.show()
     ```
 
 
-    ![png](01_Manipulation_csv_files/01_Manipulation_csv_38_0.png){: .center}
+    ![png](data/01_Manipulation_csv_38_0.png){: .center}
 
 
