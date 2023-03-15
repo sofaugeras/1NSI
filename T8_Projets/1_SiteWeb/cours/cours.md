@@ -13,11 +13,11 @@ Vous utiliserez les langages HTML5 et CSS3.
  
 Vous trouverez ci-dessous les minimas attendus sur ce travail à faire. <br />
 
-## Les attendus : 
+## Les attendus 
 - ➡️Les pages html devront être valides [W3C](https://validator.w3.org/) pour le HTML5. 
 - ➡️ Les indications CSS devront être conforme au standard CSS3. 
 
-## Les éléments obligatoires : 
+## Les éléments obligatoires 
 - ➡️ Un minimum de 2 page cohérente et structurée 
     - présentation de la personne
     - contexte historique

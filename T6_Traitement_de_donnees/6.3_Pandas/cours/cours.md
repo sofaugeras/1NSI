@@ -22,43 +22,38 @@ type(df)
 ```
 ## Premiers renseignements sur les fichiers de données
 
-Que contient la variable `df`?
+❓ Que contient la variable `df`?
 
-![df](data/df.jpg){: .center width=50%}
+??? tip "réponse"
+    ![df](data/df.jpg){: .center width=50%}
 
 Les données sont présentées dans l'ordre originel du fichier. <br />
 Il est possible d'avoir uniquement les premières lignes du fichier avec la commande `head()` et les dernières du fichier avec la commande `tail()`. Ces commandes peuvent recevoir en paramètre un nombre entier.
 
-!!! note "Question"
-    === "Enoncé"
-        Que fait l'instruction `df.head()` ?
+❓ Que fait l'instruction `df.head()` ?
 
+??? tip "réponse"
         ```python
         df.head()
         ```
-    === "Réponse"
         Elle renvoie les n premières lignes de `Df`. Par défaut n=5.
         ![extrait](data/head.jpg){: .center width=50%}
 
-!!! note "Question"
-    === "Enoncé"
-        Que fait l'instruction `df.tail()` ?
+❓ Que fait l'instruction `df.tail()` ?
 
+??? tip "réponse"
         ```python
         df.tail()
         ```
-    === "Réponse"
         Elle renvoie les n dernières lignes de `Df`. Par défaut n=5.
         ![extrait](data/tail.jpg){: .center width=50%}
 
-!!! note "Question"
-    === "Enoncé"
-        Que fait l'instruction `df.head(3)` ?
+❓ Que fait l'instruction `df.head(3)` ?
 
+??? tip "réponse"
         ```python
         df.head(3)
         ```
-    === "Réponse"
         Elle renvoie les 3 premières lignes de `Df`. 
         ![extrait](data/head3.jpg){: .center width=50%}
 
@@ -174,11 +169,9 @@ Le poste le plus fréquent est donc celui de '3ème ligne'.
 
 Pour connaître par exemple la date de naissance la plus fréquente chez les joueurs du top14, on utilisera simplement :
 
-!!! note "Question"
-    === "Enoncé"
-        Quelle est la date de naissance la plus fréquente ?
-    === "Réponse"
+❓ Quelle est la date de naissance la plus fréquente ?
 
+??? tip "réponse"
         ```python
         df['Date de naissance'].describe().top
         ```
@@ -188,21 +181,16 @@ Pour connaître par exemple la date de naissance la plus fréquente chez les jou
         print(df['Nom'][df['Date de naissance'] == '23/04/1993'])
         ```
 
-!!! note "Question"
-    === "Enoncé"
-        Quels sont les joueurs les plus grands du TOP14 ?
-    === "Réponse"
+❓ Quels sont les joueurs les plus grands du TOP14 ?
 
+??? tip "réponse"
          ```python
         df['Taille'].describe().max
         print(df['Nom'][df['Taille']==208])
         ```
+❓  Quel est le nombre de joueurs de Toulon ?
 
-!!! note "Question"
-    === "Enoncé"
-        Quel est le nombre de joueurs de Toulon ?
-    === "Réponse"
-
+??? tip "réponse"
          ```python
         T = df[df['Equipe'] == 'Toulon']
         T.describe()
@@ -235,29 +223,23 @@ UBB = df[df['Equipe'] == 'Bordeaux']
 >>> UBB
 ```
 
-!!! note "Exercice 1"
-    === "Enoncé"
-        Créer une dataframe `poidsLourd` qui contient les joueurs de plus de 135 kg.
-    === "Réponse"
+❓  Créer une dataframe `poidsLourd` qui contient les joueurs de plus de 135 kg.
 
+??? tip "réponse"
          ```python
         poidsLourd = df[df['Poids'] > 135] 
         ```
 
-!!! note "Exercice 2"
-    === "Enoncé"
-        Créer une dataframe `grand_lourd` qui contient les joueurs de plus de 2m et plus de 120 kg.
-    === "Réponse"
+❓  Créer une dataframe `grand_lourd` qui contient les joueurs de plus de 2m et plus de 120 kg.
 
+??? tip "réponse"
          ```python
         grand_lourd = df[(df['Poids'] > 120) & (df['Taille'] > 200)]
         ```
 
-!!! note "Exercice 3"
-    === "Enoncé"
-        Trouver en une seule ligne le joueur le plus léger du Top14.
-    === "Réponse"
+❓  Trouver en une seule ligne le joueur le plus léger du Top14.
 
+??? tip "réponse"
          ```python
         df['Nom'][df['Poids'] == min(df['Poids'])]
         print(df['Nom'][df['Poids'].idxmin])
@@ -291,7 +273,7 @@ del df['Poids après les vacances']
 df.head()
 ```
 
-!!! note "Exercice 4"
+!!! note "Exercice"
     === "Enoncé"
         1. Créer une colonne contenant l'IMC de chaque joueur<br />
         2. Créer une nouvelle dataframe contenant tous les joueurs du top14 classés par ordre d'IMC croissant.

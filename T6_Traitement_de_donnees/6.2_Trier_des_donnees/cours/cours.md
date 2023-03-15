@@ -34,7 +34,7 @@ La valeur renvoyée sera de type `liste de dictionnaire`.
     assert len(joueursEquipe("Bordeaux")) == 37
     ```
 
-▶️ Définir de la même manière une fonction `joueursPoste(poste)` qui renvoie une liste contentant tous les joueurs occupant le  `poste`.  Le paramètre `poste` sera donnée sous forme de chaîne de caractères. 
+❓  Définir de la même manière une fonction `joueursPoste(poste)` qui renvoie une liste contentant tous les joueurs occupant le  `poste`.  Le paramètre `poste` sera donnée sous forme de chaîne de caractères. 
 La valeur renvoyée sera de type `liste de dictionnaire`.
 
 ??? tip "réponse"
@@ -134,33 +134,27 @@ La création de cette fonction `age()` va nous permettre de spécifier une **cl�
 
     ```
 
-!!! abstract "Exercice 1"
-    === "Énoncé"
-        Trier les joueurs du top14 par taille.
+❓   Trier les joueurs du top14 par taille.
 
-    === "Correction"
-
+??? tip "réponse"
         ```python
         def taillePlayer(player) :
             return int(player['Taille'])
         joueurs_taille_croissant = sorted(joueurs, key = taillePlayer)
         ```
 
-!!! abstract "Exercice 2"
-    === "Énoncé"
-        Trier les joueurs du top14 par poids.
-    === "Correction"
+❓   Trier les joueurs du top14 par poids.
 
+??? tip "réponse"
         ```python
         def poidsPlayer(player) :
             return int(player['Poids'])
         joueurs_poids_croissant = sorted(joueurs, key = poidsPlayer)
         ```
-!!! abstract "Exercice 3"
-    === "Énoncé"
-        Trier les joueurs de Bordeaux suivant leur Indice de Masse Corporelle ([IMC](https://fr.wikipedia.org/wiki/Indice_de_masse_corporelle) )
-    === "Correction"
 
+❓   Trier les joueurs de Bordeaux suivant leur Indice de Masse Corporelle ([IMC](https://fr.wikipedia.org/wiki/Indice_de_masse_corporelle) )
+
+??? tip "réponse"
         ```python
         def IMC(player):
             masse = int(player['Poids'])

@@ -2883,58 +2883,35 @@ La bibliothèque <code>pandas</code> est par contre spécialement conçue pour l
 <span class="o">&gt;&gt;&gt;</span> <span class="n">pandas</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">DataFrame</span>
 </code></pre></div>
 <h2 id="premiers-renseignements-sur-les-fichiers-de-donnees">Premiers renseignements sur les fichiers de données<a class="headerlink" href="#premiers-renseignements-sur-les-fichiers-de-donnees" title="Permanent link">⚓︎</a></h2>
-<p>Que contient la variable <code>df</code>?</p>
-<p><img alt="df" class="center" src="../data/df.jpg" width="50%" /></p>
+<p>❓ Que contient la variable <code>df</code>?</p>
+<details class="tip"><summary>réponse</summary><p><img alt="df" class="center" src="../data/df.jpg" width="50%" /></p>
+</details>
 <p>Les données sont présentées dans l'ordre originel du fichier. <br />
 Il est possible d'avoir uniquement les premières lignes du fichier avec la commande <code>head()</code> et les dernières du fichier avec la commande <code>tail()</code>. Ces commandes peuvent recevoir en paramètre un nombre entier.</p>
-<div class="admonition note">
-<p class="admonition-title">Question</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Enoncé</label><label for="__tabbed_1_2">Réponse</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Que fait l'instruction <code>df.head()</code> ?</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<p>❓ Que fait l'instruction <code>df.head()</code> ?</p>
+<details class="tip"><summary>réponse</summary><div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```python
+df.head()
+```
+Elle renvoie les n premières lignes de `Df`. Par défaut n=5.
+![extrait](data/head.jpg){: .center width=50%}
 </code></pre></div>
-</div>
-<div class="tabbed-block">
-<p>Elle renvoie les n premières lignes de <code>Df</code>. Par défaut n=5.
-<img alt="extrait" class="center" src="../data/head.jpg" width="50%" /></p>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Question</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Enoncé</label><label for="__tabbed_2_2">Réponse</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Que fait l'instruction <code>df.tail()</code> ?</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</details>
+<p>❓ Que fait l'instruction <code>df.tail()</code> ?</p>
+<details class="tip"><summary>réponse</summary><div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```python
+df.tail()
+```
+Elle renvoie les n dernières lignes de `Df`. Par défaut n=5.
+![extrait](data/tail.jpg){: .center width=50%}
 </code></pre></div>
-</div>
-<div class="tabbed-block">
-<p>Elle renvoie les n dernières lignes de <code>Df</code>. Par défaut n=5.
-<img alt="extrait" class="center" src="../data/tail.jpg" width="50%" /></p>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Question</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Enoncé</label><label for="__tabbed_3_2">Réponse</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Que fait l'instruction <code>df.head(3)</code> ?</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</details>
+<p>❓ Que fait l'instruction <code>df.head(3)</code> ?</p>
+<details class="tip"><summary>réponse</summary><div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```python
+df.head(3)
+```
+Elle renvoie les 3 premières lignes de `Df`. 
+![extrait](data/head3.jpg){: .center width=50%}
 </code></pre></div>
-</div>
-<div class="tabbed-block">
-<p>Elle renvoie les 3 premières lignes de <code>Df</code>. 
-<img alt="extrait" class="center" src="../data/head3.jpg" width="50%" /></p>
-</div>
-</div>
-</div>
-</div>
+</details>
 <p>Pour avoir des renseignements globaux sur la structure de notre fichier, on peut utiliser la commande <code>df.info()</code></p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 <span class="o">&gt;&gt;&gt;</span>     <span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">pandas</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">frame</span><span class="o">.</span><span class="n">DataFrame</span><span class="s1">&#39;&gt;</span>
@@ -3019,53 +2996,31 @@ Pour tracer notre nuage de points poids-taille, le code sera donc simplement :</
 </code></pre></div>
 Le poste le plus fréquent est donc celui de '3ème ligne'.</p>
 <p>Pour connaître par exemple la date de naissance la plus fréquente chez les joueurs du top14, on utilisera simplement :</p>
-<div class="admonition note">
-<p class="admonition-title">Question</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Enoncé</label><label for="__tabbed_4_2">Réponse</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Quelle est la date de naissance la plus fréquente ?</p>
-</div>
-<div class="tabbed-block">
-<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date de naissance&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">top</span>
+<p>❓ Quelle est la date de naissance la plus fréquente ?</p>
+<details class="tip"><summary>réponse</summary><div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```python
+df[&#39;Date de naissance&#39;].describe().top
+```
+Qui sont les joueurs nés à cette date ?
+
+```python
+print(df[&#39;Nom&#39;][df[&#39;Date de naissance&#39;] == &#39;23/04/1993&#39;])
+```
 </code></pre></div>
-Qui sont les joueurs nés à cette date ?</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Nom&#39;</span><span class="p">][</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date de naissance&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;23/04/1993&#39;</span><span class="p">])</span>
+</details>
+<p>❓ Quels sont les joueurs les plus grands du TOP14 ?</p>
+<details class="tip"><summary>réponse</summary><div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code> ```python
+df[&#39;Taille&#39;].describe().max
+print(df[&#39;Nom&#39;][df[&#39;Taille&#39;]==208])
+```
 </code></pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Question</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Enoncé</label><label for="__tabbed_5_2">Réponse</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Quels sont les joueurs les plus grands du TOP14 ?</p>
-</div>
-<div class="tabbed-block">
-<p><code>python
-df['Taille'].describe().max
-print(df['Nom'][df['Taille']==208])</code></p>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Question</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Enoncé</label><label for="__tabbed_6_2">Réponse</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Quel est le nombre de joueurs de Toulon ?</p>
-</div>
-<div class="tabbed-block">
-<p><code>python
-T = df[df['Equipe'] == 'Toulon']
-T.describe()</code></p>
-</div>
-</div>
-</div>
-</div>
+</details>
+<p>❓  Quel est le nombre de joueurs de Toulon ?</p>
+<details class="tip"><summary>réponse</summary><div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code> ```python
+T = df[df[&#39;Equipe&#39;] == &#39;Toulon&#39;]
+T.describe()
+```
+</code></pre></div>
+</details>
 <p>Beaucoup plus de renseignements sont donnés par la commande <code>value_counts()</code>.</p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="mi">180</span>    <span class="mi">52</span>
@@ -3085,49 +3040,25 @@ T.describe()</code></p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">UBB</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Equipe&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Bordeaux&#39;</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">UBB</span>
 </code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Exercice 1</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Enoncé</label><label for="__tabbed_7_2">Réponse</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Créer une dataframe <code>poidsLourd</code> qui contient les joueurs de plus de 135 kg.</p>
-</div>
-<div class="tabbed-block">
-<p><code>python
-poidsLourd = df[df['Poids'] &gt; 135]</code></p>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Exercice 2</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Enoncé</label><label for="__tabbed_8_2">Réponse</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Créer une dataframe <code>grand_lourd</code> qui contient les joueurs de plus de 2m et plus de 120 kg.</p>
-</div>
-<div class="tabbed-block">
-<p><code>python
-grand_lourd = df[(df['Poids'] &gt; 120) &amp; (df['Taille'] &gt; 200)]</code></p>
-</div>
-</div>
-</div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Exercice 3</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Enoncé</label><label for="__tabbed_9_2">Réponse</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>Trouver en une seule ligne le joueur le plus léger du Top14.</p>
-</div>
-<div class="tabbed-block">
-<p><code>python
-df['Nom'][df['Poids'] == min(df['Poids'])]
-print(df['Nom'][df['Poids'].idxmin])</code></p>
-</div>
-</div>
-</div>
-</div>
+<p>❓  Créer une dataframe <code>poidsLourd</code> qui contient les joueurs de plus de 135 kg.</p>
+<details class="tip"><summary>réponse</summary><div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code> ```python
+poidsLourd = df[df[&#39;Poids&#39;] &gt; 135] 
+```
+</code></pre></div>
+</details>
+<p>❓  Créer une dataframe <code>grand_lourd</code> qui contient les joueurs de plus de 2m et plus de 120 kg.</p>
+<details class="tip"><summary>réponse</summary><div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code> ```python
+grand_lourd = df[(df[&#39;Poids&#39;] &gt; 120) &amp; (df[&#39;Taille&#39;] &gt; 200)]
+```
+</code></pre></div>
+</details>
+<p>❓  Trouver en une seule ligne le joueur le plus léger du Top14.</p>
+<details class="tip"><summary>réponse</summary><div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code> ```python
+df[&#39;Nom&#39;][df[&#39;Poids&#39;] == min(df[&#39;Poids&#39;])]
+print(df[&#39;Nom&#39;][df[&#39;Poids&#39;].idxmin])
+```
+</code></pre></div>
+</details>
 <h2 id="tris-de-donnees">Tris de données<a class="headerlink" href="#tris-de-donnees" title="Permanent link">⚓︎</a></h2>
 <p>Le tri se fait par la fonction <code>sort_values()</code> :</p>
 <p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">newdf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">],</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
@@ -3147,8 +3078,8 @@ Ceci se fera simplement par :</p>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </code></pre></div>
 <div class="admonition note">
-<p class="admonition-title">Exercice 4</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:3"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><input id="__tabbed_10_3" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">Enoncé</label><label for="__tabbed_10_2">Réponse 1</label><label for="__tabbed_10_3">Réponse 2</label></div>
+<p class="admonition-title">Exercice</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Enoncé</label><label for="__tabbed_1_2">Réponse 1</label><label for="__tabbed_1_3">Réponse 2</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <ol>
