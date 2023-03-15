@@ -1,8 +1,6 @@
 # Exercices sur la boucle `for ... in`
 
-{{ initexo(0) }}
-
-!!! example "{{ exercice() }}"
+!!! example "exercice 1"
     === "Énoncé"
         On donne une liste d'acteurs : 
         ```python
@@ -36,7 +34,7 @@
          
 
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 2"
     === "Énoncé"
         Dans l'extrait de code suivant:
 
@@ -68,7 +66,7 @@
 
 
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 3"
     === "Énoncé"
         1. Fabriquer la chaîne de caractères suivante (qui comporte 80 caractères) :
         ```python
@@ -101,7 +99,7 @@
 
 
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 4"
     === "Énoncé"
         En Python, la fonction `ord` renvoie le code Unicode d'un caractère et la fonction `chr` le contraire: elle renvoie le caractère correspondant à un code Unicode.
 
@@ -134,7 +132,7 @@
         print(mot_secret)
         ```
       
-!!! example "{{ exercice() }}"
+!!! example "exercice 5"
     === "Énoncé"
         On souhaite calculer la somme des 1000 premiers nombres entiers naturels, c'est-à-dire:
 
@@ -150,7 +148,7 @@
         print(somme)  
         ```
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 6"
     === "Énoncé"
         Calculer $1\times 2 \times 3 \times \dots 99 \times 100$.
     === "Correction"

@@ -3035,9 +3035,8 @@ va écrire une suite infinie de <code>ok</code> et ne <strong>jamais s'arrêter<
 </code></pre></div></td></tr></table></div></p>
 <p>va écrire <code>fini</code> et s'arrêter.</p>
 </div>
-<p>{{ initexo(0) }}</p>
 <div class="admonition example">
-<p class="admonition-title">{{ exercice() }}</p>
+<p class="admonition-title">exercice 1</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3064,7 +3063,7 @@ va écrire une suite infinie de <code>ok</code> et ne <strong>jamais s'arrêter<
 <p>La boucle bornée <code>for</code> que nous avons étudiée est très pratique.</p>
 <p>Mais nous pourrions nous en passer : toutes les boucles <code>for</code> peuvent en fait être ré-écrites en utilisant <code>while</code>. (alors que la réciproque est fausse)</p>
 <div class="admonition example">
-<p class="admonition-title">{{ exercice() }}</p>
+<p class="admonition-title">exercice 2</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3111,7 +3110,7 @@ Ré-écrire ce code en utilisant une boucle <code>while</code>. </p>
 <li>vous avez découvert l'expression <code>break</code> qui comme son nom l'indique permet de casser la boucle (cela marche pour <code>while</code> comme pour <code>for</code>) et donc d'en sortir. Son emploi est controversé parmi les puristes de la programmation. Nous dirons juste que c'est une instruction bien pratique.</li>
 </ul>
 <div class="admonition example">
-<p class="admonition-title">{{ exercice() }}</p>
+<p class="admonition-title">exercice 3</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Énoncé</label><label for="__tabbed_3_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3119,15 +3118,13 @@ Ré-écrire ce code en utilisant une boucle <code>while</code>. </p>
 <p>Aides :</p>
 <ul>
 <li><code>int()</code> permet de convertir une chaîne de caractères en nombre. </li>
-<li>pour avoir un nombre <code>a</code> pseudo-aléatoire :
+<li>pour avoir un nombre <code>a</code> pseudo-aléatoire :</li>
+</ul>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
 <span class="n">a</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
-</code></pre></div></li>
-</ul>
+</code></pre></div>
 </div>
 <div class="tabbed-block">
-<p>{{ correction(True,
-"
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -3146,8 +3143,6 @@ Ré-écrire ce code en utilisant une boucle <code>while</code>. </p>
         <span class="k">break</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;bravo !&#39;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-"
-) }}</p>
 </div>
 </div>
 </div>

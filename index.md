@@ -1,6 +1,7 @@
 
 !!! abstract ":star: Thèmes en cours d'étude :star: "
-    - [Thème 3 : Type Construit : les dictionnaires](./T3_Type_construit/3.3_Dictionnaires/cours/)
+    - [Thème 6 : Traitement des données en tables](./T6_Traitement_de_donnees/6.1_Manipulation_csv/cours.md)
+    - [Mini projet](T8_Projets/2_ProjetCSV/cours.md)
     
 !!! info "Actualités"
     - Site d'entrainement : [ici](https://e-nsi.gitlab.io/pratique/tags/){. target="_blank"}
@@ -15,25 +16,17 @@
     - [Thème 5 : Spécifications](T5_algorithmique/5.0_specifications/cours.md)
     - [Thème 5 : Complexité](T5_algorithmique/5.2_complexite/cours.md)
     - [Thème 4 : Architecture matérielle : OS et commande Linux](T4_Architecture_materielle/4.4_Decouverte_des_commandes_Linux/cours.md)
+    - [Thème 3 : Type Construit : les dictionnaires](./T3_Type_construit/3.3_Dictionnaires/cours/)
 
 
-<!--
 !!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
-    Chers élèves de Première (Groupe 1 et Groupe 2), voilà les chapitres à revoir en priorité pour aborder sereinement l'année de Terminale en NSI :
-    - Les listes, les tuples et les dictionnaires. À retrouver [ici](https://glassus.github.io/premiere_nsi/T2_Representation_des_donnees/sommaire/){. target="_blank"}.
-    - Le plus important : les chapitres suivants d'algorithmique, à retrouver [ici](https://glassus.github.io/premiere_nsi/T4_Algorithmique/sommaire/){. target="_blank"} :
+    Chers élèves de Première  voilà les chapitres à revoir en priorité pour aborder sereinement l'année de Terminale en NSI :
+    - Les listes, les tuples et les dictionnaires. À retrouver [ici](T3_Type_construit/sommaire.md){. target="_blank"}.
+    - Le plus important : les chapitres suivants d'algorithmique, à retrouver [ici](T5_Algorithmique/sommaire.md){. target="_blank"} :
         - Complexité
         - Tris par sélection et insertion
         - Dichotomie
-        
-!!! abstract ":star: Actualités :star:"
-    - Organisez-vous avec (par exemple) [Trello](https://trello.com/fr){. target="_blank"}, [Notion](https://www.notion.so/fr-fr){. target="_blank"} ou [Zenkit](https://zenkit.com/){. target="_blank"}
-    - Épreuves Pratiques : [entraînez-vous sur nsi-pratique](https://ens-fr.gitlab.io/nsi-pratique/){. target="_blank"}
-
-    - Les sujets de la BNS 2022 de l'Épreuve Pratique sont parus, vous pouvez les retrouver [ici](T6_6_Epreuve_pratique/BNS_2022/)
-    - **Infos orientation :**
-        - [Lien](https://www.geipi-polytech.org/){. target="_blank"} vers le site des 34 écoles d'ingénieurs **publiques** du groupe GEIPI
-        - [Lien](data/sujet0_geipi.pdf){. target="_blank"} vers le sujet 0 de leur épreuve NSI.
+<!--        
 
 !!! note "*Thèmes traités*"
     - [Architecture Von Neumann (1ère)](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.2_Architecture_Von_Neumann/cours/)

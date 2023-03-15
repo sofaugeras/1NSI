@@ -1,8 +1,7 @@
 # Exercices
 
-{{ initexo(0) }}
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 1"
     === "Énoncé"
         Écrire un programme qui demande deux nombres et qui affiche le plus grand des deux.
 
@@ -14,8 +13,7 @@
         ``` 
 
     === "Correction"
-        {{ correction(True,
-        "
+
         ```python linenums='1'
         n1 = int(input('Premier nombre ?'))
         n2 = int(input('Deuxième nombre ?'))
@@ -28,11 +26,9 @@
             print('les deux nombres sont égaux')
 
         ```
-        "
-        ) }}
 
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 2"
     === "Énoncé"
         Exercices à réaliser sur Capytale à partir de ce [lien](https://capytale2.ac-paris.fr/web/c/dc75-658380/mlc){. target="_blank"}.
         ![image](data/damier.png){: .center}
@@ -70,7 +66,7 @@
         grid.show()
         ```
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 3"
     === "Énoncé"
         Le jeu du FizzBuzz : il s'agit de compter à partir de 1 en remplaçant certains nombres par Fizz, Buzz ou Fizzbuzz :
 
@@ -81,8 +77,7 @@
         Écrire un code qui joue au FizzBuzz jusqu'à 50.
 
     === "Correction"
-        {{ correction(True,
-        "
+
         ```python linenums='1'
         for k in range(1,20):
             if k % 3 == 0 and k % 5 == 0:
@@ -94,11 +89,9 @@
             else:
                 print(k)
         ```
-        "
-        ) }}
 
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 4"
     === "Énoncé"
         Une année est déclarée bissextile (et compte donc 366 jours au lieu de 365) si elle est :
 
@@ -110,8 +103,7 @@
         *Explication : la Terre faisant le tour du Soleil en [un peu plus que 365 jours](https://fr.vikidia.org/wiki/R%C3%A9volution_de_la_Terre_autour_du_Soleil), on s'est dit qu'on allait rajouter un jour tous les 4 ans, mais c'était trop, alors on a enlevé un jour tous les 100 ans, mais c'était plus assez, alors on a rajouté un jour tous les 400 ans, ce qui donne une approximation convenable.*
 
     === "Correction"
-        {{ correction(True,
-        """
+   
         ```python linenums='1'
         annee = 2022
 
@@ -122,13 +114,4 @@
         else:
             print(annee, \"n'est pas bissextile\")
             
-
-
-
         ```
-        """
-    
-
-
-        
-        ) }}
