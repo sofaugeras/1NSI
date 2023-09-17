@@ -1,9 +1,8 @@
-# Binaire
+# 2.1 Binaire
 
-Règle du jeu : Disposer les cartes dans l’ordre ci-dessous sur la table. Vous ne pouvez que retourner ou non chaque carte. Il s'agit ensuite de compter le nombre de points visibles.
+_Règle du jeu :_ Disposer les cartes ci-dessous dans l’ordre sur la table. Vous ne pouvez que retourner ou non chaque carte. Il s'agit ensuite de compter le nombre de points visibles.
 
-
-
+![Jeu de carte TOY5](data/toy5.png){: .center}
 
 1ère étape :  
 	A tour de rôle, demander à votre binôme d’afficher un entier choisi au hasard (ex :  6 , 21, 15 …)
