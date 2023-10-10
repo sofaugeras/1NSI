@@ -1,13 +1,32 @@
 
 !!! abstract ":star: Thèmes en cours d'étude :star: "
-    - [Thème 6 : Traitement des données en tables](./T6_Traitement_de_donnees/6.1_Manipulation_csv/cours.md)
-    - [Mini projet](T8_Projets/2_ProjetCSV/cours.md)
+    - [Thème 1 : Démarrer en Python](./T1_demarrer_en_Python/sommaire.md)
+    - [Mini projet](T8_Projets/1_SiteWeb/cours.md)
     
-!!! info "Actualités"
-    - Site d'entrainement : [ici](https://e-nsi.gitlab.io/pratique/tags/){. target="_blank"}
+!!! info "Entraînement :running:"
+    Vous trouverez ci dessous quelques sites pour vous entrainez en Python
+    - [e-nsi](https://e-nsi.forge.aeif.fr/init_python/){. target="_blank"}
+    - [cercles informatiques](https://cscircles.cemc.uwaterloo.ca/fr/){. target="_blank"}
+    - [Pyrates](https://py-rates.fr/){. target="_blank"}
 
 !!! note "*Thèmes traités*"
-    - [Thème 1 : démarrer en python](T1_demarrer_en_python/sommaire.md)
+    - [Thème 2 : Type de base : binaire](./T2_Type_de_base/2.1_Binaire/)
+    - [Thème 2 : Type de base : Entiers](./T2_Type_de_base/2.2_Codage_entiers/)
+    - [Thème 2 : Type de base : Décimaux](./T2_Type_de_base/2.3_Decimaux/)
+
+<!--
+
+!!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
+    Chers élèves de Première  voilà les chapitres à revoir en priorité pour aborder sereinement l'année de Terminale en NSI :
+    - Les listes, les tuples et les dictionnaires. À retrouver [ici](T3_Type_construit/sommaire.md){. target="_blank"}.
+    - Le plus important : les chapitres suivants d'algorithmique, à retrouver [ici](T5_Algorithmique/sommaire.md){. target="_blank"} :
+        - Complexité
+        - Tris par sélection et insertion
+        - Dichotomie
+      
+
+!!! note "*Thèmes traités*"
+     - [Thème 1 : démarrer en python](T1_demarrer_en_python/sommaire.md)
     - [Thème 2 : Type de base](T2_Type_de_base/sommaire.md)
     - [Thème 7 : IHM Web : HTML et CSS](T7_IHM_Web/7.1_Interactions_page_web/cours.md)
     - [Thème 4 : Architecture de Von Neumann](T4_Architecture_materielle/Architecture_von_neumann/cours.md)
@@ -17,18 +36,6 @@
     - [Thème 5 : Complexité](T5_algorithmique/5.2_complexite/cours.md)
     - [Thème 4 : Architecture matérielle : OS et commande Linux](T4_Architecture_materielle/4.4_Decouverte_des_commandes_Linux/cours.md)
     - [Thème 3 : Type Construit : les dictionnaires](./T3_Type_construit/3.3_Dictionnaires/cours/)
-
-
-!!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
-    Chers élèves de Première  voilà les chapitres à revoir en priorité pour aborder sereinement l'année de Terminale en NSI :
-    - Les listes, les tuples et les dictionnaires. À retrouver [ici](T3_Type_construit/sommaire.md){. target="_blank"}.
-    - Le plus important : les chapitres suivants d'algorithmique, à retrouver [ici](T5_Algorithmique/sommaire.md){. target="_blank"} :
-        - Complexité
-        - Tris par sélection et insertion
-        - Dichotomie
-<!--        
-
-!!! note "*Thèmes traités*"
     - [Architecture Von Neumann (1ère)](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.2_Architecture_Von_Neumann/cours/)
     - [Systèmes sur puce](T5_Architecture_materielle/5.1_Systemes_sur_puce/cours/) 
     - [Gestion des processus](T5_Architecture_materielle/5.2_Gestion_des_processus/cours/)  
