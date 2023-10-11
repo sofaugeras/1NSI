@@ -3,11 +3,12 @@
     - [Thème 1 : Démarrer en Python](./T1_demarrer_en_Python/sommaire.md)
     - [Mini projet](T8_Projets/1_SiteWeb/cours.md)
     
-!!! info "Entraînement :running:"
-    Vous trouverez ci dessous quelques sites pour vous entrainez en Python
-    - [e-nsi](https://e-nsi.forge.aeif.fr/init_python/){. target="_blank"}
-    - [cercles informatiques](https://cscircles.cemc.uwaterloo.ca/fr/){. target="_blank"}
-    - [Pyrates](https://py-rates.fr/){. target="_blank"}
+!!! info "Entraînement :running: "
+    Vous trouverez ci dessous quelques sites pour vous entrainez en Python<br />
+    - [e-nsi](https://e-nsi.forge.aeif.fr/init_python/){. target="_blank"}<br />
+    - [cercles informatiques](https://cscircles.cemc.uwaterloo.ca/fr/){. target="_blank"}<br />
+    - [France IOI](https://www.france-ioi.org/algo/chapters.php){. target="_blank"}<br />
+    - [Pyrates](https://py-rates.fr/){. target="_blank"}<br />
 
 !!! note "*Thèmes traités*"
     - [Thème 2 : Type de base : binaire](./T2_Type_de_base/2.1_Binaire/)

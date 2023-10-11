@@ -79,15 +79,24 @@
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
         OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
         ```
-<!--     === "Correction"
+    === "Correction 1 "
         1.
         ```python linenums='1'
         sol = ""
         for k in range(80):
             sol = sol + 'I'
-
+        print(sol)
+        for k in range(80):
+            sol = sol + 'N'
+        print(sol)
+        for k in range(80):
+            sol = sol + 'F'
+        print(sol)
+        for k in range(80):
+            sol = sol + 'O'
         print(sol)
         ``` 
+    === "Correction 2 "
         2.
         ```python linenums='1'
         for lettre in 'INFO':
@@ -95,8 +104,15 @@
             for k in range(80):
                 sol = sol + lettre
             print(sol)
-        ``` -->
-
+        ``` 
+    === "Correction 3 "
+        3.
+        ```python linenums='1'
+        for lettre in 'INFO':
+            sol = ""
+            sol = sol + lettre*80
+            print(sol)
+        ```
 
 
 !!! example "exercice 4"
