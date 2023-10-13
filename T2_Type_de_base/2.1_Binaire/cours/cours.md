@@ -47,7 +47,6 @@ Pour chaque carte,  on note 1  si elle est tournée du côté visible (recto) et
 	:bulb: Un octet (Byte) représente 8 bits (BInary digiT)
 
 
- 
 ## Le système binaire
 
 !!! note ""
@@ -103,9 +102,9 @@ Donc $243_{10}=11110011_2$
     '0b11110011'
     ```
 
-!!! note "Définition" :
-	•	**Codage :** Opération consistant à représenter des informations à l'aide d'un code.
-	•	**Codage binaire :** Le code binaire utilise exclusivement les symboles 0 et 1 (systèmes logiques).
-	•	**Bit :** C'est le chiffre élémentaire de la numérotation binaire.
-	•	**Mot :** Groupe de "n" bits; un mot de 4 bits s'appelle un quartet, 8 bits s'appelle un octet...
-	•	**Poids :** Coefficient attaché au rang d'un chiffre dans un système de numérotation. En numérotation binaire, on parle du bit de plus faible poids qui est la position binaire de droite dans un mot et du bit de plus fort poids qui représente le bit situé le plus à gauche dans mot.
+!!! note "Définition"
+	- **Codage :** Opération consistant à représenter des informations à l'aide d'un code.<br />
+	- **Codage binaire :** Le code binaire utilise exclusivement les symboles 0 et 1 (systèmes logiques).<br />
+	- **Bit :** C'est le chiffre élémentaire de la numérotation binaire.<br />
+	- **Mot :** Groupe de "n" bits; un mot de 4 bits s'appelle un quartet, 8 bits s'appelle un octet...<br />
+	- **Poids :** Coefficient attaché au rang d'un chiffre dans un système de numérotation. En numérotation binaire, on parle du bit de plus faible poids qui est la position binaire de droite dans un mot et du bit de plus fort poids qui représente le bit situé le plus à gauche dans mot.

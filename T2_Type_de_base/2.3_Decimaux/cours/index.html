@@ -97,7 +97,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#codage-des-decimaux" class="md-skip">
+        <a href="#28-codage-des-non-entiers" class="md-skip">
           Aller au contenu
         </a>
       
@@ -1199,6 +1199,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Cours
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1208,6 +1219,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-notation-binaire-des-decimaux" class="md-nav__link">
+    1. Notation binaire des décimaux
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Notation binaire des décimaux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-ecriture-de-position" class="md-nav__link">
+    a. Écriture de position
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-de-lecriture-decimale-a-la-notation-binaire" class="md-nav__link">
+    b. De l’écriture décimale à la notation binaire
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-norme-iee754" class="md-nav__link">
+    2. Norme IEE754
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Norme IEE754">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-notation-scientifique" class="md-nav__link">
+    a. Notation scientifique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-representation-des-nombres-a-virgule-en-binaire-sur-n-bits" class="md-nav__link">
+    b. Représentation des nombres à virgule en binaire sur n bits
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-comment-faire-des-tests-degalite-sur-les-flottants" class="md-nav__link">
+    3. Comment faire des tests d'egalité sur les flottants ?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3799,7 +3890,206 @@
   
 
 
-<h1 id="codage-des-decimaux">Codage des Décimaux<a class="headerlink" href="#codage-des-decimaux" title="Permanent link">⚓︎</a></h1>
+<h1 id="28-codage-des-non-entiers">2.8 Codage des non-entiers<a class="headerlink" href="#28-codage-des-non-entiers" title="Permanent link">⚓︎</a></h1>
+<p><img alt="image" class="center" src="../../data/BOFlottant.png" /></p>
+<h2 id="1-notation-binaire-des-decimaux">1. Notation binaire des décimaux<a class="headerlink" href="#1-notation-binaire-des-decimaux" title="Permanent link">⚓︎</a></h2>
+<h3 id="a-ecriture-de-position">a. Écriture de position<a class="headerlink" href="#a-ecriture-de-position" title="Permanent link">⚓︎</a></h3>
+<p>Comme la notation décimale, la notation binaire permet aussi de représenter les nombres à virgule.<br /></p>
+<p>En notation décimale, les chiffres de gauche représentent les unités, les dizaines et ainsi de suite
+et ceux à droite de la virgule, les dixièmes, les centièmes etc.</p>
+<p><img alt="decomposition decimal" class="center" src="../../data/decimalDecomposition.png" /></p>
+<p>De même, en notation binaire, les chiffres de droite représentent des demis, des quarts, des
+huitièmes etc.</p>
+<p><img alt="decomposition bianire" class="center" src="../../data/binaireDecomposition.png" /></p>
+<div class="admonition abstract">
+<p class="admonition-title">Exercice</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Trouver les nombres dont la représentation en binaire est :<br />
+<img alt="▶" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/25b6.svg" title=":arrow_forward:" /> 1 001,101 1 <br />
+<img alt="▶" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/25b6.svg" title=":arrow_forward:" /> 10 101,011 101 <br /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="▶" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/25b6.svg" title=":arrow_forward:" /> 1 001,101 1 code <br />
+<img alt="▶" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/25b6.svg" title=":arrow_forward:" /> 10 101,011 101 code <br /></p>
+</div>
+</div>
+</div>
+</div>
+<h3 id="b-de-lecriture-decimale-a-la-notation-binaire">b. De l’écriture décimale à la notation binaire<a class="headerlink" href="#b-de-lecriture-decimale-a-la-notation-binaire" title="Permanent link">⚓︎</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Écriture d'un nombre décimal en binaire <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<p>conversion de 12, 6875 en binaire<br />
+<img alt="1⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/31-20e3.svg" title=":one:" /> Conversion de 12 donne <span class="arithmatex">\((1100)_2\)</span><br />
+<img alt="2⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/32-20e3.svg" title=":two:" /> On effectue successivement des multiplications par 2 de la partie décimale, on conserve les parties entières<br /></p>
+<p><img alt="image" class="center" src="../../data/decimalMultiplication.png" /></p>
+<p><img alt="▶" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/25b6.svg" title=":arrow_forward:" /> Donc la conversion de 0,6875 en binaire est <span class="arithmatex">\((0,1011)_2\)</span></p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Exercice 1</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Donner l'écriture binaire de 7,09375.</p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>partie entière : <span class="arithmatex">\(7 = 101_2\)</span></li>
+<li>partie décimale :<ul>
+<li><span class="arithmatex">\(0,09375 \times 2 = \textbf{0},1875\)</span> </li>
+<li><span class="arithmatex">\(0,1875 \times 2 = \textbf{0},375\)</span> </li>
+<li><span class="arithmatex">\(0,375 \times 2 = \textbf{0},75\)</span> </li>
+<li><span class="arithmatex">\(0,75 \times 2 = \textbf{1},5\)</span></li>
+<li><span class="arithmatex">\(0,5 \times 2  = \textbf{1}\)</span></li>
+</ul>
+</li>
+</ul>
+<p>Donc <span class="arithmatex">\(7,09375=101,00011_2\)</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Exercice 2</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Énoncé</label><label for="__tabbed_3_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Donner l'écriture binaire de 0,2.</p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>partie entière : <span class="arithmatex">\(0 = 0_2\)</span></li>
+<li>partie décimale :<ul>
+<li><span class="arithmatex">\(0,2 \times 2 = \textbf{0},4\)</span>  </li>
+<li><span class="arithmatex">\(0,4 \times 2 = \textbf{0},8\)</span></li>
+<li><span class="arithmatex">\(0,8 \times 2  = \textbf{1},6\)</span></li>
+<li><span class="arithmatex">\(0,6 \times 2  = \textbf{1},2\)</span></li>
+<li><span class="arithmatex">\(0,2 \times 2 = \textbf{0},4\)</span> </li>
+<li><em>et cela continue...</em></li>
+</ul>
+</li>
+</ul>
+<p>Le nombre 0,2 n'admet pas d'écriture binaire <strong>finie</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+<p><strong>Problèmes :</strong></p>
+<ul>
+<li>le processus de "conversion" ne s'arrête pas, nous obtenons une écriture <strong>binaire infinie périodique</strong>. </li>
+</ul>
+<details class="note">
+<summary>Remarque</summary>
+<p>certains nombres (par exemple : <span class="arithmatex">\(7/11 = 0.63636363 …\)</span>) ont une écriture décimale infinie périodique. Ils auront alors une écriture binaire infinie périodique. <br />
+Et certains nombres ont une écriture binaire infinie périodique, alors même que leur écriture décimale est finie (exemple : 0.2)</p>
+</details>
+<p><strong>Moralité :</strong></p>
+<p>Ce système d'écriture ne marche pas bien.</p>
+<p><strong>Conclusion :</strong></p>
+<p>Certains nombres n'admettent pas une écriture binaire <strong>finie</strong>. Or la mémoire d'un ordinateur, quelqu'il soit, est toujours finie. Certains nombres ne peuvent donc pas être représentés correctement en machine : c'est une impossibilité théorique. Cela amène à des comportements étranges : </p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span>
+<span class="mf">0.30000000000000004</span>
+</code></pre></div>
+<p><strong>Remarque :</strong> parmi les nombres décimaux à un chiffre après la virgule (0,1  0,2  0,3 ...) seul 0,5 admet une écriture binaire finie ! Tous les autres ont une représentation en machine qui n'en donne qu'une valeur approchée.</p>
+<h2 id="2-norme-iee754">2. Norme IEE754<a class="headerlink" href="#2-norme-iee754" title="Permanent link">⚓︎</a></h2>
+<h3 id="a-notation-scientifique">a. Notation scientifique<a class="headerlink" href="#a-notation-scientifique" title="Permanent link">⚓︎</a></h3>
+<p>En notation décimale, elle consiste à exprimer le nombre sous la forme <span class="arithmatex">\(\pm a \times 10^n\)</span> où <span class="arithmatex">\(\pm\)</span> est appelé <em>signe</em>, <span class="arithmatex">\(a\)</span> est un nombre décimal de l’intervalle <span class="arithmatex">\([1 , 10[\)</span> appelé <em>mantisse</em> (ou significande) et <span class="arithmatex">\(n\)</span> est un entier relatif appelé <em>exposant</em>.</p>
+<p><img alt="❓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2753.svg" title=":question:" /> Quel est la notation scientifique de <span class="arithmatex">\(105,745\)</span></p>
+<details>
+<summary>Réponse</summary>
+<p><span class="arithmatex">\(1,05745 \times 10^2\)</span></p>
+</details>
+<p><img alt="❓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2753.svg" title=":question:" /> Quel est la notation scientifique de <span class="arithmatex">\(0, 0745\)</span></p>
+<details>
+<summary>Réponse</summary>
+<p><span class="arithmatex">\(7,45 \times 10^-2\)</span></p>
+</details>
+<p>De même, en notation binaire, tout ombre s’exprime sous la forme <span class="arithmatex">\(\pm a \times 2^n\)</span> où <span class="arithmatex">\(\pm\)</span> où <span class="arithmatex">\(\pm\)</span> est le <em>signe</em>, <span class="arithmatex">\(a\)</span> est un nombre de l’intervalle <span class="arithmatex">\([(1)_2 , (10)_2[\)</span> appelé <em>mantisse</em> et <span class="arithmatex">\(n\)</span> est un entier relatif appelé <em>exposant</em>.</p>
+<p><img alt="❓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2753.svg" title=":question:" /> Quel est la notation scientifique de <span class="arithmatex">\(1011, 0111 101\)</span></p>
+<details>
+<summary>Réponse</summary>
+<p><span class="arithmatex">\(1,0110111 101 \times 2^3\)</span></p>
+</details>
+<p><img alt="❓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2753.svg" title=":question:" /> Quel est la notation scientifique de <span class="arithmatex">\(0, 0000001101\)</span></p>
+<details>
+<summary>Réponse</summary>
+<p><span class="arithmatex">\(1,101 \times 2^-7\)</span></p>
+</details>
+<h3 id="b-representation-des-nombres-a-virgule-en-binaire-sur-n-bits">b. Représentation des nombres à virgule en binaire sur n bits<a class="headerlink" href="#b-representation-des-nombres-a-virgule-en-binaire-sur-n-bits" title="Permanent link">⚓︎</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">Principe de la <a href="https://fr.wikipedia.org/wiki/IEEE_754">norme IEE754</a></p>
+<p>On utilise la notation scientifique en binaire <span class="arithmatex">\((-1)^s \times 1,m \times 2^{p-127}\)</span>.<br />
+Pour une représentation sur 32 bits (en simple précision),<br />
+- le bit de poids fort (à gauche) donne le <em>signe</em> 0 pour positif et 1 pour négatif<br />
+- Les 8 bits suivants pour <em>exposant</em>, on représente l’entier relatif <span class="arithmatex">\(p\)</span> par <span class="arithmatex">\(p-127\)</span><br />
+- les 23 bits suivant pour partie après la virgule de la <em>mantisse</em></p>
+<p><img alt="norme IEE754" class="center" src="../../data/IEE754vierge.png" /></p>
+</div>
+<p><img alt="❓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2753.svg" title=":question:" /> Trouver la représentation en binaire sur 32 bits de <span class="arithmatex">\(1011, 0111 101\)</span></p>
+<details>
+<summary>Réponse</summary>
+<p>$ $</p>
+</details>
+<p><img alt="❓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2753.svg" title=":question:" /> Trouver la représentation en binaire sur 32 bits de <span class="arithmatex">\(0, 0000001101\)</span></p>
+<details>
+<summary>Réponse</summary>
+<p>$ $</p>
+</details>
+<p><img alt="❓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2753.svg" title=":question:" /> Trouver la représentation en binaire sur 32 bits de <span class="arithmatex">\(110100011010010011110000011100000\)</span></p>
+<details>
+<summary>Réponse</summary>
+<p>$ $</p>
+</details>
+<p><img alt="❓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2753.svg" title=":question:" /> Trouver la représentation en binaire sur 32 bits de <span class="arithmatex">\(00100001111010011100101011000000\)</span></p>
+<details>
+<summary>Réponse</summary>
+<p>$ $</p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Convention</p>
+<p>Par convention :<br />
+– Il y a deux <strong>zéro</strong>, un positif et un négatif : <span class="arithmatex">\(\pm 00000000 00000000000000000000000\)</span><br />
+– L’<strong>infini</strong> : <span class="arithmatex">\(\pm 11111111 00000000000000000000000\)</span><br />
+– <strong>NaN</strong> : not a number : <span class="arithmatex">\(\pm 11111111 01000000000000000000000\)</span></p>
+</div>
+<h2 id="3-comment-faire-des-tests-degalite-sur-les-flottants">3. Comment faire des tests d'egalité sur les flottants ?<a class="headerlink" href="#3-comment-faire-des-tests-degalite-sur-les-flottants" title="Permanent link">⚓︎</a></h2>
+<p>Première réponse : ON N'EN FAIT PAS.</p>
+<p>Si <code>a</code> et <code>b</code> sont deux flottants, le test classique</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a et b sont égaux&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>a de grandes chances d'échouer :</p>
+<p>Le script </p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mf">0.3</span> <span class="o">-</span> <span class="mf">0.2</span>
+<span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a et b sont égaux&quot;</span><span class="p">)</span>
+<span class="k">else</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a et b sont différents&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>renverra</p>
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>a et b sont différents
+</code></pre></div>
+<p>Si <em>vraiment</em> un test d'égalité est nécessaire, on ne va pas tester l'égalité entre <code>a</code> et <code>b</code> mais leur <strong>proximité</strong>, grâce à la valeur absolue de leur différence.</p>
+<p>La fonction <code>abs(a-b)</code> renvoie un nombre positif égal à la distance entre <code>a</code> et <code>b</code>. Il faut alors décider d'un écart minimal <code>e</code> en dessous duquel on considèrera que <code>a</code> et <code>b</code> sont égaux.</p>
+<p>Le script </p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mf">0.3</span><span class="o">-</span><span class="mf">0.2</span>
+<span class="n">e</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">12</span><span class="p">)</span>
+<span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">e</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a et b sont égaux&quot;</span><span class="p">)</span>
+<span class="k">else</span> <span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a et b sont différents&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>renverra
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>a et b sont égaux
+</code></pre></div></p>
 
 
   
