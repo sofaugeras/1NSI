@@ -18,7 +18,7 @@
         <link rel="prev" href="../../2.4_Chaines_caracteres/cours/">
       
       
-        <link rel="next" href="../../../T3_Type_construit/sommaire/">
+        <link rel="next" href="../enonce/">
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
@@ -97,7 +97,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#booleens" class="md-skip">
+        <a href="#les-operateurs-booleens" class="md-skip">
           Aller au contenu
         </a>
       
@@ -1331,6 +1331,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Cours
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1341,6 +1352,190 @@
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-reperes-historiques" class="md-nav__link">
+    1. Repères historiques
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-algebre-de-boole" class="md-nav__link">
+    2. Algèbre de Boole
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Algèbre de Boole">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-conjonction-and" class="md-nav__link">
+    2.1 Conjonction (AND)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-disjonction-or" class="md-nav__link">
+    2.2 Disjonction (OR)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-negation-not" class="md-nav__link">
+    2.3  Négation (NOT)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-1" class="md-nav__link">
+    Exercice 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-2" class="md-nav__link">
+    Exercice 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-3" class="md-nav__link">
+    Exercice 3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-4" class="md-nav__link">
+    Exercice 4
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-fonctions-composees" class="md-nav__link">
+    3. Fonctions composées
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Fonctions composées">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-disjonction-exclusive-xor" class="md-nav__link">
+    3.1 Disjonction exclusive XOR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-fonction-non-et-nand" class="md-nav__link">
+    3.2 Fonction Non Et (NAND)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-fonction-non-ou-nor" class="md-nav__link">
+    3.3 Fonction Non Ou (NOR)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remarque" class="md-nav__link">
+    Remarque :
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-5" class="md-nav__link">
+    Exercice 5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-calculs-en-python" class="md-nav__link">
+    3.4 Calculs en Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-6-preparation-du-pydefi" class="md-nav__link">
+    Exercice 6 : préparation du pydéfi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-7-facultatif" class="md-nav__link">
+    Exercice 7 (facultatif)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complement-proprietes-des-operateurs-logiques" class="md-nav__link">
+    Complément : propriétés des opérateurs logiques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enonce/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Énigme
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1878,11 +2073,31 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../T4_Architecture_materielle/4.1_Architecture_Von_Neumann/logique/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les portes Logiques
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../T4_Architecture_materielle/4.1_Architecture_Von_Neumann/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Cours
+    Architecture de Von Neumann
   </span>
   
 
@@ -3799,7 +4014,480 @@
   
 
 
-<h1 id="booleens">Booleens<a class="headerlink" href="#booleens" title="Permanent link">⚓︎</a></h1>
+<h1 id="les-operateurs-booleens">Les opérateurs booléens<a class="headerlink" href="#les-operateurs-booleens" title="Permanent link">⚓︎</a></h1>
+<p><img alt="image" class="center" src="../data/BO.png" /></p>
+<h2 id="1-reperes-historiques">1. Repères historiques<a class="headerlink" href="#1-reperes-historiques" title="Permanent link">⚓︎</a></h2>
+<p><img alt="" class="center" src="../data/portrait_boole.jpg" /></p>
+<p>En 1847, le  britannique  <em>George BOOLE</em>  inventa un formalisme permettant d'écrire des raisonnements logiques : l'algèbre de Boole. La notion même d'informatique n'existait pas à l'époque, même si les calculs étaient déjà automatisés (penser à la Pascaline de 1642).</p>
+<p>Bien plus tard, en  1938, les travaux de l'américain <em>Claude  SHANNON</em>  prouva  que des  circuits  électriques
+peuvent  résoudre tous  les  problèmes  que l'algèbre  de  Boole peut  elle-même résoudre.  Pendant la deuxième guerre mondiale, les travaux  d'<em>Alan  TURING</em>  puis de <em>John VON NEUMANN</em> poseront définitivement les bases de l'informatique moderne.</p>
+<h2 id="2-algebre-de-boole">2. Algèbre de Boole<a class="headerlink" href="#2-algebre-de-boole" title="Permanent link">⚓︎</a></h2>
+<p>L'algèbre de Boole définit des opérations dans un ensemble
+qui ne contient que <strong>deux éléments</strong> notés <strong>0 et 1</strong>, ou bien <strong>FAUX et VRAI</strong> ,ou encore <strong>False</strong> et <strong>True</strong> (en Python)</p>
+<p>Les opérations fondamentales sont :</p>
+<ul>
+<li>la <em>conjonction</em> ("ET") </li>
+<li>la <em>disjonction</em> ("OU") </li>
+<li>la <em>négation</em> ("NON").</li>
+</ul>
+<p>Dans  toute la  suite,  <code>x</code> et  <code>y</code> désigneront  des  <em>Booléens</em> (éléments  d'une
+algèbre de Boole) quelconques, <code>F</code> désignera FAUX et <code>V</code> désignera VRAI.</p>
+<hr />
+<h3 id="21-conjonction-and">2.1 Conjonction (AND)<a class="headerlink" href="#21-conjonction-and" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>symbole usuel : &amp; (appelé <em>esperluette</em> en français et <em>ampersand</em> en anglais)</li>
+<li>français : ET</li>
+<li>anglais (et Python) : <code>and</code></li>
+<li>notation logique : <span class="arithmatex">\(\wedge\)</span></li>
+<li>notation mathématique :  <code>.</code></li>
+</ul>
+<p>C'est l'opération définie par:</p>
+<ul>
+<li><code>x &amp; F = F</code></li>
+<li><code>x &amp; V = x</code></li>
+</ul>
+<p>Puisque l'algèbre de  Boole ne contient que deux éléments,  on peut étudier tous
+les cas possibles et les regrouper dans un tableau appelé <strong>table de vérité</strong>:</p>
+<div class="admonition abstract">
+<p class="admonition-title">Table de vérité de AND <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><code>x</code></th>
+<th style="text-align: center;"><code>y</code></th>
+<th style="text-align: center;"><code>x &amp; y</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>On représente souvent les opérateurs booléens à l'aide de portes logiques:</p>
+<p><img alt="" class="center" src="../data/porte_et.png" /></p>
+<p>Notation usuelle en électronique : <span class="arithmatex">\(Q=A \wedge B\)</span></p>
+<p><img alt="" class="center" src="../data/and.png" /></p>
+<h4 id="exemples-en-python">Exemples en Python<a class="headerlink" href="#exemples-en-python" title="Permanent link">⚓︎</a></h4>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+<span class="kc">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+<span class="kc">True</span>
+</code></pre></div>
+<h4 id="levaluation-paresseuse">L'évaluation paresseuse<a class="headerlink" href="#levaluation-paresseuse" title="Permanent link">⚓︎</a></h4>
+<p>Pouvez-vous prévoir le résultat du code ci-dessous ?</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">0</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="o">---------------------------------------------------------------------------</span>
+
+    <span class="ne">ZeroDivisionError</span>                         <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+
+    <span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="n">d8a98dcba9be</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+    <span class="o">----&gt;</span> <span class="mi">1</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">0</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+
+
+    <span class="ne">ZeroDivisionError</span><span class="p">:</span> <span class="n">integer</span> <span class="n">division</span> <span class="ow">or</span> <span class="n">modulo</span> <span class="n">by</span> <span class="n">zero</span>
+</code></pre></div>
+<p>Évidemment, la division par 0 provoque une erreur.<br />
+Mais observez maintenant ce code :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">0</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+<span class="kc">False</span>
+</code></pre></div>
+<p>On appelle <strong>évaluation paresseuse</strong> le fait que l'interpréteur Python s'arrête dès que sa décision est prise : comme le premier booléen vaut False et que la conjonction <code>and</code> est appelée, il n'est pas nécessaire d'évaluer le deuxième booléen. </p>
+<h3 id="22-disjonction-or">2.2 Disjonction (OR)<a class="headerlink" href="#22-disjonction-or" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>symbole usuel : | appelé <em>pipe</em> en anglais</li>
+<li>français : OU</li>
+<li>anglais (et Python) : <code>or</code></li>
+<li>notation logique : <span class="arithmatex">\(\vee\)</span></li>
+<li>notation mathématique :  <span class="arithmatex">\(+\)</span></li>
+</ul>
+<p>C'est l'opération définie par:</p>
+<p>C'est l'opération définie par:</p>
+<ul>
+<li><code>x | V = V</code></li>
+<li><code>x | F = x</code></li>
+</ul>
+<p>On en déduit la table suivante:</p>
+<div class="admonition abstract">
+<p class="admonition-title">Table de vérité de OR <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><code>x</code></th>
+<th style="text-align: center;"><code>y</code></th>
+<th style="text-align: center;"><code>x or y</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><img alt="" class="center" src="../data/porte_ou.png" /></p>
+<p>Notation usuelle en électronique : <span class="arithmatex">\(Q=A \vee B\)</span></p>
+<p><img alt="" class="center" src="../data/or.png" /></p>
+<h4 id="exemples-en-python_1">Exemples en Python<a class="headerlink" href="#exemples-en-python_1" title="Permanent link">⚓︎</a></h4>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+<span class="kc">False</span>
+</code></pre></div>
+<h4 id="levaluation-paresseuse-retour">L'évaluation paresseuse (retour)<a class="headerlink" href="#levaluation-paresseuse-retour" title="Permanent link">⚓︎</a></h4>
+<p>Pouvez-vous prévoir le résultat du code ci-dessous ?</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">0</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="23-negation-not">2.3  Négation (NOT)<a class="headerlink" href="#23-negation-not" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>symbole usuel : ~</li>
+<li>français : NON</li>
+<li>anglais (et Python) : <code>not</code></li>
+<li>notation logique :  <span class="arithmatex">\(\neg\)</span></li>
+<li>notation mathématique :  <span class="arithmatex">\(\overline{x}\)</span></li>
+</ul>
+<p>C'est l'opération définie par:</p>
+<ul>
+<li><code>~V = F</code></li>
+<li><code>~F = V</code></li>
+</ul>
+<p>On en déduit la table suivante:</p>
+<div class="admonition abstract">
+<p class="admonition-title">Table de vérité de NOT <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><code>x</code></th>
+<th style="text-align: center;"><code>~x</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><img alt="" class="center" src="../data/porte_non.png" /></p>
+<p>Notation usuelle en électronique : <span class="arithmatex">\(Q=\neg A\)</span></p>
+<p><img alt="" class="center" src="../data/no.png" /></p>
+<h4 id="exemples-en-python_2">Exemples en Python<a class="headerlink" href="#exemples-en-python_2" title="Permanent link">⚓︎</a></h4>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="ow">not</span><span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+<span class="kc">False</span>
+</code></pre></div>
+<h3 id="exercice-1">Exercice 1<a class="headerlink" href="#exercice-1" title="Permanent link">⚓︎</a></h3>
+<p>Comprendre ce mème :
+<img alt="image" class="center" src="../data/drake.webp" width="50%" /></p>
+<h3 id="exercice-2">Exercice 2<a class="headerlink" href="#exercice-2" title="Permanent link">⚓︎</a></h3>
+<p>Il existe une propriété appelé la distributivité en logique formelle.</p>
+<div class="admonition note">
+<p class="admonition-title">Distributivité</p>
+<p>a et (b ou c) = (a et b) ou (a et c) <br />
+a ou (b et c) = (a ou b) et (a ou c)</p>
+</div>
+<p>Démontrer les deux égalités de la distributivité à l’aide des tables de vérité suivantes 
+<img alt="distributivité" class="center" src="../data/distributivit%C3%A9.png" /></p>
+<h3 id="exercice-3">Exercice 3<a class="headerlink" href="#exercice-3" title="Permanent link">⚓︎</a></h3>
+<p>Le mathématicien britannique <em>Auguste de Morgan</em> (1806–1871) a également contribué à développer l’algèbre de Boole à l’aide de son théorème :</p>
+<div class="admonition note">
+<p class="admonition-title">Loi de Morgan</p>
+<p>non (a ou b) = (non a) et (non b) <br />
+non (a et b) = (non a) ou (non b)</p>
+</div>
+<p>Démontrer ce théorème à l’aide des tables ci-dessous :
+<img alt="loi de morgan" class="center" src="../data/morgan.png" /></p>
+<h3 id="exercice-4">Exercice 4<a class="headerlink" href="#exercice-4" title="Permanent link">⚓︎</a></h3>
+<ol>
+<li>Ouvrir le <a class="" href="http://dept-info.labri.fr/ENSEIGNEMENT/archi/circuits/blank-teacher.html" target="_blank">simulateur de circuits</a> et créer pour chaque opération AND, OR, NOT un circuit électrique illustrant ses propriétés.</li>
+</ol>
+<p>Exemple (inintéressant) de circuit :
+<img alt="" class="center" src="../data/ex_circuit.png" /></p>
+<ol>
+<li>Utiliser successivement les circuits XOR, NAND et NOR et établir pour chacun leur table de vérité.</li>
+</ol>
+<hr />
+<h2 id="3-fonctions-composees">3. Fonctions composées<a class="headerlink" href="#3-fonctions-composees" title="Permanent link">⚓︎</a></h2>
+<h3 id="31-disjonction-exclusive-xor">3.1 Disjonction exclusive XOR<a class="headerlink" href="#31-disjonction-exclusive-xor" title="Permanent link">⚓︎</a></h3>
+<p>(en français OU EXCLUSIF)</p>
+<p>En français, quand on dit “fromage ou dessert”, c’est l’un ou l’autre. Ce qui n’est pas le cas du OU utilisé dans les booléens. On appelle <strong>ou exclusif</strong> ou <strong>xor</strong> l’opération définie par</p>
+<p><code>x ^ y = (x &amp; ~y) | (~x &amp; y)</code></p>
+<div class="admonition abstract">
+<p class="admonition-title">Table de vérité de XOR <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><code>x</code></th>
+<th style="text-align: center;"><code>y</code></th>
+<th style="text-align: center;"><code>x ^ y</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><img alt="" class="center" src="../data/porte_xor.png" /></p>
+<p><img alt="" class="center" src="../data/xor.png" /></p>
+<p>Le XOR joue un rôle fondamental en cryptographie car il possède une propriété très intéressante : 
+<span class="arithmatex">\((x\wedge y)\wedge y=x\)</span></p>
+<p>Si <span class="arithmatex">\(x\)</span> est un message et <span class="arithmatex">\(y\)</span> une clé de chiffrage, alors <span class="arithmatex">\(x\wedge y\)</span> est le message chiffré. 
+Mais en refaisant un XOR du message chiffré avec la clé <span class="arithmatex">\(y\)</span>, on retrouve donc le message <span class="arithmatex">\(x\)</span> initial.</p>
+<h3 id="32-fonction-non-et-nand">3.2 Fonction Non Et (NAND)<a class="headerlink" href="#32-fonction-non-et-nand" title="Permanent link">⚓︎</a></h3>
+<p><code>x ↑ y = ~(x &amp; y)</code></p>
+<div class="admonition abstract">
+<p class="admonition-title">Table de vérité de NAND <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><code>x</code></th>
+<th style="text-align: center;"><code>y</code></th>
+<th style="text-align: center;"><code>x ↑ y</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><img alt="" class="center" src="../data/porte_nand.png" /></p>
+<h3 id="33-fonction-non-ou-nor">3.3 Fonction Non Ou (NOR)<a class="headerlink" href="#33-fonction-non-ou-nor" title="Permanent link">⚓︎</a></h3>
+<p><code>x ↓ y = ~(x &amp; y)</code></p>
+<div class="admonition abstract">
+<p class="admonition-title">Table de vérité de NOR <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><code>x</code></th>
+<th style="text-align: center;"><code>y</code></th>
+<th style="text-align: center;"><code>x ↓ y</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><img alt="" class="center" src="../data/porte_nor.png" /></p>
+<p>Il est temps de se reposer un peu et d'admirer cette vidéo :
+<img alt="" class="center" src="../data/watergates.gif" /></p>
+<h3 id="remarque">Remarque :<a class="headerlink" href="#remarque" title="Permanent link">⚓︎</a></h3>
+<p>Les fonctions NAND ET NOR sont dites <strong>universelles</strong> : chacune d'entre elles peut générer l'intégralité des autres portes logiques. Il est donc possible de coder toutes les opérations uniquement avec des NAND (ou uniquement avec des NOR).
+Voir <a href="https://fr.wikipedia.org/wiki/Fonction_NON-ET">Wikipedia</a></p>
+<h3 id="exercice-5">Exercice 5<a class="headerlink" href="#exercice-5" title="Permanent link">⚓︎</a></h3>
+<p>Calculer les opérations suivantes.</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code>   <span class="mi">1011011</span>
+<span class="o">&amp;</span>  <span class="mi">1010101</span>
+<span class="o">----------</span>
+
+
+   <span class="mi">1011011</span>
+<span class="o">|</span>  <span class="mi">1010101</span>
+<span class="o">----------</span>
+
+
+   <span class="mi">1011011</span>
+<span class="o">^</span>  <span class="mi">1010101</span>
+<span class="o">----------</span>
+</code></pre></div>
+<details class="tip">
+<summary>solution</summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code> <span class="mi">1011011</span>
+<span class="o">&amp;</span><span class="mi">1010101</span>
+<span class="o">----------</span>
+ <span class="mi">1010001</span>
+
+ <span class="mi">1011011</span>
+<span class="o">|</span><span class="mi">1010101</span>
+<span class="o">----------</span>
+ <span class="mi">1011111</span>
+
+ <span class="mi">1011011</span>
+<span class="o">^</span><span class="mi">1010101</span>
+<span class="o">----------</span>
+ <span class="mi">0001110</span>
+</code></pre></div>
+</details>
+<h3 id="34-calculs-en-python">3.4 Calculs en Python<a class="headerlink" href="#34-calculs-en-python" title="Permanent link">⚓︎</a></h3>
+<p>les opérateurs <code>&amp;</code>, <code>|</code> et <code>^</code> sont utilisables directement en Python</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># calcul A</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">12</span> <span class="o">&amp;</span> <span class="mi">7</span>
+<span class="mi">4</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># calcul B</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">12</span> <span class="o">|</span> <span class="mi">7</span>
+<span class="mi">15</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># calcul C</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">12</span> <span class="o">^</span> <span class="mi">5</span>
+<span class="mi">9</span>
+</code></pre></div>
+<p>Pour comprendre ces résultats, il faut travailler en binaire. Voici les mêmes calculs :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># calcul A</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="mb">0b1100</span> <span class="o">&amp;</span> <span class="mb">0b111</span><span class="p">)</span>
+    <span class="s1">&#39;0b100&#39;</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># calcul B</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="mb">0b1100</span> <span class="o">|</span> <span class="mb">0b111</span><span class="p">)</span>
+   <span class="s1">&#39;0b1111&#39;</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># calcul C</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="mb">0b1100</span> <span class="o">^</span> <span class="mb">0b111</span><span class="p">)</span>
+    <span class="s1">&#39;0b1011&#39;</span>
+</code></pre></div>
+<h3 id="exercice-6-preparation-du-pydefi">Exercice 6 : préparation du pydéfi<a class="headerlink" href="#exercice-6-preparation-du-pydefi" title="Permanent link">⚓︎</a></h3>
+<p>Objectif : chiffrer (= crypter) le mot "BONJOUR" avec la clé (de même taille) "MAURIAC".  </p>
+<p>Protocole de chiffrage : XOR entre le code ASCII des lettres de même position.</p>
+<!-- 
+
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;BONJOUR&quot;</span>
+<span class="n">cle</span> <span class="o">=</span> <span class="s2">&quot;MAURIAC&quot;</span>
+
+<span class="k">def</span> <span class="nf">crypte_lettre</span><span class="p">(</span><span class="n">lm</span><span class="p">,</span> <span class="n">lc</span><span class="p">):</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="nb">ord</span><span class="p">(</span><span class="n">lm</span><span class="p">)</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="nb">ord</span><span class="p">(</span><span class="n">lc</span><span class="p">)</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">^</span><span class="n">b</span>
+    <span class="n">lettre</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">lettre</span>
+
+<span class="k">def</span> <span class="nf">crypte_mot</span><span class="p">(</span><span class="n">mot1</span><span class="p">,</span> <span class="n">mot2</span><span class="p">):</span>
+    <span class="n">mot3</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mot1</span><span class="p">)):</span>
+        <span class="n">car</span> <span class="o">=</span> <span class="n">crypte_lettre</span><span class="p">(</span><span class="n">mot1</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">mot2</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">mot3</span> <span class="o">=</span> <span class="n">mot3</span> <span class="o">+</span> <span class="n">car</span>
+    <span class="k">return</span> <span class="n">mot3</span>
+
+<span class="n">crypte_mot</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">cle</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+
+    '\x0f\x0e\x1b\x18\x06\x14\x11'
+
+-->
+
+<h3 id="exercice-7-facultatif">Exercice 7 (facultatif)<a class="headerlink" href="#exercice-7-facultatif" title="Permanent link">⚓︎</a></h3>
+<p><img alt="💡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f4a1.svg" title=":bulb:" /> Résolvez le pydéfi <img alt="la clé endommagée" class="" src="https://pydefis.callicode.fr/defis/C22_MasqueJetableDate/txt" target="_blank" /></p>
+<!-- 
+
+*solution :*
+
+[lien](https://gist.github.com/glassus/7aef2c4cbed5097e1857ecc851b7b740)
+
+-->
+
+<h3 id="complement-proprietes-des-operateurs-logiques">Complément : propriétés des opérateurs logiques<a class="headerlink" href="#complement-proprietes-des-operateurs-logiques" title="Permanent link">⚓︎</a></h3>
+<p>Les propriétés suivantes sont facilement démontrables à l'aide de tables de vérités: <em>(source : G.Connan)</em></p>
+<p><img alt="" class="center" src="../data/lois.png" /></p>
+<p>Toutes ces lois sont aisément compréhensibles si on les transpose en mathématiques : </p>
+<ul>
+<li>&amp; équivaut à <span class="arithmatex">\(\times\)</span></li>
+<li><span class="arithmatex">\(|\)</span> équivaut à <span class="arithmatex">\(+\)</span></li>
+<li><span class="arithmatex">\(\neg\)</span> équivaut à <span class="arithmatex">\(-\)</span></li>
+</ul>
 
 
   

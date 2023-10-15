@@ -1,7 +1,5 @@
 
-{{initexo(0)}}
-
-!!! example "{{ exercice() }}"
+!!! example "Exercice 1"
     === "Énoncé"
         Définissez une fonction `maxi(n1, n2)` qui renvoie le plus grand élément entre `n1` et `n2`.
 
@@ -16,7 +14,7 @@
         ```
 
     === "Correction"
-        {{ correction(True,
+      
         "
         ```python linenums='1'
         def maxi(n1, n2):
@@ -26,10 +24,10 @@
                 return n1
         ```
         "
-        ) }}
 
 
-!!! example "{{ exercice() }}"
+
+!!! example "Exercice 2"
     === "Énoncé"
         Définissez une fonction `nb_voyelles(mot)` qui renvoie le nombre de voyelles de `mot`.
 
@@ -44,7 +42,7 @@
         ```
 
     === "Correction"
-        {{ correction(True,
+
         "
         ```python linenums='1'
         def nb_voyelles(mot):
@@ -56,14 +54,14 @@
             return nb
         ```
         "
-        ) }}
 
 
 
 
 
 
-!!! example "{{ exercice() }}"
+
+!!! example "Exercice 3"
     === "Énoncé"
         Définissez une **fonction** `decale(lettre)` qui décale de 3 rangs dans l'alphabet la lettre majuscule `lettre` passée en argument (après Z, on recommencera à A..)
 
@@ -87,7 +85,7 @@
 
 
     === "Correction"
-        {{ correction(True,
+
         "
         ```python linenums='1'
         def decale(lettre):
@@ -97,10 +95,10 @@
             return chr(rang_nouvelle_lettre)
         ```
         "
-        ) }}
 
 
-!!! example "{{ exercice() }}"
+
+!!! example "Exercice 4"
     === "Énoncé"
         Rajoutez un paramètre `n` à la fonction précédente pour pouvoir décaler la lettre de `n` rangs.
 
@@ -118,7 +116,7 @@
 
 
     === "Correction"
-        {{ correction(True,
+
         "
         ```python linenums='1'
         def decale(lettre, n):
@@ -129,16 +127,15 @@
 
         ```
         "
-        ) }}
 
 
 
-!!! example "{{ exercice() }}"
+!!! example "Exercice 5"
     === "Énoncé"
         Utilisez la fonction précédente pour créer la fonction `decale_phrase(p, n)` qui décale toutes les lettres d'une phrase `p` de `n` rangs.
 
     === "Correction"
-        {{ correction(True,
+
         "
         ```python linenums='1'
         def decale_phrase(p, n):
@@ -152,16 +149,16 @@
             return phrase_decalee
         ```
         "
-        ) }}
 
 
 
-!!! example "{{ exercice() }}"
+
+!!! example "Exercice 6"
     === "Énoncé"
         Décodez la phrase `RT BTHHPVT CT RDCIXTCI GXTC S XCITGTHHPCI`.
 
     === "Correction"
-        {{ correction(True,
+
         "
         ```python linenums='1'
         def decale(lettre, n):
@@ -208,12 +205,11 @@
 
         ```
         "
-        ) }}
 
 
 
 
-!!! example "{{ exercice() }}"
+!!! example "Exercice 7"
     === "Énoncé"
         La [conjecture de Syracuse](https://fr.wikipedia.org/wiki/Conjecture_de_Syracuse) (ou de Collatz) postule ceci :  
 
@@ -223,7 +219,7 @@
         2. Écrire une fonction ```syracuse(n)``` qui affiche tous les termes de la suite de Syracuse jusqu'à (on l'espère !) 1.  
 
     === "Correction"
-        {{ correction(True,
+   
         "
         1.
         ```python linenums='1'
@@ -242,16 +238,16 @@
                 print(n)
         ``` 
         "
-        ) }}        
+    
 
-!!! example "{{ exercice() }}"
+!!! example "Exercice 8"
     === "Énoncé"
         1. Écrire une fonction ```temps_de_vol(n)``` qui renvoie le nombre d'étapes pour arriver à 1, en partant de ```n```
         2. Écrire une fonction ```temps_max(nmax)``` qui affiche le plus grand temps de vol pour un nombre entre 1 et ```nmax```.
         3. Modifier cette fonction pour afficher aussi le nombre de départ donnant ce plus grand temps de vol.
 
     === "Correction"
-        {{ correction(True,
+
         "
         1.
         ```python linenums='1'
@@ -274,5 +270,4 @@
             print('le plus grand temps de vol vaut :', maximum)
         ``` 
         "
-        ) }}        
-       
+
