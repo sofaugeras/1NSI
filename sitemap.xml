@@ -2,362 +2,392 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://github.com/sofaugeras/1NSI/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T1_Demarrer_en_Python/sommaire/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T1_Demarrer_en_Python/1.1_Variables/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T1_Demarrer_en_Python/1.2_Boucle_for/boucles_for/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T1_Demarrer_en_Python/1.2_Boucle_for/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T1_Demarrer_en_Python/1.2_Boucle_for/exercices/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T1_Demarrer_en_Python/1.2_Boucle_for/exos_processing/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T1_Demarrer_en_Python/1.3_Boucle_while/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/sofaugeras/1NSI/T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/1NSI_ipythonblocks/</loc>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T1_Demarrer_en_Python/1.4_Instruction_conditionnelle_if/exercices/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T1_Demarrer_en_Python/1.5_Fonctions/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T1_Demarrer_en_Python/1.5_Fonctions/exercices/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/sofaugeras/1NSI/T1_Demarrer_en_Python/1.6_entrainement/exercices/</loc>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T2_Type_de_base/sommaire/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T2_Type_de_base/2.1_Binaire/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T2_Type_de_base/2.2_Codage_entiers/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T2_Type_de_base/2.3_Decimaux/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/sofaugeras/1NSI/T2_Type_de_base/2.4_Chaines_caracteres/04_Codage_des_caracteres/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <loc>https://github.com/sofaugeras/1NSI/T2_Type_de_base/2.4_Chaines_caracteres/Entrainement/</loc>
+         <lastmod>2023-11-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/sofaugeras/1NSI/T2_Type_de_base/2.4_Chaines_caracteres/TP_chaines/</loc>
+         <lastmod>2023-11-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/sofaugeras/1NSI/T2_Type_de_base/2.4_Chaines_caracteres/chaine/</loc>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T2_Type_de_base/2.4_Chaines_caracteres/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/sofaugeras/1NSI/T2_Type_de_base/2.4_Chaines_caracteres/exercices/</loc>
+         <lastmod>2023-11-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/sofaugeras/1NSI/T2_Type_de_base/2.4_Chaines_caracteres/sommaire/</loc>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T2_Type_de_base/2.5_Booleens/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T2_Type_de_base/2.5_Booleens/enonce/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T3_Type_construit/sommaire/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T3_Type_construit/3.1_Listes/Listes/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T3_Type_construit/3.1_Listes/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T3_Type_construit/3.1_Listes/exercices/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T3_Type_construit/3.1_Listes/manipulation/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T3_Type_construit/3.2_Tuples/Tuples/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T3_Type_construit/3.2_Tuples/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T3_Type_construit/3.2_Tuples/exercices/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T3_Type_construit/3.3_Dictionnaires/Dictionnaires_eleves/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T3_Type_construit/3.3_Dictionnaires/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T3_Type_construit/3.3_Dictionnaires/exercices/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T3_Type_construit/3.4_bilan/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T4_Architecture_materielle/sommaire/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T4_Architecture_materielle/4.1_Architecture_Von_Neumann/02_Architecture_von_Neumann/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T4_Architecture_materielle/4.1_Architecture_Von_Neumann/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T4_Architecture_materielle/4.1_Architecture_Von_Neumann/logique/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T4_Architecture_materielle/4.2_Architecture_reseau/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T4_Architecture_materielle/4.3_Protocoles_de_communication/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T4_Architecture_materielle/4.4_Decouverte_des_commandes_Linux/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T4_Architecture_materielle/4.4_Decouverte_des_commandes_Linux/exercices/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T4_Architecture_materielle/4.4_Decouverte_des_commandes_Linux/tp/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T5_Algorithmique/sommaire/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T5_Algorithmique/5.0_specifications/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T5_Algorithmique/5.0_specifications/exercices/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T5_Algorithmique/5.0_specifications/data/Exercices_specifications/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T5_Algorithmique/5.1_Extremums_et_moyennes/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T5_Algorithmique/5.2_Complexite/02_Complexite/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T5_Algorithmique/5.2_Complexite/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T5_Algorithmique/5.3_Tri_par_insertion/03_Tri_par_insertion/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T5_Algorithmique/5.3_Tri_par_insertion/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T5_Algorithmique/5.4_Tri_par_selection/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T5_Algorithmique/5.5_Dichotomie/05_Dichotomie/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T5_Algorithmique/5.5_Dichotomie/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T5_Algorithmique/5.6_Algorithmes_gloutons/06_Algorithmes_gloutons/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T5_Algorithmique/5.6_Algorithmes_gloutons/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T5_Algorithmique/5.7_Algorithme_KNN/07_Algorithme_KNN/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T5_Algorithmique/5.7_Algorithme_KNN/07_Algorithme_KNN/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T5_Algorithmique/5.7_Algorithme_KNN/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T6_Traitement_de_donnees/sommaire/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T6_Traitement_de_donnees/6.1_Manipulation_csv/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T6_Traitement_de_donnees/6.2_Trier_des_donnees/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T6_Traitement_de_donnees/6.3_Pandas/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T7_IHM_Web/sommaire/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T7_IHM_Web/7.1_Interactions_page_web/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T7_IHM_Web/7.2_Protocole_HTTP/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T7_IHM_Web/7.3_Get_Post_Formulaires/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T8_Projets/1_SiteWeb/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T8_Projets/2_ProjetCSV/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T8_Projets/3_Exposes/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T9_Liens_utiles/1_Conseils_generaux/cours/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T9_Liens_utiles/1_Conseils_generaux/methodo/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/sofaugeras/1NSI/T9_Liens_utiles/2_Liens/liens/</loc>
-         <lastmod>2023-10-15</lastmod>
+         <lastmod>2023-11-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
