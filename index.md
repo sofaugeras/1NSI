@@ -1,7 +1,7 @@
 
 !!! abstract ":star: Thèmes en cours d'étude :star: "
-    - [Thème 1 : Démarrer en Python](./T1_demarrer_en_Python/sommaire.md)
-    - [Mini projet](T8_Projets/1_SiteWeb/cours.md)
+    - [Thème 1 : Démarrer en Python](./T1_Demarrer_en_Python/sommaire.md)
+    - [Mini projet](./T8_Projets/1_SiteWeb/cours.md)
     
 !!! info "Entraînement :running: "
     Vous trouverez ci dessous quelques sites pour vous entrainez en Python<br />
