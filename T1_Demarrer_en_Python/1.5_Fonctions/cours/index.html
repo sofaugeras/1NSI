@@ -4473,9 +4473,11 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">chat_penible</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">chat_penible</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Affiche n fois la chaine de caractères &quot;meoww&quot;</span>
+<span class="sd">    @param entree : n : int : nb de répétition</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;meoww&quot;</span><span class="p">)</span>
@@ -4486,6 +4488,7 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
 
 <span class="n">chat_penible</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
     <span class="n">Affiche</span> <span class="n">n</span> <span class="n">fois</span> <span class="n">la</span> <span class="n">chaine</span> <span class="n">de</span> <span class="n">caractères</span> <span class="s2">&quot;meoww&quot;</span>
+    <span class="nd">@param</span> <span class="n">entree</span> <span class="p">:</span> <span class="n">n</span> <span class="p">:</span> <span class="nb">int</span> <span class="p">:</span> <span class="n">nb</span> <span class="n">de</span> <span class="n">répétition</span>
 </code></pre></div>
 </div>
 <p>Plus de renseignements sur les docstrings <a href="https://glassus.github.io/terminale_nsi/T2_Programmation/2.4_Pratiques_de_programmation/cours/#22-le-cas-particulier-des-docstrings">ici</a></p>
@@ -4516,7 +4519,22 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">maxi</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">):</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">maxi</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    fonction qui détermine le maximum entre deux entiers</span>
+<span class="sd">    @param entrée : n1, n2 : int </span>
+<span class="sd">    @param sortie : int : maximum des deux entiers</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">n1</span> <span class="o">&lt;</span> <span class="n">n2</span> <span class="p">:</span>
         <span class="k">return</span> <span class="n">n2</span>
     <span class="k">else</span> <span class="p">:</span>
@@ -4527,9 +4545,27 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
     <span class="k">assert</span> <span class="n">maxi</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>
     <span class="k">assert</span> <span class="n">maxi</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="mi">7</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;tests ok&quot;</span><span class="p">)</span>
+
+<span class="c1">#ou directement à la suite de la fonction</span>
+<span class="k">assert</span> <span class="n">maxi</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span>
+<span class="k">assert</span> <span class="n">maxi</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>
+<span class="k">assert</span> <span class="n">maxi</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="mi">7</span> 
 </code></pre></div></td></tr></table></div>
 </div>
 <p>Il faut vérifier que les tests couvrent toutes les situations possibles, mais ce n'est pas toujours facile !</p>
+<div class="admonition warning">
+<p class="admonition-title">Ce que l'on teste</p>
+<ul>
+<li>Cas général : teste le comportement attendu de la fonction dans un cas "normal"</li>
+<li>Cas Limite : teste le comportement attendu de la fonction dans les limites de l'intervalle de valeur des paramètres d'entrée<ul>
+<li>le zéro</li>
+<li>chaine de caractère Vide</li>
+<li>nombre négatif (si autorisé par )</li>
+<li>décimaux (si autorisé)</li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="admonition example">
 <p class="admonition-title">Exercice</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Correction</label></div>
@@ -4549,8 +4585,7 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
 </ol>
 </div>
 <div class="tabbed-block">
-<p>{{ correction(True,
-"
+<p>"
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -4565,13 +4600,25 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">test_fizzbuzz</span><span class="p">():</span>
-    <span class="k">assert</span> <span class="n">fizzbuzz</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;fizz&#39;</span>
-    <span class="k">assert</span> <span class="n">fizzbuzz</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;buzz&#39;</span>
-    <span class="k">assert</span> <span class="n">fizzbuzz</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;fizzbuzz&#39;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tests ok !&#39;</span><span class="p">)</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">fizzbuzz</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    renvoie une chaine de caractères selon les règles du jeu fizzbuzz.</span>
+<span class="sd">    fizz si n est divisible par 3, </span>
+<span class="sd">    buzz si n est divisible par 5, </span>
+<span class="sd">    fizzbuzz si n est divisible par 3 et 5, n sinon</span>
 
-<span class="k">def</span> <span class="nf">fizzbuzz</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="sd">    @param entrée n: un entier : entier à tester</span>
+<span class="sd">    @sortie : entier ou chaine de caractère</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="s1">&#39;fizzbuzz&#39;</span>
     <span class="k">elif</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -4580,9 +4627,14 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
         <span class="k">return</span> <span class="s1">&#39;buzz&#39;</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">n</span>
+
+<span class="k">def</span> <span class="nf">test_fizzbuzz</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">fizzbuzz</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;fizz&#39;</span>
+    <span class="k">assert</span> <span class="n">fizzbuzz</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;buzz&#39;</span>
+    <span class="k">assert</span> <span class="n">fizzbuzz</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;fizzbuzz&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tests ok !&#39;</span><span class="p">)</span>        
 </code></pre></div></td></tr></table></div></p>
-<p>"
-) }}</p>
+<p>"</p>
 </div>
 </div>
 </div>

@@ -25,27 +25,31 @@
         mot = input("Veuillez saisir un mot : ")
         print(mot[len(mot)-1])
         ```
+        ```python
+        mot = input("Veuillez saisir un mot : ")
+        print(mot[-1])
+        ```
 
 !!! example "Exercice 3"
     === "Enoncé"
-        Ecrire une fonction <code>estPrésent(lettre,message)</code> qui renvoie <code>True</code> ou <code>False</code> selon que la lettre est présente ou non dans le message.
+        Ecrire une fonction <code>estPresent(lettre,message)</code> qui renvoie <code>True</code> ou <code>False</code> selon que la lettre est présente ou non dans le message.
 
         ```python
-        assert(estPrésent('a','abracadabra') == True)
-        assert(estPrésent('r','abracadabra') == True)
-        assert(estPrésent('R','abracadabra') == False)
+        assert(estPresent('a','abracadabra') == True)
+        assert(estPresent('r','abracadabra') == True)
+        assert(estPréeent('R','abracadabra') == False)
         ```
 
     === "Correction"
 
         ```python
-        def estPrésent(lettre, message) :
+        def estPresent(lettre, message) :
             return lettre in message
         ```
 
 
         ```python
-        def estPrésent(lettre, message) :
+        def estPresent(lettre, message) :
             for c in message :
                 if lettre == c :
                     return True
@@ -142,26 +146,26 @@
 !!! example "Exercice 7"
     === "Enoncé" 
         <em>Plus longue répétition</em><br>
-        Ecrire une fonction <code>plusLongueRépétition(message)</code> qui renvoie le plus grand nombre de caractères consécutifs identiques dans le message.
+        Ecrire une fonction <code>plusLongueRepetition(message)</code> qui renvoie le plus grand nombre de caractères consécutifs identiques dans le message.
 
         ```python
-        def plusLongueRépétition(message):
+        def plusLongueRepetition(message):
             pass
         ```
 
         ```python
-        assert(plusLongueRépétition('lycanthropiques') == 1)
-        assert(plusLongueRépétition('arrosoir') == 2)
-        assert(plusLongueRépétition('AAaaaaAaaaA') == 4)
-        assert(plusLongueRépétition('aaa') == 3)
-        assert(plusLongueRépétition('a') == 1)
-        assert(plusLongueRépétition('') == 0)
+        assert(plusLongueRepetition('lycanthropiques') == 1)
+        assert(plusLongueRepetition('arrosoir') == 2)
+        assert(plusLongueRepetition('AAaaaaAaaaA') == 4)
+        assert(plusLongueRepetition('aaa') == 3)
+        assert(plusLongueRepetition('a') == 1)
+        assert(plusLongueRepetition('') == 0)
         ```
 
     === "Correction"
 
             ```python
-            def plusLongueRépétition(message):
+            def plusLongueRepetition(message):
                 if len(message) == 0:
                     return 0
                 maximum = 0
@@ -180,12 +184,12 @@
             ```
 
             ```python
-            assert(plusLongueRépétition('lycanthropiques') == 1)
-            assert(plusLongueRépétition('arrosoir') == 2)
-            assert(plusLongueRépétition('AAaaaaAaaaA') == 4)
-            assert(plusLongueRépétition('aaa') == 3)
-            assert(plusLongueRépétition('a') == 1)
-            assert(plusLongueRépétition('') == 0)
+            assert(plusLongueRepetition('lycanthropiques') == 1)
+            assert(plusLongueRepetition('arrosoir') == 2)
+            assert(plusLongueRepetition('AAaaaaAaaaA') == 4)
+            assert(plusLongueRepetition('aaa') == 3)
+            assert(plusLongueRepetition('a') == 1)
+            assert(plusLongueRepetition('') == 0)
             ```
 
 

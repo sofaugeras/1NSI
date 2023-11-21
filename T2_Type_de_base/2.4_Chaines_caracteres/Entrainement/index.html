@@ -3991,9 +3991,12 @@
 <p>Ecrire un programme qui affiche la <strong>dernière</strong> lettre d'un mot saisi par l'utilisateur.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Veuillez saisir un mot : &quot;</span><span class="p">)</span>
+<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Veuillez saisir un mot : &quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 </code></pre></div>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">mot</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Veuillez saisir un mot : &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</code></pre></div></p>
 </div>
 </div>
 </div>
@@ -4003,17 +4006,17 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Enoncé</label><label for="__tabbed_3_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Ecrire une fonction <code>estPrésent(lettre,message)</code> qui renvoie <code>True</code> ou <code>False</code> selon que la lettre est présente ou non dans le message.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">assert</span><span class="p">(</span><span class="n">estPrésent</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;abracadabra&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span>
-<span class="k">assert</span><span class="p">(</span><span class="n">estPrésent</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;abracadabra&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span>
-<span class="k">assert</span><span class="p">(</span><span class="n">estPrésent</span><span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">,</span><span class="s1">&#39;abracadabra&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span><span class="p">)</span>
+<p>Ecrire une fonction <code>estPresent(lettre,message)</code> qui renvoie <code>True</code> ou <code>False</code> selon que la lettre est présente ou non dans le message.</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">assert</span><span class="p">(</span><span class="n">estPresent</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;abracadabra&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">estPresent</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;abracadabra&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">True</span><span class="p">)</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">estPréeent</span><span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">,</span><span class="s1">&#39;abracadabra&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">estPrésent</span><span class="p">(</span><span class="n">lettre</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">estPresent</span><span class="p">(</span><span class="n">lettre</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span> <span class="p">:</span>
     <span class="k">return</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">message</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">estPrésent</span><span class="p">(</span><span class="n">lettre</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">estPresent</span><span class="p">(</span><span class="n">lettre</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span> <span class="p">:</span>
     <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">message</span> <span class="p">:</span>
         <span class="k">if</span> <span class="n">lettre</span> <span class="o">==</span> <span class="n">c</span> <span class="p">:</span>
             <span class="k">return</span> <span class="kc">True</span>
@@ -4115,21 +4118,21 @@ Ecrire un programme qui demande à l'utilisateur de saisir un mot ou un message 
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><em>Plus longue répétition</em><br>
-Ecrire une fonction <code>plusLongueRépétition(message)</code> qui renvoie le plus grand nombre de caractères consécutifs identiques dans le message.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">plusLongueRépétition</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
+Ecrire une fonction <code>plusLongueRepetition(message)</code> qui renvoie le plus grand nombre de caractères consécutifs identiques dans le message.</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">plusLongueRepetition</span><span class="p">(</span><span class="n">message</span><span class="p">):</span>
     <span class="k">pass</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">assert</span><span class="p">(</span><span class="n">plusLongueRépétition</span><span class="p">(</span><span class="s1">&#39;lycanthropiques&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
-<span class="k">assert</span><span class="p">(</span><span class="n">plusLongueRépétition</span><span class="p">(</span><span class="s1">&#39;arrosoir&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
-<span class="k">assert</span><span class="p">(</span><span class="n">plusLongueRépétition</span><span class="p">(</span><span class="s1">&#39;AAaaaaAaaaA&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span>
-<span class="k">assert</span><span class="p">(</span><span class="n">plusLongueRépétition</span><span class="p">(</span><span class="s1">&#39;aaa&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span>
-<span class="k">assert</span><span class="p">(</span><span class="n">plusLongueRépétition</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
-<span class="k">assert</span><span class="p">(</span><span class="n">plusLongueRépétition</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">assert</span><span class="p">(</span><span class="n">plusLongueRepetition</span><span class="p">(</span><span class="s1">&#39;lycanthropiques&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">plusLongueRepetition</span><span class="p">(</span><span class="s1">&#39;arrosoir&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">plusLongueRepetition</span><span class="p">(</span><span class="s1">&#39;AAaaaaAaaaA&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">plusLongueRepetition</span><span class="p">(</span><span class="s1">&#39;aaa&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">plusLongueRepetition</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">plusLongueRepetition</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```python
-def plusLongueRépétition(message):
+def plusLongueRepetition(message):
     if len(message) == 0:
         return 0
     maximum = 0
@@ -4148,12 +4151,12 @@ def plusLongueRépétition(message):
 ```
 
 ```python
-assert(plusLongueRépétition(&#39;lycanthropiques&#39;) == 1)
-assert(plusLongueRépétition(&#39;arrosoir&#39;) == 2)
-assert(plusLongueRépétition(&#39;AAaaaaAaaaA&#39;) == 4)
-assert(plusLongueRépétition(&#39;aaa&#39;) == 3)
-assert(plusLongueRépétition(&#39;a&#39;) == 1)
-assert(plusLongueRépétition(&#39;&#39;) == 0)
+assert(plusLongueRepetition(&#39;lycanthropiques&#39;) == 1)
+assert(plusLongueRepetition(&#39;arrosoir&#39;) == 2)
+assert(plusLongueRepetition(&#39;AAaaaaAaaaA&#39;) == 4)
+assert(plusLongueRepetition(&#39;aaa&#39;) == 3)
+assert(plusLongueRepetition(&#39;a&#39;) == 1)
+assert(plusLongueRepetition(&#39;&#39;) == 0)
 ```
 </code></pre></div>
 </div>
