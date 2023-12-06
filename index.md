@@ -1,6 +1,6 @@
 
 !!! abstract ":star: Thèmes en cours d'étude :star: "
-    - [Thème 2 : Type de base : Booleens](./T2_Type_de_base/2.5_Booleens/cours.md)
+    - [Thème 3 : Type Construit : les Listes](T3_Type_construit/3.1_Listes/cours.md)
     
 !!! info "Entraînement :running: "
     Vous trouverez ci dessous quelques sites pour vous entrainez en Python<br />
@@ -13,9 +13,12 @@
     - [Thème 2 : Type de base : binaire](./T2_Type_de_base/2.1_Binaire/cours.md)
     - [Thème 2 : Type de base : Entiers](./T2_Type_de_base/2.2_Codage_entiers/)
     - [Thème 2 : Type de base : Décimaux](./T2_Type_de_base/2.3_Decimaux/)
+    - [Thème 7 : IHM Web : HTML et CSS](T7_IHM_Web/7.1_Interactions_page_web/cours.md)
     - [Thème 1 : Démarrer en Python](./T1_Demarrer_en_Python/sommaire.md)
     - [Thème 2 : Type de base : chaines de caractères](./T2_Type_de_base/2.4_Chaines_caracteres/chaine.md)
     - [Mini projet](./T8_Projets/1_SiteWeb/cours.md)
+    - [Thème 2 : Type de base : Booleens](./T2_Type_de_base/2.5_Booleens/cours.md)
+    - [Thème 4 : Architecture de Von Neumann](./T4_Architecture_materielle/Architecture_von_neumann/cours.md)
 
 <!--
 
@@ -29,11 +32,7 @@
       
 
 !!! note "*Thèmes traités*"
-     - [Thème 1 : démarrer en python](T1_demarrer_en_python/sommaire.md)
-    - [Thème 2 : Type de base](T2_Type_de_base/sommaire.md)
-    - [Thème 7 : IHM Web : HTML et CSS](T7_IHM_Web/7.1_Interactions_page_web/cours.md)
-    - [Thème 4 : Architecture de Von Neumann](T4_Architecture_materielle/Architecture_von_neumann/cours.md)
-    - [Thème 3 : Type Construit : les Listes](T3_Type_construit/3.1_Listes/cours.md)
+  
     - [Thème 3 : Type Construit : les tuples](./T3_Type_construit/3.2_tuples/cours/)
     - [Thème 5 : Spécifications](T5_algorithmique/5.0_specifications/cours.md)
     - [Thème 5 : Complexité](T5_algorithmique/5.2_complexite/cours.md)

@@ -1,3 +1,21 @@
+!!! example "Manipulation de tuple"
+    === "Énoncé"
+        On considère la suite d'instructions donnée ci-contre. 
+        Quelles sont les valeurs affectées aux variables a, b et c à la fin de cette séquence d'instructions ?
+        ```python linenums='1'
+        tuple1 = (19, -2.2, 888)
+        tuple2 = ("Mlle", "Mme", "M.")
+        a, b, c = tuple1
+        c, a = a, c
+        d, e, f = tuple2
+        (b, a) = (f, e)
+        ```
+
+    === "Correction"
+        a vaut Mme <br />
+        b vaut M. <br />
+        c vaut 19
+
 !!! example "exercice"
     === "Énoncé"
         ![image](data/sanglier.jpg){: .center width=60%}
