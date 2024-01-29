@@ -132,16 +132,10 @@ def division(a, b):
         ```
 
     === "Correction"
-         
-
-<!--
-
-def milieu(point1, point2):
-    abscisse = (point1[0]+point2[0]) / 2
-    ordonnee = (point1[1]+point2[1]) / 2
-    return (abscisse, ordonnee)
-```
-
--->
-
+        ```python
+        def milieu(point1, point2):
+            abscisse = (point1[0]+point2[0]) / 2
+            ordonnee = (point1[1]+point2[1]) / 2
+            return (abscisse, ordonnee)
+        ```
 

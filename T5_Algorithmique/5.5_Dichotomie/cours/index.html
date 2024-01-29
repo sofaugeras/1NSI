@@ -4256,7 +4256,7 @@
 <div class="admonition - info">
 <p class="admonition-title">Crédits</p>
 <ul>
-<li><a href="https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.3_Architecture_reseau/cours/">Gilles Lassus</a></li>
+<li><a href="https://glassus.github.io/premiere_nsi/">Gilles Lassus</a></li>
 </ul>
 </div>
 <p><img alt="image" class="center" src="../data/meme.jpg" /></p>
@@ -4398,24 +4398,6 @@ Exemple : "On lance un dé, s'il tombe sur le 6 vous recevez 8 euros, sinon vous
 <li>on continue jusqu'à trouver la valeur cherchée (ou pas)</li>
 </ul>
 </div>
-<!--
-### 2.3 Illustration
-
-Recherchons la valeur 14 dans notre liste `lst`.
-
-![image](data/fig3.png){: .center}
-
-
-
-
-- étape 1 : toute la liste est à traiter. On se place sur l'élément central. Son indice est la partie entière de la moitié de la longueur de la liste. Ici il y a 9 éléments, donc on se place sur le 4ème, qui est 11.
-- étape 2 : on compare 11 à la valeur cherchée (14). Il faut donc garder tout ce qui est supérieur à 11.
-- étape 3 : on se place au milieu de la liste des valeurs qu'il reste à traiter. Ici il y a 4 valeurs, donc il n'y a pas de valeur centrale. On va donc se positionner sur la 2ème valeur, qui est 18.
-- étape 4 : on compare la valeur 18 à la valeur cherchée : 14. Elle est supérieure, donc on garde ce qui est à gauche. Il n'y a plus qu'une valeur.
-- étape 5 : on se place sur la valeur 14 et on compare avec 14. La valeur est trouvée.
-
--->
-
 <h3 id="23-programmation-de-la-methode-de-dichotomie">2.3 Programmation de la méthode de dichotomie<a class="headerlink" href="#23-programmation-de-la-methode-de-dichotomie" title="Permanent link">⚓︎</a></h3>
 <p>Comprendre la méthode de dichotomie est relativement simple, mais savoir la programmer est plus difficile.</p>
 <p>Pour des raisons d'efficacité, nous allons garder <em>intacte</em> notre liste de travail et simplement faire évoluer les indices qui déterminent le début et la fin de notre liste.</p>
@@ -4467,7 +4449,7 @@ Recherchons la valeur 14 dans notre liste `lst`.
 </div>
 <h3 id="25-terminaison-de-lalgorithme">2.5 Terminaison de l'algorithme<a class="headerlink" href="#25-terminaison-de-lalgorithme" title="Permanent link">⚓︎</a></h3>
 <p>Est-on sûr que l'algorithme va se terminer ?<br />
-La boucle <code>while</code> qui est utilisée doit nous inciter à la prudence (voir <a href="https://github.com/glassus/nsi/blob/master/Premiere/Theme01_Bases_de_Python/02_Boucle_while/boucles_while.ipynb">cours</a> sur la boucle While).<br />
+La boucle <code>while</code> qui est utilisée doit nous inciter à la prudence (voir <a href="https://sofaugeras.github.io/1NSI/T1_Demarrer_en_Python/1.3_Boucle_while/cours/">cours</a> sur la boucle While).<br />
 Il y a en effet le risque de rentrer dans une boucle infinie.<br />
 Pourquoi n'est-ce pas le cas ?</p>
 <p><strong>Aide :</strong> observer la position des deux flèches bleues lors de l'exécution de l'algorithme 
@@ -4533,7 +4515,42 @@ Il y a donc 3 étapes avant de trouver la valeur cherchée.</p>
 <li>Pour une liste de <span class="arithmatex">\(2^n\)</span> termes, quel est le nombre d'étapes ?</li>
 </ol>
 </div>
-<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">taille de la liste</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">4</th>
+<th style="text-align: center;">8</th>
+<th style="text-align: center;">16</th>
+<th style="text-align: center;">32</th>
+<th style="text-align: center;">64</th>
+<th style="text-align: center;">128</th>
+<th style="text-align: center;">256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">nombre d'étapes</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">8</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Pouvez-vous deviner le nombre d'étapes nécessaires pour une liste de 4096 termes ? Il faudra 12 étapes. </li>
+<li>Pour une liste de <span class="arithmatex">\(2^n\)</span> termes, quel est le nombre d'étapes ? Il faudra n étapes.</li>
+</ol>
+</div>
 </div>
 </div>
 </div>
@@ -4588,9 +4605,7 @@ Il y a donc 3 étapes avant de trouver la valeur cherchée.</p>
 <li>méthode 1: la recherche dans une liste 10 fois plus grand prend environ 10 fois plus de temps : la vitesse de l'algorithme est bien proportionnelle à la taille <span class="arithmatex">\(n\)</span> de la liste. $ \frac{10<sup>6}{10</sup>5} = 10$</li>
 <li>méthode 2: la recherche dans une liste 10 fois plus grand prend environ 1,2 fois plus de temps : la vitesse de l'algorithme est bien proportionnelle au <strong>logarithme</strong> de la taille <span class="arithmatex">\(n\)</span> de la liste.  <span class="arithmatex">\(\frac{\log(1000000)}{\log(100000)} \approx 1,2\)</span></li>
 </ul>
-<p><strong>Remarque :</strong> Il ne faut toutefois pas oublier que la méthode dichotomique, bien plus rapide, nécessite que la liste ait été auparavant triée. Ce qui rajoute du temps de calcul ! (cf <a href="https://github.com/glassus/nsi/blob/master/Premiere/Theme05_Algorithmique/03_Tri_par_insertion.ipynb">tri par insertion</a> ou <a href="https://github.com/glassus/nsi/blob/master/Premiere/Theme05_Algorithmique/04_Tri_par_selection.ipynb">tri par sélection</a> )</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code>
-</code></pre></div>
+<p><strong>Remarque :</strong> Il ne faut toutefois pas oublier que la méthode dichotomique, bien plus rapide, nécessite que la liste ait été auparavant triée. Ce qui rajoute du temps de calcul ! (cf <a href="https://sofaugeras.github.io/1NSI/T5_Algorithmique/5.3_Tri_par_insertion/cours/">tri par insertion</a> ou <a href="https://sofaugeras.github.io/1NSI/T5_Algorithmique/5.4_Tri_par_selection/cours/">tri par sélection</a> )</p>
 
 
   

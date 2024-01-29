@@ -147,15 +147,17 @@ Ces méthodes sont importantes (elles figurent explicitement au programme de NSI
         ```python
         dressing = {"pantalons":3, "pulls":4, "tee-shirts":8}
         ```
-        Créer une fonction `achat(habit)` qui augmente de 1 le nombre d'habits (pantalon, pull ou tee-shirt) de mon dressing. 
+        Créer une fonction `achat(dico, habit)`qui prend en paramètre un dictionnaire et une clé et  qui augmente de 1 le nombre d'habits (pantalon, pull ou tee-shirt) de mon dressing. 
 
     === "Correction"
 
         ```python linenums='1'
         dressing = {"pantalons":3, "pulls":4, "tee-shirts":8}
 
-        def achat(habit):
-            dressing[habit] += 1
+        def achat(dico, habit):
+            return dico[habit] += 1
+
+        achat(dressing,"pantalon")
         ```
 
 
@@ -197,14 +199,15 @@ Nous allons résoudre ce problème grâce à :
 
 !!! example "fonction habit version 2"
     === "Énoncé"
-        Améliorer la fonction `achat(habit)` en y incluant un test pour prendre en compte les nouveaux habits.
+        Améliorer la fonction `achat(dico, habit)` en y incluant un test pour prendre en compte les nouveaux habits.
     === "Correction" 
 
         ```python linenums='1'
-        def achat(habit):
-            if habit in dressing:
-                dressing[habit] += 1
+        def achat(dico, habit):
+            if habit in dico:
+                dico[habit] += 1
             else:
-                dressing[habit] = 1
+                dico[habit] = 1
+        achat(dressing, "cravates")
         ```
 

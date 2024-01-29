@@ -5,7 +5,7 @@
 ![image](data/BO.png){: .center}
 
 !!!- info "Crédits"
-    - [Gilles Lassus](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.3_Architecture_reseau/cours/)
+    - [Gilles Lassus](https://glassus.github.io/premiere_nsi/)
 
 
 ![image](data/meme.jpg){: .center}
@@ -162,24 +162,6 @@ La stratégie optimale est de diviser en deux à chaque étape l'intervalle d'é
     - on ne considère maintenant que la bonne moitié de la liste qui nous intéresse.
     - on continue jusqu'à trouver la valeur cherchée (ou pas)
 
-<!--
-### 2.3 Illustration
-
-Recherchons la valeur 14 dans notre liste `lst`.
-
-![image](data/fig3.png){: .center}
-
-
-
-
-- étape 1 : toute la liste est à traiter. On se place sur l'élément central. Son indice est la partie entière de la moitié de la longueur de la liste. Ici il y a 9 éléments, donc on se place sur le 4ème, qui est 11.
-- étape 2 : on compare 11 à la valeur cherchée (14). Il faut donc garder tout ce qui est supérieur à 11.
-- étape 3 : on se place au milieu de la liste des valeurs qu'il reste à traiter. Ici il y a 4 valeurs, donc il n'y a pas de valeur centrale. On va donc se positionner sur la 2ème valeur, qui est 18.
-- étape 4 : on compare la valeur 18 à la valeur cherchée : 14. Elle est supérieure, donc on garde ce qui est à gauche. Il n'y a plus qu'une valeur.
-- étape 5 : on se place sur la valeur 14 et on compare avec 14. La valeur est trouvée.
-
--->
-
 ### 2.3 Programmation de la méthode de dichotomie
 
 Comprendre la méthode de dichotomie est relativement simple, mais savoir la programmer est plus difficile.
@@ -241,7 +223,7 @@ Nous allons faire *se rapprocher* les indices `indice_debut` et `indice_fin` **t
 
 ### 2.5 Terminaison de l'algorithme
 Est-on sûr que l'algorithme va se terminer ?  
-La boucle `while` qui est utilisée doit nous inciter à la prudence (voir [cours](https://github.com/glassus/nsi/blob/master/Premiere/Theme01_Bases_de_Python/02_Boucle_while/boucles_while.ipynb) sur la boucle While).  
+La boucle `while` qui est utilisée doit nous inciter à la prudence (voir [cours](https://sofaugeras.github.io/1NSI/T1_Demarrer_en_Python/1.3_Boucle_while/cours/) sur la boucle While).  
 Il y a en effet le risque de rentrer dans une boucle infinie.  
 Pourquoi n'est-ce pas le cas ?
 
@@ -288,7 +270,15 @@ Il y a donc 3 étapes avant de trouver la valeur cherchée.
 
         2. Pouvez-vous deviner le nombre d'étapes nécessaires pour une liste de 4096 termes ?
         3. Pour une liste de $2^n$ termes, quel est le nombre d'étapes ?
+
     === "Correction"
+
+        | taille de la liste | 1 | 2 | 4 | 8 | 16 | 32 | 64 | 128 | 256 |
+        | :----------------- |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+        | nombre d'étapes    | 1 | 1 | 2 | 3 | 4 | 5 | 6  | 7 | 8 | 
+
+        2. Pouvez-vous deviner le nombre d'étapes nécessaires pour une liste de 4096 termes ? Il faudra 12 étapes. 
+        3. Pour une liste de $2^n$ termes, quel est le nombre d'étapes ? Il faudra n étapes.
          
 
 **Conclusion :** 
@@ -380,9 +370,4 @@ Mesurons le temps nécessaire pour trouver l'indice de la dernière valeur de la
 - méthode 2: la recherche dans une liste 10 fois plus grand prend environ 1,2 fois plus de temps : la vitesse de l'algorithme est bien proportionnelle au **logarithme** de la taille $n$ de la liste.  $\frac{\log(1000000)}{\log(100000)} \approx 1,2$
 
 
-**Remarque :** Il ne faut toutefois pas oublier que la méthode dichotomique, bien plus rapide, nécessite que la liste ait été auparavant triée. Ce qui rajoute du temps de calcul ! (cf [tri par insertion](https://github.com/glassus/nsi/blob/master/Premiere/Theme05_Algorithmique/03_Tri_par_insertion.ipynb) ou [tri par sélection](https://github.com/glassus/nsi/blob/master/Premiere/Theme05_Algorithmique/04_Tri_par_selection.ipynb) )
-
-
-```python
-
-```
+**Remarque :** Il ne faut toutefois pas oublier que la méthode dichotomique, bien plus rapide, nécessite que la liste ait été auparavant triée. Ce qui rajoute du temps de calcul ! (cf [tri par insertion](https://sofaugeras.github.io/1NSI/T5_Algorithmique/5.3_Tri_par_insertion/cours/) ou [tri par sélection](https://sofaugeras.github.io/1NSI/T5_Algorithmique/5.4_Tri_par_selection/cours/) )
