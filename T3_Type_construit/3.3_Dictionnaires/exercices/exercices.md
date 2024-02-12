@@ -20,6 +20,13 @@
                 occurrence[prenom] += 1
             else:
                 occurrence[prenom] = 1
+        
+        ou
+
+        dico={}
+        for nom in lst:
+            if nom not in dico:
+                dico[nom]=lst.count(nom)    
         ``` 
 
 ## Exercice 2 : Calcul d'occurrence dans une liste
@@ -57,6 +64,32 @@
         print('il apparait', occ_max, 'fois')
 
         ```
+        autre solution en utilisant la fonction max sur la liste des valeurs :
+
+        ```python linenums='1'
+        lst = ['5717', '1133', '5545', '4031', '6398', '2734', '3070', '1346', '7849', '7288', '7587', '6217', '8240', '5733', '6466', '7972', '7341', '6616', '5061', '2441', '2571', '4496', '4831', '5395', '8584', '3033', '6266', '2452', '6909', '3021', '5404', '3799', '5053', '8096', '2488', '8519', '6896', '7300', '5914', '7464', '5068', '1386', '9898', '8313', '1072', '1441', '7333', '5691', '6987', '5255']
+
+        freq={}
+
+        for nombre in lst:
+            for chiffre in nombre:
+                if chiffre in freq:
+                    freq[chiffre] += 1
+                else:
+                    freq[chiffre] = 1
+
+        liste_valeurs = list(freq.values())
+        print (liste_valeurs)
+
+        max_value = max(liste_valeurs)
+        print (max_value)
+
+        for val in freq :
+            if freq[val] == max_value :
+                print(val)
+        
+        ```
+
 ## Exercice 3 : Les pokémons
 _Source de l'exercice : prépabac NSI première, HATIER_
 
@@ -150,7 +183,7 @@ assert taille(exemple_pokemons,'dracaufeu')==None
     assert taille(exemple_pokemons,'dracaufeu')==None
     ``` 
 
-## Exercice 4 : lecture et manipulation des métadonnées EXIF d'une image
+## Exercice 4 : lecture et manipulation des métadonnées EXIF d'une image :trident:
 
 ![Statut de la liberté](data/liberty.jpg){: .center width=30%}
 
@@ -263,6 +296,16 @@ Vous pourrez utiliser le site [https://www.coordonnees-gps.fr/](https://www.coor
     ![localisation](data/localisation_liberty.png){: .center width=30%}
     En effet, cette photographie a été prise **Place Picard, à Bordeaux**, où se trouve une Statue de la Liberté.
     ![image](data/place_picard.png){: .center width=30%}
+
+??? note "Cyber"
+
+    Cette technique d'analyse des meta-données est très utilisé en **OSINT**.
+
+    L'OSINT, ou **Open Source Intelligence**, se réfère à la collecte et à l'analyse de renseignements provenant de sources ouvertes et accessibles au public. Il s'agit d'une pratique utilisée dans le domaine de la sécurité et de la défense pour rassembler des informations stratégiques à partir de sources telles que les médias sociaux, les sites web, les forums en ligne, les bases de données publiques, les rapports gouvernementaux, et d'autres ressources accessibles au grand public.
+
+    L'objectif de l'OSINT est d'obtenir des informations pertinentes qui peuvent contribuer à évaluer les menaces potentielles, à comprendre les intentions d'acteurs malveillants, à anticiper des incidents de sécurité, et à prendre des décisions éclairées en matière de sécurité.
+
+    Les praticiens de l'OSINT utilisent souvent des outils spécialisés pour automatiser la collecte et l'analyse de données provenant de diverses sources, tout en respectant les limites légales et éthiques. L'OSINT est un élément clé dans le domaine de la cyberdéfense, fournissant une perspective externe sur les activités potentiellement malveillantes et contribuant à renforcer la posture de sécurité d'une organisation.
 
 ## Exercice 5 : résolution du pydéfi Pokémons "le seul et unique"
 

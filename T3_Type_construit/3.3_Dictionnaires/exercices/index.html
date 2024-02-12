@@ -4161,19 +4161,33 @@
 <p>Créer un dictionnaire qui associera à chaque prénom son nombre d'occurrences dans la liste.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">occurrence</span> <span class="o">=</span> <span class="p">{}</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">occurrence</span> <span class="o">=</span> <span class="p">{}</span>
 
 <span class="k">for</span> <span class="n">prenom</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">prenom</span> <span class="ow">in</span> <span class="n">occurrence</span><span class="p">:</span>
         <span class="n">occurrence</span><span class="p">[</span><span class="n">prenom</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">occurrence</span><span class="p">[</span><span class="n">prenom</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">ou</span>
+
+<span class="n">dico</span><span class="o">=</span><span class="p">{}</span>
+<span class="k">for</span> <span class="n">nom</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">nom</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">dico</span><span class="p">:</span>
+        <span class="n">dico</span><span class="p">[</span><span class="n">nom</span><span class="p">]</span><span class="o">=</span><span class="n">lst</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">nom</span><span class="p">)</span>    
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
@@ -4190,7 +4204,7 @@
 <p>Quel est le <strong>chiffre</strong> qui revient le plus fréquemment dans cette liste ?</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -4231,6 +4245,47 @@
 
 <span class="nb">print</span><span class="p">(</span><span class="n">chiffre_max</span><span class="p">,</span> <span class="s1">&#39;est le chiffre le plus fréquent&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;il apparait&#39;</span><span class="p">,</span> <span class="n">occ_max</span><span class="p">,</span> <span class="s1">&#39;fois&#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+autre solution en utilisant la fonction max sur la liste des valeurs :</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;5717&#39;</span><span class="p">,</span> <span class="s1">&#39;1133&#39;</span><span class="p">,</span> <span class="s1">&#39;5545&#39;</span><span class="p">,</span> <span class="s1">&#39;4031&#39;</span><span class="p">,</span> <span class="s1">&#39;6398&#39;</span><span class="p">,</span> <span class="s1">&#39;2734&#39;</span><span class="p">,</span> <span class="s1">&#39;3070&#39;</span><span class="p">,</span> <span class="s1">&#39;1346&#39;</span><span class="p">,</span> <span class="s1">&#39;7849&#39;</span><span class="p">,</span> <span class="s1">&#39;7288&#39;</span><span class="p">,</span> <span class="s1">&#39;7587&#39;</span><span class="p">,</span> <span class="s1">&#39;6217&#39;</span><span class="p">,</span> <span class="s1">&#39;8240&#39;</span><span class="p">,</span> <span class="s1">&#39;5733&#39;</span><span class="p">,</span> <span class="s1">&#39;6466&#39;</span><span class="p">,</span> <span class="s1">&#39;7972&#39;</span><span class="p">,</span> <span class="s1">&#39;7341&#39;</span><span class="p">,</span> <span class="s1">&#39;6616&#39;</span><span class="p">,</span> <span class="s1">&#39;5061&#39;</span><span class="p">,</span> <span class="s1">&#39;2441&#39;</span><span class="p">,</span> <span class="s1">&#39;2571&#39;</span><span class="p">,</span> <span class="s1">&#39;4496&#39;</span><span class="p">,</span> <span class="s1">&#39;4831&#39;</span><span class="p">,</span> <span class="s1">&#39;5395&#39;</span><span class="p">,</span> <span class="s1">&#39;8584&#39;</span><span class="p">,</span> <span class="s1">&#39;3033&#39;</span><span class="p">,</span> <span class="s1">&#39;6266&#39;</span><span class="p">,</span> <span class="s1">&#39;2452&#39;</span><span class="p">,</span> <span class="s1">&#39;6909&#39;</span><span class="p">,</span> <span class="s1">&#39;3021&#39;</span><span class="p">,</span> <span class="s1">&#39;5404&#39;</span><span class="p">,</span> <span class="s1">&#39;3799&#39;</span><span class="p">,</span> <span class="s1">&#39;5053&#39;</span><span class="p">,</span> <span class="s1">&#39;8096&#39;</span><span class="p">,</span> <span class="s1">&#39;2488&#39;</span><span class="p">,</span> <span class="s1">&#39;8519&#39;</span><span class="p">,</span> <span class="s1">&#39;6896&#39;</span><span class="p">,</span> <span class="s1">&#39;7300&#39;</span><span class="p">,</span> <span class="s1">&#39;5914&#39;</span><span class="p">,</span> <span class="s1">&#39;7464&#39;</span><span class="p">,</span> <span class="s1">&#39;5068&#39;</span><span class="p">,</span> <span class="s1">&#39;1386&#39;</span><span class="p">,</span> <span class="s1">&#39;9898&#39;</span><span class="p">,</span> <span class="s1">&#39;8313&#39;</span><span class="p">,</span> <span class="s1">&#39;1072&#39;</span><span class="p">,</span> <span class="s1">&#39;1441&#39;</span><span class="p">,</span> <span class="s1">&#39;7333&#39;</span><span class="p">,</span> <span class="s1">&#39;5691&#39;</span><span class="p">,</span> <span class="s1">&#39;6987&#39;</span><span class="p">,</span> <span class="s1">&#39;5255&#39;</span><span class="p">]</span>
+
+<span class="n">freq</span><span class="o">=</span><span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">nombre</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">chiffre</span> <span class="ow">in</span> <span class="n">nombre</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">chiffre</span> <span class="ow">in</span> <span class="n">freq</span><span class="p">:</span>
+            <span class="n">freq</span><span class="p">[</span><span class="n">chiffre</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">freq</span><span class="p">[</span><span class="n">chiffre</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">liste_valeurs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">freq</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">liste_valeurs</span><span class="p">)</span>
+
+<span class="n">max_value</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">liste_valeurs</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">max_value</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">freq</span> <span class="p">:</span>
+    <span class="k">if</span> <span class="n">freq</span><span class="p">[</span><span class="n">val</span><span class="p">]</span> <span class="o">==</span> <span class="n">max_value</span> <span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
@@ -4316,7 +4371,7 @@ Exemple : <br />
 <span class="k">assert</span> <span class="n">taille</span><span class="p">(</span><span class="n">exemple_pokemons</span><span class="p">,</span><span class="s1">&#39;dracaufeu&#39;</span><span class="p">)</span><span class="o">==</span><span class="kc">None</span>
 </code></pre></div>
 </details>
-<h2 id="exercice-4-lecture-et-manipulation-des-metadonnees-exif-dune-image">Exercice 4 : lecture et manipulation des métadonnées EXIF d'une image<a class="headerlink" href="#exercice-4-lecture-et-manipulation-des-metadonnees-exif-dune-image" title="Permanent link">⚓︎</a></h2>
+<h2 id="exercice-4-lecture-et-manipulation-des-metadonnees-exif-dune-image">Exercice 4 : lecture et manipulation des métadonnées EXIF d'une image <img alt="🔱" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f531.svg" title=":trident:" /><a class="headerlink" href="#exercice-4-lecture-et-manipulation-des-metadonnees-exif-dune-image" title="Permanent link">⚓︎</a></h2>
 <p><img alt="Statut de la liberté" class="center" src="../data/liberty.jpg" width="30%" /></p>
 <p>On considère l'image ci dessus dont nous allons extraire les données EXIF à l'aide du module <a href="https://pypi.org/project/ExifRead/">exifread</a></p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">exifread</span>
@@ -4413,6 +4468,13 @@ Ce qui donne :
 <img alt="localisation" class="center" src="../data/localisation_liberty.png" width="30%" />
 En effet, cette photographie a été prise <strong>Place Picard, à Bordeaux</strong>, où se trouve une Statue de la Liberté.
 <img alt="image" class="center" src="../data/place_picard.png" width="30%" /></p>
+</details>
+<details class="note">
+<summary>Cyber</summary>
+<p>Cette technique d'analyse des meta-données est très utilisé en <strong>OSINT</strong>.</p>
+<p>L'OSINT, ou <strong>Open Source Intelligence</strong>, se réfère à la collecte et à l'analyse de renseignements provenant de sources ouvertes et accessibles au public. Il s'agit d'une pratique utilisée dans le domaine de la sécurité et de la défense pour rassembler des informations stratégiques à partir de sources telles que les médias sociaux, les sites web, les forums en ligne, les bases de données publiques, les rapports gouvernementaux, et d'autres ressources accessibles au grand public.</p>
+<p>L'objectif de l'OSINT est d'obtenir des informations pertinentes qui peuvent contribuer à évaluer les menaces potentielles, à comprendre les intentions d'acteurs malveillants, à anticiper des incidents de sécurité, et à prendre des décisions éclairées en matière de sécurité.</p>
+<p>Les praticiens de l'OSINT utilisent souvent des outils spécialisés pour automatiser la collecte et l'analyse de données provenant de diverses sources, tout en respectant les limites légales et éthiques. L'OSINT est un élément clé dans le domaine de la cyberdéfense, fournissant une perspective externe sur les activités potentiellement malveillantes et contribuant à renforcer la posture de sécurité d'une organisation.</p>
 </details>
 <h2 id="exercice-5-resolution-du-pydefi-pokemons-le-seul-et-unique">Exercice 5 : résolution du pydéfi Pokémons "le seul et unique"<a class="headerlink" href="#exercice-5-resolution-du-pydefi-pokemons-le-seul-et-unique" title="Permanent link">⚓︎</a></h2>
 <p>D'après le <a href="https://callicode.fr/pydefis/PokePlusRare/txt">défi</a> proposé par L.Signac .</p>

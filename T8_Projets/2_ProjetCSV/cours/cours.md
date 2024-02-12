@@ -18,7 +18,7 @@
 
 !!! info "Consignes"
     Il s’agit ici de prendre en charge un jeu de données (open DataSet), de l’exploiter et d’en faire une restitution graphique.
-    Nous allons partir sur un mini-projet, à rendre après les vacances le <mark>Vendredi 5 Mai 2023</mark> et réalisé en BINOME.
+    Nous allons partir sur un mini-projet, à rendre après les vacances le <mark>Vendredi 25 Mars 2024</mark> et réalisé en BINOME.
 
     **Consignes générales :**<br />
     A partir d’une source de données choisies ou créées par vous, créer un programme Python d’acquisition (à partir d’un fichier CSV) et de restitution de données. La restitution pourra être source forme de tableaux (bibliothèque panda), de graphique (bibliothèque matplotlib) ou de carte (bibliothèque folium)
