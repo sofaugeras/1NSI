@@ -3826,6 +3826,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#coup-de-pouce" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coup de pouce
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4186,6 +4195,54 @@ A partir d’une source de données choisies ou créées par vous, créer un pro
 <p>Vous trouverez la fiche d'évaluation <a href="../data/FicheEvaluationCSV.pdf">ici</a><br />
 📖 Vous veillerez à documenter vos fonctions et différents programmes.<br />
 📁 Vous devrez également fournir un document accompagnateur expliquant votre projet et votre démarche. Le document accompagnateur pourra être un site web, une présentation sous forme de slide, ou un rapport.</p>
+<h2 id="coup-de-pouce">Coup de pouce<a class="headerlink" href="#coup-de-pouce" title="Permanent link">⚓︎</a></h2>
+<p>Un besoin recurrent sur ces projets est de pouvoir associer un dataset contenant une ville ou la capitale d'un pays avec ses coordonnées latitude/longitude pour pouvoir positionner un marqueur folium.<br />
+Voici un petit bout de code, qui à partir d'un fichier CSV contenant une ville, recréer un nouveau fichier CSV contenant la latitude et la longitude.</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="c1"># Charger le fichier CSV contenant les noms des pays avec les noms de leurs capitales</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;pays2.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+
+<span class="c1"># Fonction pour obtenir les coordonnées géographiques d&#39;une capitale donnée</span>
+<span class="k">def</span> <span class="nf">get_coordinates_city</span><span class="p">(</span><span class="n">city</span><span class="p">):</span>
+    <span class="c1"># Utilisation de l&#39;API openstreetmap </span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://nominatim.openstreetmap.org/search?city=</span><span class="si">{</span><span class="n">city</span><span class="si">}</span><span class="s2">&amp;format=json&quot;</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">data</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;lat&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Si on ne trouve pas la ville, renvoie None</span>
+        <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+
+<span class="k">def</span> <span class="nf">get_coordinates_country</span><span class="p">(</span><span class="n">country</span><span class="p">):</span>
+     <span class="c1"># Utilisation de l&#39;API openstreetmap </span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://nominatim.openstreetmap.org/search?country=</span><span class="si">{</span><span class="n">country</span><span class="si">}</span><span class="s2">&amp;format=json&quot;</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">data</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;lat&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Si on ne trouve pas le pays, renvoie None</span>
+        <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
+
+<span class="c1"># Obtenir les coordonnées géographiques pour chaque capitale</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df2</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="c1"># Un petit rpint pour vérifier que le traitement avance ...</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Capital&#39;</span><span class="p">])</span>
+    <span class="c1"># Récupération des coordonnées en fonction d&#39;une ville</span>
+    <span class="n">latitude</span><span class="p">,</span> <span class="n">longitude</span> <span class="o">=</span> <span class="n">get_coordinates_city</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Capital&#39;</span><span class="p">])</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="s1">&#39;Latitude&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">latitude</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="s1">&#39;Longitude&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">longitude</span>
+    <span class="c1"># Récupération des coordonnées en fonction d&#39;un pays, coordonnées de la capitale</span>
+    <span class="n">latitude2</span><span class="p">,</span> <span class="n">longitude2</span> <span class="o">=</span> <span class="n">get_coordinates_country</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;pays&#39;</span><span class="p">])</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="s1">&#39;Latitude2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">latitude2</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="s1">&#39;Longitude2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">longitude2</span>
+
+<span class="c1"># Enregistrer le nouveau dataset avec les coordonnées géographiques</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;nouveau_dataset.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
 
 
   

@@ -46,3 +46,56 @@ Tutoriel bibliothèque Panda : <br />
 Vous trouverez la fiche d'évaluation [ici](data/FicheEvaluationCSV.pdf)<br />
 📖 Vous veillerez à documenter vos fonctions et différents programmes.<br />
 📁 Vous devrez également fournir un document accompagnateur expliquant votre projet et votre démarche. Le document accompagnateur pourra être un site web, une présentation sous forme de slide, ou un rapport.
+
+
+## Coup de pouce 
+
+Un besoin recurrent sur ces projets est de pouvoir associer un dataset contenant une ville ou la capitale d'un pays avec ses coordonnées latitude/longitude pour pouvoir positionner un marqueur folium.<br />
+Voici un petit bout de code, qui à partir d'un fichier CSV contenant une ville, recréer un nouveau fichier CSV contenant la latitude et la longitude.
+
+```python
+import pandas as pd
+import requests
+
+# Charger le fichier CSV contenant les noms des pays avec les noms de leurs capitales
+df = pd.read_csv('pays2.csv', encoding = 'utf-8')
+
+# Fonction pour obtenir les coordonnées géographiques d'une capitale donnée
+def get_coordinates_city(city):
+    # Utilisation de l'API openstreetmap 
+    url = f"https://nominatim.openstreetmap.org/search?city={city}&format=json"
+    response = requests.get(url)
+    data = response.json()
+    if data:
+        return data[0]['lat'], data[0]['lon']
+    else:
+        # Si on ne trouve pas la ville, renvoie None
+        return None, None
+
+def get_coordinates_country(country):
+     # Utilisation de l'API openstreetmap 
+    url = f"https://nominatim.openstreetmap.org/search?country={country}&format=json"
+    response = requests.get(url)
+    data = response.json()
+    if data:
+        return data[0]['lat'], data[0]['lon']
+    else:
+        # Si on ne trouve pas le pays, renvoie None
+        return None, None
+
+# Obtenir les coordonnées géographiques pour chaque capitale
+for index, row in df2.iterrows():
+    # Un petit rpint pour vérifier que le traitement avance ...
+    print(row['Capital'])
+    # Récupération des coordonnées en fonction d'une ville
+    latitude, longitude = get_coordinates_city(row['Capital'])
+    df.at[index, 'Latitude'] = latitude
+    df.at[index, 'Longitude'] = longitude
+    # Récupération des coordonnées en fonction d'un pays, coordonnées de la capitale
+    latitude2, longitude2 = get_coordinates_country(row['pays'])
+    df.at[index, 'Latitude2'] = latitude2
+    df.at[index, 'Longitude2'] = longitude2
+
+# Enregistrer le nouveau dataset avec les coordonnées géographiques
+df.to_csv("nouveau_dataset.csv", index=False)
+```

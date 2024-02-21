@@ -297,7 +297,7 @@ Vous pourrez utiliser le site [https://www.coordonnees-gps.fr/](https://www.coor
     En effet, cette photographie a été prise **Place Picard, à Bordeaux**, où se trouve une Statue de la Liberté.
     ![image](data/place_picard.png){: .center width=30%}
 
-??? note "Cyber"
+??? warning "Cyber"
 
     Cette technique d'analyse des meta-données est très utilisé en **OSINT**.
 
