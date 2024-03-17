@@ -1,10 +1,10 @@
 
 !!! abstract ":star: Thèmes en cours d'étude :star: "
-    - :arrow_forward: [Projet CSV](./T8_Projets/2_ProjetCSV/cours.md)<br />
+    :arrow_forward: [Thème 4 : Réseau](./T4_Architecture_materielle/4.2_Architecture_reseau/cours.md)<br />
+    :arrow_forward: [Projet CSV](./T8_Projets/2_ProjetCSV/cours.md)<br />
 
     A venir :<br />
-    - :hourglass: [Thème 4 : Réseau](./T4_Architecture_materielle/4.2_Architecture_reseau/)<br />
-    - :hourglass: [Thème 4 : Protocole de communication](./T4_Architecture_materielle/4.3_Protocoles_de_communication/cours.md)
+    :hourglass: [Thème 4 : Protocole de communication](./T4_Architecture_materielle/4.3_Protocoles_de_communication/cours.md)
     
 !!! info "Entraînement :running: "
     Vous trouverez ci dessous quelques sites pour vous entrainez en Python<br />
@@ -12,6 +12,7 @@
     - [cercles informatiques](https://cscircles.cemc.mkduwaterloo.ca/fr/){. target="_blank"}<br />
     - [France IOI](https://www.france-ioi.org/algo/chapters.php){. target="_blank"}<br />
     - [Pyrates](https://py-rates.fr/){. target="_blank"}<br />
+    - [Codex](https://codex.forge.apps.education.fr/)<br />
 
 !!! note "*Thèmes traités*"
     - [Thème 2 : Type de base : binaire](./T2_Type_de_base/2.1_Binaire/cours.md)
