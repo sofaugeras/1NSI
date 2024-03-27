@@ -1,10 +1,10 @@
 
 !!! abstract ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: []<br />
-    :arrow_forward: <br />
+    :arrow_forward: [IHM sur le Web]<br />
 
     A venir :<br />
-    :hourglass: [Thème 4 : Protocole de communication](./T4_Architecture_materielle/4.3_Protocoles_de_communication/cours.md)
+    :hourglass: [Algorithme Glouton](./T5_Algorithmique/5.6_Algorithmes_gloutons/)
+    :hourglass: [Algorithme Knn](./T5_Algorithmique/5.7_Algorithme_KNN/)
     
 !!! info "Entraînement :running: "
     Vous trouverez ci dessous quelques sites pour vous entrainez en Python<br />
@@ -31,6 +31,8 @@
     - [Thème 3 : Type Construit : les dictionnaires](./T3_Type_construit/3.3_Dictionnaires/cours/)
     - [Thème 4 : Réseau](./T4_Architecture_materielle/4.2_Architecture_reseau/cours.md)
     - [Projet CSV](./T8_Projets/2_ProjetCSV/cours.md)
+    - [Thème 4 : Protocole de communication](./T4_Architecture_materielle/4.3_Protocoles_de_communication/cours.md)
+
 
 <!--
 
