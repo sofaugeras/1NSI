@@ -1,7 +1,7 @@
 
 !!! abstract ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: [Thème 4 : Réseau](./T4_Architecture_materielle/4.2_Architecture_reseau/cours.md)<br />
-    :arrow_forward: [Projet CSV](./T8_Projets/2_ProjetCSV/cours.md)<br />
+    :arrow_forward: []<br />
+    :arrow_forward: <br />
 
     A venir :<br />
     :hourglass: [Thème 4 : Protocole de communication](./T4_Architecture_materielle/4.3_Protocoles_de_communication/cours.md)
@@ -29,6 +29,8 @@
     - [Thème 3 : Type Construit : les tuples](./T3_Type_construit/3.2_tuples/cours/)
     - [Thème 5 : Complexité](T5_algorithmique/5.2_complexite/cours.md)
     - [Thème 3 : Type Construit : les dictionnaires](./T3_Type_construit/3.3_Dictionnaires/cours/)
+    - [Thème 4 : Réseau](./T4_Architecture_materielle/4.2_Architecture_reseau/cours.md)
+    - [Projet CSV](./T8_Projets/2_ProjetCSV/cours.md)
 
 <!--
 

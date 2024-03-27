@@ -205,9 +205,7 @@ La puissance du JavaScript permet de réaliser aujourd'hui des interfaces utilis
 
 
 !!! note "Exercice 4"
-    - Reprenez votre page créée aux exercices précédents et rajoutez du JavaScript pour la rendre dynamique. Vous êtes libres !
-
-
+    Application sur le TP Fortnite : [source](./data/TP_Javascript_Eleve.zip)
 
 
 
