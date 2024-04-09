@@ -18,7 +18,7 @@
         <link rel="prev" href="../../5.5_Dichotomie/cours/">
       
       
-        <link rel="next" href="../../5.7_Algorithme_KNN/07_Algorithme_KNN/">
+        <link rel="next" href="../monnaie/">
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
@@ -97,7 +97,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#46-algorithmes-gloutons" class="md-skip">
+        <a href="#les-algos-gloutons" class="md-skip">
           Aller au contenu
         </a>
       
@@ -2909,17 +2909,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Cours
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2930,151 +2919,27 @@
 
       </a>
       
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+              
+            
+              
+                
   
   
   
-    
   
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-exemples-dalgorithmes-gloutons" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Exemples d'algorithmes gloutons
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Exemples d'algorithmes gloutons">
-      <ul class="md-nav__list">
+    <li class="md-nav__item">
+      <a href="../monnaie/" class="md-nav__link">
         
-          <li class="md-nav__item">
-  <a href="#11-un-plus-court-chemin" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.1 Un plus court chemin ?
-    </span>
-  </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-remplir-un-rectangle-avec-des-carres" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.2 Remplir un rectangle avec des carrés
-    </span>
-  </a>
+  <span class="md-ellipsis">
+    TP rendu de monnaie
+  </span>
   
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion :
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-le-probleme-du-rendu-de-monnaie" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Le problème du rendu de monnaie
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Le problème du rendu de monnaie">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-solution-du-probleme" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.1 Solution du problème
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-une-solution-optimale" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.2 Une solution optimale ?
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-le-probleme-du-sac-a-dos-knapsack-problem" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Le problème du sac à dos (Knapsack Problem)
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. Le problème du sac à dos (Knapsack Problem)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31-petite-aide-technique-avant-de-commencer" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.1 Petite aide technique avant de commencer
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-retour-sur-le-probleme-du-sac-a-dos" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.2 Retour sur le problème du sac à dos
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33-force-brute" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.3 Force brute
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusion
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
+
+      </a>
     </li>
   
 
@@ -4232,13 +4097,21 @@
   
 
 
-<h1 id="46-algorithmes-gloutons">4.6 Algorithmes gloutons<a class="headerlink" href="#46-algorithmes-gloutons" title="Permanent link">⚓︎</a></h1>
-<p>en anglais : <em>greedy algorithms</em></p>
+<h1 id="les-algos-gloutons">Les algos Gloutons<a class="headerlink" href="#les-algos-gloutons" title="Permanent link">⚓︎</a></h1>
+<p><em>ou comment résoudre un problème en maximisant son gain ?</em></p>
 <p><img alt="image" class="center" src="../data/BO.png" /></p>
-<div class="admonition - info">
-<p class="admonition-title">Crédits</p>
+<div class="admonition example">
+<p class="admonition-title">Source</p>
 <ul>
-<li><a href="https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.3_Architecture_reseau/cours/">Gilles Lassus</a></li>
+<li><a href="https://pixees.fr/informatiquelycee/n_site/nsi_prem_glouton_algo.html">pixees</a></li>
+<li><a href="https://fr.wikipedia.org/wiki/Probl%C3%A8me_du_sac_%C3%A0_dos">wikipedia</a></li>
+<li><a href="https://www.schoolmouv.fr/cours/algorithmes-gloutons/fiche-de-cours">Fiche cours schoolmouv</a></li>
+<li><a href="https://interstices.info/le-probleme-du-sac-a-dos/">Fiche interstice sur le sac à dos</a></li>
+<li>PrépaBac hatier : Algorithme glouton sur le rendu de monnaie</li>
+<li>"Programmation efficace" aux éditions Ellipses</li>
+<li><a href="https://www.lumni.fr/article/jouer-a-survivre-sur-la-lune">Lumni : survivre sur la lune</a></li>
+<li><a href="http://sdz.tdct.org/sdz/les-algorithmes-gloutons.html">site du zéro : fiche sac à dos</a></li>
+<li><a href="https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.6_Algorithmes_gloutons/cours/">Gilles Glassus - académie de Bordeaux</a></li>
 </ul>
 </div>
 <p><img alt="" class="center" src="../data/greedy.png" /></p>
@@ -4250,324 +4123,378 @@
 <p><em>Lorsqu'on fait à chaque étape le meilleur choix possible, est-ce que la solution finale à laquelle on arrive est la meilleure possible ?</em></p>
 <p>Formulé autrement :</p>
 <p><em>Est-ce que faire le meilleur choix à chaque étape nous assure le meilleur choix global ?</em></p>
-<h2 id="1-exemples-dalgorithmes-gloutons">1. Exemples d'algorithmes gloutons<a class="headerlink" href="#1-exemples-dalgorithmes-gloutons" title="Permanent link">⚓︎</a></h2>
-<h3 id="11-un-plus-court-chemin">1.1 Un plus court chemin ?<a class="headerlink" href="#11-un-plus-court-chemin" title="Permanent link">⚓︎</a></h3>
+<h1 id="algorithmie-classique">Algorithmie "Classique"<a class="headerlink" href="#algorithmie-classique" title="Permanent link">⚓︎</a></h1>
+<p>Il existe dans la littérature informatique deux problèmes classiques, dont les informaticiens ont essayé de généraliser la résolution.</p>
+<h2 id="le-rendu-de-monnaie">Le rendu de monnaie<a class="headerlink" href="#le-rendu-de-monnaie" title="Permanent link">⚓︎</a></h2>
+<p><img alt="" class="center" src="../data/monnaie.jpg" width="50%" /></p>
+<p>Le problème du rendu de monnaie s’énonce de façon simple : étant donné un ensemble de pièces à disposition (je ne peux rendre que des pièces de 50 centimes, 1 euro, 2 euros…) et un montant à rendre, rendre ce montant avec un <u>nombre minimal de pièces</u> du système que l’on s’est donné. Les applications d’une solution à ce problème sont faciles à imaginer : nul n’a envie de récupérer 1 euro en pièces de 1 centime s’il s’est aventuré à payer 2 euros pour une malheureuse bouteille de soda à un distributeur !!</p>
+<p>Lien vers l'article de <a href="https://fr.wikipedia.org/wiki/Probl%C3%A8me_du_rendu_de_monnaie">Wikipedia</a> </p>
+<h2 id="le-sac-a-dos">le sac à dos<a class="headerlink" href="#le-sac-a-dos" title="Permanent link">⚓︎</a></h2>
+<p><img alt="" class="center" src="../data/sac_a_dos.png" width="50%" /></p>
+<p>Lien vers l'article de <a href="https://fr.wikipedia.org/wiki/Probl%C3%A8me_du_sac_%C3%A0_dos">Wikipedia</a> :</p>
+<p>En algorithmique, le problème du sac à dos, noté également KP (en anglais, Knapsack problem) est un <u>problème d'optimisation combinatoire</u>. ... 
+Ou plus simplement, les objets mis dans le sac à dos doivent maximiser la valeur totale, sans dépasser le poids maximum.</p>
+<p><a class="md-button" href="../data/gloutons.zip" target="_blank">Télécharger Notebook</a></p>
+<h1 id="la-nasa">La NASA<a class="headerlink" href="#la-nasa" title="Permanent link">⚓︎</a></h1>
+<p>Vous faites partie de l'équipage d'un vaisseau spatial qui doit rejoindre une base installée sur la face visible de la Lune. Mais, suite à un certain nombre de problèmes, vous êtes contraints de vous poser en catastrophe, à 320 km du point prévu. </p>
+<p><img alt="" class="center" src="../data/moon.jpg" width="50%" /></p>
+<p>Au cours de cet alunissage d'urgence, la plupart des équipements de bord de votre vaisseau sont endommagés, à l'exclusion de vos scaphandres de sortie dans l'espace et de quinze objets cités ci-dessous.</p>
+<p>Il s'agit donc pour votre équipage de rejoindre la base lunaire au plus vite en emportant le strict minimum avec vous. Vous ne pouvez emmener que 10 objets parmi les 15 cités ci -dessous.</p>
 <ul>
-<li>Vous partez du point O. </li>
-<li>Vous devez avoir atteint le plus rapidement possible tous les points A, B, C, D, E, F. </li>
-<li>L'ordre de parcours des points n'est pas important.</li>
+<li>Une boîte d’allumettes</li>
+<li>Des aliments concentrés</li>
+<li>50 mètres de corde en nylon</li>
+<li>Un parachute en soie</li>
+<li>Un appareil de chauffage fonctionnant sur l’énergie solaire</li>
+<li>Deux pistolets calibre 45</li>
+<li>Une caisse de lait en poudre</li>
+<li>Deux réservoirs de 50 kg d’oxygène chacun</li>
+<li>Une carte céleste des constellations lunaires</li>
+<li>Un canot de sauvetage autogonflable</li>
+<li>Un compas magnétique</li>
+<li>25 litres d’eau</li>
+<li>Une trousse médicale et des seringues hypodermiques</li>
+<li>Des signaux lumineux</li>
+<li>Un émetteur-récepteur fonctionnant sur l’énergie solaire</li>
 </ul>
-<p><img alt="" class="center" src="../data/pluscourt1b.png" /></p>
-<p>La philosophie de l'algorithme glouton implique qu'à chaque étape, vous allez vous diriger vers le point le plus proche. </p>
-<p>Quel est alors le parcours final ?</p>
-<details class="tip">
-<summary>Réponse</summary>
-<p>Voilà ce que donnerait l'algorithme glouton :
-<img alt="" class="center" src="../data/pluscourt2.png" /></p>
-</details>
-<p>Ce chemin est-il optimal ?</p>
-<details class="tip">
-<summary>Réponse</summary>
-<p>Non ! Celui ci-dessous est meilleur :
-<img alt="" class="center" src="../data/pluscourt3.png" /></p>
-<p>Le fait d'avoir privilégié à chaque étape le meilleur choix local nous a empêché de voir le meilleur choix global.</p>
-</details>
-<h3 id="12-remplir-un-rectangle-avec-des-carres">1.2 Remplir un rectangle avec des carrés<a class="headerlink" href="#12-remplir-un-rectangle-avec-des-carres" title="Permanent link">⚓︎</a></h3>
-<p><em>(d'après S.Tummarello et E.Buonocore)</em></p>
-<p>On considère un rectangle de dimension 11 sur 13 (figure 0). On veut remplir ce rectangle avec le minimum de carrés.</p>
-<p><img alt="" class="center" src="../data/remplissage_carres2.png" /></p>
-<p>Un algorithme glouton va chercher à positionner d'abord le plus grand carré possible (figure 1). </p>
-<p>C'est une stratégie efficace (8 carrés nécessaires), mais qui n'est pas optimale : la figure 2 présente un pavage avec seulement 6 carrés.</p>
-<p>Encore une fois, la solution gloutonne n'est pas la solution optimale.</p>
-<p>Est-ce qu'un algorithme glouton va <strong>toujours</strong> passer à côté de la solution optimale ? 
-Non ! Il arrive <em>aussi</em> qu'il donne la solution optimale. Changeons le rectangle initial en un rectangle de 10 sur 15 :</p>
-<p><img alt="" class="center" src="../data/remplissage_carres3.png" /></p>
-<p>Dans cette situation, l'algorithme glouton nous amène à la solution optimale.</p>
-<h2 id="conclusion">Conclusion :<a class="headerlink" href="#conclusion" title="Permanent link">⚓︎</a></h2>
-<p>Un algorithme glouton est une méthode rapide et souvent efficace, mais qui ne garantit pas l'optimalité de la solution trouvée.</p>
-<p><strong>La succession de meilleurs choix LOCAUX va nous amener à une <em>bonne</em> solution GLOBALE, mais ne nous garantit pas d'arriver à la solution optimale.</strong></p>
-<h2 id="2-le-probleme-du-rendu-de-monnaie">2. Le problème du rendu de monnaie<a class="headerlink" href="#2-le-probleme-du-rendu-de-monnaie" title="Permanent link">⚓︎</a></h2>
-<p>Nous allons travailler avec des pièces (ou billets) de 1, 2, 5, 10, 20, 50, 100, 200 euros.</p>
-<p>L'objectif est de créer un programme renvoyant, pour une somme <code>somme_a_rendre</code> entrée en paramètre, la combinaison utilisant un <strong>minimum</strong> de pièces ou de billets pour fabriquer la somme <code>somme_a_rendre</code>. </p>
-<p>Par exemple, lorsque vous payez avec 20 € un objet coûtant 11 €, vous préférez qu'on vous rende vos 9 € de monnaie par $$ 9 = 5 + 2+2$$ plutôt que par $$ 9=2+2+2+1+1+1$$</p>
-<p>La résolution de ce problème peut se faire de manière gloutonne : à chaque étape, vous allez essayer de rendre la plus grosse pièce (ou billet) possible.</p>
-<h3 id="21-solution-du-probleme">2.1 Solution du problème<a class="headerlink" href="#21-solution-du-probleme" title="Permanent link">⚓︎</a></h3>
-<div class="admonition note">
-<p class="admonition-title">Rendu de monnaie <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /> <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rendu</span><span class="p">(</span><span class="n">somme_a_rendre</span><span class="p">):</span>
-    <span class="n">pieces</span> <span class="o">=</span> <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-    <span class="n">i</span> <span class="o">=</span>  <span class="mi">0</span>   <span class="c1"># (1) </span>
-    <span class="n">solution</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">while</span> <span class="n">somme_a_rendre</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">pieces</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">somme_a_rendre</span> <span class="p">:</span> <span class="c1"># (2) </span>
-            <span class="n">solution</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pieces</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>   <span class="c1"># (3) </span>
-            <span class="n">somme_a_rendre</span> <span class="o">=</span> <span class="n">somme_a_rendre</span> <span class="o">-</span> <span class="n">pieces</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="c1"># (4)</span>
-        <span class="k">else</span> <span class="p">:</span>
-            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>   <span class="c1"># (5) </span>
-    <span class="k">return</span> <span class="n">solution</span>
-</code></pre></div></td></tr></table></div>
-<ol>
-<li>On part du 1er indice -&gt; la plus grande pièce</li>
-<li>Est-ce que la pièce peut être rendue ?</li>
-<li>On garde la pièce dans la liste <code>solution</code></li>
-<li>On met à jour la somme à rendre.</li>
-<li>La pièce était trop grosse, on avance dans la liste.</li>
-</ol>
-</div>
-<p>Utilisation : <code>rendu(13)</code> doit renvoyer <code>[10, 2, 1]</code></p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">rendu</span><span class="p">(</span><span class="mi">13</span><span class="p">)</span>
-    <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">rendu</span><span class="p">(</span><span class="mi">58</span><span class="p">)</span>
-    <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-</code></pre></div>
-<h3 id="22-une-solution-optimale">2.2 Une solution optimale ?<a class="headerlink" href="#22-une-solution-optimale" title="Permanent link">⚓︎</a></h3>
-<p>Imaginons qu'il n'y ait plus de pièces de 10 et 5 euros. 
-Faites fonctionner votre algorithme pour la somme de 63 euros.</p>
-<!-- 
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">pieces</span>  <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">]</span>
-
-<span class="k">def</span> <span class="nf">rendu</span><span class="p">(</span><span class="n">somme_a_rendre</span><span class="p">):</span>
-    <span class="n">i</span> <span class="o">=</span>  <span class="nb">len</span><span class="p">(</span><span class="n">pieces</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
-    <span class="n">solution</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">while</span> <span class="n">somme_a_rendre</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">pieces</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">somme_a_rendre</span> <span class="p">:</span>
-            <span class="n">solution</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pieces</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-            <span class="n">somme_a_rendre</span> <span class="o">=</span> <span class="n">somme_a_rendre</span> <span class="o">-</span> <span class="n">pieces</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-        <span class="k">else</span> <span class="p">:</span>
-            <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">solution</span>
-</code></pre></div>
--->
-
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">rendu</span><span class="p">(</span><span class="mi">63</span><span class="p">)</span>
-   <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-</code></pre></div>
-<p>Damned ! Mais ce n'est pas une solution optimale !<br />
-<code>[20, 20, 20, 2, 1]</code> serait bien mieux.</p>
-<p><strong>Moralité</strong> : Lors d'un rendu de monnaie, l'algorithme glouton n'est optimal que <em>sous certaines conditions</em>, ce qui est un peu décevant. Un système de monnaie qui rend l'algorithme glouton est dit <strong>canonique</strong>. Il est difficile de caractériser mathématiquement si un système de monnaie est canonique ou pas.</p>
-<h2 id="3-le-probleme-du-sac-a-dos-knapsack-problem">3. Le problème du sac à dos <em>(Knapsack Problem)</em><a class="headerlink" href="#3-le-probleme-du-sac-a-dos-knapsack-problem" title="Permanent link">⚓︎</a></h2>
-<p><img alt="" class="center" src="../data/kp.png" /></p>
-<p>Le problème est celui-ci : vous disposez d'un sac d'une contenance limitée (sur le dessin ci-dessus, 15kg) et vous souhaitez maximiser la valeur totale des objets que vous mettez dans votre sac. Evidemment, la somme de leur masse ne doit pas dépasser 15 kg.</p>
-<p>Ce problème (de la catégorie des problème dits d'<em>analyse combinatoire</em>) malgré sa simplicité est <strong>un problème majeur</strong> d'optimisation. </p>
-<p>Actuellement :</p>
-<ul>
-<li>On sait trouver LA meilleure solution, mais en explorant toutes les combinaisons une par une. Cette méthode par <strong>force brute</strong> est inapplicable si beaucoup d'objets sont en jeu.</li>
-<li>On sait facilement trouver une <em>bonne</em> solution, mais pas forcément la meilleure, par exemple en adoptant une stratégie gloutonne.</li>
-<li>On ne sait pas trouver facilement (en temps polynomial) la meilleure solution. Si vous y arrivez, <a class="" href="https://www.claymath.org/millennium-problems/p-vs-np-problem" target="_blank">1 Million de $</a> sont pour vous.</li>
-</ul>
-<h3 id="31-petite-aide-technique-avant-de-commencer">3.1 Petite aide technique avant de commencer<a class="headerlink" href="#31-petite-aide-technique-avant-de-commencer" title="Permanent link">⚓︎</a></h3>
-<p>Supposons qu'on dispose d'une liste  <code>mylist = [["A",3], ["B",2], ["C",8]]</code>. </p>
-<p>Comment classer les éléments de cette liste par leur deuxième élément ???</p>
-<p>Nous allons procéder en 2 temps :</p>
-<ul>
-<li>création d'une fonction qui renvoie le deuxième élément d'un objet <code>liste</code></li>
-<li>tri de la liste grâce à cette fonction</li>
-</ul>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">mylist</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">,</span><span class="mi">8</span><span class="p">]]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">le_deuxieme</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="p">:</span>
-    <span class="k">return</span> <span class="n">k</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-
-<span class="o">&gt;&gt;&gt;</span> <span class="n">simpsons</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Bart&#39;</span><span class="p">,</span> <span class="s1">&#39;Lisa&#39;</span><span class="p">,</span> <span class="s1">&#39;Maggie&#39;</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">le_deuxieme</span><span class="p">(</span><span class="n">simpsons</span><span class="p">)</span>
-  <span class="s1">&#39;Lisa&#39;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">mynewlist</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">mylist</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">le_deuxieme</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">mynewlist</span>
-<span class="p">[[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
-</code></pre></div>
-<h3 id="32-retour-sur-le-probleme-du-sac-a-dos">3.2 Retour sur le problème du sac à dos<a class="headerlink" href="#32-retour-sur-le-probleme-du-sac-a-dos" title="Permanent link">⚓︎</a></h3>
-<p>On considère un sac de 40 kg et les objets suivants :</p>
+<p>Pour résoudre le dilemne posé, une solution serait d'attribuer une "valeur" numérique à chaque objet. La valeur la plus forte est donnée pour l'objet de plus grande importance, et la valeur la plus faible à l'objet de moindre importance.</p>
+<blockquote>
+<p>Classez les objets ci dessous pour ordre de valeur, le 15ème ayant le plus d'importance vitale (selon vous !)</p>
+</blockquote>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">objet</th>
-<th style="text-align: center;">A</th>
-<th style="text-align: center;">B</th>
-<th style="text-align: center;">C</th>
-<th style="text-align: center;">D</th>
-<th style="text-align: center;">E</th>
-<th style="text-align: center;">F</th>
+<th style="text-align: center;">Nom de l'objet</th>
+<th style="text-align: center;">Valeur</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">masse</td>
+<td style="text-align: center;">Une boîte d’allumettes</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Des aliments concentrés</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">50 mètres de corde en nylon</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Un parachute en soie</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Un appareil de chauffage fonctionnant sur l’énergie solaire</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Deux pistolets calibre 45</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Une caisse de lait en poudre</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Deux réservoirs de 50 kg d’oxygène chacun</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Une carte céleste des constellations lunaires</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Un canot de sauvetage autogonflable</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Un compas magnétique</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">25 litres d’eau</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Une trousse médicale et des seringues hypodermiques</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Des signaux lumineux</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">Un émetteur-récepteur fonctionnant sur l’énergie solaire</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<details class="tips">
+<summary>Correction</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Nom de l'objet</th>
+<th style="text-align: center;">Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Une boîte d’allumettes</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">Des aliments concentrés</td>
+<td style="text-align: center;">12</td>
+</tr>
+<tr>
+<td style="text-align: center;">50 mètres de corde en nylon</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">Un parachute en soie</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr>
+<td style="text-align: center;">Un appareil de chauffage fonctionnant sur l’énergie solaire</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: center;">Deux pistolets calibre 45</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr>
+<td style="text-align: center;">Une caisse de lait en poudre</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td style="text-align: center;">Deux réservoirs de 50 kg d’oxygène chacun</td>
+<td style="text-align: center;">15</td>
+</tr>
+<tr>
+<td style="text-align: center;">Une carte céleste des constellations lunaires</td>
+<td style="text-align: center;">13</td>
+</tr>
+<tr>
+<td style="text-align: center;">Un canot de sauvetage autogonflable</td>
+<td style="text-align: center;">7</td>
+</tr>
+<tr>
+<td style="text-align: center;">Un compas magnétique</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">25 litres d’eau</td>
+<td style="text-align: center;">14</td>
+</tr>
+<tr>
+<td style="text-align: center;">Une trousse médicale et des seringues hypodermiques</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr>
+<td style="text-align: center;">Des signaux lumineux</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr>
+<td style="text-align: center;">Un émetteur-récepteur fonctionnant sur l’énergie solaire</td>
+<td style="text-align: center;">11</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="👀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f440.svg" title=":eyes:" /> Pour les curieux, le classement selon la nasa est <a href="https://www.lumni.fr/article/jouer-a-survivre-sur-la-lune">ici</a> </p>
+</details>
+<div class="admonition example">
+<p class="admonition-title">structure</p>
+<p><strong>Quelle(s) structure(s) algorithmique(s), vous paraissent pertinentes pour enregistrer vos valeurs ?</strong></p>
+<ul>
+<li>Codez l'une de vos solutions. <br /></li>
+<li>En vous aidant de la documentation Python, trier les par ordre décroissant de leur "valeur" (vous pouvez utiliser la fonction <code>sort</code> ou <code>sorted</code>de Python).</li>
+</ul>
+</div>
+<details class="tips">
+<summary>Correction</summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1">#*complétez ici votre sructure de données.*</span>
+
+<span class="c1"># J&#39;ai choisi ici une liste de dictionnaire.</span>
+<span class="c1">#Chaque dictionnaire représente un des objet NASA, pour chacun d&#39;entre eux, </span>
+<span class="c1">#on note dans &#39;objet&#39; le nom de l&#39;objet et dans &#39;valeur&#39; sa valeur attribuée.</span>
+<span class="n">liste</span><span class="o">=</span><span class="p">[{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;allumettes&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;01&#39;</span><span class="p">},</span> 
+        <span class="p">{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;aliments&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;12&#39;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;corde&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;10&#39;</span><span class="p">},</span> 
+        <span class="p">{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;parachute&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;08&#39;</span><span class="p">},</span> 
+        <span class="p">{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;chauffage&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;03&#39;</span><span class="p">},</span> 
+        <span class="p">{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;pistolets&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;05&#39;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;lait&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;04&#39;</span><span class="p">},</span> 
+        <span class="p">{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;oxygène&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;15&#39;</span><span class="p">},</span> 
+        <span class="p">{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;carte&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;13&#39;</span><span class="p">},</span> 
+        <span class="p">{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;canot&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;07&#39;</span><span class="p">},</span> 
+        <span class="p">{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;compas&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;02&#39;</span><span class="p">},</span> 
+        <span class="p">{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;eau&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;14&#39;</span><span class="p">},</span> 
+        <span class="p">{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;seringues&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;09&#39;</span><span class="p">},</span> 
+        <span class="p">{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;signaux&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;06&#39;</span><span class="p">},</span> 
+        <span class="p">{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;emetteur&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;11&#39;</span><span class="p">}]</span>
+
+<span class="c1">#*Trier votre structure par ordre décroissant de la valeur</span>
+<span class="n">liste_ordo</span> <span class="o">=</span><span class="nb">sorted</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">d</span><span class="p">:</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;valeur&quot;</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1">#Autre solution plus simple (!) avec un dictionnaire.</span>
+<span class="n">nasa</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;allumette&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;carte&#39;</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span> <span class="s1">&#39;emetteur&#39;</span><span class="p">:</span><span class="mi">11</span><span class="p">}</span>
+<span class="n">nasa_trie</span><span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">nasa</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<p>Revenons à notre résolution de problème, c'est à dire trouver les "meilleurs" objets pour la survie.</p>
+<p><u>Idée :</u> La solution optimum est de prendre les <img alt="🔟" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f51f.svg" title=":keycap_ten:" /> valeurs les plus fortes. </p>
+<div class="admonition example">
+<p class="admonition-title">tri</p>
+<p>Codez l'affichage de vos 10 valeurs les plus fortes.</p>
+</div>
+<details class="tips">
+<summary>correction</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">liste_sel</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">liste_sel</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">liste_ordo</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s1">&#39;objet&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">liste_sel</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>Mais si l'on rajoute une contrainte de poids ? Les astronautes ne peuvent emporter que 200 kg de matériel. </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Nom de l'objet</th>
+<th style="text-align: center;">Valeur</th>
+<th style="text-align: center;">Poids en kg</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Une boîte d’allumettes</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0.1</td>
+</tr>
+<tr>
+<td style="text-align: center;">Des aliments concentrés</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">50 mètres de corde en nylon</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr>
+<td style="text-align: center;">Un parachute en soie</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0.5</td>
+</tr>
+<tr>
+<td style="text-align: center;">Un appareil de chauffage fonctionnant sur l’énergie solaire</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">25</td>
+</tr>
+<tr>
+<td style="text-align: center;">Deux pistolets calibre 45</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0.5</td>
+</tr>
+<tr>
+<td style="text-align: center;">Une caisse de lait en poudre</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr>
+<td style="text-align: center;">Deux réservoirs de 50 kg d’oxygène chacun</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">100</td>
+</tr>
+<tr>
+<td style="text-align: center;">Une carte céleste des constellations lunaires</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">0.1</td>
+</tr>
+<tr>
+<td style="text-align: center;">Un canot de sauvetage autogonflable</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">100</td>
+</tr>
+<tr>
+<td style="text-align: center;">Un compas magnétique</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0.5</td>
+</tr>
+<tr>
+<td style="text-align: center;">25 litres d’eau</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">25</td>
+</tr>
+<tr>
+<td style="text-align: center;">Une trousse médicale et des seringues hypodermiques</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">0.5</td>
+</tr>
+<tr>
+<td style="text-align: center;">Des signaux lumineux</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr>
+<td style="text-align: center;">Un émetteur-récepteur fonctionnant sur l’énergie solaire</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">5</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Quelle serait alors la combinaison optimum pour maximiser ses chances de survie ?</strong></p>
+<p>Plus difficile, non ? <img alt="💀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f480.svg" title=":skull:" /></p>
+<h2 id="formulation-mathematique-du-probleme-du-sac-a-dos">Formulation mathématique du problème du sac à dos<a class="headerlink" href="#formulation-mathematique-du-probleme-du-sac-a-dos" title="Permanent link">⚓︎</a></h2>
+<p>Toute formulation commence par un énoncé des données. Dans notre cas, nous avons un sac à dos de poids maximal <span class="arithmatex">\(W\)</span> et <span class="arithmatex">\(n\)</span> objets. Pour chaque objet <span class="arithmatex">\(i\)</span>, nous avons un poids <span class="arithmatex">\(w_{i}\)</span> et une valeur <span class="arithmatex">\(w_{i}\)</span>.</p>
+<p>Pour quatre objets (<span class="arithmatex">\(n=4\)</span>) et un sac à dos d'un poids maximal de 30 kg (<span class="arithmatex">\(W=30\)</span>), nous avons par exemple les données suivantes :</p></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Objet</th>
+<th style="text-align: center;">1</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(p_{i}\)</span></td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(w_{i}\)</span></td>
 <td style="text-align: center;">13</td>
 <td style="text-align: center;">12</td>
 <td style="text-align: center;">8</td>
 <td style="text-align: center;">10</td>
-<td style="text-align: center;">14</td>
-<td style="text-align: center;">18</td>
-</tr>
-<tr>
-<td style="text-align: center;">valeur</td>
-<td style="text-align: center;">700</td>
-<td style="text-align: center;">500</td>
-<td style="text-align: center;">200</td>
-<td style="text-align: center;">300</td>
-<td style="text-align: center;">600</td>
-<td style="text-align: center;">800</td>
 </tr>
 </tbody>
 </table>
-<p>Quels objets faut-il prendre ?</p>
-<p><strong>Stratégie gloutonne :</strong></p>
-<ul>
-<li>on va classer les objets dans l'ordre décroissant de leur taux de valeur (taux de valeur = valeur / masse). Ainsi le premier élément de la liste sera celui ayant le meilleur rapport valeur/masse.</li>
-<li>on prend le premier élément de la liste, puis le deuxième, etc., tant que le sac peut encore les contenir.</li>
-</ul>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">objets</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">700</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">500</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">300</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">600</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;F&quot;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">800</span><span class="p">]]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">poids_max</span> <span class="o">=</span> <span class="mi">40</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">def</span> <span class="nf">ratio</span><span class="p">(</span><span class="n">objet</span><span class="p">):</span>
-        <span class="c1"># renvoie le rapport prix/poids d&#39;un objet</span>
-        <span class="k">return</span> <span class="n">objet</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">/</span> <span class="n">objet</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-
-<span class="o">&gt;&gt;&gt;</span> <span class="n">objets_tries</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">objets</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">ratio</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">objets_tries</span>
-     <span class="p">[[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">700</span><span class="p">],</span>
-     <span class="p">[</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">800</span><span class="p">],</span>
-     <span class="p">[</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">600</span><span class="p">],</span>
-     <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">500</span><span class="p">],</span>
-     <span class="p">[</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">300</span><span class="p">],</span>
-     <span class="p">[</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">200</span><span class="p">]]</span>
-</code></pre></div>
-<p><strong>Calcul de la solution, par méthode gloutonne</strong></p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">objets</span>  <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">700</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">500</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">300</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">600</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;F&quot;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">800</span><span class="p">]]</span>
-
-<span class="k">def</span> <span class="nf">ratio</span><span class="p">(</span><span class="n">objet</span><span class="p">):</span>
-    <span class="c1"># renvoie le rapport prix/poids d&#39;un objet</span>
-    <span class="k">return</span> <span class="n">objet</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">/</span> <span class="n">objet</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-
-<span class="n">objets_tries</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">objets</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">ratio</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-
-<span class="n">poids_max</span> <span class="o">=</span> <span class="mi">40</span>
-<span class="n">poids_sac</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="n">butin</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="k">for</span> <span class="n">objet</span> <span class="ow">in</span> <span class="n">objets_tries</span><span class="p">:</span>
-    <span class="n">poids_objet</span> <span class="o">=</span> <span class="n">objet</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-    <span class="k">if</span> <span class="n">poids_objet</span> <span class="o">+</span> <span class="n">poids_sac</span> <span class="o">&lt;</span> <span class="n">poids_max</span> <span class="p">:</span>
-        <span class="n">butin</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">objet</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-        <span class="n">poids_sac</span> <span class="o">+=</span> <span class="n">poids_objet</span>
-</code></pre></div></td></tr></table></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">butin</span>
-    <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">]</span>
-</code></pre></div>
-<p>Il faut donc choisir la combinaison A, F, C. Elle est bien valide (poids 39) et rapporte 1700.</p>
-<p><strong>Question</strong> (toujours la même) :  </p>
-<p>L'algorithme glouton nous a-t-il donné la solution <strong>optimale</strong> ?<br />
-Nous allons pour cela avoir recours à la force brute pour tester toutes les combinaisons possibles.</p>
-<h3 id="33-force-brute">3.3 Force brute<a class="headerlink" href="#33-force-brute" title="Permanent link">⚓︎</a></h3>
-<ul>
-<li>Il faut créer une liste de mots binaires qui vont correspondre à chaque combinaison. Par exemple, '101001' signifiera qu'on prend les objets A, C et F.
-Cette liste est de taille <span class="arithmatex">\(2^n\)</span>, où <span class="arithmatex">\(n\)</span> est le nombre d'objets. C'est cela qui pose problème : avec 80 objets, on obtient une liste à traiter qui contient plus de <span class="arithmatex">\(10^{24}\)</span> objets, soit de l'ordre de grandeur du nombre d'étoiles dans l'Univers observable, ou de gouttes d'eau dans la mer, ou du nombre de grains de sables au Sahara... (voir <a href="https://fr.wikipedia.org/wiki/Ordres_de_grandeur_de_nombres">https://fr.wikipedia.org/wiki/Ordres_de_grandeur_de_nombres</a> )</li>
-<li>Une fois cette liste établie, il suffit de parcourir chaque élément et de calculer le poids total et la valeur totale correspondante. Si le poids total dépasse le poids autorisé, on met la valeur à 0 car cette combinaison ne nous intéresse pas.</li>
-<li>Il ne reste qu'à chercher la valeur maximale et regarder la combinaison à laquelle elle correspond.</li>
-</ul>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">objets</span>  <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">700</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">500</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">300</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">600</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;F&quot;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">800</span><span class="p">]]</span>
-<span class="n">poids_max</span> <span class="o">=</span> <span class="mi">40</span>
-</code></pre></div>
-<h4 id="331-la-liste-de-tous-les-mots-possibles">3.3.1 La liste de tous les mots possibles<a class="headerlink" href="#331-la-liste-de-tous-les-mots-possibles" title="Permanent link">⚓︎</a></h4>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">combinaisons</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="o">**</span><span class="nb">len</span><span class="p">(</span><span class="n">objets</span><span class="p">)):</span>
-    <span class="n">k</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">i</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span><span class="o">*</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">objets</span><span class="p">)</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">k</span><span class="p">))</span> <span class="o">+</span> <span class="n">k</span>
-    <span class="n">combinaisons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-</code></pre></div>
-<p>La liste <code>combinaisons</code> contient bien les 64 mots possibles (<span class="arithmatex">\(2^6=64\)</span>) :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">combinaisons</span>
-    <span class="p">[</span><span class="s1">&#39;000000&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;000001&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;000010&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;000011&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;000100&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;000101&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;000110&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;000111&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;001000&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;001001&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;001010&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;001011&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;001100&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;001101&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;001110&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;001111&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;010000&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;010001&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;010010&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;010011&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;010100&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;010101&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;010110&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;010111&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;011000&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;011001&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;011010&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;011011&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;011100&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;011101&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;011110&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;011111&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;100000&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;100001&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;100010&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;100011&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;100100&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;100101&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;100110&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;100111&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;101000&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;101001&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;101010&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;101011&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;101100&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;101101&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;101110&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;101111&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;110000&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;110001&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;110010&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;110011&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;110100&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;110101&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;110110&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;110111&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;111000&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;111001&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;111010&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;111011&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;111100&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;111101&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;111110&#39;</span><span class="p">,</span>
-     <span class="s1">&#39;111111&#39;</span><span class="p">]</span>
-</code></pre></div>
+<p>Ensuite, il nous faut définir les variables qui représentent en quelque sorte les actions ou les décisions qui amèneront à trouver une solution. On définit la variable <span class="arithmatex">\(x_{i}\)</span> associée à un objet <span class="arithmatex">\(i\)</span> de la façon suivante : <span class="arithmatex">\(x_{i}=1\)</span> si l’objet <span class="arithmatex">\(i\)</span> est mis dans le sac, et <span class="arithmatex">\(x_{i}=0\)</span> si l’objet <span class="arithmatex">\(i\)</span> n’est pas mis dans le sac.</p>
+<p>Dans notre exemple, une solution réalisable est de mettre tous les objets dans le sac à dos sauf le premier, nous avons donc : 
+<span class="arithmatex">\(x_{1}=0\)</span>, <span class="arithmatex">\(x_{2}=1\)</span>, <span class="arithmatex">\(x_{3}=1\)</span>, et <span class="arithmatex">\(x_{4}=1\)</span>.</p></p>
+<p>Puis il faut définir les contraintes du problème. Ici, il n'y en a qu’une : la somme des poids de tous les objets dans le sac doit être inférieure ou égale au poids maximal du sac à dos.</p>
+<p>Cela s’écrit : <span class="arithmatex">\(x_{1}*w_{1}+p_{2}*w_{2}+p_{3}*w_{3}+p_{4}*w_{4} &lt;= W\)</span></p>
+<p>ou plus généralement pour <span class="arithmatex">\(n\)</span> objets : <span class="arithmatex">\(\sum_{i=1}^{n} p_{i}*w_{i} \le W\)</span><br /></p>
+<p>Pour vérifier que la contrainte est respectée dans notre exemple, il suffit de calculer cette somme : <span class="arithmatex">\(0 × 13 + 1 × 12 + 1 × 8 + 1 × 10 = 30\)</span>, ce qui est bien inférieur ou égal à 30, donc la contrainte est respectée. Nous parlons alors de solution réalisable. <br />
+<img alt="‼" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/203c.svg" title=":bangbang:" /> Mais ce n’est pas nécessairement la meilleure solution.<br />
+Enfin, il faut exprimer la fonction qui traduit notre objectif : <strong>maximiser la valeur totale des objets dans le sac</strong>.<br />
+Pour <span class="arithmatex">\(n\)</span> objets, cela s’écrit : <span class="arithmatex">\(Max \sum_{i=1}^{n} p_{i}*w_{i}\)</span> <br /></p>
+<p>Dans notre exemple, la valeur totale contenue dans le sac est égale à <span class="arithmatex">\(10\)</span>. Cette solution n’est pas la meilleure, car il existe une autre solution de valeur plus grande que <span class="arithmatex">\(10\)</span> : il faut prendre seulement les objets <span class="arithmatex">\(1\)</span> et <span class="arithmatex">\(2\)</span> qui donneront une valeur totale de <span class="arithmatex">\(11\)</span>. Il n’existe pas de meilleure solution que cette dernière, nous dirons alors que cette solution est <strong>optimale</strong>.</p>
+<h2 id="resolution-algorithmique-force-brut">Résolution algorithmique - Force brut<a class="headerlink" href="#resolution-algorithmique-force-brut" title="Permanent link">⚓︎</a></h2>
+<p>Dans un problème d'optimisation chaque solution possède une valeur, et on cherche à déterminer parmi toutes les solutions celle dont la valeur est optimale.</p>
+<p>La technique la plus basique pour résoudre ce type de problème consiste à énumérer de façon exhaustive toutes les solutions possibles, puis à choisir la meilleure. Cette approche est nommée par <strong>force brute</strong>.</p>
+<p>Vous trouverez ci dessous un extrait du code de résolution du problème de la NASA par force brut.</p>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -4589,38 +4516,392 @@ Cette liste est de taille <span class="arithmatex">\(2^n\)</span>, où <span cla
 <span class="normal">19</span>
 <span class="normal">20</span>
 <span class="normal">21</span>
-<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">valeurs</span> <span class="o">=</span> <span class="p">[]</span> 
-<span class="n">poids</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">comb</span> <span class="ow">in</span> <span class="n">combinaisons</span> <span class="p">:</span>
-    <span class="n">poids_comb</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">valeur</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">objets</span><span class="p">)):</span> 
-        <span class="k">if</span> <span class="n">comb</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">:</span>
-            <span class="n">poids_comb</span> <span class="o">+=</span> <span class="n">objets</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
-            <span class="n">valeur</span> <span class="o">+=</span> <span class="n">objets</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
-    <span class="k">if</span> <span class="n">poids_comb</span> <span class="o">&gt;</span> <span class="n">poids_max</span> <span class="p">:</span>
-        <span class="n">valeur</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">valeurs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">valeur</span><span class="p">)</span>
-    <span class="n">poids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">poids_comb</span><span class="p">)</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">meilleur_valeur</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">meilleur_comb</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+<span class="n">meilleur_poids</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">poids_max</span> <span class="o">=</span> <span class="mi">200</span>
 
-<span class="n">valeur_max</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">valeurs</span><span class="p">)</span>
-<span class="n">meilleure_comb</span> <span class="o">=</span> <span class="n">combinaisons</span><span class="p">[</span><span class="n">valeurs</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">valeur_max</span><span class="p">)]</span>
-<span class="n">poids_comb</span> <span class="o">=</span> <span class="n">poids</span><span class="p">[</span><span class="n">valeurs</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">valeur_max</span><span class="p">)]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dicoNasa</span><span class="p">)):</span>   
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">(</span><span class="n">dicoNasa</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">:</span>
 
-<span class="n">mot_sol</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">meilleure_comb</span><span class="p">))</span> <span class="p">:</span>
-    <span class="k">if</span> <span class="n">meilleure_comb</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span> <span class="p">:</span>
-        <span class="n">mot_sol</span> <span class="o">+=</span> <span class="n">objets</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">combinaison</span> <span class="o">=</span> <span class="n">listeObjet</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+        <span class="n">valeurs</span> <span class="o">=</span> <span class="n">sommeValeur</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+        <span class="n">poids</span> <span class="o">=</span> <span class="n">sommePoids</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+        <span class="c1">#print(combinaison,&#39; &#39;,valeurs,&#39; &#39;,poids,&#39;\n&#39;)</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;&#39;On ne garde que les combinaisons qui respectent les contraintes </span>
+<span class="sd">        dans notre cas : pas plus de 10 objets pour un poids inférieur à 200 </span>
+<span class="sd">        et en maximisant la valeur</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">valeurs</span><span class="o">&gt;</span><span class="n">meilleur_valeur</span> <span class="ow">and</span> <span class="n">poids</span><span class="o">&lt;=</span><span class="n">poids_max</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">:</span>
+            <span class="c1"># solution retenue si surpasse la meilleure</span>
+            <span class="n">meilleur_valeur</span> <span class="o">=</span> <span class="n">valeurs</span>     <span class="c1"># maj meilleure solution</span>
+            <span class="n">meilleur_comb</span> <span class="o">=</span> <span class="n">combinaison</span>   <span class="c1"># maj meilleure solution</span>
+            <span class="n">meilleur_poids</span> <span class="o">=</span> <span class="n">poids</span>        <span class="c1"># maj meilleure solution</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La meilleure sélection est </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">meilleur_comb</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> valeur = &quot;</span><span class="p">,</span><span class="n">meilleur_valeur</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> poids = &quot;</span><span class="p">,</span><span class="n">meilleur_poids</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">mot_sol</span>
-  <span class="s1">&#39;ABE&#39;</span>
-</code></pre></div></p>
-<p>re-Damned ! La force brute a mis en évidence une combinaison <strong>meilleure que celle donnée par l'algorithme glouton</strong>. </p>
-<p>En effet la combinaison A-B-E est bien valide (poids total 39) et rapporte 1800, donc 100 de mieux que la solution gloutonne.</p>
-<p>Par contre, la force brute est inenvisageable pour si le nombre d'objets est grand, alors que la stratégie gloutonne reste très rapide.</p>
-<h2 id="conclusion_1">Conclusion<a class="headerlink" href="#conclusion_1" title="Permanent link">⚓︎</a></h2>
-<p>La stratégie gloutonne donne très rapidement des solutions <strong>satisfaisantes</strong> mais <strong>pas forcément optimales</strong>. Pour beaucoup de problèmes (dont le problème du sac à dos), la recherche d'une solution optimale sans passer par la force brute semble impossible (mais n'est pas démontrée).<br />
-Dans ce cas-là, la stratégie gloutonne peut être employée pour avoir vite et bien une solution convenable, même si peut-être non optimale. On dit que la stratégie gloutonne est une <strong>heuristique</strong> de résolution. On sait que ce n'est pas forcément optimal, mais faute de mieux, on s'en contente...</p>
+Le principe de la résolution par force brut est de générer toutes les combinaisons possibles. Puis de sélectionner uniquement celle qui maximise la valeur, tout en respectant les contraintes données. </p>
+<p>Pour résoudre cette problématique par force brute, la bibliothèque <a href="https://docs.python.org/fr/3/library/itertools.html">itertools</a> pour générer toutes les combinaisons possibles.</p>
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>allumettes
+allumettes\aliments
+allumettes\corde
+...
+allumettes\aliments\corde
+allumettes\aliments\parachute
+...
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Question</p>
+<p>Combien y a t'il de combinaisons possible ?</p>
+</div>
+<details class="tips">
+<summary>Réponse</summary>
+<p>Au rang <span class="arithmatex">\(1\)</span> : on a <span class="arithmatex">\(1\)</span> éléments dans la liste, il y a <span class="arithmatex">\(15\)</span> combinaisons possibles.<br />
+Au rang <span class="arithmatex">\(2\)</span> : on a <span class="arithmatex">\(2\)</span> éléments dans la liste, il y a <span class="arithmatex">\(105\)</span> combinaisons possibles.(On ne compte pas les permutations : carte/eau est la même combinaison que eau/carte)<br /></p>
+<p>Au rang <span class="arithmatex">\(p\)</span> : cela fait appel à des notions mathématiques, non vu par vous en première.
+La formule est <span class="arithmatex">\(\mathrm{C}_{n}^{p} = \frac{n!}{(n-p)!*p!}\)</span> <br /></p>
+<p>où <span class="arithmatex">\(p\)</span> est le nombre d'objet dans la combinaison et <span class="arithmatex">\(n\)</span> le nombre total d'objet.<br />
+Avec cette formule, on obtient bien 105.<br /></p>
+<p>Ici, on cherche la somme de toutes ces combinaisons, et la formule est ici <span class="arithmatex">\(2^{n}\)</span>.Donc <span class="arithmatex">\(2^{15} = 32 768\)</span></p>
+</details>
+<div class="admonition example">
+<p class="admonition-title">Question</p>
+<p>Que pouvez vous en déduire sur la complexité de l'algorithme par force brut ?</p>
+</div>
+<details class="tips">
+<summary>Réponse</summary>
+<p>La complexite de l'algorithme brut du problème du sac à dos est de l'ordre de <span class="arithmatex">\(2^{n}\)</span></p>
+<table>
+<thead>
+<tr>
+<th>Temps</th>
+<th>Type de complexité</th>
+<th>Temps pour <span class="arithmatex">\(n = 5\)</span></th>
+<th>Temps pour <span class="arithmatex">\(n = 10\)</span></th>
+<th>Temps pour <span class="arithmatex">\(n = 20\)</span></th>
+<th>Temps pour <span class="arithmatex">\(n = 50\)</span></th>
+<th>Temps pour <span class="arithmatex">\(n = 250\)</span></th>
+<th>Temps pour <span class="arithmatex">\(n = 1 000\)</span></th>
+<th>Temps pour <span class="arithmatex">\(n = 10 000\)</span></th>
+<th>Temps pour <span class="arithmatex">\(n = 1 000 000\)</span></th>
+<th>Problème exemple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(\displaystyle O\left(2^{\rm {{poly}(n)}}\right)\)</span></td>
+<td>complexité exponentielle</td>
+<td>320 ns</td>
+<td>10 µs</td>
+<td>10 ms</td>
+<td>130 jours</td>
+<td><span class="arithmatex">\(\displaystyle 10^{59}\)</span> ans</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>problème du sac à dos par force brute</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://fr.wikipedia.org/wiki/Analyse_de_la_complexit%C3%A9_des_algorithmes">Source wikipedia</a></p>
+</details>
+<details class="info">
+<summary>Code par force brut</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">itertools</span>
+
+
+<span class="k">def</span> <span class="nf">openFile</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Crée une liste de dictionnaires, un par ligne.</span>
+<span class="sd">    La 1ère ligne est considérée comme la ligne des noms de champs</span>
+<span class="sd">    :param namefile: nom du fichier contenant les données des joueurs 1 ligne = 1 joueur</span>
+<span class="sd">    :type namefile: str</span>
+<span class="sd">    :return: retourne la liste des caractéristiques des joueurs</span>
+<span class="sd">    :rtype: dictionnaire</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">delimiter</span><span class="p">:</span>
+        <span class="n">delimiter</span> <span class="o">=</span> <span class="s1">&#39;;&#39;</span>
+    <span class="n">lecteur</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">),</span> <span class="n">delimiter</span><span class="o">=</span><span class="n">delimiter</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="nb">dict</span><span class="p">(</span><span class="n">ligne</span><span class="p">)</span> <span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="n">lecteur</span><span class="p">]</span>
+
+
+<span class="k">def</span> <span class="nf">tri</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">attribut</span><span class="p">,</span> <span class="n">decroit</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    tri un dictionnaire, selon un critère passé en paramètre</span>
+<span class="sd">    @param : table : dictionnaire à trier</span>
+<span class="sd">            attribut : critère de tri</span>
+<span class="sd">            decroit : sens ascendant ou descendant</span>
+<span class="sd">    @return : retourne le dictionnaire trié</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">critère</span><span class="p">(</span><span class="n">ligne</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">ligne</span><span class="p">[</span><span class="n">attribut</span><span class="p">]</span>
+    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">critère</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="n">decroit</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">sommeValeur</span><span class="p">(</span><span class="n">dico</span><span class="p">):</span>
+    <span class="n">force</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dico</span><span class="p">)):</span>
+        <span class="n">force</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">dico</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;valeur&quot;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">force</span>
+
+<span class="k">def</span> <span class="nf">listeObjet</span><span class="p">(</span><span class="n">dico</span><span class="p">):</span>
+    <span class="n">liste</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dico</span><span class="p">)):</span>
+        <span class="n">liste</span> <span class="o">+=</span> <span class="n">dico</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;objet&quot;</span><span class="p">]</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">sommePoids</span><span class="p">(</span><span class="n">dico</span><span class="p">):</span>
+    <span class="n">cout</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dico</span><span class="p">)):</span>
+        <span class="n">cout</span> <span class="o">+=</span> <span class="nb">float</span><span class="p">(</span><span class="n">dico</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;poids&quot;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">cout</span>
+
+
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    PROGRAMME PRINCIPAL</span>
+
+<span class="sd">    note : </span>
+<span class="sd">        Il existe de nombreuses manière de coder la force brut.</span>
+<span class="sd">        Il s&#39;agit ci dessous de l&#39;une de ces versions. </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+<span class="n">dicoNasa</span><span class="o">=</span><span class="n">openFile</span><span class="p">(</span><span class="s2">&quot;nasa.csv&quot;</span><span class="p">,</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
+
+<span class="n">meilleur_valeur</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">meilleur_comb</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+<span class="n">meilleur_poids</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">poids_max</span> <span class="o">=</span> <span class="mi">200</span>
+
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dicoNasa</span><span class="p">)):</span>   
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">(</span><span class="n">dicoNasa</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">:</span>
+
+        <span class="n">combinaison</span> <span class="o">=</span> <span class="n">listeObjet</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+        <span class="n">valeurs</span> <span class="o">=</span> <span class="n">sommeValeur</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+        <span class="n">poids</span> <span class="o">=</span> <span class="n">sommePoids</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">combinaison</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="n">valeurs</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="n">poids</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;&#39;On ne garde que les combinaisons qui respectent les contraintes </span>
+<span class="sd">        dans notre cas : pas plus de 10 objets pour un poids inférieur à 200 </span>
+<span class="sd">        et en maximisant la valeur</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">valeurs</span><span class="o">&gt;</span><span class="n">meilleur_valeur</span> <span class="ow">and</span> <span class="n">poids</span><span class="o">&lt;=</span><span class="n">poids_max</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">:</span>
+            <span class="c1"># solution retenue si surpasse la meilleure</span>
+            <span class="n">meilleur_valeur</span> <span class="o">=</span> <span class="n">valeurs</span>     <span class="c1"># maj meilleure solution</span>
+            <span class="n">meilleur_comb</span> <span class="o">=</span> <span class="n">combinaison</span>   <span class="c1"># maj meilleure solution</span>
+            <span class="n">meilleur_poids</span> <span class="o">=</span> <span class="n">poids</span>        <span class="c1"># maj meilleure solution</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La meilleure sélection est </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">meilleur_comb</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> valeur = &quot;</span><span class="p">,</span><span class="n">meilleur_valeur</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> poids = &quot;</span><span class="p">,</span><span class="n">meilleur_poids</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h2 id="resolution-algorithmique-algorithme-glouton">Résolution algorithmique - Algorithme glouton<a class="headerlink" href="#resolution-algorithmique-algorithme-glouton" title="Permanent link">⚓︎</a></h2>
+<h3 id="cours-principes-et-definitions">cours : principes et définitions<a class="headerlink" href="#cours-principes-et-definitions" title="Permanent link">⚓︎</a></h3>
+<p>Les algorithmes gloutons sont des algorithmes assez simples dans leur logique. Ainsi que leur nom le suggère, ils sont conçus pour prendre le maximum de ce qui est disponible à un moment donné.<br /></p>
+<p>L’algorithme glouton choisit la <strong>solution optimale</strong> qui se présente à lui à chaque instant, sans se préoccuper, ni du passé ni de l’avenir. Il répète cette même stratégie à chaque étape jusqu’à avoir entièrement résolu le problème. <br /></p>
+<div class="admonition note">
+<p class="admonition-title">Définition</p>
+<p>Un algorithme glouton est un algorithme qui effectue à chaque instant, le meilleur choix possible sur le moment, sans retour en arrière ni anticipation des étapes suivantes, dans l’objectif d’atteindre au final un résultat optimal.<br /></p>
+</div>
+<p>Les algorithmes gloutons sont parfois appelés algorithmes gourmands ou encore algorithmes voraces.<br />
+La <strong>répétition</strong> de cette stratégie très simple, permet de résoudre rapidement et de manière souvent satisfaisante des problèmes d’optimisation sans avoir à tester systématiquement toutes les possibilités.</p>
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Pseudo Algorithme :
+DEBUT
+    calculer la valeur (pi / wi) pour chaque objet i,
+    trier tous les objets par ordre décroissant de cette valeur,
+    sélectionner les objets un à un dans l’ordre du tri et ajouter l’objet sélectionné dans le sac si le poids maximal reste respecté.
+FIN
+</code></pre></div>
+<details class="info">
+<summary>Code par la méthode gloutonne.</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="k">def</span> <span class="nf">depuis_csv</span><span class="p">(</span><span class="n">nom_fichier_csv</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Crée une liste de dictionnaires, un par ligne.</span>
+<span class="sd">    La 1ère ligne est considérée comme la ligne des noms de champs</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">lecteur</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">nom_fichier_csv</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">),</span><span class="n">delimiter</span> <span class="o">=</span> <span class="s2">&quot;;&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="nb">dict</span><span class="p">(</span><span class="n">ligne</span><span class="p">)</span> <span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="n">lecteur</span><span class="p">]</span>
+
+<span class="n">liste_nasa</span> <span class="o">=</span> <span class="n">depuis_csv</span><span class="p">(</span><span class="s2">&quot;nasa.csv&quot;</span><span class="p">)</span>
+<span class="n">poids_max</span> <span class="o">=</span> <span class="mi">200</span> 
+
+<span class="c1"># initialisations</span>
+<span class="n">cumul_poids</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">cumul_valeur</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">choix</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># on trie la liste mercato par force décroissante  ATTENTION DIFFICULTE ELEVE</span>
+<span class="c1"># CECI EST L&#39;ETAPE CLE POUR QUALIFIER L&#39;ALGORITHME DE GLOUTON</span>
+<span class="n">liste_nasa_ordo</span> <span class="o">=</span><span class="nb">sorted</span><span class="p">(</span><span class="n">liste_nasa</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">d</span><span class="p">:</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;valeur&quot;</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">liste_nasa_ordo</span><span class="p">)</span>
+<span class="c1"># on balaye sequentiellement liste_nasa_ordo</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">liste_nasa_ordo</span><span class="p">)):</span>   
+    <span class="c1"># on accumule tant que cela ne va pas dépasser le budget Poids</span>
+    <span class="c1"># et que l&#39;on ne dépasse pas le nombre d&#39;objet, fixé à 10 par nos contraintes</span>
+    <span class="k">if</span> <span class="n">cumul_poids</span> <span class="o">+</span> <span class="nb">float</span><span class="p">(</span><span class="n">liste_nasa_ordo</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;poids&quot;</span><span class="p">])</span> <span class="o">&lt;=</span> <span class="n">poids_max</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">choix</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">:</span> 
+        <span class="n">cumul_valeur</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">liste_nasa_ordo</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;valeur&quot;</span><span class="p">])</span>  <span class="c1">#calcul valeur gagnée</span>
+        <span class="n">choix</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">liste_nasa_ordo</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>             <span class="c1">#complément liste des recrues</span>
+        <span class="n">cumul_poids</span> <span class="o">+=</span> <span class="nb">float</span><span class="p">(</span><span class="n">liste_nasa_ordo</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;poids&quot;</span><span class="p">])</span>  <span class="c1">#calcul poids &quot;dépensées&quot;</span>
+
+<span class="c1">#Affichage du résultat</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;somme des valeurs : &quot;</span><span class="p">,</span><span class="n">cumul_valeur</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;nombre d&#39;objet : &quot;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">choix</span><span class="p">))</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;poids total : &quot;</span><span class="p">,</span><span class="n">cumul_poids</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">liste des objets</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">choix</span><span class="p">)):</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">choix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;objet&quot;</span><span class="p">],</span> <span class="n">choix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;valeur&quot;</span><span class="p">],</span><span class="s2">&quot;poids&quot;</span><span class="p">,</span> <span class="n">choix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;poids&quot;</span><span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<div class="admonition example">
+<p class="admonition-title">Question</p>
+<p>L'exécution du programme est il plus rapide ?</p>
+</div>
+<details class="tips">
+<summary>Réponse</summary>
+<p>La méthode par glouton est beaucoup plus rapide.</p>
+</details>
+<h2 id="complexite">Complexité<a class="headerlink" href="#complexite" title="Permanent link">⚓︎</a></h2>
+<p><strong>Algorithme force brute</strong> : On trouve dans le programme une  boucle dont la limite dépend de <span class="arithmatex">\(n\)</span>, on y imbrique une itération.<br />
+- pour le pointeur <span class="arithmatex">\(i\)</span> la gamme (range) est <span class="arithmatex">\(n^{2}\)</span>, parcours de toute la liste<br />
+- pour le pointeur <span class="arithmatex">\(p\)</span> la gamme est <span class="arithmatex">\(n\)</span>, nombre de combinaisons possibles<br />
+On peut conclure que le complexité de l’algorithme est <span class="arithmatex">\(O(n^{3})\)</span> <br />
+La complexité en temps croît donc rapidement <strong>très</strong> supérieur pour l’algorithme force brute<br /></p>
+<p><strong>Algorithme glouton</strong> : seules les lignes 24 à 30 contiennent des opérations dont le nombre dépend de <span class="arithmatex">\(n\)</span> (longueur de la liste ) si on néglige l’import préalable du fichier .csv<br />
+On distingue : <br />
+- le tri préalable de la liste selon le critère de valeur dont la complexité est <span class="arithmatex">\(O(nlog(n))\)</span><br />
+- puis le parcours de cette liste triée dont la complexité est <span class="arithmatex">\(O(n)\)</span> au pire cas<br /></p>
+<p>On peut conclure que le complexité de l’algorithme entier est <span class="arithmatex">\(O(n(log(n)+1)\)</span> qui tend vers une complexité standard <span class="arithmatex">\(O(nlog(n))\)</span> si <span class="arithmatex">\(n\)</span> est grand</p>
+<p><img alt="Classe de complexite" class="center" src="../data/classes-de-complexit%C3%A9.png" width="60%" /></p>
+<p style="padding:5px;color:red;text-align:center;font-weight: bold;font-size:20px;">!!! Un algorithme glouton ne fournit pas toujours le meilleur résultat possible !!!</p>
+
+<h3 id="cas-dusage-des-algorithmes-gloutons">Cas d'usage des algorithmes gloutons<a class="headerlink" href="#cas-dusage-des-algorithmes-gloutons" title="Permanent link">⚓︎</a></h3>
+<p>Les algorithmes gloutons sont souvent employés pour résoudre des <strong>problèmes d’optimisation</strong>. <br /></p>
+<ul>
+<li>déterminer le plus court chemin dans un réseau<br /></li>
+<li>optimiser la mise en cache de données<br /></li>
+<li>compresser des données<br /></li>
+<li>organiser au mieux le parcours d’un voyageur visitant un ensemble de villes<br /></li>
+<li>organiser au mieux des plannings d’activité ou d’occupations de salles.<br /></li>
+</ul>
 
 
   

@@ -1,9 +1,8 @@
 
 !!! abstract ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: [IHM sur le Web]<br />
+    :arrow_forward: [Algorithme Glouton](./T5_Algorithmique/5.6_Algorithmes_gloutons/)<br />
 
     A venir :<br />
-    :hourglass: [Algorithme Glouton](./T5_Algorithmique/5.6_Algorithmes_gloutons/)
     :hourglass: [Algorithme Knn](./T5_Algorithmique/5.7_Algorithme_KNN/)
     
 !!! info "Entraînement :running: "
@@ -32,6 +31,7 @@
     - [Thème 4 : Réseau](./T4_Architecture_materielle/4.2_Architecture_reseau/cours.md)
     - [Projet CSV](./T8_Projets/2_ProjetCSV/cours.md)
     - [Thème 4 : Protocole de communication](./T4_Architecture_materielle/4.3_Protocoles_de_communication/cours.md)
+    - [IHM sur le Web](./T7_IHM_Web/7.3_Get_Post_Formulaires/cours/)
 
 
 <!--
