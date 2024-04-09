@@ -1,9 +1,8 @@
 
 !!! abstract ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: [Algorithme Glouton](./T5_Algorithmique/5.6_Algorithmes_gloutons/)<br />
-
+    :arrow_forward: [Algorithme Glouton](./T5_Algorithmique/5.6_Algorithmes_gloutons/cours.md)<br />
     A venir :<br />
-    :hourglass: [Algorithme Knn](./T5_Algorithmique/5.7_Algorithme_KNN/)
+    :hourglass: [Algorithme Knn](./T5_Algorithmique/5.7_Algorithme_KNN/cours.md)
     
 !!! info "Entraînement :running: "
     Vous trouverez ci dessous quelques sites pour vous entrainez en Python<br />
