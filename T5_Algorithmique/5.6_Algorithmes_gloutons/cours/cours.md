@@ -222,12 +222,12 @@ Puis il faut définir les contraintes du problème. Ici, il n'y en a qu’une : 
 
 Cela s’écrit : $x_{1}*w_{1}+p_{2}*w_{2}+p_{3}*w_{3}+p_{4}*w_{4} <= W$
 
-ou plus généralement pour $n$ objets : $\sum_{i=1}^{n} p_{i}*w_{i} \le W$<br />
+ou plus généralement pour $n$ objets : $\sum_{i=1}^{n} x_{i}*w_{i} \le W$<br />
     
 Pour vérifier que la contrainte est respectée dans notre exemple, il suffit de calculer cette somme : $0 × 13 + 1 × 12 + 1 × 8 + 1 × 10 = 30$, ce qui est bien inférieur ou égal à 30, donc la contrainte est respectée. Nous parlons alors de solution réalisable. <br />
 :bangbang: Mais ce n’est pas nécessairement la meilleure solution.<br />
 Enfin, il faut exprimer la fonction qui traduit notre objectif : **maximiser la valeur totale des objets dans le sac**.<br />
-Pour $n$ objets, cela s’écrit : $Max \sum_{i=1}^{n} p_{i}*w_{i}$ <br />
+Pour $n$ objets, cela s’écrit : $Max \sum_{i=1}^{n} x_{i}*w_{i}$ <br />
     
 Dans notre exemple, la valeur totale contenue dans le sac est égale à $10$. Cette solution n’est pas la meilleure, car il existe une autre solution de valeur plus grande que $10$ : il faut prendre seulement les objets $1$ et $2$ qui donneront une valeur totale de $11$. Il n’existe pas de meilleure solution que cette dernière, nous dirons alors que cette solution est **optimale**.
 
@@ -239,31 +239,79 @@ La technique la plus basique pour résoudre ce type de problème consiste à én
 
 Vous trouverez ci dessous un extrait du code de résolution du problème de la NASA par force brut.
 
-```python linenums='1'
-meilleur_valeur=0
-meilleur_comb=""
-meilleur_poids=0
-poids_max = 200
-    
-for i in range(len(dicoNasa)):   
-    for p in itertools.combinations(dicoNasa,i+1) :
+??? note "Code par force brute"
 
-        combinaison = listeObjet(p)
-        valeurs = sommeValeur(p)
-        poids = sommePoids(p)
-        #print(combinaison,' ',valeurs,' ',poids,'\n')
-        ''''On ne garde que les combinaisons qui respectent les contraintes 
-        dans notre cas : pas plus de 10 objets pour un poids inférieur à 200 
-        et en maximisant la valeur
+    ```python linenums='1'
+    import itertools
+
+    def tri(table, attribut, decroit):
+        """
+        tri un dictionnaire, selon un critère passé en paramètre
+        @param : table : dictionnaire à trier
+                attribut : critère de tri
+                decroit : sens ascendant ou descendant
+        @return : retourne le dictionnaire trié
+        """
+        def critère(ligne):
+            return ligne[attribut]
+        return sorted(table, key=critère, reverse=decroit)
+
+    def sommeValeur(dico):
+        force = 0
+        for i in range(len(dico)):
+            force += int(dico[i]["valeur"])
+        return force
+
+    def listeObjet(dico):
+        liste = ""
+        for i in range(len(dico)):
+            liste += dico[i]["objet"]+str("/")
+        return (liste)
+
+    def sommePoids(dico):
+        cout = 0
+        for i in range(len(dico)):
+            cout += float(dico[i]["poids"])
+        return cout
+
         '''
-        if valeurs>meilleur_valeur and poids<=poids_max and len(p)<=10:
-            # solution retenue si surpasse la meilleure
-            meilleur_valeur = valeurs     # maj meilleure solution
-            meilleur_comb = combinaison   # maj meilleure solution
-            meilleur_poids = poids        # maj meilleure solution
+        PROGRAMME PRINCIPAL
+        
+        note : 
+            Il existe de nombreuses manière de coder la force brut.
+            Il s'agit ci dessous de l'une de ces versions. 
+        '''
+    dicoNasa=[{'objet': 'allumettes', 'valeur': '01', 'poids': '0.1'}, {'objet': 'aliments', 'valeur': '12', 'poids': '2'}, {'objet': 'corde', 'valeur': '10', 'poids': '5'}, {'objet': 'parachute', 'valeur': '08', 'poids': '0.5'}, {'objet': 'chauffage', 'valeur': '03', 'poids': '25'}, {'objet': 'pistolets', 'valeur': '05', 'poids': '0.5'}, {'objet': 'lait', 'valeur': '04', 'poids': '5'}, {'objet': 'oxygène', 'valeur': '15', 'poids': '100'}, {'objet': 'carte', 'valeur': '13', 'poids': '0.1'}, {'objet': 'canot', 'valeur': '07', 'poids': '100'}, {'objet': 'compas', 'valeur': '02', 'poids': '0.5'}, {'objet': 'eau', 'valeur': '14', 'poids': '25'}, {'objet': 'seringues', 'valeur': '09', 'poids': '0.5'}, {'objet': 'signaux', 'valeur': '06', 'poids': '1'}, {'objet': 'emetteur', 'valeur': '11', 'poids': '5'}]
 
-print("La meilleure sélection est \n",meilleur_comb,"\n valeur = ",meilleur_valeur,"\n poids = ",meilleur_poids)
-```
+    meilleur_valeur=0
+    meilleur_comb=""
+    meilleur_poids=0
+    poids_max = 250
+        
+    j=0
+    for i in range(len(dicoNasa)):    
+        for p in itertools.combinations(dicoNasa,i+1) :
+
+            combinaison = listeObjet(p)
+            valeurs = sommeValeur(p)
+            poids = sommePoids(p)
+            #print(combinaison,' ',valeurs,' ',poids)
+            j += 1
+            #print(combinaison)
+            ''''On ne garde que les combinaisons qui respectent les contraintes 
+            dans notre cas : pas plus de 10 objets pour un poids inférieur à 200 
+            et en maximisant la valeur
+            '''
+            if valeurs>meilleur_valeur and poids<=poids_max and len(p)<=10:
+                # solution retenue si surpasse la meilleure
+                meilleur_valeur = valeurs     # maj meilleure solution
+                meilleur_comb = combinaison   # maj meilleure solution
+                meilleur_poids = poids        # maj meilleure solution
+
+    print("Nombre de combinaisons testées = ",j)
+    print("La meilleure sélection est \n",meilleur_comb,"\n valeur = ",meilleur_valeur,"\n poids = ",meilleur_poids)
+
+    ```
 Le principe de la résolution par force brut est de générer toutes les combinaisons possibles. Puis de sélectionner uniquement celle qui maximise la valeur, tout en respectant les contraintes données. 
 
 Pour résoudre cette problématique par force brute, la bibliothèque [itertools](https://docs.python.org/fr/3/library/itertools.html) pour générer toutes les combinaisons possibles.

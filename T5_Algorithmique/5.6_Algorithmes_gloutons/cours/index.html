@@ -4134,7 +4134,7 @@
 <p>Lien vers l'article de <a href="https://fr.wikipedia.org/wiki/Probl%C3%A8me_du_sac_%C3%A0_dos">Wikipedia</a> :</p>
 <p>En algorithmique, le problème du sac à dos, noté également KP (en anglais, Knapsack problem) est un <u>problème d'optimisation combinatoire</u>. ... 
 Ou plus simplement, les objets mis dans le sac à dos doivent maximiser la valeur totale, sans dépasser le poids maximum.</p>
-<p><a class="md-button" href="../data/gloutons.zip" target="_blank">Télécharger Notebook</a></p>
+<p><a class="md-button" href="./data/gloutons.zip" target="_blank">Télécharger Notebook</a></p>
 <h1 id="la-nasa">La NASA<a class="headerlink" href="#la-nasa" title="Permanent link">⚓︎</a></h1>
 <p>Vous faites partie de l'équipage d'un vaisseau spatial qui doit rejoindre une base installée sur la face visible de la Lune. Mais, suite à un certain nombre de problèmes, vous êtes contraints de vous poser en catastrophe, à 320 km du point prévu. </p>
 <p><img alt="" class="center" src="../data/moon.jpg" width="50%" /></p>
@@ -4485,17 +4485,19 @@ Ou plus simplement, les objets mis dans le sac à dos doivent maximiser la valeu
 <span class="arithmatex">\(x_{1}=0\)</span>, <span class="arithmatex">\(x_{2}=1\)</span>, <span class="arithmatex">\(x_{3}=1\)</span>, et <span class="arithmatex">\(x_{4}=1\)</span>.</p></p>
 <p>Puis il faut définir les contraintes du problème. Ici, il n'y en a qu’une : la somme des poids de tous les objets dans le sac doit être inférieure ou égale au poids maximal du sac à dos.</p>
 <p>Cela s’écrit : <span class="arithmatex">\(x_{1}*w_{1}+p_{2}*w_{2}+p_{3}*w_{3}+p_{4}*w_{4} &lt;= W\)</span></p>
-<p>ou plus généralement pour <span class="arithmatex">\(n\)</span> objets : <span class="arithmatex">\(\sum_{i=1}^{n} p_{i}*w_{i} \le W\)</span><br /></p>
+<p>ou plus généralement pour <span class="arithmatex">\(n\)</span> objets : <span class="arithmatex">\(\sum_{i=1}^{n} x_{i}*w_{i} \le W\)</span><br /></p>
 <p>Pour vérifier que la contrainte est respectée dans notre exemple, il suffit de calculer cette somme : <span class="arithmatex">\(0 × 13 + 1 × 12 + 1 × 8 + 1 × 10 = 30\)</span>, ce qui est bien inférieur ou égal à 30, donc la contrainte est respectée. Nous parlons alors de solution réalisable. <br />
 <img alt="‼" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/203c.svg" title=":bangbang:" /> Mais ce n’est pas nécessairement la meilleure solution.<br />
 Enfin, il faut exprimer la fonction qui traduit notre objectif : <strong>maximiser la valeur totale des objets dans le sac</strong>.<br />
-Pour <span class="arithmatex">\(n\)</span> objets, cela s’écrit : <span class="arithmatex">\(Max \sum_{i=1}^{n} p_{i}*w_{i}\)</span> <br /></p>
+Pour <span class="arithmatex">\(n\)</span> objets, cela s’écrit : <span class="arithmatex">\(Max \sum_{i=1}^{n} x_{i}*w_{i}\)</span> <br /></p>
 <p>Dans notre exemple, la valeur totale contenue dans le sac est égale à <span class="arithmatex">\(10\)</span>. Cette solution n’est pas la meilleure, car il existe une autre solution de valeur plus grande que <span class="arithmatex">\(10\)</span> : il faut prendre seulement les objets <span class="arithmatex">\(1\)</span> et <span class="arithmatex">\(2\)</span> qui donneront une valeur totale de <span class="arithmatex">\(11\)</span>. Il n’existe pas de meilleure solution que cette dernière, nous dirons alors que cette solution est <strong>optimale</strong>.</p>
 <h2 id="resolution-algorithmique-force-brut">Résolution algorithmique - Force brut<a class="headerlink" href="#resolution-algorithmique-force-brut" title="Permanent link">⚓︎</a></h2>
 <p>Dans un problème d'optimisation chaque solution possède une valeur, et on cherche à déterminer parmi toutes les solutions celle dont la valeur est optimale.</p>
 <p>La technique la plus basique pour résoudre ce type de problème consiste à énumérer de façon exhaustive toutes les solutions possibles, puis à choisir la meilleure. Cette approche est nommée par <strong>force brute</strong>.</p>
 <p>Vous trouverez ci dessous un extrait du code de résolution du problème de la NASA par force brut.</p>
-<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<details class="note">
+<summary>Code par force brute</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -4517,18 +4519,107 @@ Pour <span class="arithmatex">\(n\)</span> objets, cela s’écrit : <span class
 <span class="normal">20</span>
 <span class="normal">21</span>
 <span class="normal">22</span>
-<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">meilleur_valeur</span><span class="o">=</span><span class="mi">0</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">itertools</span>
+
+<span class="k">def</span> <span class="nf">tri</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">attribut</span><span class="p">,</span> <span class="n">decroit</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    tri un dictionnaire, selon un critère passé en paramètre</span>
+<span class="sd">    @param : table : dictionnaire à trier</span>
+<span class="sd">            attribut : critère de tri</span>
+<span class="sd">            decroit : sens ascendant ou descendant</span>
+<span class="sd">    @return : retourne le dictionnaire trié</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">critère</span><span class="p">(</span><span class="n">ligne</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">ligne</span><span class="p">[</span><span class="n">attribut</span><span class="p">]</span>
+    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">table</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">critère</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="n">decroit</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">sommeValeur</span><span class="p">(</span><span class="n">dico</span><span class="p">):</span>
+    <span class="n">force</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dico</span><span class="p">)):</span>
+        <span class="n">force</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">dico</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;valeur&quot;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">force</span>
+
+<span class="k">def</span> <span class="nf">listeObjet</span><span class="p">(</span><span class="n">dico</span><span class="p">):</span>
+    <span class="n">liste</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dico</span><span class="p">)):</span>
+        <span class="n">liste</span> <span class="o">+=</span> <span class="n">dico</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;objet&quot;</span><span class="p">]</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">sommePoids</span><span class="p">(</span><span class="n">dico</span><span class="p">):</span>
+    <span class="n">cout</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dico</span><span class="p">)):</span>
+        <span class="n">cout</span> <span class="o">+=</span> <span class="nb">float</span><span class="p">(</span><span class="n">dico</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;poids&quot;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">cout</span>
+
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    PROGRAMME PRINCIPAL</span>
+
+<span class="sd">    note : </span>
+<span class="sd">        Il existe de nombreuses manière de coder la force brut.</span>
+<span class="sd">        Il s&#39;agit ci dessous de l&#39;une de ces versions. </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+<span class="n">dicoNasa</span><span class="o">=</span><span class="p">[{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;allumettes&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;01&#39;</span><span class="p">,</span> <span class="s1">&#39;poids&#39;</span><span class="p">:</span> <span class="s1">&#39;0.1&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;aliments&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;12&#39;</span><span class="p">,</span> <span class="s1">&#39;poids&#39;</span><span class="p">:</span> <span class="s1">&#39;2&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;corde&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;poids&#39;</span><span class="p">:</span> <span class="s1">&#39;5&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;parachute&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;08&#39;</span><span class="p">,</span> <span class="s1">&#39;poids&#39;</span><span class="p">:</span> <span class="s1">&#39;0.5&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;chauffage&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;03&#39;</span><span class="p">,</span> <span class="s1">&#39;poids&#39;</span><span class="p">:</span> <span class="s1">&#39;25&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;pistolets&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;05&#39;</span><span class="p">,</span> <span class="s1">&#39;poids&#39;</span><span class="p">:</span> <span class="s1">&#39;0.5&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;lait&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;04&#39;</span><span class="p">,</span> <span class="s1">&#39;poids&#39;</span><span class="p">:</span> <span class="s1">&#39;5&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;oxygène&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;15&#39;</span><span class="p">,</span> <span class="s1">&#39;poids&#39;</span><span class="p">:</span> <span class="s1">&#39;100&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;carte&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;13&#39;</span><span class="p">,</span> <span class="s1">&#39;poids&#39;</span><span class="p">:</span> <span class="s1">&#39;0.1&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;canot&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;07&#39;</span><span class="p">,</span> <span class="s1">&#39;poids&#39;</span><span class="p">:</span> <span class="s1">&#39;100&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;compas&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;02&#39;</span><span class="p">,</span> <span class="s1">&#39;poids&#39;</span><span class="p">:</span> <span class="s1">&#39;0.5&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;eau&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;14&#39;</span><span class="p">,</span> <span class="s1">&#39;poids&#39;</span><span class="p">:</span> <span class="s1">&#39;25&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;seringues&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;09&#39;</span><span class="p">,</span> <span class="s1">&#39;poids&#39;</span><span class="p">:</span> <span class="s1">&#39;0.5&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;signaux&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;06&#39;</span><span class="p">,</span> <span class="s1">&#39;poids&#39;</span><span class="p">:</span> <span class="s1">&#39;1&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;objet&#39;</span><span class="p">:</span> <span class="s1">&#39;emetteur&#39;</span><span class="p">,</span> <span class="s1">&#39;valeur&#39;</span><span class="p">:</span> <span class="s1">&#39;11&#39;</span><span class="p">,</span> <span class="s1">&#39;poids&#39;</span><span class="p">:</span> <span class="s1">&#39;5&#39;</span><span class="p">}]</span>
+
+<span class="n">meilleur_valeur</span><span class="o">=</span><span class="mi">0</span>
 <span class="n">meilleur_comb</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
 <span class="n">meilleur_poids</span><span class="o">=</span><span class="mi">0</span>
-<span class="n">poids_max</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="n">poids_max</span> <span class="o">=</span> <span class="mi">250</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dicoNasa</span><span class="p">)):</span>   
+<span class="n">j</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dicoNasa</span><span class="p">)):</span>    
     <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">(</span><span class="n">dicoNasa</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">:</span>
 
         <span class="n">combinaison</span> <span class="o">=</span> <span class="n">listeObjet</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
         <span class="n">valeurs</span> <span class="o">=</span> <span class="n">sommeValeur</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
         <span class="n">poids</span> <span class="o">=</span> <span class="n">sommePoids</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
-        <span class="c1">#print(combinaison,&#39; &#39;,valeurs,&#39; &#39;,poids,&#39;\n&#39;)</span>
+        <span class="c1">#print(combinaison,&#39; &#39;,valeurs,&#39; &#39;,poids)</span>
+        <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="c1">#print(combinaison)</span>
 <span class="w">        </span><span class="sd">&#39;&#39;&#39;&#39;On ne garde que les combinaisons qui respectent les contraintes </span>
 <span class="sd">        dans notre cas : pas plus de 10 objets pour un poids inférieur à 200 </span>
 <span class="sd">        et en maximisant la valeur</span>
@@ -4539,9 +4630,11 @@ Pour <span class="arithmatex">\(n\)</span> objets, cela s’écrit : <span class
             <span class="n">meilleur_comb</span> <span class="o">=</span> <span class="n">combinaison</span>   <span class="c1"># maj meilleure solution</span>
             <span class="n">meilleur_poids</span> <span class="o">=</span> <span class="n">poids</span>        <span class="c1"># maj meilleure solution</span>
 
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nombre de combinaisons testées = &quot;</span><span class="p">,</span><span class="n">j</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La meilleure sélection est </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">meilleur_comb</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> valeur = &quot;</span><span class="p">,</span><span class="n">meilleur_valeur</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> poids = &quot;</span><span class="p">,</span><span class="n">meilleur_poids</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-Le principe de la résolution par force brut est de générer toutes les combinaisons possibles. Puis de sélectionner uniquement celle qui maximise la valeur, tout en respectant les contraintes données. </p>
+</details>
+<p>Le principe de la résolution par force brut est de générer toutes les combinaisons possibles. Puis de sélectionner uniquement celle qui maximise la valeur, tout en respectant les contraintes données. </p>
 <p>Pour résoudre cette problématique par force brute, la bibliothèque <a href="https://docs.python.org/fr/3/library/itertools.html">itertools</a> pour générer toutes les combinaisons possibles.</p>
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>allumettes
 allumettes\aliments
