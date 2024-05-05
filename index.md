@@ -1,8 +1,8 @@
 
 !!! abstract ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: [Algorithme Glouton](./T5_Algorithmique/5.6_Algorithmes_gloutons/cours.md)<br />
+    :arrow_forward: [Algorithme Knn](./T5_Algorithmique/5.7_Algorithme_KNN/cours.md)<br />
     A venir :<br />
-    :hourglass: [Algorithme Knn](./T5_Algorithmique/5.7_Algorithme_KNN/cours.md)
+    :hourglass: [exposé](./T8_Projets/3_Exposes/cours/)
     
 !!! info "Entraînement :running: "
     Vous trouverez ci dessous quelques sites pour vous entrainez en Python<br />
@@ -31,6 +31,7 @@
     - [Projet CSV](./T8_Projets/2_ProjetCSV/cours.md)
     - [Thème 4 : Protocole de communication](./T4_Architecture_materielle/4.3_Protocoles_de_communication/cours.md)
     - [IHM sur le Web](./T7_IHM_Web/7.3_Get_Post_Formulaires/cours/)
+    - [Algorithme Glouton](./T5_Algorithmique/5.6_Algorithmes_gloutons/cours.md)
 
 
 <!--

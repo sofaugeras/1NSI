@@ -2989,53 +2989,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T5_Algorithmique/5.7_Algorithme_KNN/07_Algorithme_KNN/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Méthode du K-Nearest-Neighbours (KNN), aka les k-plus-proches-voisins
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../T5_Algorithmique/5.7_Algorithme_KNN/07_Algorithme_KNN/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Méthode du K-Nearest-Neighbours (KNN), aka les k-plus-proches-voisins
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../T5_Algorithmique/5.7_Algorithme_KNN/cours/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    4.7 Algorithme des KNN
+    Cours
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T5_Algorithmique/5.7_Algorithme_KNN/application/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TP Choipeau magique
   </span>
   
 
@@ -3667,9 +3646,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exercice-attaque-par-force-brute-et-requete-get" class="md-nav__link">
+  <a href="#exercice-attaque-par-force-brute-et-requete-get-cyber" class="md-nav__link">
     <span class="md-ellipsis">
-      Exercice : attaque par force brute et requête GET
+      Exercice : attaque par force brute et requête GET  Cyber
     </span>
   </a>
   
@@ -4333,7 +4312,7 @@ Si vous vous demandez à quoi peuvent servir des url si longues, songez à ce ty
 <p>L'exemple ci-dessus est un mauvais exemple : rien ne justifie l'emploi d'un serveur distant. L'affichage de ce message aurait très bien pu se faire en local sur le navigateur du client, en Javascript par exemple.</p>
 <p>L'envoi de paramètre à un serveur distant est nécessaire pour aller interroger une base de données, par exemple (lorsque vous remplissez un formulaire sur le site de la SNCF, les bases de données des horaires de trains, des places disponibles et de leurs tarifs ne sont pas hébergées sur votre ordinateur en local...).</p>
 <p>La vérification d'un mot de passe doit aussi se faire sur un serveur distant.</p>
-<h2 id="exercice-attaque-par-force-brute-et-requete-get">Exercice : attaque par force brute et requête GET<a class="headerlink" href="#exercice-attaque-par-force-brute-et-requete-get" title="Permanent link">⚓︎</a></h2>
+<h2 id="exercice-attaque-par-force-brute-et-requete-get-cyber">Exercice : attaque par force brute et requête GET <img alt="🔱" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f531.svg" title=":trident:" /> Cyber <img alt="🔱" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f531.svg" title=":trident:" /><a class="headerlink" href="#exercice-attaque-par-force-brute-et-requete-get-cyber" title="Permanent link">⚓︎</a></h2>
 <p><img alt="image" class="center" src="../data/hackerman.png" width="50%" /></p>
 <h4 id="pre-requis-1-le-module-requests-en-python">Pré-requis 1 : le module <code>requests</code> en python<a class="headerlink" href="#pre-requis-1-le-module-requests-en-python" title="Permanent link">⚓︎</a></h4>
 <p>Le module <code>requests</code> permet d'aller chercher le contenu d'une page web, suivant la syntaxe ci-dessous.
@@ -4369,7 +4348,8 @@ Ceci est vraiment une jolie page web.
 <p>Vous allez vous appuyer sur un leak (<em>fuite</em>) très célèbre de mots de passe , qui est le leak du site Rockyou. Dans la base de données de ce site, 32 millions de mots de passe étaient stockés en clair <code>¯\_(ツ)_/¯</code>.</p>
 <p>Lorsque le site a été piraté (par une injection SQL, voir le cours de Terminale), ces 32 millions de mots de passe se sont retrouvés dans la nature. Ils sont aujourd'hui téléchargeables librement, et constituent un dictionnaire de 14 341 564 mots de passe différents (car parmi les 32 millions d'utilisateurs, beaucoup utilisaient des mots de passe identiques).
 Ce fichier est téléchargeable <a href="https://www.kaggle.com/wjburns/common-password-list-rockyoutxt" target="_blank">ici</a>, mais attention il pèse 134 Mo.</p>
-<p>Nous allons utiliser un fichier beaucoup plus léger ne contenant que les 1000 premiers mots de passe : vous le trouverez à l'adresse <a href="http://glassus1.free.fr/extraitrockyou.txt" target="_blank">http://glassus1.free.fr/extraitrockyou.txt</a> .</p>
+<p>Nous allons utiliser un fichier beaucoup plus léger ne contenant que les 1000 premiers mots de passe :
+Le jeu de données : <a class="md-button" href="../data/extraitrockyou.txt" target="_blank">Rockyou</a></p>
 <p>L'un de ces mots de passe est le mot de passe demandé à la page  <a href="http://glassus1.free.fr/exoBF.html" target="_blank">http://glassus1.free.fr/exoBF.html</a> .</p>
 <p>Lequel ?</p>
 <details class="note">
