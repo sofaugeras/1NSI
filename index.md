@@ -1,8 +1,7 @@
 
 !!! abstract ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: [Algorithme Knn](./T5_Algorithmique/5.7_Algorithme_KNN/cours.md)<br />
-    A venir :<br />
-    :hourglass: [exposé](./T8_Projets/3_Exposes/cours/)
+    :arrow_forward: [Thème 1 : Démarrer en Python](./T1_Demarrer_en_Python/sommaire.md)<br />
+    A venir : [Thème 2 : Type de base : binaire](./T2_Type_de_base/2.1_Binaire/cours.md)<br />
     
 !!! info "Entraînement :running: "
     Vous trouverez ci dessous quelques sites pour vous entrainez en Python<br />
@@ -13,6 +12,17 @@
     - [Codex](https://codex.forge.apps.education.fr/)<br />
 
 !!! note "*Thèmes traités*"
+    - [Thème 1 : Démarrer en Python](./T1_Demarrer_en_Python/sommaire.md)<br />
+
+<!--
+
+!!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
+    Chers élèves de Première  voilà les chapitres à revoir en priorité pour aborder sereinement l'année de Terminale en NSI :
+    - Les listes, les tuples et les dictionnaires. À retrouver [ici](T3_Type_construit/sommaire.md){. target="_blank"}.
+    - Le plus important : les chapitres suivants d'algorithmique, à retrouver [ici](T5_Algorithmique/sommaire.md){. target="_blank"} :
+        - Complexité
+        - Tris par sélection et insertion
+        - Dichotomie
     - [Thème 2 : Type de base : binaire](./T2_Type_de_base/2.1_Binaire/cours.md)
     - [Thème 2 : Type de base : Entiers](./T2_Type_de_base/2.2_Codage_entiers/)
     - [Thème 2 : Type de base : Décimaux](./T2_Type_de_base/2.3_Decimaux/)
@@ -33,14 +43,4 @@
     - [IHM sur le Web](./T7_IHM_Web/7.3_Get_Post_Formulaires/cours/)
     - [Algorithme Glouton](./T5_Algorithmique/5.6_Algorithmes_gloutons/cours.md)
 
-
-<!--
-
-!!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
-    Chers élèves de Première  voilà les chapitres à revoir en priorité pour aborder sereinement l'année de Terminale en NSI :
-    - Les listes, les tuples et les dictionnaires. À retrouver [ici](T3_Type_construit/sommaire.md){. target="_blank"}.
-    - Le plus important : les chapitres suivants d'algorithmique, à retrouver [ici](T5_Algorithmique/sommaire.md){. target="_blank"} :
-        - Complexité
-        - Tris par sélection et insertion
-        - Dichotomie
 -->

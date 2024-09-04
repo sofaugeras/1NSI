@@ -126,7 +126,7 @@ Exemple :
       def knn(poids, taille):
           #On ajoute une nouvelle colonne distance à notre jeu de données pandas
           #correspondant la la distance euclienne entre le nouveau et la ligne traitée
-          df['distance']=(df['Taille']-taille)**2+(df['Poids']-poids)**2
+          df['distance']=sqrt((df['Taille']-taille)**2+(df['Poids']-poids)**2)
           # On trie le jeu de donnée sur cette nouvelle colonne
           newdf = df.sort_values(by='distance', ascending=True)
           #On ne garde que les 6 premières lignes que l'on 'copie' dans un nouveau dataframe
