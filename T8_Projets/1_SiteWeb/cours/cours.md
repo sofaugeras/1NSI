@@ -22,7 +22,7 @@ Vous trouverez ci-dessous les minimas attendus sur ce travail à faire. <br />
     - présentation de la personne
     - contexte historique
     - apports scientifiques ou technologiques
-    - impact pour la société) 
+    - impact pour la société
 - ➡️ Les [balises meta](https://developer.mozilla.org/fr/docs/Web/HTML/Element/meta) : encodage, auteur, Mots-clés 
 - ➡️ Utiliser la richesse du langage HTML5 pour découper vos pages sémantiquement avec les balises ```html <header> <footer> <nav>```
 - ➡️ Une ou plusieurs images légendées (attention à utiliser des images libres de droits et/ou d’en citer la source) 
