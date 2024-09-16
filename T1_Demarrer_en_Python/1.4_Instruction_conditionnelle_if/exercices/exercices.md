@@ -30,8 +30,10 @@
 
 !!! example "exercice 2"
     === "Énoncé"
-        Exercices à réaliser sur Notebook à partir de ce [lien](./1NSI_ipythonblocks.ipynb){. target="_blank"}.
+
         ![image](data/damier.png){: .center}
+        
+        [Télécharger Notebook :arrow_down:](./1NSI_ipythonblocks.ipynb){ .md-button .md-button--primary }
         
 
     === "Corrections"

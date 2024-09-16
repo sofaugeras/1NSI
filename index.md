@@ -1,7 +1,9 @@
 
 !!! abstract ":star: Thèmes en cours d'étude :star: "
     :arrow_forward: [Thème 1 : Démarrer en Python](./T1_Demarrer_en_Python/sommaire.md)<br />
-    A venir : [Thème 2 : Type de base : binaire](./T2_Type_de_base/2.1_Binaire/cours.md)<br />
+    A venir : [Thème 7 : IHM Web : HTML et CSS](T7_IHM_Web/7.1_Interactions_page_web/cours.md)<br />
+
+    :bulb: [Projet 1 : site web](./T8_Projets/1_SiteWeb/cours.md)
     
 !!! info "Entraînement :running: "
     Vous trouverez ci dessous quelques sites pour vous entrainez en Python<br />
@@ -23,6 +25,7 @@
         - Complexité
         - Tris par sélection et insertion
         - Dichotomie
+        
     - [Thème 2 : Type de base : binaire](./T2_Type_de_base/2.1_Binaire/cours.md)
     - [Thème 2 : Type de base : Entiers](./T2_Type_de_base/2.2_Codage_entiers/)
     - [Thème 2 : Type de base : Décimaux](./T2_Type_de_base/2.3_Decimaux/)

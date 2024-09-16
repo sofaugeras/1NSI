@@ -45,28 +45,21 @@ Il a été inventé en 1992 par [Tim Berners-Lee](https://fr.wikipedia.org/wiki/
                       <li> le début d'une liste indentée </li>
                       <li> la suite ... </li>
                   </ul>  
-            Pour apprendre le fonctionnement des balises, voir <a href="https://developer.mozilla.org/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML/Getting_started"> ici</a> par exemple !
+            Pour apprendre le fonctionnement des balises, voir <a href="https://www.w3schools.com/html/default.asp"> ici</a> par exemple !
             </p>
         </body>
     </html>
 
     ```
 
-Vous pouvez contempler [ici](https://exemplehtmlpur--g-lassus.repl.co){:target="_blank"} le rendu de cette magnifique page.
+> Copier/coller ce code dans un éditeur de texte (VS code, notepad++, ...), sauvegarder votre fichier et visualisez le grace à votre navigateur préféré.
 
-{{ initexo(0)}}
-!!! example "{{ exercice() }}"
+!!! example "Exercice 1"
     === "Énoncé"
       - Créez un dossier contenant un fichier ```mapage.html```.
       - Créez une page contenant une image et un lien vers le site du lycée.
-      - Vous pouvez utiliser le logiciel Geany, installé sur notre Debian.
       - Vous pouvez aussi utiliser un éditeur en ligne avec rendu instantané, du type [https://www.w3schools.com/tryit/](https://www.w3schools.com/tryit/){:target="_blank"}
        
-
-
-
-
-
 
 ### 1.2 ```html``` + ```css``` 
 
@@ -122,10 +115,8 @@ Vous pouvez contempler [ici](https://exemplehtmlcss--g-lassus.repl.co){:target="
     Reprenez votre page de l'exercice 1 et rajoutez une feuille de style.
 
 !!! note "Exercice 3"
-    - Allez sur le site [http://sudouest.fr](http://sudouest.fr){:target="_blank"}, et affichez l'inspecteur d'élement de votre navigateur (généralement accessible en appuyant sur ```F12``` )
+    - Allez sur le site [Ouest-france](https://www.ouest-france.fr/bretagne/redon-35600/){:target="_blank"}, et affichez l'inspecteur d'élement de votre navigateur (généralement accessible en appuyant sur ```F12``` )
     - Modifiez le plus possible les attributs de style de la page.
-
-
 
 
 
@@ -208,7 +199,6 @@ La puissance du JavaScript permet de réaliser aujourd'hui des interfaces utilis
     Application sur le TP Fortnite : [source](./data/TP_Javascript_Eleve.zip)
 
 
-
 ## 3. Quand la page est fabriquée à la demande pour le client : exemple avec PHP
 
 
@@ -285,10 +275,3 @@ Vous pouvez tester du code PHP et la page générée par exemple sur [ce site](h
 Voilà comment un serveur peut adapter la page qu'il renvoie, suivant l'utilisateur qui la demande. Nous verrons prochainement comment par des requêtes le client peut envoyer des paramètres au serveur, et comment celui-ci modifie sa réponse en conséquence.
 
 **En savoir plus :** [https://www.php.net/manual/fr/tutorial.firstpage.php](https://www.php.net/manual/fr/tutorial.firstpage.php){:target="_blank"}
-
-
-
-
-
-
-
