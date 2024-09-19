@@ -4417,52 +4417,6 @@
 </div>
 </div>
 </div>
-<div class="admonition example">
-<p class="admonition-title">Exercice 8</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Énoncé</label><label for="__tabbed_8_2">Correction</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<ol>
-<li>Écrire une fonction <code>temps_de_vol(n)</code> qui renvoie le nombre d'étapes pour arriver à 1, en partant de <code>n</code></li>
-<li>Écrire une fonction <code>temps_max(nmax)</code> qui affiche le plus grand temps de vol pour un nombre entre 1 et <code>nmax</code>.</li>
-<li>Modifier cette fonction pour afficher aussi le nombre de départ donnant ce plus grand temps de vol.</li>
-</ol>
-</div>
-<div class="tabbed-block">
-<p>"
-1.
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">temps_de_vol</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="n">compteur</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="n">compteur</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="n">n</span> <span class="o">=</span> <span class="n">suivant</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">compteur</span>
-</code></pre></div></td></tr></table></div>
-2.
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">temps_max</span><span class="p">(</span><span class="n">nmax</span><span class="p">):</span>
-    <span class="n">maximum</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">nmax</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
-        <span class="n">duree</span> <span class="o">=</span> <span class="n">temps_de_vol</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">duree</span> <span class="o">&gt;</span> <span class="n">maximum</span><span class="p">:</span>
-            <span class="n">maximum</span> <span class="o">=</span> <span class="n">duree</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;le plus grand temps de vol vaut :&#39;</span><span class="p">,</span> <span class="n">maximum</span><span class="p">)</span>
-</code></pre></div></td></tr></table></div>
-"</p>
-</div>
-</div>
-</div>
-</div>
 
 
 

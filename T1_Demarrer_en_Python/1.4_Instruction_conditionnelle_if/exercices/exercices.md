@@ -32,8 +32,8 @@
     === "Énoncé"
 
         ![image](data/damier.png){: .center}
-        
-        [Télécharger Notebook :arrow_down:](./1NSI_ipythonblocks.ipynb){ .md-button .md-button--primary }
+
+        [Télécharger Notebook :arrow_down:](./data/1NSI_ipythonblocks.ipynb){ .md-button .md-button--primary }
         
 
     === "Corrections"

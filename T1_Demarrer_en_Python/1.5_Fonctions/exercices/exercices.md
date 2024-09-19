@@ -238,36 +238,3 @@
                 print(n)
         ``` 
         "
-    
-
-!!! example "Exercice 8"
-    === "Énoncé"
-        1. Écrire une fonction ```temps_de_vol(n)``` qui renvoie le nombre d'étapes pour arriver à 1, en partant de ```n```
-        2. Écrire une fonction ```temps_max(nmax)``` qui affiche le plus grand temps de vol pour un nombre entre 1 et ```nmax```.
-        3. Modifier cette fonction pour afficher aussi le nombre de départ donnant ce plus grand temps de vol.
-
-    === "Correction"
-
-        "
-        1.
-        ```python linenums='1'
-        def temps_de_vol(n):
-            compteur = 1
-            while n != 1:
-                compteur += 1
-                n = suivant(n)
-            return compteur
-
-        ```
-        2.
-        ```python linenums='1'
-        def temps_max(nmax):
-            maximum = 0
-            for k in range(1, nmax + 1):
-                duree = temps_de_vol(k)
-                if duree > maximum:
-                    maximum = duree
-            print('le plus grand temps de vol vaut :', maximum)
-        ``` 
-        "
-
