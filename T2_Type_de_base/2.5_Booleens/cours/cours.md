@@ -389,49 +389,40 @@ Objectif : chiffrer (= crypter) le mot "BONJOUR" avec la clé (de même taille) 
 
 Protocole de chiffrage : XOR entre le code ASCII des lettres de même position.
 
-<!-- 
+??? question "Solution"
 
-```python 
-msg = "BONJOUR"
-cle = "MAURIAC"
+    ```python 
+    msg = "BONJOUR"
+    cle = "MAURIAC"
 
-def crypte_lettre(lm, lc):
-    a = ord(lm)
-    b = ord(lc)
-    c = a^b
-    lettre = chr(c)
+    def crypte_lettre(lm, lc):
+        a = ord(lm)
+        b = ord(lc)
+        c = a^b
+        lettre = chr(c)
 
-    return lettre
+        return lettre
 
-def crypte_mot(mot1, mot2):
-    mot3 = ""
-    for i in range(len(mot1)):
-        car = crypte_lettre(mot1[i],mot2[i])
-        mot3 = mot3 + car
-    return mot3
+    def crypte_mot(mot1, mot2):
+        mot3 = ""
+        for i in range(len(mot1)):
+            car = crypte_lettre(mot1[i],mot2[i])
+            mot3 = mot3 + car
+        return mot3
 
-crypte_mot(msg, cle)
-```
-
-
-
-
+    crypte_mot(msg, cle)
     '\x0f\x0e\x1b\x18\x06\x14\x11'
-
--->
+    ```
 
 ### Exercice 7 (facultatif)
 
-:bulb: Résolvez le pydéfi ![la clé endommagée](https://pydefis.callicode.fr/defis/C22_MasqueJetableDate/txt){. target="_blank"}
+:bulb: Résolvez le pydéfi [la clé endommagée](https://pydefis.callicode.fr/defis/C22_MasqueJetableDate/txt){. target="_blank"}
         
+??? question "Solution" 
+s    *solution :*
 
-<!-- 
+    [lien](https://gist.github.com/glassus/7aef2c4cbed5097e1857ecc851b7b740)
 
-*solution :*
-
-[lien](https://gist.github.com/glassus/7aef2c4cbed5097e1857ecc851b7b740)
-
--->
 
 ### Complément : propriétés des opérateurs logiques
 

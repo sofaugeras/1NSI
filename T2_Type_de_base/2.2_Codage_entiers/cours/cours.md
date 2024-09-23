@@ -191,8 +191,8 @@ Ariane 5 a alors brusquement pivoté avant d'exploser.
 Cette catastrophe (150 millions d'euros et des années de travail perdus) a fait prendre conscience à la communauté scientifique de l'importance de faire des tests logiciels toujours plus poussés : ce n'est pas parce qu'un code marche dans un environnement donné qu'il marchera de la même manière dans d'autres conditions...
 
 ### 4.2 Le bug de l'année 2038
-
-![image](../data/2038.gif){: .center}
+ 
+![image](../data/2038.gif){: .center width=30%}
 
 Expliquons ce (superbe) gif issu de la page Wikipedia [Bug de l'an 2038](https://fr.wikipedia.org/wiki/Bug_de_l%27an_2038){. target="_blank"}.
 
