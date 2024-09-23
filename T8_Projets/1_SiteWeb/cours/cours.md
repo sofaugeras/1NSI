@@ -43,13 +43,13 @@ Vous trouverez ci-dessous les minimas attendus sur ce travail à faire. <br />
 |2|Alan Turing|![image](data/turing.jpg){: .center width=10%}|titouan JOUBREL|
 |3|Donald Knuth|![image](data/knuth.jpg){: .center width=10%}|maxime BLONDET|
 |4|Bill Gates|![image](data/gates.jpg){: .center width=10%}|diwann MERLET|
-|5|Heidi Lamar|![image](data/lamar.jpg){: .center width=10%}||
+|5|Heidi Lamar|![image](data/lamar.jpg){: .center width=10%}|Maïwenn MORIN BRIEND |
 |6|Steve Jobs|![image](data/jobs.jpg){: .center width=10%}|nataël CURUTCHET|
 |7|Aaron Swartz|![image](data/swartz.jpg){: .center width=10%}|yaniss DANIEL|
-|8|Grace Hopper|![image](data/hopper.jpeg){: .center width=10%}||
-|9|Linus Torvalds|![image](data/linus.jpeg){: .center width=10%}||
+|8|Grace Hopper|![image](data/hopper.jpeg){: .center width=10%}|Leïla SORGUES DESPLAS|
+|9|Linus Torvalds|![image](data/linus.jpeg){: .center width=10%}|Romain BENARD|
 |10|Margaret Hamilton|![image](data/hamilton.jpg){: .center width=10%}||
-|11|Sergueï Brin|![image](data/brin.jpg){: .center width=10%}||
+|11|Sergueï Brin|![image](data/brin.jpg){: .center width=10%}|Alexis TREMELO|
 |12|Larry Page|![image](data/page.jpg){: .center width=10%}|simon DEBRAY|
 |13|Richard Stallman|![image](data/stallman.jpeg){: .center width=10%}||
 |14|Guido Van Rossum|![image](data/rossum.jpg){: .center width=10%}||
@@ -57,11 +57,11 @@ Vous trouverez ci-dessous les minimas attendus sur ce travail à faire. <br />
 |16|John Conway|![image](data/conway.jpg){: .center width=10%}|Georges DUBREUIL|
 |17|Dorothy Vaughan|![image](data/Vaughan.jpg){: .center width=10%}||
 |18|Charles Babbage|![image](data/Babbage.jpg){: .center width=10%}||
-|19|John Von Neumann|![image](data/vonneumann.jpg){: .center width=10%}||
+|19|John Von Neumann|![image](data/vonneumann.jpg){: .center width=10%}|Zaïna DUPAS|
 |20|Georges Boole|![image](data/boole.jpg){: .center width=10%}|mouslim DJABRAILOVA|
-|21|Gordon Moore |![image](data/moore.JPG){: .center width=10%}||
-|22|Tim Berners Lee|![image](data/tim.jpg){: .center width=10%}||
-|23|Brian Kernighan|![image](data/brian.jpg){: .center width=10%}||
+|21|Gordon Moore |![image](data/moore.JPG){: .center width=10%}|Nadege PAVOINE|
+|22|Tim Berners Lee|![image](data/tim.jpg){: .center width=10%}|Moragne LE SOLLIEC|
+|23|Brian Kernighan|![image](data/brian.jpg){: .center width=10%}|andres GONZALEZ CHAVEZ|
 |24|Joan CLARKE|![image](./data/joan-clarke.jpeg){: .center width=10%}||
 |25|Mary JACKSON|![image](./data/mary.jpg){: .center width=10%}||
 |26|Les ENIAC girls|![image](./data/eniac.webp){: .center width=10%}||
@@ -69,9 +69,9 @@ Vous trouverez ci-dessous les minimas attendus sur ce travail à faire. <br />
 |28|Edsger Dijkstra|![image](./data/800px-Edsger_Wybe_Dijkstra.jpg){: .center width=10%}||
 |29|Guido Van Rossum|![image](./data/guido.jpg){: .center width=10%}||
 |30|Stephen Wozniak|![image](./data/Wozniak.jpg){: .center width=10%}||
-|31|James Gosling|![image](./data/James_Gosling_2005.jpg){: .center width=10%}||
+|31|James Gosling|![image](./data/James_Gosling_2005.jpg){: .center width=10%}|Mathias BILLAUD|
 |32|Maurice Vincent Wilkes|![image](./data/wilkes.jpg){: .center width=10%}||
-|33|Histoire de l'IA|[lien](https://www.thats-ai.org/fr-CH/units/l-histoire-de-l-ia)||
+|33|Histoire de l'IA|[lien](https://www.thats-ai.org/fr-CH/units/l-histoire-de-l-ia)|baptiste CHEVAL|
 |34|Histoire de Bugs|[lien](https://horustest.io/blog/les-10-bugs-informatiques-les-plus-couteux-de-l-histoire/)||
 
 
