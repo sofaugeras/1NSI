@@ -163,9 +163,9 @@ Attention, il faut bien lire de bas en haut !<br />
 
 ### 4.4 Convertir un nombre hexadécimal en décimal
 
-Le principe est le même que pour la conversation "binaire en décimal" sauf qu'au lieu d'utiliser des $2_{n}$ on utilise des $16_{n}$:<br />
+Le principe est le même que pour la conversation "binaire en décimal" sauf qu'au lieu d'utiliser des $2^n$ on utilise des $16^n$:<br />
 
-exemple : $12B716 = 1*163 + 2*162 + 11*161 + 7*160 = 1*4096 + 2*256 + 11*16 + 7= 4096 + 512 + 176 + 7 = 4791$
+exemple : $12B716 = 1*16^3 + 2*16^2 + 11*16^1 + 7*16^0 = 1*4096 + 2*256 + 11*16 + 7= 4096 + 512 + 176 + 7 = 4791$
 
 Vous avez remarqué que quand on trouve un **B** dans le nombre écrit en hexadécimal, on le remplace par un **11** dans le calcul. C'est exactement la même chose quand on trouve :
 

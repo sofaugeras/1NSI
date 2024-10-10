@@ -4521,8 +4521,8 @@ En hexadécimal, on utilise 16 symboles <strong>0 1 2 3 4 5 6 7 8 9 A B C D E F<
 <p>Attention, il faut bien lire de bas en haut !<br />
 <strong>185</strong> en base 10 vaut donc <strong>B9</strong> en hexadécimal.</p>
 <h3 id="44-convertir-un-nombre-hexadecimal-en-decimal">4.4 Convertir un nombre hexadécimal en décimal<a class="headerlink" href="#44-convertir-un-nombre-hexadecimal-en-decimal" title="Permanent link">⚓︎</a></h3>
-<p>Le principe est le même que pour la conversation "binaire en décimal" sauf qu'au lieu d'utiliser des <span class="arithmatex">\(2_{n}\)</span> on utilise des <span class="arithmatex">\(16_{n}\)</span>:<br /></p>
-<p>exemple : <span class="arithmatex">\(12B716 = 1*163 + 2*162 + 11*161 + 7*160 = 1*4096 + 2*256 + 11*16 + 7= 4096 + 512 + 176 + 7 = 4791\)</span></p>
+<p>Le principe est le même que pour la conversation "binaire en décimal" sauf qu'au lieu d'utiliser des <span class="arithmatex">\(2^n\)</span> on utilise des <span class="arithmatex">\(16^n\)</span>:<br /></p>
+<p>exemple : <span class="arithmatex">\(12B716 = 1*16^3 + 2*16^2 + 11*16^1 + 7*16^0 = 1*4096 + 2*256 + 11*16 + 7= 4096 + 512 + 176 + 7 = 4791\)</span></p>
 <p>Vous avez remarqué que quand on trouve un <strong>B</strong> dans le nombre écrit en hexadécimal, on le remplace par un <strong>11</strong> dans le calcul. C'est exactement la même chose quand on trouve :</p>
 <p>un A, on le remplace par un 10 <br />
 un C, on le remplace par un 12 <br />
