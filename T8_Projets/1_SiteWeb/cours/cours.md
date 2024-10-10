@@ -48,7 +48,7 @@ Vous trouverez ci-dessous les minimas attendus sur ce travail à faire. <br />
 |7|Aaron Swartz|![image](data/swartz.jpg){: .center width=10%}|yaniss DANIEL|
 |8|Grace Hopper|![image](data/hopper.jpeg){: .center width=10%}|Leïla SORGUES DESPLAS|
 |9|Linus Torvalds|![image](data/linus.jpeg){: .center width=10%}|Romain BENARD|
-|10|Margaret Hamilton|![image](data/hamilton.jpg){: .center width=10%}||
+|10|Margaret Hamilton|![image](data/hamilton.jpg){: .center width=10%}|Emma LEJEUSNE|
 |11|Sergueï Brin|![image](data/brin.jpg){: .center width=10%}|Alexis TREMELO|
 |12|Larry Page|![image](data/page.jpg){: .center width=10%}|simon DEBRAY|
 |13|Richard Stallman|![image](data/stallman.jpeg){: .center width=10%}||
