@@ -16,7 +16,7 @@ et ceux à droite de la virgule, les dixièmes, les centièmes etc.
 De même, en notation binaire, les chiffres de droite représentent des demis, des quarts, des
 huitièmes etc.
 
-![decomposition bianire](../data/binaireDecomposition.png){: .center}
+![decomposition binaire](../data/binaireDecomposition.png){: .center}
 
 !!! abstract "Exercice"
     === "Énoncé"
@@ -24,8 +24,8 @@ huitièmes etc.
         :arrow_forward: 1 001,101 1 <br />
         :arrow_forward: 10 101,011 101 <br />
     === "Correction"
-        :arrow_forward: 1 001,101 1 code <br />
-        :arrow_forward: 10 101,011 101 code <br />
+        :arrow_forward: 1 001,101 1 code 9,6875<br />
+        :arrow_forward: 10 101,011 101 code 21,453125<br />
 
 ### b. De l’écriture décimale à la notation binaire
 
@@ -43,7 +43,7 @@ huitièmes etc.
     === "Énoncé"
         Donner l'écriture binaire de 7,09375.
     === "Correction"
-        - partie entière : $7 = 101_2$
+        - partie entière : $7 = 111_2$
         - partie décimale :
             - $0,09375 \times 2 = \textbf{0},1875$ 
             - $0,1875 \times 2 = \textbf{0},375$ 
@@ -51,7 +51,7 @@ huitièmes etc.
             - $0,75 \times 2 = \textbf{1},5$
             - $0,5 \times 2  = \textbf{1}$
  
-        Donc $7,09375=101,00011_2$
+        Donc $7,09375=111,00011_2$
 
 !!! abstract "Exercice 2"
     === "Énoncé"
@@ -103,9 +103,9 @@ En notation décimale, elle consiste à exprimer le nombre sous la forme $\pm a 
 
 :question: Quel est la notation scientifique de $0, 0745$
 ??? "Réponse"
-	$7,45 \times 10^-2$
+	$7,45 \times 10^{-2}$
 
-De même, en notation binaire, tout ombre s’exprime sous la forme $\pm a \times 2^n$ où $\pm$ où $\pm$ est le _signe_, $a$ est un nombre de l’intervalle $[(1)_2 , (10)_2[$ appelé _mantisse_ et $n$ est un entier relatif appelé _exposant_.
+De même, en notation binaire, tout nombre s’exprime sous la forme $\pm a \times 2^n$ où $\pm$ où $\pm$ est le _signe_, $a$ est un nombre de l’intervalle $[(1)_2 , (10)_2[$ appelé _mantisse_ et $n$ est un entier relatif appelé _exposant_.
 
 :question: Quel est la notation scientifique de $1011, 0111 101$
 ??? "Réponse"
@@ -113,7 +113,7 @@ De même, en notation binaire, tout ombre s’exprime sous la forme $\pm a \time
 
 :question: Quel est la notation scientifique de $0, 0000001101$
 ??? "Réponse"
-	$1,101 \times 2^-7$
+	$1,101 \times 2^{-7}$
 
 ### b. Représentation des nombres à virgule en binaire sur n bits
 
@@ -127,21 +127,66 @@ De même, en notation binaire, tout ombre s’exprime sous la forme $\pm a \time
     ![norme IEE754](../data/IEE754vierge.png){: .center}
 
 
-:question: Trouver la représentation en binaire sur 32 bits de $1011, 0111 101$
+:question: Trouver la représentation en norme IEE754 sur 32 bits de $(1011, 0111 101)_2$ soit $(11,4765625)_10$
 ??? "Réponse"
-	$ $
+    1. On transforme en notation scientifique : $1,011 0111 101 * 2^3$<br />
+    2. On ajoute l'exposant, ici 127 : $1,011 0111 101 * 2^130$<br />
+    3. On écrit l'exposant en base 2 : $1,011 0111 101 * 2^10000010$<br />
+    4. On pose notre bit de signe : $0$<br />
+    5. On isole notre exposant : 1000001<br />
+    6. Et nos 23 bits de mantisse : $ 01101111010000000000000$
 
-:question: Trouver la représentation en binaire sur 32 bits de $0, 0000001101$
+:question: Trouver la représentation en norme IEE754 sur 32 bits de $(0, 0000001101)_2$ soit $(0.0126953125)_10$
 ??? "Réponse"
-	$ $
 
-:question: Trouver la représentation en binaire sur 32 bits de $110100011010010011110000011100000$
-??? "Réponse"
-	$ $
+    1. On transforme en notation scientifique : $1,101 * 2^{-7}$ <br />
+	2. On ajoute l'exposant, ici 127 : $1,101 * 2^120$<br />
+    3. On écrit l'exposant en base 2 : $1,101 * 2^01111000$<br />
+    4. On pose notre bit de signe : $0$<br />
+    5. On isole notre exposant : 01111000<br />
+    6. Et nos 23 bits de mantisse : $ 10100000000000000000000$
 
-:question: Trouver la représentation en binaire sur 32 bits de $00100001111010011100101011000000$
+:question: Trouver la représentation en binaire sur 32 bits de ``1  01111110 1111000000000000000000000``
+
 ??? "Réponse"
-	$ $
+
+	1. le signe est négatif car $s=1$ <br />
+    2. L'exposant et 01111110 soit 126. On retranche la précision de 127, on obtient $-1$<br />
+    3. La mantisse 1111 donne $1,1111 * 2^{-1} = 0.11111$ cad $1/2 + 1/4 +1/8+1/16+1/32=0.96875$<br />
+    4. Soit au final, la valeur -0.96875 
+
+:question: Trouver la représentation en binaire sur 32 bits de ``0 10000011 11100000000000000000000``
+
+??? "Réponse"
+
+    1. le signe est négatif car $s=0$ <br />
+    2. L'exposant et 10000011 soit 131. On retranche la précision de 127, on obtient $4$<br />
+    3. La mantisse 111 donne $1,111 * 2^{4} = 11110$ cad 30 <br />
+
+:question: Trouver la représentation en norme IEE754 sur 32 bits de $128$
+
+??? "réponse"
+
+    1. on code en binaire la partie entière : 10000000<br />
+    2. on passe en notation scientifique : $1.0 * 2^{7}<br />
+    3. On ajoute l'exposant de précision : $1.0 * 2^{7+127} = 1.0 * 2^{134}$<br />
+    4. On code l'exposant en binaire : $1.0 * 2^{10000110}$<br />
+    5. le bit de signe est 0<br />
+    6. Le bit d'exposant est 10000110<br />
+    7. et les 23 bits de la mantisse sont 0000000000000000000000000<br />
+
+    soit 0 10000110 0000000000000000000000000
+
+:question: Trouver la représentation en norme IEE754 sur 32 bits de $-32.75$
+
+??? "réponse"
+    1. on code en binaire 100000.11
+    2. on passe en notation scientifique : $1.0000011 * 2^{5}<br />
+    3. On ajoute l'exposant de précision : $1.0000011  * 2^{5+127} = 1.0000011 * 2^{132}$<br />
+    4. On code l'exposant en binaire : $1.0000011  * 2^{10000100}$<br />
+    5. le bit de signe est 1, négatif<br />
+    6. Le bit d'exposant est 10000100<br />
+    7. et les 23 bits de la mantisse sont 00000110000000000000000<br />
 
 !!! note "Convention"
     Par convention :<br />

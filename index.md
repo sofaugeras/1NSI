@@ -1,8 +1,8 @@
 
 !!! abstract ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: En cours : [Thème 2 : le binaire](./T2_Type_de_base/2.1_Binaire/cours.md)<br />
-    A venir : [Thème 2 : codage des entiers](./T2_Type_de_base/2.2_Codage_entiers/cours.md)<br />
-    A venir : [Thème 2 : codage des décimaux](./T2_Type_de_base/2.3_Decimaux/cours.md)
+    :arrow_forward: En cours : [Thème 2 : codage des décimaux](./T2_Type_de_base/2.3_Decimaux/cours.md)
+    A venir : [Thème 2 : Type de base : chaines de caractères](./T2_Type_de_base/2.4_Chaines_caracteres/chaine.md)
+    A venir : [Thème 2 : Type de base : Booleens](./T2_Type_de_base/2.5_Booleens/cours.md)
 
     :bulb: En cours [Projet 1 : site web](./T8_Projets/1_SiteWeb/cours.md) pour le **Jeudi 14 novembre 2024**
     
@@ -17,6 +17,8 @@
 !!! note "*Thèmes traités*"
     - [Thème 1 : Démarrer en Python](./T1_Demarrer_en_Python/sommaire.md)<br />
     - [Thème 7 : IHM Web : HTML et CSS](./T7_IHM_Web/7.1_Interactions_page_web/cours.md)<br />
+    - [Thème 2 : le binaire](./T2_Type_de_base/2.1_Binaire/cours.md)<br />
+    - [Thème 2 : codage des entiers](./T2_Type_de_base/2.2_Codage_entiers/cours.md)<br />
 
 <!--
 
@@ -27,10 +29,8 @@
         - Complexité
         - Tris par sélection et insertion
         - Dichotomie
-        
-    - [Thème 2 : Type de base : chaines de caractères](./T2_Type_de_base/2.4_Chaines_caracteres/chaine.md)
+    
 
-    - [Thème 2 : Type de base : Booleens](./T2_Type_de_base/2.5_Booleens/cours.md)
     - [Thème 4 : Architecture de Von Neumann](./T4_Architecture_materielle/Architecture_von_neumann/cours.md)
     - [Thème 4 : Architecture matérielle : OS et commande Linux](T4_Architecture_materielle/4.4_Decouverte_des_commandes_Linux/cours.md)
     - [Thème 3 : Type Construit : les Listes](T3_Type_construit/3.1_Listes/cours.md)
