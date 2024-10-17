@@ -91,7 +91,7 @@ Certains nombres n'admettent pas une écriture binaire **finie**. Or la mémoire
 
 **Remarque :** parmi les nombres décimaux à un chiffre après la virgule (0,1  0,2  0,3 ...) seul 0,5 admet une écriture binaire finie ! Tous les autres ont une représentation en machine qui n'en donne qu'une valeur approchée.
 
-## 2. Norme IEE754
+## 2. Norme IEE754  (Hors programme)
 
 ### a. Notation scientifique
 
@@ -118,33 +118,33 @@ De même, en notation binaire, tout nombre s’exprime sous la forme $\pm a \tim
 ### b. Représentation des nombres à virgule en binaire sur n bits
 
 !!! abstract "Principe de la [norme IEE754](https://fr.wikipedia.org/wiki/IEEE_754)"
-    On utilise la notation scientifique en binaire $(-1)^s \times 1,m \times 2^{p-127}$.<br />
+    On utilise la notation scientifique en binaire $(-1)^s \times 1,m \times 2^{p+127}$.<br />
     Pour une représentation sur 32 bits (en simple précision),<br />
     - le bit de poids fort (à gauche) donne le _signe_ 0 pour positif et 1 pour négatif<br />
-    - Les 8 bits suivants pour _exposant_, on représente l’entier relatif $p$ par $p-127$<br />
+    - Les 8 bits suivants pour _exposant_, l'exposant de la notation scientifique auquel on ajoute 127, pour avoir des valeurs uniquement positives<br />
     - les 23 bits suivant pour partie après la virgule de la _mantisse_
 
     ![norme IEE754](../data/IEE754vierge.png){: .center}
 
 
-:question: Trouver la représentation en norme IEE754 sur 32 bits de $(1011, 0111 101)_2$ soit $(11,4765625)_10$
+:question: Trouver la représentation en norme IEE754 sur 32 bits de $(1011, 0111 101)_2$ soit $(11,4765625)_{10}$
 ??? "Réponse"
     1. On transforme en notation scientifique : $1,011 0111 101 * 2^3$<br />
-    2. On ajoute l'exposant, ici 127 : $1,011 0111 101 * 2^130$<br />
-    3. On écrit l'exposant en base 2 : $1,011 0111 101 * 2^10000010$<br />
+    2. On ajoute l'exposant, ici 127 : $1,011 0111 101 * 2^{130}$<br />
+    3. On écrit l'exposant en base 2 : $1,011 0111 101 * 2^{10000010}$<br />
     4. On pose notre bit de signe : $0$<br />
-    5. On isole notre exposant : 1000001<br />
-    6. Et nos 23 bits de mantisse : $ 01101111010000000000000$
+    5. On isole notre exposant : 10000010<br />
+    6. Et nos 23 bits de mantisse : $01101111010000000000000$
 
-:question: Trouver la représentation en norme IEE754 sur 32 bits de $(0, 0000001101)_2$ soit $(0.0126953125)_10$
+:question: Trouver la représentation en norme IEE754 sur 32 bits de $(0, 0000001101)_2$ soit $(0.0126953125)_{10}$
 ??? "Réponse"
 
     1. On transforme en notation scientifique : $1,101 * 2^{-7}$ <br />
-	2. On ajoute l'exposant, ici 127 : $1,101 * 2^120$<br />
-    3. On écrit l'exposant en base 2 : $1,101 * 2^01111000$<br />
+	2. On ajoute l'exposant, ici 127 : $1,101 * 2^{120}$<br />
+    3. On écrit l'exposant en base 2 : $1,101 * 2^{01111000}$<br />
     4. On pose notre bit de signe : $0$<br />
     5. On isole notre exposant : 01111000<br />
-    6. Et nos 23 bits de mantisse : $ 10100000000000000000000$
+    6. Et nos 23 bits de mantisse : $10100000000000000000000$
 
 :question: Trouver la représentation en binaire sur 32 bits de ``1  01111110 1111000000000000000000000``
 
@@ -168,7 +168,7 @@ De même, en notation binaire, tout nombre s’exprime sous la forme $\pm a \tim
 ??? "réponse"
 
     1. on code en binaire la partie entière : 10000000<br />
-    2. on passe en notation scientifique : $1.0 * 2^{7}<br />
+    2. on passe en notation scientifique : $1.0 * 2^{7}$<br />
     3. On ajoute l'exposant de précision : $1.0 * 2^{7+127} = 1.0 * 2^{134}$<br />
     4. On code l'exposant en binaire : $1.0 * 2^{10000110}$<br />
     5. le bit de signe est 0<br />
@@ -181,7 +181,7 @@ De même, en notation binaire, tout nombre s’exprime sous la forme $\pm a \tim
 
 ??? "réponse"
     1. on code en binaire 100000.11
-    2. on passe en notation scientifique : $1.0000011 * 2^{5}<br />
+    2. on passe en notation scientifique : $1.0000011 * 2^{5}$<br />
     3. On ajoute l'exposant de précision : $1.0000011  * 2^{5+127} = 1.0000011 * 2^{132}$<br />
     4. On code l'exposant en binaire : $1.0000011  * 2^{10000100}$<br />
     5. le bit de signe est 1, négatif<br />
@@ -194,7 +194,7 @@ De même, en notation binaire, tout nombre s’exprime sous la forme $\pm a \tim
     – L’**infini** : $\pm 11111111 00000000000000000000000$<br />
     – **NaN** : not a number : $\pm 11111111 01000000000000000000000$
 
-## 3. Comment faire des tests d'egalité sur les flottants ? 
+## 3. Comment faire des tests d'egalité sur les flottants ?  :heart:
 
 Première réponse : ON N'EN FAIT PAS.
 
@@ -245,3 +245,28 @@ renverra
 ```
 a et b sont égaux
 ``` 
+
+Par ailleurs la bibliothèque math de Python inclut à cet effet la fonction ``math.isclose()``.
+```python
+>>> from math import isclose
+>>> isclose(0.2 + 0.1, 0.3)
+True
+```
+
+!!! info "un autre bug"
+
+    Source : [Formation ISN 2018 Lyon - Pascal Busac et Brice Portier - Licence CC BY NC SA](https://math.univ-lyon1.fr/irem/Formation_ISN/formation_representation_information/nombre/codage_numeriques_des_nombres.html)
+
+    ![plateforme](../data/ima2.png){: width=30% .center}
+
+    23 août 1991, au large de la Norvège : [premier tremblement de terre causé par un bug informatique](https://fr.wikipedia.org/wiki/Champ_gazier_de_Sleipner) : la base en béton destinée à supporter la plate-forme Sleipner a coulé.
+
+    Approximation de calcul dans le logiciel de dessin des ballasts.<br/>
+    :arrow_down:<br/>
+    Sous-estimation de 47% de l’épaisseur des parois des ballasts.<br/>
+    :arrow_down:<br/>
+    A 65m de profondeur, rupture d’un des ballasts.<br/>
+	:arrow_down:<br/>
+    La plate-forme (90 000 tonnes) coule et se brise à 220m de profondeur.<br/>
+	:arrow_down:<br/>
+    Séisme de magnitude 3 sur l’échelle de Richter.

@@ -1369,13 +1369,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-norme-iee754" class="md-nav__link">
+  <a href="#2-norme-iee754-hors-programme" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Norme IEE754
+      2. Norme IEE754 (Hors programme)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Norme IEE754">
+    <nav class="md-nav" aria-label="2. Norme IEE754 (Hors programme)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -4306,7 +4306,7 @@ Et certains nombres ont une écriture binaire infinie périodique, alors même q
 <span class="mf">0.30000000000000004</span>
 </code></pre></div>
 <p><strong>Remarque :</strong> parmi les nombres décimaux à un chiffre après la virgule (0,1  0,2  0,3 ...) seul 0,5 admet une écriture binaire finie ! Tous les autres ont une représentation en machine qui n'en donne qu'une valeur approchée.</p>
-<h2 id="2-norme-iee754">2. Norme IEE754<a class="headerlink" href="#2-norme-iee754" title="Permanent link">⚓︎</a></h2>
+<h2 id="2-norme-iee754-hors-programme">2. Norme IEE754  (Hors programme)<a class="headerlink" href="#2-norme-iee754-hors-programme" title="Permanent link">⚓︎</a></h2>
 <h3 id="a-notation-scientifique">a. Notation scientifique<a class="headerlink" href="#a-notation-scientifique" title="Permanent link">⚓︎</a></h3>
 <p>En notation décimale, elle consiste à exprimer le nombre sous la forme <span class="arithmatex">\(\pm a \times 10^n\)</span> où <span class="arithmatex">\(\pm\)</span> est appelé <em>signe</em>, <span class="arithmatex">\(a\)</span> est un nombre décimal de l’intervalle <span class="arithmatex">\([1 , 10[\)</span> appelé <em>mantisse</em> (ou significande) et <span class="arithmatex">\(n\)</span> est un entier relatif appelé <em>exposant</em>.</p>
 <p><img alt="❓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2753.svg" title=":question:" /> Quel est la notation scientifique de <span class="arithmatex">\(105,745\)</span></p>
@@ -4333,35 +4333,35 @@ Et certains nombres ont une écriture binaire infinie périodique, alors même q
 <h3 id="b-representation-des-nombres-a-virgule-en-binaire-sur-n-bits">b. Représentation des nombres à virgule en binaire sur n bits<a class="headerlink" href="#b-representation-des-nombres-a-virgule-en-binaire-sur-n-bits" title="Permanent link">⚓︎</a></h3>
 <div class="admonition abstract">
 <p class="admonition-title">Principe de la <a href="https://fr.wikipedia.org/wiki/IEEE_754">norme IEE754</a></p>
-<p>On utilise la notation scientifique en binaire <span class="arithmatex">\((-1)^s \times 1,m \times 2^{p-127}\)</span>.<br />
+<p>On utilise la notation scientifique en binaire <span class="arithmatex">\((-1)^s \times 1,m \times 2^{p+127}\)</span>.<br />
 Pour une représentation sur 32 bits (en simple précision),<br />
 - le bit de poids fort (à gauche) donne le <em>signe</em> 0 pour positif et 1 pour négatif<br />
-- Les 8 bits suivants pour <em>exposant</em>, on représente l’entier relatif <span class="arithmatex">\(p\)</span> par <span class="arithmatex">\(p-127\)</span><br />
+- Les 8 bits suivants pour <em>exposant</em>, l'exposant de la notation scientifique auquel on ajoute 127, pour avoir des valeurs uniquement positives<br />
 - les 23 bits suivant pour partie après la virgule de la <em>mantisse</em></p>
 <p><img alt="norme IEE754" class="center" src="../../data/IEE754vierge.png" /></p>
 </div>
-<p><img alt="❓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2753.svg" title=":question:" /> Trouver la représentation en norme IEE754 sur 32 bits de <span class="arithmatex">\((1011, 0111 101)_2\)</span> soit <span class="arithmatex">\((11,4765625)_10\)</span></p>
+<p><img alt="❓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2753.svg" title=":question:" /> Trouver la représentation en norme IEE754 sur 32 bits de <span class="arithmatex">\((1011, 0111 101)_2\)</span> soit <span class="arithmatex">\((11,4765625)_{10}\)</span></p>
 <details>
 <summary>Réponse</summary>
 <ol>
 <li>On transforme en notation scientifique : <span class="arithmatex">\(1,011 0111 101 * 2^3\)</span><br /></li>
-<li>On ajoute l'exposant, ici 127 : <span class="arithmatex">\(1,011 0111 101 * 2^130\)</span><br /></li>
-<li>On écrit l'exposant en base 2 : <span class="arithmatex">\(1,011 0111 101 * 2^10000010\)</span><br /></li>
+<li>On ajoute l'exposant, ici 127 : <span class="arithmatex">\(1,011 0111 101 * 2^{130}\)</span><br /></li>
+<li>On écrit l'exposant en base 2 : <span class="arithmatex">\(1,011 0111 101 * 2^{10000010}\)</span><br /></li>
 <li>On pose notre bit de signe : <span class="arithmatex">\(0\)</span><br /></li>
-<li>On isole notre exposant : 1000001<br /></li>
-<li>Et nos 23 bits de mantisse : $ 01101111010000000000000$</li>
+<li>On isole notre exposant : 10000010<br /></li>
+<li>Et nos 23 bits de mantisse : <span class="arithmatex">\(01101111010000000000000\)</span></li>
 </ol>
 </details>
-<p><img alt="❓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2753.svg" title=":question:" /> Trouver la représentation en norme IEE754 sur 32 bits de <span class="arithmatex">\((0, 0000001101)_2\)</span> soit <span class="arithmatex">\((0.0126953125)_10\)</span></p>
+<p><img alt="❓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2753.svg" title=":question:" /> Trouver la représentation en norme IEE754 sur 32 bits de <span class="arithmatex">\((0, 0000001101)_2\)</span> soit <span class="arithmatex">\((0.0126953125)_{10}\)</span></p>
 <details>
 <summary>Réponse</summary>
 <ol>
 <li>On transforme en notation scientifique : <span class="arithmatex">\(1,101 * 2^{-7}\)</span> <br /></li>
-<li>On ajoute l'exposant, ici 127 : <span class="arithmatex">\(1,101 * 2^120\)</span><br /></li>
-<li>On écrit l'exposant en base 2 : <span class="arithmatex">\(1,101 * 2^01111000\)</span><br /></li>
+<li>On ajoute l'exposant, ici 127 : <span class="arithmatex">\(1,101 * 2^{120}\)</span><br /></li>
+<li>On écrit l'exposant en base 2 : <span class="arithmatex">\(1,101 * 2^{01111000}\)</span><br /></li>
 <li>On pose notre bit de signe : <span class="arithmatex">\(0\)</span><br /></li>
 <li>On isole notre exposant : 01111000<br /></li>
-<li>Et nos 23 bits de mantisse : $ 10100000000000000000000$</li>
+<li>Et nos 23 bits de mantisse : <span class="arithmatex">\(10100000000000000000000\)</span></li>
 </ol>
 </details>
 <p><img alt="❓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2753.svg" title=":question:" /> Trouver la représentation en binaire sur 32 bits de <code>1  01111110 1111000000000000000000000</code></p>
@@ -4388,7 +4388,7 @@ Pour une représentation sur 32 bits (en simple précision),<br />
 <summary>réponse</summary>
 <ol>
 <li>on code en binaire la partie entière : 10000000<br /></li>
-<li>on passe en notation scientifique : $1.0 * 2^{7}<br /></li>
+<li>on passe en notation scientifique : <span class="arithmatex">\(1.0 * 2^{7}\)</span><br /></li>
 <li>On ajoute l'exposant de précision : <span class="arithmatex">\(1.0 * 2^{7+127} = 1.0 * 2^{134}\)</span><br /></li>
 <li>On code l'exposant en binaire : <span class="arithmatex">\(1.0 * 2^{10000110}\)</span><br /></li>
 <li>le bit de signe est 0<br /></li>
@@ -4402,7 +4402,7 @@ Pour une représentation sur 32 bits (en simple précision),<br />
 <summary>réponse</summary>
 <ol>
 <li>on code en binaire 100000.11</li>
-<li>on passe en notation scientifique : $1.0000011 * 2^{5}<br /></li>
+<li>on passe en notation scientifique : <span class="arithmatex">\(1.0000011 * 2^{5}\)</span><br /></li>
 <li>On ajoute l'exposant de précision : <span class="arithmatex">\(1.0000011  * 2^{5+127} = 1.0000011 * 2^{132}\)</span><br /></li>
 <li>On code l'exposant en binaire : <span class="arithmatex">\(1.0000011  * 2^{10000100}\)</span><br /></li>
 <li>le bit de signe est 1, négatif<br /></li>
@@ -4417,7 +4417,7 @@ Pour une représentation sur 32 bits (en simple précision),<br />
 – L’<strong>infini</strong> : <span class="arithmatex">\(\pm 11111111 00000000000000000000000\)</span><br />
 – <strong>NaN</strong> : not a number : <span class="arithmatex">\(\pm 11111111 01000000000000000000000\)</span></p>
 </div>
-<h2 id="3-comment-faire-des-tests-degalite-sur-les-flottants">3. Comment faire des tests d'egalité sur les flottants ?<a class="headerlink" href="#3-comment-faire-des-tests-degalite-sur-les-flottants" title="Permanent link">⚓︎</a></h2>
+<h2 id="3-comment-faire-des-tests-degalite-sur-les-flottants">3. Comment faire des tests d'egalité sur les flottants ?  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /><a class="headerlink" href="#3-comment-faire-des-tests-degalite-sur-les-flottants" title="Permanent link">⚓︎</a></h2>
 <p>Première réponse : ON N'EN FAIT PAS.</p>
 <p>Si <code>a</code> et <code>b</code> sont deux flottants, le test classique</p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span> <span class="p">:</span>
@@ -4454,6 +4454,26 @@ Pour une représentation sur 32 bits (en simple précision),<br />
 <p>renverra
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>a et b sont égaux
 </code></pre></div></p>
+<p>Par ailleurs la bibliothèque math de Python inclut à cet effet la fonction <code>math.isclose()</code>.
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">isclose</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">isclose</span><span class="p">(</span><span class="mf">0.2</span> <span class="o">+</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">)</span>
+<span class="kc">True</span>
+</code></pre></div></p>
+<div class="admonition info">
+<p class="admonition-title">un autre bug</p>
+<p>Source : <a href="https://math.univ-lyon1.fr/irem/Formation_ISN/formation_representation_information/nombre/codage_numeriques_des_nombres.html">Formation ISN 2018 Lyon - Pascal Busac et Brice Portier - Licence CC BY NC SA</a></p>
+<p><img alt="plateforme" class="center" src="../../data/ima2.png" width="30%" /></p>
+<p>23 août 1991, au large de la Norvège : <a href="https://fr.wikipedia.org/wiki/Champ_gazier_de_Sleipner">premier tremblement de terre causé par un bug informatique</a> : la base en béton destinée à supporter la plate-forme Sleipner a coulé.</p>
+<p>Approximation de calcul dans le logiciel de dessin des ballasts.<br/>
+<img alt="⬇" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b07.svg" title=":arrow_down:" /><br/>
+Sous-estimation de 47% de l’épaisseur des parois des ballasts.<br/>
+<img alt="⬇" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b07.svg" title=":arrow_down:" /><br/>
+A 65m de profondeur, rupture d’un des ballasts.<br/>
+<img alt="⬇" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b07.svg" title=":arrow_down:" /><br/>
+La plate-forme (90 000 tonnes) coule et se brise à 220m de profondeur.<br/>
+<img alt="⬇" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b07.svg" title=":arrow_down:" /><br/>
+Séisme de magnitude 3 sur l’échelle de Richter.</p>
+</div>
 
 
 
