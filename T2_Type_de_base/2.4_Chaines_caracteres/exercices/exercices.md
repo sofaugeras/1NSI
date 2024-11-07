@@ -96,7 +96,7 @@
         ```python
         def somme_chiffres(n):
             # YOUR CODE HERE
-            raise NotImplementedError()
+            pass
         ```
         ```python
         assert somme_chiffres(125)==8

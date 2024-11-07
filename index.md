@@ -7,11 +7,12 @@
     
 !!! info "Entraînement :running: "
     Vous trouverez ci dessous quelques sites pour vous entrainez en Python<br />
+    - :hearts: [Codex](https://codex.forge.apps.education.fr/)<br />
     - [e-nsi](https://e-nsi.forge.aeif.fr/init_python/){. target="_blank"}<br />
     - [cercles informatiques](https://cscircles.cemc.mkduwaterloo.ca/fr/){. target="_blank"}<br />
     - [France IOI](https://www.france-ioi.org/algo/chapters.php){. target="_blank"}<br />
     - [Pyrates](https://py-rates.fr/){. target="_blank"}<br />
-    - [Codex](https://codex.forge.apps.education.fr/)<br />
+    
 
 !!! note "*Thèmes traités*"
     - [Thème 1 : Démarrer en Python](./T1_Demarrer_en_Python/sommaire.md)<br />
