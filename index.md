@@ -5,8 +5,8 @@
 
     :bulb: En cours [Projet 1 : site web](./T8_Projets/1_SiteWeb/cours.md) pour le **Jeudi 14 novembre 2024**
 
-!!! warning "Fiche Méento python"
-    le mémento Python est disponible ici : :snake:[mémento Python](./data/mementopython3.pdf)
+!!! warning "Mémo python"
+    le mémento Python est disponible ici : :snake: [mémento Python](./data/mementopython3.pdf)
 
 !!! info "Entraînement :running: "
     Vous trouverez ci dessous quelques sites pour vous entrainez en Python<br />
