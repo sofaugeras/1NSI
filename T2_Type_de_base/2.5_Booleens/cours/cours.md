@@ -197,38 +197,45 @@ Notation usuelle en électronique : $Q=\neg A$
 False
 ```
 
+### 2.4 Exercices
 
-### Exercice 1
+!!! question "Exercice 1"
+    Comprendre ce mème :
+    ![image](data/drake.webp){: .center width=50%}
 
-Comprendre ce mème :
-![image](data/drake.webp){: .center width=50%}
+!!! question "Exercice 2"
+    === "Enoncé"
+        Il existe une propriété appelé la distributivité en logique formelle.
+        !!! note "Distributivité" 
+            a et (b ou c) = (a et b) ou (a et c) <br />
+            a ou (b et c) = (a ou b) et (a ou c)
+        Démontrer les deux égalités de la distributivité à l’aide des tables de vérité suivantes 
+        ![distributivité](data/distributivité.png){: .center}
 
-### Exercice 2
-Il existe une propriété appelé la distributivité en logique formelle.
-!!! note "Distributivité" 
-    a et (b ou c) = (a et b) ou (a et c) <br />
-    a ou (b et c) = (a ou b) et (a ou c)
+    === "Correction"
 
-Démontrer les deux égalités de la distributivité à l’aide des tables de vérité suivantes 
-![distributivité](data/distributivité.png){: .center}
 
-### Exercice 3 
-Le mathématicien britannique *Auguste de Morgan* (1806–1871) a également contribué à développer l’algèbre de Boole à l’aide de son théorème :
-!!! note "Loi de Morgan"
-    non (a ou b) = (non a) et (non b) <br />
-    non (a et b) = (non a) ou (non b)
-Démontrer ce théorème à l’aide des tables ci-dessous :
-![loi de morgan](data/morgan.png){: .center}
 
-### Exercice 4
-1. Ouvrir le [simulateur de circuits](http://dept-info.labri.fr/ENSEIGNEMENT/archi/circuits/blank-teacher.html){. target="_blank"} et créer pour chaque opération AND, OR, NOT un circuit électrique illustrant ses propriétés.
+!!! question "Exercice 3" 
+    === "Enoncé"
+        Le mathématicien britannique *Auguste de Morgan* (1806–1871) a également contribué à développer l’algèbre de Boole à l’aide de son théorème :
+        !!! note "Loi de Morgan"
+            non (a ou b) = (non a) et (non b) <br />
+            non (a et b) = (non a) ou (non b)
+        Démontrer ce théorème à l’aide des tables ci-dessous :
+        ![loi de morgan](data/morgan.png){: .center}
 
-Exemple (inintéressant) de circuit :
-![](data/ex_circuit.png){: .center}
+    === "Correction"
 
-2. Utiliser successivement les circuits XOR, NAND et NOR et établir pour chacun leur table de vérité.
+!!! question "Exercice 4" 
+    === "Enoncé"
+        1. Ouvrir le [simulateur de circuits](https://dcaclab.com/sl/lab){. target="_blank"} et créer pour chaque opération AND, OR, NOT un circuit électrique illustrant ses propriétés.
 
-____________
+        Exemple (inintéressant) de circuit :
+        ![](data/ex_circuit.png){: .center}
+
+        2. Utiliser successivement les circuits XOR, NAND et NOR et établir pour chacun leur table de vérité.
+
 
 ## 3. Fonctions composées
 
@@ -294,48 +301,51 @@ Mais en refaisant un XOR du message chiffré avec la clé $y$, on retrouve donc 
 Il est temps de se reposer un peu et d'admirer cette vidéo :
 ![](data/watergates.gif){: .center}
 
-### Remarque :
+#### Remarque :
 Les fonctions NAND ET NOR sont dites **universelles** : chacune d'entre elles peut générer l'intégralité des autres portes logiques. Il est donc possible de coder toutes les opérations uniquement avec des NAND (ou uniquement avec des NOR).
 Voir [Wikipedia](https://fr.wikipedia.org/wiki/Fonction_NON-ET)
 
-### Exercice 5
-Calculer les opérations suivantes.
+!!! question "Exercice 5"
+    === "Enoncé"
+        Calculer les opérations suivantes.
 
+        ```python
+        1011011
+        &  1010101
+        ----------
+        
 
-```python
-   1011011
-&  1010101
-----------
-   
+        1011011
+        |  1010101
+        ----------
+        
 
-   1011011
-|  1010101
-----------
-   
+        1011011
+        ^  1010101
+        ----------
+        
+        ```
 
-   1011011
-^  1010101
-----------
-   
-```
+    === "solution"
 
-??? tip "solution"
-    ```python
-     1011011
-    &1010101
-    ----------
-     1010001
-    
-     1011011
-    |1010101
-    ----------
-     1011111
-    
-     1011011
-    ^1010101
-    ----------
-     0001110
-    ```
+        ```python
+
+        1011011
+        &1010101
+        ----------
+        1010001
+        
+        1011011
+        |1010101
+        ----------
+        1011111
+        
+        1011011
+        ^1010101
+        ----------
+        0001110
+        
+        ```
 
 ### 3.4 Calculs en Python
 les opérateurs `&`, `|` et `^` sont utilisables directement en Python
@@ -384,47 +394,45 @@ Pour comprendre ces résultats, il faut travailler en binaire. Voici les mêmes 
 ```
 
 
-### Exercice 6 : préparation du pydéfi
-Objectif : chiffrer (= crypter) le mot "BONJOUR" avec la clé (de même taille) "MAURIAC".  
+!!! question "Exercice 6 : préparation du pydéfi"
+    === "Enoncé"
+        Objectif : chiffrer (= crypter) le mot "BONJOUR" avec la clé (de même taille) "MAURIAC".  
 
-Protocole de chiffrage : XOR entre le code ASCII des lettres de même position.
+        Protocole de chiffrage : XOR entre le code ASCII des lettres de même position.
+    === "Solution"
 
-??? question "Solution"
+        ```python 
+        msg = "BONJOUR"
+        cle = "MAURIAC"
 
-    ```python 
-    msg = "BONJOUR"
-    cle = "MAURIAC"
+        def crypte_lettre(lm, lc):
+            a = ord(lm)
+            b = ord(lc)
+            c = a^b
+            lettre = chr(c)
 
-    def crypte_lettre(lm, lc):
-        a = ord(lm)
-        b = ord(lc)
-        c = a^b
-        lettre = chr(c)
+            return lettre
 
-        return lettre
+        def crypte_mot(mot1, mot2):
+            mot3 = ""
+            for i in range(len(mot1)):
+                car = crypte_lettre(mot1[i],mot2[i])
+                mot3 = mot3 + car
+            return mot3
 
-    def crypte_mot(mot1, mot2):
-        mot3 = ""
-        for i in range(len(mot1)):
-            car = crypte_lettre(mot1[i],mot2[i])
-            mot3 = mot3 + car
-        return mot3
+        crypte_mot(msg, cle)
+        '\x0f\x0e\x1b\x18\x06\x14\x11'
+        ```
 
-    crypte_mot(msg, cle)
-    '\x0f\x0e\x1b\x18\x06\x14\x11'
-    ```
-
-### Exercice 7 (facultatif)
-
-:bulb: Résolvez le pydéfi [la clé endommagée](https://pydefis.callicode.fr/defis/C22_MasqueJetableDate/txt){. target="_blank"}
+!!! question "Exercice 7 (facultatif)"
+    === "Enoncé"
+        :bulb: Résolvez le pydéfi [la clé endommagée](https://pydefis.callicode.fr/defis/C22_MasqueJetableDate/txt){. target="_blank"}
         
-??? question "Solution" 
-s    *solution :*
-
-    [lien](https://gist.github.com/glassus/7aef2c4cbed5097e1857ecc851b7b740)
+    === "Solution" 
+        *solution :* [lien](https://gist.github.com/glassus/7aef2c4cbed5097e1857ecc851b7b740)
 
 
-### Complément : propriétés des opérateurs logiques
+#### Complément : propriétés des opérateurs logiques
 
 Les propriétés suivantes sont facilement démontrables à l'aide de tables de vérités: *(source : G.Connan)*
 

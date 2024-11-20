@@ -1,4 +1,4 @@
-# 3.3 Architecture d'un réseau
+# 4.2 Architecture d'un réseau
 
 ![image](data/BO.png){: .center}
 
@@ -6,7 +6,15 @@
     - [Gilles Lassus](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.3_Architecture_reseau/cours/)
 
 Ce cours a pour but de présenter la constitution classique d'un réseau, et les équipements associés. La partie relative aux protocoles utilisés lors des échanges entre deux machines est détaillée dans le cours sur les protocoles de communication.
+<br />
+▶️ Regarder la vidéo de présentation :
+[Vidéo Introduction](https://www.youtube.com/watch?v=dCknqcjcItU){ .md-button }
+<br />
+▶️ Regarder la vidéo réalisée par Charles Poulmaire :⚓︎
+[Vidéo D'introduction](https://www.lumni.fr/video/l-architecture-des-reseaux-et-les-protocoles-de-communications){ .md-button }
 
+👉 Diaporama de la vidéo à télécharger : [Télécharger PDF ⬇️](./data/diaporama_RESEAU.pdf){ .md-button }
+]
 ### 1. Premier réseau local
 
 > [lien](https://www.lernsoftware-filius.de/downloads/Setup/filius_1.9.0_all.deb) de téléchargement de Filius sous Linux
@@ -19,7 +27,6 @@ Testons le ```ping``` de la machine ```192.168.0.1```  vers la machine ```192.16
 
 ??? tip "Résultat du ping"
     ![](data/ft1.png){: .center}
-
 
 
 #### 1.1. La carte réseau et son adresse MAC
