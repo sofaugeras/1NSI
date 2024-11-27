@@ -5,7 +5,7 @@
 
 Les exercices ci dessous sont des révisions d'algorithmie et reprennent également ce que vous avez vu sur les listes.
 
-Vous pouvez télécharger le fichier [notebook d'exercice](data/Exercices_specifications.ipynb).
+Vous pouvez télécharger le fichier [notebook d'exercice](./data/Exercices_specifications.ipynb).
 
 !!! note "Exercice 1"
     === "Enoncé"

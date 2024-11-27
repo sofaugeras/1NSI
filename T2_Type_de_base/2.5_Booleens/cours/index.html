@@ -2815,6 +2815,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../T5_Algorithmique/5.2_Complexite/turing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    La machine de Turing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../T5_Algorithmique/5.2_Complexite/cours/" class="md-nav__link">
         
   
@@ -4307,24 +4328,24 @@ les cas possibles et les regrouper dans un tableau appelé <strong>table de vér
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">F</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
 </tr>
 <tr>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">F</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
 </tr>
 <tr>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">F</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
 </tr>
 <tr>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
 </tr>
 </tbody>
 </table>
@@ -4368,7 +4389,6 @@ Mais observez maintenant ce code :</p>
 <li>notation mathématique :  <span class="arithmatex">\(+\)</span></li>
 </ul>
 <p>C'est l'opération définie par:</p>
-<p>C'est l'opération définie par:</p>
 <ul>
 <li><code>x | V = V</code></li>
 <li><code>x | F = x</code></li>
@@ -4386,24 +4406,24 @@ Mais observez maintenant ce code :</p>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">F</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
 </tr>
 <tr>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
 </tr>
 <tr>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">V</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
 </tr>
 <tr>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
 </tr>
 </tbody>
 </table>
@@ -4449,12 +4469,12 @@ Mais observez maintenant ce code :</p>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">V</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
 </tr>
 <tr>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">F</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
 </tr>
 </tbody>
 </table>
@@ -4511,17 +4531,16 @@ non (a et b) = (non a) ou (non b)</p>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Exercice 4</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Enoncé</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Enoncé</label><label for="__tabbed_3_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<ol>
-<li>Ouvrir le <a class="" href="https://dcaclab.com/sl/lab" target="_blank">simulateur de circuits</a> et créer pour chaque opération AND, OR, NOT un circuit électrique illustrant ses propriétés.</li>
-</ol>
+<p>Ouvrir le <a class="" href="https://dcaclab.com/sl/lab" target="_blank">simulateur de circuits</a> et créer pour chaque opération AND, OR, NOT un circuit électrique illustrant ses propriétés.</p>
 <p>Exemple (inintéressant) de circuit :
 <img alt="" class="center" src="../data/ex_circuit.png" /></p>
-<ol>
-<li>Utiliser successivement les circuits XOR, NAND et NOR et établir pour chacun leur table de vérité.</li>
-</ol>
+</div>
+<div class="tabbed-block">
+<p><img alt="ET" class="center" src="../data/ET.png" width="50%" />
+<img alt="OU" class="center" src="../data/OU.png" width="50%" /></p>
 </div>
 </div>
 </div>
@@ -4543,24 +4562,24 @@ non (a et b) = (non a) ou (non b)</p>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">F</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
 </tr>
 <tr>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
 </tr>
 <tr>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">V</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
 </tr>
 <tr>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">F</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
 </tr>
 </tbody>
 </table>
@@ -4585,24 +4604,24 @@ Mais en refaisant un XOR du message chiffré avec la clé <span class="arithmate
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">V</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
 </tr>
 <tr>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
 </tr>
 <tr>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">V</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
 </tr>
 <tr>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">F</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
 </tr>
 </tbody>
 </table>
@@ -4622,24 +4641,24 @@ Mais en refaisant un XOR du message chiffré avec la clé <span class="arithmate
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">V</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
 </tr>
 <tr>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">F</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
 </tr>
 <tr>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">F</td>
-<td style="text-align: center;">F</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
 </tr>
 <tr>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">V</td>
-<td style="text-align: center;">F</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
 </tr>
 </tbody>
 </table>

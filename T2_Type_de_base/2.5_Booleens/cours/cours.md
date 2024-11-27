@@ -47,10 +47,10 @@ les cas possibles et les regrouper dans un tableau appelé **table de vérité**
 !!! abstract "Table de vérité de AND :heart:"
     |`x`| `y` | `x & y`|
     |:--:|:-:|:--:|
-    |F|F|F|
-    |F|V|F|
-    |V|F|F|
-    |V|V|V|
+    |0|0|0|
+    |0|1|0|
+    |1|0|0|
+    |1|1|1|
 
 
 On représente souvent les opérateurs booléens à l'aide de portes logiques:
@@ -113,9 +113,6 @@ On appelle **évaluation paresseuse** le fait que l'interpréteur Python s'arrê
 
 C'est l'opération définie par:
 
-
-C'est l'opération définie par:
-
 * `x | V = V`
 * `x | F = x`
 
@@ -125,10 +122,10 @@ On en déduit la table suivante:
 !!! abstract "Table de vérité de OR :heart:"
     |`x`| `y` | `x or y`|
     |:--:|:----:|:--:|
-    |F|F| F|
-    |F|V|V|
-    |V|F|V|
-    |V|V|V|
+    |0|0|0|
+    |0|1|1|
+    |1|0|1|
+    |1|1|1|
 
 
 
@@ -179,8 +176,8 @@ On en déduit la table suivante:
 !!! abstract "Table de vérité de NOT :heart:"
     |`x`| `~x` |
     |:--:|:----:|
-    |F|V|
-    |V|F|
+    |0|1|
+    |1|0|
 
 ![](data/porte_non.png){: .center}
 
@@ -229,12 +226,13 @@ False
 
 !!! question "Exercice 4" 
     === "Enoncé"
-        1. Ouvrir le [simulateur de circuits](https://dcaclab.com/sl/lab){. target="_blank"} et créer pour chaque opération AND, OR, NOT un circuit électrique illustrant ses propriétés.
+        Ouvrir le [simulateur de circuits](https://dcaclab.com/sl/lab){. target="_blank"} et créer pour chaque opération AND, OR, NOT un circuit électrique illustrant ses propriétés.
 
         Exemple (inintéressant) de circuit :
         ![](data/ex_circuit.png){: .center}
-
-        2. Utiliser successivement les circuits XOR, NAND et NOR et établir pour chacun leur table de vérité.
+    === "Correction"
+        ![ET](./data/ET.png){: width=50% .center}
+        ![OU](./data/OU.png){: width=50% .center}
 
 
 ## 3. Fonctions composées
@@ -249,10 +247,10 @@ En français, quand on dit “fromage ou dessert”, c’est l’un ou l’autre
 !!! abstract "Table de vérité de XOR :heart:"
     |`x`| `y` | `x ^ y`|
     |:--:|:----:|:--:|
-    |F|F| F|
-    |F|V|V|
-    |V|F|V|
-    |V|V|F|
+    |0|0|0|
+    |0|1|1|
+    |1|0|1|
+    |1|1|0|
 
 
 ![](data/porte_xor.png){: .center}
@@ -272,10 +270,10 @@ Mais en refaisant un XOR du message chiffré avec la clé $y$, on retrouve donc 
 !!! abstract "Table de vérité de NAND :heart:"
     |`x`| `y` | `x ↑ y`|
     |:--:|:----:|:--:|
-    |F|F| V|
-    |F|V|V|
-    |V|F|V|
-    |V|V|F|
+    |0|0|1|
+    |0|1|1|
+    |1|0|1|
+    |1|1|0|
 
 
 
@@ -289,10 +287,10 @@ Mais en refaisant un XOR du message chiffré avec la clé $y$, on retrouve donc 
 !!! abstract "Table de vérité de NOR :heart:"
     |`x`| `y` | `x ↓ y`|
     |:--:|:----:|:--:|
-    |F|F| V|
-    |F|V|F|
-    |V|F|F|
-    |V|V|F|
+    |0|0|1|
+    |0|1|0|
+    |1|0|0|
+    |1|1|0|
 
 
 
