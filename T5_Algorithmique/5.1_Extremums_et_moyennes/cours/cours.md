@@ -24,8 +24,6 @@
   8
 ```
 
-
-
 ## 2. Algorithme de calcul de moyenne
 
 !!! note "Calcul de moyenne :heart:"
@@ -39,7 +37,6 @@
         return somme / len(tab)
     ```
 
-   
 **Utilisation :**
 ```python
 >>> moyenne([4, 3, 8, 1])

@@ -56,6 +56,8 @@ En NSI, nous nous contenterons d'estimer (lorsque cela est possible) le nombre d
 
 Nous observerons surtout comment évolue ce temps d'exécution en fonction de la taille des données passées en paramètre (la taille d'une liste, par exemple). Cela nous permettra dans ce cours de classer nos algorithmes en deux catégories : les algorithmes de complexité **linéaire** et ceux de complexité **quadratique**.
 
+[Télécharger Notebook :arrow_down:](./data/02_Complexite.ipynb){ .md-button .md-button--primary }
+
 ## 1. Complexité linéaire
 
 ### 1.1 Exemple 

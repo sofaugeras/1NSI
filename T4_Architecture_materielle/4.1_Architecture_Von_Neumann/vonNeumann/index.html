@@ -2749,7 +2749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../T5_Algorithmique/5.2_Complexite/turing/" class="md-nav__link">
+      <a href="../../../turing.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4392,8 +4392,10 @@ A gauche de l’écran (sous le mot Assembly) saisissez sur deux lignes les inst
 <p>A l’aide du jeu d’instructions, expliquez avec précision les informations que LMC a introduites dans la RAM quand vous avez enregistré votre programme (bouton submit)</p>
 <details class="question">
 <summary>solution</summary>
-<p>INP : Insère dans le registre 0, le codeop 901
-STA 20 : Store the value in the Accumulator in the memory address given, ici 20</p>
+<p>INP : Insère dans le registre 0, le codeop 901<br />
+STA 20 : Store the value in the Accumulator in the memory address given, ici 20<br /></p>
+</details>
+<p>Autre exemple : </p>
 <table>
 <thead>
 <tr>
@@ -4449,6 +4451,10 @@ STA 20 : Store the value in the Accumulator in the memory address given, ici 20<
 </tr>
 </tbody>
 </table>
+<p>Que fait ce programmme ?</p>
+<details class="question">
+<summary>proposition</summary>
+<p>Additionne 2 valeurs saisies en console et affiche le résultat</p>
 </details>
 <p>LMC vous montre la circulation des informations sous forme de petits ronds rouges et bleus car elles sont de deux natures bien distinctes. <img alt="👉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f449.svg" title=":point_right:" /> Expliquer</p>
 <details class="question">
@@ -4471,9 +4477,7 @@ STA 20 : Store the value in the Accumulator in the memory address given, ici 20<
 </ol>
 <p>La meilleure façon d'apprendre le LMC est d'exécuter progressivement un ensemble de codes, du plus simple au plus avancé, plutôt que de faire l'effort de comprendre pleinement le simulateur dès le début. C'est l'approche adoptée dans ce tutoriel.</p>
 <p><img alt="👉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f449.svg" title=":point_right:" /> A vous de jouer :</p>
-<ol>
-<li>Charger (INPUT) et réafficher une valeur</li>
-</ol>
+<p><strong>1 -</strong> Charger (INPUT) et réafficher une valeur</p>
 <details class="question">
 <summary>solution</summary>
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>INP 
@@ -4481,9 +4485,7 @@ STA 20
 OUT
 </code></pre></div>
 </details>
-<ol>
-<li>Charger 2 valeurs, calculer et afficher la somme des 2</li>
-</ol>
+<p><strong>2 -</strong> Charger 2 valeurs, calculer et afficher la somme des 2</p>
 <details class="question">
 <summary>solution</summary>
 <p><code>text 
@@ -4494,21 +4496,15 @@ STA 30
 LDA 20
 ADD 30
 OUT 
-HLT
-20    DAT
-30   DAT</code>text</p>
+HLT</code>text</p>
 </details>
-<ol>
-<li>Charger 3 valeurs, calculer et afficher la somme des 3</li>
-</ol>
+<p><strong>3 -</strong> Charger 3 valeurs, calculer et afficher la somme des 3</p>
 <details class="question">
 <summary>solution</summary>
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>
 </code></pre></div>
 </details>
-<ol>
-<li>Charger 2 valeurs et afficher la différence (1er – 2ème)</li>
-</ol>
+<p><strong>4 -</strong> Charger 2 valeurs et afficher la différence (1er – 2ème)</p>
 <details class="question">
 <summary>solution</summary>
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>INP 
@@ -4519,13 +4515,9 @@ LDA A
 SUB B 
 OUT 
 HLT
-A    DAT
-B    DAT
 </code></pre></div>
 </details>
-<ol>
-<li>Charger 2 valeurs et afficher la plus grande des deux</li>
-</ol>
+<p><strong>5 -</strong> Charger 2 valeurs et afficher la plus grande des deux</p>
 <details class="question">
 <summary>solution</summary>
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>INP 
@@ -4542,14 +4534,6 @@ isPositive LDA A
 HLT
 A    DAT
 B    DAT
-</code></pre></div>
-</details>
-<ol>
-<li>Charger 3 valeurs puis les afficher dans l’ordre croissant</li>
-</ol>
-<details class="question">
-<summary>solution</summary>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>
 </code></pre></div>
 </details>
 <p>👀 Observez vos programmes tourner et indiquez.</p>

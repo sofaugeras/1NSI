@@ -129,17 +129,24 @@ Chaque instruction machine est visible dans LMC en base 10 mais évidemment en b
 A l’aide du jeu d’instructions, expliquez avec précision les informations que LMC a introduites dans la RAM quand vous avez enregistré votre programme (bouton submit)
 
 ??? question "solution"
-    INP : Insère dans le registre 0, le codeop 901
-    STA 20 : Store the value in the Accumulator in the memory address given, ici 20
+    INP : Insère dans le registre 0, le codeop 901<br />
+    STA 20 : Store the value in the Accumulator in the memory address given, ici 20<br />
 
-    |Address |Mnemonic	|Machine Code	|Instruction	|What it does:|
+Autre exemple : 
+
+|Address |Mnemonic	|Machine Code	|Instruction	|What it does:|
     |:--|:--|:--|:--| :--|   	
     |00|	INP|	901|	Input a number and put it in the calculator|
     |01|	STA 99|	399	|Store the number in the calculator in memory slot 99|
     |02|	INP|	901|	Input a number and put it in the calculator|
     |03|	ADD 99|	199|	Add the number in memory slot 99 to the number in the calculator|
     |04|	OUT|	902	|Output the number which is now in the calculator|
-    |05|HLT|	000|	Halt|
+    |05|HLT|	000|	Halt|   
+
+Que fait ce programmme ?
+
+??? question "proposition"
+    Additionne 2 valeurs saisies en console et affiche le résultat
 
 LMC vous montre la circulation des informations sous forme de petits ronds rouges et bleus car elles sont de deux natures bien distinctes. :point_right: Expliquer
 
@@ -164,7 +171,8 @@ La meilleure façon d'apprendre le LMC est d'exécuter progressivement un ensemb
 
 :point_right: A vous de jouer :
 
-1. Charger (INPUT) et réafficher une valeur
+**1 -** Charger (INPUT) et réafficher une valeur
+
 ??? question "solution"	
     ```text
     INP 
@@ -172,7 +180,8 @@ La meilleure façon d'apprendre le LMC est d'exécuter progressivement un ensemb
     OUT
     ```
 
-2. Charger 2 valeurs, calculer et afficher la somme des 2
+**2 -** Charger 2 valeurs, calculer et afficher la somme des 2
+
 ??? question "solution"	
     ```text	
     INP 
@@ -183,16 +192,16 @@ La meilleure façon d'apprendre le LMC est d'exécuter progressivement un ensemb
     ADD 30
     OUT 
     HLT
-    20    DAT
-    30   DAT
     ```text
 
-3. Charger 3 valeurs, calculer et afficher la somme des 3
+**3 -** Charger 3 valeurs, calculer et afficher la somme des 3
+
 ??? question "solution"	
     ```text	
     ```
 
-4. Charger 2 valeurs et afficher la différence (1er – 2ème)
+**4 -** Charger 2 valeurs et afficher la différence (1er – 2ème)
+
 ??? question "solution"	
     ```text		
     INP 
@@ -203,11 +212,9 @@ La meilleure façon d'apprendre le LMC est d'exécuter progressivement un ensemb
     SUB B 
     OUT 
     HLT
-    A    DAT
-    B    DAT
     ```
 
-5. Charger 2 valeurs et afficher la plus grande des deux
+**5 -** Charger 2 valeurs et afficher la plus grande des deux
 ??? question "solution"	
     ```text		
 	INP 
@@ -224,10 +231,6 @@ La meilleure façon d'apprendre le LMC est d'exécuter progressivement un ensemb
     HLT
     A    DAT
     B    DAT
-    ```
-7. Charger 3 valeurs puis les afficher dans l’ordre croissant
-??? question "solution"	
-    ```text	
     ```
 
 👀 Observez vos programmes tourner et indiquez.
