@@ -17,7 +17,7 @@
     Pour le centenaire de sa naissance, nous vous proposons de faire un voyage dans le temps, en construisant votre propre ordinateur en papier, à la manière d’Alan Turing il y a 76 ans.
 
 !!! tldr "Pour résumé"
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/P66h8D5Lkwk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>{: .center}
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/P66h8D5Lkwk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <br />
     [La machine de Turing, une révolution des mathématiques et de l'informatique - Passe-science](https://www.youtube.com/watch?v=P66h8D5Lkwk)
 
