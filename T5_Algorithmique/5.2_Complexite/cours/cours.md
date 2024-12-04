@@ -318,9 +318,34 @@ On considère le script python suivant :
 !!! abstract
     === "Enoncé"
         On note `n!` le nombre entier défini par  `n! = n x (n - 1) x (n - 2) x … x 3 x 2 x 1`.  (on dira « n factorielle »)
-        > Calculer factorielle(4) et 4!, puis factorielle(7) et 7!
+
+        1. Calculer 4!, puis  7!
+        2. Ecrire la fonction python ``factorielle(n)`` qui prend en paramètre un entier et qui renvoie un entier correspondant au factoriel
+        3. Puis déterminer la correction de l'algorithme ``factorielle(n)``
     
-    === "Correction"
+    === "Algoritme"
+
+        ```python
+        def factorielle(n) :
+            '''
+            fonction impérative qui calcule la factorielle de n
+            @param n : int
+            @return : int
+            '''
+            if n>0 :
+                res = 1
+                for i in range(1, n+1) :
+                    res = res * i
+                return res
+            else : 
+                return "impossible"
+
+        assert factorielle(0) == 1
+        assert factorielle(1) == 1
+        assert factorielle(5) == 120
+        ```
+
+    === "terminaison et correction"
 
         • Terminaison:
         - Si n entre au clavier est négatif, le programme termine sur un message ("impossible").<br />
@@ -358,7 +383,7 @@ On considère le script python suivant :
         ```
         > A Faire : Donner la preuve de cet algorithme 
 
-    === "Correction"
+    === "terminaison et correction"
     
         • Terminaison:<br />
         - Si n entre au clavier n’est pas un entier positif ou nul le programme termine sur un message ("impossible").<br />
