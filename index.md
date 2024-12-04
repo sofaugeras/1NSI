@@ -1,7 +1,7 @@
 
 !!! abstract ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: En cours : [Thème 5 : Spécifications](./T5_Algorithmique/5.0_specifications/cours.md)<br />
-    A venir : [Thème 5 : Complexité](T5_algorithmique/5.2_complexite/cours.md)<br />
+    :arrow_forward: En cours : [Thème 5 : Complexité](./T5_Algorithmique/5.2_Complexite/cours.md)<br />
+    A venir : [Thème 5 : Spécifications](./T5_Algorithmique/5.0_specifications/cours.md)<br />
 
 !!! warning "Mémo python"
     le mémento Python est disponible ici : :snake: [mémento Python](./data/mementopython3.pdf)
