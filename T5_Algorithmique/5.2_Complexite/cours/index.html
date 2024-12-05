@@ -4592,13 +4592,14 @@ Si la boucle est donnée par la structure : Pour <code>i</code> allant de <code>
 <span class="sd">    @param n : int</span>
 <span class="sd">    @return : int</span>
 <span class="sd">    &#39;&#39;&#39;</span>
-    <span class="k">if</span> <span class="n">n</span><span class="o">&gt;</span><span class="mi">0</span> <span class="p">:</span>
-        <span class="n">res</span> <span class="o">=</span> <span class="mi">1</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">:</span>
-            <span class="n">res</span> <span class="o">=</span> <span class="n">res</span> <span class="o">*</span> <span class="n">i</span>
-        <span class="k">return</span> <span class="n">res</span>
-    <span class="k">else</span> <span class="p">:</span> 
-        <span class="k">return</span> <span class="s2">&quot;impossible&quot;</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">n</span><span class="o">&gt;=</span><span class="mi">0</span> <span class="p">:</span>
+        <span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">:</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="n">res</span> <span class="o">*</span> <span class="n">n</span>
+            <span class="n">n</span><span class="o">-=</span><span class="mi">1</span>
+    <span class="k">return</span> <span class="n">res</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">factorielle</span><span class="p">(</span><span class="mi">7</span><span class="p">))</span>
 
 <span class="k">assert</span> <span class="n">factorielle</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
 <span class="k">assert</span> <span class="n">factorielle</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
