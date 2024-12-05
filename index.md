@@ -1,7 +1,7 @@
 
 !!! abstract ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: En cours : [Thème 5 : Complexité](./T5_Algorithmique/5.2_Complexite/cours.md)<br />
-    A venir : [Thème 5 : Spécifications](./T5_Algorithmique/5.0_specifications/cours.md)<br />
+    :arrow_forward: En cours : [Thème 5 : Spécifications](./T5_Algorithmique/5.0_specifications/cours.md)<br />
+    A venir : [Thème 3 : Type Construit : les Listes](./T3_Type_construit/3.1_Listes/cours.md)<br />
 
 !!! warning "Mémo python"
     le mémento Python est disponible ici : :snake: [mémento Python](./data/mementopython3.pdf)
@@ -25,6 +25,7 @@
     - [Thème 2 : Type de base : chaines de caractères](./T2_Type_de_base/2.4_Chaines_caracteres/chaine.md)<br/>
     - [Thème 2 : Type de base : Booleens](./T2_Type_de_base/2.5_Booleens/cours.md)
     - [Thème 4 : Architecture matérielle : Architecture de von neumann](./T4_Architecture_materielle/4.1_Architecture_Von_Neumann/vonNeumann.md)
+    - [Thème 5 : Complexité](./T5_Algorithmique/5.2_Complexite/cours.md)
 
 <!--
 
@@ -32,9 +33,6 @@
     Chers élèves de Première  voilà les chapitres à revoir en priorité pour aborder sereinement l'année de Terminale en NSI :
     - Les listes, les tuples et les dictionnaires. À retrouver [ici](T3_Type_construit/sommaire.md){. target="_blank"}.
     - Le plus important : les chapitres suivants d'algorithmique, à retrouver [ici](T5_Algorithmique/sommaire.md){. target="_blank"} :
-        - Complexité
-        - Tris par sélection et insertion
-        - Dichotomie
 
     - [Thème 4 : Architecture matérielle : OS et commande Linux](T4_Architecture_materielle/4.4_Decouverte_des_commandes_Linux/cours.md)
     - [Thème 3 : Type Construit : les Listes](T3_Type_construit/3.1_Listes/cours.md)
@@ -44,6 +42,11 @@
     - [Projet CSV](./T8_Projets/2_ProjetCSV/cours.md)
     - [Thème 4 : Protocole de communication](./T4_Architecture_materielle/4.3_Protocoles_de_communication/cours.md)
     - [IHM sur le Web](./T7_IHM_Web/7.3_Get_Post_Formulaires/cours/)
+    - Traitement des données en table
     - [Algorithme Glouton](./T5_Algorithmique/5.6_Algorithmes_gloutons/cours.md)
+    - mini projet glouton
+    - Knn
+    - tris
+    - dichotomie
 
 -->

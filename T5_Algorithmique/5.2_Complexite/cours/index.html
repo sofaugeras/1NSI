@@ -2661,27 +2661,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../turing.md" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    La machine de Turing
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -2880,6 +2859,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-p-np" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. P = NP
+    </span>
+  </a>
   
 </li>
       
@@ -4343,6 +4331,12 @@
 <a href="https://www.youtube.com/watch?v=P66h8D5Lkwk">La machine de Turing, une révolution des mathématiques et de l'informatique - Passe-science</a></p>
 <p>On retiendra ici, que le modèle de la machine de Turing, sert d'étalon pour mesurer la complexité d'un algorithme : C'est l'ordre de grandeur du nombre d'opérations élémentaires (lire, déplacer la tête de lecture) qu'effectuerait une machine de Turing pour effectuer l'algorithme.</p>
 </div>
+<details class="note">
+<summary>Pour aller plus loin</summary>
+<ul>
+<li>Un super Podcast <a href="https://www.radiofrance.fr/franceculture/podcasts/grande-traversee-l-enigmatique-alan-turing/enigma-la-guerre-du-code-2085217">Enigma, la guerre du code</a></li>
+</ul>
+</details>
 <p>La <strong>complexité</strong> d'un algorithme est une notion qui nous éclaire sur la manière dont cet algorithme va être sensible à la taille des données passées en paramètre. Il y a plusieurs types de complexités étudiables (nombre d'opérations, temps nécessaire, espace-mémoire nécessaire...).</p>
 <p>En NSI, nous nous contenterons d'estimer (lorsque cela est possible) le nombre d'opérations effectuées par l'algorithme, et nous mesurerons les temps d'exécution de ces algortihmes. </p>
 <div class="admonition example">
@@ -4483,7 +4477,11 @@ Doubler la taille du paramètre d'entrée a eu pour effet de <strong>quadrupler<
 <h2 id="3-complexite-constante">3. Complexité constante<a class="headerlink" href="#3-complexite-constante" title="Permanent link">⚓︎</a></h2>
 <p>Il peut arriver (mais c'est rare) que la complexité d'un algorithme soit indépendante de la taille des données à traiter.<br />
 Dans ce cas, c'est souvent une très bonne nouvelle.</p>
-<p>Observons l'accès au 1er élément d'une liste :</p>
+<p><ins>Exemple :</ins>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">est_pair</span><span class="p">(</span><span class="n">nombre</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">nombre</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+</code></pre></div>
+ou l'accès à un élément d'une liste, mais nous verrons cela plus tard.</p>
 <div class="admonition note">
 <p class="admonition-title">Complexité constante <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
 <p>Les expressions suivantes sont équivalentes :</p>
@@ -4504,6 +4502,7 @@ Dans ce cas, c'est souvent une très bonne nouvelle.</p>
 <li>Complexité <strong>polynomiale</strong> : <strong><span class="arithmatex">\(O(n^k)\)</span></strong></li>
 <li>Complexité <strong>exponentielle</strong> : <strong><span class="arithmatex">\(O(2^n)\)</span></strong></li>
 </ul>
+<p><img alt="illustration" class="center" src="../data/images.png" width="80%" /></p>
 <h2 id="4-preuve-dun-algorithme">4. Preuve d’un algorithme<a class="headerlink" href="#4-preuve-dun-algorithme" title="Permanent link">⚓︎</a></h2>
 <p>Il est important de pouvoir montrer qu’un programme termine, afin de savoir si son exécution se fera sans problème.
  Parmi les instructions ci-dessous, quelles sont celles qui ne peuvent pas engendrer d’exécution infinie d’un algorithme ? Quelle est/sont la/les seule(s) instruction(s) problématique(s) ?<br /></p>
@@ -4526,6 +4525,10 @@ On comprend donc que le problème de la terminaison des algorithmes n’est pas 
 <p>Il n'existe pas de programme permettant de dire si un algorithme termine toujours ou non.</p>
 </div>
 <p>On dit en théorie de l’informatique que le problème de l’arrêt est <strong>indécidable</strong>. En fait, le théorème de Rice dit même que toute propriété non triviale sur les programmes est indécidable. Bien que ce soit vrai dans le cas général, on peut cependant s’intéresser à des cas particuliers et utiliser des propriétés mathématiques pour démontrer que des algorithmes simples terminent.</p>
+<details class="note">
+<summary>Problème de l'arrêt</summary>
+<p>petite vidéo : (Calculabilité : le problème de l'arrêt )[https://www.youtube.com/watch?v=13O1qhX4Bqo]{ target="blank"}</p>
+</details>
 <h3 id="41-definition">4.1 Définition<a class="headerlink" href="#41-definition" title="Permanent link">⚓︎</a></h3>
 <div class="admonition danger">
 <p class="admonition-title">Définition de la preuve</p>
@@ -4545,7 +4548,7 @@ Le groupe d’instructions de la boucle doit permettre une modification de la co
 <div class="admonition danger">
 <p class="admonition-title">Définition</p>
 <p>On appelle <strong>convergent</strong> (ou <strong>variant de boucle</strong>) une quantité qui prend ses valeurs dans un ensemble bien fondé et qui diminue strictement à chaque passage dans une boucle.<br />
-<em>Remarque</em> : Un ensemble bien-fondé est un ensemble totalement ordonné dans lequel il n’existe pas de suite infinie strictement décroissante.</p>
+<ins>Remarque :</ins> Un ensemble bien-fondé est un ensemble totalement ordonné dans lequel il n’existe pas de suite infinie strictement décroissante.</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Propriété</p>
@@ -4566,21 +4569,23 @@ Si la boucle est donnée par la structure : Pour <code>i</code> allant de <code>
 </div>
 <div class="admonition danger">
 <p class="admonition-title">Définition</p>
-<p>L’invariant de boucle est une formule logique qui :<br />
-— est vérifiée à l’initialisation de la boucle<br />
-— reste vraie à chaque itération de la boucle</p>
+<p>L’invariant de boucle est une formule logique qui :</p>
+<ul>
+<li>est vérifiée à l’initialisation de la boucle</li>
+<li>reste vraie à chaque itération de la boucle</li>
+</ul>
 </div>
 <h3 id="43-quelques-exemples">4.3 Quelques exemples<a class="headerlink" href="#43-quelques-exemples" title="Permanent link">⚓︎</a></h3>
 <h4 id="431-factorielle">4.3.1 Factorielle<a class="headerlink" href="#431-factorielle" title="Permanent link">⚓︎</a></h4>
 <p>On considère le script python suivant :</p>
 <div class="admonition abstract">
 <p class="admonition-title">Abstract</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Enoncé</label><label for="__tabbed_1_2">Algoritme</label><label for="__tabbed_1_3">terminaison et correction</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Enoncé</label><label for="__tabbed_1_2">Algorithme</label><label for="__tabbed_1_3">terminaison et correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>On note <code>n!</code> le nombre entier défini par  <code>n! = n x (n - 1) x (n - 2) x … x 3 x 2 x 1</code>.  (on dira « n factorielle »)</p>
 <ol>
-<li>Calculer 4!, puis  7!</li>
+<li>Calculer <code>4!</code>, puis  <code>7!</code></li>
 <li>Ecrire la fonction python <code>factorielle(n)</code> qui prend en paramètre un entier et qui renvoie un entier correspondant au factoriel</li>
 <li>Puis déterminer la correction de l'algorithme <code>factorielle(n)</code></li>
 </ol>
@@ -4589,17 +4594,15 @@ Si la boucle est donnée par la structure : Pour <code>i</code> allant de <code>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">factorielle</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">:</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    fonction impérative qui calcule la factorielle de n</span>
-<span class="sd">    @param n : int</span>
+<span class="sd">    @param n : int strictement positif</span>
 <span class="sd">    @return : int</span>
 <span class="sd">    &#39;&#39;&#39;</span>
-    <span class="n">res</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">if</span> <span class="n">n</span><span class="o">&gt;=</span><span class="mi">0</span> <span class="p">:</span>
-        <span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">:</span>
-            <span class="n">res</span> <span class="o">=</span> <span class="n">res</span> <span class="o">*</span> <span class="n">n</span>
-            <span class="n">n</span><span class="o">-=</span><span class="mi">1</span>
-    <span class="k">return</span> <span class="n">res</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">factorielle</span><span class="p">(</span><span class="mi">7</span><span class="p">))</span>
+    <span class="n">resultat</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">:</span>
+        <span class="n">resultat</span> <span class="o">*=</span> <span class="n">i</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">resultat</span>
 
 <span class="k">assert</span> <span class="n">factorielle</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
 <span class="k">assert</span> <span class="n">factorielle</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span>
@@ -4607,19 +4610,38 @@ Si la boucle est donnée par la structure : Pour <code>i</code> allant de <code>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p>• Terminaison:
-- Si n entre au clavier est négatif, le programme termine sur un message ("impossible").<br />
-- Si n est nul la boucle n’est pas exécutée, 1 est renvoyé et le programme termine.<br />
-- Si n &gt; 0 k étant initialement a 1, la boucle est exécutée. A chaque itération, k est incrémenté de 1 et finit par être supérieur a n donc pour k=n+1, on sort de la boucle, le programme renvoie f, et termine.<br />
-<strong>CONCLUSION</strong> : la terminaison est assurée.<br /></p>
-<p>• Correction:
-Un invariant de boucle Pi est par exemple :<br />
-<strong>≪après la iieme itération k contient i + 1 et f contient i!≫</strong><br />
-Cette propriété est vraie au rang 0. Supposons la vraie au rang i, et montrons qu’’elle est héréditaire :<br />
-- Au rang i + 1, on a : k qui contient i + 1 en début d’itération et f = i! × (i + 1) = (i + 1)!<br />
-- En fin d’itération k contient i + 2<br />
-Ceci est bien la propriété au rang i + 1<br />
-<strong>CONCLUSION</strong> : la correction est assurée.</p>
+<p><strong>Preuve de terminaison</strong></p>
+<p>1.Initialisation :La variable <span class="arithmatex">\(i\)</span> est initialisée à <span class="arithmatex">\(1\)</span> , et <span class="arithmatex">\(n\)</span> est supposé un entier positif ou nul (<span class="arithmatex">\(n \geq 0\)</span>).</p>
+<p>2.Condition de terminaison :</p>
+<ul>
+<li>La boucle s'exécute tant que <span class="arithmatex">\(i \leq n\)</span>. À chaque itération, <span class="arithmatex">\(i\)</span> est incrémenté de 1.</li>
+<li>Puisque <span class="arithmatex">\(i\)</span> commence à <span class="arithmatex">\(1\)</span> et augmente à chaque étape, il finira par dépasser <span class="arithmatex">\(n\)</span>, ce qui rendra la condition <span class="arithmatex">\(i \leq n\)</span> fausse.</li>
+</ul>
+<p>3.Incrémentation garantie :<br />
+L'instruction <code>i += 1</code> garantit que <span class="arithmatex">\(i\)</span> progresse à chaque étape vers <span class="arithmatex">\(n+1\)</span>, assurant ainsi la terminaison.</p>
+<p><strong>Conclusion :</strong> L'algorithme finit toujours après un nombre fini d'itérations.</p>
+<p><strong>Preuve de correction</strong></p>
+<p>La correction repose sur la validité d’un invariant de boucle : **À chaque itération, la variable <code>resultat</code> contient le produit des entiers de <span class="arithmatex">\(1\)</span> à <span class="arithmatex">\(i-1\)</span>.</p>
+<ol>
+<li>
+<p>Initialisation :<br />
+Avant la première itération (<span class="arithmatex">\(i = 1\)</span>), <code>resultat = 1</code>. Cela correspond à la factorielle d’un ensemble vide (<span class="arithmatex">\(0! = 1\)</span>), donc l'invariant est vrai.</p>
+</li>
+<li>
+<p>Maintien :</p>
+</li>
+<li>
+<p>Supposons que l'invariant est vrai au début d'une itération, c'est-à-dire que <code>resultat</code> contient <span class="arithmatex">\(1 \times 2 \times \dots \times (i-1)\)</span>.</p>
+</li>
+<li>
+<p>Pendant cette itération, <code>resultat</code> est mis à jour avec <span class="arithmatex">\(resultat \times i\)</span>. À la fin de cette itération, <code>resultat</code> contient <span class="arithmatex">\(1 \times 2 \times \dots \times i\)</span>, donc l'invariant est maintenu.</p>
+</li>
+<li>
+<p>Terminaison :<br />
+La boucle se termine lorsque <span class="arithmatex">\(i &gt; n\)</span>. À ce moment, <code>resultat</code> contient <span class="arithmatex">\(1 \times 2 \times \dots \times n\)</span>, ce qui est exactement <span class="arithmatex">\(n!\)</span>.</p>
+</li>
+</ol>
+<p><strong>Conclusion :</strong> L'algorithme retourne correctement <span class="arithmatex">\(n!\)</span>.</p>
 </div>
 </div>
 </div>
@@ -4627,40 +4649,83 @@ Ceci est bien la propriété au rang i + 1<br />
 <h4 id="432-puissance-de-2">4.3.2 Puissance de 2<a class="headerlink" href="#432-puissance-de-2" title="Permanent link">⚓︎</a></h4>
 <div class="admonition abstract">
 <p class="admonition-title">Exercice : Puissance de 2</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Enoncé</label><label for="__tabbed_2_2">terminaison et correction</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Enoncé</label><label for="__tabbed_2_2">Algorithme</label><label for="__tabbed_2_3">terminaison et correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>On considère le code python calculant la puissance nieme de 2 :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">puissance2</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">:</span>
-    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">==</span><span class="nb">int</span> <span class="ow">and</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="p">:</span>
-        <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
-        <span class="k">while</span> <span class="n">n</span><span class="o">&gt;</span><span class="mi">0</span> <span class="p">:</span>
-            <span class="n">p</span> <span class="o">=</span> <span class="n">p</span><span class="o">*</span><span class="mi">2</span>
-            <span class="n">n</span><span class="o">=</span><span class="n">n1</span><span class="o">-</span><span class="mi">1</span>
-    <span class="k">return</span> <span class="n">p</span>
-</code></pre></div>
-<blockquote>
-<p>A Faire : Donner la preuve de cet algorithme </p>
-</blockquote>
+<ol>
+<li>Ecrire une fonction puissance2 prenant en paramètre un entier positif et retournant la puissance de 2 de celui-ci.<br />
+exemple : <span class="arithmatex">\(2^3=8\)</span></li>
+<li>Donner la preuve de cet algorithme </li>
+</ol>
 </div>
 <div class="tabbed-block">
-<p>• Terminaison:<br />
-- Si n entre au clavier n’est pas un entier positif ou nul le programme termine sur un message ("impossible").<br />
-- Si n est nul la boucle n’est pas exécutée, 1 est renvoyé et le programme termine.<br />
-- Si n &gt; 0, la boucle est exécutée. A chaque itération, n est décrémente de 1 et finit par être nul, on sort de la boucle, le programme renvoie p, et termine.<br />
-<strong>Conclusion</strong> : la terminaison est assurée.</p>
-<p>• Correction:<br />
-Un invariant de boucle est par exemple : <br />
-≪apres la iieme iteration p contient 2n0−(n0−i) = 2i et n contient ni = n0 − i≫<br />
-Les conditions initiales assurent qu’’au rang 0 la propriété est vraie. Supposons la vraie au rang i, et montrons Qu’elle est héréditaire :<br />
-- Au rang i + 1, on a : p qui contient 2 × 2n0−(n0−(i+1)) = 2i+1<br />
-- En fin d’itération n contient ni+1 = n0 − (i + 1)<br />
-Ceci est bien la propriété au rang i + 1<br />
-<strong>Conclusion</strong> : la correction est assurée.</p>
+<p>On considère le code python calculant la puissance <span class="arithmatex">\(n^{ieme}\)</span> de 2 :</p>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">puissance_de_deux</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">resultat</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
+        <span class="n">resultat</span> <span class="o">*=</span> <span class="mi">2</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">resultat</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Preuve de terminaison</strong></p>
+<ol>
+<li><strong>Initialisation :</strong></li>
+<li>
+<p>La variable <span class="arithmatex">\(i\)</span> est initialisée à <span class="arithmatex">\(0\)</span>, et <span class="arithmatex">\(n\)</span> est supposé être un entier positif ou nul (<span class="arithmatex">\(n \geq 0\)</span>).</p>
+</li>
+<li>
+<p><strong>Condition de terminaison :</strong></p>
+</li>
+<li>La boucle s'exécute tant que <span class="arithmatex">\(i &lt; n\)</span>. À chaque itération, <span class="arithmatex">\(i\)</span> est incrémenté de <span class="arithmatex">\(1\)</span> et donc <span class="arithmatex">\(n-i\)</span> tend vers <span class="arithmatex">\(0\)</span>.</li>
+<li>
+<p>Puisque <span class="arithmatex">\(i\)</span> commence à <span class="arithmatex">\(0\)</span> et augmente de <span class="arithmatex">\(1\)</span> à chaque étape, <span class="arithmatex">\(n-i\)</span> finit nécessairement par atteindre <span class="arithmatex">\(0\)</span>.</p>
+</li>
+<li>
+<p><strong>Incrémentation garantie :</strong></p>
+</li>
+<li>L'instruction <code>i += 1</code> garantit que $ i $ progresse à chaque étape vers $ n $.</li>
+</ol>
+<p><strong>Conclusion :</strong> L'algorithme termine toujours après <span class="arithmatex">\(n\)</span> itérations.</p>
+<p><strong>Preuve de correction</strong></p>
+<p>La correction repose sur l'invariant de boucle suivant : **À chaque itération, la variable <code>resultat</code> contient <span class="arithmatex">\(2^i\)</span>, où <span class="arithmatex">\(i\)</span> est la valeur courante du compteur.</p>
+<ol>
+<li>
+<p>Initialisation :Avant la première itération ($ i = 0 $), <code>resultat = 1</code>. Cela correspond à <span class="arithmatex">\(2^0 = 1\)</span>, donc l'invariant est vrai.</p>
+</li>
+<li>
+<p>Maintien :</p>
+</li>
+<li>
+<p>Supposons que l'invariant est vrai au début d'une itération, c'est-à-dire que <code>resultat</code> contient <span class="arithmatex">\(2^i\)</span>.</p>
+</li>
+<li>
+<p>Pendant cette itération, <code>resultat</code> est mis à jour avec <span class="arithmatex">\(resultat \times 2\)</span>, ce qui donne <span class="arithmatex">\(2^{i+1}\)</span>. En même temps, <span class="arithmatex">\(i\)</span> est incrémenté à <span class="arithmatex">\(i + 1\)</span>, donc l'invariant reste vrai.</p>
+</li>
+<li>
+<p>Terminaison : La boucle se termine lorsque <span class="arithmatex">\(i = n\)</span>. À ce moment, l'invariant garantit que <code>resultat</code> contient <span class="arithmatex">\(2^i\)</span>, avec <span class="arithmatex">\(i = n\)</span>. Ainsi, <code>resultat</code> contient <span class="arithmatex">\(2^n\)</span>.</p>
+</li>
+</ol>
+<p><strong>Conclusion :</strong> L'algorithme retourne correctement <span class="arithmatex">\(2^n\)</span>.</p>
 </div>
 </div>
 </div>
 </div>
+<div class="admonition danger">
+<p class="admonition-title">A retenir</p>
+<p>Voici une méthode pour prouver la <strong>terminaison</strong> et la <strong>correction</strong> d’un algorithme ayant une boucle while :</p>
+<ul>
+<li>Définir clairement les préconditions – état des variables initial (avant la boucle)</li>
+<li>Déterminer la variant de boucle et prouver la terminaison de la boucle</li>
+<li>Définir un invariant de boucle</li>
+<li>Prouver que l’invariant est vrai au début de la boucle et à chaque itération</li>
+<li>Montrer qu’en sortie de boucle l’invariant est vrai et que combiné à la condition de sortie de boucle il permet de prouver que l’algorithme est correct</li>
+</ul>
+</div>
+<h2 id="5-p-np">5. P = NP<a class="headerlink" href="#5-p-np" title="Permanent link">⚓︎</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AgtOCNCejQ8?si=NEw3B8PlyUXZKgWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 

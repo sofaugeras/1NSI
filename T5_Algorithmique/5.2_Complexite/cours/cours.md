@@ -23,6 +23,10 @@
 
     On retiendra ici, que le modèle de la machine de Turing, sert d'étalon pour mesurer la complexité d'un algorithme : C'est l'ordre de grandeur du nombre d'opérations élémentaires (lire, déplacer la tête de lecture) qu'effectuerait une machine de Turing pour effectuer l'algorithme.
 
+??? note "Pour aller plus loin"
+
+    - Un super Podcast [Enigma, la guerre du code](https://www.radiofrance.fr/franceculture/podcasts/grande-traversee-l-enigmatique-alan-turing/enigma-la-guerre-du-code-2085217)
+    
 La **complexité** d'un algorithme est une notion qui nous éclaire sur la manière dont cet algorithme va être sensible à la taille des données passées en paramètre. Il y a plusieurs types de complexités étudiables (nombre d'opérations, temps nécessaire, espace-mémoire nécessaire...).
 
 En NSI, nous nous contenterons d'estimer (lorsque cela est possible) le nombre d'opérations effectuées par l'algorithme, et nous mesurerons les temps d'exécution de ces algortihmes. 
@@ -213,9 +217,12 @@ En observant l'algorithme, nous pouvons confirmer cette supposition : le nombre 
 Il peut arriver (mais c'est rare) que la complexité d'un algorithme soit indépendante de la taille des données à traiter.  
 Dans ce cas, c'est souvent une très bonne nouvelle.
 
-Observons l'accès au 1er élément d'une liste :
-
-
+^^Exemple :^^
+```python
+def est_pair(nombre):
+    return nombre % 2 == 0
+```
+ou l'accès à un élément d'une liste, mais nous verrons cela plus tard.
 
 !!! note "Complexité constante :heart:"
     Les expressions suivantes sont équivalentes :
@@ -236,6 +243,8 @@ On peut classer les algorithmes selon leur complexité.
 - Complexité **quasi-linéaire** : **$O(nlog_{2}(n))$**
 - Complexité **polynomiale** : **$O(n^k)$**
 - Complexité **exponentielle** : **$O(2^n)$**
+
+![illustration](./data/images.png){: width=80% .center}
 
 ## 4. Preuve d’un algorithme
 
@@ -262,6 +271,9 @@ On comprend donc que le problème de la terminaison des algorithmes n’est pas 
  
 On dit en théorie de l’informatique que le problème de l’arrêt est **indécidable**. En fait, le théorème de Rice dit même que toute propriété non triviale sur les programmes est indécidable. Bien que ce soit vrai dans le cas général, on peut cependant s’intéresser à des cas particuliers et utiliser des propriétés mathématiques pour démontrer que des algorithmes simples terminent.
 
+??? note "Problème de l'arrêt"
+    petite vidéo : (Calculabilité : le problème de l'arrêt )[https://www.youtube.com/watch?v=13O1qhX4Bqo]{ target="blank"}
+
 ### 4.1 Définition
 
 !!! danger "Définition de la preuve" 
@@ -286,7 +298,7 @@ Le groupe d’instructions de la boucle doit permettre une modification de la co
 !!! danger "Définition" 
 
     On appelle **convergent** (ou **variant de boucle**) une quantité qui prend ses valeurs dans un ensemble bien fondé et qui diminue strictement à chaque passage dans une boucle.<br />
-    _Remarque_ : Un ensemble bien-fondé est un ensemble totalement ordonné dans lequel il n’existe pas de suite infinie strictement décroissante.
+    ^^Remarque :^^ Un ensemble bien-fondé est un ensemble totalement ordonné dans lequel il n’existe pas de suite infinie strictement décroissante.
 
 !!! info "Propriété"
     L’existence d’un convergent pour une boucle garantit que l’algorithme finit par en sortir.
@@ -305,9 +317,10 @@ En outre, la seconde préoccupation du programmeur sera d’assurer que son algo
     On assure la correction d’un algorithme avec boucle en dégageant une propriété vérifiée avant l’entrée dans la boucle et qui le restera durant chaque itération `i` de boucle ; soit $P_i$ cette propriété au rang `i`. Cette propriété doit permettre de renvoyer le résultat attendu au dernier rang de boucle. On l’appelle l’**invariant de boucle**.
 
 !!! danger "Définition" 
-    L’invariant de boucle est une formule logique qui :<br />
-    — est vérifiée à l’initialisation de la boucle<br />
-    — reste vraie à chaque itération de la boucle
+    L’invariant de boucle est une formule logique qui :
+
+    - est vérifiée à l’initialisation de la boucle
+    - reste vraie à chaque itération de la boucle
 
 ### 4.3 Quelques exemples
 
@@ -319,27 +332,25 @@ On considère le script python suivant :
     === "Enoncé"
         On note `n!` le nombre entier défini par  `n! = n x (n - 1) x (n - 2) x … x 3 x 2 x 1`.  (on dira « n factorielle »)
 
-        1. Calculer 4!, puis  7!
+        1. Calculer ``4!``, puis  ``7!``
         2. Ecrire la fonction python ``factorielle(n)`` qui prend en paramètre un entier et qui renvoie un entier correspondant au factoriel
         3. Puis déterminer la correction de l'algorithme ``factorielle(n)``
     
-    === "Algoritme"
+    === "Algorithme"
 
         ```python
         def factorielle(n) :
             '''
             fonction impérative qui calcule la factorielle de n
-            @param n : int
+            @param n : int strictement positif
             @return : int
             '''
-            res = 1
-            if n>=0 :
-                while n > 0 :
-                    res = res * n
-                    n-=1
-            return res
-
-        print(factorielle(7))
+            resultat = 1
+            i = 1
+            while i <= n:
+                resultat *= i
+                i += 1
+            return resultat
 
         assert factorielle(0) == 1
         assert factorielle(1) == 1
@@ -348,56 +359,99 @@ On considère le script python suivant :
 
     === "terminaison et correction"
 
-        • Terminaison:
-        - Si n entre au clavier est négatif, le programme termine sur un message ("impossible").<br />
-        - Si n est nul la boucle n’est pas exécutée, 1 est renvoyé et le programme termine.<br />
-        - Si n > 0 k étant initialement a 1, la boucle est exécutée. A chaque itération, k est incrémenté de 1 et finit par être supérieur a n donc pour k=n+1, on sort de la boucle, le programme renvoie f, et termine.<br />
-        **CONCLUSION** : la terminaison est assurée.<br />
+        **Preuve de terminaison**
 
-        • Correction:
-        Un invariant de boucle Pi est par exemple :<br />
-        **≪après la iieme itération k contient i + 1 et f contient i!≫**<br />
-        Cette propriété est vraie au rang 0. Supposons la vraie au rang i, et montrons qu’’elle est héréditaire :<br />
-        - Au rang i + 1, on a : k qui contient i + 1 en début d’itération et f = i! × (i + 1) = (i + 1)!<br />
-        - En fin d’itération k contient i + 2<br />
-        Ceci est bien la propriété au rang i + 1<br />
-        **CONCLUSION** : la correction est assurée.
+        1.Initialisation :La variable $i$ est initialisée à $1$ , et $n$ est supposé un entier positif ou nul ($n \geq 0$).
+
+        2.Condition de terminaison :
+
+        - La boucle s'exécute tant que $i \leq n$. À chaque itération, $i$ est incrémenté de 1.
+        - Puisque $i$ commence à $1$ et augmente à chaque étape, il finira par dépasser $n$, ce qui rendra la condition $i \leq n$ fausse.
+
+        3.Incrémentation garantie :<br />
+        L'instruction `i += 1` garantit que $i$ progresse à chaque étape vers $n+1$, assurant ainsi la terminaison.
+
+        **Conclusion :** L'algorithme finit toujours après un nombre fini d'itérations.
+
+        **Preuve de correction**
+
+        La correction repose sur la validité d’un invariant de boucle : **À chaque itération, la variable `resultat` contient le produit des entiers de $1$ à $i-1$.
+
+        1. Initialisation :<br />
+        Avant la première itération ($i = 1$), `resultat = 1`. Cela correspond à la factorielle d’un ensemble vide ($0! = 1$), donc l'invariant est vrai.
+
+        2. Maintien :
+
+        - Supposons que l'invariant est vrai au début d'une itération, c'est-à-dire que `resultat` contient $1 \times 2 \times \dots \times (i-1)$.
+        - Pendant cette itération, `resultat` est mis à jour avec $resultat \times i$. À la fin de cette itération, `resultat` contient $1 \times 2 \times \dots \times i$, donc l'invariant est maintenu.
+
+        3. Terminaison :<br />
+        La boucle se termine lorsque $i > n$. À ce moment, `resultat` contient $1 \times 2 \times \dots \times n$, ce qui est exactement $n!$.
+
+        **Conclusion :** L'algorithme retourne correctement $n!$.
 
 #### 4.3.2 Puissance de 2
 
 !!! abstract "Exercice : Puissance de 2"
-
     === "Enoncé"
+        1. Ecrire une fonction puissance2 prenant en paramètre un entier positif et retournant la puissance de 2 de celui-ci.<br />
+        exemple : $2^3=8$
+        2. Donner la preuve de cet algorithme 
 
-        On considère le code python calculant la puissance nieme de 2 :
+    === "Algorithme"
+        On considère le code python calculant la puissance $n^{ieme}$ de 2 :
         
         ```python
-        def puissance2(n) :
-            if type(n)==int and n >= 0 :
-                p = 1
-                while n>0 :
-                    p = p*2
-                    n=n1-1
-            return p
-
-
+        def puissance_de_deux(n):
+            resultat = 1
+            i = 0
+            while i < n:
+                resultat *= 2
+                i += 1
+            return resultat
         ```
-        > A Faire : Donner la preuve de cet algorithme 
-
     === "terminaison et correction"
     
-        • Terminaison:<br />
-        - Si n entre au clavier n’est pas un entier positif ou nul le programme termine sur un message ("impossible").<br />
-        - Si n est nul la boucle n’est pas exécutée, 1 est renvoyé et le programme termine.<br />
-        - Si n > 0, la boucle est exécutée. A chaque itération, n est décrémente de 1 et finit par être nul, on sort de la boucle, le programme renvoie p, et termine.<br />
-        **Conclusion** : la terminaison est assurée.
 
-        • Correction:<br />
-        Un invariant de boucle est par exemple : <br />
-        ≪apres la iieme iteration p contient 2n0−(n0−i) = 2i et n contient ni = n0 − i≫<br />
-        Les conditions initiales assurent qu’’au rang 0 la propriété est vraie. Supposons la vraie au rang i, et montrons Qu’elle est héréditaire :<br />
-        - Au rang i + 1, on a : p qui contient 2 × 2n0−(n0−(i+1)) = 2i+1<br />
-        - En fin d’itération n contient ni+1 = n0 − (i + 1)<br />
-        Ceci est bien la propriété au rang i + 1<br />
-        **Conclusion** : la correction est assurée.
+        **Preuve de terminaison**
 
+        1. **Initialisation :**
+        - La variable $i$ est initialisée à $0$, et $n$ est supposé être un entier positif ou nul ($n \geq 0$).
+
+        2. **Condition de terminaison :**
+        - La boucle s'exécute tant que $i < n$. À chaque itération, $i$ est incrémenté de $1$ et donc $n-i$ tend vers $0$.
+        - Puisque $i$ commence à $0$ et augmente de $1$ à chaque étape, $n-i$ finit nécessairement par atteindre $0$.
+
+        3. **Incrémentation garantie :**
+        - L'instruction `i += 1` garantit que $ i $ progresse à chaque étape vers $ n $.
+
+        **Conclusion :** L'algorithme termine toujours après $n$ itérations.
+
+        **Preuve de correction**
+
+        La correction repose sur l'invariant de boucle suivant : **À chaque itération, la variable `resultat` contient $2^i$, où $i$ est la valeur courante du compteur.
+
+        1. Initialisation :Avant la première itération ($ i = 0 $), `resultat = 1`. Cela correspond à $2^0 = 1$, donc l'invariant est vrai.
+
+        2. Maintien :
+
+        - Supposons que l'invariant est vrai au début d'une itération, c'est-à-dire que `resultat` contient $2^i$.
+        - Pendant cette itération, `resultat` est mis à jour avec $resultat \times 2$, ce qui donne $2^{i+1}$. En même temps, $i$ est incrémenté à $i + 1$, donc l'invariant reste vrai.
+
+        3. Terminaison : La boucle se termine lorsque $i = n$. À ce moment, l'invariant garantit que `resultat` contient $2^i$, avec $i = n$. Ainsi, `resultat` contient $2^n$.
+
+        **Conclusion :** L'algorithme retourne correctement $2^n$.
+
+!!! danger "A retenir"
+
+    Voici une méthode pour prouver la **terminaison** et la **correction** d’un algorithme ayant une boucle while :
+
+    - Définir clairement les préconditions – état des variables initial (avant la boucle)
+    - Déterminer la variant de boucle et prouver la terminaison de la boucle
+    - Définir un invariant de boucle
+    - Prouver que l’invariant est vrai au début de la boucle et à chaque itération
+    - Montrer qu’en sortie de boucle l’invariant est vrai et que combiné à la condition de sortie de boucle il permet de prouver que l’algorithme est correct
+
+## 5. P = NP
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AgtOCNCejQ8?si=NEw3B8PlyUXZKgWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
