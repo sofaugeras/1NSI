@@ -1,9 +1,9 @@
 # 5.0 Exercices Spécifications et tests
 
 !!! warning "Exigence !"
-    Pour chacun des exercices ci-dessous, vous devez rédiger l'entête de la donction (docstring) puis les tests nécessaires (assert)
+    Pour chacun des exercices ci-dessous, vous devez rédiger l'entête de la fonction (docstring) puis les tests nécessaires (assert)
 
-Les exercices ci dessous sont des révisions d'algorithmie et reprennent également ce que vous avez vu sur les listes.
+Les exercices ci-dessous sont des révisions d'algorithmie.
 
 Vous pouvez télécharger le fichier [notebook d'exercice](./data/Exercices_specifications.ipynb).
 

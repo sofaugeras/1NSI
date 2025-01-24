@@ -1,7 +1,7 @@
 
 !!! abstract ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: En cours : [Thème 5 : Spécifications](./T5_Algorithmique/5.0_specifications/cours.md)<br />
-    A venir : [Thème 3 : Type Construit : les Listes](./T3_Type_construit/3.1_Listes/cours.md)<br />
+    :arrow_forward: En cours : [Thème 3 : Type Construit : les tuples](./T3_Type_construit/3.2_tuples/cours/) <br />
+    A venir : [Thème 3 : Type Construit : les dictionnaires](./T3_Type_construit/3.3_Dictionnaires/cours/) <br />
 
 !!! warning "Mémo python"
     le mémento Python est disponible ici : :snake: [mémento Python](./data/mementopython3.pdf)
@@ -23,9 +23,12 @@
     - [Thème 2 : codage des entiers](./T2_Type_de_base/2.2_Codage_entiers/cours.md)<br />
     - [Thème 2 : codage des décimaux](./T2_Type_de_base/2.3_Decimaux/cours.md)<br/>
     - [Thème 2 : Type de base : chaines de caractères](./T2_Type_de_base/2.4_Chaines_caracteres/chaine.md)<br/>
-    - [Thème 2 : Type de base : Booleens](./T2_Type_de_base/2.5_Booleens/cours.md)
-    - [Thème 4 : Architecture matérielle : Architecture de von neumann](./T4_Architecture_materielle/4.1_Architecture_Von_Neumann/vonNeumann.md)
-    - [Thème 5 : Complexité](./T5_Algorithmique/5.2_Complexite/cours.md)
+    - [Thème 2 : Type de base : Booleens](./T2_Type_de_base/2.5_Booleens/cours.md)<br/>
+    - [Thème 4 : Architecture matérielle : Architecture de von neumann](./T4_Architecture_materielle/4.1_Architecture_Von_Neumann/vonNeumann.md)<br/>
+    - [Thème 5 : Complexité](./T5_Algorithmique/5.2_Complexite/cours.md)<br/>
+    - [Thème 5 : Spécifications](./T5_Algorithmique/5.0_specifications/cours.md)<br/>
+    - [Thème 3 : Type Construit : les Listes](./T3_Type_construit/3.1_Listes/cours.md)<br/>
+    - [Thème 5 : extremum et moyenne](./T5_Algorithmique/5.1_Extremums_et_moyennes/cours.md)<br/>
 
 <!--
 
@@ -35,18 +38,17 @@
     - Le plus important : les chapitres suivants d'algorithmique, à retrouver [ici](T5_Algorithmique/sommaire.md){. target="_blank"} :
 
     - [Thème 4 : Architecture matérielle : OS et commande Linux](T4_Architecture_materielle/4.4_Decouverte_des_commandes_Linux/cours.md)
-    - [Thème 3 : Type Construit : les Listes](T3_Type_construit/3.1_Listes/cours.md)
-    - [Thème 3 : Type Construit : les tuples](./T3_Type_construit/3.2_tuples/cours/)
-    - [Thème 3 : Type Construit : les dictionnaires](./T3_Type_construit/3.3_Dictionnaires/cours/)
     - [Thème 4 : Réseau](./T4_Architecture_materielle/4.2_Architecture_reseau/cours.md)
+    - Traitement de données
     - [Projet CSV](./T8_Projets/2_ProjetCSV/cours.md)
     - [Thème 4 : Protocole de communication](./T4_Architecture_materielle/4.3_Protocoles_de_communication/cours.md)
+    - dichotomie
+    - tris
     - [IHM sur le Web](./T7_IHM_Web/7.3_Get_Post_Formulaires/cours/)
-    - Traitement des données en table
     - [Algorithme Glouton](./T5_Algorithmique/5.6_Algorithmes_gloutons/cours.md)
     - mini projet glouton
     - Knn
-    - tris
-    - dichotomie
+
+    
 
 -->

@@ -263,12 +263,12 @@ def mettre_au_carre(x):
 
         ```python
             def encoder(chaine):
-            '''
+            """
             Encode une chaîne de caractère en son équivalent ASCII 
 
             Paramètres d’entrée : chaine de caractère -> char
             Paramètre de sortie : encodage ASCII -> int
-            '''
+            """"
                 # votre code ici
         ```
     === "Correction"
@@ -304,7 +304,7 @@ Ce qui doit être Tester : <br />
 _Exemple_ avec la fonction qui teste si des nombres sont en ordres croissants.
 
 ```python
-def croissant(a,b,b):
+def croissant(a,b,c):
   """Fonction de test de la croissance d’une suite de nombre
   Paramètres d'entrée : a,b,c -> int ou float
   Paramètres de sortie : retourne -> valeur booléenne 
