@@ -4260,14 +4260,34 @@ Un dictionnaire est délimité par des accolades. </p>
 </code></pre></div>
 </div>
 <div class="admonition example">
-<p class="admonition-title">fonction habit</p>
+<p class="admonition-title">Augmentation</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label><label for="__tabbed_1_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Augmentez de 1 chaque habit de votre dressing</p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">dressing</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;pantalons&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;pulls&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;tee-shirts&quot;</span><span class="p">:</span><span class="mi">8</span><span class="p">}</span>
+
+<span class="k">for</span> <span class="n">habit</span> <span class="ow">in</span> <span class="n">dressing</span> <span class="p">:</span>
+    <span class="n">dressing</span><span class="p">[</span><span class="n">habit</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">fonction habit</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Reprenons notre dictionnaire <code>dressing</code> :
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">dressing</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;pantalons&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;pulls&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;tee-shirts&quot;</span><span class="p">:</span><span class="mi">8</span><span class="p">}</span>
 </code></pre></div>
-Créer une fonction <code>achat(dico, habit)</code>qui prend en paramètre un dictionnaire et une clé et  qui augmente de 1 le nombre d'habits (pantalon, pull ou tee-shirt) de mon dressing. </p>
+Créer une fonction <code>achat(dico, habit)</code>qui prend en paramètre un dictionnaire et une clé et  qui augmente de 1 le nombre d'exemplaire de l'habit passé en paramètre. </p>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
@@ -4316,7 +4336,7 @@ Petit problème si on essaie d'acheter un vêtement pour la 1ère fois</p>
 <h2 id="3-application">3. Application<a class="headerlink" href="#3-application" title="Permanent link">⚓︎</a></h2>
 <div class="admonition example">
 <p class="admonition-title">fonction habit version 2</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Correction</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Énoncé</label><label for="__tabbed_3_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Améliorer la fonction <code>achat(dico, habit)</code> en y incluant un test pour prendre en compte les nouveaux habits.</p>

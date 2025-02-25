@@ -1,7 +1,7 @@
 
 !!! abstract ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: En cours : [Thème 3 : Type Construit : les tuples](./T3_Type_construit/3.2_tuples/cours/) <br />
-    A venir : [Thème 3 : Type Construit : les dictionnaires](./T3_Type_construit/3.3_Dictionnaires/cours/) <br />
+    :arrow_forward: En cours : [Traitement de données](/1NSI/docs/T6_Traitement_de_donnees/sommaire.md)
+    A venir : [Projet CSV](./T8_Projets/2_ProjetCSV/cours.md)
 
 !!! warning "Mémo python"
     le mémento Python est disponible ici : :snake: [mémento Python](./data/mementopython3.pdf)
@@ -29,6 +29,8 @@
     - [Thème 5 : Spécifications](./T5_Algorithmique/5.0_specifications/cours.md)<br/>
     - [Thème 3 : Type Construit : les Listes](./T3_Type_construit/3.1_Listes/cours.md)<br/>
     - [Thème 5 : extremum et moyenne](./T5_Algorithmique/5.1_Extremums_et_moyennes/cours.md)<br/>
+    - [Thème 3 : Type Construit : les tuples](./T3_Type_construit/3.2_tuples/cours/) <br />
+    - [Thème 3 : Type Construit : les dictionnaires](./T3_Type_construit/3.3_Dictionnaires/cours/) <br />
 
 <!--
 

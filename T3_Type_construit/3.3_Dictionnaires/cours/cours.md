@@ -140,6 +140,17 @@ Ces méthodes sont importantes (elles figurent explicitement au programme de NSI
     ```python
     del dressing["chaussettes"]
     ```
+!!! example "Augmentation"
+    === "Énoncé"
+        Augmentez de 1 chaque habit de votre dressing
+    === "Correction"
+
+        ```python linenums='1'
+        dressing = {"pantalons":3, "pulls":4, "tee-shirts":8}
+
+        for habit in dressing :
+            dressing[habit] += 1
+        ```
 
 !!! example "fonction habit"
     === "Énoncé"
@@ -147,7 +158,7 @@ Ces méthodes sont importantes (elles figurent explicitement au programme de NSI
         ```python
         dressing = {"pantalons":3, "pulls":4, "tee-shirts":8}
         ```
-        Créer une fonction `achat(dico, habit)`qui prend en paramètre un dictionnaire et une clé et  qui augmente de 1 le nombre d'habits (pantalon, pull ou tee-shirt) de mon dressing. 
+        Créer une fonction `achat(dico, habit)`qui prend en paramètre un dictionnaire et une clé et  qui augmente de 1 le nombre d'exemplaire de l'habit passé en paramètre. 
 
     === "Correction"
 
