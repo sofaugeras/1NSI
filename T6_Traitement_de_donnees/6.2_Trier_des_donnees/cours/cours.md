@@ -18,8 +18,8 @@ f.close()
 ```
 
 ## Créer une fonction filtre
-L'objectif est de créer une fonction `joueursEquipe(equipe)` qui renvoie une liste contentant tous les joueurs de l'équipe `equipe`. 
-Le paramètre `equipe` sera donnée sous forme de chaîne de caractères. 
+L'objectif est de créer une fonction `joueursEquipe(equipe)` qui renvoie une liste contentant tous les joueurs de l'équipe `equipe`. <br />
+Le paramètre `equipe` sera donnée sous forme de chaîne de caractères. <br />
 La valeur renvoyée sera de type `liste de dictionnaire`.
 
 ??? tip "réponse"
@@ -34,8 +34,8 @@ La valeur renvoyée sera de type `liste de dictionnaire`.
     assert len(joueursEquipe("Bordeaux")) == 37
     ```
 
-❓  Définir de la même manière une fonction `joueursPoste(poste)` qui renvoie une liste contentant tous les joueurs occupant le  `poste`.  Le paramètre `poste` sera donnée sous forme de chaîne de caractères. 
-La valeur renvoyée sera de type `liste de dictionnaire`.
+❓  Définir de la même manière une fonction `joueursPoste(poste)` qui renvoie une liste contentant tous les joueurs occupant le  `poste`.  Le paramètre `poste` sera donnée sous forme de chaîne de caractères. <br />
+La valeur renvoyée sera de type `liste`.
 
 ??? tip "réponse"
     ```python

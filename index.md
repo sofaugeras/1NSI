@@ -1,6 +1,6 @@
 
 !!! abstract ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: En cours : [Traitement de données](/1NSI/docs/T6_Traitement_de_donnees/sommaire.md)
+    :arrow_forward: En cours : [Traitement de données](/1NSI/docs/T6_Traitement_de_donnees/sommaire.md) <br />
     A venir : [Projet CSV](./T8_Projets/2_ProjetCSV/cours.md)
 
 !!! warning "Mémo python"

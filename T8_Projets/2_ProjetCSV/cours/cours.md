@@ -66,7 +66,10 @@ df = pd.read_csv('pays2.csv', encoding = 'utf-8')
 def get_coordinates_city(city):
     # Utilisation de l'API openstreetmap 
     url = f"https://nominatim.openstreetmap.org/search?city={city}&format=json"
-    response = requests.get(url)
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (compatible; MyApp/1.0; +http://myapp.com)'
+    }
+    response = requests.get(url, headers=headers)
     data = response.json()
     if data:
         return data[0]['lat'], data[0]['lon']
@@ -77,7 +80,10 @@ def get_coordinates_city(city):
 def get_coordinates_country(country):
      # Utilisation de l'API openstreetmap 
     url = f"https://nominatim.openstreetmap.org/search?country={country}&format=json"
-    response = requests.get(url)
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (compatible; MyApp/1.0; +http://myapp.com)'
+    }
+    response = requests.get(url, headers=headers)
     data = response.json()
     if data:
         return data[0]['lat'], data[0]['lon']
