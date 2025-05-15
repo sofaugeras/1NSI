@@ -119,22 +119,32 @@ Exemple :
 
 ![](data/knn2.png)
 
-!!! note "code fonction KNN"
+??? note "code fonction KNN"
 
     ```python
 
-      def knn(poids, taille):
-          #On ajoute une nouvelle colonne distance à notre jeu de données pandas
-          #correspondant la la distance euclienne entre le nouveau et la ligne traitée
-          df['distance']=sqrt((df['Taille']-taille)**2+(df['Poids']-poids)**2)
-          # On trie le jeu de donnée sur cette nouvelle colonne
-          newdf = df.sort_values(by='distance', ascending=True)
-          #On ne garde que les 6 premières lignes que l'on 'copie' dans un nouveau dataframe
-          newdftri = newdf.head(6) #on prend les 6 joueurs les plus proches physiquement
-          #On ne garde que le poste le plus fréquent sur ces 6 lignes
-          sol = newdftri['Poste'].describe().top
-          return sol
-      knn(93,188)
+        import pandas as pd #import du module pandas, abrégé classiquement par "pd"
+        import numpy as np #import de la fonction moyenne
+
+
+        df = pd.read_csv('top14.csv', encoding = 'utf-8')
+
+        def knn(poids, taille, k=3):
+            #On ajoute une nouvelle colonne distance à notre jeu de données pandas
+            #correspondant la la distance euclienne entre le nouveau et la ligne traitée
+            calcul = np.sqrt((df['Taille']-taille)**2+(df['Poids']-poids)**2)
+            #df['distance']=sqrt((int(df['Taille'])-taille)**2+(int(df['Poids'])-poids)**2)
+            df['distance'] = calcul
+            # On trie le jeu de donnée sur cette nouvelle colonne
+            newdf = df.sort_values(by='distance', ascending=True)
+            
+            #On ne garde que les 6 premières lignes que l'on 'copie' dans un nouveau dataframe
+            newdftri = newdf.head(k) #on prend les 6 joueurs les plus proches physiquement
+            
+            #On ne garde que le poste le plus fréquent sur ces 6 lignes
+            sol = newdftri['Poste'].describe().top
+            return sol
+        knn(93,188, 6)
     ```
 
 ### Application

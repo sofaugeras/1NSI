@@ -1,7 +1,7 @@
 
 !!! abstract ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: En cours : [Traitement de données](/1NSI/docs/T6_Traitement_de_donnees/sommaire.md) <br />
-    A venir : [Projet CSV](./T8_Projets/2_ProjetCSV/cours.md)
+    :arrow_forward: En cours : [IHM sur le Web](./T7_IHM_Web/7.3_Get_Post_Formulaires/cours/)<br />
+    A venir : mini projet morpions et sockets
 
 !!! warning "Mémo python"
     le mémento Python est disponible ici : :snake: [mémento Python](./data/mementopython3.pdf)
@@ -31,6 +31,17 @@
     - [Thème 5 : extremum et moyenne](./T5_Algorithmique/5.1_Extremums_et_moyennes/cours.md)<br/>
     - [Thème 3 : Type Construit : les tuples](./T3_Type_construit/3.2_tuples/cours/) <br />
     - [Thème 3 : Type Construit : les dictionnaires](./T3_Type_construit/3.3_Dictionnaires/cours/) <br />
+    - [Traitement de données](/1NSI/docs/T6_Traitement_de_donnees/sommaire.md)<br />
+    - [Thème 4 : Réseau](./T4_Architecture_materielle/4.2_Architecture_reseau/cours.md)<br />
+    - [Projet CSV](./T8_Projets/2_ProjetCSV/cours.md)<br />
+    - [Thème 4 : Architecture matérielle : OS et commande Linux](T4_Architecture_materielle/4.4_Decouverte_des_commandes_Linux/cours.md) <br />
+    - [Thème 4 : Protocole de communication](./T4_Architecture_materielle/4.3_Protocoles_de_communication/cours.md) <br />
+    - [tri insertion](./T5_Algorithmique/5.3_Tri_par_insertion/cours.md)<br />
+    - [Ti sélection](./T5_Algorithmique/5.4_Tri_par_selection/cours.md)<br />
+    - [dichotomie](./T5_Algorithmique/5.5_Dichotomie/cours.md)<br />
+    - [Algorithme Glouton](./T5_Algorithmique/5.6_Algorithmes_gloutons/cours.md)<br />
+    - [Algorithme KNN](./T5_Algorithmique/5.7_Algorithme_KNN/cours.md)<br />
+
 
 <!--
 
@@ -39,18 +50,5 @@
     - Les listes, les tuples et les dictionnaires. À retrouver [ici](T3_Type_construit/sommaire.md){. target="_blank"}.
     - Le plus important : les chapitres suivants d'algorithmique, à retrouver [ici](T5_Algorithmique/sommaire.md){. target="_blank"} :
 
-    - [Thème 4 : Architecture matérielle : OS et commande Linux](T4_Architecture_materielle/4.4_Decouverte_des_commandes_Linux/cours.md)
-    - [Thème 4 : Réseau](./T4_Architecture_materielle/4.2_Architecture_reseau/cours.md)
-    - Traitement de données
-    - [Projet CSV](./T8_Projets/2_ProjetCSV/cours.md)
-    - [Thème 4 : Protocole de communication](./T4_Architecture_materielle/4.3_Protocoles_de_communication/cours.md)
-    - dichotomie
-    - tris
-    - [IHM sur le Web](./T7_IHM_Web/7.3_Get_Post_Formulaires/cours/)
-    - [Algorithme Glouton](./T5_Algorithmique/5.6_Algorithmes_gloutons/cours.md)
-    - mini projet glouton
-    - Knn
-
-    
 
 -->

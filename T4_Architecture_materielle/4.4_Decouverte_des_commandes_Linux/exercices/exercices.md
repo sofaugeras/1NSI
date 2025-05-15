@@ -1,6 +1,6 @@
 !!! note "Exercice 1"
     === "Ennoncé"
-        On suppose que le répertoire personnel de l'utilisateur courant est vide.
+        On suppose que le répertoire personnel de l'utilisateur courant est vide.<br />
         1. Décrire sans les tester dans un terminal l'effet de chacune des commandes suivantes, en supposant qu'elles ont été exécutées les unes à la suite des autres.
 
         ```shell
@@ -37,7 +37,7 @@
 
 !!! note "Exercice 2"
     === "Enoncé"
-        On suppose que l'on se trouve dans un répertoire TEST, que ce dernier est vide et que l'on exécute les sept commandes suivantes. 
+        On suppose que l'on se trouve dans un répertoire TEST, que ce dernier est vide et que l'on exécute les sept commandes suivantes. <br />
         1. Sans tester ces commandes dans un terminal, dessiner ci-dessous l'arborescence finale des fichiers et des répertoires. On utilisera TEST comme racine de l'arborescence.
 
         ```shell
@@ -57,7 +57,7 @@
 
 !!! note "Exercice 3"
     === "Enoncé"
-        On suppose que le répertoire courant est le répertoire personnel, que les répertoires `NSI` et `NSI/TP_SHELL` existent et que dans ce dernier répertoire il y a deux fichiers : `lisible.txt` et `secret.txt`.
+        On suppose que le répertoire courant est le répertoire personnel, que les répertoires `NSI` et `NSI/TP_SHELL` existent et que dans ce dernier répertoire il y a deux fichiers : `lisible.txt` et `secret.txt`.<br />
         Donner les commandes permettant de mettre les permissions demandées, quelles que soient les permissions initiales sur les fichier ou répertoires.
 
         1. Le répertoire personnel possède tous les droites pour l'utilisateur et uniquement le droit d’exécution pour le groupe et les autres

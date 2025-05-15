@@ -3203,7 +3203,7 @@
         
   
   <span class="md-ellipsis">
-    TP Choipeau magique
+    TP Choixpeau magique
   </span>
   
 
@@ -4362,22 +4362,32 @@ Nous allons reprendre le jeu de données sur les joueurs du top14 utilisé dans 
 <p>Il faut créer une fonction <code>knn()</code> qui prend en argument <code>poids</code> et <code>taille</code> , qui sont les caractéristiques du nouveau joueur. La fonction doit renvoyer une chaîne de caractère correspondant au poste auquel elle est susceptible de jouer.</p>
 <p>Exemple : </p>
 <p><img alt="" src="../data/knn2.png" /></p>
-<div class="admonition note">
-<p class="admonition-title">code fonction KNN</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code>  <span class="k">def</span> <span class="nf">knn</span><span class="p">(</span><span class="n">poids</span><span class="p">,</span> <span class="n">taille</span><span class="p">):</span>
-      <span class="c1">#On ajoute une nouvelle colonne distance à notre jeu de données pandas</span>
-      <span class="c1">#correspondant la la distance euclienne entre le nouveau et la ligne traitée</span>
-      <span class="n">df</span><span class="p">[</span><span class="s1">&#39;distance&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">sqrt</span><span class="p">((</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">taille</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">poids</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-      <span class="c1"># On trie le jeu de donnée sur cette nouvelle colonne</span>
-      <span class="n">newdf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;distance&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-      <span class="c1">#On ne garde que les 6 premières lignes que l&#39;on &#39;copie&#39; dans un nouveau dataframe</span>
-      <span class="n">newdftri</span> <span class="o">=</span> <span class="n">newdf</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="c1">#on prend les 6 joueurs les plus proches physiquement</span>
-      <span class="c1">#On ne garde que le poste le plus fréquent sur ces 6 lignes</span>
-      <span class="n">sol</span> <span class="o">=</span> <span class="n">newdftri</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">top</span>
-      <span class="k">return</span> <span class="n">sol</span>
-  <span class="n">knn</span><span class="p">(</span><span class="mi">93</span><span class="p">,</span><span class="mi">188</span><span class="p">)</span>
+<details class="note">
+<summary>code fonction KNN</summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code>    <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> <span class="c1">#import du module pandas, abrégé classiquement par &quot;pd&quot;</span>
+    <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1">#import de la fonction moyenne</span>
+
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;top14.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">knn</span><span class="p">(</span><span class="n">poids</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+        <span class="c1">#On ajoute une nouvelle colonne distance à notre jeu de données pandas</span>
+        <span class="c1">#correspondant la la distance euclienne entre le nouveau et la ligne traitée</span>
+        <span class="n">calcul</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">taille</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">poids</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+        <span class="c1">#df[&#39;distance&#39;]=sqrt((int(df[&#39;Taille&#39;])-taille)**2+(int(df[&#39;Poids&#39;])-poids)**2)</span>
+        <span class="n">df</span><span class="p">[</span><span class="s1">&#39;distance&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">calcul</span>
+        <span class="c1"># On trie le jeu de donnée sur cette nouvelle colonne</span>
+        <span class="n">newdf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;distance&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="c1">#On ne garde que les 6 premières lignes que l&#39;on &#39;copie&#39; dans un nouveau dataframe</span>
+        <span class="n">newdftri</span> <span class="o">=</span> <span class="n">newdf</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="c1">#on prend les 6 joueurs les plus proches physiquement</span>
+
+        <span class="c1">#On ne garde que le poste le plus fréquent sur ces 6 lignes</span>
+        <span class="n">sol</span> <span class="o">=</span> <span class="n">newdftri</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">top</span>
+        <span class="k">return</span> <span class="n">sol</span>
+    <span class="n">knn</span><span class="p">(</span><span class="mi">93</span><span class="p">,</span><span class="mi">188</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
 </code></pre></div>
-</div>
+</details>
 <h3 id="application">Application<a class="headerlink" href="#application" title="Permanent link">⚓︎</a></h3>
 <div class="admonition example">
 <p class="admonition-title">Question 4</p>

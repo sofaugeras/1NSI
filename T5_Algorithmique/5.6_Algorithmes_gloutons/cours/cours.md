@@ -220,7 +220,7 @@ $x_{1}=0$, $x_{2}=1$, $x_{3}=1$, et $x_{4}=1$.</p>
 
 Puis il faut définir les contraintes du problème. Ici, il n'y en a qu’une : la somme des poids de tous les objets dans le sac doit être inférieure ou égale au poids maximal du sac à dos.
 
-Cela s’écrit : $x_{1}*w_{1}+p_{2}*w_{2}+p_{3}*w_{3}+p_{4}*w_{4} <= W$
+Cela s’écrit : $x_{1}*w_{1}+x_{2}*w_{2}+x_{3}*w_{3}+x_{4}*w_{4} <= W$
 
 ou plus généralement pour $n$ objets : $\sum_{i=1}^{n} x_{i}*w_{i} \le W$<br />
     
@@ -473,7 +473,7 @@ FIN
         Crée une liste de dictionnaires, un par ligne.
         La 1ère ligne est considérée comme la ligne des noms de champs
         """
-        lecteur = csv.DictReader(open(nom_fichier_csv,'r'),delimiter = ";")
+        lecteur = csv.DictReader(open(nom_fichier_csv,'r',encoding="utf-8"),delimiter = ";")
         return [dict(ligne) for ligne in lecteur]
 
     liste_nasa = depuis_csv("nasa.csv")
@@ -484,8 +484,7 @@ FIN
     cumul_valeur = 0
     choix = []
 
-    # on trie la liste mercato par force décroissante  ATTENTION DIFFICULTE ELEVE
-    # CECI EST L'ETAPE CLE POUR QUALIFIER L'ALGORITHME DE GLOUTON
+    # on trie la liste liste_nasa_ordo par force décroissante  
     liste_nasa_ordo =sorted(liste_nasa, key=lambda d: d["valeur"], reverse=True)
     print (liste_nasa_ordo)
     # on balaye sequentiellement liste_nasa_ordo

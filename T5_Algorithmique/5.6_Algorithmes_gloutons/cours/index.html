@@ -3065,7 +3065,7 @@
         
   
   <span class="md-ellipsis">
-    TP Choipeau magique
+    TP Choixpeau magique
   </span>
   
 
@@ -4507,7 +4507,7 @@ Ou plus simplement, les objets mis dans le sac à dos doivent maximiser la valeu
 <p>Dans notre exemple, une solution réalisable est de mettre tous les objets dans le sac à dos sauf le premier, nous avons donc : 
 <span class="arithmatex">\(x_{1}=0\)</span>, <span class="arithmatex">\(x_{2}=1\)</span>, <span class="arithmatex">\(x_{3}=1\)</span>, et <span class="arithmatex">\(x_{4}=1\)</span>.</p></p>
 <p>Puis il faut définir les contraintes du problème. Ici, il n'y en a qu’une : la somme des poids de tous les objets dans le sac doit être inférieure ou égale au poids maximal du sac à dos.</p>
-<p>Cela s’écrit : <span class="arithmatex">\(x_{1}*w_{1}+p_{2}*w_{2}+p_{3}*w_{3}+p_{4}*w_{4} &lt;= W\)</span></p>
+<p>Cela s’écrit : <span class="arithmatex">\(x_{1}*w_{1}+x_{2}*w_{2}+x_{3}*w_{3}+x_{4}*w_{4} &lt;= W\)</span></p>
 <p>ou plus généralement pour <span class="arithmatex">\(n\)</span> objets : <span class="arithmatex">\(\sum_{i=1}^{n} x_{i}*w_{i} \le W\)</span><br /></p>
 <p>Pour vérifier que la contrainte est respectée dans notre exemple, il suffit de calculer cette somme : <span class="arithmatex">\(0 × 13 + 1 × 12 + 1 × 8 + 1 × 10 = 30\)</span>, ce qui est bien inférieur ou égal à 30, donc la contrainte est respectée. Nous parlons alors de solution réalisable. <br />
 <img alt="‼" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/203c.svg" title=":bangbang:" /> Mais ce n’est pas nécessairement la meilleure solution.<br />
@@ -4946,15 +4946,14 @@ FIN
 <span class="normal">34</span>
 <span class="normal">35</span>
 <span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">csv</span>
+<span class="normal">37</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">csv</span>
 
 <span class="k">def</span> <span class="nf">depuis_csv</span><span class="p">(</span><span class="n">nom_fichier_csv</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Crée une liste de dictionnaires, un par ligne.</span>
 <span class="sd">    La 1ère ligne est considérée comme la ligne des noms de champs</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">lecteur</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">nom_fichier_csv</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">),</span><span class="n">delimiter</span> <span class="o">=</span> <span class="s2">&quot;;&quot;</span><span class="p">)</span>
+    <span class="n">lecteur</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">nom_fichier_csv</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">),</span><span class="n">delimiter</span> <span class="o">=</span> <span class="s2">&quot;;&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="p">[</span><span class="nb">dict</span><span class="p">(</span><span class="n">ligne</span><span class="p">)</span> <span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="n">lecteur</span><span class="p">]</span>
 
 <span class="n">liste_nasa</span> <span class="o">=</span> <span class="n">depuis_csv</span><span class="p">(</span><span class="s2">&quot;nasa.csv&quot;</span><span class="p">)</span>
@@ -4965,8 +4964,7 @@ FIN
 <span class="n">cumul_valeur</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">choix</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="c1"># on trie la liste mercato par force décroissante  ATTENTION DIFFICULTE ELEVE</span>
-<span class="c1"># CECI EST L&#39;ETAPE CLE POUR QUALIFIER L&#39;ALGORITHME DE GLOUTON</span>
+<span class="c1"># on trie la liste liste_nasa_ordo par force décroissante  </span>
 <span class="n">liste_nasa_ordo</span> <span class="o">=</span><span class="nb">sorted</span><span class="p">(</span><span class="n">liste_nasa</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">d</span><span class="p">:</span> <span class="n">d</span><span class="p">[</span><span class="s2">&quot;valeur&quot;</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="nb">print</span> <span class="p">(</span><span class="n">liste_nasa_ordo</span><span class="p">)</span>
 <span class="c1"># on balaye sequentiellement liste_nasa_ordo</span>
