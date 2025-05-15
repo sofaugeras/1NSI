@@ -72,7 +72,7 @@ $distance(eleve1, eleve2) = |c1-c2|+|l1-l2|+|s1-s2|+|m1-m2|$
         assert (distance(adrian,hermione)) == 8
         ```
 
-## Partie III : Charger le dataframe
+## Partie II : Charger le dataframe
 
 Voici le code d’une fonction qui permet de récupérer les données des élèves d’un fichier CSV pour les stocker dans un dataframe pandas.
 
