@@ -4,17 +4,6 @@
 
 ![image](data/BO.png){: .center}
 
-!!! example "Source" 
-    - [pixees](https://pixees.fr/informatiquelycee/n_site/nsi_prem_glouton_algo.html)
-    - [wikipedia](https://fr.wikipedia.org/wiki/Probl%C3%A8me_du_sac_%C3%A0_dos)
-    - [Fiche cours schoolmouv](https://www.schoolmouv.fr/cours/algorithmes-gloutons/fiche-de-cours)
-    - [Fiche interstice sur le sac à dos](https://interstices.info/le-probleme-du-sac-a-dos/)
-    - PrépaBac hatier : Algorithme glouton sur le rendu de monnaie
-    - "Programmation efficace" aux éditions Ellipses
-    - [Lumni : survivre sur la lune](https://www.lumni.fr/article/jouer-a-survivre-sur-la-lune)
-    - [site du zéro : fiche sac à dos](http://sdz.tdct.org/sdz/les-algorithmes-gloutons.html)
-    - [Gilles Glassus - académie de Bordeaux](https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.6_Algorithmes_gloutons/cours/)
-
 ![](data/greedy.png){: .center}
 
 !!! abstract "Définition :heart:"
@@ -198,6 +187,19 @@ Mais si l'on rajoute une contrainte de poids ? Les astronautes ne peuvent emport
 | Des signaux lumineux|6|1|
 | Un émetteur-récepteur fonctionnant sur l’énergie solaire|11|5|
 
+!!! example "structure"
+
+    En partant la structure suivante `nasa = {"allumette":1, 'carte': 13, 'emetteur':11}`, comment ajouter la notion de poids ?
+
+??? tips "Correction"
+
+        On peut utiliser un dictionnaire avec le nom de l'objet en clé et en valeur un tuple valeur/poids.
+
+        ```
+        nasa = {"allumettes" : (1, 0.1), "aliments" : (12, 2), "corde" : (10, 5), "parachute" : (8, 0.5), "chauffage" : (3, 25), "pistolets" : (5, 0.5), "lait" : (4, 5), "oxygène" : (15, 100), "carte" : (13, 0.1), "canot" : (7, 100), "compas" : (2, 0.5), "eau" : (14, 25)}
+
+        ```
+
 **Quelle serait alors la combinaison optimum pour maximiser ses chances de survie ?**
 
 Plus difficile, non ? :skull:
@@ -242,74 +244,47 @@ Vous trouverez ci dessous un extrait du code de résolution du problème de la N
 ??? note "Code par force brute"
 
     ```python linenums='1'
-    import itertools
+        # Structure contenant les objets de la NASA
+        dicoNasa2 = {"allumettes" : (1, 0.1), "aliments" : (12, 2), "corde" : (10, 5), "parachute" : (8, 0.5), "chauffage" : (3, 25), "pistolets" : (5, 0.5), "lait" : (4, 5), "oxygène" : (15, 100), "carte" : (13, 0.1), "canot" : (7, 100), "compas" : (2, 0.5), "eau" : (14, 25)}
 
-    def tri(table, attribut, decroit):
+        #Initialisation des variables
+        # stockage de la meilleure solution
+        meilleur_valeur=0
+        # stockage de la meilleure combinaison
+        meilleur_comb=""
+        # stockage du meilleur poids
+        meilleur_poids=0
+
         """
-        tri un dictionnaire, selon un critère passé en paramètre
-        @param : table : dictionnaire à trier
-                attribut : critère de tri
-                decroit : sens ascendant ou descendant
-        @return : retourne le dictionnaire trié
+        Paramètres de contrainte de l'algorithme du sac à dos
+            - poids_max : poids maximum autorisé
+            - max_objets : nombre maximum d'objets autorisés
         """
-        def critère(ligne):
-            return ligne[attribut]
-        return sorted(table, key=critère, reverse=decroit)
+        # poids maximum autorisé
+        poids_max = 200
+        # nombre maximum d'objets autorisés
+        max_objets =10
 
-    def sommeValeur(dico):
-        force = 0
-        for i in range(len(dico)):
-            force += int(dico[i]["valeur"])
-        return force
+        # Extraire les items du dictionnaire (liste de tuples (clé, valeur))
+        items = list(dicoNasa2.items())
 
-    def listeObjet(dico):
-        liste = ""
-        for i in range(len(dico)):
-            liste += dico[i]["objet"]+str("/")
-        return (liste)
-
-    def sommePoids(dico):
-        cout = 0
-        for i in range(len(dico)):
-            cout += float(dico[i]["poids"])
-        return cout
-
-        '''
-        PROGRAMME PRINCIPAL
-        
-        note : 
-            Il existe de nombreuses manière de coder la force brut.
-            Il s'agit ci dessous de l'une de ces versions. 
-        '''
-    dicoNasa=[{'objet': 'allumettes', 'valeur': '01', 'poids': '0.1'}, {'objet': 'aliments', 'valeur': '12', 'poids': '2'}, {'objet': 'corde', 'valeur': '10', 'poids': '5'}, {'objet': 'parachute', 'valeur': '08', 'poids': '0.5'}, {'objet': 'chauffage', 'valeur': '03', 'poids': '25'}, {'objet': 'pistolets', 'valeur': '05', 'poids': '0.5'}, {'objet': 'lait', 'valeur': '04', 'poids': '5'}, {'objet': 'oxygène', 'valeur': '15', 'poids': '100'}, {'objet': 'carte', 'valeur': '13', 'poids': '0.1'}, {'objet': 'canot', 'valeur': '07', 'poids': '100'}, {'objet': 'compas', 'valeur': '02', 'poids': '0.5'}, {'objet': 'eau', 'valeur': '14', 'poids': '25'}, {'objet': 'seringues', 'valeur': '09', 'poids': '0.5'}, {'objet': 'signaux', 'valeur': '06', 'poids': '1'}, {'objet': 'emetteur', 'valeur': '11', 'poids': '5'}]
-
-    meilleur_valeur=0
-    meilleur_comb=""
-    meilleur_poids=0
-    poids_max = 250
-        
-    j=0
-    for i in range(len(dicoNasa)):    
-        for p in itertools.combinations(dicoNasa,i+1) :
-
-            combinaison = listeObjet(p)
-            valeurs = sommeValeur(p)
-            poids = sommePoids(p)
-            #print(combinaison,' ',valeurs,' ',poids)
-            j += 1
-            #print(combinaison)
-            ''''On ne garde que les combinaisons qui respectent les contraintes 
-            dans notre cas : pas plus de 10 objets pour un poids inférieur à 200 
-            et en maximisant la valeur
-            '''
-            if valeurs>meilleur_valeur and poids<=poids_max and len(p)<=10:
-                # solution retenue si surpasse la meilleure
-                meilleur_valeur = valeurs     # maj meilleure solution
-                meilleur_comb = combinaison   # maj meilleure solution
-                meilleur_poids = poids        # maj meilleure solution
-
-    print("Nombre de combinaisons testées = ",j)
-    print("La meilleure sélection est \n",meilleur_comb,"\n valeur = ",meilleur_valeur,"\n poids = ",meilleur_poids)
+        # Générer toutes les combinaisons possibles de longueurs différentes
+        for r in range(1, len(items) + 1):
+            # On utilise itertools pour générer toutes les combinaisons possibles de i objets
+            combinaisons = itertools.combinations(items, r)
+            for combinaison in combinaisons:
+                Comb = listeObjet2(combinaison)
+                valeurs = sommeValeur2(combinaison)
+                poids = sommePoids2(combinaison)
+                # On affiche la combinaison, la valeur et le poids 
+                print(Comb,' ',valeurs,' ',poids,'\n')
+                # On ne garde que les combinaisons qui respectent les contraintes
+                # dans notre cas : pas plus de 10 objets pour un poids inférieur à 200  
+                if valeurs>meilleur_valeur and poids<=poids_max and len(combinaison)<=max_objets:
+                    # solution retenue si surpasse la meilleure
+                    meilleur_comb = Comb   # maj meilleure solution
+                    meilleur_valeur = valeurs     # maj meilleure solution
+                    meilleur_poids = poids        # maj meilleure solution
 
     ```
 Le principe de la résolution par force brut est de générer toutes les combinaisons possibles. Puis de sélectionner uniquement celle qui maximise la valeur, tout en respectant les contraintes données. 
@@ -353,92 +328,100 @@ allumettes\aliments\parachute
     [Source wikipedia](https://fr.wikipedia.org/wiki/Analyse_de_la_complexit%C3%A9_des_algorithmes)
 
 
-??? info "Code par force brut"
+??? info "Code par force brut complet"
 
     ```python linenums='1'
-    import csv
-    import itertools
+        import itertools
 
+        def listeObjet2(liste):
+            """
+            Afffiche la liste des objets à partir d'un dictionnaire 
+            :param dico: liste de tuples
+            exemple : (('allumettes', (1, 0.1)),)
+            :return --> str: retourne la liste des objets
+            """
+            l = ""
+            for objet in liste :
+                l += objet[0]+str("/")
+            return l
 
-    def openFile(file, delimiter=None):
+        def sommeValeur2(liste):
+            """
+            Calcule la valeur totale de la liste d'objets
+            :param dico: liste de tuples
+            exemple : (('allumettes', (1, 0.1)),)
+            :return -> int: retourne la valeur totale de la liste d'objets passée en paramètre
+            """
+            force = 0
+            for objet in range(len(liste)):
+                force += int(liste[objet][1][0])
+            return force
+            
+        def sommePoids2(liste):
+            """"
+            Calcule le poids total de la liste d'objets
+            :param dico: liste de tuples
+            exemple : (('allumettes', (1, 0.1)),)
+            :return -> float: retourne le poids total    
+            """
+            cout = 0
+            for objet in range(len(liste)):
+                cout += float(liste[objet][1][1])
+            return cout 
         """
-        Crée une liste de dictionnaires, un par ligne.
-        La 1ère ligne est considérée comme la ligne des noms de champs
-        :param namefile: nom du fichier contenant les données des joueurs 1 ligne = 1 joueur
-        :type namefile: str
-        :return: retourne la liste des caractéristiques des joueurs
-        :rtype: dictionnaire
-        """
-        if not delimiter:
-            delimiter = ';'
-        lecteur = csv.DictReader(open(file,'r'), delimiter=delimiter)
-        return [dict(ligne) for ligne in lecteur]
-
-
-    def tri(table, attribut, decroit):
-        """
-        tri un dictionnaire, selon un critère passé en paramètre
-        @param : table : dictionnaire à trier
-                attribut : critère de tri
-                decroit : sens ascendant ou descendant
-        @return : retourne le dictionnaire trié
-        """
-        def critère(ligne):
-            return ligne[attribut]
-        return sorted(table, key=critère, reverse=decroit)
-
-    def sommeValeur(dico):
-        force = 0
-        for i in range(len(dico)):
-            force += int(dico[i]["valeur"])
-        return force
-
-    def listeObjet(dico):
-        liste = ""
-        for i in range(len(dico)):
-            liste += dico[i]["objet"]+str("/")
-        return (liste)
-
-    def sommePoids(dico):
-        cout = 0
-        for i in range(len(dico)):
-            cout += float(dico[i]["poids"])
-        return cout
-
-
-        '''
         PROGRAMME PRINCIPAL
-        
         note : 
             Il existe de nombreuses manière de coder la force brut.
-            Il s'agit ci dessous de l'une de ces versions. 
-        '''
-    dicoNasa=openFile("nasa.csv",";")
-        
-    meilleur_valeur=0
-    meilleur_comb=""
-    meilleur_poids=0
-    poids_max = 200
-        
+            Il s'agit ci dessous de l'une de ces versions en utilisant la bibliothèqye itertools pour générer 
+            toutes les combinaisons possibles de l'ensemble des objets. 
+        """
+        # Ouverture du fichier contenant les objets de la NASA
+        dicoNasa2 = {"allumettes" : (1, 0.1), "aliments" : (12, 2), "corde" : (10, 5), "parachute" : (8, 0.5), "chauffage" : (3, 25), "pistolets" : (5, 0.5), "lait" : (4, 5), "oxygène" : (15, 100), "carte" : (13, 0.1), "canot" : (7, 100), "compas" : (2, 0.5), "eau" : (14, 25)}
 
-    for i in range(len(dicoNasa)):   
-        for p in itertools.combinations(dicoNasa,i+1) :
+        #Initialisation des variables
+        # stockage de la meilleure solution
+        meilleur_valeur=0
+        # stockage de la meilleure combinaison
+        meilleur_comb=""
+        # stockage du meilleur poids
+        meilleur_poids=0
 
-            combinaison = listeObjet(p)
-            valeurs = sommeValeur(p)
-            poids = sommePoids(p)
-            print(combinaison,' ',valeurs,' ',poids,'\n')
-            ''''On ne garde que les combinaisons qui respectent les contraintes 
-            dans notre cas : pas plus de 10 objets pour un poids inférieur à 200 
-            et en maximisant la valeur
-            '''
-            if valeurs>meilleur_valeur and poids<=poids_max and len(p)<=10:
-                # solution retenue si surpasse la meilleure
-                meilleur_valeur = valeurs     # maj meilleure solution
-                meilleur_comb = combinaison   # maj meilleure solution
-                meilleur_poids = poids        # maj meilleure solution
+        """
+        Paramètres de contrainte de l'algorithme du sac à dos
+            - poids_max : poids maximum autorisé
+            - max_objets : nombre maximum d'objets autorisés
+        """
+        # poids maximum autorisé
+        poids_max = 200
+        # nombre maximum d'objets autorisés
+        max_objets =10
 
-    print("La meilleure sélection est \n",meilleur_comb,"\n valeur = ",meilleur_valeur,"\n poids = ",meilleur_poids)
+        #version 2 en utilisant un dictionnaire
+        # On génère toutes les combinaisons possibles de i objets (1 objet, 2 objets, 3 objets, etc)
+
+
+        # Extraire les items du dictionnaire (liste de tuples (clé, valeur))
+        items = list(dicoNasa2.items())
+
+        # Générer toutes les combinaisons possibles de longueurs différentes
+        for r in range(1, len(items) + 1):
+            # On utilise itertools pour générer toutes les combinaisons possibles de i objets
+            combinaisons = itertools.combinations(items, r)
+            for combinaison in combinaisons:
+                Comb = listeObjet2(combinaison)
+                valeurs = sommeValeur2(combinaison)
+                poids = sommePoids2(combinaison)
+                # On affiche la combinaison, la valeur et le poids 
+                print(Comb,' ',valeurs,' ',poids,'\n')
+                # On ne garde que les combinaisons qui respectent les contraintes
+                # dans notre cas : pas plus de 10 objets pour un poids inférieur à 200  
+                if valeurs>meilleur_valeur and poids<=poids_max and len(combinaison)<=max_objets:
+                    # solution retenue si surpasse la meilleure
+                    meilleur_comb = Comb   # maj meilleure solution
+                    meilleur_valeur = valeurs     # maj meilleure solution
+                    meilleur_poids = poids        # maj meilleure solution
+
+        print(f"La meilleure sélection est {meilleur_comb} ; valeur = {meilleur_valeur}; poids = {meilleur_poids}")
     ```
 
 ## Résolution algorithmique - Algorithme glouton
@@ -465,44 +448,48 @@ FIN
 ```
 ??? info "Code par la méthode gloutonne."
 
-    ```python linenums='1'
-    import csv
+    ```python linenums='1'  
+        # Ouverture du fichier contenant les objets de la NASA
+        dicoNasa2 = {"allumettes" : (1, 0.1), "aliments" : (12, 2), "corde" : (10, 5), "parachute" : (8, 0.5), "chauffage" : (3, 25), "pistolets" : (5, 0.5), "lait" : (4, 5), "oxygène" : (15, 100), "carte" : (13, 0.1), "canot" : (7, 100), "compas" : (2, 0.5), "eau" : (14, 25)}
 
-    def depuis_csv(nom_fichier_csv) -> list():
+        #Initialisation des variables
+        # stockage de la meilleure solution
+        meilleur_valeur=0
+        # stockage de la meilleure combinaison
+        meilleur_comb=[]
+        # stockage du meilleur poids
+        meilleur_poids=0
+
         """
-        Crée une liste de dictionnaires, un par ligne.
-        La 1ère ligne est considérée comme la ligne des noms de champs
+        Paramètres de contrainte de l'algorithme du sac à dos
+            - poids_max : poids maximum autorisé
+            - max_objets : nombre maximum d'objets autorisés
         """
-        lecteur = csv.DictReader(open(nom_fichier_csv,'r',encoding="utf-8"),delimiter = ";")
-        return [dict(ligne) for ligne in lecteur]
+        # poids maximum autorisé
+        poids_max = 200
+        # nombre maximum d'objets autorisés
+        max_objets =10
 
-    liste_nasa = depuis_csv("nasa.csv")
-    poids_max = 200 
+        # on trie la liste des objets par force décroissante  
+        nasa_ordo = sorted(dicoNasa2.items(), key=lambda x: x[1][0], reverse=True)
+        #ATTENTION : changement de la structure de la liste 
+        #nasa_ordo = [('oxygène', (15, 100)), ('eau', (14, 25)), ('carte', (13, 0.1)), ('aliments', (12, 2)), ('corde', (10, 5)), ('parachute', (8, 0.5)), ('canot', (7, 100)), ('pistolets', (5, 0.5)), ('lait', (4, 5)), ('chauffage', (3, 25)), ('compas', (2, 0.5)), ('allumettes', (1, 0.1))]
 
-    # initialisations
-    cumul_poids = 0
-    cumul_valeur = 0
-    choix = []
+        # on balaye sequentiellement la liste triée nasa_ordo
+        for objet in nasa_ordo:  
+            # on accumule tant que cela ne va pas dépasser le budget Poids
+            # et que l'on ne dépasse pas le nombre d'objet, fixé à 10 par nos contraintes
+            if (meilleur_poids + float(objet[1][1])) <= poids_max and len(meilleur_comb)<max_objets: 
 
-    # on trie la liste liste_nasa_ordo par force décroissante  
-    liste_nasa_ordo =sorted(liste_nasa, key=lambda d: d["valeur"], reverse=True)
-    print (liste_nasa_ordo)
-    # on balaye sequentiellement liste_nasa_ordo
-    for i in range(len(liste_nasa_ordo)):   
-        # on accumule tant que cela ne va pas dépasser le budget Poids
-        # et que l'on ne dépasse pas le nombre d'objet, fixé à 10 par nos contraintes
-        if cumul_poids + float(liste_nasa_ordo[i]["poids"]) <= poids_max and len(choix)<10: 
-            cumul_valeur += int(liste_nasa_ordo[i]["valeur"])  #calcul valeur gagnée
-            choix.append(liste_nasa_ordo[i])             #complément liste des recrues
-            cumul_poids += float(liste_nasa_ordo[i]["poids"])  #calcul poids "dépensées"
+                meilleur_valeur += int(objet[1][0])  #calcul valeur gagnée
+                meilleur_comb.append(objet[0]) #complément liste des recrues
+                meilleur_poids += float(objet[1][1])  #calcul poids "dépensées"
 
-    #Affichage du résultat
-    print ("somme des valeurs : ",cumul_valeur)
-    print ("nombre d'objet : ",len(choix))
-    print ("poids total : ",cumul_poids)
-    print ("\nliste des objets\n")
-    for i in range(len(choix)):
-        print (choix[i]["objet"], choix[i]["valeur"],"poids", choix[i]["poids"])
+        #Affichage du résultat
+        print ("somme des valeurs : ",meilleur_valeur)
+        print ("nombre d'objet : ",)
+        print ("poids total : ",meilleur_poids)
+        print (f"liste des {len(meilleur_comb)} objets : {meilleur_comb}")
     ```
 
 !!! example "Question"
@@ -539,3 +526,14 @@ Les algorithmes gloutons sont souvent employés pour résoudre des **problèmes 
 - compresser des données<br />
 - organiser au mieux le parcours d’un voyageur visitant un ensemble de villes<br />
 - organiser au mieux des plannings d’activité ou d’occupations de salles.<br />
+
+!!! example "Source" 
+    - [pixees](https://pixees.fr/informatiquelycee/n_site/nsi_prem_glouton_algo.html)
+    - [wikipedia](https://fr.wikipedia.org/wiki/Probl%C3%A8me_du_sac_%C3%A0_dos)
+    - [Fiche cours schoolmouv](https://www.schoolmouv.fr/cours/algorithmes-gloutons/fiche-de-cours)
+    - [Fiche interstice sur le sac à dos](https://interstices.info/le-probleme-du-sac-a-dos/)
+    - PrépaBac hatier : Algorithme glouton sur le rendu de monnaie
+    - "Programmation efficace" aux éditions Ellipses
+    - [Lumni : survivre sur la lune](https://www.lumni.fr/article/jouer-a-survivre-sur-la-lune)
+    - [site du zéro : fiche sac à dos](http://sdz.tdct.org/sdz/les-algorithmes-gloutons.html)
+    - [Gilles Glassus - académie de Bordeaux](https://glassus.github.io/premiere_nsi/T4_Algorithmique/4.6_Algorithmes_gloutons/cours/)
