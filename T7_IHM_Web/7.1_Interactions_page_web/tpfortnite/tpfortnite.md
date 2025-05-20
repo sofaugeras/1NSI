@@ -1,5 +1,8 @@
 # TP Fortnite
 
+![image site](./data/captureSiteFortnite.png){: width=80% .center}
+
+
 !!! info "🎯 Objectifs pédagogiques"
 
     - Comprendre et manipuler le DOM.
@@ -69,20 +72,25 @@ Vous allez compléter une page web sur le thème de Fortnite. Le formulaire serv
 ```css
 body {
   font-family: 'Arial', sans-serif;
-  background-image: url('https://wallpapercave.com/wp/wp7537085.jpg');
+  background-image: url('Fortnite.jpg'); /* Image Fortnite */
   background-size: cover;
-  color: white;
+  background-position: center;
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.91);
   padding: 30px;
   margin: 100px auto;
   width: 300px;
   border-radius: 10px;
   box-shadow: 0 0 15px #00f0ff;
+  opacity: 1;
 }
 
 h1 {
@@ -97,6 +105,10 @@ form {
 
 label, input, select, button {
   margin: 10px 0;
+}
+
+label {
+  color: #00f0ff;
 }
 
 button {
@@ -120,6 +132,8 @@ button:hover {
 }
 
 ```
+![les joies du code js](./data/javascript-projet-thinking-vs-doing.jpg){: width=50% .center}
+
 ### ⚙️ script.js
 
 ```js
@@ -179,5 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
 ```
 
 ## 💡 Bonus 
+
 - Ajouter un effet sonore lors du clic sur le bouton submit.
 - Faire apparaître une animation ou image Fortnite en cas d’inscription réussie.
+- Ajouter un champ age et interdire l'inscription au moins de 12 ans

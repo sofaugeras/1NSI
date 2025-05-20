@@ -12,7 +12,7 @@
         <meta name="author" content="Sophie FAUGERAS">
       
       
-        <link rel="canonical" href="https://github.com/sofaugeras/1NSI/T8_Projets/4_sockets/4.1_tictactoe/">
+        <link rel="canonical" href="https://github.com/sofaugeras/1NSI/T8_Projets/4_sockets/4.1_PFC/">
       
       
         <link rel="prev" href="../../3_Exposes/cours/">
@@ -3926,7 +3926,7 @@
             
   
   <span class="md-ellipsis">
-    4 sockets
+    Mini Porjet Socket
   </span>
   
 
@@ -3936,7 +3936,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9_4">
             <span class="md-nav__icon md-icon"></span>
-            4 sockets
+            Mini Porjet Socket
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4065,7 +4065,7 @@
           <li class="md-nav__item">
   <a href="#serveur-de-jeu" class="md-nav__link">
     <span class="md-ellipsis">
-      Serveur de jeu
+      ⌛️ Serveur de jeu
     </span>
   </a>
   
@@ -4074,7 +4074,7 @@
           <li class="md-nav__item">
   <a href="#client-du-jeu" class="md-nav__link">
     <span class="md-ellipsis">
-      Client du jeu
+      🎾 Client du jeu
     </span>
   </a>
   
@@ -4088,7 +4088,7 @@
         <li class="md-nav__item">
   <a href="#test-du-jeu" class="md-nav__link">
     <span class="md-ellipsis">
-      Test du jeu
+      👀 Test du jeu
     </span>
   </a>
   
@@ -4097,7 +4097,7 @@
         <li class="md-nav__item">
   <a href="#bonus-si-temps" class="md-nav__link">
     <span class="md-ellipsis">
-      Bonus (si temps)
+      💡 Bonus (si temps)
     </span>
   </a>
   
@@ -4375,8 +4375,11 @@
 
 
 <h1 id="41-mini-projet-jeu-pierre-feuille-ciseaux-en-reseau-avec-python">4.1 Mini-projet : Jeu "Pierre-Feuille-Ciseaux" en réseau avec Python<a class="headerlink" href="#41-mini-projet-jeu-pierre-feuille-ciseaux-en-reseau-avec-python" title="Permanent link">⚓︎</a></h1>
-<p><strong>Durée : 2h</strong><br />
-<strong>Objectif :</strong> Découvrir la communication réseau avec les sockets et créer un jeu simple en client-serveur.</p>
+<p><img alt="PFC" class="center" src="../data/piefc_02.jpg" width="50%" /></p>
+<div class="admonition info">
+<p class="admonition-title">🎯 Objectifs</p>
+<p>Découvrir la communication réseau avec les sockets et créer un jeu simple en client-serveur.</p>
+</div>
 <hr />
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">⚓︎</a></h2>
 <p>Une <strong>socket</strong> permet à deux programmes de communiquer à travers un réseau.<br />
@@ -4384,14 +4387,18 @@ Nous allons créer un mini-jeu où un <strong>joueur client</strong> affronte un
 <p>Le protocole utilisé sera <strong>TCP</strong>, qui garantit la fiabilité des échanges.</p>
 <hr />
 <h2 id="rappel-du-fonctionnement">Rappel du fonctionnement<a class="headerlink" href="#rappel-du-fonctionnement" title="Permanent link">⚓︎</a></h2>
-<p><strong>Serveur :</strong>
-- Attendre une connexion.
-- Recevoir le coup du joueur.
-- Déterminer le résultat et répondre.</p>
-<p><strong>Client :</strong>
-- Se connecter au serveur.
-- Envoyer son choix.
-- Recevoir le résultat.</p>
+<p><strong>Serveur :</strong></p>
+<ul>
+<li>Attendre une connexion.</li>
+<li>Recevoir le coup du joueur.</li>
+<li>Déterminer le résultat et répondre.</li>
+</ul>
+<p><strong>Client :</strong></p>
+<ul>
+<li>Se connecter au serveur.</li>
+<li>Envoyer son choix.</li>
+<li>Recevoir le résultat.</li>
+</ul>
 <hr />
 <h2 id="1-premier-test-communication-simple">1. Premier test : communication simple<a class="headerlink" href="#1-premier-test-communication-simple" title="Permanent link">⚓︎</a></h2>
 <h3 id="serveur"><strong>Serveur</strong><a class="headerlink" href="#serveur" title="Permanent link">⚓︎</a></h3>
@@ -4414,6 +4421,7 @@ Nous allons créer un mini-jeu où un <strong>joueur client</strong> affronte un
 <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 <span class="n">server</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
+<p><img alt="waiting" class="center" src="../data/patiently-waiting.gif" width="40%" /></p>
 <h3 id="client">Client<a class="headerlink" href="#client" title="Permanent link">⚓︎</a></h3>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">socket</span>
 
@@ -4447,7 +4455,8 @@ Nous allons créer un mini-jeu où un <strong>joueur client</strong> affronte un
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="s2">&quot;Joueur 2 gagne&quot;</span>
 </code></pre></div>
-<h3 id="serveur-de-jeu">Serveur de jeu<a class="headerlink" href="#serveur-de-jeu" title="Permanent link">⚓︎</a></h3>
+<h3 id="serveur-de-jeu">⌛️ Serveur de jeu<a class="headerlink" href="#serveur-de-jeu" title="Permanent link">⚓︎</a></h3>
+<p><img alt="reeau" class="center" src="../data/reseau.png" width="40%" /></p>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">socket</span>
 
 <span class="n">server</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
@@ -4472,7 +4481,7 @@ Nous allons créer un mini-jeu où un <strong>joueur client</strong> affronte un
 <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 <span class="n">server</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
-<h3 id="client-du-jeu">Client du jeu<a class="headerlink" href="#client-du-jeu" title="Permanent link">⚓︎</a></h3>
+<h3 id="client-du-jeu">🎾 Client du jeu<a class="headerlink" href="#client-du-jeu" title="Permanent link">⚓︎</a></h3>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">socket</span>
 
 <span class="n">client</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
@@ -4490,17 +4499,74 @@ Nous allons créer un mini-jeu où un <strong>joueur client</strong> affronte un
 
 <span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
-<h2 id="test-du-jeu">Test du jeu<a class="headerlink" href="#test-du-jeu" title="Permanent link">⚓︎</a></h2>
+<h2 id="test-du-jeu">👀 Test du jeu<a class="headerlink" href="#test-du-jeu" title="Permanent link">⚓︎</a></h2>
 <ol>
 <li>Lance le serveur (serveur_jeu.py) sur un poste.</li>
 <li>Lance le client (client_jeu.py) sur un autre.</li>
 <li>Joue une partie et vérifie le bon fonctionnement.</li>
 </ol>
-<h2 id="bonus-si-temps">Bonus (si temps)<a class="headerlink" href="#bonus-si-temps" title="Permanent link">⚓︎</a></h2>
+<h2 id="bonus-si-temps">💡 Bonus (si temps)<a class="headerlink" href="#bonus-si-temps" title="Permanent link">⚓︎</a></h2>
 <ul>
 <li>Modifie le serveur pour qu’il propose 2 manches.</li>
 <li>Change le coup du serveur pour qu’il soit aléatoire (import random).</li>
 </ul>
+<details class="tips">
+<summary>Correction Serveur</summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code>    <span class="c1"># serveur_jeu.py</span>
+    <span class="kn">import</span> <span class="nn">socket</span>
+
+    <span class="k">def</span> <span class="nf">resultat</span><span class="p">(</span><span class="n">j1</span><span class="p">,</span> <span class="n">j2</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">j1</span> <span class="o">==</span> <span class="n">j2</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;Égalité&quot;</span>
+        <span class="k">elif</span> <span class="p">(</span><span class="n">j1</span> <span class="o">==</span> <span class="s2">&quot;pierre&quot;</span> <span class="ow">and</span> <span class="n">j2</span> <span class="o">==</span> <span class="s2">&quot;ciseaux&quot;</span><span class="p">)</span> <span class="ow">or</span> \
+            <span class="p">(</span><span class="n">j1</span> <span class="o">==</span> <span class="s2">&quot;ciseaux&quot;</span> <span class="ow">and</span> <span class="n">j2</span> <span class="o">==</span> <span class="s2">&quot;papier&quot;</span><span class="p">)</span> <span class="ow">or</span> \
+            <span class="p">(</span><span class="n">j1</span> <span class="o">==</span> <span class="s2">&quot;papier&quot;</span> <span class="ow">and</span> <span class="n">j2</span> <span class="o">==</span> <span class="s2">&quot;pierre&quot;</span><span class="p">):</span>
+            <span class="k">return</span> <span class="s2">&quot;Joueur 1 gagne&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s2">&quot;Joueur 2 gagne&quot;</span>
+
+    <span class="n">server</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+    <span class="n">server</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="s1">&#39;0.0.0.0&#39;</span><span class="p">,</span> <span class="mi">12345</span><span class="p">))</span>
+    <span class="n">server</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Serveur prêt pour une partie...&quot;</span><span class="p">)</span>
+
+    <span class="n">conn</span><span class="p">,</span> <span class="n">addr</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Connecté par </span><span class="si">{</span><span class="n">addr</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Le serveur choisit son coup (arbitraire ou aléatoire possible)</span>
+    <span class="n">coup_serveur</span> <span class="o">=</span> <span class="s2">&quot;pierre&quot;</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="s2">&quot;À vous de jouer : pierre, papier ou ciseaux ?&quot;</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
+
+    <span class="n">coup_client</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Coup du client : </span><span class="si">{</span><span class="n">coup_client</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">resultat_partie</span> <span class="o">=</span> <span class="n">resultat</span><span class="p">(</span><span class="n">coup_serveur</span><span class="p">,</span> <span class="n">coup_client</span><span class="p">)</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Serveur a joué </span><span class="si">{</span><span class="n">coup_serveur</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">resultat_partie</span><span class="si">}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
+
+    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">server</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+</details>
+<details class="tips">
+<summary>Correction joueur</summary>
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># client_jeu.py</span>
+<span class="kn">import</span> <span class="nn">socket</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+<span class="n">client</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="s1">&#39;IP_DU_SERVEUR&#39;</span><span class="p">,</span> <span class="mi">12345</span><span class="p">))</span>  <span class="c1"># Remplacer IP_DU_SERVEUR</span>
+
+<span class="n">message</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+
+<span class="n">choix</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Votre choix : &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="n">client</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="n">choix</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
+
+<span class="n">resultat</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">resultat</span><span class="p">)</span>
+
+<span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+</details>
 
 
 

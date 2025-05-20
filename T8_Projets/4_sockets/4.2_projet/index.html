@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://github.com/sofaugeras/1NSI/T8_Projets/4_sockets/4.2_projet/">
       
       
-        <link rel="prev" href="../4.1_tictactoe/">
+        <link rel="prev" href="../4.1_PFC/">
       
       
         <link rel="next" href="../../../T9_Liens_utiles/1_Conseils_generaux/cours/">
@@ -3926,7 +3926,7 @@
             
   
   <span class="md-ellipsis">
-    4 sockets
+    Mini Porjet Socket
   </span>
   
 
@@ -3936,7 +3936,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9_4">
             <span class="md-nav__icon md-icon"></span>
-            4 sockets
+            Mini Porjet Socket
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3947,7 +3947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../4.1_tictactoe/" class="md-nav__link">
+      <a href="../4.1_PFC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4086,15 +4086,6 @@
   <a href="#livrables-a-rendre" class="md-nav__link">
     <span class="md-ellipsis">
       Livrables à rendre
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bareme-indicatif-sur-20" class="md-nav__link">
-    <span class="md-ellipsis">
-      Barème indicatif (sur 20)
     </span>
   </a>
   
@@ -4378,28 +4369,36 @@
 
 
 <h1 id="42-mini-projet-creer-un-jeu-multijoueur-en-reseau-2-clients">4.2 Mini-projet : Créer un jeu multijoueur en réseau (2 clients)<a class="headerlink" href="#42-mini-projet-creer-un-jeu-multijoueur-en-reseau-2-clients" title="Permanent link">⚓︎</a></h1>
-<p><strong>Durée : 4h</strong><br />
-<strong>Public : Première spécialité NSI</strong><br />
-<strong>Compétences :</strong><br />
-- Concevoir un protocole d’échange entre programmes.<br />
-- Utiliser les sockets Python pour gérer plusieurs connexions clients.<br />
-- Développer un jeu interactif à distance.  </p>
-<hr />
+<div class="admonition info">
+<p class="admonition-title">🎯 Objectifs</p>
+</div>
+<ul>
+<li>Concevoir un protocole d’échange entre programmes.  </li>
+<li>Utiliser les sockets Python pour gérer plusieurs connexions clients.  </li>
+<li>Développer un jeu interactif à distance.  </li>
+</ul>
+<p><img alt="socket" class="center" src="../data/socket1.gif" width="50%" /></p>
 <h2 id="contexte">Contexte<a class="headerlink" href="#contexte" title="Permanent link">⚓︎</a></h2>
 <p>Après avoir découvert la communication client-serveur et réalisé un jeu pierre-feuille-ciseaux, vous allez concevoir <strong>votre propre jeu jouable entre 2 clients connectés à un serveur arbitre</strong>.</p>
-<p>Le serveur sera responsable de :
-- Gérer les connexions des 2 joueurs.
-- Coordonner les échanges.
-- Déclarer le vainqueur (ou afficher le résultat).</p>
-<p>Les clients devront :
-- Se connecter au serveur.
-- Envoyer leurs choix ou actions.
-- Recevoir les réponses et les afficher.</p>
+<p>Le serveur sera responsable de :</p>
+<ul>
+<li>Gérer les connexions des 2 joueurs.</li>
+<li>Coordonner les échanges.</li>
+<li>Déclarer le vainqueur (ou afficher le résultat).</li>
+</ul>
+<p>Les clients devront :</p>
+<ul>
+<li>Se connecter au serveur.</li>
+<li>Envoyer leurs choix ou actions.</li>
+<li>Recevoir les réponses et les afficher.</li>
+</ul>
 <hr />
 <h2 id="organisation-du-travail">Organisation du travail<a class="headerlink" href="#organisation-du-travail" title="Permanent link">⚓︎</a></h2>
-<p>Travail par <strong>binômes</strong> :<br />
-- 1 serveur<br />
-- 2 clients connectés simultanément  </p>
+<p>Travail par <strong>binômes</strong> :  </p>
+<ul>
+<li>1 serveur  </li>
+<li>2 clients connectés simultanément  </li>
+</ul>
 <p>Le jeu devra être <strong>testable localement</strong> (en réseau local).</p>
 <hr />
 <h2 id="liste-dexemples-de-jeux-possibles">Liste d'exemples de jeux possibles<a class="headerlink" href="#liste-dexemples-de-jeux-possibles" title="Permanent link">⚓︎</a></h2>
@@ -4423,12 +4422,14 @@
 </ul>
 <hr />
 <h2 id="consignes-techniques">Consignes techniques<a class="headerlink" href="#consignes-techniques" title="Permanent link">⚓︎</a></h2>
-<p>Votre programme doit :
-- Utiliser des <strong>sockets TCP</strong> (module <code>socket</code> en Python).
-- Le <strong>serveur accepte 2 connexions</strong>.
-- Les joueurs jouent à tour de rôle ou simultanément selon votre règle de jeu.
-- Gérer les <strong>déconnexions propres</strong> (<code>close()</code>).
-- Afficher des messages clairs côté client et côté serveur.</p>
+<p>Votre programme doit :</p>
+<ul>
+<li>Utiliser des <strong>sockets TCP</strong> (module <code>socket</code> en Python).</li>
+<li>Le <strong>serveur accepte 2 connexions</strong>.</li>
+<li>Les joueurs jouent à tour de rôle ou simultanément selon votre règle de jeu.</li>
+<li>Gérer les <strong>déconnexions propres</strong> (<code>close()</code>).</li>
+<li>Afficher des messages clairs côté client et côté serveur.</li>
+</ul>
 <hr />
 <h2 id="livrables-a-rendre">Livrables à rendre<a class="headerlink" href="#livrables-a-rendre" title="Permanent link">⚓︎</a></h2>
 <ul>
@@ -4440,38 +4441,6 @@
 <li>Les difficultés rencontrées et ce que vous avez appris.</li>
 </ul>
 <hr />
-<h2 id="bareme-indicatif-sur-20">Barème indicatif (sur 20)<a class="headerlink" href="#bareme-indicatif-sur-20" title="Permanent link">⚓︎</a></h2>
-<table>
-<thead>
-<tr>
-<th>Critère</th>
-<th>Points</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Fonctionnement du jeu (sans bugs majeurs)</td>
-<td>10</td>
-</tr>
-<tr>
-<td>Qualité du protocole et des échanges</td>
-<td>4</td>
-</tr>
-<tr>
-<td>Clarté du code et des commentaires</td>
-<td>2</td>
-</tr>
-<tr>
-<td>Respect des consignes techniques</td>
-<td>2</td>
-</tr>
-<tr>
-<td>Originalité ou enrichissement</td>
-<td>2</td>
-</tr>
-</tbody>
-</table>
-<hr />
 <h2 id="astuces">Astuces<a class="headerlink" href="#astuces" title="Permanent link">⚓︎</a></h2>
 <ul>
 <li>Pensez à <strong>tester très tôt</strong> les connexions entre clients et serveur.</li>
@@ -4482,7 +4451,6 @@
 <h2 id="bonus-facultatif">Bonus (facultatif)<a class="headerlink" href="#bonus-facultatif" title="Permanent link">⚓︎</a></h2>
 <ul>
 <li>Interface graphique (ex : <code>tkinter</code>).</li>
-<li>Chat texte parallèle au jeu.</li>
 <li>Enregistrer un score final dans un fichier texte.</li>
 </ul>
 <hr />
