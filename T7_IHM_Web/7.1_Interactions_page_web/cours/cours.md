@@ -2,11 +2,7 @@
 
 ![image](data/BO.png){: .center}
 
-
-
 ![image](data/meme.jpg){: .center}
-
-
 
 ## 1. Le cas le plus simple : la même page pour tout le monde
 
@@ -104,8 +100,6 @@ Le fichier ```css``` (souvent nommé ```style.css``` et appelé **feuille de sty
     }
     ```
 
-Vous pouvez contempler [ici](https://exemplehtmlcss--g-lassus.repl.co){:target="_blank"} le nouveau rendu de cette encore plus magnifique page.
-
 **En savoir plus** 
 
 - le cours d'OpenClassrooms : [https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3](https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3){:target="_blank"}
@@ -178,9 +172,6 @@ Inventé en 1995 par [Brendan Eich](https://fr.wikipedia.org/wiki/Brendan_Eich){
     }
     ```
 
-
-Le résultat de cette page peut être consulté [ici](https://exemplejs.g-lassus.repl.co){:target="_blank"}. *(oui, j'ai confondu le jaune et le rose)*
-
 **Commentaires**
 
 - Au sein du bouton déclaré par la balise ```button```, l'attribut  ```onclick``` reçoit le nom d'une fonction déclarée à l'intérieur du fichier ```script.js```, ici la fonction ```choix()```.
@@ -196,7 +187,7 @@ La puissance du JavaScript permet de réaliser aujourd'hui des interfaces utilis
 
 
 !!! note "Exercice 4"
-    Application sur le TP Fortnite : [source](./data/TP_Javascript_Eleve.zip)
+    Application sur le TP Fortnite 
 
 
 ## 3. Quand la page est fabriquée à la demande pour le client : exemple avec PHP
@@ -267,7 +258,7 @@ On y repère la balise ```<?php>``` :
 Ce code ```php``` a donc généré, lors de l'appel au serveur, le code ```html``` :
 
 ```html
-Nous sommes le 13-04-2020
+Nous sommes le 20-05-2025 
 ```
 
 Vous pouvez tester du code PHP et la page générée par exemple sur [ce site](https://www.w3schools.com/php/phptryit.asp?filename=tryphp_compiler){. target="_blank"}.
