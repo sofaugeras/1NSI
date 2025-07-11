@@ -1,6 +1,6 @@
-# TP Architecture réseau :anchor:
+# TP Cyber réseau :anchor:
 
-## Etape 1 : Construire le réseau : résaau local
+## Etape 1 : Construire le réseau : réseau local
 
 #### La sécurité des communications numériques
 La  sécurisation  des  communications  (acheminement  des  données)  dans  un réseau local implique l’utilisation de protocoles spécifiques et la mise en œuvre d’infrastructures réseaux particulières pour **segmenter** (diviser) de façon logique et physique le réseau interne. On va s'attarder ici sur la topologie d'un réseau, c'est à dire sur sa construction spatiale pour renforcer la sécurité d'un réseau.
@@ -54,6 +54,7 @@ Comment segmenter un réseau ? 🧠
 
 On peut considérer le réseau (simplifié) comme un réeau d'entreprise avec deux services (exemple : marketing et production), il faut à présent que ces deux services puissent accéder à un serveur d'application (exemple : saisie des congés).
 
+
 ## Etape 2 : Construire le réseau : serveur d'application
 
 !!! exercice "partie 2 : Serveur d'application"
@@ -81,7 +82,7 @@ Ce réseau n'est pas très sécurisé. Tout le monde au sein de l'entreprise peu
     Ces serveurs et ressources sont isolés et bénéficient d’un accès limité au LAN afin de s’assurer qu’ils sont accessibles via Internet, mais pas le réseau LAN interne. Par conséquent, une approche DMZ rend plus difficile pour un hacker d’obtenir un accès direct aux données et aux serveurs internes d’une organisation via Internet. Une entreprise peut minimiser les vulnérabilités de son réseau local, créant ainsi un environnement sûr contre les menaces tout en garantissant que les employés peuvent communiquer efficacement et partager des informations directement via une connexion sécurisée.
 
 
-## Etape 3 : Segmentation résseau
+## Etape 3 : Segmentation réseau
 
 !!! exercice "partie 3 : Serveur d'application"
 
@@ -100,9 +101,16 @@ Ce réseau n'est pas très sécurisé. Tout le monde au sein de l'entreprise peu
 
     ⁉️ Qu'obtenez vous ?
 
+    **Notion de sous-réseau :** <br />
+    
+    🚨 A FAIRE : Ajouter une machine dans le réseau 192.168.2.0 qui ne pourrait avoir acces QUE aux machines de son sous-réseau et pas aux machines du réseau 192.168.1.0
+
+    ??? tip "correction"
+        Il faut ajouter une machine avec IP : 192.168.1.4 avec un masque en /24. Cette machine pourra quand même acceder à l'extérieur par la suite si la passerelle est bien paramétrée
+
     ??? tips "Correction étape 3"
 
-        [⬇️ maquette filius après l'étape 3](./data/tp/segmentation_2_1.fls)
+        [⬇️ maquette filius après l'étape 3](./data/tp/segmentation3.fls)
 
 
 ??? warning "Notion de DNS (Domain Name System)"
@@ -186,16 +194,13 @@ Exemple de port : <br/>
 
     ⚠️ C’est ainsi que beaucoup d’attaques réussissent : en scannant Internet à la recherche de ports ouverts avec des services vulnérables. Des sites recensent les fragilités des ports et proposent des "exploits" clé en main pour attaquer (exemple : https://www.metasploit.com/)
 
-    🔒 Bonnes pratiques à enseigner :
-    Fermer tous les ports inutiles : principe du moindre privilège.
+    🔒 Bonnes pratiques :
 
-    Filtrer le trafic réseau avec un pare-feu (firewall).
-
-    Mettre à jour les services régulièrement (patch de sécurité).
-
-    Limiter l'accès aux ports sensibles (ex : SSH accessible uniquement depuis un poste administratif).
-
-    Scanner son propre réseau pour détecter les ports ouverts (ex : avec nmap).
+    - Fermer tous les ports inutiles : principe du moindre privilège.
+    - Filtrer le trafic réseau avec un pare-feu (firewall).
+    - Mettre à jour les services régulièrement (patch de sécurité).
+    - Limiter l'accès aux ports sensibles (ex : SSH accessible uniquement depuis un poste administratif).
+    - Scanner son propre réseau pour détecter les ports ouverts (ex : avec nmap).
 
     🧠 À retenir pour les élèves :
     Un port ouvert, c’est une porte d’entrée possible.
@@ -206,11 +211,13 @@ Exemple de port : <br/>
 
     ![réseau etape 5](./data/tp/e5.png)
 
-    🚨 A FAIRE : Ajouter un serveur web 2 www.nsi2.fr sur l'IP 172.168.0.2 (n'oublier pas de mettre à jour le DNS). Puis ajouter un pare feu sur le serveur.<br />
-
+    🚨 A FAIRE : Ajouter un serveur web 2 www.nsi2.fr sur l'IP 172.168.0.2 (n'oublier pas de mettre à jour le DNS). 
     ⚠️ Vérifier que vous n'ayez pas de régression http://www.nsi.fr/ puis sur http://www.nsi2.fr
 
-    ▶️ Bloquer le port 80 sur le pare feu du serveur web 2<br />
+    🚨 A FAIRE :  ajouter un pare feu sur le serveur.<br />
+    ⁉️ Qu'obtenez vous ?<br />
+
+    🚨 A FAIRE : Bloquer le port 80 sur le pare feu du serveur web 2<br />
     ⁉️ Qu'obtenez vous ?
 
     ??? tips "**Aide 🚑 :** paramétrage sous filius"
@@ -222,6 +229,8 @@ Exemple de port : <br/>
         [⬇️ maquette filius après l'étape 5](./data/tp/segmentation5.fls)
 
         [résultat](./data/tp/dns2.png){: .center width=50%}
+
+        Si l'on ajoute un parefeu, celui-ci bloque toutes les connexions entrantes. Le serveur http://www.nsi2.fr n'est plus accessible. Mais si l'on ouvre le port 80 ou le port 8080 qui sont les ports des receptions des requêtes HTTP, alors le serveur http://www.nsi2.fr redevient accessible.
 
 ??? note "Source"
     - Module 3 CyberEdu : module_3_reseau_et_applicatifs.pdf

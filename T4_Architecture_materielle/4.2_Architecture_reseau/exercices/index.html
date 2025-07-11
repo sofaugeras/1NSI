@@ -2218,6 +2218,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    exerices
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -2227,6 +2238,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qcm" class="md-nav__link">
+    <span class="md-ellipsis">
+      QCM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercice-type-bac" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice Type Bac
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2244,7 +2301,7 @@
         
   
   <span class="md-ellipsis">
-    TP Web
+    TP Cyber
   </span>
   
 
@@ -4454,6 +4511,7 @@
 
 
 <h1 id="exercice-reseau">Exercice Réseau<a class="headerlink" href="#exercice-reseau" title="Permanent link">⚓︎</a></h1>
+<h2 id="exercice-1">Exercice 1<a class="headerlink" href="#exercice-1" title="Permanent link">⚓︎</a></h2>
 <div class="admonition question">
 <p class="admonition-title">Exercice 1</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Enoncé</label><label for="__tabbed_1_2">Solution</label></div>
@@ -4515,6 +4573,7 @@ C'est à dire en décimal : 192.168.15.254</p>
 </div>
 </div>
 </div>
+<h2 id="qcm">QCM<a class="headerlink" href="#qcm" title="Permanent link">⚓︎</a></h2>
 <div class="admonition question">
 <p class="admonition-title">QCM</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Enoncé</label><label for="__tabbed_2_2">Corrigé</label></div>
@@ -4527,6 +4586,80 @@ C'est à dire en décimal : 192.168.15.254</p>
 </div>
 </div>
 </div>
+</div>
+<h2 id="exercice-type-bac">Exercice Type Bac<a class="headerlink" href="#exercice-type-bac" title="Permanent link">⚓︎</a></h2>
+<div class="admonition question">
+<p class="admonition-title">Sujet 2025 Metropole Jour 2</p>
+<p><strong>Exercice 3 Partie C - Réseaux</strong></p>
+<p>Bob et Marc travaillent pour une petite compagnie d’assurances.</p>
+<p>Leurs postes de travail font partie d’un même réseau local géré par l’administratrice système qui dispose du bloc d’adresses IPv4 192.168.110.0/24.</p>
+<p>La notation /24 situé à la suite de l’adresse 192.168.110.0 signifie que le masque de sous-réseau du réseau de cette entreprise est 255.255.255.0 : les trois premiers octets d’une adresse IP sur ce réseau permettent donc d’identifier la partie réseau de l’adresse, alors que le dernier octet permet d’identifier la partie hôte et est propre à chaque machine sur le réseau. Ce sous-réseau permet donc d’attribuer 256 adresses IPv4 différentes.</p>
+<p>L’administratrice choisit alors d’attribuer, en représentation décimale, l’identifiant 115 pour la partie hôte du poste de travail de Bob et l’identifiant 153 pour celui de Marc.</p>
+<p>Depuis son poste de travail, Marc souhaite tester la communication avec celui de Bob. Pour cela, il exécute la commande <code>ping 192.168.100.115</code> et obtient l’affichage suivant :
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>--- 192.168.100.115 ping statistics ---
+4 packets transmitted, 0 received, 100% packet loss, time 3060ms
+</code></pre></div></p>
+<p>1️⃣ Expliquer l’affichage obtenu et corriger l’erreur de Marc.</p>
+<details class="tips">
+<summary>Correction</summary>
+<p>L’affichage obtenu indique que les paquets n’ont pas été transmis au destinataire et qu’ils sont perdus. Le poste de travail de Bob fait partie du réseau local d’adresse 192.168.110.0/24. Marc s’est donc trompé dans l’adresse IP : le troisième octet n’est pas le bon, il aurait dû saisir ping 192.168.110.115 pour atteindre le poste de travail de Bob.</p>
+</details>
+<p>Afin d’améliorer les performances et la sécurité du réseau de l’entreprise, l’administratrice système décide de séparer le réseau local en plusieurs sous-réseaux et de les relier entre eux par des routeurs. Pour cela, elle modifie le masque de sous-réseau qui devient 11111111.11111111.11111111.11100000, donné ici en représentation binaire.</p>
+<p>2️⃣ Donner la représentation décimale de ce masque de sous-réseau.</p>
+<details class="tips">
+<summary>Correction</summary>
+<p>255.255.255.224</p>
+</details>
+<p>Pour obtenir l’adresse IPv4 du sous-réseau auquel appartient une machine, il suffit d’appliquer l’opérateur binaire <strong>ET</strong>, bit à bit, entre le masque de sous-réseau et l’adresse IPv4 de la machine.</p>
+<p>Par exemple, prenons le dernier octet de l’adresse IPv4 de Bob dont la représentation binaire est 01110011 : en appliquant bit à bit l’opérateur binaire ET entre cet octet et l’octet correspondant dans le masque, on obtient le dernier octet de l’adresse du sous-réseau, soit 01100000.
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>1 1 1 0 0 0 0 0 (224) 
+ET 0 1 1 1 0 0 1 1 (115) 
+------------------ 
+0 1 1 0 0 0 0 0 (96)
+</code></pre></div>
+Le poste de travail de Bob est donc sur le sous-réseau d’adresse 192.168.110.96.</p>
+<p>3️⃣ Indiquer le nombre total d’adresses IPv4 pouvant être attribuées sur le sous-réseau d’adresse 192.168.110.96 sur lequel se trouve Bob.</p>
+<details class="tips">
+<summary>Correction</summary>
+<ol>
+<li>On acceptera aussi 30 ou 31 (si l'on retire l'adresse de broadcast et l'adresse de réseau).</li>
+</ol>
+</details>
+<p>L’administratrice système attribue maintenant l’adresse IPv4 192.168.110.134 au poste de travail de Zoé, nouvelle employée de la compagnie d’assurances.</p>
+<p>4️⃣ Donner la représentation binaire du nombre 134.</p>
+<details class="tips">
+<summary>Correction</summary>
+<p>134 a pour représentation binaire 10000110.</p>
+</details>
+<p>Depuis son poste de travail, Zoé exécute les deux commandes suivantes :<br />
+- <strong>commande n°1</strong> : <code>ping 192.168.110.115</code> ;<br />
+- <strong>commande n°2</strong> : <code>ping 192.168.110.153</code>.<br /></p>
+<p>5️⃣ Indiquer, en justifiant, laquelle de ces deux commandes a produit l’affichage :
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>4 packets transmitted, 4 received, 0% packet loss, time 3002ms
+</code></pre></div></p>
+<details class="tips">
+<summary>Correction</summary>
+<p>L’affichage obtenu indique que les paquets ont été correctement transmis : le poste de travail de 
+Zoé fait donc partie du même sous-réseau que le poste qu’elle essaie de joindre. Avec le choix de 
+l’administratrice système, il suffit d’appliquer le masque sur le dernier octet des adresses IP 
+pour réussir à identifier les deux postes qui font partie du même sous-réseau (les trois pre-
+miers octets seront toujours identiques).
+En appliquant le masque de sous-réseau sur le dernier octet de l’adresse IP de Zoé, on obtient 10000000.
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>1 1 1 0 0 0 0 0 (224)
+ET 1 0 0 0 0 1 1 0 (134)
+-------------------------
+1 0 0 0 0 0 0 0 (128)
+</code></pre></div>
+On obtient le même résultat pour le dernier octet de l’adresse IP du poste de travail de Marc :
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>1 1 1 0 0 0 0 0 (224)
+ET 1 0 0 1 1 0 0 1 (153)
+------------------------
+1 0 0 0 0 0 0 0 (128)
+</code></pre></div>
+Pour le poste de travail de Bob, le résultat est donné dans l’énoncé :
+01100000 (96) .</p>
+<p>Les postes de travail de Zoé et Marc font donc partie du même sous-réseau. On en déduit que Zoé a exécuté la commande n°2.</p>
+</details>
 </div>
 
 

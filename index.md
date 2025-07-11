@@ -1,7 +1,7 @@
 
 !!! abstract ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward: En cours : [IHM sur le Web](./T7_IHM_Web/7.3_Get_Post_Formulaires/cours/)<br />
-    A venir : mini projet morpions et sockets
+    :arrow_forward:  mini projet morpions et sockets ou TP Pyxel jeu de tir<br />
+    A venir : 
 
 !!! warning "Mémo python"
     le mémento Python est disponible ici : :snake: [mémento Python](./data/mementopython3.pdf)
@@ -41,6 +41,7 @@
     - [dichotomie](./T5_Algorithmique/5.5_Dichotomie/cours.md)<br />
     - [Algorithme Glouton](./T5_Algorithmique/5.6_Algorithmes_gloutons/cours.md)<br />
     - [Algorithme KNN](./T5_Algorithmique/5.7_Algorithme_KNN/cours.md)<br />
+    - [IHM sur le Web](./T7_IHM_Web/7.3_Get_Post_Formulaires/cours/)
 
 
 <!--
