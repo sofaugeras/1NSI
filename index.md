@@ -1,7 +1,7 @@
 
 !!! abstract ":star: Thèmes en cours d'étude :star: "
-    :arrow_forward:  mini projet morpions et sockets ou TP Pyxel jeu de tir<br />
-    A venir : 
+    :arrow_forward:  [Thème 1 : Démarrer en Python](./T1_Demarrer_en_Python/sommaire.md)<br />
+    A venir : [Thème 7 : IHM Web : HTML et CSS](./T7_IHM_Web/7.1_Interactions_page_web/cours.md)
 
 !!! warning "Mémo python"
     le mémento Python est disponible ici : :snake: [mémento Python](./data/mementopython3.pdf)
@@ -16,8 +16,17 @@
     
 
 !!! note "*Thèmes traités*"
-    - [Thème 1 : Démarrer en Python](./T1_Demarrer_en_Python/sommaire.md)<br />
-    - [Thème 7 : IHM Web : HTML et CSS](./T7_IHM_Web/7.1_Interactions_page_web/cours.md)<br />
+    
+
+<!--
+
+!!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
+    Chers élèves de Première  voilà les chapitres à revoir en priorité pour aborder sereinement l'année de Terminale en NSI :
+    - Les listes, les tuples et les dictionnaires. À retrouver [ici](T3_Type_construit/sommaire.md){. target="_blank"}.
+    - Le plus important : les chapitres suivants d'algorithmique, à retrouver [ici](T5_Algorithmique/sommaire.md){. target="_blank"} :
+
+
+
     - [Thème 2 : le binaire](./T2_Type_de_base/2.1_Binaire/cours.md)<br />
     - [Projet 1 : site web](./T8_Projets/1_SiteWeb/cours.md) 
     - [Thème 2 : codage des entiers](./T2_Type_de_base/2.2_Codage_entiers/cours.md)<br />
@@ -42,14 +51,7 @@
     - [Algorithme Glouton](./T5_Algorithmique/5.6_Algorithmes_gloutons/cours.md)<br />
     - [Algorithme KNN](./T5_Algorithmique/5.7_Algorithme_KNN/cours.md)<br />
     - [IHM sur le Web](./T7_IHM_Web/7.3_Get_Post_Formulaires/cours/)
-
-
-<!--
-
-!!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
-    Chers élèves de Première  voilà les chapitres à revoir en priorité pour aborder sereinement l'année de Terminale en NSI :
-    - Les listes, les tuples et les dictionnaires. À retrouver [ici](T3_Type_construit/sommaire.md){. target="_blank"}.
-    - Le plus important : les chapitres suivants d'algorithmique, à retrouver [ici](T5_Algorithmique/sommaire.md){. target="_blank"} :
+    - mini projet morpions et sockets ou TP Pyxel jeu de tir
 
 
 -->

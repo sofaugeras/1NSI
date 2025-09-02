@@ -9,7 +9,7 @@ Vous utiliserez les langages HTML5 et CSS3.
   
 ⚠️ Vous veillerez à séparer strictement le fond et la forme 
 
-📆 Restitution attendue : Pour le **Jeudi 14 novembre 2024**
+📆 Restitution attendue : Pour le **Jeudi 6 novembre 2025**
  
 Vous trouverez ci-dessous les minimas attendus sur ce travail à faire. <br />
 
