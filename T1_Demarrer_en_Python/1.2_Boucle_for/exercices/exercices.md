@@ -207,7 +207,7 @@
 
         Proposer un code qui écrit **toutes** les cases possibles.
 
-        === "Correction"
+    === "Correction"
         ```python linenums='1'
         for lettre in "ABCDEFGH":
             for chiffre in "12345678":
