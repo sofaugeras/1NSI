@@ -81,7 +81,7 @@
     === "Correction"
 
         ```python linenums='1'
-        for k in range(1,50):
+        for k in range(1,51):
             if k % 3 == 0 and k % 5 == 0:
                 print('fizzbuzz')
             elif k % 3 == 0:
