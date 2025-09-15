@@ -25,8 +25,6 @@
     - Les listes, les tuples et les dictionnaires. À retrouver [ici](T3_Type_construit/sommaire.md){. target="_blank"}.
     - Le plus important : les chapitres suivants d'algorithmique, à retrouver [ici](T5_Algorithmique/sommaire.md){. target="_blank"} :
 
-
-
     - [Thème 2 : le binaire](./T2_Type_de_base/2.1_Binaire/cours.md)<br />
     - [Projet 1 : site web](./T8_Projets/1_SiteWeb/cours.md) 
     - [Thème 2 : codage des entiers](./T2_Type_de_base/2.2_Codage_entiers/cours.md)<br />
