@@ -5229,13 +5229,9 @@ Color: (125, 234, 231)"></td></tr></tbody></table>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="n">grid</span><span class="p">[</span><span class="n">ligne</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">set_colors</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">grid</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight-ipynb hl-python"><pre><span></span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-3">for ligne in range(10):
-    grid[ligne,3].set_colors(0,0,0)
-grid.show()</div>
+<div class="clipboard-copy-txt" id="cell-3"></div>
 </div>
 </div>
 </div>
@@ -5383,17 +5379,9 @@ Color: (125, 234, 231)"></td></tr></tbody></table>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">grid</span> <span class="o">=</span> <span class="n">BlockGrid</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span><span class="mi">234</span><span class="p">,</span><span class="mi">231</span><span class="p">))</span>
-<span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">colonne</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">):</span>
-        <span class="n">grid</span><span class="p">[</span><span class="n">ligne</span><span class="p">,</span><span class="n">colonne</span><span class="p">]</span><span class="o">.</span><span class="n">set_colors</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">grid</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight-ipynb hl-python"><pre><span></span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-4">grid = BlockGrid(10, 10, fill=(125,234,231))
-for ligne in range(10):
-    for colonne in range(1,10,2):
-        grid[ligne,colonne].set_colors(0,0,0)
-grid.show()</div>
+<div class="clipboard-copy-txt" id="cell-4"></div>
 </div>
 </div>
 </div>
@@ -5541,21 +5529,9 @@ Color: (0, 0, 0)"></td></tr></tbody></table>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">grid</span> <span class="o">=</span> <span class="n">BlockGrid</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span><span class="mi">234</span><span class="p">,</span><span class="mi">231</span><span class="p">))</span>
-<span class="k">for</span> <span class="n">colonne</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">ligne</span> <span class="o">+</span> <span class="n">colonne</span><span class="p">)</span> <span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">grid</span><span class="p">[</span><span class="n">ligne</span><span class="p">,</span><span class="n">colonne</span><span class="p">]</span><span class="o">.</span><span class="n">set_colors</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">grid</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight-ipynb hl-python"><pre><span></span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-5">n = 10
-grid = BlockGrid(n, n, fill=(125,234,231))
-for colonne in range(n):
-    for ligne in range(n):
-        if (ligne + colonne) %2 == 0:
-            grid[ligne,colonne].set_colors(0,0,0)
-grid.show()</div>
+<div class="clipboard-copy-txt" id="cell-5"></div>
 </div>
 </div>
 </div>
@@ -5703,21 +5679,9 @@ Color: (0, 0, 0)"></td></tr></tbody></table>
 </div>
 </clipboard-copy>
 </div>
-<div class="highlight-ipynb hl-python"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">grid</span> <span class="o">=</span> <span class="n">BlockGrid</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="p">(</span><span class="mi">125</span><span class="p">,</span><span class="mi">234</span><span class="p">,</span><span class="mi">231</span><span class="p">))</span>
-<span class="k">for</span> <span class="n">colonne</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">ligne</span> <span class="o">+</span> <span class="n">colonne</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">9</span> <span class="p">:</span>
-            <span class="n">grid</span><span class="p">[</span><span class="n">ligne</span><span class="p">,</span><span class="n">colonne</span><span class="p">]</span><span class="o">.</span><span class="n">set_colors</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">grid</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight-ipynb hl-python"><pre><span></span>
 </pre></div>
-<div class="clipboard-copy-txt" id="cell-6">n = 10
-grid = BlockGrid(n, n, fill=(125,234,231))
-for colonne in range(n):
-    for ligne in range(n):
-        if (ligne + colonne) &gt; 9 :
-            grid[ligne,colonne].set_colors(0,0,0)
-grid.show()</div>
+<div class="clipboard-copy-txt" id="cell-6"></div>
 </div>
 </div>
 </div>
