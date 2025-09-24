@@ -158,39 +158,39 @@ document.addEventListener('DOMContentLoaded', () => {
 ```
 
 ??? tips "Correction"
-```js
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('inscriptionForm');
-  const pseudo = document.getElementById('pseudo');
-  const email = document.getElementById('email');
-  const niveau = document.getElementById('niveau');
-  const message = document.getElementById('message');
+  ```js
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('inscriptionForm');
+    const pseudo = document.getElementById('pseudo');
+    const email = document.getElementById('email');
+    const niveau = document.getElementById('niveau');
+    const message = document.getElementById('message');
 
-  // TODO : Ajouter un événement 'submit' sur le formulaire
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    // TODO : Vérifier que tous les champs sont remplis
-    if (pseudo.value.trim() === '' || email.value.trim() === '' || niveau.value === '') {
-      message.textContent = "Tous les champs doivent être remplis !";
-      message.style.color = "red";
-    } else {
-      message.textContent = "Inscription réussie ! Rendez-vous sur l'île.";
-      message.style.color = "lime";
-    }
+    // TODO : Ajouter un événement 'submit' sur le formulaire
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      // TODO : Vérifier que tous les champs sont remplis
+      if (pseudo.value.trim() === '' || email.value.trim() === '' || niveau.value === '') {
+        message.textContent = "Tous les champs doivent être remplis !";
+        message.style.color = "red";
+      } else {
+        message.textContent = "Inscription réussie ! Rendez-vous sur l'île.";
+        message.style.color = "lime";
+      }
+    });
+
+    // TODO : Ajouter un événement 'mouseover' et 'mouseout' sur le formulaire pour changer la couleur de fond
+    form.addEventListener('mouseover', function() {
+      form.style.backgroundColor = "#222";
+    });
+
+    form.addEventListener('mouseout', function() {
+      form.style.backgroundColor = "transparent";
+    });
   });
 
-  // TODO : Ajouter un événement 'mouseover' et 'mouseout' sur le formulaire pour changer la couleur de fond
-  form.addEventListener('mouseover', function() {
-    form.style.backgroundColor = "#222";
-  });
-
-  form.addEventListener('mouseout', function() {
-    form.style.backgroundColor = "transparent";
-  });
-});
-
-```
+  ```
 
 ## 💡 Bonus 
 
