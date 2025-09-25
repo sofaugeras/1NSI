@@ -51,7 +51,7 @@ Vous trouverez ci-dessous les minimas attendus sur ce travail à faire. <br />
 |10|Margaret Hamilton|![image](data/hamilton.jpg){: .center width=10%}| |
 |11|Sergueï Brin|![image](data/brin.jpg){: .center width=10%}| Nathan |
 |12|Larry Page|![image](data/page.jpg){: .center width=10%}|Lucas |
-|13|Richard Stallman|![image](data/stallman.jpeg){: .center width=10%}|Angelyne C.|
+|13|Richard Stallman|![image](data/stallman.jpeg){: .center width=10%}|Angeline C.|
 |14|Guido Van Rossum|![image](data/rossum.jpg){: .center width=10%}||
 |15|Dennis Ritchie|![image](data/ritchie.jpg){: .center width=0%}||
 |16|John Conway|![image](data/conway.jpg){: .center width=10%}|Baptiste |
