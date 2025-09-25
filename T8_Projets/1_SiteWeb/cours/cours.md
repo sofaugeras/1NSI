@@ -39,37 +39,37 @@ Vous trouverez ci-dessous les minimas attendus sur ce travail à faire. <br />
 ## Figures de l'informatique
 |numéro|nom| Photo|attribué à|
 |:---|:----|:---:|:--:|
-|1|Ada Lovelace|![image](data/adalovelace.jpg){: .center width=10%}| |
-|2|Alan Turing|![image](data/turing.jpg){: .center width=10%}| |
-|3|Donald Knuth|![image](data/knuth.jpg){: .center width=10%}| |
-|4|Bill Gates|![image](data/gates.jpg){: .center width=10%}| |
-|5|Heidi Lamar|![image](data/lamar.jpg){: .center width=10%}|  |
-|6|Steve Jobs|![image](data/jobs.jpg){: .center width=10%}| |
-|7|Aaron Swartz|![image](data/swartz.jpg){: .center width=10%}| |
-|8|Grace Hopper|![image](data/hopper.jpeg){: .center width=10%}| |
-|9|Linus Torvalds|![image](data/linus.jpeg){: .center width=10%}| |
+|1|Ada Lovelace|![image](data/adalovelace.jpg){: .center width=10%}|kalina |
+|2|Alan Turing|![image](data/turing.jpg){: .center width=10%}| Soan |
+|3|Donald Knuth|![image](data/knuth.jpg){: .center width=10%}|Enzo |
+|4|Bill Gates|![image](data/gates.jpg){: .center width=10%}|Leandre |
+|5|Heidi Lamar|![image](data/lamar.jpg){: .center width=10%}|Jeremy  |
+|6|Steve Jobs|![image](data/jobs.jpg){: .center width=10%}|Zian |
+|7|Aaron Swartz|![image](data/swartz.jpg){: .center width=10%}|Hugo |
+|8|Grace Hopper|![image](data/hopper.jpeg){: .center width=10%}| Sacha |
+|9|Linus Torvalds|![image](data/linus.jpeg){: .center width=10%}|Maël |
 |10|Margaret Hamilton|![image](data/hamilton.jpg){: .center width=10%}| |
-|11|Sergueï Brin|![image](data/brin.jpg){: .center width=10%}| |
-|12|Larry Page|![image](data/page.jpg){: .center width=10%}| |
-|13|Richard Stallman|![image](data/stallman.jpeg){: .center width=10%}||
+|11|Sergueï Brin|![image](data/brin.jpg){: .center width=10%}| Nathan |
+|12|Larry Page|![image](data/page.jpg){: .center width=10%}|Lucas |
+|13|Richard Stallman|![image](data/stallman.jpeg){: .center width=10%}|Angelyne C.|
 |14|Guido Van Rossum|![image](data/rossum.jpg){: .center width=10%}||
 |15|Dennis Ritchie|![image](data/ritchie.jpg){: .center width=0%}||
-|16|John Conway|![image](data/conway.jpg){: .center width=10%}| |
-|17|Dorothy Vaughan|![image](data/Vaughan.jpg){: .center width=10%}||
+|16|John Conway|![image](data/conway.jpg){: .center width=10%}|Baptiste |
+|17|Dorothy Vaughan|![image](data/Vaughan.jpg){: .center width=10%}|Jade|
 |18|Charles Babbage|![image](data/Babbage.jpg){: .center width=10%}||
-|19|John Von Neumann|![image](data/vonneumann.jpg){: .center width=10%}| |
-|20|Georges Boole|![image](data/boole.jpg){: .center width=10%}| |
-|21|Gordon Moore |![image](data/moore.JPG){: .center width=10%}| |
-|22|Tim Berners Lee|![image](data/tim.jpg){: .center width=10%}| |
+|19|John Von Neumann|![image](data/vonneumann.jpg){: .center width=10%}| Marius|
+|20|Georges Boole|![image](data/boole.jpg){: .center width=10%}|Nolan |
+|21|Gordon Moore |![image](data/moore.JPG){: .center width=10%}| Anmar|
+|22|Tim Berners Lee|![image](data/tim.jpg){: .center width=10%}|Erwen|
 |23|Brian Kernighan|![image](data/brian.jpg){: .center width=10%}| |
 |24|Joan CLARKE|![image](./data/joan-clarke.jpeg){: .center width=10%}||
-|25|Mary JACKSON|![image](./data/mary.jpg){: .center width=10%}||
-|26|Les ENIAC girls|![image](./data/eniac.webp){: .center width=10%}||
+|25|Mary JACKSON|![image](./data/mary.jpg){: .center width=10%}|Morgann|
+|26|Les ENIAC girls|![image](./data/eniac.webp){: .center width=10%}|Angelyne N.|
 |27|Yann Le Cun|![image](./data/yann.jpg){: .center width=10%}||
 |28|Edsger Dijkstra|![image](./data/800px-Edsger_Wybe_Dijkstra.jpg){: .center width=10%}||
 |29|Guido Van Rossum|![image](./data/guido.jpg){: .center width=10%}||
 |30|Stephen Wozniak|![image](./data/Wozniak.jpg){: .center width=10%}||
-|31|James Gosling|![image](./data/James_Gosling_2005.jpg){: .center width=10%}| |
+|31|James Gosling|![image](./data/James_Gosling_2005.jpg){: .center width=10%}| Colin|
 |32|Maurice Vincent Wilkes|![image](./data/wilkes.jpg){: .center width=10%}||
 
 
