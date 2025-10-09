@@ -4883,7 +4883,7 @@ En hexadécimal, on utilise 16 symboles <strong>0 1 2 3 4 5 6 7 8 9 A B C D E F<
 </tbody>
 </table>
 <p>Pour convertir un nombre binaire en base 16, on regroupe les bits 4 à 4, chaque groupe donnant un chiffre hexadécimal. À l'inverse, passer d'un nombre hexadécimal à sa représentation binaire se fait en remplaçant chaque chiffre pour son équivalent sur 4 bits. Ainsi, <span class="arithmatex">\((11011001)_{2}=(1101 1001)_{2}=(D9)_{16}\)</span>, tandis que <span class="arithmatex">\((7F)_{16}=(0111 1111)_{2}=(01111111)_{2}\)</span>.</p>
-<p><img alt="❓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2753.svg" title=":question:" /> Combien vaut <span class="arithmatex">\((1010 0011 1011 11002)_{2}\)</span> ?</p>
+<p><img alt="❓" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2753.svg" title=":question:" /> Combien vaut <span class="arithmatex">\((1010  0011  1011  1100)_{2}\)</span> ?</p>
 <details class="question">
 <summary>correction</summary>
 <p><span class="arithmatex">\((A3BC)_{16}\)</span></p>
@@ -4897,7 +4897,7 @@ En hexadécimal, on utilise 16 symboles <strong>0 1 2 3 4 5 6 7 8 9 A B C D E F<
 <strong>185</strong> en base 10 vaut donc <strong>B9</strong> en hexadécimal.</p>
 <h3 id="44-convertir-un-nombre-hexadecimal-en-decimal">4.4 Convertir un nombre hexadécimal en décimal<a class="headerlink" href="#44-convertir-un-nombre-hexadecimal-en-decimal" title="Permanent link">⚓︎</a></h3>
 <p>Le principe est le même que pour la conversation "binaire en décimal" sauf qu'au lieu d'utiliser des <span class="arithmatex">\(2^n\)</span> on utilise des <span class="arithmatex">\(16^n\)</span>:<br /></p>
-<p>exemple : <span class="arithmatex">\(12B716 = 1*16^3 + 2*16^2 + 11*16^1 + 7*16^0 = 1*4096 + 2*256 + 11*16 + 7= 4096 + 512 + 176 + 7 = 4791\)</span></p>
+<p>exemple : <span class="arithmatex">\((12B7)_(16) = 1*16^3 + 2*16^2 + 11*16^1 + 7*16^0 = 1*4096 + 2*256 + 11*16 + 7= 4096 + 512 + 176 + 7 = 4791\)</span></p>
 <p>Vous avez remarqué que quand on trouve un <strong>B</strong> dans le nombre écrit en hexadécimal, on le remplace par un <strong>11</strong> dans le calcul. C'est exactement la même chose quand on trouve :</p>
 <p>un A, on le remplace par un 10 <br />
 un C, on le remplace par un 12 <br />

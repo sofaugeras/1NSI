@@ -144,7 +144,7 @@ Convertir un binaire en hexa est facile. Chaque paquet de 4 bits donne un chiffr
 
 Pour convertir un nombre binaire en base 16, on regroupe les bits 4 à 4, chaque groupe donnant un chiffre hexadécimal. À l'inverse, passer d'un nombre hexadécimal à sa représentation binaire se fait en remplaçant chaque chiffre pour son équivalent sur 4 bits. Ainsi, $(11011001)_{2}=(1101 1001)_{2}=(D9)_{16}$, tandis que $(7F)_{16}=(0111 1111)_{2}=(01111111)_{2}$.
 
-:question: Combien vaut $(1010 0011 1011 11002)_{2}$ ?
+:question: Combien vaut $(1010  0011  1011  1100)_{2}$ ?
 ??? question "correction" 
 
 	$(A3BC)_{16}$
@@ -165,7 +165,7 @@ Attention, il faut bien lire de bas en haut !<br />
 
 Le principe est le même que pour la conversation "binaire en décimal" sauf qu'au lieu d'utiliser des $2^n$ on utilise des $16^n$:<br />
 
-exemple : $12B716 = 1*16^3 + 2*16^2 + 11*16^1 + 7*16^0 = 1*4096 + 2*256 + 11*16 + 7= 4096 + 512 + 176 + 7 = 4791$
+exemple : $(12B7)_(16) = 1*16^3 + 2*16^2 + 11*16^1 + 7*16^0 = 1*4096 + 2*256 + 11*16 + 7= 4096 + 512 + 176 + 7 = 4791$
 
 Vous avez remarqué que quand on trouve un **B** dans le nombre écrit en hexadécimal, on le remplace par un **11** dans le calcul. C'est exactement la même chose quand on trouve :
 
