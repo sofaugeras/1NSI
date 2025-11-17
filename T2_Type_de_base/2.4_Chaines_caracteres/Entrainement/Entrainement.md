@@ -37,7 +37,7 @@
         ```python
         assert(estPresent('a','abracadabra') == True)
         assert(estPresent('r','abracadabra') == True)
-        assert(estPréeent('R','abracadabra') == False)
+        assert(estPresent('R','abracadabra') == False)
         ```
 
     === "Correction"

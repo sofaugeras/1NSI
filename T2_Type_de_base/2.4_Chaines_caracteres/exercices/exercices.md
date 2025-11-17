@@ -50,7 +50,21 @@
         assert not is_email("olivier.lecluse@monfai")
         ```
 
-    === "Correction" 
+    === "Correction sans slicing"
+
+        ```python
+        def is_email(chaine):
+            if chaine.count('@') == 1 :
+                placeArobase = chaine.find('@')
+                compteurPoint = 0
+                for i in range(placeArobase, len(chaine)):
+                    if chaine[i] == '.' :
+                        compteurPoint += 1
+                if compteurPoint == 1 :
+                    return True
+            return False
+        ``` 
+    === "Correction avec slicing"
 
         ```python
         def is_email(chaine):
@@ -96,7 +110,6 @@
         ```python
         def somme_chiffres(n):
             # YOUR CODE HERE
-            pass
         ```
         ```python
         assert somme_chiffres(125)==8

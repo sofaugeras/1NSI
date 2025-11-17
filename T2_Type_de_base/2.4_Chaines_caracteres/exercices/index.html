@@ -4503,7 +4503,7 @@
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice 2</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Enoncé</label><label for="__tabbed_2_2">Correction</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Enoncé</label><label for="__tabbed_2_2">Correction sans slicing</label><label for="__tabbed_2_3">Correction avec slicing</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Écrire une fonction <strong>is_email</strong> qui prend en paramètre une chaîne de caractère et renvoie True si celle-ci est une adresse mail. On va simplifier en considérant qu'on a une adresse email si la chaîne possède les 2 propriétés suivantes : 
@@ -4517,6 +4517,19 @@
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">assert</span> <span class="n">is_email</span><span class="p">(</span><span class="s2">&quot;olivier.lecluse@monfai.com&quot;</span><span class="p">)</span>
 <span class="k">assert</span> <span class="ow">not</span> <span class="n">is_email</span><span class="p">(</span><span class="s2">&quot;olivier.lecluse_AT_monfai.com&quot;</span><span class="p">)</span>
 <span class="k">assert</span> <span class="ow">not</span> <span class="n">is_email</span><span class="p">(</span><span class="s2">&quot;olivier.lecluse@monfai&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">is_email</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">chaine</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;@&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span>
+        <span class="n">placeArobase</span> <span class="o">=</span> <span class="n">chaine</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;@&#39;</span><span class="p">)</span>
+        <span class="n">compteurPoint</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">placeArobase</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">chaine</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">chaine</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;.&#39;</span> <span class="p">:</span>
+                <span class="n">compteurPoint</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">compteurPoint</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -4568,7 +4581,6 @@ Ecrire une fonction <strong>est_palindrome</strong> prenant en paramètre un nom
 somme_chiffres(125) renvoie 8 puisque 1+2+5=8</p>
 <p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">somme_chiffres</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="c1"># YOUR CODE HERE</span>
-    <span class="k">pass</span>
 </code></pre></div>
 <div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">assert</span> <span class="n">somme_chiffres</span><span class="p">(</span><span class="mi">125</span><span class="p">)</span><span class="o">==</span><span class="mi">8</span>
 </code></pre></div></p>

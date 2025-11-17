@@ -1,8 +1,6 @@
 
 !!! abstract ":star: Thèmes en cours d'étude :star: "
     📌 [Thème 2 : Type de base : chaines de caractères](./T2_Type_de_base/2.4_Chaines_caracteres/chaine.md) <br />
-    😍 en cours : [Projet 1 : site web](./T8_Projets/1_SiteWeb/cours.md)  <br />
-
     ⌛️ A venir : [Thème 2 : Type de base : Booleens](./T2_Type_de_base/2.5_Booleens/cours.md)
 
 !!! warning "Mémo python"
@@ -20,8 +18,9 @@
 !!! note "*Thèmes traités*"
     - [Thème 1 : Démarrer en Python](./T1_Demarrer_en_Python/sommaire.md) <br />
     - [Thème 7 : IHM Web : HTML et CSS](./T7_IHM_Web/7.1_Interactions_page_web/cours.md) <br />
-    - [Thème 2 : le binaire](./T2_Type_de_base/2.1_Binaire/cours.md)
-    - [Thème 2 : codage des entiers](./T2_Type_de_base/2.2_Codage_entiers/cours.md) 
+    - [Thème 2 : le binaire](./T2_Type_de_base/2.1_Binaire/cours.md)<br />
+    - [Thème 2 : codage des entiers](./T2_Type_de_base/2.2_Codage_entiers/cours.md) <br />
+    - 😍 [Projet 1 : site web](./T8_Projets/1_SiteWeb/cours.md)  <br />
     
 
 <!--
@@ -32,7 +31,6 @@
     - Le plus important : les chapitres suivants d'algorithmique, à retrouver [ici](T5_Algorithmique/sommaire.md){. target="_blank"} :
 
     - <br/>
-    - [Thème 2 : Type de base : Booleens](./T2_Type_de_base/2.5_Booleens/cours.md)<br/>
     - [Thème 4 : Architecture matérielle : Architecture de von neumann](./T4_Architecture_materielle/4.1_Architecture_Von_Neumann/vonNeumann.md)<br/>
     - [Thème 5 : Complexité](./T5_Algorithmique/5.2_Complexite/cours.md)<br/>
     - [Thème 5 : Spécifications](./T5_Algorithmique/5.0_specifications/cours.md)<br/>
