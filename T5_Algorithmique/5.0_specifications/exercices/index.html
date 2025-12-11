@@ -4487,7 +4487,7 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>On rappelle que la fonction <code>randint(a, b)</code> du module <code>random</code> permet de tirer un nombre au hasard entre <code>a</code> et <code>b</code> compris.  En particulier elle permet de tirer l'indice d'un élément de tableau au hasard ...</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
 
 <span class="k">def</span> <span class="nf">tirer_une_carte</span><span class="p">():</span>
     <span class="n">couleurs</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;pique&#39;</span><span class="p">,</span><span class="s1">&#39;trèfle&#39;</span><span class="p">,</span><span class="s1">&#39;coeur&#39;</span><span class="p">,</span><span class="s1">&#39;carreau&#39;</span><span class="p">)</span>
@@ -4505,7 +4505,7 @@ exemple <code>assert tirer_une_carte() == 1</code> <br />
 Si non, Comment peut-on  faire autrement ?</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
 
 <span class="k">def</span> <span class="nf">tirer_une_carte</span><span class="p">():</span>
     <span class="n">couleurs</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;pique&#39;</span><span class="p">,</span><span class="s1">&#39;trèfle&#39;</span><span class="p">,</span><span class="s1">&#39;coeur&#39;</span><span class="p">,</span><span class="s1">&#39;carreau&#39;</span><span class="p">)</span>
@@ -4540,7 +4540,7 @@ Si non, Comment peut-on  faire autrement ?</p>
 3. Rédiger le test pour la liste <code>[50*i for i in range(7)]</code></p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">compter_occurences_sup100</span><span class="p">(</span><span class="n">uneliste</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">compter_occurences_sup100</span><span class="p">(</span><span class="n">uneliste</span><span class="p">):</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">fonction qui compte dans une liste le nombre d&#39;occurrences supérieur à 100</span>
 
@@ -4578,7 +4578,7 @@ Si non, Comment peut-on  faire autrement ?</p>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Sur les fonctions suivantes, <strong>Documentez</strong> la fonction et déterminer les <strong>assertions</strong> à mettre en oeuvre pour tester ces fonctions. <strong>Corriger</strong> si nécessaire le code de la fonction pour qu'elle fonctionne comme l'indique le bref commentaire.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">echange_v1</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">echange_v1</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;modifie la liste, la met dans l&#39;ordre inverse&quot;&quot;&quot;</span>
     <span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -4586,7 +4586,7 @@ Si non, Comment peut-on  faire autrement ?</p>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">echange_v2</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">echange_v2</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;modifie la liste, la met dans l&#39;ordre inverse&quot;&quot;&quot;</span>
     <span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">):</span>
@@ -4595,7 +4595,7 @@ Si non, Comment peut-on  faire autrement ?</p>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">ajoutUnListe</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">ajoutUnListe</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;modifie la liste, ajoute 1 à chacun des termes&quot;&quot;&quot;</span>
     <span class="n">n</span><span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
@@ -4603,7 +4603,7 @@ Si non, Comment peut-on  faire autrement ?</p>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">echange_v1</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">echange_v1</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">modifie la liste, la met dans l&#39;ordre inverse</span>
 <span class="sd">@param d&#39;entrée : liste : type List : liste à renverser</span>
@@ -4627,7 +4627,7 @@ Si non, Comment peut-on  faire autrement ?</p>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">echange_v2</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">echange_v2</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;modifie la liste, la met dans l&#39;ordre inverse&quot;&quot;&quot;</span>
     <span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">):</span>
@@ -4649,7 +4649,7 @@ Si non, Comment peut-on  faire autrement ?</p>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">ajoutUnListe</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">ajoutUnListe</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;modifie la liste, ajoute 1 à chacun des termes&quot;&quot;&quot;</span>
     <span class="n">n</span><span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
     <span class="c1">#Il faut commencer à l&#39;indice 0</span>
@@ -4680,7 +4680,7 @@ Si non, Comment peut-on  faire autrement ?</p>
 </div>
 <div class="tabbed-block">
 <p><em>Attention : nous allons recréer une fonction qui, bien sûr, existe déjà en Python, sous le nom <code>max()</code>.</em></p>
-<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">maxi</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span> <span class="p">:</span>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">maxi</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span> <span class="p">:</span>
     <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
 <span class="c1">#Un peu trop simple, n&#39;est ce pas !!</span>
 </code></pre></div>
@@ -4689,12 +4689,12 @@ Ecrire l'algorithme en Python.  </p>
 <p>Il vous est demandé de construire une fonction nommée <code>maximum()</code>, qui prenne en argument une liste, et qui renvoie le plus grand nombre de cette liste.</p>
 <p>Vous prendrez soin de <strong>documenter</strong> et <strong>tester</strong> votre fonction.</p>
 <p><strong>Exemple d'utilisation :</strong></p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maximum</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maximum</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="mi">6</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">maximum</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">maximum</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
     <span class="c1">#Traitement du cas limite de la recherche sur une liste vide</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span> <span class="p">:</span>
         <span class="k">return</span> <span class="kc">None</span>
@@ -4729,7 +4729,7 @@ Ecrire l'algorithme en Python.  </p>
 <p>Vous prendrez soin de <strong>documenter</strong> et <strong>tester</strong> votre fonction.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
     <span class="c1">#Cas de la liste vide</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span> <span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>
@@ -4744,7 +4744,7 @@ Ecrire l'algorithme en Python.  </p>
 <span class="k">assert</span> <span class="n">moyenne</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span> <span class="o">==</span> <span class="mi">3</span>
 <span class="k">assert</span> <span class="n">moyenne</span><span class="p">([])</span> <span class="o">==</span> <span class="mi">0</span> 
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1">#Autre solution plus simple en utilisant la fonction somme de Python ...</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1">#Autre solution plus simple en utilisant la fonction somme de Python ...</span>
 <span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">liste</span><span class="p">):</span>
     <span class="c1">#Cas de la liste vide</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span> <span class="p">:</span>
@@ -4766,13 +4766,13 @@ Ecrire l'algorithme en Python.  </p>
 <p>Créer une fonction <code>recherche()</code> qui prenne en argument une liste et qui renvoie la moyenne des nombres de cette liste.</p>
 <p>Vous prendrez soin de <strong>documenter</strong> et <strong>tester</strong> votre fonction.<br />
 Vous ne devez pas utilisez la mot clé <code>in</code> ...</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">elt</span><span class="p">)</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">elt</span><span class="p">)</span> <span class="p">:</span>
     <span class="k">return</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">liste</span>
 <span class="c1">#Un peu trop simple, n&#39;est ce pas !!</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">elt</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">elt</span><span class="p">):</span>
     <span class="c1">#Cas de la liste vide</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span> <span class="p">:</span>
         <span class="k">return</span> <span class="kc">False</span>
@@ -4790,7 +4790,7 @@ Vous ne devez pas utilisez la mot clé <code>in</code> ...</p>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">elt</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">recherche</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">elt</span><span class="p">):</span>
     <span class="c1">#Cas de la liste vide</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span> <span class="p">:</span>
         <span class="k">return</span> <span class="kc">False</span>

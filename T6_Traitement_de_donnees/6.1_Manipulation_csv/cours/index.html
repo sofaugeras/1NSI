@@ -4642,7 +4642,7 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <p>Le logiciel <code>Jupyter Notebook</code> se prête parfaitement à la consultation et l'exploitation de données structurées, nous l'utiliserons préféremment à <code>Spyder</code>. </p>
 <h3 id="premiere-methode">Première méthode<a class="headerlink" href="#premiere-methode" title="Permanent link">⚓︎</a></h3>
 <p>Le script suivant :</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -4659,7 +4659,7 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>    <span class="c1"># toujours fermer le fichier !</span>
 </code></pre></div></td></tr></table></div>
 <p>donne :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="p">[</span><span class="s1">&#39;Nom&#39;</span><span class="p">,</span> <span class="s1">&#39;Anglais&#39;</span><span class="p">,</span> <span class="s1">&#39;Info&#39;</span><span class="p">,</span> <span class="s1">&#39;Maths&#39;</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="p">[</span><span class="s1">&#39;Nom&#39;</span><span class="p">,</span> <span class="s1">&#39;Anglais&#39;</span><span class="p">,</span> <span class="s1">&#39;Info&#39;</span><span class="p">,</span> <span class="s1">&#39;Maths&#39;</span><span class="p">]</span>
 <span class="p">[</span><span class="s1">&#39;Joe&#39;</span><span class="p">,</span> <span class="s1">&#39;17&#39;</span><span class="p">,</span> <span class="s1">&#39;18&#39;</span><span class="p">,</span> <span class="s1">&#39;19&#39;</span><span class="p">]</span>
 <span class="p">[</span><span class="s1">&#39;Zoe&#39;</span><span class="p">,</span> <span class="s1">&#39;15&#39;</span><span class="p">,</span> <span class="s1">&#39;17&#39;</span><span class="p">,</span> <span class="s1">&#39;19&#39;</span><span class="p">]</span>
 <span class="p">[</span><span class="s1">&#39;Max&#39;</span><span class="p">,</span> <span class="s1">&#39;19&#39;</span><span class="p">,</span> <span class="s1">&#39;13&#39;</span><span class="p">,</span> <span class="s1">&#39;17&#39;</span><span class="p">]</span>
@@ -4674,7 +4674,7 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <h3 id="ameliorations">Améliorations<a class="headerlink" href="#ameliorations" title="Permanent link">⚓︎</a></h3>
 <p>Au lieu d'utiliser la fonction <code>csv.reader()</code>, utilisons <code>csv.DictReader()</code>. Comme son nom l'indique, elle renverra une variable contenant des dictionnaires.</p>
 <p>Le script suivant  :
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -4691,12 +4691,12 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div></p>
 <p>donne
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="p">{</span><span class="s1">&#39;Prénom&#39;</span><span class="p">:</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Smith&#39;</span><span class="p">,</span> <span class="s1">&#39;Email&#39;</span><span class="p">:</span> <span class="s1">&#39;john@example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;SMS&#39;</span><span class="p">:</span> <span class="s1">&#39;33123456789&#39;</span><span class="p">}</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="p">{</span><span class="s1">&#39;Prénom&#39;</span><span class="p">:</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Smith&#39;</span><span class="p">,</span> <span class="s1">&#39;Email&#39;</span><span class="p">:</span> <span class="s1">&#39;john@example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;SMS&#39;</span><span class="p">:</span> <span class="s1">&#39;33123456789&#39;</span><span class="p">}</span>
 <span class="p">{</span><span class="s1">&#39;Prénom&#39;</span><span class="p">:</span> <span class="s1">&#39;Harry&#39;</span><span class="p">,</span> <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Pierce&#39;</span><span class="p">,</span> <span class="s1">&#39;Email&#39;</span><span class="p">:</span> <span class="s1">&#39;harry@example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;SMS&#39;</span><span class="p">:</span> <span class="s1">&#39;33111222222&#39;</span><span class="p">}</span>
 <span class="p">{</span><span class="s1">&#39;Prénom&#39;</span><span class="p">:</span> <span class="s1">&#39;Howard&#39;</span><span class="p">,</span> <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Paige&#39;</span><span class="p">,</span> <span class="s1">&#39;Email&#39;</span><span class="p">:</span> <span class="s1">&#39;howard@example.com&#39;</span><span class="p">,</span> <span class="s1">&#39;SMS&#39;</span><span class="p">:</span> <span class="s1">&#39;33777888898&#39;</span><span class="p">}</span>
 </code></pre></div></p>
 <p>C'est mieux ! Les données sont maintenant des dictionnaires. Mais nous avons juste énuméré 3 dictionnaires. Comment ré-accéder au premier d'entre eux, celui de John Smith ? Essayons :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">donnees</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">donnees</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
     <span class="o">---------------------------------------------------------------------------</span>
 
@@ -4712,7 +4712,7 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <h3 id="une-liste-de-dictionnaires">Une liste de dictionnaires<a class="headerlink" href="#une-liste-de-dictionnaires" title="Permanent link">⚓︎</a></h3>
 <p>Nous allons donc créer une liste de dictionnaires.</p>
 <p>Le script suivant (un classique pour la lecture des fichiers CSV) 💙 :</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -4729,7 +4729,7 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div></td></tr></table></div>
 <p>permet de faire ceci :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">amis</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">amis</span>
 
     <span class="p">[{</span><span class="s1">&#39;Prénom&#39;</span><span class="p">:</span> <span class="s1">&#39;John&#39;</span><span class="p">,</span>
       <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Smith&#39;</span><span class="p">,</span>
@@ -4756,7 +4756,7 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <p><strong>Question 1.</strong> Stocker dans  une variable <code>joueurs</code>  les renseignements de tous les joueurs présents dans ce fichier csv.</p>
 <details class="tip">
 <summary>réponse</summary>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -4777,14 +4777,14 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <p><strong>Question 2.</strong> Combien de joueurs sont présents dans ce fichier ?</p>
 <details class="tip">
 <summary>réponse</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">joueurs</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">joueurs</span><span class="p">)</span>
  <span class="mi">595</span>
 </code></pre></div>
 </details>
 <p><strong>Question 3.</strong> Quel est le prénom du joueur n°486 ?</p>
 <details class="tip">
 <summary>réponse</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">joueurs</span><span class="p">[</span><span class="mi">486</span><span class="p">][</span><span class="s1">&#39;Nom&#39;</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">joueurs</span><span class="p">[</span><span class="mi">486</span><span class="p">][</span><span class="s1">&#39;Nom&#39;</span><span class="p">]</span>
   <span class="s1">&#39;Wenceslas LAURET&#39;</span>
 </code></pre></div>
 </details>
@@ -4793,7 +4793,7 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <p>La méthode la plus naturelle est de parcourir toute la liste jusqu'à trouver le bon joueur, puis d'afficher son équipe.</p>
 <details class="tip">
 <summary>réponse</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="p">:</span>
         <span class="k">if</span> <span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Nom&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Baptiste SERIN&#39;</span> <span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Equipe&#39;</span><span class="p">])</span>
 </code></pre></div>
@@ -4801,7 +4801,7 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <p>Une méthode plus efficace est d'utiliser une liste par compréhension incluant un test. </p>
 <details class="tip">
 <summary>réponse</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">clubSerin</span> <span class="o">=</span> <span class="p">[</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Equipe&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="k">if</span> <span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Nom&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Baptiste SERIN&#39;</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">clubSerin</span> <span class="o">=</span> <span class="p">[</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Equipe&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="k">if</span> <span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Nom&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Baptiste SERIN&#39;</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">clubSerin</span>
 </code></pre></div>
 </details>
@@ -4809,14 +4809,14 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <p>Attention à bien convertir en entier la chaine de caractère renvoyée par la clé <code>Poids</code> </p>
 <details class="tip">
 <summary>réponse</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">lourds</span> <span class="o">=</span> <span class="p">[(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Nom&#39;</span><span class="p">],</span> <span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">140</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">lourds</span> <span class="o">=</span> <span class="p">[(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Nom&#39;</span><span class="p">],</span> <span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">140</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">lourds</span>
 </code></pre></div>
 </details>
 <h3 id="exploitation-graphique">Exploitation graphique<a class="headerlink" href="#exploitation-graphique" title="Permanent link">⚓︎</a></h3>
 <p>Nous allons utiliser le module Matplotlib pour illustrer les données de notre fichier csv.</p>
 <h3 id="exemple">Exemple<a class="headerlink" href="#exemple" title="Permanent link">⚓︎</a></h3>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -4833,7 +4833,7 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <p><strong>Question 1.</strong> Afficher sur un graphique tous les joueurs de rugby du top14, en mettant le poids en abscisse et la taille en ordonnée.</p>
 <details class="tip">
 <summary>réponse</summary>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -4848,7 +4848,7 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <p><strong>Question 2.</strong> Faire apparaître ensuite les joueurs évoluant au poste de Centre en bleu, et les 2ème lignes en vert.</p>
 <details class="tip">
 <summary>réponse</summary>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>

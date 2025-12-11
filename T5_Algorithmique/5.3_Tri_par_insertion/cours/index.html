@@ -4661,7 +4661,7 @@
 <p>Pourquoi étudier des algorithmes de tri ?<br />
 Autant ne pas le cacher, ces algorithmes sont déjà implémentés (quelque soit le langage) dans des fonctions très performantes.  </p>
 <p>En Python, on utilise la fonction <code>sort()</code> :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tab</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tab</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">tab</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">tab</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
@@ -4693,7 +4693,7 @@ Voici le fonctionnement de l'algorithme :  </p>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Tri par insertion (version simple) <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">tri_insertion1</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">tri_insertion1</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;trie en place la liste lst donnée en paramètre&#39;&#39;&#39;</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)):</span>                 <span class="c1">#(1)</span>
         <span class="n">k</span> <span class="o">=</span> <span class="n">i</span>                                    <span class="c1">#(2)</span>
@@ -4712,7 +4712,7 @@ La boucle peut continuer.</li>
 </ol>
 </div>
 <p><em>Application :</em></p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maliste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maliste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">tri_insertion1</span><span class="p">(</span><span class="n">maliste</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">maliste</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
@@ -4728,7 +4728,7 @@ La boucle peut continuer.</li>
 <h3 id="22-codage-de-lalgorithme">2.2 Codage de l'algorithme<a class="headerlink" href="#22-codage-de-lalgorithme" title="Permanent link">⚓︎</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Tri par insertion (version optimisée) <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">tri_insertion2</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">tri_insertion2</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="p">:</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;trie en place la liste lst donnée en paramètre&#39;&#39;&#39;</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)):</span>         <span class="c1"># (1)</span>
         <span class="n">cle</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>                     <span class="c1"># (2)</span>
@@ -4749,7 +4749,7 @@ La boucle peut continuer.</li>
 </ol>
 </div>
 <p><em>Application :</em></p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maliste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maliste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">tri_insertion2</span><span class="p">(</span><span class="n">maliste</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">maliste</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
@@ -4761,25 +4761,25 @@ La boucle peut continuer.</li>
 Pour pouvoir utiliser la fonction `%timeit`, nous allons modifier légèrement notre algorithme de tri : comme la fonction `%timeit` effectue un grand nombre d'appel à la fonction `tri()`, la liste serait triée dès le premier appel et les autres appels essaieraient donc de tri une liste *déjà triée*. 
 
 
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">tri</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">tri</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="p">:</span>
     <span class="n">l</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="c1"># pour ne pas modifier la liste passée en argument.</span>
     <span class="k">for</span> <span class="n">k</span> <span class="o">...</span>
 </code></pre></div>
 
 
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)]</span> <span class="c1">#on se place dans le pire des cas : une liste triée dans l&#39;ordre décroissant</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)]</span> <span class="c1">#on se place dans le pire des cas : une liste triée dans l&#39;ordre décroissant</span>
 </code></pre></div>
 
 
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)]</span> <span class="c1">#on se place dans le pire des cas : une liste triée dans l&#39;ordre décroissant</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)]</span> <span class="c1">#on se place dans le pire des cas : une liste triée dans l&#39;ordre décroissant</span>
 </code></pre></div>
 
 
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="n">tri</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="n">tri</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </code></pre></div>
 
 
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="n">tri</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">%</span><span class="n">timeit</span> <span class="n">tri</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 </code></pre></div>
 
 En comparant les temps de tri des listes `a` et `b`, que pouvez-vous supposer sur la complexité du tri par insertion ?
@@ -4806,7 +4806,7 @@ Ceci démontre que le tri par insertion est de complexité <strong>quadratique</
 <h3 id="34-preuve-de-la-terminaison-de-lalgorithme">3.4 Preuve de la terminaison de l'algorithme<a class="headerlink" href="#34-preuve-de-la-terminaison-de-lalgorithme" title="Permanent link">⚓︎</a></h3>
 <p>Est-on sûr que notre algorithme va s'arrêter ?<br />
 Le programme est constitué d'une boucle <code>while</code> imbriquée dans une boucle <code>for</code>. Seule la boucle <code>while</code> peut provoquer une non-terminaison de l'algorithme. Observons donc ses conditions de sortie : </p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code> <span class="k">while</span>  <span class="n">k</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">l</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">cle</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code> <span class="k">while</span>  <span class="n">k</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">l</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">cle</span> <span class="p">:</span>
 </code></pre></div>
 <p>La condition <code>l[k] &gt; cle</code> ne peut pas être rendue fausse avec certitude. 
 Par contre, la condition <code>k &gt;= 0</code> sera fausse dès que la variable <code>k</code> deviendra négative. Or la ligne 

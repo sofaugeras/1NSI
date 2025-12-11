@@ -4598,7 +4598,7 @@
 <h4 id="pre-requis-1-le-module-requests-en-python">Pré-requis 1 : le module <code>requests</code> en python<a class="headerlink" href="#pre-requis-1-le-module-requests-en-python" title="Permanent link">⚓︎</a></h4>
 <p>Le module <code>requests</code> permet d'aller chercher le contenu d'une page web, suivant la syntaxe ci-dessous.
 Testez le code ci-dessous :</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://sofaugeras.com/interesting.html&quot;</span><span class="p">,</span> <span class="n">verify</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
@@ -4622,7 +4622,7 @@ Ceci est vraiment une jolie page web.
 <p>Notre programme Python se comporte donc «comme un navigateur» : il se rend sur une page, effectue une requête et récupère la page renvoyée.</p>
 <h4 id="rappel-lextraction-dun-fichier-texte-sous-forme-de-liste">(Rappel) l'extraction d'un fichier texte sous forme de liste<a class="headerlink" href="#rappel-lextraction-dun-fichier-texte-sous-forme-de-liste" title="Permanent link">⚓︎</a></h4>
 <p>Le code ci-dessous permet de collecter dans une liste <code>mots</code> l'ensemble des mots compris dans le fichier <code>monfichiertexte.txt</code> (si celui-ci comprend un mot par ligne) </p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">mots</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;monfichiertexte.txt&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">mots</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;monfichiertexte.txt&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
 </code></pre></div>
 <h2 id="2-application-force-brut-en-clair">2. Application Force brut en clair<a class="headerlink" href="#2-application-force-brut-en-clair" title="Permanent link">⚓︎</a></h2>
 <p>Votre objectif est de trouver le mot de passe demandé sur la page <a href="https://sofaugeras.com/exoBF.html" target="_blank">https://sofaugeras.com/exoBF.html</a></p>
@@ -4635,7 +4635,7 @@ Le jeu de données : <a class="md-button" href="../data/extraitrockyou.txt" targ
 <p>Lequel ?</p>
 <details class="note">
 <summary>Correction</summary>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -4728,7 +4728,7 @@ Lors de la connexion : on re-hash et compare.</p>
 Permettent de garantir qu’un document n’a pas été modifié.</p>
 </div>
 <p>🚩 Exemple d'utilisation</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">hashlib</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">hashlib</span>
 
 <span class="n">texte</span> <span class="o">=</span> <span class="s2">&quot;bonjour&quot;</span>
 <span class="n">hash_obj</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">texte</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
@@ -4748,7 +4748,7 @@ Permettent de garantir qu’un document n’a pas été modifié.</p>
 <p>Créer une fonction <code>verifie_hash(mot, hash)</code> pour comparer un mot avec une empreinte.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">hashlib</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">hashlib</span>
 
 <span class="k">def</span> <span class="nf">verifie_hash</span><span class="p">(</span><span class="n">mot</span><span class="p">,</span> <span class="n">hash_attendu</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
@@ -4794,7 +4794,7 @@ monsite.fr subit une attaque et une fuite de données massive.<br />
 le pirate possède donc le moyen de se connecter à concurrent.fr avec le compte d'alphonse...</p>
 <p>C'est la que l'on introduit la notion de <strong>salage</strong>.</p>
 <p><ins>Définition :</ins> Le salage est un procédé utilisé en cryptographie pour renforcer la sécurité des mots de passe stockés. Il consiste à ajouter une valeur aléatoire unique (appelée "sel" ou "salt") à chaque mot de passe avant de le hacher. Cela rend plus difficile pour les attaquants d'utiliser des attaques par table arc-en-ciel ou par dictionnaire, car même si deux utilisateurs ont le même mot de passe, leurs hashs seront différents grâce aux sels uniques.</p>
-<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>

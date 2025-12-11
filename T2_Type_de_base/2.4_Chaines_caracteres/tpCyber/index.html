@@ -4696,7 +4696,7 @@ Pour augmenter la sécurité du mot de passe, on peut décider de mettre aléato
 </ul>
 <h1 id="au-travail">Au travail !<a class="headerlink" href="#au-travail" title="Permanent link">⚓︎</a></h1>
 <p>Compléter la fonction <code>convertir_ponctuation</code> qui convertit les apostrophes et les signes de ponctuation de la phrase en espaces.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">convertir_ponctuation</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">convertir_ponctuation</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span> <span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    convertir les apostrophes et les signes de ponctuation de la phrase en espaces</span>
 <span class="sd">    @param :  phrase--&gt; str : phrase saisie par l&#39;utilisateur</span>
@@ -4721,7 +4721,7 @@ Pour augmenter la sécurité du mot de passe, on peut décider de mettre aléato
 </code></pre></div>
 <details class="question">
 <summary>Correction</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">convertir_ponctuation</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">convertir_ponctuation</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span> <span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    convertir les apostrophes et les signes de ponctuation de la phrase en espaces</span>
 <span class="sd">    @param :  phrase--&gt; str : phrase saisie par l&#39;utilisateur</span>
@@ -4738,12 +4738,12 @@ Pour augmenter la sécurité du mot de passe, on peut décider de mettre aléato
 </code></pre></div>
 </details>
 <p>Pour chaque fonction, vous devez tester les exemples proposés avant de poursuivre en ajoutant des tests.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># tester les trois exemples proposés</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># tester les trois exemples proposés</span>
 <span class="n">convertir_ponctuation</span><span class="p">(</span><span class="s2">&quot;J&#39;adore passer mes vacances à réaliser des devoirs maison.&quot;</span><span class="p">)</span>
 </code></pre></div>
 <details class="question">
 <summary>Correction</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">convertir_ponctuation</span><span class="p">(</span><span class="s2">&quot;J&#39;&#39;aime avec une faute de frappe&quot;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">convertir_ponctuation</span><span class="p">(</span><span class="s2">&quot;J&#39;&#39;aime avec une faute de frappe&quot;</span><span class="p">)</span>
 <span class="n">convertir_ponctuation</span><span class="p">(</span><span class="s2">&quot;Voilà : écoute, ce que je te dis !&quot;</span><span class="p">)</span>
 </code></pre></div>
 </details>
@@ -4751,7 +4751,7 @@ Pour augmenter la sécurité du mot de passe, on peut décider de mettre aléato
 Pour compter le nombre de mots, on va compter le nombre de fois où on trouve un caractère qui est un espace suivi d'un caractère qui n'est pas un espace.<br />
 Dans ce cas, pour détecter le premier mot, il faut ajouter un espace au début de la phrase s'il n'y en a pas.  </p>
 <p>En suivant cette règle, compléter la fonction <code>verifier_plus_de_huit_mots</code>.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">verifier_plus_de_huit_mots</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">verifier_plus_de_huit_mots</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span> <span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    vérifier que la phrase contient plus de 8 mots</span>
 <span class="sd">    @PARAM: phrase --&gt; str : phrase saisie par l&#39;utilisateur où il n&#39;y a plus de ponctuation et chaque mot est séparé par des espaces</span>
@@ -4786,7 +4786,7 @@ Dans ce cas, pour détecter le premier mot, il faut ajouter un espace au début 
 </code></pre></div>
 <details class="question">
 <summary>Correction</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">verifier_plus_de_huit_mots</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">verifier_plus_de_huit_mots</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span> <span class="p">:</span>
     <span class="c1"># on ajoute un espace pour premier caractère s&#39;il n&#39;y en pas pas</span>
     <span class="k">if</span> <span class="n">phrase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
         <span class="n">phrase</span> <span class="o">=</span>  <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">phrase</span>
@@ -4807,7 +4807,7 @@ Dans ce cas, pour détecter le premier mot, il faut ajouter un espace au début 
 </details>
 <p>On vérifie que le chiffre est bien un entier entre 0 et 9.<br />
 Compléter la fonction <code>verifier_chiffre</code>.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">verifier_chiffre</span><span class="p">(</span><span class="n">chiffre</span><span class="p">)</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">verifier_chiffre</span><span class="p">(</span><span class="n">chiffre</span><span class="p">)</span> <span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    vérifier que le chiffre est bien un entier entre 0 et 9.</span>
 <span class="sd">    @PARAM : chiffre --&gt; int : chiffre saisi par l&#39;utilisateur</span>
@@ -4826,7 +4826,7 @@ Compléter la fonction <code>verifier_chiffre</code>.</p>
 </code></pre></div>
 <details class="question">
 <summary>Correction</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">verifier_chiffre</span><span class="p">(</span><span class="n">chiffre</span><span class="p">)</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">verifier_chiffre</span><span class="p">(</span><span class="n">chiffre</span><span class="p">)</span> <span class="p">:</span>
     <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">chiffre</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span> <span class="p">,</span> <span class="s2">&quot;Il faut donner un nombre entier !&quot;</span>
     <span class="k">assert</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">chiffre</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;Il faut nombre entier entre 0 et 9 !&quot;</span>
     <span class="k">return</span> <span class="kc">True</span>
@@ -4835,7 +4835,7 @@ Compléter la fonction <code>verifier_chiffre</code>.</p>
 <p>Il faut maintenant récupérer les initiales de chaque mot pour créer la première version du mot de passe.<br />
 On détecte la première lettre de chaque mot de la même façon que pour la fonction <code>verifier_plus_de_huit_mots</code>.<br />
 Puis, on crée un algorithme de cumul qui concatène les premières lettres de chaque mot.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">obtenir_premieres_lettres</span><span class="p">(</span><span class="n">phrase</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">obtenir_premieres_lettres</span><span class="p">(</span><span class="n">phrase</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    créer un mot constitué des premières lettres de chaque mot de la phrase</span>
 <span class="sd">    @PARAM : phrase --&gt; str : phrase saisie par l&#39;utilisateur où chaque mot est séparé par des espaces</span>
@@ -4865,7 +4865,7 @@ Puis, on crée un algorithme de cumul qui concatène les premières lettres de c
 </code></pre></div>
 <details class="question">
 <summary>Correction</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">obtenir_premieres_lettres</span><span class="p">(</span><span class="n">phrase</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">obtenir_premieres_lettres</span><span class="p">(</span><span class="n">phrase</span><span class="p">):</span>
     <span class="c1"># on ajoute un espace pour premier caractère s&#39;il n&#39;y en pas pas</span>
     <span class="k">if</span> <span class="n">phrase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
         <span class="n">phrase</span> <span class="o">=</span>  <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">phrase</span>
@@ -4894,7 +4894,7 @@ Pour convertir les minuscules accentuées en en leur équivalent non accentué :
 </ol>
 </li>
 </ol>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">convertir_sans_accent</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">convertir_sans_accent</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    convertir les lettres accentuées du mot en leur équivalent non accentué&quot;</span>
 <span class="sd">    @PARAM : mot --&gt; str : une chaine de caractères</span>
@@ -4921,7 +4921,7 @@ Pour convertir les minuscules accentuées en en leur équivalent non accentué :
 </code></pre></div>
 <details class="question">
 <summary>Correction</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">convertir_sans_accent</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">convertir_sans_accent</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
     <span class="n">mot_sans_accent</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
     <span class="k">for</span> <span class="n">caractere</span> <span class="ow">in</span> <span class="n">mot</span> <span class="p">:</span>
         <span class="k">if</span> <span class="n">caractere</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;à&#39;</span><span class="p">,</span><span class="s1">&#39;â&#39;</span><span class="p">]:</span>
@@ -4953,7 +4953,7 @@ P(80) et p(112) : 112 - 80 = 32  <br /></p>
 <p>On peut donc convertir une minuscule en sa majuscule en otant 32 à son code décimal en ASCII.</p>
 </details>
 <p>Utiliser cette particularité du code ASCII pour compléter la fonction <code>convertir_majuscule_minuscule_aleatoire</code>.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
 
 <span class="k">def</span> <span class="nf">convertir_majuscule_minuscule_aleatoire</span><span class="p">(</span><span class="n">lettre</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
@@ -4980,7 +4980,7 @@ P(80) et p(112) : 112 - 80 = 32  <br /></p>
 </code></pre></div>
 <details class="question">
 <summary>Correction</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
 
 <span class="k">def</span> <span class="nf">convertir_majuscule_minuscule_aleatoire</span><span class="p">(</span><span class="n">lettre</span><span class="p">):</span>
     <span class="c1"># on choisit au hasard 0 ou 1</span>
@@ -4997,7 +4997,7 @@ P(80) et p(112) : 112 - 80 = 32  <br /></p>
 <li>appelle, si la lettre est une minuscule, la fonction <code>convertir_majuscule_minuscule_aleatoire</code></li>
 <li>renvoie un nouveau mot de passe avec des minuscules parfois modifiées en majuscules.</li>
 </ul>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">modifier_mot_majuscule_minuscule</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">modifier_mot_majuscule_minuscule</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    convertir aléatoirement chaque lettre minuscule d&#39;un mot en majuscule ou minuscule, </span>
 <span class="sd">    ne pas la modifier si elle est en majuscule</span>
@@ -5034,7 +5034,7 @@ P(80) et p(112) : 112 - 80 = 32  <br /></p>
 </code></pre></div>
 <details class="question">
 <summary>Correction</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">modifier_mot_majuscule_minuscule</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">modifier_mot_majuscule_minuscule</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
     <span class="n">nv_mot</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
     <span class="c1"># on itère sur chaque lettre du mot </span>
     <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">mot</span> <span class="p">:</span>
@@ -5051,7 +5051,7 @@ P(80) et p(112) : 112 - 80 = 32  <br /></p>
 </code></pre></div>
 </details>
 <p>Compléter la fonction <code>ajouter_chiffre</code> qui améliore la sécurité du mot de passe en ajoutant le chiffre quelque part dans le mot.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">ajouter_chiffre</span><span class="p">(</span><span class="n">mot</span><span class="p">,</span><span class="n">chiffre</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">ajouter_chiffre</span><span class="p">(</span><span class="n">mot</span><span class="p">,</span><span class="n">chiffre</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    ajouter un chiffre quelque part dans le mot</span>
 <span class="sd">    @PARAM : mot --&gt; str : une chaine de caractères</span>
@@ -5074,7 +5074,7 @@ P(80) et p(112) : 112 - 80 = 32  <br /></p>
 </code></pre></div>
 <details class="question">
 <summary>Correction</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">ajouter_chiffre</span><span class="p">(</span><span class="n">mot</span><span class="p">,</span><span class="n">chiffre</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">ajouter_chiffre</span><span class="p">(</span><span class="n">mot</span><span class="p">,</span><span class="n">chiffre</span><span class="p">):</span>
     <span class="nb">max</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
     <span class="n">alea</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">max</span><span class="p">)</span>
     <span class="n">nv_mot</span> <span class="o">=</span> <span class="n">mot</span> <span class="p">[:</span><span class="n">alea</span><span class="p">]</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">chiffre</span><span class="p">)</span><span class="o">+</span><span class="n">mot</span><span class="p">[</span><span class="n">alea</span><span class="p">:]</span>
@@ -5082,7 +5082,7 @@ P(80) et p(112) : 112 - 80 = 32  <br /></p>
 </code></pre></div>
 </details>
 <p>Le programme principal appelle toutes ces fonctions pour créer le mot de passe à l'aide de la saisie de l'utilisateur.</p>
-<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1">###################################################</span>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1">###################################################</span>
 <span class="c1">#####    PROGRAMME PRINCIPAL DE LA PHRASE     #####</span>
 <span class="c1">###################################################</span>
 <span class="n">chiffre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Saisir un chiffre (pas un nombre !) : &quot;</span><span class="p">))</span>

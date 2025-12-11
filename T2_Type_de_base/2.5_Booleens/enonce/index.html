@@ -4566,7 +4566,7 @@
 <p><strong>XORez-vous découvrir qui est ce personnage-mystère ?</strong></p>
 <h2 id="2-aide-pour-la-manipulation-dimages-et-lextraction-de-pixels">2. Aide pour la manipulation d'images et l'extraction de pixels<a class="headerlink" href="#2-aide-pour-la-manipulation-dimages-et-lextraction-de-pixels" title="Permanent link">⚓︎</a></h2>
 <h3 id="21-code-de-demarrage">2.1 Code de démarrage<a class="headerlink" href="#21-code-de-demarrage" title="Permanent link">⚓︎</a></h3>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -4587,20 +4587,20 @@
 <h3 id="22-manipulation-de-pixels">2.2 Manipulation de pixels<a class="headerlink" href="#22-manipulation-de-pixels" title="Permanent link">⚓︎</a></h3>
 <p>Les expressions ci-dessous sont à tester pour en comprendre le fonctionnement. </p>
 <h4 id="221-recuperer-le-code-rgb-un-pixel">2.2.1 Récupérer le code <code>RGB</code>  un pixel<a class="headerlink" href="#221-recuperer-le-code-rgb-un-pixel" title="Permanent link">⚓︎</a></h4>
-<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">img_myst</span><span class="o">.</span><span class="n">getpixel</span><span class="p">((</span><span class="mi">125</span><span class="p">,</span> <span class="mi">80</span><span class="p">))</span>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">img_myst</span><span class="o">.</span><span class="n">getpixel</span><span class="p">((</span><span class="mi">125</span><span class="p">,</span> <span class="mi">80</span><span class="p">))</span>
 <span class="p">(</span><span class="mi">54</span><span class="p">,</span> <span class="mi">217</span><span class="p">,</span> <span class="mi">174</span><span class="p">)</span>
 </code></pre></div>
 Le pixel de coordonnées (125, 80) a pour composantes RGB (54, 217, 174).</p>
 <h3 id="222-modifier-la-couleur-dun-pixel">2.2.2 Modifier la couleur d'un pixel<a class="headerlink" href="#222-modifier-la-couleur-dun-pixel" title="Permanent link">⚓︎</a></h3>
-<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">img_new</span><span class="o">.</span><span class="n">putpixel</span><span class="p">((</span><span class="mi">30</span><span class="p">,</span><span class="mi">70</span><span class="p">),</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">img_new</span><span class="o">.</span><span class="n">putpixel</span><span class="p">((</span><span class="mi">30</span><span class="p">,</span><span class="mi">70</span><span class="p">),</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
 <span class="o">&gt;&gt;&gt;</span> 
 </code></pre></div>
 Le pixel de coordonnées (30, 70) est maintenant un pixel rouge.</p>
 <h4 id="223-afficher-une-image">2.2.3 Afficher une image<a class="headerlink" href="#223-afficher-une-image" title="Permanent link">⚓︎</a></h4>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">img_mask</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">img_mask</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 <h4 id="224-sauvegarder-une-image">2.2.4 Sauvegarder une image<a class="headerlink" href="#224-sauvegarder-une-image" title="Permanent link">⚓︎</a></h4>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">img_new</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;solution.png&quot;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">img_new</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;solution.png&quot;</span><span class="p">)</span>
 </code></pre></div>
 
 

@@ -4677,7 +4677,7 @@ Et certains nombres ont une écriture binaire infinie périodique, alors même q
 <p>Ce système d'écriture ne marche pas bien.</p>
 <p><strong>Conclusion :</strong></p>
 <p>Certains nombres n'admettent pas une écriture binaire <strong>finie</strong>. Or la mémoire d'un ordinateur, quelqu'il soit, est toujours finie. Certains nombres ne peuvent donc pas être représentés correctement en machine : c'est une impossibilité théorique. Cela amène à des comportements étranges : </p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.2</span>
 <span class="mf">0.30000000000000004</span>
 </code></pre></div>
 <p><strong>Remarque :</strong> parmi les nombres décimaux à un chiffre après la virgule (0,1  0,2  0,3 ...) seul 0,5 admet une écriture binaire finie ! Tous les autres ont une représentation en machine qui n'en donne qu'une valeur approchée.</p>
@@ -4795,12 +4795,12 @@ Pour une représentation sur 32 bits (en simple précision),<br />
 <h2 id="3-comment-faire-des-tests-degalite-sur-les-flottants">3. Comment faire des tests d'egalité sur les flottants ?  <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /><a class="headerlink" href="#3-comment-faire-des-tests-degalite-sur-les-flottants" title="Permanent link">⚓︎</a></h2>
 <p>Première réponse : ON N'EN FAIT PAS.</p>
 <p>Si <code>a</code> et <code>b</code> sont deux flottants, le test classique</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">if</span> <span class="n">a</span> <span class="o">==</span> <span class="n">b</span> <span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a et b sont égaux&quot;</span><span class="p">)</span>
 </code></pre></div>
 <p>a de grandes chances d'échouer :</p>
 <p>Le script </p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -4818,7 +4818,7 @@ Pour une représentation sur 32 bits (en simple précision),<br />
 <p>Si <em>vraiment</em> un test d'égalité est nécessaire, on ne va pas tester l'égalité entre <code>a</code> et <code>b</code> mais leur <strong>proximité</strong>, grâce à la valeur absolue de leur différence.</p>
 <p>La fonction <code>abs(a-b)</code> renvoie un nombre positif égal à la distance entre <code>a</code> et <code>b</code>. Il faut alors décider d'un écart minimal <code>e</code> en dessous duquel on considèrera que <code>a</code> et <code>b</code> sont égaux.</p>
 <p>Le script </p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mf">0.1</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mf">0.1</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mf">0.3</span><span class="o">-</span><span class="mf">0.2</span>
 <span class="n">e</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">12</span><span class="p">)</span>
 <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">e</span> <span class="p">:</span>
@@ -4830,7 +4830,7 @@ Pour une représentation sur 32 bits (en simple précision),<br />
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>a et b sont égaux
 </code></pre></div></p>
 <p>Par ailleurs la bibliothèque math de Python inclut à cet effet la fonction <code>math.isclose()</code>.
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">isclose</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">isclose</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">isclose</span><span class="p">(</span><span class="mf">0.2</span> <span class="o">+</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">)</span>
 <span class="kc">True</span>
 </code></pre></div></p>

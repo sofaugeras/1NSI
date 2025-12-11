@@ -4587,7 +4587,7 @@
 <p>Une chaîne de caractères est une liste particulière ne contenant que des caractères. Elle est délimitée par des guillemets (simples 'machaine' ou doubles "machaine").</p>
 </div>
 <p>Comme pour une liste, on peut accéder à ses éléments (les caractères) en spécifiant un indice :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">chaine</span> <span class="o">=</span> <span class="s2">&quot;Lycée Saint Sauveur&quot;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">chaine</span> <span class="o">=</span> <span class="s2">&quot;Lycée Saint Sauveur&quot;</span>
 <span class="n">chaine</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </code></pre></div>
 <div class="admonition warning">
@@ -4595,10 +4595,10 @@
 <p>Par contre, il est <strong>impossible</strong> de modifier une chaîne de caractères ! <br />
 On dit alors qu'il s'agit d'une liste <strong>non mutable</strong> :</p>
 </div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">chaine</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span> <span class="s2">&quot;a&quot;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">chaine</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span> <span class="s2">&quot;a&quot;</span>
 </code></pre></div>
 <p>Si vous décidiez de lui ajouter des caractères en fin de chaîne à l'aide d'une concaténation du type suivant :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">chaine</span> <span class="o">=</span> <span class="n">chaine</span><span class="o">+</span><span class="s2">&quot; - Redon&quot;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">chaine</span> <span class="o">=</span> <span class="n">chaine</span><span class="o">+</span><span class="s2">&quot; - Redon&quot;</span>
 <span class="n">chaine</span>
 </code></pre></div>
 <p><strong><em>Remarque</em></strong> : Contrairement aux apparences, la chaine n'a pas été modifiée <em>puisque les chaines sont non mutables</em>, une nouvelle chaine a été crée par <em>concaténation</em> des deux chaines placées autour du signe <strong><em>+</em></strong></p>
@@ -4685,118 +4685,118 @@ On dit alors qu'il s'agit d'une liste <strong>non mutable</strong> :</p>
 <p>Inutile de toutes les connaître. Nous allons voir ici les fonctions les plus utiles.</p>
 <h2 id="couper-et-joindre">Couper et joindre<a class="headerlink" href="#couper-et-joindre" title="Permanent link">⚓︎</a></h2>
 <p>La fonction <strong><em>split()</em></strong> permet de <strong><em>découper</em></strong> la chaîne de caractères qui lui est passée en paramètre suivant un ou des caractère(s) de séparation et renvoie une liste des chaînes découpées. Les caractères de séparation lui sont également passés en paramètre et, si ce n'est pas le cas, ce sera le caractère espace qui sera utilisé :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">chaine</span><span class="o">=</span><span class="s2">&quot;Lycée Saint Sauveur - Redon&quot;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">chaine</span><span class="o">=</span><span class="s2">&quot;Lycée Saint Sauveur - Redon&quot;</span>
 <span class="n">chaine</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">chaine</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">chaine</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
 </code></pre></div>
 <p>L'opération inverse s'appelle <strong><em>join()</em></strong>. Elle consiste a rendre une liste de chaînes de caractères pour former une chaîne en concaténant tous les éléments et en les assemblant à l'aide d'un caractère.</p>
 <p>Cette méthode prend en paramètre une liste de caractères et s'applique à une chaîne de caractères désignant le ou les caractère(s) de liaison :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Lycée Saint Sauveur&#39;</span><span class="p">,</span> <span class="s1">&#39;Redon&#39;</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Lycée Saint Sauveur&#39;</span><span class="p">,</span> <span class="s1">&#39;Redon&#39;</span><span class="p">]</span>
 <span class="s1">&#39; - &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="majuscule-et-minuscule">Majuscule et minuscule<a class="headerlink" href="#majuscule-et-minuscule" title="Permanent link">⚓︎</a></h2>
 <p>Deux autres méthodes standards peuvent être utiles:</p>
 <p><strong><em>lower()</em></strong> et <strong><em>upper()</em></strong> permettant respectivement de convertir les caractères d'une chaîne en minuscules ou en majuscules.<br />
 Attention, bien que parlant de <em>conversion</em>, ces méthodes ne modifient pas la chaîne de départ mais renvoient une nouvelle chaîne :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">chaine</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">chaine</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">chaine</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">chaine</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
 </code></pre></div>
 <p>La fonction <strong><em>capitalize()</em></strong> permet de ne mettre en majuscule que la première lettre d'une chaîne :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">chaine</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">chaine</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
 </code></pre></div>
 <h2 id="rechercher-un-caractere-une-position-etc-dans-une-chaine">rechercher un caractère, une position etc... dans une chaîne.<a class="headerlink" href="#rechercher-un-caractere-une-position-etc-dans-une-chaine" title="Permanent link">⚓︎</a></h2>
 <ul>
 <li>La fonction <strong><em>len()</em></strong> permet, comme pour les listes, de connaîntre la longueur de la chaîne, c'est à dire compter le nombre de caractères.</li>
 </ul>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">chaine</span> <span class="o">=</span> <span class="s2">&quot;Lycée Saint Sauveur&quot;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">chaine</span> <span class="o">=</span> <span class="s2">&quot;Lycée Saint Sauveur&quot;</span>
 <span class="nb">len</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span>
 </code></pre></div>
 <ul>
 <li>La méthode <strong><em>count()</em></strong> permet de compter le nombre d'occurrences d'une sous chaîne dans une chaîne de caractères. <br />
 Le premier paramètre est la chaîne dans laquelle effectuer la recherche et le second paramètre est la sous chaîne :</li>
 </ul>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">chaine</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">chaine</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
 </code></pre></div>
 <ul>
 <li>La méthode <strong><em>find()</em></strong> permet de trouver l'indice de la première occurrence d'une sous chaîne. Les paramètres sont les mêmes que pour la fonction <strong><em>count()</em></strong><br />
 En cas d'échec, <strong><em>find()</em></strong> renvoie la valeur -1 ( 0 correspond à l'indice du premier caractère):
 On utilisera <strong><em>rfind()</em></strong> pour la dernière ocurrence.</li>
 </ul>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">chaine</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">chaine</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">chaine</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">chaine</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">chaine</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">chaine</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
 </code></pre></div>
 <ul>
 <li>index() est identique à find() mais retourne une erreur en cas d'échec</li>
 </ul>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">chaine</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">chaine</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">chaine</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">chaine</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
 </code></pre></div>
 <ul>
 <li>La fonction <strong><em>replace()</em></strong> permet, comme son nom l'indique, de remplacer une sous chaîne par une autre à l'intérieur d'une chaîne de caractères.<br />
 Les paramètres sont, dans l'ordre : la chaîne de caractères à modifier, la sous chaîne à remplacer, la sous chaîne de remplacement,et, éventuellement, le nombre maximum d'occurrences à remplacer (si non spécifié, toutes les occurrences seront remplacées).</li>
 </ul>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">chaine</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;@&#39;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">chaine</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;@&#39;</span><span class="p">)</span>
 </code></pre></div>
 <p>et bien sûr, la variable <em>chaine</em> n'est pas modifiée, c'est une nouvelle chaine qui est renvoyée par cette méthode !</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">chaine</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">chaine</span>
 </code></pre></div>
 <h2 id="conversion-chaine-nombres">Conversion chaîne &lt;-&gt; nombres<a class="headerlink" href="#conversion-chaine-nombres" title="Permanent link">⚓︎</a></h2>
 <p>Il ne faut pas confondre les objets 12 et "12". Le premier désigne un nombre, le second est une chaîne de caractère. Les comportements et les opérations sont différents.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="mi">12</span> <span class="o">==</span> <span class="s2">&quot;12&quot;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="mi">12</span> <span class="o">==</span> <span class="s2">&quot;12&quot;</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="mi">12</span><span class="o">+</span><span class="mi">1</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="mi">12</span><span class="o">+</span><span class="mi">1</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="s2">&quot;12&quot;</span><span class="o">+</span><span class="s2">&quot;1&quot;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="s2">&quot;12&quot;</span><span class="o">+</span><span class="s2">&quot;1&quot;</span>
 </code></pre></div>
 <p>Il peut être néanmoins possible de convertir un nombre en chaîne et réciproquement comme on va le voir sur les exemples ci-dessous</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="nb">int</span><span class="p">(</span><span class="s2">&quot;12&quot;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="nb">int</span><span class="p">(</span><span class="s2">&quot;12&quot;</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="nb">str</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="nb">str</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
 </code></pre></div>
 <h2 id="comparaison-de-chaines-de-caracteres">Comparaison de chaînes de caractères<a class="headerlink" href="#comparaison-de-chaines-de-caracteres" title="Permanent link">⚓︎</a></h2>
 <p>De même qu'il est possible de comparer deux nombres, on peut aussi comparer des chaines par rapport à l'ordre lexicographique :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="s2">&quot;a&quot;</span><span class="o">&lt;</span><span class="s2">&quot;b&quot;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="s2">&quot;a&quot;</span><span class="o">&lt;</span><span class="s2">&quot;b&quot;</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="s2">&quot;a&quot;</span><span class="o">&lt;=</span><span class="s2">&quot;r&quot;</span><span class="o">&lt;=</span><span class="s2">&quot;z&quot;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="s2">&quot;a&quot;</span><span class="o">&lt;=</span><span class="s2">&quot;r&quot;</span><span class="o">&lt;=</span><span class="s2">&quot;z&quot;</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="s2">&quot;a&quot;</span><span class="o">&lt;=</span><span class="s2">&quot;R&quot;</span><span class="o">&lt;=</span><span class="s2">&quot;z&quot;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="s2">&quot;a&quot;</span><span class="o">&lt;=</span><span class="s2">&quot;R&quot;</span><span class="o">&lt;=</span><span class="s2">&quot;z&quot;</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="s2">&quot;toto&quot;</span><span class="o">&lt;</span><span class="s2">&quot;titi&quot;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="s2">&quot;toto&quot;</span><span class="o">&lt;</span><span class="s2">&quot;titi&quot;</span>
 </code></pre></div>
 <h2 id="tranches-de-chaines">Tranches de chaînes<a class="headerlink" href="#tranches-de-chaines" title="Permanent link">⚓︎</a></h2>
 <p>Le tranchage (<em>slicing</em>) fonctionne exactement comme pour les listes. Observez les exemples suivants.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">chaine</span> <span class="o">=</span> <span class="s2">&quot;Lycée Saint Sauveur&quot;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">chaine</span> <span class="o">=</span> <span class="s2">&quot;Lycée Saint Sauveur&quot;</span>
 <span class="c1"># obtenir la fin d&#39;une chaîne</span>
 <span class="n">chaine</span><span class="p">[</span><span class="mi">6</span><span class="p">:]</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># obtenir le début d&#39;une chaîne</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># obtenir le début d&#39;une chaîne</span>
 <span class="n">chaine</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># Un intervalle</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># Un intervalle</span>
 <span class="n">chaine</span><span class="p">[</span><span class="mi">6</span><span class="p">:</span><span class="mi">14</span><span class="p">]</span>
 </code></pre></div>
 <p>Et avec des index négatifs ...</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">chaine</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">chaine</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">chaine</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">chaine</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># ce dernier exemple est très pratique pour renverser un itérable</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># ce dernier exemple est très pratique pour renverser un itérable</span>
 <span class="n">chaine</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </code></pre></div>
 <h2 id="parcourir-une-chaine-de-caracteres">Parcourir une chaîne de caractères<a class="headerlink" href="#parcourir-une-chaine-de-caracteres" title="Permanent link">⚓︎</a></h2>
 <p>Une chaîne de raractère en Python rentre dans la catégorie des <em>itérables</em> au même titre que les listes. On retrouve donc les deux modes de parcours déjà rencontrés sur les listes, à savoir :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># Le parcours caractères par caractères :</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># Le parcours caractères par caractères :</span>
 <span class="n">chaine</span> <span class="o">=</span> <span class="s2">&quot;NSI&quot;</span>
 <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">chaine</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># Le parcours par indice</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># Le parcours par indice</span>
 <span class="n">chaine</span> <span class="o">=</span> <span class="s2">&quot;NSI&quot;</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">chaine</span><span class="p">)):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>

@@ -419,8 +419,34 @@ L'instruction `del`  (qui n'est pas une fonction) permet de supprimer un éléme
 
 
 !!! example "exercice 9"
-    === "Énoncé"
-        [Exercice](https://sofaugeras.github.io/TNSI/T6_6_Epreuve_pratique/BNS_2022/#exercice-361) de la BNS.
+    === "Énoncé" 
+        Programmer la fonction `verifie` qui prend en paramètre un tableau de valeurs numériques non
+        vide et qui renvoie `True` si ce tableau est trié dans l’ordre croissant, `False` sinon.
+
+        Exemples :
+
+        ```python
+        Exemples :
+        >>> verifie([0, 5, 8, 8, 9])
+        True
+        >>> verifie([8, 12, 4])
+        False
+        >>> verifie([-1, 4])
+        True
+        >>> verifie([5])
+        True
+        ```
+
+    === "Correction"
+
+        ```python linenums='1'
+        def verifie(tab):
+            for i in range(1, len(tab)):
+                if tab[i] < tab[i-1]:
+                    return False
+            return True
+
+        ```
     
         
 

@@ -4610,25 +4610,25 @@ Pour rappel :</p>
 <li>Justement son caractère protégé : jamais une portion de code ne pourra venir modifier les informations contenues dans le tuple. </li>
 <li>L'utilisation des tuples est économe en ressources-système par rapport à une liste (en particulier, parce que sa taille est fixe).</li>
 </ul>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">monPremierTuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">monPremierTuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
 </code></pre></div>
 <p>Un tuple se différencie d'une liste par l'utilisation des parenthèses au lieu des crochets.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">monPremierTuple</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">monPremierTuple</span><span class="p">)</span>
 <span class="nb">tuple</span>
 </code></pre></div>
 <p>À noter qu'un tuple peut être déclaré sans parenthèses. C'est toutefois à éviter.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">taille</span> <span class="o">=</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">800</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">taille</span> <span class="o">=</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">800</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">taille</span><span class="p">)</span>
 <span class="nb">tuple</span>
 </code></pre></div>
 <h2 id="2-acces-aux-elements-dun-tuple">2. Accès aux éléments d'un tuple<a class="headerlink" href="#2-acces-aux-elements-dun-tuple" title="Permanent link">⚓︎</a></h2>
 <p>Comme pour une liste ou une chaîne de caractère, l'accès se fait par un indice entre <strong>crochets</strong>.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="mi">12</span>
 </code></pre></div>
 <h2 id="3-tentative-de-modification-dun-tuple">3. Tentative de modification d'un tuple<a class="headerlink" href="#3-tentative-de-modification-dun-tuple" title="Permanent link">⚓︎</a></h2>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">4</span>
     <span class="o">---------------------------------------------------------------------------</span>
     <span class="ne">TypeError</span>                                 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
 
@@ -4641,21 +4641,21 @@ Pour rappel :</p>
 <h2 id="4-parcours-dun-tuple">4. Parcours d'un tuple<a class="headerlink" href="#4-parcours-dun-tuple" title="Permanent link">⚓︎</a></h2>
 <p>On retrouve bien évidemment les deux méthodes utilisables pour les listes :</p>
 <h3 id="41-parcours-par-indice">4.1 Parcours par indice<a class="headerlink" href="#41-parcours-par-indice" title="Permanent link">⚓︎</a></h3>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">)):</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">k</span><span class="p">])</span>
 <span class="mi">12</span>
 <span class="mi">25</span>
 <span class="mi">6</span>
 </code></pre></div>
 <h3 id="41-parcours-par-element">4.1 Parcours par élément<a class="headerlink" href="#41-parcours-par-element" title="Permanent link">⚓︎</a></h3>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">a</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">a</span> <span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
 <span class="mi">12</span>
 <span class="mi">25</span>
 <span class="mi">6</span>
 </code></pre></div>
 <h2 id="5-construction-dune-fonction-renvoyant-un-tuple">5. Construction d'une fonction renvoyant un tuple<a class="headerlink" href="#5-construction-dune-fonction-renvoyant-un-tuple" title="Permanent link">⚓︎</a></h2>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -4665,7 +4665,7 @@ Pour rappel :</p>
     <span class="n">r</span> <span class="o">=</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">division</span><span class="p">(</span><span class="mi">49</span><span class="p">,</span><span class="mi">12</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">division</span><span class="p">(</span><span class="mi">49</span><span class="p">,</span><span class="mi">12</span><span class="p">)</span>
 <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="6-exercice">6. Exercice<a class="headerlink" href="#6-exercice" title="Permanent link">⚓︎</a></h3>
@@ -4677,14 +4677,14 @@ Pour rappel :</p>
 <p>On considère deux points A et B d'un repère quelconque. Leurs coordonnées sont des tuples à deux éléments.
 Écrire une fonction qui prend en argument les coordonnées de deux points et qui renvoie le milieu de ces deux points.</p>
 <p>La fonction doit fonctionner de cette manière :
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">C</span> <span class="o">=</span> <span class="p">(</span><span class="mi">45</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">C</span> <span class="o">=</span> <span class="p">(</span><span class="mi">45</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">D</span> <span class="o">=</span> <span class="p">(</span><span class="mi">49</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">milieu</span><span class="p">(</span><span class="n">C</span><span class="p">,</span><span class="n">D</span><span class="p">)</span>
 <span class="p">(</span><span class="mi">47</span><span class="p">,</span> <span class="mi">22</span><span class="p">)</span>
 </code></pre></div></p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">milieu</span><span class="p">(</span><span class="n">point1</span><span class="p">,</span> <span class="n">point2</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">milieu</span><span class="p">(</span><span class="n">point1</span><span class="p">,</span> <span class="n">point2</span><span class="p">):</span>
     <span class="n">abscisse</span> <span class="o">=</span> <span class="p">(</span><span class="n">point1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">point2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
     <span class="n">ordonnee</span> <span class="o">=</span> <span class="p">(</span><span class="n">point1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">point2</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">abscisse</span><span class="p">,</span> <span class="n">ordonnee</span><span class="p">)</span>

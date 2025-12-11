@@ -4548,7 +4548,7 @@
 <p>La résolution de ce problème peut se faire de manière gloutonne : à chaque étape, vous allez essayer de rendre la plus grosse pièce (ou billet) possible.</p>
 <details class="tips">
 <summary>Solution du problème</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">rendu</span><span class="p">(</span><span class="n">somme_a_rendre</span><span class="p">,</span><span class="n">pieces</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">rendu</span><span class="p">(</span><span class="n">somme_a_rendre</span><span class="p">,</span><span class="n">pieces</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Rend la somme donnée en utilisant le moins de pièces possible.</span>
 <span class="sd">    @param : somme_a_rendre (int): La somme à rendre en utilisant les pièces disponibles.</span>
@@ -4580,7 +4580,7 @@
 <h3 id="une-solution-optimale">Une solution optimale ?<a class="headerlink" href="#une-solution-optimale" title="Permanent link">⚓︎</a></h3>
 <p>Imaginons qu'il n'y ait plus de pièces de 10 et 5 euros. 
 Faites fonctionner votre algorithme pour la somme de 63 euros.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">P</span>  <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">P</span>  <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">]</span>
 
 <span class="k">assert</span> <span class="n">rendu</span><span class="p">(</span><span class="mi">63</span><span class="p">,</span><span class="n">P</span><span class="p">)</span> <span class="o">==</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 </code></pre></div>

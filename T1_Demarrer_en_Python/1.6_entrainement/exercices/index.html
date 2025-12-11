@@ -4477,7 +4477,7 @@
 <p>Ecrire un programme qui simule le lancer de 1000 dés et qui affiche la moyenne des résultats obtenus.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
@@ -4499,7 +4499,7 @@
 Remarque : il est interdit d'utiliser <code>**</code> ici! </p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Veuillez saisir la valeurs de a (la base) : &quot;</span><span class="p">))</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Veuillez saisir la valeurs de a (la base) : &quot;</span><span class="p">))</span>
 <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Veuillez saisir la valeur de n (l&#39;exponsant) : &quot;</span><span class="p">))</span>
 <span class="n">puissance</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -4517,12 +4517,12 @@ Remarque : il est interdit d'utiliser <code>**</code> ici! </p>
 <div class="tabbed-block">
 <p>Ecrire une fonction <code>aire</code> qui prend deux paramètres : la longueur d'un rectangle et sa largeur, et qui renvoie l'aire du rectangle correpondant.<br>
 Tester ensuite cette fonction en utilisant les deux <code> assert()</code> suivants.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">assert</span><span class="p">(</span><span class="n">aire</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">15</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">assert</span><span class="p">(</span><span class="n">aire</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mi">15</span><span class="p">)</span>
 <span class="k">assert</span><span class="p">(</span><span class="n">aire</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">aire</span><span class="p">(</span><span class="n">longueur</span><span class="p">,</span><span class="n">largeur</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">aire</span><span class="p">(</span><span class="n">longueur</span><span class="p">,</span><span class="n">largeur</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">longueur</span> <span class="o">*</span> <span class="n">largeur</span>
 </code></pre></div>
 </div>
@@ -4540,14 +4540,14 @@ Par exemple l'appel <code>rectangle(2,5,'A')</code> devra afficher :<br>
 AAAAA<br>
 AAAAA<br>
 Tester ensuite votre fonction avec divers appels.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">rectangle</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>   <span class="c1"># appel en respectant l&#39;ordre des paramètres</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">rectangle</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>   <span class="c1"># appel en respectant l&#39;ordre des paramètres</span>
 <span class="nb">print</span><span class="p">()</span>   <span class="c1"># ligne vide séparatrice</span>
 <span class="n">rectangle</span><span class="p">(</span><span class="n">caractère</span> <span class="o">=</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span><span class="n">nbLignes</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span><span class="n">nbColonnes</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>  <span class="c1"># appel sans respecter l&#39;ordre des paramètres</span>
 </code></pre></div>
 <p><strong>Remarque</strong> : En Python, il est possible de ne pas respecter l'ordre des paramètres d'une fonction lors de son appel. Dans ce cas, il faut préciser le rôle des paramètres comme par exemple : <code>rectangle( nbColonnes = 4, caractère = '+', nbLignes = 7)</code></p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">rectangle</span><span class="p">(</span><span class="n">nbLignes</span><span class="p">,</span><span class="n">nbColonnes</span><span class="p">,</span><span class="n">caractère</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">rectangle</span><span class="p">(</span><span class="n">nbLignes</span><span class="p">,</span><span class="n">nbColonnes</span><span class="p">,</span><span class="n">caractère</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbLignes</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">colonne</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbColonnes</span><span class="p">):</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">caractère</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
@@ -4567,7 +4567,7 @@ Indiquer la valeur 0 comme valeur par défaut pour le nombre d'heures, le nombre
 Tester ensuite cette fonction avec zéro, un, deux et trois paramètres.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">nbSecondes</span><span class="p">(</span><span class="n">heures</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">minutes</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">secondes</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">nbSecondes</span><span class="p">(</span><span class="n">heures</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">minutes</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">secondes</span> <span class="o">=</span> <span class="mi">0</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">heures</span> <span class="o">*</span> <span class="mi">3600</span> <span class="o">+</span> <span class="n">minutes</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">+</span> <span class="n">secondes</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">nbSecondes</span><span class="p">())</span>
@@ -4589,7 +4589,7 @@ Votre fonction ne doit utiliser ni des conditions imbriquées ni <code>else</cod
 <u>remarque : </u> vous pouvez effectuer une recherche sur la façon de <em>calculer</em> une année bissextile.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">bissextile</span><span class="p">(</span><span class="n">année</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">bissextile</span><span class="p">(</span><span class="n">année</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">année</span> <span class="o">%</span> <span class="mi">400</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">True</span>
     <span class="k">if</span> <span class="n">année</span> <span class="o">%</span> <span class="mi">100</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -4611,7 +4611,7 @@ Votre fonction ne doit utiliser ni des conditions imbriquées ni <code>else</cod
 
 <p>La bibliothèque <strong>turtle</strong> permet de dessiner à l'écran.<br>
 Le petit programme commenté ci-dessous permet d'obtenir un tracé intéressant :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>      <span class="c1"># On importe la bibliothèque turtle</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>      <span class="c1"># On importe la bibliothèque turtle</span>
 
 <span class="n">speed</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>                 <span class="c1"># On règle la vitesse du tracé (un entier compris entre 1 et 10)</span>
 <span class="n">color</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">)</span>    <span class="c1"># On fixe la couleur du tracé à &#39;rouge&#39; et la couleur de rempissage à &#39;jaune&#39;</span>
@@ -4656,7 +4656,7 @@ Le petit programme commenté ci-dessous permet d'obtenir un tracé intéressant 
 <p>Ecrire un programme qui utilise une boucle <code>for</code> pour tracer un carré de côté 100 pixels, avec un contour bleu et colorié en vert.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">color</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">)</span> 
 <span class="n">begin_fill</span><span class="p">()</span>
@@ -4679,7 +4679,7 @@ Le petit programme commenté ci-dessous permet d'obtenir un tracé intéressant 
 Choisir une couleur de tracé et une couleur de remplissage.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">color</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;pink&#39;</span><span class="p">)</span> 
 <span class="n">speed</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -4701,7 +4701,7 @@ Choisir une couleur de tracé et une couleur de remplissage.</p>
 <p>Dessiner le drapeau de la France avec Turtle.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">turtle</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="n">color</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">)</span> 
 <span class="n">begin_fill</span><span class="p">()</span>

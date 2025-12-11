@@ -4583,7 +4583,7 @@
 <p><img alt="image" class="center" src="../data/BO.png" /></p>
 <p>Nous reprenons notre fichier de joueurs de rugby du <a href="../../6.1_Manipulation_csv/data/top14.csv">Top14</a>. </p>
 <p>🔽 Télécharger le notebook de cours correspondant <a href="../data/02_Trier_des_donnees.zip">ici</a></p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">csv</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">csv</span>
 <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data/top14.csv&#39;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
 <span class="n">donnees</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 <span class="n">joueurs</span> <span class="o">=</span> <span class="p">[]</span>
@@ -4598,7 +4598,7 @@ Le paramètre <code>equipe</code> sera donnée sous forme de chaîne de caractè
 La valeur renvoyée sera de type <code>liste de dictionnaire</code>.</p>
 <details class="tip">
 <summary>réponse</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">joueursEquipe</span><span class="p">(</span><span class="n">equipe</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">joueursEquipe</span><span class="p">(</span><span class="n">equipe</span><span class="p">):</span>
     <span class="n">lst_joueurs</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="p">:</span>
         <span class="k">if</span> <span class="n">j</span><span class="p">[</span><span class="s1">&#39;Equipe&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">equipe</span> <span class="p">:</span>
@@ -4612,7 +4612,7 @@ La valeur renvoyée sera de type <code>liste de dictionnaire</code>.</p>
 La valeur renvoyée sera de type <code>liste</code>.</p>
 <details class="tip">
 <summary>réponse</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">joueursPoste</span><span class="p">(</span><span class="n">poste</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">joueursPoste</span><span class="p">(</span><span class="n">poste</span><span class="p">):</span>
     <span class="n">lst_joueurs</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="p">:</span>
         <span class="k">if</span> <span class="n">j</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">poste</span> <span class="p">:</span>
@@ -4625,7 +4625,7 @@ La valeur renvoyée sera de type <code>liste</code>.</p>
 <h3 id="le-probleme">Le problème<a class="headerlink" href="#le-probleme" title="Permanent link">⚓︎</a></h3>
 <p>Comment classer les joueurs suivant leur taille ? <br />
 La fonction <code>sorted(liste)</code> est efficace sur les listes : elle renvoie une nouvelle liste triée dans l'ordre croissant.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">mylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">mylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">mynewlist</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">mylist</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">mynewlist</span><span class="p">)</span>
   <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
@@ -4636,7 +4636,7 @@ La fonction <code>sorted(liste)</code> est efficace sur les listes : elle renvoi
 Source : <a href="https://docs.python.org/fr/3/howto/sorting.html">doc python</a></p>
 </div>
 <p><strong>Mais comment trier un dictionnaire ?</strong></p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">test</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">joueurs</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">test</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">joueurs</span><span class="p">)</span>
     <span class="o">---------------------------------------------------------------------------</span>
 
     <span class="ne">TypeError</span>                                 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
@@ -4652,14 +4652,14 @@ Ici, plusieurs clés peuvent être des critères de tri : la taille, le poids.</
 <h3 id="un-exemple-de-tri-de-dictionnaire">Un exemple de tri de dictionnaire<a class="headerlink" href="#un-exemple-de-tri-de-dictionnaire" title="Permanent link">⚓︎</a></h3>
 <p>Prenons un nouveau jeu de données, contenant les informations sur la série Simpson.<br />
 Simpsons est de type <code>Liste de dictionnaires</code>.</p>
-<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">Simpsons</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;Prenom&quot;</span> <span class="p">:</span> <span class="s2">&quot;Bart&quot;</span><span class="p">,</span> <span class="s2">&quot;age estimé&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">},</span>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">Simpsons</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;Prenom&quot;</span> <span class="p">:</span> <span class="s2">&quot;Bart&quot;</span><span class="p">,</span> <span class="s2">&quot;age estimé&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">},</span>
            <span class="p">{</span><span class="s2">&quot;Prenom&quot;</span> <span class="p">:</span> <span class="s2">&quot;Lisa&quot;</span><span class="p">,</span> <span class="s2">&quot;age estimé&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">},</span>
            <span class="p">{</span><span class="s2">&quot;Prenom&quot;</span> <span class="p">:</span> <span class="s2">&quot;Maggie&quot;</span><span class="p">,</span> <span class="s2">&quot;age estimé&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">},</span>
            <span class="p">{</span><span class="s2">&quot;Prenom&quot;</span> <span class="p">:</span> <span class="s2">&quot;Homer&quot;</span><span class="p">,</span> <span class="s2">&quot;age estimé&quot;</span><span class="p">:</span> <span class="s2">&quot;38&quot;</span><span class="p">},</span>
            <span class="p">{</span><span class="s2">&quot;Prenom&quot;</span> <span class="p">:</span> <span class="s2">&quot;Marge&quot;</span><span class="p">,</span> <span class="s2">&quot;age estimé&quot;</span><span class="p">:</span> <span class="s2">&quot;37&quot;</span><span class="p">}]</span>
 </code></pre></div>
 On définit une fonction <code>age</code> permettant de renvoyer l'age estimé d'un personnage passé en paramètre.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">age</span><span class="p">(</span><span class="n">personnage</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">age</span><span class="p">(</span><span class="n">personnage</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">personnage</span><span class="p">[</span><span class="s2">&quot;age estimé&quot;</span><span class="p">])</span>
 <span class="n">age</span><span class="p">(</span><span class="n">Simpsons</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span>
@@ -4667,7 +4667,7 @@ On définit une fonction <code>age</code> permettant de renvoyer l'age estimé d
 <p>La création de cette fonction <code>age()</code> va nous permettre de spécifier une <strong>clé de tri</strong>, par le paramètre <code>key</code> de la fonction <code>sorted</code> (voir <a href="https://docs.python.org/fr/3/howto/sorting.html">doc Python</a> ) :</p>
 <div class="admonition note">
 <p class="admonition-title">Tri d'un dictionnaire <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
-<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">triSimpsons</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">Simpsons</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">age</span><span class="p">)</span>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">triSimpsons</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">Simpsons</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">age</span><span class="p">)</span>
 
 <span class="n">triSimpsons</span>
 <span class="o">&gt;&gt;&gt;</span><span class="p">[{</span><span class="s1">&#39;Prenom&#39;</span><span class="p">:</span> <span class="s1">&#39;Maggie&#39;</span><span class="p">,</span> <span class="s1">&#39;age estimé&#39;</span><span class="p">:</span> <span class="s1">&#39;1&#39;</span><span class="p">},</span>
@@ -4677,7 +4677,7 @@ On définit une fonction <code>age</code> permettant de renvoyer l'age estimé d
     <span class="p">{</span><span class="s1">&#39;Prenom&#39;</span><span class="p">:</span> <span class="s1">&#39;Homer&#39;</span><span class="p">,</span> <span class="s1">&#39;age estimé&#39;</span><span class="p">:</span> <span class="s1">&#39;38&#39;</span><span class="p">}]</span>
 </code></pre></div>
 On peut aussi inverser l'ordre de tri en précision le sens de tri :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">triSimpsons</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">Simpsons</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">age</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">triSimpsons</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">Simpsons</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">age</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 <span class="n">triSimpsons</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="p">[{</span><span class="s1">&#39;Prenom&#39;</span><span class="p">:</span> <span class="s1">&#39;Homer&#39;</span><span class="p">,</span> <span class="s1">&#39;age estimé&#39;</span><span class="p">:</span> <span class="s1">&#39;38&#39;</span><span class="p">},</span>
     <span class="p">{</span><span class="s1">&#39;Prenom&#39;</span><span class="p">:</span> <span class="s1">&#39;Marge&#39;</span><span class="p">,</span> <span class="s1">&#39;age estimé&#39;</span><span class="p">:</span> <span class="s1">&#39;37&#39;</span><span class="p">},</span>
@@ -4726,7 +4726,7 @@ joueursUBB_tri = sorted(joueursUBB, key = IMC)
 $$ d = (p_1-p_2)^2 + (t_1-t_2)^2$$</p>
 <details class="tip">
 <summary>réponse</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">joueur1</span><span class="p">,</span><span class="n">joueur2</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">joueur1</span><span class="p">,</span><span class="n">joueur2</span><span class="p">):</span>
     <span class="n">p1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">joueur1</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span>
     <span class="n">p2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">joueur2</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span>
     <span class="n">t1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">joueur1</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">])</span>
@@ -4738,7 +4738,7 @@ $$ d = (p_1-p_2)^2 + (t_1-t_2)^2$$</p>
 <p>Retrouvons d'abord le numéro de Baptiste Serin dans notre classement de joueurs :</p>
 <details class="tip">
 <summary>réponse</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">joueurs</span><span class="p">))</span> <span class="p">:</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">joueurs</span><span class="p">))</span> <span class="p">:</span>
     <span class="k">if</span> <span class="n">joueurs</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="s1">&#39;Nom&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Baptiste SERIN&#39;</span> <span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="mi">530</span>
@@ -4754,7 +4754,7 @@ $$ d = (p_1-p_2)^2 + (t_1-t_2)^2$$</p>
 <p>Nous pouvons maintenant classer les joueurs suivant leur distance morphologique à Baptiste  SERIN :</p>
 <details class="tip">
 <summary>réponse</summary>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">distanceSerin</span><span class="p">(</span><span class="n">joueur2</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">distanceSerin</span><span class="p">(</span><span class="n">joueur2</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">distance</span><span class="p">(</span><span class="n">joueurs</span><span class="p">[</span><span class="mi">530</span><span class="p">],</span><span class="n">joueur2</span><span class="p">)</span>
 <span class="n">distanceSerin</span><span class="p">(</span><span class="n">joueurs</span><span class="p">[</span><span class="mi">530</span><span class="p">])</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="mi">0</span>

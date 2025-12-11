@@ -4475,7 +4475,7 @@
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Écrire une fonction <strong>nb_chiffres</strong> qui prend en paramètre une chaîne de caractère et qui renvoie le nombre de chiffres contenus dans la chaîne</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">nb_chiffres</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">nb_chiffres</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
     <span class="n">compteurb</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="c1">#Parcours de la chaine de caractères</span>
         <span class="c1">#Si je rencontre un chiffre</span>
@@ -4485,12 +4485,12 @@
 
 <span class="nb">print</span><span class="p">(</span><span class="n">nb_chiffres</span><span class="p">(</span><span class="s1">&#39;rb&#39;</span><span class="p">))</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">chaine</span> <span class="o">=</span> <span class="s2">&quot;Lycée Saint Sauveur - 35600 Redon&quot;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">chaine</span> <span class="o">=</span> <span class="s2">&quot;Lycée Saint Sauveur - 35600 Redon&quot;</span>
 <span class="k">assert</span> <span class="n">nb_chiffres</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span><span class="o">==</span><span class="mi">5</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">nb_chiffres</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">nb_chiffres</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
     <span class="n">cpt</span> <span class="o">=</span><span class="mi">0</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">chaine</span><span class="p">)):</span>
         <span class="k">if</span> <span class="n">chaine</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="s2">&quot;0123456789&quot;</span><span class="p">:</span>
@@ -4509,18 +4509,18 @@
 <p>Écrire une fonction <strong>is_email</strong> qui prend en paramètre une chaîne de caractère et renvoie True si celle-ci est une adresse mail. On va simplifier en considérant qu'on a une adresse email si la chaîne possède les 2 propriétés suivantes : 
 - Un seul caractère @
 - Un seul caractère .(point) après @.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">is_email</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">is_email</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
     <span class="c1"># YOUR CODE HERE</span>
 
     <span class="k">return</span> 
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">assert</span> <span class="n">is_email</span><span class="p">(</span><span class="s2">&quot;olivier.lecluse@monfai.com&quot;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">assert</span> <span class="n">is_email</span><span class="p">(</span><span class="s2">&quot;olivier.lecluse@monfai.com&quot;</span><span class="p">)</span>
 <span class="k">assert</span> <span class="ow">not</span> <span class="n">is_email</span><span class="p">(</span><span class="s2">&quot;olivier.lecluse_AT_monfai.com&quot;</span><span class="p">)</span>
 <span class="k">assert</span> <span class="ow">not</span> <span class="n">is_email</span><span class="p">(</span><span class="s2">&quot;olivier.lecluse@monfai&quot;</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">is_email</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">is_email</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">chaine</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;@&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span>
         <span class="n">placeArobase</span> <span class="o">=</span> <span class="n">chaine</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;@&#39;</span><span class="p">)</span>
         <span class="n">compteurPoint</span> <span class="o">=</span> <span class="mi">0</span>
@@ -4533,7 +4533,7 @@
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">is_email</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">is_email</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">chaine</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;@&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span>
         <span class="n">index</span> <span class="o">=</span> <span class="n">chaine</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;@&#39;</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">chaine</span><span class="p">[</span><span class="n">index</span><span class="p">:]</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">:</span>
@@ -4550,15 +4550,15 @@
 <div class="tabbed-block">
 <p>Un nombre est un palindrome s'il s'écrit de la même manière de gauche à droite ou de droite à gauche. Exemple : 12521.<br />
 Ecrire une fonction <strong>est_palindrome</strong> prenant en paramètre un nombre et renvoyant <strong><em>True</em></strong> ou <strong><em>False</em></strong> selon que c'est un palindrom ou non.</p>
-<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">est_palindrome</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">est_palindrome</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="c1"># YOUR CODE HERE</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">assert</span> <span class="n">est_palindrome</span><span class="p">(</span><span class="mi">12521</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">assert</span> <span class="n">est_palindrome</span><span class="p">(</span><span class="mi">12521</span><span class="p">)</span>
 <span class="k">assert</span> <span class="ow">not</span> <span class="n">est_palindrome</span><span class="p">(</span><span class="mi">12520</span><span class="p">)</span>
 </code></pre></div></p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">est_palindrome</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">est_palindrome</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">chaine</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">chaine</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">chaine</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">chaine</span><span class="p">)</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="p">:</span>
@@ -4579,14 +4579,14 @@ Ecrire une fonction <strong>est_palindrome</strong> prenant en paramètre un nom
 <div class="tabbed-block">
 <p>Ecrire une fonction <strong>somme_chiffres</strong> prenant un entier en paramètre et renvoyant la somme des chiffres de ce nombre.<br />
 somme_chiffres(125) renvoie 8 puisque 1+2+5=8</p>
-<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">somme_chiffres</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">somme_chiffres</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="c1"># YOUR CODE HERE</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">assert</span> <span class="n">somme_chiffres</span><span class="p">(</span><span class="mi">125</span><span class="p">)</span><span class="o">==</span><span class="mi">8</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">assert</span> <span class="n">somme_chiffres</span><span class="p">(</span><span class="mi">125</span><span class="p">)</span><span class="o">==</span><span class="mi">8</span>
 </code></pre></div></p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">somme_chiffres</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">somme_chiffres</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">somme</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">ch</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ch</span><span class="p">)):</span>

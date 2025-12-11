@@ -4627,7 +4627,7 @@
 <p>Ce docstring, peut être lu en tapant en console : 
 <code>nom_de_ma_fonction.__doc__</code> (deux underscores de chaque côté). </p>
 <p>Exemple :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">mettre_au_carre</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">mettre_au_carre</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;renvoie le carré de x</span>
 
 <span class="sd">    Paramètres d’entrée : x -&gt; (int, float ou decimal) : un nombre quelconque</span>
@@ -4650,7 +4650,7 @@
 <div class="tabbed-block">
 <p>La mesure d'un angle peut être donnée en degrés ou en radian. L'unité de calcul naturelle pour les angles est le radian. La bibliothèque math ne sait donc calculer le cosinus que d'un angle donné en radian. <code>ma_fontion1</code>, convertit des degrés en radians car <strong>pi</strong> radians correspondent à 180°. <br />
 <img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> Modifier les noms des fonctions, variables et créez la docstring selon les normes énoncées plus haut.</p>
-<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code>    <span class="c1"># import math</span>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code>    <span class="c1"># import math</span>
     <span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span><span class="p">,</span><span class="n">cos</span>
     <span class="k">def</span> <span class="nf">ma_fonction1</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
         <span class="k">return</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">)</span>
@@ -4662,7 +4662,7 @@ Petite remarque, on a importé le module math de la bibliothèque standard (la b
 J importe uniquement ce que je vais utiliser. Les fonctions sont chargées en mémoire et donc directement connues dans mon programme (je tape <code>cos</code> directement, plus <code>math.cos</code>). </p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">cos</span><span class="p">,</span> <span class="n">pi</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">cos</span><span class="p">,</span> <span class="n">pi</span>
 
 <span class="k">def</span> <span class="nf">conversion_degre_radian</span><span class="p">(</span><span class="n">angle</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;renvoie la conversion des données en radians</span>
@@ -4692,12 +4692,12 @@ J importe uniquement ce que je vais utiliser. Les fonctions sont chargées en m�
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Comprendre ce que fait le code suivant et corriger tous les problèmes de spécification.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">fonction</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">fonction</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
     <span class="k">return</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="n">b</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">pourcentage</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">pourcentage</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    renvoie le pourcentage de a par rapport à b</span>
 <span class="sd">    Paramètres d&#39;entrée : </span>
@@ -4719,7 +4719,7 @@ J importe uniquement ce que je vais utiliser. Les fonctions sont chargées en m�
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Comprendre ce que fait le code suivant et corriger tous les problèmes de spécification</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">fonction1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">fonction1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">):</span>
     <span class="k">return</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="o">+</span><span class="n">d</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">fonction2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">):</span>
@@ -4727,7 +4727,7 @@ J importe uniquement ce que je vais utiliser. Les fonctions sont chargées en m�
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">addition</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">addition</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;renvoie l&#39;addition des 4 paramètres</span>
 <span class="sd">    Paramètres d&#39;entrée : </span>
 <span class="sd">        a,b,c,d -&gt; int ou decimal : valeur à additionner</span>
@@ -4757,7 +4757,7 @@ J importe uniquement ce que je vais utiliser. Les fonctions sont chargées en m�
 <p>Comprendre ce que fait le code suivant et corriger tous les problèmes de spécification.<br />
 Que dois-je taper pour avoir l'aire d'un rectangle de côté 3 et 4, agrandit 10 fois? <br />
 Que dois-je taper pour que le programme affiche le volume d'un pavé droit de mesure 5 ; 7 ; 6 cm, agrandit 3 fois?</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
 
 <span class="k">def</span> <span class="nf">fonction1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
     <span class="n">coefficient</span><span class="o">=</span><span class="mi">10</span>
@@ -4770,7 +4770,7 @@ Que dois-je taper pour que le programme affiche le volume d'un pavé droit de me
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">aire</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">aire</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;renvoie l&#39;aire d&#39;un rectangle dont les 2 côtés adjacents sont passés en paramètres</span>
 <span class="sd">    Paramètres d&#39;entrée : </span>
 <span class="sd">        a -&gt; int ou decimal : côté</span>
@@ -4804,7 +4804,7 @@ Que dois-je taper pour que le programme affiche le volume d'un pavé droit de me
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Comprendre ce que fait le code suivant et corriger tous les problèmes de spécification</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">fonction1</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">fonction1</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1 - jouer à la bataille navale&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2 - jouer au puissance 4&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3 - quitter&quot;</span><span class="p">)</span>
@@ -4815,7 +4815,7 @@ Que dois-je taper pour que le programme affiche le volume d'un pavé droit de me
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">console_jeu_choix</span><span class="p">():</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">console_jeu_choix</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Fonction de menu de la console de jeu</span>
 <span class="sd">    Paramètres d&#39;entrée : none</span>
 <span class="sd">    Paramètres de sortie : retourne --&gt; choix</span>
@@ -4839,7 +4839,7 @@ Que dois-je taper pour que le programme affiche le volume d'un pavé droit de me
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Vous devez être capable de programmer une fonction à partir de sa spécification.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code>    <span class="k">def</span> <span class="nf">encoder</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code>    <span class="k">def</span> <span class="nf">encoder</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Encode une chaîne de caractère en son équivalent ASCII </span>
 
@@ -4850,7 +4850,7 @@ Que dois-je taper pour que le programme affiche le volume d'un pavé droit de me
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">encoder</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span> 
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">encoder</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span> 
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Encode une chaîne de caractère en son équivalent ASCII </span>
 <span class="sd">    Paramètres d’entrée : chaine de caractère -&gt; char </span>
@@ -4877,7 +4877,7 @@ Que dois-je taper pour que le programme affiche le volume d'un pavé droit de me
     <img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> Cas faux <br />
     <img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" /> Cas limite <br /></p>
 <p><em>Exemple</em> avec la fonction qui teste si des nombres sont en ordres croissants.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">croissant</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">croissant</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">):</span>
 <span class="w">  </span><span class="sd">&quot;&quot;&quot;Fonction de test de la croissance d’une suite de nombre</span>
 <span class="sd">  Paramètres d&#39;entrée : a,b,c -&gt; int ou float</span>
 <span class="sd">  Paramètres de sortie : retourne -&gt; valeur booléenne </span>
@@ -4894,7 +4894,7 @@ Que dois-je taper pour que le programme affiche le volume d'un pavé droit de me
 <p>Il existe plusieurs approches en Python pour s'assurer qu'un code fonctionne.</p>
 <h2 id="8-ecrire-les-tests-soi-meme">8. Écrire les tests soi même <img alt="💩" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f4a9.svg" title=":poop:" /><a class="headerlink" href="#8-ecrire-les-tests-soi-meme" title="Permanent link">⚓︎</a></h2>
 <p>Le moyen le plus simple consiste à écrire un jeu de test après <code>if __name__="__main__</code> à l'aide de print :
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">ma_fonction</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">ma_fonction</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
   <span class="c1">#code ici</span>
   <span class="k">pass</span>
 
@@ -4906,7 +4906,7 @@ Que dois-je taper pour que le programme affiche le volume d'un pavé droit de me
 Il est préférable de les remplacer par de vrais tests… </p>
 <h2 id="9-assert">9. Assert <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /><a class="headerlink" href="#9-assert" title="Permanent link">⚓︎</a></h2>
 <p>Python intègre un mot clef <code>assert</code> qui va lever une exception <code>AssertionError</code> si la condition qui suit est fausse:
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">assert</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span> <span class="c1"># ne fait rien</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">assert</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span> <span class="c1"># ne fait rien</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="k">assert</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">2</span> <span class="c1"># plante le programme</span>
 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
   <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
@@ -4917,7 +4917,7 @@ Il ne faut pas intégrer les assertions à la fonction elle-même. Il est préf�
 <div class="admonition example">
 <p class="admonition-title">Un exemple sur la suite de Fibonacci</p>
 <p>Prenons la fonction qui affiche la suite de Fibonacci. Elle utilise une structure que vous connaissez la liste.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code>    <span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code>    <span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Liste des termes de la suite de Fibonacci de l&#39;indice 0 à l&#39;indice n inclus</span>
 
@@ -4942,7 +4942,7 @@ Il ne faut pas intégrer les assertions à la fonction elle-même. Il est préf�
 <img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" />   Les éléments de la liste sont des entiers<br />
 <img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" />   La propriété de Fibonacci : un+un+1=un+2<br />
 <img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/27a1.svg" title=":arrow_right:" />   La sortie dans les cas impossibles : paramètre négatif, paramètre non entier</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">tester_fibonacci</span><span class="p">():</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">tester_fibonacci</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Teste certaines propriétés de la fonction Fibonacci</span>
 
@@ -4977,7 +4977,7 @@ Il ne faut pas intégrer les assertions à la fonction elle-même. Il est préf�
 <p>Note : La rédaction de la Docstring est libre. Les deux notations suivantes sont correctes. Prenez celle qui vous paraît naturelle.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Doctest de fibonacci</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Teste certaines propriétés de la fonction Fibonacci</span>
 
 <span class="sd">    Paramètres de sortie : None</span>
@@ -5001,7 +5001,7 @@ Il est parfois délicat de tester certaines fonctions, en particulier les affich
 Pour les fonctions qui réalisent des calculs cela reste pratique.</p>
 <div class="admonition example">
 <p class="admonition-title">Un exemple qui fonctionne bien : </p>
-<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">multiple</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">multiple</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Calcule produit de a et b</span>
 <span class="sd">    @param a: (number, str, list) premier facteur</span>
@@ -5023,7 +5023,7 @@ Quand on exécute le programme, il ne se passe rien.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Un exemple qui échoue :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">Fonction_mal_testee</span><span class="p">():</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">Fonction_mal_testee</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    Simple fonction qui echoue</span>
 <span class="sd">    &gt;&gt;&gt; Fonction_mal_testee()</span>
@@ -5060,7 +5060,7 @@ Got:
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Reprendre le code de la fonction <code>mettre_au_carre</code> et indiquer les asserts nécessaires pour tester la fonction.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">mettre_au_carre</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span> <span class="nf">mettre_au_carre</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;renvoie le carré de x</span>
 
 <span class="sd">    Paramètres d’entrée : x -&gt; (int, float ou decimal) : un nombre quelconque</span>
@@ -5070,7 +5070,7 @@ Got:
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="k">assert</span> <span class="n">mettre_au_carre</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">==</span><span class="mi">4</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">assert</span> <span class="n">mettre_au_carre</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">==</span><span class="mi">4</span>
 <span class="k">assert</span> <span class="n">mettre_au_carre</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span>
 <span class="k">assert</span> <span class="n">mettre_au_carre</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="o">==</span><span class="mi">9</span>
 </code></pre></div>

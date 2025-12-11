@@ -4688,7 +4688,7 @@ les cas possibles et les regrouper dans un tableau appelé <strong>table de vér
 <p>Notation usuelle en électronique : <span class="arithmatex">\(Q=A \wedge B\)</span></p>
 <p><img alt="" class="center" src="../data/and.png" /></p>
 <h4 id="exemples-en-python">Exemples en Python<a class="headerlink" href="#exemples-en-python" title="Permanent link">⚓︎</a></h4>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
 <span class="kc">False</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
@@ -4696,7 +4696,7 @@ les cas possibles et les regrouper dans un tableau appelé <strong>table de vér
 </code></pre></div>
 <h4 id="levaluation-paresseuse">L'évaluation paresseuse<a class="headerlink" href="#levaluation-paresseuse" title="Permanent link">⚓︎</a></h4>
 <p>Pouvez-vous prévoir le résultat du code ci-dessous ?</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">0</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">0</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
     <span class="o">---------------------------------------------------------------------------</span>
 
     <span class="ne">ZeroDivisionError</span>                         <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
@@ -4709,7 +4709,7 @@ les cas possibles et les regrouper dans un tableau appelé <strong>table de vér
 </code></pre></div>
 <p>Évidemment, la division par 0 provoque une erreur.<br />
 Mais observez maintenant ce code :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">0</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">0</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
 <span class="kc">False</span>
 </code></pre></div>
 <p>On appelle <strong>évaluation paresseuse</strong> le fait que l'interpréteur Python s'arrête dès que sa décision est prise : comme le premier booléen vaut False et que la conjonction <code>and</code> est appelée, il n'est pas nécessaire d'évaluer le deuxième booléen. </p>
@@ -4765,7 +4765,7 @@ Mais observez maintenant ce code :</p>
 <p>Notation usuelle en électronique : <span class="arithmatex">\(Q=A \vee B\)</span></p>
 <p><img alt="" class="center" src="../data/or.png" /></p>
 <h4 id="exemples-en-python_1">Exemples en Python<a class="headerlink" href="#exemples-en-python_1" title="Permanent link">⚓︎</a></h4>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
 <span class="kc">True</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
@@ -4775,7 +4775,7 @@ Mais observez maintenant ce code :</p>
 </code></pre></div>
 <h4 id="levaluation-paresseuse-retour">L'évaluation paresseuse (retour)<a class="headerlink" href="#levaluation-paresseuse-retour" title="Permanent link">⚓︎</a></h4>
 <p>Pouvez-vous prévoir le résultat du code ci-dessous ?</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">0</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">0</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="23-negation-not">2.3  Négation (NOT)<a class="headerlink" href="#23-negation-not" title="Permanent link">⚓︎</a></h3>
 <ul>
@@ -4816,7 +4816,7 @@ Mais observez maintenant ce code :</p>
 <p>Notation usuelle en électronique : <span class="arithmatex">\(Q=\neg A\)</span></p>
 <p><img alt="" class="center" src="../data/no.png" /></p>
 <h4 id="exemples-en-python_2">Exemples en Python<a class="headerlink" href="#exemples-en-python_2" title="Permanent link">⚓︎</a></h4>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="ow">not</span><span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
 <span class="kc">False</span>
 </code></pre></div>
@@ -5008,7 +5008,7 @@ Voir <a href="https://fr.wikipedia.org/wiki/Fonction_NON-ET">Wikipedia</a></p>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Calculer les opérations suivantes.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="mi">1011011</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="mi">1011011</span>
 <span class="o">&amp;</span>  <span class="mi">1010101</span>
 <span class="o">----------</span>
 
@@ -5024,7 +5024,7 @@ Voir <a href="https://fr.wikipedia.org/wiki/Fonction_NON-ET">Wikipedia</a></p>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="mi">1011011</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="mi">1011011</span>
 <span class="o">&amp;</span><span class="mi">1010101</span>
 <span class="o">----------</span>
 <span class="mi">1010001</span>
@@ -5045,28 +5045,28 @@ Voir <a href="https://fr.wikipedia.org/wiki/Fonction_NON-ET">Wikipedia</a></p>
 </div>
 <h3 id="34-calculs-en-python">3.4 Calculs en Python<a class="headerlink" href="#34-calculs-en-python" title="Permanent link">⚓︎</a></h3>
 <p>les opérateurs <code>&amp;</code>, <code>|</code> et <code>^</code> sont utilisables directement en Python</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># calcul A</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># calcul A</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="mi">12</span> <span class="o">&amp;</span> <span class="mi">7</span>
 <span class="mi">4</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># calcul B</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># calcul B</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="mi">12</span> <span class="o">|</span> <span class="mi">7</span>
 <span class="mi">15</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># calcul C</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># calcul C</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="mi">12</span> <span class="o">^</span> <span class="mi">5</span>
 <span class="mi">9</span>
 </code></pre></div>
 <p>Pour comprendre ces résultats, il faut travailler en binaire. Voici les mêmes calculs :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># calcul A</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># calcul A</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="mb">0b1100</span> <span class="o">&amp;</span> <span class="mb">0b111</span><span class="p">)</span>
     <span class="s1">&#39;0b100&#39;</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># calcul B</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># calcul B</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="mb">0b1100</span> <span class="o">|</span> <span class="mb">0b111</span><span class="p">)</span>
    <span class="s1">&#39;0b1111&#39;</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># calcul C</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># calcul C</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="mb">0b1100</span> <span class="o">^</span> <span class="mb">0b111</span><span class="p">)</span>
     <span class="s1">&#39;0b1011&#39;</span>
 </code></pre></div>
@@ -5079,7 +5079,7 @@ Voir <a href="https://fr.wikipedia.org/wiki/Fonction_NON-ET">Wikipedia</a></p>
 <p>Protocole de chiffrage : XOR entre le code ASCII des lettres de même position.</p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;BONJOUR&quot;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;BONJOUR&quot;</span>
 <span class="n">cle</span> <span class="o">=</span> <span class="s2">&quot;MAURIAC&quot;</span>
 
 <span class="k">def</span> <span class="nf">crypte_lettre</span><span class="p">(</span><span class="n">lm</span><span class="p">,</span> <span class="n">lc</span><span class="p">):</span>

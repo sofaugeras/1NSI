@@ -4681,7 +4681,7 @@ En Python, une fonction se crée avec le mot-clé <code>def</code>.</p>
 <p><img alt="image" class="center" src="../data/f1.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">Exemple fondateur n°1 <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">accueil</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;bonjour&quot;</span><span class="p">)</span>
@@ -4690,7 +4690,7 @@ En Python, une fonction se crée avec le mot-clé <code>def</code>.</p>
 </div>
 <p>Lorsque l'interpréteur Python parcourt cette fonction, <strong>rien</strong> ne s'affiche : la fonction est maintenant prête à être appelée, mais n'est pas exécutée tant que l'utilisateur ne le demande pas explicitement.</p>
 <p>Ce sera le cas pour toutes les fonctions : elles doivent être <strong>appelées</strong> pour s'exécuter.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">accueil</span><span class="p">()</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">accueil</span><span class="p">()</span>
 <span class="n">bonjour</span>
 <span class="n">comment</span> <span class="n">allez</span><span class="o">-</span><span class="n">vous</span> <span class="err">?</span>
 </code></pre></div>
@@ -4700,14 +4700,14 @@ En Python, une fonction se crée avec le mot-clé <code>def</code>.</p>
 <h3 id="21-parametre-simple">2.1 Paramètre simple<a class="headerlink" href="#21-parametre-simple" title="Permanent link">⚓︎</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Exemple fondateur n°2 <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">chat_penible</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;meoww&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">chat_penible</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">chat_penible</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">meoww</span>
 <span class="n">meoww</span>
 <span class="n">meoww</span>
@@ -4729,20 +4729,20 @@ En Python, une fonction se crée avec le mot-clé <code>def</code>.</p>
 <p>Une fonction peut avoir de multiples paramètres :</p>
 <div class="admonition note">
 <p class="admonition-title">Exemple fondateur n°2 <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">repete</span><span class="p">(</span><span class="n">mot</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">mot</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">repete</span><span class="p">(</span><span class="s2">&quot;NSI&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">repete</span><span class="p">(</span><span class="s2">&quot;NSI&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="n">NSI</span>
 <span class="n">NSI</span>
 <span class="n">NSI</span>
 </code></pre></div>
 <p>L'ordre des paramètres passés est alors important ! Le code ci-dessous est incorrect.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">repete</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;test&quot;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">repete</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;test&quot;</span><span class="p">)</span>
 <span class="o">---------------------------------------------------------------------------</span>
 
 <span class="ne">TypeError</span>                                 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
@@ -4768,12 +4768,12 @@ Le renvoi d'une valeur se fait grâce au mot-clé <code>return</code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Exemple fondateur n°3 <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
 <p>La fonction mathématique <span class="arithmatex">\(f : x \longmapsto 2x+3\)</span> se codera par :
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">3</span>
 </code></pre></div></td></tr></table></div></p>
 </div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">f</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">f</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="mi">23</span>
 </code></pre></div>
 <h2 id="4-autour-du-return">4. Autour du <code>return</code><a class="headerlink" href="#4-autour-du-return" title="Permanent link">⚓︎</a></h2>
@@ -4782,20 +4782,20 @@ Le renvoi d'une valeur se fait grâce au mot-clé <code>return</code>.</p>
 <p class="admonition-title">Différence fondamentale entre <code>return</code> et <code>print</code> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /> <img alt="⭐" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2b50.svg" title=":star:" /></p>
 <p>Le mot-clé <code>return</code> de l'exemple précédent fait que l'expression <code>f(10)</code> est <strong>égale</strong> à 23.
 On peut d'ailleurs écrire en console :
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">f</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">+</span> <span class="mi">5</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">f</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">+</span> <span class="mi">5</span>
 <span class="mi">28</span>
 </code></pre></div>
 Imaginons (avant de l'oublier très vite) le code <strong>affreux</strong> ci-dessous :
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 On pourrait avoir <em>l'illusion</em> que la fonction <code>g</code> fait correctement son travail :
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="mi">23</span>
 </code></pre></div>
 Mais <code>g</code> se contente <strong>d'afficher</strong> sa valeur calculée, et non pas de la renvoyer. En effet :
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">+</span> <span class="mi">5</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">+</span> <span class="mi">5</span>
 <span class="mi">23</span>
 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
 <span class="n">File</span> <span class="s2">&quot;&lt;pyshell&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
@@ -4807,23 +4807,23 @@ En résumé :
 <h3 id="42-le-return-est-un-siege-ejectable">4.2 Le <code>return</code> est un siège éjectable<a class="headerlink" href="#42-le-return-est-un-siege-ejectable" title="Permanent link">⚓︎</a></h3>
 <p>Le mot-clé <code>return</code> provoque une <em>éjection</em> du code : tout ce qui est situé <strong>après</strong> le  <code>return</code> <strong>ne sera pas exécuté</strong>.<br />
 Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ce texte sera bien affiché&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">3</span>
 </code></pre></div></td></tr></table></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">g</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="n">ce</span> <span class="n">texte</span> <span class="n">sera</span> <span class="n">bien</span> <span class="n">affiché</span>
 <span class="mi">11</span>
 </code></pre></div>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">h</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">3</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ceci ne sera jamais affiché&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">h</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">h</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="mi">11</span>
 </code></pre></div>
 <h3 id="43-les-fonctions-sans-return-sont-elles-des-fonctions">4.3 Les fonctions sans <code>return</code> sont-elles des fonctions ?<a class="headerlink" href="#43-les-fonctions-sans-return-sont-elles-des-fonctions" title="Permanent link">⚓︎</a></h3>
@@ -4833,7 +4833,7 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
 </li>
 <li>
 <p>On peut doter artificiellement à toutes les fonctions d'un <code>return</code>, en renvoyant la valeur <code>None</code> :
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">chat_penible</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -4871,7 +4871,7 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
 <div class="tabbed-block">
 <p>On considère les 3 codes ci-dessous. Pour chacun, dire <strong>sans l'exécuter</strong> s'il est valide ou non. S'il ne l'est pas, identifier la règle (parmi celles énoncées ci-dessus) qui est bafouée.</p>
 <p><strong>code A</strong>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -4884,7 +4884,7 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
 <span class="n">verdict</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div></p>
 <p><strong>code B</strong>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -4895,7 +4895,7 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
 <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div></p>
 <p><strong>code C</strong>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -4943,7 +4943,7 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
 <p><img alt="" class="center" src="../data/global_meme.jpg" width="40%" /> .</p>
 <p><strong>En résumé</strong></p>
 <p>Ne pas faire cela :
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -4959,12 +4959,12 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
     <span class="k">if</span> <span class="n">objet</span> <span class="o">==</span> <span class="s2">&quot;banane&quot;</span><span class="p">:</span>
         <span class="n">score</span> <span class="o">-=</span> <span class="mi">300</span>
 </code></pre></div></td></tr></table></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">ramasse_objet</span><span class="p">(</span><span class="s2">&quot;champignon&quot;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">ramasse_objet</span><span class="p">(</span><span class="s2">&quot;champignon&quot;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">score</span>
 <span class="mi">20</span>
 </code></pre></div></p>
 <p>Faire plutôt ceci :</p>
-<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -4980,7 +4980,7 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
         <span class="n">score</span> <span class="o">-=</span> <span class="mi">300</span>
     <span class="k">return</span> <span class="n">score</span> <span class="c1"># je renvoie le nouveau score</span>
 </code></pre></div></td></tr></table></div>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">score</span> <span class="o">=</span> <span class="n">ramasse_objet</span><span class="p">(</span><span class="s2">&quot;champignon&quot;</span><span class="p">,</span> <span class="n">score</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">score</span> <span class="o">=</span> <span class="n">ramasse_objet</span><span class="p">(</span><span class="s2">&quot;champignon&quot;</span><span class="p">,</span> <span class="n">score</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">score</span>
 <span class="mi">20</span>
 </code></pre></div></p>
@@ -4990,7 +4990,7 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
 <h3 id="61-help">6.1 Help !<a class="headerlink" href="#61-help" title="Permanent link">⚓︎</a></h3>
 <p>Si une fonction peut être assimilée à un outil, il est normal de se demander si cet outil possède un mode d'emploi.</p>
 <p>Observons les fonctions pré-définies par Python, et notamment une des premières que nous avons rencontrées : la fonction <code>print()</code>. Son mode d'emploi est accessible grâce à la commande <code>help(print)</code>.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">help</span><span class="p">(</span><span class="nb">print</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">help</span><span class="p">(</span><span class="nb">print</span><span class="p">)</span>
 <span class="n">Help</span> <span class="n">on</span> <span class="n">built</span><span class="o">-</span><span class="ow">in</span> <span class="n">function</span> <span class="nb">print</span> <span class="ow">in</span> <span class="n">module</span> <span class="n">builtins</span><span class="p">:</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
@@ -5009,7 +5009,7 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
 <p>Il est possible, voire souhaitable (dès qu'on créé un code comportant plusieurs fonctions, et/ou qui sera amené à être lu par d'autres personnes), de créer un mode d'emploi pour ses fonctions. On appelle cela écrire <strong>la docstring</strong> de la fonction, et c'est très simple : il suffit de l'encadrer par des triples double-quotes <code>"""</code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Exemple</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
@@ -5024,7 +5024,7 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;meoww&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>On peut donc maintenant demander de l'aide pour cette fonction :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">help</span><span class="p">(</span><span class="n">chat_penible</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">help</span><span class="p">(</span><span class="n">chat_penible</span><span class="p">)</span>
 <span class="n">Help</span> <span class="n">on</span> <span class="n">function</span> <span class="n">chat_penible</span> <span class="ow">in</span> <span class="n">module</span> <span class="n">__main__</span><span class="p">:</span>
 
 <span class="n">chat_penible</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
@@ -5037,7 +5037,7 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
 <p><img alt="image" class="center" src="../data/tests.png" width="40%" /></p>
 <p>Les exercices de <a href="../exercices/">cette feuille</a> sont (presque) tous livrés avec un <em>jeu de tests</em>. Il s'agit d'une fonction, souvent appelée <code>test_nom_de_la fonction()</code>, qui va regrouper les différents tests qu'on pourrait faire en console pour vérifier que la fonction a le comportement désiré.</p>
 <p>Ces tests reposent sur le mot-clé <code>assert</code>, qui va lever une erreur lorsqu'il est suivi d'une expression évaluée à <code>False</code> :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">assert</span> <span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">2</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">assert</span> <span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">2</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="k">assert</span> <span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">5</span>
 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
   <span class="n">File</span> <span class="s2">&quot;&lt;pyshell&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
@@ -5050,7 +5050,7 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Exemple d'un jeu de tests</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -5127,7 +5127,7 @@ Observez la différence entre les fonctions <code>g</code>  et <code>h</code> .<
 </div>
 <div class="tabbed-block">
 <p>"
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Script Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>

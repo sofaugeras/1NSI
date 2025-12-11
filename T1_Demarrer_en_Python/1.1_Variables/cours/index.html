@@ -4659,7 +4659,7 @@
 </ul>
 <h3 id="a2-on-code">A.2 On code !<a class="headerlink" href="#a2-on-code" title="Permanent link">⚓︎</a></h3>
 <p>La phrase précédente donnera donc lieu à la ligne Python suivante :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">32</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">32</span>
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Attention</p>
@@ -4670,7 +4670,7 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:7"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Python</label><label for="__tabbed_1_2">C</label><label for="__tabbed_1_3">PHP</label><label for="__tabbed_1_4">Java</label><label for="__tabbed_1_5">Javascript</label><label for="__tabbed_1_6">Rust</label><label for="__tabbed_1_7">Go</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">32</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">32</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -4678,7 +4678,7 @@
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">PHP</span><pre><span></span><code><span class="x">$a = 32;</span>
+<div class="highlight"><span class="filename">🐘 PHP</span><pre><span></span><code><span class="x">$a = 32;</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -4686,7 +4686,7 @@
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">JavaScript</span><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">32</span><span class="p">;</span>
+<div class="highlight"><span class="filename">🍵 JavaScript</span><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">32</span><span class="p">;</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -4701,7 +4701,7 @@
 </div>
 </div>
 <p>Une fois la valeur 32 stockée dans la variable <code>a</code>, on peut alors utiliser cette variable :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
 <span class="mi">32</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">5</span>
 <span class="mi">37</span>
@@ -4715,7 +4715,7 @@
 <h3 id="b1-explication-simplifiee">B.1 Explication simplifiée<a class="headerlink" href="#b1-explication-simplifiee" title="Permanent link">⚓︎</a></h3>
 <p>En première intention, il est possible d'expliquer le fonctionnement interne de l'affectation des variables par la <em>métaphore des tiroirs</em> :</p>
 <p>Écrire  l'instruction :
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
 </code></pre></div></p>
 <p>va provoquer chez l'ordinateur le comportement suivant :</p>
 <ul>
@@ -4734,46 +4734,46 @@
 <h3 id="b2-une-realite-bien-plus-complexe">B.2 Une réalité bien plus complexe...<a class="headerlink" href="#b2-une-realite-bien-plus-complexe" title="Permanent link">⚓︎</a></h3>
 <h4 id="b21-la-commande-id-ladresse-du-tiroir">B.2.1 La commande <code>id()</code> : l'adresse du tiroir ?<a class="headerlink" href="#b21-la-commande-id-ladresse-du-tiroir" title="Permanent link">⚓︎</a></h4>
 <p>Python possède une fonction qui renvoie l'adresse mémoire de la variable donnée en argument. </p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">7</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">7</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 <span class="mi">9788800</span>
 </code></pre></div>
 <p>Faites le test avec votre propre IDE Python (vous n'obtiendrez pas forcément la même valeur d'adresse mémoire)</p>
 <h4 id="b22-cela-se-complique">B.2.2 Cela se complique.<a class="headerlink" href="#b22-cela-se-complique" title="Permanent link">⚓︎</a></h4>
 <p>Sans refermer notre IDE, écrasons la valeur de <code>b</code> avec une nouvelle valeur :
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">12</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">12</span>
 </code></pre></div>
 et redemandons l'adresse de <code>b</code> :
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 <span class="mi">9788960</span>
 </code></pre></div></p>
 <p>Très mauvaise nouvelle : l'adresse de la variable <code>b</code> a changé. Ceci invalide notre métaphore du «tiroir», une place unique qui serait réservée pour y stocker les valeurs successives d'une variable. </p>
 <p>La modification de la valeur de <code>b</code> ne s'est pas faite «en place», la variable <code>b</code> s'est déplacée : que s'est-il donc passé ?</p>
 <h4 id="b23-tentative-dexplication">B.2.3 Tentative d'explication<a class="headerlink" href="#b23-tentative-dexplication" title="Permanent link">⚓︎</a></h4>
 <p>L'affectation 
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">9</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">9</span>
 </code></pre></div>
 ne provoque pas la réservation définitive d'un espace-mémoire pour la variable <code>b</code>, mais la création d'un lien vers un espace-mémoire qui contient la valeur 9. Ce lien consiste en l'adresse-mémoire de cette valeur 9. </p>
 <p>Cette adresse-mémoire vaut (sur ma configuration personnelle) <code>9788864</code>.
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
 <span class="mi">9788864</span>
 </code></pre></div></p>
 <p><img alt="image" class="center" src="../data/mem1.png" /></p>
 <p>Comme le présente le ruban ci-dessus, Python pré-positionne les entiers (de -5 à 256) sur des petites adresses-mémoires, car il considère que ces entiers servent souvent, et doivent donc être rapidement accessibles.</p>
 <p>Si on créé une nouvelle variable <code>tokyo</code> aussi égale à 9, elle va aussi <em>pointer</em> vers la même adresse-mémoire :</p>
-<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tokyo</span> <span class="o">=</span> <span class="mi">9</span>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tokyo</span> <span class="o">=</span> <span class="mi">9</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">tokyo</span><span class="p">)</span>
 <span class="mi">9788864</span>
 </code></pre></div>
 Les variables <code>tokyo</code> et <code>b</code> renvoient vers la même adresse-mémoire.</p>
 <p>Affectons maintenant à <code>tokyo</code> la valeur 2020 et observons son adresse-mémoire :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tokyo</span> <span class="o">=</span> <span class="mi">2020</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">tokyo</span> <span class="o">=</span> <span class="mi">2020</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">tokyo</span><span class="p">)</span>
 <span class="mi">139762979309936</span>
 </code></pre></div>
 <p>L'adresse-mémoire est (bien) plus grande : elle a été choisie sur le moment par Python pour y stocker 2020 (car 2020 &gt; 256). </p>
 <p>De manière plus surprenante, si on créé une nouvelle variable <code>jo</code> qui vaut <em>aussi</em> 2020, Python va ouvrir une <em>autre</em> adresse-mémoire pour y stocker 2020, alors qu'il l'a déjà stockée ailleurs :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">jo</span> <span class="o">=</span> <span class="mi">2020</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">jo</span> <span class="o">=</span> <span class="mi">2020</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">jo</span><span class="p">)</span>
 <span class="mi">139762979310064</span>
 </code></pre></div>
@@ -4783,7 +4783,7 @@ Les variables <code>tokyo</code> et <code>b</code> renvoient vers la même adres
 </div>
 <h3 id="b3-une-histoire-en-2-temps-evaluation-affectation">B.3 Une histoire en 2 temps : évaluation, affectation<a class="headerlink" href="#b3-une-histoire-en-2-temps-evaluation-affectation" title="Permanent link">⚓︎</a></h3>
 <p>Observons l'instruction
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span>
 </code></pre></div></p>
 <h4 id="b31-etape-1-levaluation">B.3.1 Étape 1 : <strong>l'évaluation</strong><a class="headerlink" href="#b31-etape-1-levaluation" title="Permanent link">⚓︎</a></h4>
 <p>Python va prendre la partie à droite du signe égal et va l'évaluer, ce qui signifie qu'il va essayer de lui donner une valeur. Dans nos exemples, cette valeur sera numérique, mais elle peut être d'un autre type (voir plus loin)</p>
@@ -4795,16 +4795,16 @@ Les variables <code>tokyo</code> et <code>b</code> renvoient vers la même adres
 <h4 id="b32-lincrementation-dune-variable">B.3.2 L'incrémentation d'une variable.<a class="headerlink" href="#b32-lincrementation-dune-variable" title="Permanent link">⚓︎</a></h4>
 <p><em>«Incrémenter»</em> une variable signifie l'augmenter. </p>
 <p>Imaginons une variable appelée <code>compteur</code>. Au démarrage de notre programme, elle est initialisée à la valeur 0. 
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">compteur</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">compteur</span> <span class="o">=</span> <span class="mi">0</span>
 </code></pre></div></p>
 <p>Considérons qu'à un moment du programme, cette variable doit être modifiée, par exemple en lui ajoutant 1.</p>
 <p>En Python, cela s'écrira :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">compteur</span> <span class="o">=</span> <span class="n">compteur</span> <span class="o">+</span> <span class="mi">1</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">compteur</span> <span class="o">=</span> <span class="n">compteur</span> <span class="o">+</span> <span class="mi">1</span>
 </code></pre></div>
 <p>Observée avec des yeux de mathématicien, la précédente instruction est une horreur.</p>
 <p><img alt="image" class="center" src="../data/memex.png" width="30%" /></p>
 <p>Vue avec des yeux d'informaticien, voilà comment est interprétée la commande
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">compteur</span> <span class="o">=</span> <span class="n">compteur</span> <span class="o">+</span> <span class="mi">1</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">compteur</span> <span class="o">=</span> <span class="n">compteur</span> <span class="o">+</span> <span class="mi">1</span>
 </code></pre></div></p>
 <ol>
 <li>On évalue la partie droite de l'égalité, donc l'expression <code>compteur + 1</code>.</li>
@@ -4817,10 +4817,10 @@ Les variables <code>tokyo</code> et <code>b</code> renvoient vers la même adres
 <div class="admonition info">
 <p class="admonition-title">Syntaxe classique et syntaxe Pythonesque <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
 <p>L'incrémentation d'une variable <code>compteur</code> s'écrira donc en Python :
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">compteur</span> <span class="o">=</span> <span class="n">compteur</span> <span class="o">+</span> <span class="mi">1</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">compteur</span> <span class="o">=</span> <span class="n">compteur</span> <span class="o">+</span> <span class="mi">1</span>
 </code></pre></div>
 Mais il existe aussi une syntaxe particulière, un peu plus courte :</p>
-<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">compteur</span> <span class="o">+=</span> <span class="mi">1</span>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">compteur</span> <span class="o">+=</span> <span class="mi">1</span>
 </code></pre></div>
 Cette syntaxe peut se ranger dans la catégorie des <strong>sucres syntaxiques</strong> : c'est bien de la connaître, c'est amusant de s'en servir, mais son utilisation n'est en rien obligatoire et peut avoir un effet néfaste, celui d'oublier réellement ce qu'il se passe derrière.</p>
 </div>
@@ -4833,11 +4833,11 @@ Cette syntaxe peut se ranger dans la catégorie des <strong>sucres syntaxiques</
 <p>On initialise une variable <code>score</code> à 100 et on l'augmente de 15.</p>
 </div>
 <div class="tabbed-block">
-<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">score</span> <span class="o">=</span> <span class="mi">100</span>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">score</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">score</span> <span class="o">=</span> <span class="n">score</span> <span class="o">+</span> <span class="mi">15</span>
 </code></pre></div>
 ou bien
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">score</span> <span class="o">=</span> <span class="mi">100</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">score</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">score</span> <span class="o">+=</span> <span class="mi">15</span>
 </code></pre></div></p>
 </div>
@@ -4853,11 +4853,11 @@ ou bien
 <p>On initialise une variable <code>cellule</code> à 1 et on la multiplie par 2.</p>
 </div>
 <div class="tabbed-block">
-<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">cellule</span> <span class="o">=</span> <span class="mi">1</span>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">cellule</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">cellule</span> <span class="o">=</span> <span class="n">cellule</span> <span class="o">*</span> <span class="mi">2</span>
 </code></pre></div>
 ou bien
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">cellule</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">cellule</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">cellule</span> <span class="o">*=</span> <span class="mi">2</span>
 </code></pre></div></p>
 </div>
@@ -4873,11 +4873,11 @@ ou bien
 <p>On initialise une variable <code>capital</code> à 1000 et on lui enlève 5%.</p>
 </div>
 <div class="tabbed-block">
-<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">capital</span> <span class="o">=</span> <span class="mi">1000</span>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">capital</span> <span class="o">=</span> <span class="mi">1000</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">capital</span> <span class="o">=</span> <span class="n">capital</span> <span class="o">-</span> <span class="n">capital</span> <span class="o">*</span> <span class="mi">5</span><span class="o">/</span><span class="mi">100</span>
 </code></pre></div>
 ou bien
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">capital</span> <span class="o">=</span> <span class="mi">1000</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">capital</span> <span class="o">=</span> <span class="mi">1000</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">capital</span> <span class="o">*=</span> <span class="mf">0.95</span>
 </code></pre></div></p>
 </div>
@@ -4887,17 +4887,17 @@ ou bien
 <h4 id="b33-lechange-de-variables">B.3.3 L'échange de variables<a class="headerlink" href="#b33-lechange-de-variables" title="Permanent link">⚓︎</a></h4>
 <p>Après l'incrémentation, une autre technique de base reviendra fréquemment dans nos codes : <strong>l'échange de variables</strong>.</p>
 <p>Imaginons les variables suivantes :</p>
-<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">5</span>
 </code></pre></div>
 Le but est d'échanger les valeurs de <code>a</code> et de <code>b</code>.</p>
 <p>▸ <strong>Méthode naïve</strong></p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">a</span>
 </code></pre></div>
 <p>Que valent <code>a</code> et <code>b</code> maintenant ?</p>
 <p>Malheureusement :
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
 <span class="mi">5</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">b</span>
 <span class="mi">5</span>
@@ -4909,7 +4909,7 @@ Le but est d'échanger les valeurs de <code>a</code> et de <code>b</code>.</p>
 <p><img alt="image" class="center" src="../data/verres.png" width="20%" /></p>
 <p>La méthode est évidente : il nous faut un troisième verre.</p>
 <p>Nous allons faire de même pour nos variables. Nous allons utiliser une variable <strong>temporaire</strong> (on parle aussi de variable <strong>tampon</strong>) pour conserver la mémoire de la valeur de <code>a</code> (par exemple) avant que celle-ci ne se fasse écraser :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">a</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
@@ -4919,12 +4919,12 @@ Le but est d'échanger les valeurs de <code>a</code> et de <code>b</code>.</p>
 <div class="admonition info">
 <p class="admonition-title">Syntaxe classique et syntaxe Pythonesque <img alt="❤" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2764.svg" title=":heart:" /></p>
 <p>L'échange de deux variables <code>a</code> et de <code>b</code> s'écrit donc :
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">a</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">a</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">temp</span>
 </code></pre></div>
 Mais il existe aussi une syntaxe particulière à Python, bien plus courte :</p>
-<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span>
 </code></pre></div>
 C'est de nouveau un <em>sucre syntaxique</em>. Cette syntaxe nous dispense de créer nous-même une troisième variable. Mais pas de miracle : en interne, Python crée lui-même cette variable temporaire. La simultanéité n'existe pas en informatique.</p>
 </div>
@@ -4934,18 +4934,18 @@ C'est de nouveau un <em>sucre syntaxique</em>. Cette syntaxe nous dispense de cr
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Une petite erreur s'est glissée à Poudlard :
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maison_Harry</span> <span class="o">=</span> <span class="s2">&quot;Serpentard&quot;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maison_Harry</span> <span class="o">=</span> <span class="s2">&quot;Serpentard&quot;</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">maison_Malfoy</span> <span class="o">=</span>  <span class="s2">&quot;Gryffondor&quot;</span>
 </code></pre></div>
 Corriger cette erreur, de deux manières différentes.</p>
 </div>
 <div class="tabbed-block">
-<p><div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">maison_Harry</span>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">t</span> <span class="o">=</span> <span class="n">maison_Harry</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">maison_Harry</span> <span class="o">=</span> <span class="n">maison_Malfoy</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">maison_Malfoy</span> <span class="o">=</span> <span class="n">t</span>
 </code></pre></div>
 ou plus rapidement :
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maison_Harry</span><span class="p">,</span> <span class="n">maison_Malfoy</span> <span class="o">=</span> <span class="n">maison_Malfoy</span><span class="p">,</span> <span class="n">maison_Harry</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maison_Harry</span><span class="p">,</span> <span class="n">maison_Malfoy</span> <span class="o">=</span> <span class="n">maison_Malfoy</span><span class="p">,</span> <span class="n">maison_Harry</span>
 </code></pre></div></p>
 </div>
 </div>
@@ -5013,13 +5013,13 @@ ou plus rapidement :
 </div>
 <p>Comment connaître le type d'une variable ?
 Il suffit dans la console d'utiliser la fonction <code>type</code>.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">int</span><span class="s1">&#39;&gt;</span>
 </code></pre></div>
 <h3 id="c1-python-et-le-typage-dynamique">C.1 Python et le typage dynamique<a class="headerlink" href="#c1-python-et-le-typage-dynamique" title="Permanent link">⚓︎</a></h3>
 <p>Jusqu'à présent, nous ne nous sommes pas occupés de préciser à Python le type de notre variable.</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
 </code></pre></div>
 <p>Mais dans certains langages, c'est obligatoire. En C par exemple, il faut écrire :</p>
 <p><div class="highlight"><span class="filename">C</span><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
@@ -5030,7 +5030,7 @@ Cela signifie (pour le langage C) que notre variable <code>a</code> n'aura pas l
 </code></pre></div></p>
 <p>Le compilateur C renverra une erreur : on ne peut pas stocker une chaîne de caractères dans une variable qu'on a créée comme étant de type entier.</p>
 <p>Et en Python ?</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">int</span><span class="s1">&#39;&gt;</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;test&quot;</span>
@@ -5072,7 +5072,7 @@ Cela signifie (pour le langage C) que notre variable <code>a</code> n'aura pas l
 </div>
 <h3 id="d2-du-sens-du-sens-du-sens">D.2 Du sens, du sens, du sens<a class="headerlink" href="#d2-du-sens-du-sens-du-sens" title="Permanent link">⚓︎</a></h3>
 <p>Hormis pour les indices (de boucles, de tableaux...) un nom de variable (dans un programme destiné à être lu, par vous ou quelqu'un d'autre) doit <strong>impérativement avoir du sens</strong> :</p>
-<div class="highlight"><span class="filename">🐍 Script Python</span><pre><span></span><code><span class="c1"># PAS BIEN</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># PAS BIEN</span>
 <span class="k">if</span> <span class="n">d</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
     <span class="n">cep</span> <span class="o">+=</span> <span class="n">vm</span>
 
