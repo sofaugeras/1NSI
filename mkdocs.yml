@@ -1,4 +1,4 @@
-site_name: Saint Sauveur TNSI
+site_name: Saint Sauveur 1NSI
 site_url: https://github.com/sofaugeras/1NSI
 repo_url: https://github.com/sofaugeras/1NSI
 repo_name: 'Cours Première NSI Saint Sauveur'
@@ -7,21 +7,14 @@ site_description: Site de cours Première NSI
 site_author: "Sophie FAUGERAS" 
 docs_dir: docs
 
-### Structure de navigation 
-#nav:
-#    - Accueil: index.md
-#    - ressources: aide-mémoire.md
-#    - T1 Structure de données: Consignes.md
-#    - Prérequis: prérequis.md
-
-   
+  
 theme:
   name: material
   
   custom_dir: docs/overrides #
   font: false
   language: fr
-  favicon: xtra/favTNSI.png
+  favicon: xtra/fav1NSI.png
   icon:
     logo: material/code-greater-than
     repo : fontawesome/brands/github
@@ -70,8 +63,21 @@ markdown_extensions:
   - pymdownx.tilde
   - pymdownx.snippets
   - pymdownx.details
-  - pymdownx.highlight:
-      linenums: None
+  - pymdownx.highlight:           # Coloration syntaxique du code
+        linenums: None
+        auto_title: true
+        auto_title_map:
+             "Text Only": "📋 Texte"
+             "Python": "🐍 Python"
+             "Python Console Session": "🐍 Python"
+             "JavaScript": "🍵 JavaScript"
+             "SQL": "🐬 SQL"
+             "PHP": "🐘 PHP"
+             "Prompt": "💻 Console"
+             "Bash": "💻 Console"
+             "E-mail": "📥 Entrée"
+             "Text Output": "📤 Sortie"
+             "mermaid": "🧜‍♂️ Diagramme"
   - pymdownx.tasklist:
       custom_checkbox: false
   - pymdownx.inlinehilite
@@ -82,8 +88,8 @@ markdown_extensions:
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.tasklist:
@@ -103,8 +109,6 @@ markdown_extensions:
       node_fontcolor: 789ABC   # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
       edge_color: 789ABC       # Any HTML Color Name or any HTML Hexadecimal color code WITHOUT the `#` sign
       edge_fontcolor: 789ABC
-
-
 
 plugins:
   - search
@@ -128,8 +132,16 @@ extra:
       link: mailto:sophie.faugeras@ac-rennes.fr
       name: Écrire à l'auteur
 
+    - icon : fontawesome/brands/linkedin
+      link : https://www.linkedin.com/in/sophie-faugeras-77b4b6124/
+      name : profil Linkedln
+
+    - icon : fontawesome/brands/twitter
+      link : https://twitter.com/sfaugeras_info
+      name : Mon twitter
+
     - icon: fontawesome/brands/github
-      link: https://github.com/sofaugeras/1NSI
+      link: https://github.com/sofaugeras/TNSI
       name: Dépôt git
 
     - icon: fontawesome/solid/school
@@ -137,18 +149,19 @@ extra:
       name: Lycée Saint Sauveur - Redon
 
 extra_javascript:
-  - xtra/javascripts/interpreter.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js
   - https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js
   - https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js
-  - xtra/javascripts/mermaid.js
+  - xtra/javascript/mermaid.js
+  - xtra/javascript/mathjax.js
+  - xtra/javascript/interpreter.js
 
 
 extra_css:
-  - stylesheets/extra.css
+  - xtra/stylesheets/extra.css
   - xtra/stylesheets/pyoditeur.css
 
 
-copyright:  CC BY-SA / S.Faugeras
+copyright:  CC BY-SA / S.Faugeras avec l'apport majeur de Gilles Lassus (CC BY-SA)

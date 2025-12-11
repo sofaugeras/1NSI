@@ -1,4 +1,5 @@
 nav:
-    - Cours : cours.md
+    - Les portes Logiques : boole.md
+    - Architecture de Von Neumann : vonNeumann.md
 
     

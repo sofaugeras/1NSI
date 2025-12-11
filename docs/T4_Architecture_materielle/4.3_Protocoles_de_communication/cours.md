@@ -1,10 +1,13 @@
-# 3.4 Protocoles de communication dans un réseau
+# 4.3 Protocoles de communication dans un réseau
 
 ![image](data/BO.png){: .center}
 
-## I. Modèle OSI, modèle Internet
+!!!- info "Crédits"
+    - [Gilles Lassus](https://glassus.github.io/premiere_nsi/T3_Architecture_materielle/3.3_Architecture_reseau/cours/)
+    - Numérique et Sciences Informatiques, 1re, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
+    - Prépabac NSI 1ère, C.ADOBET, G.CONNAN, G. ROZSAVOLGYI, L.SIGNAC, éditions Hatier.
 
-
+## 1. Modèle OSI, modèle Internet
 
 Les bits transmis d'un ordinateur à un autre contiennent, en plus des données _utiles_ (le mot «bonjour» dans un email), une multitude de données (tout aussi utiles) qui vont aider à l'acheminement de ces bits au bon endroit, puis au bon ordinateur, puis au bon logiciel. 
 Les différents protocoles qui régissent cette transmission sont regroupés dans ce qui est appelé un **modèle**. Deux modèles synthétisent ces protocoles :
@@ -53,10 +56,9 @@ Lors de son parcours, une trame peut être partiellement décapsulée et remonte
 Ce principe fondateur, actuellement menacé par certains acteurs politiques et industriels, est connu sous l'expression **«la neutralité du net»**.
 
 
+## 2. Observation des trames avec Filius
 
-## II. Observation des trames avec Filius
-
-### 1. Ping à travers un switch
+### 2.1 Ping à travers un switch
 Vous pouvez télécharger le fichier [ping_switch.fls](data/ping_switch.fls).
 
 - Relions une machine ```192.168.0.10``` d'adresse MAC ```BC:81:81:42:9C:31```  à une machine ```192.168.0.11``` d'adresse MAC ```2A:AB:AC:27:D6:A7``` à travers un switch.  
@@ -124,7 +126,7 @@ Schématisons cette trame Ethernet (couche 2 du modèle OSI) :
 
 
 
-### 2. Ping à travers un routeur
+### 2.2 Ping à travers un routeur
 
 Vous pouvez télécharger le fichier [ping_routeur.fls](data/ping_routeur.fls).
 
@@ -196,22 +198,22 @@ On peut observer dans Filius cette trame, en se positionnant sur l'interface ```
 En suivant le même principe, la machine ```192.168.1.1 ``` pourra envoyer son _pong_.
 
 
-## III. Protocole du bit alterné
+## 3. Protocole du bit alterné
 
 Ce protocole est un exemple simple de fiabilisation du transfert de données. 
 
-### 1. Contexte
+### 3.1 Contexte
 
 - Alice veut envoyer à Bob un message M, qu'elle a prédécoupé en sous-messages M0, M1, M2,...
 - Alice envoie ses sous-messages à une cadence Δt fixée (en pratique, les sous-messages partent quand leur acquittement a été reçu ou qu'on a attendu celui-ci trop longtemps : on parle alors de _timeout_)
 
-### 2. Situation idéale
+### 3.2 Situation idéale
 
 ![](data/ideale.png){: .center} 
 
 Dans cette situation, les sous-messages arrivent tous à destination dans le bon ordre. La transmission est correcte.
 
-### 3. Situation réelle
+### 3.3 Situation réelle
 Mais parfois, les choses ne se passent pas toujours aussi bien. Car si on maîtrise parfaitement le timing de l'envoi des sous-messages d'Alice, on ne sait pas combien de temps vont mettre ces sous-messages pour arriver, ni même (attention je vais passer dans un tunnel) s'ils ne vont pas être détruits en route.
 
 ![](data/realite.png){: .center} 
@@ -222,7 +224,7 @@ Que faire ?
 
 Écartons l'idée de numéroter les sous-messages, afin que Bob puisse remettre dans l'ordre les messages arrivés, ou même redemander spécifiquement des sous-messages perdus. C'est ce que réalise le protocole TCP (couche 4 — transport), c'est très efficace, mais cher en ressources. Essayons de trouver une solution plus basique.
 
-### 3. Solution naïve...
+### 3.4 Solution naïve...
 
 Pourquoi ne pas demander à Bob d'envoyer un signal pour dire à Alice qu'il vient bien de recevoir son sous-message ?
 Nous appelerons ce signal ACK (comme _acknowledgement_, traduisible par «accusé de réception»).
@@ -232,14 +234,14 @@ Ce signal ACK permettra à Alice de renvoyer un message qu'elle considérera com
 
 N'ayant pas reçu le ACK consécutif à son message M1, Alice suppose (avec raison) que ce message n'est pas parvenu jusqu'à Bob, et donc renvoie le message M1.
 
-### 4. Mais peu efficace...
+### 3.5 Mais peu efficace...
 
 ![](data/naivebad.png){: .center} 
 
 Le deuxième ACK de Bob a mis trop de temps pour arriver (ou s'est perdu en route) et donc Alice a supposé que son sous-message M1 n'était pas arrivé. Elle l'a donc renvoyé, et Bob se retrouve avec deux fois le sous-message M1. La transmission est incorrecte. 
 En faisant transiter un message entre Bob et Alice, nous multiplions par 2 la probabilité que des problèmes techniques de transmission interviennent. Et pour l'instant rien ne nous permet de les détecter.
 
-### 5. Bob prend le contrôle
+### 3.6 Bob prend le contrôle
 
 Bob va maintenant intégrer une méthode de validation du sous-message reçu. Il pourra décider de le garder ou de l'écarter. Le but est d'éviter les doublons.
 
@@ -256,37 +258,21 @@ Bob, de son côté, va contrôler la validité de ce qu'il reçoit : il ne garde
 
 Observons ce protocole dans plusieurs cas :
 
-##### 5.1 Cas où le sous-message est perdu
+##### Cas où le sous-message est perdu
 
 ![](data/alt2.png){: .center} 
 
-
-
-##### 5.2 Cas où le ACK  est perdu
+##### Cas où le ACK  est perdu
 ![](data/alt1.png){: .center} 
 
 Le protocole a bien détecté le doublon du sous-message M1.
 
-##### 5.3 Cas où un sous-message est en retard
+##### Cas où un sous-message est en retard
 
 ![](data/alt3.png){: .center} 
 
 Le protocole a bien détecté le doublon du sous-message M1... mais que se passerait-il si notre premier sous-message M1 était _encore plus_ en retard ?
 
 
-### 6. Conclusion
+### 3.6 Conclusion
 Le protocole du bit alterné a longtemps été utilisé au sein de la couche 2 du modèle OSI (distribution des trames Ethernet). Simple et léger, il peut toutefois être facilement mis en défaut, ce qui explique qu'il ait été remplacé par des protocoles plus performants.
-
-
-
-<!-- [correction du DS](data/DS_routage_1NSI_corr.pdf)
- -->
-
-
-</br>
-
----
-**Bibliographie**
-- Numérique et Sciences Informatiques, 1re, T. BALABONSKI, S. CONCHON, J.-C. FILLIATRE, K. NGUYEN, éditions ELLIPSES.
-- Prépabac NSI 1ère, C.ADOBET, G.CONNAN, G. ROZSAVOLGYI, L.SIGNAC, éditions Hatier.
-

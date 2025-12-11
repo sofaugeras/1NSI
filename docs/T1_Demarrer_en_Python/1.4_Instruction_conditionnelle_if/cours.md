@@ -117,8 +117,7 @@ True
     === "Énoncé"
         Compter le nombre de voyelles de la phrase ```'cet exercice est prodigieusement ennuyeux'``` 
     === "Correction"
-        {{ correction(True,
-        "
+
         ```python linenums='1'
         phrase = 'cet exercice est prodigieusement ennuyeux'
 
@@ -133,7 +132,7 @@ True
         print(compteur)
         ```
         "
-        ) }}
+
 
 
 ## 3. Un test très fréquent : le test de divisibilité
@@ -155,15 +154,13 @@ True
     === "Énoncé"
         Afficher la liste de tous les nombres entre 1 et 100 qui sont divisibles à la fois par 2 et par 7. 
     === "Correction"
-        {{ correction(True,
-        "
+    
         ```python linenums='1'
         for n in range(1,101):
             if n % 2 == 0 and n % 7 == 0:
                 print(n)
         ```
-        "
-        ) }}
+
 
 
 

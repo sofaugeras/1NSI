@@ -1,8 +1,6 @@
 # Exercices sur la boucle `for ... in`
 
-{{ initexo(0) }}
-
-!!! example "{{ exercice() }}"
+!!! example "exercice 1"
     === "Énoncé"
         On donne une liste d'acteurs : 
         ```python
@@ -36,7 +34,7 @@
          
 
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 2"
     === "Énoncé"
         Dans l'extrait de code suivant:
 
@@ -68,7 +66,7 @@
 
 
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 3"
     === "Énoncé"
         1. Fabriquer la chaîne de caractères suivante (qui comporte 80 caractères) :
         ```python
@@ -81,15 +79,24 @@
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
         OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
         ```
-<!--     === "Correction"
+    === "Correction 1 "
         1.
         ```python linenums='1'
         sol = ""
         for k in range(80):
             sol = sol + 'I'
-
+        print(sol)
+        for k in range(80):
+            sol = sol + 'N'
+        print(sol)
+        for k in range(80):
+            sol = sol + 'F'
+        print(sol)
+        for k in range(80):
+            sol = sol + 'O'
         print(sol)
         ``` 
+    === "Correction 2 "
         2.
         ```python linenums='1'
         for lettre in 'INFO':
@@ -97,11 +104,18 @@
             for k in range(80):
                 sol = sol + lettre
             print(sol)
-        ``` -->
+        ``` 
+    === "Correction 3 "
+        3.
+        ```python linenums='1'
+        for lettre in 'INFO':
+            sol = ""
+            sol = sol + lettre*80
+            print(sol)
+        ```
 
 
-
-!!! example "{{ exercice() }}"
+!!! example "exercice 4"
     === "Énoncé"
         En Python, la fonction `ord` renvoie le code Unicode d'un caractère et la fonction `chr` le contraire: elle renvoie le caractère correspondant à un code Unicode.
 
@@ -134,7 +148,7 @@
         print(mot_secret)
         ```
       
-!!! example "{{ exercice() }}"
+!!! example "exercice 5"
     === "Énoncé"
         On souhaite calculer la somme des 1000 premiers nombres entiers naturels, c'est-à-dire:
 
@@ -150,18 +164,17 @@
         print(somme)  
         ```
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 6"
     === "Énoncé"
         Calculer $1\times 2 \times 3 \times \dots 99 \times 100$.
+
     === "Correction"
         ```python linenums='1'
         produit = 1
-        for k in range(1,100):
+        for k in range(1,101):
             produit = produit * k
         print(produit)  
-        ```
-
-      
+        ```     
 
 !!! example "Exercice 7"
     === "Énoncé"
@@ -179,11 +192,12 @@
         9*9 = 81    
         ```
     === "Correction"
-    ```python linenums='1'
-    for a in range(7, 10):
-        for b in range(1, 10):
-            print(a, '*', b, '=', a*b)
-    ```
+    
+        ```python linenums='1'
+        for a in range(7, 10):
+            for b in range(1, 10):
+                print(a, '*', b, '=', a*b)
+        ```
 
 !!! example "Exercice 8"
     === "Énoncé"
@@ -193,7 +207,7 @@
 
         Proposer un code qui écrit **toutes** les cases possibles.
 
-        === "Correction"
+    === "Correction"
         ```python linenums='1'
         for lettre in "ABCDEFGH":
             for chiffre in "12345678":

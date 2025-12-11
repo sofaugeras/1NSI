@@ -1,4 +1,8 @@
 nav:
-    - Cours : cours.md
+    - Cours Encodage : cours.md
+    - Cours Chaîne : chaine.md
+    - Exercices : exercices.md
+    - Entrainement : Entrainement.md
+    - TP Cyber : tpCyber.md
 
     

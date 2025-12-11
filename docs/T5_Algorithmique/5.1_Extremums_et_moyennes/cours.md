@@ -5,6 +5,7 @@
 ## 1. Algorithme de recherche de maximum
 
 !!! note "Recherche de maximum :heart:"
+
     ```python
     def recherche_max(tab):
         '''renvoie le maximum de la liste tab'''
@@ -23,11 +24,10 @@
   8
 ```
 
-
-
 ## 2. Algorithme de calcul de moyenne
 
 !!! note "Calcul de moyenne :heart:"
+
     ```python
     def moyenne(tab):
         ''' renvoie la moyenne de tab'''
@@ -37,7 +37,6 @@
         return somme / len(tab)
     ```
 
-   
 **Utilisation :**
 ```python
 >>> moyenne([4, 3, 8, 1])
@@ -48,6 +47,7 @@
 ## 3. Algorithme de recherche d'occurrence
 
 !!! note "Recherche d'occurrence :heart:"
+
     ```python
     def recherche_occurrence(elt, tab):
         ''' renvoie la liste (éventuellement vide)
@@ -57,6 +57,29 @@
             if tab[i] == elt:
                 liste_indice.append(i)
         return liste_indice
+    ```
+
+!!! note "Recherche d'occurrence avec While :heart:"
+
+    ```python
+    def recherche(liste, element) :
+        i=0
+        while  i<len(liste) and liste[i]!=element:
+            i += 1
+        if (i<len(liste) and liste[i]==element):
+            return True
+        else : return False
+    #Autre solution en utilisant un booleen 
+    def recherche2(liste, element):
+        i=0
+        trouve=False
+        while i<len(liste) and not trouve:
+            if liste[i]==element:
+                trouve=True
+                break
+            i = i + 1
+        return trouve
+
     ```
 
    

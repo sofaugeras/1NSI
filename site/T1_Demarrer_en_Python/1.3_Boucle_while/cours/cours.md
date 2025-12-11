@@ -121,8 +121,7 @@ Voir le piège n°1 ...
 
     va écrire ```fini``` et s'arrêter.
 
-{{ initexo(0) }}
-!!! example "{{ exercice() }}"
+!!! example "exercice 1"
     === "Énoncé"
         Trouver le plus petit nombre entier $n$ tel que $2^n$ soit supérieur à 1 milliard.
     === "Correction"
@@ -145,7 +144,7 @@ La boucle bornée ```for``` que nous avons étudiée est très pratique.
 
 Mais nous pourrions nous en passer : toutes les boucles ```for``` peuvent en fait être ré-écrites en utilisant ```while```. (alors que la réciproque est fausse)
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 2"
     === "Énoncé"
         On considère le code ci-dessous :
         ```python linenums='1'
@@ -189,7 +188,7 @@ print("merci, j'étais bloqué dans une boucle infinie")
 - le début du code : ```while True``` est typique des boucles infinies volontaires. On aurait tout aussi bien pu écrire ```while 3 > 2``` (on rencontre même parfois des ```while 1```)
 - vous avez découvert l'expression ```break``` qui comme son nom l'indique permet de casser la boucle (cela marche pour ```while``` comme pour ```for```) et donc d'en sortir. Son emploi est controversé parmi les puristes de la programmation. Nous dirons juste que c'est une instruction bien pratique.
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 3"
     === "Énoncé"
         Proposer un code qui choisit un nombre aléatoire entre 1 et 10, puis qui propose en boucle à l'utilisateur de le deviner, tant que celui-ci n'a pas trouvé.
 
@@ -197,13 +196,13 @@ print("merci, j'étais bloqué dans une boucle infinie")
 
         - ```int()``` permet de convertir une chaîne de caractères en nombre. 
         - pour avoir un nombre ```a``` pseudo-aléatoire :
+        
         ```python
         from random import randint
         a = randint(1,10)
         ```
     === "Correction"
-        {{ correction(True,
-        "
+
         ```python linenums='1'
         from random import randint
 
@@ -215,6 +214,5 @@ print("merci, j'étais bloqué dans une boucle infinie")
                 break
         print('bravo !')
         ```
-        "
-        ) }}
+
         

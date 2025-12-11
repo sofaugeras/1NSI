@@ -255,7 +255,7 @@ Cette procédure d'**incrémentation** est très très classique, il faut la ma�
     ```
     Cette syntaxe peut se ranger dans la catégorie des **sucres syntaxiques** : c'est bien de la connaître, c'est amusant de s'en servir, mais son utilisation n'est en rien obligatoire et peut avoir un effet néfaste, celui d'oublier réellement ce qu'il se passe derrière.
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 1"
     === "Énoncé"
         Écrire le code «classique» et le code «Pythonesque» pour l'instruction suivante :
 
@@ -273,7 +273,7 @@ Cette procédure d'**incrémentation** est très très classique, il faut la ma�
         ```
 
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 2"
     === "Énoncé"
         Écrire le code «classique» et le code «Pythonesque» pour l'instruction suivante :
 
@@ -290,7 +290,7 @@ Cette procédure d'**incrémentation** est très très classique, il faut la ma�
         >>> cellule *= 2
         ```
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 3"
     === "Énoncé"
         Écrire le code «classique» et le code «Pythonesque» pour l'instruction suivante.
 
@@ -375,7 +375,7 @@ Vous pouvez vérifier maintenant que les valeurs de ```a``` et de ```b``` ont bi
     ```
     C'est de nouveau un *sucre syntaxique*. Cette syntaxe nous dispense de créer nous-même une troisième variable. Mais pas de miracle : en interne, Python crée lui-même cette variable temporaire. La simultanéité n'existe pas en informatique.
 
-!!! example "{{ exercice() }}"
+!!! example "exercice 4"
     === "Énoncé"
         Une petite erreur s'est glissée à Poudlard :
         ```python

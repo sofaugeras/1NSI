@@ -380,6 +380,7 @@ Il est possible, voire souhaitable (dès qu'on créé un code comportant plusieu
     def chat_penible(n):
         """
         Affiche n fois la chaine de caractères "meoww"
+        @param entree : n : int : nb de répétition
         """
         for k in range(n):
             print("meoww")
@@ -393,6 +394,7 @@ Il est possible, voire souhaitable (dès qu'on créé un code comportant plusieu
 
     chat_penible(n)
         Affiche n fois la chaine de caractères "meoww"
+        @param entree : n : int : nb de répétition
     ```
 
 Plus de renseignements sur les docstrings [ici](https://glassus.github.io/terminale_nsi/T2_Programmation/2.4_Pratiques_de_programmation/cours/#22-le-cas-particulier-des-docstrings)
@@ -420,8 +422,14 @@ AssertionError
 ```
 
 !!! note "Exemple d'un jeu de tests"
+
     ```python linenums='1'
     def maxi(n1, n2):
+        """
+        fonction qui détermine le maximum entre deux entiers
+        @param entrée : n1, n2 : int 
+        @param sortie : int : maximum des deux entiers
+        """
         if n1 < n2 :
             return n2
         else :
@@ -433,9 +441,23 @@ AssertionError
         assert maxi(7,7) == 7
         print("tests ok")
     
+    #ou directement à la suite de la fonction
+    assert maxi(3,4) == 4
+    assert maxi(5,2) == 5
+    assert maxi(7,7) == 7 
+    
     ```
 
 Il faut vérifier que les tests couvrent toutes les situations possibles, mais ce n'est pas toujours facile !
+
+!!! warning "Ce que l'on teste"
+
+    - Cas général : teste le comportement attendu de la fonction dans un cas "normal"
+    - Cas Limite : teste le comportement attendu de la fonction dans les limites de l'intervalle de valeur des paramètres d'entrée
+        - le zéro
+        - chaine de caractère Vide
+        - nombre négatif (si autorisé par )
+        - décimaux (si autorisé)
 
 !!! example "Exercice"
     === "Énoncé"
@@ -453,16 +475,18 @@ Il faut vérifier que les tests couvrent toutes les situations possibles, mais c
         2. Écrire la fonction ```fizzbuzz(n)```.
 
     === "Correction"
-        {{ correction(True,
         "
-        ```python linenums='1'
-        def test_fizzbuzz():
-            assert fizzbuzz(6) == 'fizz'
-            assert fizzbuzz(10) == 'buzz'
-            assert fizzbuzz(15) == 'fizzbuzz'
-            print('tests ok !')
-            
+        ```python linenums='1'    
         def fizzbuzz(n):
+            """
+            renvoie une chaine de caractères selon les règles du jeu fizzbuzz.
+            fizz si n est divisible par 3, 
+            buzz si n est divisible par 5, 
+            fizzbuzz si n est divisible par 3 et 5, n sinon
+            
+            @param entrée n: un entier : entier à tester
+            @sortie : entier ou chaine de caractère
+            """
             if n % 3 == 0 and n % 5 == 0:
                 return 'fizzbuzz'
             elif n % 3 == 0:
@@ -471,8 +495,12 @@ Il faut vérifier que les tests couvrent toutes les situations possibles, mais c
                 return 'buzz'
             else:
                 return n
-                
+
+        def test_fizzbuzz():
+            assert fizzbuzz(6) == 'fizz'
+            assert fizzbuzz(10) == 'buzz'
+            assert fizzbuzz(15) == 'fizzbuzz'
+            print('tests ok !')        
         ```
 
         "
-        ) }}
