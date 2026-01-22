@@ -605,9 +605,26 @@ Les listes en compréhension deviennent encore plus intéressantes lorsqu'on com
 
         lst = [f(x) for x in range(1, 11)]
         ```
-       
 
-!!! example "exercice 13"
+!!! example "Exercice 13 : Manipulation de tableau"
+    === "Énoncé"
+        Pour chacune des instructions ci-dessous, écrire le tableau qui a été créé.
+        ```python linenums='1'
+        tab_a = [ 2**x for x in range(11) ]
+        tab_b = [ 7 * x%2 for x in range(11) ]
+        tab_c = [ 7 * ((10**x) // 9) for x in range(1, 5) ]
+        tab_d = [ 'M. ' + car + ' ?' for car in 'XYZ' ]
+        ```
+    
+    === "Correction"
+        ```python linenums='1'
+        tab_a vaut [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024]
+        tab_b vaut [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
+        tab_c vaut [7, 77, 777, 7777]
+        tab_d vaut ['M. X ?', 'M. Y ?', 'M. Z ?']
+        ```         
+
+!!! example "exercice 14"
     === "Énoncé"
         On considère la liste ```lst = [51, 52, 66, 91, 92, 82, 65, 53, 86, 42, 79, 95]```. Seuls les nombres entre 60 et 90 ont une signification : ce sont des codes ASCII (récupérables par la fonction ```chr``` ).  
         Créer (en compréhension) une liste ```sol``` qui contient les lettres correspondants aux nombres ayant une signification.
@@ -619,7 +636,8 @@ Les listes en compréhension deviennent encore plus intéressantes lorsqu'on com
         >>> decode
         ['B', 'R', 'A', 'V', 'O']
         ```
-        
+
+
 
 ## 8. Un phénomène inquiétant : la copie de liste
 

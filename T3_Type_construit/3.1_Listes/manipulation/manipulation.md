@@ -87,24 +87,6 @@
 
 !!! example "Manipulation de tableau"
     === "Énoncé"
-        Pour chacune des instructions ci-dessous, écrire le tableau qui a été créé.
-        ```python linenums='1'
-        tab_a = [ 2**x for x in range(11) ]
-        tab_b = [ 7 * x%2 for x in range(11) ]
-        tab_c = [ 7 * ((10**x) // 9) for x in range(1, 5) ]
-        tab_d = [ 'M. ' + car + ' ?' for car in 'XYZ' ]
-        ```
-    
-    === "Correction"
-        ```python linenums='1'
-        tab_a vaut [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024]
-        tab_b vaut [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
-        tab_c vaut [7, 77, 777, 7777]
-        tab_d vaut ['M. X ?', 'M. Y ?', 'M. Z ?']
-        ```
-
-!!! example "Manipulation de tableau"
-    === "Énoncé"
         On rappelle que la fonction len() permet de retourner la longueur d'un tableau mais aussi la longueur d'une chaîne de caractères.
 
         1. Combien de noms vont être affichés à l'issue de la séquence d'instructions ci-dessous ? 

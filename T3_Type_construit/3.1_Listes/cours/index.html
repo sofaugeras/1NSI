@@ -3987,6 +3987,117 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_5" id="__nav_8_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    7.4 Robotique
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_5">
+            <span class="md-nav__icon md-icon"></span>
+            7.4 Robotique
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T7_IHM_Web/7.4_Robotique/cours/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notion d'IoT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T7_IHM_Web/7.4_Robotique/tp1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activité 1 - Premier programme micro-bit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../T7_IHM_Web/7.4_Robotique/tp2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activité 2 - Découverte des cartes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -5317,8 +5428,36 @@ Les listes en compréhension deviennent encore plus intéressantes lorsqu'on com
 </div>
 </div>
 <div class="admonition example">
-<p class="admonition-title">exercice 13</p>
+<p class="admonition-title">Exercice 13 : Manipulation de tableau</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Énoncé</label><label for="__tabbed_11_2">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Pour chacune des instructions ci-dessous, écrire le tableau qui a été créé.
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">tab_a</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">2</span><span class="o">**</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="p">]</span>
+<span class="n">tab_b</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">7</span> <span class="o">*</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span> <span class="p">]</span>
+<span class="n">tab_c</span> <span class="o">=</span> <span class="p">[</span> <span class="mi">7</span> <span class="o">*</span> <span class="p">((</span><span class="mi">10</span><span class="o">**</span><span class="n">x</span><span class="p">)</span> <span class="o">//</span> <span class="mi">9</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="p">]</span>
+<span class="n">tab_d</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;M. &#39;</span> <span class="o">+</span> <span class="n">car</span> <span class="o">+</span> <span class="s1">&#39; ?&#39;</span> <span class="k">for</span> <span class="n">car</span> <span class="ow">in</span> <span class="s1">&#39;XYZ&#39;</span> <span class="p">]</span>
+</code></pre></div></td></tr></table></div></p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">tab_a</span> <span class="n">vaut</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">256</span><span class="p">,</span> <span class="mi">512</span><span class="p">,</span> <span class="mi">1024</span><span class="p">]</span>
+<span class="n">tab_b</span> <span class="n">vaut</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">tab_c</span> <span class="n">vaut</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">777</span><span class="p">,</span> <span class="mi">7777</span><span class="p">]</span>
+<span class="n">tab_d</span> <span class="n">vaut</span> <span class="p">[</span><span class="s1">&#39;M. X ?&#39;</span><span class="p">,</span> <span class="s1">&#39;M. Y ?&#39;</span><span class="p">,</span> <span class="s1">&#39;M. Z ?&#39;</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">exercice 14</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Énoncé</label><label for="__tabbed_12_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>On considère la liste <code>lst = [51, 52, 66, 91, 92, 82, 65, 53, 86, 42, 79, 95]</code>. Seuls les nombres entre 60 et 90 ont une signification : ce sont des codes ASCII (récupérables par la fonction <code>chr</code> ).<br />
@@ -5374,7 +5513,7 @@ D'autres possibilités existent, comme <code>listA.copy()</code>, ou encore <cod
 </div>
 <div class="admonition example">
 <p class="admonition-title">exercice 14</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">Énoncé</label><label for="__tabbed_12_2">Correction</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Énoncé</label><label for="__tabbed_13_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Effectuer les tests nécessaires pour prouver que l'exemple précédent a bien produit deux objets différents.</p>
@@ -5415,7 +5554,7 @@ D'autres possibilités existent, comme <code>listA.copy()</code>, ou encore <cod
 <p>La liste <code>a</code> est composée de 3 éléments qui sont eux-même des listes de 3 éléments.</p>
 <div class="admonition example">
 <p class="admonition-title">exercice 15</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">Énoncé</label><label for="__tabbed_13_2">Correction</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Énoncé</label><label for="__tabbed_14_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>On considère le jeu du Morpion (ou <em>Tic-Tac-Toe</em>) dont la surface de jeu vierge est representée par le tableau :<br />
@@ -5464,7 +5603,7 @@ D'autres possibilités existent, comme <code>listA.copy()</code>, ou encore <cod
 </div>
 <div class="admonition example">
 <p class="admonition-title">exercice 2</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">Énoncé</label><label for="__tabbed_14_2">Correction</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">Énoncé</label><label for="__tabbed_15_2">Correction</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>On considère la liste <code>m</code> ('m' comme <em>matrice</em>) suivante :  </p>
