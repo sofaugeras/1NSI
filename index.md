@@ -1,7 +1,7 @@
 
 !!! abstract ":star: Thèmes en cours d'étude :star: "
-    📌 [Thème 3 : Type Construit : les tuples](./T3_Type_construit/3.2_tuples/cours/)  <br />
-    ⌛️ A venir :  [Thème 4 : Réseau](./T4_Architecture_materielle/4.2_Architecture_reseau/cours.md)<br />
+    📌  [Thème 4 : Réseau](./T4_Architecture_materielle/4.2_Architecture_reseau/cours.md)<br />
+    ⌛️ A venir : [Thème 4 : Architecture matérielle : OS et commande Linux](T4_Architecture_materielle/4.4_Decouverte_des_commandes_Linux/cours.md) <br />
 
 !!! warning "Mémo python"
     le mémento Python est disponible ici : :snake: [mémento Python](./data/mementopython3.pdf)
@@ -29,7 +29,7 @@
     - [Thème 3 : Type Construit : les Listes](./T3_Type_construit/3.1_Listes/cours.md)<br />
     - [Thème 5 : extremum et moyenne](./T5_Algorithmique/5.1_Extremums_et_moyennes/cours.md)<br />
     - [Thème 5 : Complexité](./T5_Algorithmique/5.2_Complexite/cours.md) <br />
-    
+    - [Thème 3 : Type Construit : les tuples](./T3_Type_construit/3.2_Tuples/cours.md)  <br />
 
 <!--
 
@@ -40,7 +40,6 @@
 
     - [Thème 3 : Type Construit : les dictionnaires](./T3_Type_construit/3.3_Dictionnaires/cours/) <br />
     - [Traitement de données](/1NSI/docs/T6_Traitement_de_donnees/sommaire.md)<br />
-    - [Thème 4 : Réseau](./T4_Architecture_materielle/4.2_Architecture_reseau/cours.md)<br />
     - [Projet CSV](./T8_Projets/2_ProjetCSV/cours.md)<br />
     - [Thème 4 : Architecture matérielle : OS et commande Linux](T4_Architecture_materielle/4.4_Decouverte_des_commandes_Linux/cours.md) <br />
     - [Thème 4 : Protocole de communication](./T4_Architecture_materielle/4.3_Protocoles_de_communication/cours.md) <br />
@@ -51,6 +50,5 @@
     - [Algorithme KNN](./T5_Algorithmique/5.7_Algorithme_KNN/cours.md)<br />
     - [IHM sur le Web](./T7_IHM_Web/7.3_Get_Post_Formulaires/cours/)
     - mini projet morpions et sockets ou TP Pyxel jeu de tir
-
 
 -->

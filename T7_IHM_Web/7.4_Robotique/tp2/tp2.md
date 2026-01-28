@@ -1,4 +1,4 @@
-# Découverte des cartes
+# Activité 2 : Découverte des cartes
 
 Dans l'activité précédente, nous avons utilisé « l'écran » composé de 25 DELS.
 
@@ -22,8 +22,8 @@ Elles possèdent entre autres :
 La carte **micro:bit** a deux boutons A et B situés à gauche et à droite de l'écran. On peut détecter s'ils sont pressés en utilisant les deux fonctions suivantes :
 
 !!! info "button"
-    ``button_a.is_pressed()`` qui renvoit ``True`` (vrai) si le bouton A est pressé au moment où cette fonction est exécutée, et ``False`` (faux) sinon ;<br />
-    ``button_a.was_pressed()`` qui renvoit ``True`` (vrai) si le bouton A a été pressé depuis que la carte a été allumée, ou depuis le dernier appel de cette fonction, et ``False`` (faux) sinon ;<br />
+    ``button_a.is_pressed()`` qui renvoit ``True`` (vrai) si le bouton A est pressé au moment où cette fonction est exécutée, et ``False`` (faux) sinon <br />
+    ``button_a.was_pressed()`` qui renvoit ``True`` (vrai) si le bouton A a été pressé depuis que la carte a été allumée, ou depuis le dernier appel de cette fonction, et ``False`` (faux) sinon <br />
     ``button_b.is_pressed()`` et ``button_b.was_pressed()`` a la même signification, mais pour l'autre bouton.
 
 Les deux fonctions semblent à première vue très proche. Une différence apparaîtra en exécutant une action dans une boucle si le bouton est appuyé. Si le bouton est appuyé longtemps (plus d'un centième de secondes) :<br />
@@ -32,13 +32,18 @@ Les deux fonctions semblent à première vue très proche. Une différence appar
 
 En pratique, vous aurez peu à vous soucier de cette différence.
 
-!!! question "Horloge"
+!!! question "Programme 5 : Horloge"
 
     1. copier-coller ce code ci-dessous dans l'[éditeur](https://python.microbit.org/v/3){target="_blank"}
+    2. Vérifiez qu'en appuyant sur le bouton de droite, l'aiguille s'arrête de tourner, et qu'en appuyant sur le bouton de gauche, elle se remet à tourner.
+    3. Lisez et comprenez comment le programme fonctionne.
+    4. Modifiez le programme pour inverser le rôle des deux boutons.
+
+    👍 Appelez l'enseignant pour validation ❗
 
     ??? info "code à copier"
 
-        ```python
+        ```python linenums="1"
         from microbit import *
 
         # Liste des images d'aiguilles à afficher
@@ -76,17 +81,22 @@ En pratique, vous aurez peu à vous soucier de cette différence.
             elif button_b.is_pressed():
                 etat = "stop"
         ```
-        2. Vérifiez qu'en appuyant sur le bouton de droite, l'aiguille s'arrête de tourner, et qu'en appuyant sur le bouton de gauche, elle se remet à tourner.
-        3. Lisez et comprenez comment le programme fonctionne.
-        4. Modifiez le programme pour inverser le rôle des deux boutons.
 
-        👍 Appelez l'enseignant pour validation ❗
+!!! question "Programme 6 : Compteur"
 
-!!! question "Compteur"
-     1. copier-coller ce code ci-dessous dans l'[éditeur](https://python.microbit.org/v/3){target="_blank"}
+    1. copier-coller ce code ci-dessous dans l'[éditeur](https://python.microbit.org/v/3){target="_blank"}
+    2. Vérifiez qu'il fonctionne comme attendu : il doit afficher le nombre 0, et augmenter de 1 à chaque fois que vous appuyez sur le bouton B.<br />
+    3. Modifiez ce programme pour diminuer le compteur de 1 lorsque vous appuyez sur le bouton A.<br />
+    4. Modifiez ce programme pour remettre le compteur à 0 lorsque vous appuyez sur les deux boutons en même temps. Pour faire ceci, vous devrez :<br />
+
+        - utiliser le mot-clef ``and`` pour tester deux conditions en même temps ;<br />
+        - utiliser, pour ce test, ``is_pressed()`` plutôt que ``was_pressed()``.
+
+    👍 Appelez l'enseignant pour validation ❗
+
     ??? info "code à copier"
 
-        ```python
+        ```python linenums="1"
         from microbit import *
 
         # Initialiation du compteur à 0
@@ -100,15 +110,7 @@ En pratique, vous aurez peu à vous soucier de cette différence.
                 # Alors augmenter la valeur du compteur de 1
                 compteur = compteur + 1
         ```
-    2. Vérifiez qu'il fonctionne comme attendu : il doit afficher le nombre 0, et augmenter de 1 à chaque fois que vous appuyez sur le bouton B.<br />
-    3. Modifiez ce programme pour diminuer le compteur de 1 lorsque vous appuyez sur le bouton A.<br />
-    4. Modifiez ce programme pour remettre le compteur à 0 lorsque vous appuyez sur les deux boutons en même temps. Pour faire ceci, vous devrez :<br />
-
-        - utiliser le mot-clef ``and`` pour tester deux conditions en même temps ;<br />
-        - utiliser, pour ce test, ``is_pressed()`` plutôt que ``was_pressed()``.
-
-    👍 Appelez l'enseignant pour validation ❗
-
+    
 ## 2. Accéléromètre
 
 Les cartes micro:bit embarquent en leur sein un accéléromètre.<br />
@@ -118,7 +120,7 @@ Ainsi la carte est capable de reconnaître différent mouvement/gestes. Parmi le
 
 Pour plus d'information, on peut se référer à la [documentation de la carte](https://microbit-micropython.readthedocs.io/en/latest/tutorials/gestures.html){target="_blank"}.
 
-!!! question "Smiley Joyeux"
+!!! question "Programme 7 : Smiley Joyeux"
 
     Maintenant que nous savons ce qu'est un accéléromètre, on veut programmer notre carte, afin qu'elle affiche un smiley joyeux quand on est face visible et un smiley pas content sinon.
 
@@ -130,6 +132,7 @@ Pour plus d'information, on peut se référer à la [documentation de la carte](
         ```python
         geste = accelerometer.current_gesture()
         ```
+
     ??? tip "Indice 2"
         Maintenant que l'on à le geste, il nous faut le comparer au geste qui correspond à être face visible (face up).
 
@@ -162,4 +165,3 @@ Pour plus d'information, on peut se référer à la [documentation de la carte](
         **Sinon**, si la condition est **Fausse**, alors on exécute le bloc après else (sinon en anglais). (On prendra bien soin de bien décalé aussi ce code de 4 espaces supplémentaires)
 
         Une fois l'un ou l'autre des codes exécuté, on reviendra à l'exécution du code aligné avec le **if**.
-

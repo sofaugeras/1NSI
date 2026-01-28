@@ -1,4 +1,4 @@
-# Qu'est-ce que Micro-Bit ?
+# Activité 1 : Qu'est-ce que Micro-Bit ?
 
 ## 1. Un micro-contrôleur...
 
@@ -57,9 +57,7 @@ On ferra attention à respecter la casse (minuscules/majuscules) et les espaces.
 
 ```python linenums='1'
 from microbit import *
-
 display.show(Image.HAPPY)
-
 ```
 On notera qu'un programme pour carte **micro:bit** commence toujours avec cette ligne : ``from microbit import *``. Cela permet d'importer les bibliothèques **micro:bit** et ainsi pouvoir interagir avec la carte.
 
@@ -80,7 +78,7 @@ En utilisant le bouton Open..., juste à coté vous pourrez rouvrir votre travai
 
 ### 3.3 Transférer son travail sur la carte
 
-Il est l'heure maintenant de mettre ce petit programme sur notre carte. Pour ce faire nous avons deux méthodes.
+Il est l'heure maintenant de mettre ce petit programme sur notre carte. Pour être "activer" sur la carte micro:bit, il faut télécharger sur la carte un fichier avec l'extension ``.hex``. Pour ce faire nous avons deux méthodes.
 
 !!! tip "La version simple mais qui fonctionne rarement"
 
@@ -97,7 +95,8 @@ Il est l'heure maintenant de mettre ce petit programme sur notre carte. Pour ce 
 
     1. Branchez la carte à l'ordinateur à l'aide du câble USB fourni ;
     2. Sur le site, cliquez sur le bouton Save (en bas à droite) ;
-    3. Copiez le fichier ainsi téléchargé sur la carte
+    3. Regarder dans votre explorateur de fichier, dans "Téléchargement"
+    4. Copiez le fichier ainsi téléchargé sur la carte
         > Si la copie échoue réessayez.
         > Si le problème persiste, appelez le·a professeur·e
 
@@ -136,14 +135,14 @@ Maintenant, il serait temps de créer nos propres programmes.
     ??? tip "Indice"
         La fonction sleep, permet de suspendre le programme pour un nombre définit de millisecondes.
 
-        ```python {linenums="1"}
+        ```python linenums="1"
         # Attend (ne fait rien) pendant 1.5 secondes
         sleep(1500)
         ```
 
 !!! question "Programme 4 : Boucle"
 
-    On aimerait désormais afficher cette séquence en boucle à l'infini. Modifiez votre programme afin de faire une boucle infinie.
+    On aimerait désormais afficher cette séquence (Happy + smiley) en boucle à l'infini. Modifiez votre programme afin de faire une boucle infinie.
 
     👍 Appelez l'enseignant pour validation ❗
 
@@ -151,8 +150,10 @@ Maintenant, il serait temps de créer nos propres programmes.
         L'instruction while permet de faire des boucles, i.e. de répéter une action.<br />
         Le code suivant affiche à l'infini une alternance de smiley joyeux et triste.
 
-        ```python {linenums="1"}
+        ```python linenums="1"
         while True:
             display.show(Image.HAPPY)
+            sleep(1500)
             display.show(Image.SAD)
+            sleep(1500)
         ```

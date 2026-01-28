@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#quest-ce-que-micro-bit" class="md-skip">
+        <a href="#activite-1-quest-ce-que-micro-bit" class="md-skip">
           Aller au contenu
         </a>
       
@@ -3940,6 +3940,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tp3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activité 3 - Pour aller plus loin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4684,7 +4705,7 @@
   
 
 
-<h1 id="quest-ce-que-micro-bit">Qu'est-ce que Micro-Bit ?<a class="headerlink" href="#quest-ce-que-micro-bit" title="Permanent link">⚓︎</a></h1>
+<h1 id="activite-1-quest-ce-que-micro-bit">Activité 1 : Qu'est-ce que Micro-Bit ?<a class="headerlink" href="#activite-1-quest-ce-que-micro-bit" title="Permanent link">⚓︎</a></h1>
 <h2 id="1-un-micro-controleur">1. Un micro-contrôleur...<a class="headerlink" href="#1-un-micro-controleur" title="Permanent link">⚓︎</a></h2>
 <p>Dans un format réduit qui tient dans une main (52×42 mm), ce micro-contrôleur est une carte électronique programmable pour interagir avec le monde réel.</p>
 <p>C'est une version simplifiée et accessible de l'électronique que tout un chacun peut manipuler au quotidien.</p>
@@ -4763,9 +4784,7 @@ Créer un sous-dossier <strong>Robotique</strong>. Dans ce dossier, vous veiller
 <p>Remplacez le code existant par le code suivant.</p>
 <p>On ferra attention à respecter la casse (minuscules/majuscules) et les espaces. ctrl+C pour copier, ctrl+V pour coller.</p>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
-
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">microbit</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">HAPPY</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 On notera qu'un programme pour carte <strong>micro:bit</strong> commence toujours avec cette ligne : <code>from microbit import *</code>. Cela permet d'importer les bibliothèques <strong>micro:bit</strong> et ainsi pouvoir interagir avec la carte.</p>
@@ -4783,7 +4802,7 @@ On notera qu'un programme pour carte <strong>micro:bit</strong> commence toujour
 </div>
 <p>En utilisant le bouton Open..., juste à coté vous pourrez rouvrir votre travail dans le futur.</p>
 <h3 id="33-transferer-son-travail-sur-la-carte">3.3 Transférer son travail sur la carte<a class="headerlink" href="#33-transferer-son-travail-sur-la-carte" title="Permanent link">⚓︎</a></h3>
-<p>Il est l'heure maintenant de mettre ce petit programme sur notre carte. Pour ce faire nous avons deux méthodes.</p>
+<p>Il est l'heure maintenant de mettre ce petit programme sur notre carte. Pour être "activer" sur la carte micro:bit, il faut télécharger sur la carte un fichier avec l'extension <code>.hex</code>. Pour ce faire nous avons deux méthodes.</p>
 <div class="admonition tip">
 <p class="admonition-title">La version simple mais qui fonctionne rarement</p>
 <p><img alt="send" class="center" src="../data/send_to_microbit_1.png" width="50%" /></p>
@@ -4800,6 +4819,7 @@ On notera qu'un programme pour carte <strong>micro:bit</strong> commence toujour
 <ol>
 <li>Branchez la carte à l'ordinateur à l'aide du câble USB fourni ;</li>
 <li>Sur le site, cliquez sur le bouton Save (en bas à droite) ;</li>
+<li>Regarder dans votre explorateur de fichier, dans "Téléchargement"</li>
 <li>Copiez le fichier ainsi téléchargé sur la carte
     &gt; Si la copie échoue réessayez.
     &gt; Si le problème persiste, appelez le·a professeur·e</li>
@@ -4835,24 +4855,30 @@ La fonction <code>scroll</code> qui fait défiler le texte : <code>display.scrol
 <details class="tip">
 <summary>Indice</summary>
 <p>La fonction sleep, permet de suspendre le programme pour un nombre définit de millisecondes.</p>
-<p>```python {linenums="1"}</p>
-<h1 id="attend-ne-fait-rien-pendant-15-secondes">Attend (ne fait rien) pendant 1.5 secondes<a class="headerlink" href="#attend-ne-fait-rien-pendant-15-secondes" title="Permanent link">⚓︎</a></h1>
-<p>sleep(1500)
-```</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Attend (ne fait rien) pendant 1.5 secondes</span>
+<span class="n">sleep</span><span class="p">(</span><span class="mi">1500</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 </details>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Programme 4 : Boucle</p>
-<p>On aimerait désormais afficher cette séquence en boucle à l'infini. Modifiez votre programme afin de faire une boucle infinie.</p>
+<p>On aimerait désormais afficher cette séquence (Happy + smiley) en boucle à l'infini. Modifiez votre programme afin de faire une boucle infinie.</p>
 <p>👍 Appelez l'enseignant pour validation ❗</p>
 <details class="tip">
 <summary>Indice</summary>
 <p>L'instruction while permet de faire des boucles, i.e. de répéter une action.<br />
 Le code suivant affiche à l'infini une alternance de smiley joyeux et triste.</p>
-<p><code>python {linenums="1"}
-while True:
-    display.show(Image.HAPPY)
-    display.show(Image.SAD)</code></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">HAPPY</span><span class="p">)</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">1500</span><span class="p">)</span>
+    <span class="n">display</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">SAD</span><span class="p">)</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">1500</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
 </details>
 </div>
 
