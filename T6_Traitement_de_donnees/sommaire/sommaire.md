@@ -1,8 +1,0 @@
-# Thème 6 :  Traitement de données
-
-!!! info "Crédits"
-    Crédit du cours : [@Gilles Lassus](https://glassus.github.io/premiere_nsi/T6_Traitement_de_donnees/sommaire/)
-
-1. [Manipulation de fichiers csv](./6.1_Manipulation_csv/cours.md)
-2. [Trier des données](./6.2_Trier_des_donnees/cours.md)
-3. [Utilisation du module Pandas](./6.3_Pandas/cours.md)
