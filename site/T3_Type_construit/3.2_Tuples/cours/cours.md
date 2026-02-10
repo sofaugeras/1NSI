@@ -116,26 +116,5 @@ def division(a, b):
 (4,1)
 ```
 
-### 6. Exercice 
 
-!!! abstract "Exercice"
-    === "Énoncé"
-        On considère deux points A et B d'un repère quelconque. Leurs coordonnées sont des tuples à deux éléments.
-        Écrire une fonction qui prend en argument les coordonnées de deux points et qui renvoie le milieu de ces deux points.
-
-        La fonction doit fonctionner de cette manière :
-        ```python
-        >>> C = (45, 12)
-        >>> D = (49, 32)
-        >>> milieu(C,D)
-        (47, 22)
-        ```
-
-    === "Correction"
-        ```python
-        def milieu(point1, point2):
-            abscisse = (point1[0]+point2[0]) / 2
-            ordonnee = (point1[1]+point2[1]) / 2
-            return (abscisse, ordonnee)
-        ```
 

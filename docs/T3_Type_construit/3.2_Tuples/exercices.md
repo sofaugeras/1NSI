@@ -16,23 +16,23 @@
         b vaut M. <br />
         c vaut 19
 
-!!! example "exercice"
+!!! abstract "Exercice"
     === "Énoncé"
-        ![image](data/sanglier.jpg){: .center width=60%}
-        Résolvez le **Pydéfi** proposé à [cette adresse](https://pydefis.callicode.fr/defis/Herculito04Sanglier/txt)
+        On considère deux points A et B d'un repère quelconque. Leurs coordonnées sont des tuples à deux éléments.
+        Écrire une fonction qui prend en argument les coordonnées de deux points et qui renvoie le milieu de ces deux points.
 
-        Vous pouvez vous créer un compte pour valider vos résultats, ce site (géré par l'Académie de Poitiers) est **remarquable**. 
-    
+        La fonction doit fonctionner de cette manière :
+        ```python
+        >>> C = (45, 12)
+        >>> D = (49, 32)
+        >>> milieu(C,D)
+        (47, 22)
+        ```
+
     === "Correction"
-        (avec les valeurs de test)
-        ```python linenums='1'
-        lst = [0, 50, 40, 100, 70, 90, 0]
-
-        total = 0
-        for i in range(len(lst)-1):
-            if lst[i] > lst[i+1]:
-                nb_pierres = (lst[i]-lst[i+1])//10 + 1
-                total += nb_pierres
-
-        print(total)
+        ```python
+        def milieu(point1, point2):
+            abscisse = (point1[0]+point2[0]) / 2
+            ordonnee = (point1[1]+point2[1]) / 2
+            return (abscisse, ordonnee)
         ```

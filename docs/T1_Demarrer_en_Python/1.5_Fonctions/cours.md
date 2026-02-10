@@ -404,7 +404,7 @@ Plus de renseignements sur les docstrings [ici](https://glassus.github.io/termin
 ![image](data/tests.png){: .center width=40%}
 
 
-Les exercices de [cette feuille](../exercices/) sont (presque) tous livrés avec un *jeu de tests*. Il s'agit d'une fonction, souvent appelée ```test_nom_de_la fonction()```, qui va regrouper les différents tests qu'on pourrait faire en console pour vérifier que la fonction a le comportement désiré.
+Les exercices de [cette feuille](exercices.md) sont (presque) tous livrés avec un *jeu de tests*. Il s'agit d'une fonction, souvent appelée ```test_nom_de_la fonction()```, qui va regrouper les différents tests qu'on pourrait faire en console pour vérifier que la fonction a le comportement désiré.
 
 Ces tests reposent sur le mot-clé ```assert```, qui va lever une erreur lorsqu'il est suivi d'une expression évaluée à ```False``` :
 

@@ -145,7 +145,7 @@ permet de faire ceci :
 
 ## Un fichier un peu plus intéressant : les joueurs de rugby du TOP14
 
-Le fichier [`top14.csv `](../data/top14.csv)  contient tous les joueurs du Top14 de rugby, saison 2019-2020, avec leur date de naissance, leur poste, et leurs mensurations. 
+Le fichier [`top14.csv `](./data/top14.csv)  contient tous les joueurs du Top14 de rugby, saison 2019-2020, avec leur date de naissance, leur poste, et leurs mensurations. 
 
 _Ce fichier a été généré par Rémi Deniaud, de l'académie de Bordeaux._
 

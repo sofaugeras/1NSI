@@ -118,8 +118,8 @@ plugins:
   - awesome-pages:
       collapse_single_pages: false
   #- macros
-  - mkdocs-jupyter:
-      include_source: True
+  # - mkdocs-jupyter:
+  #     include_source: True
   #- page-to-pdf
 
 extra:

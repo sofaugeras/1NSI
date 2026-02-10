@@ -1,9 +1,6 @@
 !!! note "Crédit"
     @crédit : Thomas Foirien et Stéphan Van Zuijlen  
 
-!!! warning "Téléchargement"
-    Vous pouvez télécharger le notebook [ici](./TP_chaines.ipynb)
-
 !!! example "Exercice 1"
     === "Enoncé"
         Ecrire un programme qui affiche la <strong>première</strong> lettre d'un mot saisi par l'utilisateur.

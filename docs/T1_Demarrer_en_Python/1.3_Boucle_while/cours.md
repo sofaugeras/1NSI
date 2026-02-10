@@ -78,13 +78,13 @@ False
 True
 ```
 
-Un cours sur les booléens aura lieu [ici](../../../T2_Representation_des_donnees/2.5_Booleens/cours/).
+Un cours sur les booléens aura lieu [ici](../../T2_Type_de_base/2.5_Booleens/cours.md).
 
 ### 2.2 Les instructions
 
 Les instructions ```instruction1``` jusqu'à ```instructionN``` sont exécutées dans cet ordre à chaque tour de boucle. 
 
-:warning: **Attention :** ces instructions doivent obligatoirement avoir un impact sur la ```condition``` évaluée après le ```while```(dans le cours sur la [dichotomie](../../../T4_Algorithmique/4.5_Dichotomie/cours/), nous évoquerons la notion de _variant de boucle_).
+:warning: **Attention :** ces instructions doivent obligatoirement avoir un impact sur la ```condition``` évaluée après le ```while```(dans le cours sur la [dichotomie](../../T5_Algorithmique/5.5_Dichotomie/cours.md), nous évoquerons la notion de _variant de boucle_).
 
 Voir le piège n°1 ...
 

@@ -8,7 +8,7 @@
 
 ## Pré-requis  
 
-:arrow_forward: Savoir utiliser le module [Pandas](/1NSI/docs/T6_Traitement_de_donnees/6.3_Pandas/cours.md)
+:arrow_forward: Savoir utiliser le module [Pandas](../../T6_Traitement_de_donnees/6.3_Pandas/cours.md)
 
 ## Introduction
 

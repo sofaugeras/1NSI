@@ -15,37 +15,29 @@
         - l'adresse IP de la dernière machine
 
     === "Solution"
-        Adresse IP : 192.168.1.100/20
+        Adresse IP : 192.168.1.100/20<br />
         En binaire : 11000000.10101000.00000001.01100100
 
-        1. Le masque de sous-réseau est : 11111111.11111111.11110000.00000000
-        c'est à dire en décimal :
-        255.255.240.0
+        1. Le masque de sous-réseau est : 11111111.11111111.11110000.00000000<br />
+        c'est à dire en décimal :255.255.240.0
 
         2. L'adresse du réseau :
-        11000000.10101000.00000001.01100100
-        AND
-        11111111.11111111.11110000.00000000
-        👉
-        L'adresse du réseau est donc :
-        11000000.10101000.00000000.00000000
-        c'est à dire en décimal :
-        192.168.0.0
+        11000000.10101000.00000001.01100100<br />
+        AND<br />
+        11111111.11111111.11110000.00000000<br />
+        👉 L'adresse du réseau est donc : 11000000.10101000.00000000.00000000<br />
+        c'est à dire en décimal : 192.168.0.0
 
-        3. Le nombre de machines que l'on peut connecter à ce réseau :
-        La dernière adresse possible pour la plage réservée aux adresses machines est 1111 11111111 On peut donc connecter 
-        machines
+        3. Le nombre de machines que l'on peut connecter à ce réseau :<br />
+        La dernière adresse possible pour la plage réservée aux adresses machines est 1111 11111111 On peut donc connecter $16*256 = 4096$ machines
 
-        4. L'adresse broadcast est donc
-        11000000.10101000.00001111.11111111
+        4. L'adresse broadcast est donc 11000000.10101000.00001111.11111111<br />
         C'est à dire en décimal : 192.168.15.255
 
-        5. L'adresse IP de la première machine est
-        11000000.10101000.00000000.00000001
+        5. L'adresse IP de la première machine est 11000000.10101000.00000000.00000001<br />
         C'est à dire en décimal : 192.168.0.1
 
-        6. L'adresse IP de la dernière machine est
-        11000000.10101000.00001111.11111110
+        6. L'adresse IP de la dernière machine est 11000000.10101000.00001111.11111110<br />
         C'est à dire en décimal : 192.168.15.254
 
 ## QCM

@@ -39,8 +39,6 @@ Lien vers l'article de [Wikipedia](https://fr.wikipedia.org/wiki/Probl%C3%A8me_d
 En algorithmique, le problème du sac à dos, noté également KP (en anglais, Knapsack problem) est un <u>problème d'optimisation combinatoire</u>. ... 
 Ou plus simplement, les objets mis dans le sac à dos doivent maximiser la valeur totale, sans dépasser le poids maximum.
 
-[Télécharger Notebook](./data/gloutons.zip){. target="_blank" .md-button }
-
 # La NASA
 
 Vous faites partie de l'équipage d'un vaisseau spatial qui doit rejoindre une base installée sur la face visible de la Lune. Mais, suite à un certain nombre de problèmes, vous êtes contraints de vous poser en catastrophe, à 320 km du point prévu. 

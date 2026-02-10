@@ -34,7 +34,7 @@ Bibliothèques de données (la liste est donnée à titre indicative, il existe 
 
 ## AIDE : 
 Tutoriel bibliothèque Panda : <br />
-- [cours](T6_Traitement_de_donnees/6.3_Pandas/cours.md)<br />
+- [cours](../../T6_Traitement_de_donnees/6.3_Pandas/cours.md)<br />
 - [tuto d initiation panda et matplotlib](https://www.actuia.com/tutoriel/tutoriel-dinitiation-a-lia-python-pandas-et-matplotlib-partie-2/)
 
 ## IDEE de PROJET : 
