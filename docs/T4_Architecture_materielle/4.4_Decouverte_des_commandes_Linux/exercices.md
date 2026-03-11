@@ -60,7 +60,7 @@
         On suppose que le répertoire courant est le répertoire personnel, que les répertoires `NSI` et `NSI/TP_SHELL` existent et que dans ce dernier répertoire il y a deux fichiers : `lisible.txt` et `secret.txt`.<br />
         Donner les commandes permettant de mettre les permissions demandées, quelles que soient les permissions initiales sur les fichier ou répertoires.
 
-        1. Le répertoire personnel possède tous les droites pour l'utilisateur et uniquement le droit d’exécution pour le groupe et les autres
+        1. Le répertoire personnel possède tous les droits pour l'utilisateur et uniquement le droit d’exécution pour le groupe et les autres
         
         2. Les répertoires NSI et NSI/TP_SHELL possèdent tous les droits pour l'utilisateur et les droits de lecture et d'exécution pour le groupe et les autres
         

@@ -79,8 +79,8 @@ On va d’abord utiliser des commandes shell qui permettent de se **déplacer** 
     ```
     Limite-toi à un niveau de profondeur, sauf pour `/home/` où tu illustreras les sous-répertoires, et `/home/alice` où tu montreras les fichiers ordinaires et quelques dossiers.
 
-6.	Rends-toi dans le dossier `/home/bob/vide/`.
-    Écris une commande unique qui permet alors de se rendre directement dans `/home/alice/Documents/`.
+6.	Rends-toi dans le dossier `/home/bob/`.
+    Écris une commande unique qui permet alors de se rendre directement dans `/home/alice/Devoirs/`.
 
 ### 2. Expansion de la ligne de commande, motifs
 
