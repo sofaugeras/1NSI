@@ -29,7 +29,7 @@
     
     
       
-        <title>Manipulation de fichiers csv - Saint Sauveur 1NSI</title>
+        <title>6.1 Manipulation de fichiers csv - Saint Sauveur 1NSI</title>
       
     
     
@@ -98,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#manipulation-de-fichiers-csv" class="md-skip">
+        <a href="#61-manipulation-de-fichiers-csv" class="md-skip">
           Aller au contenu
         </a>
       
@@ -132,7 +132,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Manipulation de fichiers csv
+              6.1 Manipulation de fichiers csv
             
           </span>
         </div>
@@ -4089,7 +4089,7 @@
   <span class="md-ellipsis">
     
   
-    Manipulation de fichiers csv
+    6.1 Manipulation de fichiers csv
   
 
     
@@ -4107,7 +4107,7 @@
   <span class="md-ellipsis">
     
   
-    Manipulation de fichiers csv
+    6.1 Manipulation de fichiers csv
   
 
     
@@ -4348,7 +4348,7 @@
   <span class="md-ellipsis">
     
   
-    Trier des données
+    6.2 Trier des données
   
 
     
@@ -5856,7 +5856,7 @@
   
 
 
-<h1 id="manipulation-de-fichiers-csv">Manipulation de fichiers csv<a class="headerlink" href="#manipulation-de-fichiers-csv" title="Permanent link">⚓︎</a></h1>
+<h1 id="61-manipulation-de-fichiers-csv">6.1 Manipulation de fichiers csv<a class="headerlink" href="#61-manipulation-de-fichiers-csv" title="Permanent link">⚓︎</a></h1>
 <p><img alt="image" class="center" src="../data/BO.png" /></p>
 <div class="admonition info">
 <p class="admonition-title">définition</p>
@@ -6077,9 +6077,7 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">🐍 Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
-<span class="n">X</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span><span class="p">]</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">X</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span><span class="p">]</span>
 <span class="n">Y</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span><span class="p">]</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="s1">&#39;ro&#39;</span><span class="p">)</span> <span class="c1"># r pour red, o pour un cercle. voir https://matplotlib.org/api/markers_api.html</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -6105,9 +6103,7 @@ Python permet de lire et d'extraire des informations d'un fichier CSV même trè
 <span class="normal">14</span>
 <span class="normal">15</span>
 <span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
-<span class="c1">#tous les joueurs</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">#tous les joueurs</span>
 <span class="n">X</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span><span class="p">]</span>
 <span class="n">Y</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">joueur</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">])</span> <span class="k">for</span> <span class="n">joueur</span> <span class="ow">in</span> <span class="n">joueurs</span><span class="p">]</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="s1">&#39;ro&#39;</span><span class="p">)</span> 
