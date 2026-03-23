@@ -4353,10 +4353,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rajout-dune-colonne" class="md-nav__link">
+  <a href="#ajout-dune-colonne" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Rajout d'une colonne
+        Ajout d'une colonne
       
     </span>
   </a>
@@ -5802,32 +5802,26 @@ Il est possible d'avoir uniquement les premières lignes du fichier avec la comm
 <p>❓ Que fait l'instruction <code>df.head()</code> ?</p>
 <details class="tip">
 <summary>réponse</summary>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```python
-df.head()
-```
-Elle renvoie les n premières lignes de `Df`. Par défaut n=5.
-![extrait](data/head.jpg){: .center width=50%}
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </code></pre></div>
+Elle renvoie les n premières lignes de <code>Df</code>. Par défaut n=5.
+<img alt="extrait" class="center" src="../data/head.jpg" width="50%" /></p>
 </details>
 <p>❓ Que fait l'instruction <code>df.tail()</code> ?</p>
 <details class="tip">
 <summary>réponse</summary>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```python
-df.tail()
-```
-Elle renvoie les n dernières lignes de `Df`. Par défaut n=5.
-![extrait](data/tail.jpg){: .center width=50%}
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
 </code></pre></div>
+Elle renvoie les n dernières lignes de <code>Df</code>. Par défaut n=5.
+<img alt="extrait" class="center" src="../data/tail.jpg" width="50%" /></p>
 </details>
 <p>❓ Que fait l'instruction <code>df.head(3)</code> ?</p>
 <details class="tip">
 <summary>réponse</summary>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```python
-df.head(3)
-```
-Elle renvoie les 3 premières lignes de `Df`. 
-![extrait](data/head3.jpg){: .center width=50%}
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </code></pre></div>
+Elle renvoie les 3 premières lignes de <code>Df</code>. 
+<img alt="extrait" class="center" src="../data/head3.jpg" width="50%" /></p>
 </details>
 <p>Pour avoir des renseignements globaux sur la structure de notre fichier, on peut utiliser la commande <code>df.info()</code></p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -5860,7 +5854,7 @@ Elle renvoie les 3 premières lignes de `Df`.
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">poids</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span>
 </code></pre></div>
 <p>⚠️ Attention, la variable <code>poids</code> n'est pas une liste qui contiendrait <code>[122,116,112,...]</code> mais un type particulier à <code>pandas</code>, appelé <code>Series</code>.</p>
-<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">poids</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">poids</span><span class="p">)</span>
     <span class="mi">0</span>      <span class="mi">122</span>
     <span class="mi">1</span>      <span class="mi">116</span>
     <span class="mi">2</span>      <span class="mi">112</span>
@@ -5873,27 +5867,26 @@ Elle renvoie les 3 premières lignes de `Df`.
     <span class="mi">593</span>     <span class="mi">85</span>
     <span class="mi">594</span>     <span class="mi">86</span>
     <span class="n">Name</span><span class="p">:</span> <span class="n">Poids</span><span class="p">,</span> <span class="n">Length</span><span class="p">:</span> <span class="mi">595</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="n">int64</span>
- <span class="err">```</span>   
+ <span class="err">```</span>
 
 <span class="err">```</span><span class="n">python</span>
 <span class="nb">type</span><span class="p">(</span><span class="n">poids</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">pandas</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">series</span><span class="o">.</span><span class="n">Series</span>
 </code></pre></div>
-On peut néanmoins s'en servir comme d'une <strong>liste</strong> classique.</p>
-<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">poids</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<p>On peut néanmoins s'en servir comme d'une <strong>liste</strong> classique.</p>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">poids</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="mi">122</span>
 </code></pre></div>
-On voit donc que les données sont automatiquement traitées comme des nombres. Pas besoin de conversion comme avec le module <code>csv</code> !
+<p>On voit donc que les données sont automatiquement traitées comme des nombres. Pas besoin de conversion comme avec le module <code>csv</code> !
 Pour tracer notre nuage de points poids-taille, le code sera donc simplement :</p>
-<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span>
 <span class="n">Y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="s1">&#39;ro&#39;</span><span class="p">)</span> <span class="c1"># r pour red, o pour un cercle. voir https://matplotlib.org/api/markers_api.html</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
-<img alt="graphique" class="center" src="../data/poidsTaille.jpg" width="50%" /></p>
+<p><img alt="graphique" class="center" src="../data/poidsTaille.jpg" width="50%" /></p>
 <p>L'interprétation numérique permet à <code>pandas</code> d'analyser automatiquement les données, avec notamment la fonction <code>df.describe()</code>.</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">count</span>    <span class="mf">595.000000</span>
@@ -5908,40 +5901,32 @@ Pour tracer notre nuage de points poids-taille, le code sera donc simplement :</
 </code></pre></div>
 <p>Pour les données non-numériques, la commande <code>describe()</code> n'est que peu d'utilité. Elle renseigne toutefois la valeur la plus fréquente (en statistiques, le <em>mode</em> ou <em>valeur modale</em>)</p>
 <p>Par exemple :</p>
-<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">top</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">top</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;3ème ligne&#39;</span>
 </code></pre></div>
-Le poste le plus fréquent est donc celui de '3ème ligne'.</p>
+<p>Le poste le plus fréquent est donc celui de '3ème ligne'.</p>
 <p>Pour connaître par exemple la date de naissance la plus fréquente chez les joueurs du top14, on utilisera simplement :</p>
 <p>❓ Quelle est la date de naissance la plus fréquente ?</p>
 <details class="tip">
 <summary>réponse</summary>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```python
-df[&#39;Date de naissance&#39;].describe().top
-```
-Qui sont les joueurs nés à cette date ?
-
-```python
-print(df[&#39;Nom&#39;][df[&#39;Date de naissance&#39;] == &#39;23/04/1993&#39;])
-```
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date de naissance&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">top</span>
+</code></pre></div>
+Qui sont les joueurs nés à cette date ?</p>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Nom&#39;</span><span class="p">][</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date de naissance&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;23/04/1993&#39;</span><span class="p">])</span>
 </code></pre></div>
 </details>
 <p>❓ Quels sont les joueurs les plus grands du TOP14 ?</p>
 <details class="tip">
 <summary>réponse</summary>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code> ```python
-df[&#39;Taille&#39;].describe().max
-print(df[&#39;Nom&#39;][df[&#39;Taille&#39;]==208])
-```
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">max</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Nom&#39;</span><span class="p">][</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">208</span><span class="p">])</span>
 </code></pre></div>
 </details>
 <p>❓  Quel est le nombre de joueurs de Toulon ?</p>
 <details class="tip">
 <summary>réponse</summary>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code> ```python
-T = df[df[&#39;Equipe&#39;] == &#39;Toulon&#39;]
-T.describe()
-```
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">T</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Equipe&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Toulon&#39;</span><span class="p">]</span>
+<span class="n">T</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </code></pre></div>
 </details>
 <p>Beaucoup plus de renseignements sont donnés par la commande <code>value_counts()</code>.</p>
@@ -5966,42 +5951,36 @@ T.describe()
 <p>❓  Créer une dataframe <code>poidsLourd</code> qui contient les joueurs de plus de 135 kg.</p>
 <details class="tip">
 <summary>réponse</summary>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code> ```python
-poidsLourd = df[df[&#39;Poids&#39;] &gt; 135] 
-```
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">poidsLourd</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">135</span><span class="p">]</span> 
 </code></pre></div>
 </details>
 <p>❓  Créer une dataframe <code>grand_lourd</code> qui contient les joueurs de plus de 2m et plus de 120 kg.</p>
 <details class="tip">
 <summary>réponse</summary>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code> ```python
-grand_lourd = df[(df[&#39;Poids&#39;] &gt; 120) &amp; (df[&#39;Taille&#39;] &gt; 200)]
-```
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">grand_lourd</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">120</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">200</span><span class="p">)]</span>
 </code></pre></div>
 </details>
 <p>❓  Trouver en une seule ligne le joueur le plus léger du Top14.</p>
 <details class="tip">
 <summary>réponse</summary>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code> ```python
-df[&#39;Nom&#39;][df[&#39;Poids&#39;] == min(df[&#39;Poids&#39;])]
-print(df[&#39;Nom&#39;][df[&#39;Poids&#39;].idxmin])
-```
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Nom&#39;</span><span class="p">][</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="nb">min</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Nom&#39;</span><span class="p">][</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmin</span><span class="p">])</span>
 </code></pre></div>
 </details>
 <h2 id="tris-de-donnees">Tris de données<a class="headerlink" href="#tris-de-donnees" title="Permanent link">⚓︎</a></h2>
 <p>Le tri se fait par la fonction <code>sort_values()</code> :</p>
-<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">newdf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">],</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">newdf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">],</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 <span class="n">newdf</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </code></pre></div>
-<img alt="extrait" class="center" src="../data/newDf.jpg" width="50%" /></p>
-<h2 id="rajout-dune-colonne">Rajout d'une colonne<a class="headerlink" href="#rajout-dune-colonne" title="Permanent link">⚓︎</a></h2>
+<p><img alt="extrait" class="center" src="../data/newDf.jpg" width="50%" /></p>
+<h2 id="ajout-dune-colonne">Ajout d'une colonne<a class="headerlink" href="#ajout-dune-colonne" title="Permanent link">⚓︎</a></h2>
 <p>Afin de pouvoir trier les joueurs suivant de nouveaux critères, nous allons rajouter un champ pour chaque joueur.<br />
 Prenons un exemple stupide : fabriquons un nouveau champ <code>'Poids après les vacances'</code> qui contiendra le poids des joueurs augmenté de 8 kg. 
 Ceci se fera simplement par :</p>
-<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids après les vacances&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">8</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids après les vacances&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">8</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </code></pre></div>
-<img alt="extrait" class="center" src="../data/plus8.jpg" width="50%" /></p>
+<p><img alt="extrait" class="center" src="../data/plus8.jpg" width="50%" /></p>
 <p>Pour supprimer cette colonne sans intérêt :</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">del</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids après les vacances&#39;</span><span class="p">]</span> 
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -6022,9 +6001,8 @@ Ceci se fera simplement par :</p>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p>```python
-imcdf = df.sort_values(by=['IMC'], ascending = True)
-````</p>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">imcdf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;IMC&#39;</span><span class="p">],</span> <span class="n">ascending</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
 </div>
 </div>
 </div>
