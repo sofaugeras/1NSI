@@ -249,7 +249,7 @@
   
     
   
-  Informations
+  Première NSI
 
       </a>
     </li>
@@ -519,7 +519,7 @@
   <span class="md-ellipsis">
     
   
-    Informations
+    Première NSI
   
 
     
@@ -5772,21 +5772,21 @@
 </ul>
 <p><img alt="image" class="center" src="../data/requete2.png" /></p>
 <h3 id="deroule-dune-requete">Déroulé d'une requête<a class="headerlink" href="#deroule-dune-requete" title="Permanent link">⚓︎</a></h3>
-<p>Prenons pour exemple la requête d'un navigateur vers la page <a class="" href="http://glassus1.free.fr/interesting.html" target="_blank">http://glassus1.free.fr/interesting.html</a> </p>
+<p>Prenons pour exemple la requête d'un navigateur vers la page <a class="" href="https://sofaugeras.com/interesting.html" target="_blank">https://sofaugeras.com/interesting.html</a> </p>
 <ul>
-<li>le navigateur analyse l'url : la demande concerne la page <code>interesting.html</code>, stockée sur le serveur <code>glassus1.free.fr</code>.  </li>
-<li>une demande est préalablement effectuée auprès pour obtenir l'adresse IP du serveur <code>glassus1.free.fr</code> (qui est en fait un sous-domaine du serveur des pages personnelles de l'opérateur Free). Ici, l'adresse IP sera <code>212.27.63.111</code> (on la retrouvera dans la capture de la fenêtre d'Outils de devéloppement).</li>
-<li>la requête est effectuée sur le port 80 de l'adresse <code>212.27.63.111</code>.</li>
+<li>le navigateur analyse l'url : la demande concerne la page <code>interesting.html</code>, stockée sur le serveur <code>sofaugeras.com</code>.  </li>
+<li>une demande est préalablement effectuée auprès pour obtenir l'adresse IP du serveur <code>sofaugeras.com</code> (qui est en fait un sous-domaine du serveur alwaysData). Ici, l'adresse IP sera <code>185.31.40.24</code>.</li>
+<li>la requête est effectuée sur le port 80 de l'adresse <code>185.31.40.24</code>.</li>
 <li>la réponse est envoyée au navigateur, qui en extrait la charge utile et procède à l'affichage de la page.</li>
 </ul>
 <h3 id="analyse-a-laide-dun-navigateur">Analyse à l'aide d'un navigateur<a class="headerlink" href="#analyse-a-laide-dun-navigateur" title="Permanent link">⚓︎</a></h3>
 <p>Observons à partir de l'Inspecteur d'élément d'un navigateur (ici Firefox) les informations qui transitent lors de la requête et de la réponse.</p>
 <p><img alt="" class="center" src="../data/insp1.png" /></p>
 <ul>
-<li>Point <strong>1</strong> : La requête de type GET vers l'url <code>http://glassus1.free.fr/interesting.html</code> a généré un code de réponse <strong>200 OK</strong>, ce qui signifie que la requête a été traitée et que la réponse contenant la page a été envoyée.<br />
+<li>Point <strong>1</strong> : La requête de type GET vers l'url <code>https://sofaugeras.com/interesting.html</code> a généré un code de réponse <strong>200 OK</strong>, ce qui signifie que la requête a été traitée et que la réponse contenant la page a été envoyée.<br />
 Vous pouvez trouver à l'adresse <a class="" href="https://developer.mozilla.org/fr/docs/Web/HTTP/Status" target="_blank">https://developer.mozilla.org/fr/docs/Web/HTTP/Status</a> la totalité des codes de réponse possibles. 
 Citons par exemple : <ul>
-<li><strong>304 Not Modified</strong> : la page n'a pas eu besoin d'être renvoyée, elle indique au navigateur d'aller la rechercher dans son cache. On peut obtenir ce code de réponse en actualisant la page actuelle <code>http://glassus1.free.fr/interesting.fr</code> (qui est une page ultra-basique, et n'évolue pas). Pour ré-obtenir un code 200, il faut faire un hard-refresh en appuyant sur Maj pendant l'actualisation.</li>
+<li><strong>304 Not Modified</strong> : la page n'a pas eu besoin d'être renvoyée, elle indique au navigateur d'aller la rechercher dans son cache. On peut obtenir ce code de réponse en actualisant la page actuelle <code>https://sofaugeras.com/interesting.fr</code> (qui est une page ultra-basique, et n'évolue pas). Pour ré-obtenir un code 200, il faut faire un hard-refresh en appuyant sur Maj pendant l'actualisation.</li>
 <li><strong>403 Forbidden</strong> : le client n'a pas le droit d'accès à la page.</li>
 <li><strong>404 Not Found</strong> : la page demandée est introuvable</li>
 <li><strong>500 Internal Server Error</strong> : le serveur a rencontré une erreur qu'il ne sait pas traiter.</li>
@@ -5823,7 +5823,7 @@ Ceci est vraiment une jolie page web.
 </ul>
 <p><strong>Remarque :</strong> on peut observer que le navigateur a aussi effectué (de sa propre initiative) une requête vers un fichier <code>favicon.ico</code> qui est l'icone de la page web dans les onglets du navigateur ou la barre de favoris. Ce fichier était bien présent sur le serveur (ce n'est pas toujours le cas), il a donc été envoyé dans la réponse du serveur. </p>
 <p>De manière générale, une requête vers un site web moins élémentaire va occasionner une multitude de réponses.</p>
-<p>Par exemple, l'appel au site <code>www.lyceemauriac.fr</code> génère 129 requêtes/réponses différentes, composées de fichiers html, css, js, de fichiers de fontes woff2, d'images jpg, png...</p>
+<p>Par exemple, l'appel au site <code>https://www.lycee-saint-sauveur-redon.eu/</code> génère 114 requêtes/réponses différentes, composées de fichiers html, css, js, de fichiers de fontes woff2, d'images jpg, png...</p>
 <p><img alt="" class="center" src="../data/insp3.png" /></p>
 
 
@@ -5967,7 +5967,7 @@ Ceci est vraiment une jolie page web.
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
