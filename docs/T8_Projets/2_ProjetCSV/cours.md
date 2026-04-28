@@ -1,4 +1,4 @@
-# Mini Projet : Analyse de données
+# Projet CSV
 
 !!! note "Projet exemple"
 
@@ -18,39 +18,44 @@
 
 !!! info "Consignes"
     Il s’agit ici de prendre en charge un jeu de données (open DataSet), de l’exploiter et d’en faire une restitution graphique.
-    Nous allons partir sur un mini-projet, à rendre après les vacances le <mark>Lundi 31 Mars 2025</mark> et réalisé en BINOME.
+    Nous allons partir sur un mini-projet, à rendre après les vacances le <mark>Lundi 27 Avril 2027</mark> et réalisé en BINOME.
 
     **Consignes générales :**<br />
-    A partir d’une source de données choisies ou créées par vous, créer un programme Python d’acquisition (à partir d’un fichier CSV) et de restitution de données. La restitution pourra être source forme de tableaux (bibliothèque panda), de graphique (bibliothèque matplotlib) ou de carte (bibliothèque folium).<br>
+    A partir d’une source de données choisies ou créées par vous, créer un **programme** Python d’acquisition (à partir d’un fichier CSV) et de restitution de données. La **restitution** pourra être source forme de tableaux (bibliothèque panda), de graphique (bibliothèque matplotlib) ou de carte (bibliothèque folium).<br>
     La présentation du projet se fera sous forme Web (HTML/CSS, eventuellement un peu de javascript)
 
  
-## Les données : 
+## Les données
+
 Bibliothèques de données (la liste est donnée à titre indicative, il existe d’autres sources de données) :<br />
 ▶️ [openData Gouv](https://www.data.gouv.fr/fr/datasets/)<br />
 ▶️ [openData Bretagne](https://data.bretagne.bzh/explore/?sort=modified)<br />
 ▶️ [Kaggle](https://www.kaggle.com/datasets)<br />
 ▶️ [onisep](https://opendata.onisep.fr/34-recherche.htm?idtf=34&idPage=34&q=csv&from=0&type=dataset)
 
-## AIDE : 
-Tutoriel bibliothèque Panda : <br />
+## AIDE
+
+Tutoriel bibliothèque Panda :
+
 - [cours](../../T6_Traitement_de_donnees/6.3_Pandas/cours.md)<br />
 - [tuto d initiation panda et matplotlib](https://www.actuia.com/tutoriel/tutoriel-dinitiation-a-lia-python-pandas-et-matplotlib-partie-2/)
 
-## IDEE de PROJET : 
+## IDEE de PROJET
+
 :bulb: Evolution du nombre de morts par épisodes dans Games of Thrones<br />
 :bulb: Origines géographiques des passagers du Titanic<br />
 :bulb: Cartographies des monuments remarquables en Bretagne<br />
 :bulb: Analyse des l’origine des TOP1 de Spotify sur les 5 dernières années<br />
 :bulb: ….
 
-## Evaluation :
-Vous trouverez la fiche d'évaluation [ici](data/FicheEvaluationCSV.pdf)<br />
+## Evaluation
+
 📖 Vous veillerez à documenter vos fonctions et différents programmes.<br />
 📁 Vous devrez également fournir un document accompagnateur expliquant votre projet et votre démarche. Le document accompagnateur pourra être un site web, une présentation sous forme de slide, ou un rapport.
+Vous trouverez la fiche d'évaluation ci-dessous :
+![grille d'valuation projet](./data/GrilleEvaluation.png){: .center width=50%}
 
-
-## Coup de pouce 
+## Coup de pouce
 
 Un besoin recurrent sur ces projets est de pouvoir associer un dataset contenant une ville ou la capitale d'un pays avec ses coordonnées latitude/longitude pour pouvoir positionner un marqueur folium.<br />
 Voici un petit bout de code, qui à partir d'un fichier CSV contenant une ville, recréer un nouveau fichier CSV contenant la latitude et la longitude.

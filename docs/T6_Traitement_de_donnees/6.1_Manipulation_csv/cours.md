@@ -1,4 +1,4 @@
-# Manipulation de fichiers csv
+# 6.1 Manipulation de fichiers csv
 
 ![image](data/BO.png){: .center}
 
@@ -239,7 +239,6 @@ plt.show()
 ??? tip "réponse"
 
     ```python linenums='1'
-    %matplotlib inline
     X = [int(joueur['Poids']) for joueur in joueurs]
     Y = [int(joueur['Taille']) for joueur in joueurs]
     plt.plot(X,Y,'ro') # r pour red, o pour un cercle. voir https://matplotlib.org/api/markers_api.html
@@ -254,7 +253,6 @@ plt.show()
 
 ??? tip "réponse"
     ```python linenums='1'
-    %matplotlib inline
     #tous les joueurs
     X = [int(joueur['Poids']) for joueur in joueurs]
     Y = [int(joueur['Taille']) for joueur in joueurs]

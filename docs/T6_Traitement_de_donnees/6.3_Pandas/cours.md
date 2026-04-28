@@ -33,30 +33,32 @@ Il est possible d'avoir uniquement les premières lignes du fichier avec la comm
 ❓ Que fait l'instruction `df.head()` ?
 
 ??? tip "réponse"
-        ```python
-        df.head()
-        ```
-        Elle renvoie les n premières lignes de `Df`. Par défaut n=5.
-        ![extrait](data/head.jpg){: .center width=50%}
+    
+    ```python
+    df.head()
+    ```
+    Elle renvoie les n premières lignes de `Df`. Par défaut n=5.
+    ![extrait](data/head.jpg){: .center width=50%}
 
 ❓ Que fait l'instruction `df.tail()` ?
 
 ??? tip "réponse"
-        ```python
-        df.tail()
-        ```
-        Elle renvoie les n dernières lignes de `Df`. Par défaut n=5.
-        ![extrait](data/tail.jpg){: .center width=50%}
+
+    ```python
+    df.tail()
+    ```
+    Elle renvoie les n dernières lignes de `Df`. Par défaut n=5.
+    ![extrait](data/tail.jpg){: .center width=50%}
 
 ❓ Que fait l'instruction `df.head(3)` ?
 
 ??? tip "réponse"
-        ```python
-        df.head(3)
-        ```
-        Elle renvoie les 3 premières lignes de `Df`. 
-        ![extrait](data/head3.jpg){: .center width=50%}
 
+    ```python
+    df.head(3)
+    ```
+    Elle renvoie les 3 premières lignes de `Df`. 
+    ![extrait](data/head3.jpg){: .center width=50%}
 
 Pour avoir des renseignements globaux sur la structure de notre fichier, on peut utiliser la commande `df.info()`
 
@@ -115,23 +117,24 @@ print(poids)
     593     85
     594     86
     Name: Poids, Length: 595, dtype: int64
- ```   
+ ```
 
 ```python
 type(poids)
 >>> pandas.core.series.Series
 ```
+
 On peut néanmoins s'en servir comme d'une **liste** classique.
 
 ```python
 poids[0]
 >>> 122
 ```
+
 On voit donc que les données sont automatiquement traitées comme des nombres. Pas besoin de conversion comme avec le module `csv` !
 Pour tracer notre nuage de points poids-taille, le code sera donc simplement :
 
 ```python
-%matplotlib inline
 import matplotlib.pyplot as plt
 X = df['Poids']
 Y = df['Taille']
@@ -139,8 +142,8 @@ Y = df['Taille']
 plt.plot(X,Y,'ro') # r pour red, o pour un cercle. voir https://matplotlib.org/api/markers_api.html
 plt.show()
 ```
-![graphique](data/poidsTaille.jpg){: .center width=50%}
 
+![graphique](data/poidsTaille.jpg){: .center width=50%}
 
 L'interprétation numérique permet à `pandas` d'analyser automatiquement les données, avec notamment la fonction `df.describe()`.
 
@@ -165,6 +168,7 @@ Par exemple :
 df['Poste'].describe().top
 >>> '3ème ligne'
 ```
+
 Le poste le plus fréquent est donc celui de '3ème ligne'.
 
 Pour connaître par exemple la date de naissance la plus fréquente chez les joueurs du top14, on utilisera simplement :
@@ -172,29 +176,32 @@ Pour connaître par exemple la date de naissance la plus fréquente chez les jou
 ❓ Quelle est la date de naissance la plus fréquente ?
 
 ??? tip "réponse"
-        ```python
-        df['Date de naissance'].describe().top
-        ```
-        Qui sont les joueurs nés à cette date ?
 
-        ```python
-        print(df['Nom'][df['Date de naissance'] == '23/04/1993'])
-        ```
+    ```python
+    df['Date de naissance'].describe().top
+    ```
+    Qui sont les joueurs nés à cette date ?
+
+    ```python
+    print(df['Nom'][df['Date de naissance'] == '23/04/1993'])
+    ```
 
 ❓ Quels sont les joueurs les plus grands du TOP14 ?
 
 ??? tip "réponse"
-         ```python
-        df['Taille'].describe().max
-        print(df['Nom'][df['Taille']==208])
-        ```
+    
+    ```python
+    df['Taille'].describe().max
+    print(df['Nom'][df['Taille']==208])
+    ```
 ❓  Quel est le nombre de joueurs de Toulon ?
 
 ??? tip "réponse"
-         ```python
-        T = df[df['Equipe'] == 'Toulon']
-        T.describe()
-        ```
+
+    ```python
+    T = df[df['Equipe'] == 'Toulon']
+    T.describe()
+    ```
 
 Beaucoup plus de renseignements sont donnés par la commande `value_counts()`.
 
@@ -212,7 +219,6 @@ df['Taille'].value_counts()
     Name: Taille, dtype: int64
 ```
 
-
 ## Filtres et recherches
 Comment créer une *dataframe* ne contenant que les joueurs de l'[UBB](https://www.ubbrugby.com/) ?  
 
@@ -226,25 +232,27 @@ UBB = df[df['Equipe'] == 'Bordeaux']
 ❓  Créer une dataframe `poidsLourd` qui contient les joueurs de plus de 135 kg.
 
 ??? tip "réponse"
-         ```python
-        poidsLourd = df[df['Poids'] > 135] 
-        ```
+    
+    ```python
+    poidsLourd = df[df['Poids'] > 135] 
+    ```
 
 ❓  Créer une dataframe `grand_lourd` qui contient les joueurs de plus de 2m et plus de 120 kg.
 
 ??? tip "réponse"
-         ```python
-        grand_lourd = df[(df['Poids'] > 120) & (df['Taille'] > 200)]
-        ```
+         
+    ```python
+    grand_lourd = df[(df['Poids'] > 120) & (df['Taille'] > 200)]
+    ```
 
 ❓  Trouver en une seule ligne le joueur le plus léger du Top14.
 
 ??? tip "réponse"
-         ```python
-        df['Nom'][df['Poids'] == min(df['Poids'])]
-        print(df['Nom'][df['Poids'].idxmin])
-        ```
-
+    
+    ```python
+    df['Nom'][df['Poids'] == min(df['Poids'])]
+    print(df['Nom'][df['Poids'].idxmin])
+    ```
 
 ## Tris de données
 Le tri se fait par la fonction `sort_values()` :
@@ -253,9 +261,11 @@ Le tri se fait par la fonction `sort_values()` :
 newdf = df.sort_values(by=['Poids'], ascending = True)
 newdf.head(10)
 ```
+
 ![extrait](data/newDf.jpg){: .center width=50%}
 
-## Rajout d'une colonne
+## Ajout d'une colonne
+
 Afin de pouvoir trier les joueurs suivant de nouveaux critères, nous allons rajouter un champ pour chaque joueur.<br />
 Prenons un exemple stupide : fabriquons un nouveau champ `'Poids après les vacances'` qui contiendra le poids des joueurs augmenté de 8 kg. 
 Ceci se fera simplement par :
@@ -264,6 +274,7 @@ Ceci se fera simplement par :
 df['Poids après les vacances'] = df['Poids'] + 8
 df.head()
 ```
+
 ![extrait](data/plus8.jpg){: .center width=50%}
 
 Pour supprimer cette colonne sans intérêt :
@@ -288,5 +299,5 @@ df.head()
 
         ```python
         imcdf = df.sort_values(by=['IMC'], ascending = True)
-        ````
-
+        ```
+        

@@ -202,7 +202,8 @@ data = exifread.process_file(f)
     C'est un dictionnaire.
 
     ```python
-    type(data)
+    type(data) #renvoie dict()
+    print(data)
     {'Image ImageWidth': (0x0100) Long=3264 @ 18,
     'Image ImageLength': (0x0101) Long=1836 @ 30,
     'Image Make': (0x010F) ASCII=SAMSUNG @ 158,

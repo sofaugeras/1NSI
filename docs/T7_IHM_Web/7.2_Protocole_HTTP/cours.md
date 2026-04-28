@@ -13,11 +13,11 @@ HTTP (HyperText Transfer Protocol) est le protocole qui régit la communication 
 
 
 ### Déroulé d'une requête
-Prenons pour exemple la requête d'un navigateur vers la page [http://glassus1.free.fr/interesting.html](http://glassus1.free.fr/interesting.html){. target="_blank"} 
+Prenons pour exemple la requête d'un navigateur vers la page [https://sofaugeras.com/interesting.html](https://sofaugeras.com/interesting.html){. target="_blank"} 
 
-- le navigateur analyse l'url : la demande concerne la page ```interesting.html```, stockée sur le serveur ```glassus1.free.fr```.  
-- une demande est préalablement effectuée auprès pour obtenir l'adresse IP du serveur ```glassus1.free.fr``` (qui est en fait un sous-domaine du serveur des pages personnelles de l'opérateur Free). Ici, l'adresse IP sera ```212.27.63.111``` (on la retrouvera dans la capture de la fenêtre d'Outils de devéloppement).
-- la requête est effectuée sur le port 80 de l'adresse ```212.27.63.111```.
+- le navigateur analyse l'url : la demande concerne la page ```interesting.html```, stockée sur le serveur ```sofaugeras.com```.  
+- une demande est préalablement effectuée auprès pour obtenir l'adresse IP du serveur ```sofaugeras.com``` (qui est en fait un sous-domaine du serveur alwaysData). Ici, l'adresse IP sera ```185.31.40.24```.
+- la requête est effectuée sur le port 80 de l'adresse ```185.31.40.24```.
 - la réponse est envoyée au navigateur, qui en extrait la charge utile et procède à l'affichage de la page.
 
 
@@ -27,10 +27,10 @@ Observons à partir de l'Inspecteur d'élément d'un navigateur (ici Firefox) le
 
 ![](data/insp1.png){: .center}
 
-- Point **1** : La requête de type GET vers l'url ```http://glassus1.free.fr/interesting.html``` a généré un code de réponse **200 OK**, ce qui signifie que la requête a été traitée et que la réponse contenant la page a été envoyée.  
+- Point **1** : La requête de type GET vers l'url ```https://sofaugeras.com/interesting.html``` a généré un code de réponse **200 OK**, ce qui signifie que la requête a été traitée et que la réponse contenant la page a été envoyée.  
 Vous pouvez trouver à l'adresse [https://developer.mozilla.org/fr/docs/Web/HTTP/Status](https://developer.mozilla.org/fr/docs/Web/HTTP/Status){. target="_blank"} la totalité des codes de réponse possibles. 
 Citons par exemple : 
-    - **304 Not Modified** : la page n'a pas eu besoin d'être renvoyée, elle indique au navigateur d'aller la rechercher dans son cache. On peut obtenir ce code de réponse en actualisant la page actuelle ```http://glassus1.free.fr/interesting.fr``` (qui est une page ultra-basique, et n'évolue pas). Pour ré-obtenir un code 200, il faut faire un hard-refresh en appuyant sur Maj pendant l'actualisation.
+    - **304 Not Modified** : la page n'a pas eu besoin d'être renvoyée, elle indique au navigateur d'aller la rechercher dans son cache. On peut obtenir ce code de réponse en actualisant la page actuelle ```https://sofaugeras.com/interesting.fr``` (qui est une page ultra-basique, et n'évolue pas). Pour ré-obtenir un code 200, il faut faire un hard-refresh en appuyant sur Maj pendant l'actualisation.
     - **403 Forbidden** : le client n'a pas le droit d'accès à la page.
     - **404 Not Found** : la page demandée est introuvable
     - **500 Internal Server Error** : le serveur a rencontré une erreur qu'il ne sait pas traiter.
@@ -67,7 +67,6 @@ Citons par exemple :
 
 De manière générale, une requête vers un site web moins élémentaire va occasionner une multitude de réponses.
 
-Par exemple, l'appel au site ```www.lyceemauriac.fr``` génère 129 requêtes/réponses différentes, composées de fichiers html, css, js, de fichiers de fontes woff2, d'images jpg, png...
-
+Par exemple, l'appel au site ```https://www.lycee-saint-sauveur-redon.eu/``` génère 114 requêtes/réponses différentes, composées de fichiers html, css, js, de fichiers de fontes woff2, d'images jpg, png...
 
 ![](data/insp3.png){: .center}

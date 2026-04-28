@@ -1,4 +1,4 @@
-# Trier des données
+# 6.2 Trier des données
 
 ![image](data/BO.png){: .center}
 
@@ -18,34 +18,55 @@ f.close()
 ```
 
 ## Créer une fonction filtre
-L'objectif est de créer une fonction `joueursEquipe(equipe)` qui renvoie une liste contentant tous les joueurs de l'équipe `equipe`. <br />
+L'objectif est de créer une fonction `joueursEquipe(joueurs, equipe)` qui prend en paramètre notre table Joueurs et une variable Equipe et qui renvoie une liste contentant tous les joueurs de l'équipe `equipe`. <br />
 Le paramètre `equipe` sera donnée sous forme de chaîne de caractères. <br />
 La valeur renvoyée sera de type `liste de dictionnaire`.
 
 ??? tip "réponse"
+
     ```python
-    def joueursEquipe(equipe):
+    def joueursEquipe(joueurs, equipe):
+        """
+        Filtre une liste de joueurs afin de ne conserver que ceux appartenant à une équipe donnée.
+        @params : joueurs : Liste de dictionnaires représentant les joueurs.
+        @params : equipe : str :  Nom de l'équipe recherchée.
+        @return : list : Liste des dictionnaires correspondant aux joueurs de l'équipe spécifiée.
+        Exemple
+        -------
+        >>> joueursEquipe(joueurs, "Bordeaux")
+        [{'Nom': 'Dupont', 'Equipe': 'Bordeaux'}, ...]
+        """
         lst_joueurs = []
         for j in joueurs :
             if j['Equipe'] == equipe :
                 lst_joueurs.append(j)
-        
         return lst_joueurs
-    assert len(joueursEquipe("Bordeaux")) == 37
+    assert len(joueursEquipe(joueurs, "Bordeaux")) == 37
     ```
 
-❓  Définir de la même manière une fonction `joueursPoste(poste)` qui renvoie une liste contentant tous les joueurs occupant le  `poste`.  Le paramètre `poste` sera donnée sous forme de chaîne de caractères. <br />
+❓  Définir de la même manière une fonction `joueursPoste(joueurs, poste)` qui qui prend en paramètre notre table Joueurs et qui renvoie une liste contentant tous les joueurs occupant le  `poste`.  Le paramètre `poste` sera donnée sous forme de chaîne de caractères. <br />
 La valeur renvoyée sera de type `liste`.
 
 ??? tip "réponse"
+
     ```python
-    def joueursPoste(poste):
+    def joueursPoste(joueurs, poste):
+        """
+        Filtre une liste de joueurs afin de ne conserver que ceux occupant un poste donné.
+        @params : joueurs : Liste de dictionnaires représentant les joueurs.
+        @params : poste : str : Nom du poste recherché.
+        @return : list : Liste des dictionnaires correspondant aux joueurs du poste spécifié.
+        Exemple
+        -------
+        >>> joueursPoste(joueurs, "Mêlée")
+        [{'Nom': 'Dupont', 'Poste': 'Mêlée'}, ...]
+        """
         lst_joueurs = []
         for j in joueurs :
             if j['Poste'] == poste :
                 lst_joueurs.append(j)
         return lst_joueurs
-    joueursPoste('Mêlée')
+    joueursPoste(joueurs, 'Mêlée')
     ```
 
 ## Utilisation d'une fonction de tri

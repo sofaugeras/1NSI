@@ -29,7 +29,7 @@
     
     
       
-        <title>Trier des données - Saint Sauveur 1NSI</title>
+        <title>6.2 Trier des données - Saint Sauveur 1NSI</title>
       
     
     
@@ -98,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#trier-des-donnees" class="md-skip">
+        <a href="#62-trier-des-donnees" class="md-skip">
           Aller au contenu
         </a>
       
@@ -132,7 +132,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Trier des données
+              6.2 Trier des données
             
           </span>
         </div>
@@ -249,7 +249,7 @@
   
     
   
-  Home
+  Première NSI
 
       </a>
     </li>
@@ -519,7 +519,7 @@
   <span class="md-ellipsis">
     
   
-    Home
+    Première NSI
   
 
     
@@ -4080,7 +4080,7 @@
   <span class="md-ellipsis">
     
   
-    Manipulation de fichiers csv
+    6.1 Manipulation de fichiers csv
   
 
     
@@ -4177,7 +4177,7 @@
   <span class="md-ellipsis">
     
   
-    Trier des données
+    6.2 Trier des données
   
 
     
@@ -4195,7 +4195,7 @@
   <span class="md-ellipsis">
     
   
-    Trier des données
+    6.2 Trier des données
   
 
     
@@ -5206,7 +5206,7 @@
   <span class="md-ellipsis">
     
   
-    Mini Projet : Analyse de données
+    Projet CSV
   
 
     
@@ -5812,7 +5812,7 @@
   
 
 
-<h1 id="trier-des-donnees">Trier des données<a class="headerlink" href="#trier-des-donnees" title="Permanent link">⚓︎</a></h1>
+<h1 id="62-trier-des-donnees">6.2 Trier des données<a class="headerlink" href="#62-trier-des-donnees" title="Permanent link">⚓︎</a></h1>
 <p><img alt="image" class="center" src="../data/BO.png" /></p>
 <p>Nous reprenons notre fichier de joueurs de rugby du <a href="../../6.1_Manipulation_csv/data/top14.csv">Top14</a>. </p>
 <p>🔽 Télécharger le notebook de cours correspondant <a href="../data/02_Trier_des_donnees.zip">ici</a></p>
@@ -5826,32 +5826,51 @@
 <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </code></pre></div>
 <h2 id="creer-une-fonction-filtre">Créer une fonction filtre<a class="headerlink" href="#creer-une-fonction-filtre" title="Permanent link">⚓︎</a></h2>
-<p>L'objectif est de créer une fonction <code>joueursEquipe(equipe)</code> qui renvoie une liste contentant tous les joueurs de l'équipe <code>equipe</code>. <br />
+<p>L'objectif est de créer une fonction <code>joueursEquipe(joueurs, equipe)</code> qui prend en paramètre notre table Joueurs et une variable Equipe et qui renvoie une liste contentant tous les joueurs de l'équipe <code>equipe</code>. <br />
 Le paramètre <code>equipe</code> sera donnée sous forme de chaîne de caractères. <br />
 La valeur renvoyée sera de type <code>liste de dictionnaire</code>.</p>
 <details class="tip">
 <summary>réponse</summary>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">joueursEquipe</span><span class="p">(</span><span class="n">equipe</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">joueursEquipe</span><span class="p">(</span><span class="n">joueurs</span><span class="p">,</span> <span class="n">equipe</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Filtre une liste de joueurs afin de ne conserver que ceux appartenant à une équipe donnée.</span>
+<span class="sd">    @params : joueurs : Liste de dictionnaires représentant les joueurs.</span>
+<span class="sd">    @params : equipe : str :  Nom de l&#39;équipe recherchée.</span>
+<span class="sd">    @return : list : Liste des dictionnaires correspondant aux joueurs de l&#39;équipe spécifiée.</span>
+<span class="sd">    Exemple</span>
+<span class="sd">    -------</span>
+<span class="sd">    &gt;&gt;&gt; joueursEquipe(joueurs, &quot;Bordeaux&quot;)</span>
+<span class="sd">    [{&#39;Nom&#39;: &#39;Dupont&#39;, &#39;Equipe&#39;: &#39;Bordeaux&#39;}, ...]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">lst_joueurs</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="p">:</span>
         <span class="k">if</span> <span class="n">j</span><span class="p">[</span><span class="s1">&#39;Equipe&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">equipe</span> <span class="p">:</span>
             <span class="n">lst_joueurs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
-
     <span class="k">return</span> <span class="n">lst_joueurs</span>
-<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">joueursEquipe</span><span class="p">(</span><span class="s2">&quot;Bordeaux&quot;</span><span class="p">))</span> <span class="o">==</span> <span class="mi">37</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">joueursEquipe</span><span class="p">(</span><span class="n">joueurs</span><span class="p">,</span> <span class="s2">&quot;Bordeaux&quot;</span><span class="p">))</span> <span class="o">==</span> <span class="mi">37</span>
 </code></pre></div>
 </details>
-<p>❓  Définir de la même manière une fonction <code>joueursPoste(poste)</code> qui renvoie une liste contentant tous les joueurs occupant le  <code>poste</code>.  Le paramètre <code>poste</code> sera donnée sous forme de chaîne de caractères. <br />
+<p>❓  Définir de la même manière une fonction <code>joueursPoste(joueurs, poste)</code> qui qui prend en paramètre notre table Joueurs et qui renvoie une liste contentant tous les joueurs occupant le  <code>poste</code>.  Le paramètre <code>poste</code> sera donnée sous forme de chaîne de caractères. <br />
 La valeur renvoyée sera de type <code>liste</code>.</p>
 <details class="tip">
 <summary>réponse</summary>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">joueursPoste</span><span class="p">(</span><span class="n">poste</span><span class="p">):</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">joueursPoste</span><span class="p">(</span><span class="n">joueurs</span><span class="p">,</span> <span class="n">poste</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Filtre une liste de joueurs afin de ne conserver que ceux occupant un poste donné.</span>
+<span class="sd">    @params : joueurs : Liste de dictionnaires représentant les joueurs.</span>
+<span class="sd">    @params : poste : str : Nom du poste recherché.</span>
+<span class="sd">    @return : list : Liste des dictionnaires correspondant aux joueurs du poste spécifié.</span>
+<span class="sd">    Exemple</span>
+<span class="sd">    -------</span>
+<span class="sd">    &gt;&gt;&gt; joueursPoste(joueurs, &quot;Mêlée&quot;)</span>
+<span class="sd">    [{&#39;Nom&#39;: &#39;Dupont&#39;, &#39;Poste&#39;: &#39;Mêlée&#39;}, ...]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">lst_joueurs</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="p">:</span>
         <span class="k">if</span> <span class="n">j</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">poste</span> <span class="p">:</span>
             <span class="n">lst_joueurs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">lst_joueurs</span>
-<span class="n">joueursPoste</span><span class="p">(</span><span class="s1">&#39;Mêlée&#39;</span><span class="p">)</span>
+<span class="n">joueursPoste</span><span class="p">(</span><span class="n">joueurs</span><span class="p">,</span> <span class="s1">&#39;Mêlée&#39;</span><span class="p">)</span>
 </code></pre></div>
 </details>
 <h2 id="utilisation-dune-fonction-de-tri">Utilisation d'une fonction de tri<a class="headerlink" href="#utilisation-dune-fonction-de-tri" title="Permanent link">⚓︎</a></h2>
@@ -6137,7 +6156,7 @@ $$ d = (p_1-p_2)^2 + (t_1-t_2)^2$$</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
