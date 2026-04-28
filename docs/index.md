@@ -1,8 +1,8 @@
 # Première NSI
 
 !!! abstract ":star: Thèmes en cours d'étude :star:"
-    📌 [Ti sélection](./T5_Algorithmique/5.4_Tri_par_selection/cours.md)<br />
-    ⌛️ A venir : [dichotomie](./T5_Algorithmique/5.5_Dichotomie/cours.md) <br />
+    📌 [dichotomie](./T5_Algorithmique/5.5_Dichotomie/cours.md)<br /> 
+    ⌛️ A venir : [thème 7](./T7_IHM_Web/7.1_Interactions_page_web/cours.md) et TP fortnite <br />
 
 !!! warning "Mémo python"
     le mémento Python est disponible ici : :snake: [mémento Python](./data/mementopython3.pdf)
@@ -43,6 +43,7 @@
     - [Thème 6 : Pandas](./T6_Traitement_de_donnees/6.3_Pandas/cours.md) 
     - 🅿️ Projet : [Projet CSV 🐼](./T8_Projets/2_ProjetCSV/cours.md) 
     - [tri insertion](./T5_Algorithmique/5.3_Tri_par_insertion/cours.md)
+    - [Ti sélection](./T5_Algorithmique/5.4_Tri_par_selection/cours.md)
     
 <!--
 !!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
@@ -51,7 +52,7 @@
     - Le plus important : les chapitres suivants d'algorithmique, à retrouver [ici](T5_Algorithmique/sommaire.md){. target="_blank"} :
 
     - <br />
-    - [thème 7](./T7_IHM_Web/7.1_Interactions_page_web/cours.md) et TP fortnite
+    - 
     - [IHM sur le Web](./T7_IHM_Web/7.3_Get_Post_Formulaires/cours/) et TP Cyber
     - [Algorithme Glouton](./T5_Algorithmique/5.6_Algorithmes_gloutons/cours.md)<br />
     - [Algorithme KNN](./T5_Algorithmique/5.7_Algorithme_KNN/cours.md)<br />
