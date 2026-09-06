@@ -7,60 +7,21 @@
 !!!- info "Crédits"
     - [Gilles Lassus](https://glassus.github.io/premiere_nsi/)
 
-
 ![image](data/meme.jpg){: .center}
 
 «dichotomie» se dit en anglais *binary search*.
 
-
-<!--
-## Jeu du *"devine un nombre entre 1 et 100"*
-Si je choisis un nombre entre 1 et 100, quelle est la stratégie optimale pour deviner ce nombre le plus vite possible ?  
-(à chaque étape, une indication (trop grand, trop petit) permet d'affiner la proposition suivante)
-
-**Réponse attendue :** la meilleure stratégie est de *couper en deux* à chaque fois l'intervalle d'étude. On démarre de 50, puis 75 ou 25, etc.
-
-
-Il convient toute fois de remettre en question cette méthode qui paraît *naturellement* optimale : si je propose 90 comme nombre de départ, j'ai certes moins de chance que le nombre soit entre 90 et 100, mais s'il l'est, j'ai gagné un gros avantage car mon nouvel intervalle est très réduit.
-
-On peut alors rappeler la notion d'**espérance probabiliste**.
-
-Exemple : "On lance un dé, s'il tombe sur le 6 vous recevez 2 euros, sinon vous me donnez 1 euro. Voulez-vous jouer ?" 
-
-**Retour sur le jeu du choix du nombre**
-
-Le graphique ci-dessous représente le nombre de coups moyens (sur 10 000 parties simulées)
-
-![image](data/fig1.png)
-
-**Interprétations et remarques** 
-- si le choix se porte *toujours* sur le nombre situé à la moitié de l'intervalle (0.5), le nombre de coups moyen avant la victoire (sur 10 000 parties) est environ 6.
-- si le choix se porte *toujours* sur le nombre situé à 90 % de l'intervalle (0.9), le nombre de coups moyen avant la victoire (sur 10 000 parties) est environ 11.
-- l'asymétrie de la courbe (qui devrait être symétrique) est due aux arrondis par défaut dans le cas de nombres non entiers.
-
-## Conclusion générale de l'activité d'introduction
-La stratégie optimale est de diviser en deux à chaque étape l'intervalle d'étude. On appelle cela une méthode par **dichotomie**, du grec ancien διχοτομία, dikhotomia (« division en deux parties »).
-
-La méthode de dichotomie fait partie des méthodes dites *«diviser pour mieux régner»*. 
-
-Extrait de [Wikipedia](https://fr.wikipedia.org/wiki/Diviser_pour_r%C3%A9gner_(informatique)) :
-
-![](data/diviser_pour_regner.png)
-
--->
-##  1. Introduction : recherche d'une valeur dans une liste
+## 1. Introduction : recherche d'une valeur dans une liste
 
 ### 1.1 Préambule : liste non triée
 
 **Exemple :** pouvez-vous deviner la couleur à laquelle je pense ?
-
 
 ```python
 coul = ["bleu", "jaune", "rouge", "vert", "violet", "marron"]
 ```
 
 Toutes les méthodes (proposition des valeurs dans l'ordre, au hasard, dans l'ordre inverse...) sont équivalentes car la liste n'est pas triée.
-
 
 :star: :star: :star: Dans toute la suite, nous rechercherons un élément dans une liste d'entiers **triée** dans l'ordre croissant. :star: :star: :star: 
 
@@ -69,7 +30,6 @@ Toutes les méthodes (proposition des valeurs dans l'ordre, au hasard, dans l'or
 Considérons donc la liste ```lst```  suivante : 
 
 ![image](data/fig0.png){: .center}
-
 
 ```python
 lst = [2, 3, 6, 7, 11, 14, 18, 19, 24]
@@ -80,33 +40,18 @@ L'objectif est de définir un algorithme de recherche efficace d'une valeur arbi
 ### 1.3 Méthode naïve : recherche par balayage
 C'est la méthode la plus intuitive : on essaie toutes les valeurs (par exemple, dans l'ordre croissant) jusqu'à trouver la bonne.
 
-
-!!! abstract "Exercice 1"
+!!! abstract "Exercice"
     === "Énoncé"
-        Écrire un code permettant d'afficher l'indice de la valeur `14` dans la liste `lst = [2, 3, 6, 7, 11, 14, 18, 19, 24]`.
+        Écrire une fonction `trouve(lst, val)` qui renvoie l'indice d'une valeur `val` dans une liste `lst`. Si la valeur `val` n'est pas trouvée, on renverra `-1`.
     === "Correction"
-        ```python linenums='1'
-        lst = [2, 3, 6, 7, 11, 14, 18, 19, 24]
-        for k in range(len(lst)):
-            if lst[k] ==  14 :
-                return k
-        return "non trouvé"
-        ```
 
-
-!!! abstract "Exercice 2"
-    === "Énoncé"
-        Écrire une fonction `trouve(lst, val)` qui renvoie l'indice d'une valeur `val` dans une liste `lst `. Si la valeur `val` n'est pas trouvée, on renverra `"non trouvé"`.
-    === "Correction"
         ```python linenums='1'
         def trouve(val, lst) :
             for k in range(len(lst)) :
                 if lst[k] == val:
                     return k
-            return "non trouvé"
-
+            return -1
         ```
-
 
 ### 1.3 Complexité de la méthode naïve
 
@@ -115,7 +60,6 @@ C'est la méthode la plus intuitive : on essaie toutes les valeurs (par exemple,
 
 **Remarque :** 
 La méthode naïve n'utilise pas le fait que la liste est triée, on aurait pu aussi bien l'utiliser sur une liste non triée.
-
 
 ## 2. Recherche dichotomique
 
@@ -138,7 +82,6 @@ La méthode naïve n'utilise pas le fait que la liste est triée, on aurait pu a
 
     *En moyenne*, on gagnera 50 centimes par partie, il faut donc jouer.
 
-
 Le graphique ci-dessous représente le nombre de coups moyens (sur 10 000 parties simulées)
 
 ![image](data/fig1.png){: .center width=40%}
@@ -151,8 +94,6 @@ Le graphique ci-dessous représente le nombre de coups moyens (sur 10 000 partie
 
 #### Conclusion générale de l'activité d'introduction
 La stratégie optimale est de diviser en deux à chaque étape l'intervalle d'étude. On appelle cela une méthode par **dichotomie**, du grec ancien διχοτομία, dikhotomia (« division en deux parties »).
-
-
 
 ### 2.2 Algorithme de recherche dichotomique
 
@@ -179,23 +120,21 @@ Nous allons donc travailler avec trois variables :
 
 Nous allons faire *se rapprocher* les indices `indice_debut` et `indice_fin` **tant que** `indice_debut <= indice_fin`
 
-
 !!! note "Recherche dichotomique dans une liste triée :heart: :heart: :heart:"
     ```python
     def recherche_dichotomique(lst, val) :
         indice_debut = 0
         indice_fin = len(lst) - 1
         while indice_debut <= indice_fin :
-            indice_centre = (indice_debut + indice_fin) // 2     
-            valeur_centrale = lst[indice_centre]            
+            indice_centre = (indice_debut + indice_fin) // 2
+            valeur_centrale = lst[indice_centre]          
             if valeur_centrale == val :          
                 return indice_centre
             if valeur_centrale < val :             
                 indice_debut = indice_centre + 1
             else :
                 indice_fin = indice_centre - 1
-        return None
-            
+        return None 
     ```
 
 **Utilisation**

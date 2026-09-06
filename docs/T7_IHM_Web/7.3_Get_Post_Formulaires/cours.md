@@ -105,7 +105,7 @@ Du côté du serveur, le langage utilisé (PHP, Java...) doit récupérer les pa
 
 #### Exemple en PHP
 
- L'acronyme **PHP** signifie **P**HP : **H**ypertext **P**rocessor (c'est un [acronyme récursif](https://fr.wikipedia.org/wiki/Sigles_auto-r%C3%A9f%C3%A9rentiels){:target="_blank"}).
+ L'acronyme **PHP** signifie **P** HP : **H** ypertext **P** rocessor (c'est un [acronyme récursif](https://fr.wikipedia.org/wiki/Sigles_auto-r%C3%A9f%C3%A9rentiels){:target="_blank"}).
 
  Notre exemple va contenir deux fichiers :
 

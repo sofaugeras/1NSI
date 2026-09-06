@@ -1,1 +1,5 @@
-title: Ressources 🔦
+title: Outils 🔨
+nav:
+    - Présentation IDE : 01_outils_thonny_basthon.md
+    - Conseils de travail : 02_conseils_de_travail.md
+    - Liens utiles : 03_liens.md

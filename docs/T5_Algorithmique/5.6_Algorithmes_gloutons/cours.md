@@ -1,47 +1,12 @@
 # Les algos Gloutons
 
-*ou comment résoudre un problème en maximisant son gain ?*
-
 ![image](data/BO.png){: .center}
 
 ![](data/greedy.png){: .center}
 
-!!! abstract "Définition :heart:"
-    Un algorithme est qualifié de **glouton** si le problème qu'il essaie de résoudre est décomposé en une succession de problèmes identiques pour lesquels l'algorithme va chercher une solution optimale.  
+## 1. La NASA
 
-La question (presque philosophique) est : 
-
-*Lorsqu'on fait à chaque étape le meilleur choix possible, est-ce que la solution finale à laquelle on arrive est la meilleure possible ?*
-
-Formulé autrement :
-
-*Est-ce que faire le meilleur choix à chaque étape nous assure le meilleur choix global ?*
-
-# Algorithmie "Classique"
-
-Il existe dans la littérature informatique deux problèmes classiques, dont les informaticiens ont essayé de généraliser la résolution.
-
-## Le rendu de monnaie
-
-![](data/monnaie.jpg){: .center width=50%}
-
-Le problème du rendu de monnaie s’énonce de façon simple : étant donné un ensemble de pièces à disposition (je ne peux rendre que des pièces de 50 centimes, 1 euro, 2 euros…) et un montant à rendre, rendre ce montant avec un <u>nombre minimal de pièces</u> du système que l’on s’est donné. Les applications d’une solution à ce problème sont faciles à imaginer : nul n’a envie de récupérer 1 euro en pièces de 1 centime s’il s’est aventuré à payer 2 euros pour une malheureuse bouteille de soda à un distributeur !!
-
-Lien vers l'article de [Wikipedia](https://fr.wikipedia.org/wiki/Probl%C3%A8me_du_rendu_de_monnaie) 
-
-
-## le sac à dos
-
-![](data/sac_a_dos.png){: .center width=50%}
-
-Lien vers l'article de [Wikipedia](https://fr.wikipedia.org/wiki/Probl%C3%A8me_du_sac_%C3%A0_dos) :
-
-En algorithmique, le problème du sac à dos, noté également KP (en anglais, Knapsack problem) est un <u>problème d'optimisation combinatoire</u>. ... 
-Ou plus simplement, les objets mis dans le sac à dos doivent maximiser la valeur totale, sans dépasser le poids maximum.
-
-# La NASA
-
-Vous faites partie de l'équipage d'un vaisseau spatial qui doit rejoindre une base installée sur la face visible de la Lune. Mais, suite à un certain nombre de problèmes, vous êtes contraints de vous poser en catastrophe, à 320 km du point prévu. 
+Vous faites partie de l'équipage d'un vaisseau spatial qui doit rejoindre une base installée sur la face visible de la Lune. Mais, suite à un certain nombre de problèmes, vous êtes contraints de vous poser en catastrophe, à 320 km du point prévu.
 
 ![](data/moon.jpg){: .center width=50%}
 
@@ -89,83 +54,61 @@ Pour résoudre le dilemne posé, une solution serait d'attribuer une "valeur" nu
 
 ??? tips "Correction"
 
-    |Nom de l'objet|Valeur|
-    |:--:|:--:|
-    | Une boîte d’allumettes|1|
-    | Des aliments concentrés|12|
-    | 50 mètres de corde en nylon|10|
-    | Un parachute en soie|8|
-    | Un appareil de chauffage fonctionnant sur l’énergie solaire|3|
-    | Deux pistolets calibre 45|5|
-    | Une caisse de lait en poudre|4|
-    | Deux réservoirs de 50 kg d’oxygène chacun|15|
-    | Une carte céleste des constellations lunaires|13|
-    | Un canot de sauvetage autogonflable|7|
-    | Un compas magnétique|2|
-    | 25 litres d’eau|14|
-    | Une trousse médicale et des seringues hypodermiques|9|
-    | Des signaux lumineux|6|
-    | Un émetteur-récepteur fonctionnant sur l’énergie solaire|11|
-
-
-    :eyes: Pour les curieux, le classement selon la nasa est [ici](https://www.lumni.fr/article/jouer-a-survivre-sur-la-lune) 
+    |Nom de l'objet|Valeur|Explications|
+    |:--:|:--:|:--:|
+    | Une boîte d’allumettes|1|Absence d’oxygène sur la lune : on ne peut pas les enflammer. |
+    | Des aliments concentrés|12|Moyen efficace pour se nourrir |
+    | 50 mètres de corde en nylon|10|Utile pour se mettre en cordée, escalader les roches, éventuellement hisser les blessés |
+    | Un parachute en soie|8|Peut servir à se protéger des rayons solaires|
+    | Un appareil de chauffage fonctionnant sur l’énergie solaire|3|Sans utilité : les combinaisons sont chauffantes|
+    | Deux pistolets calibre 45|5|Peuvent servir à accélérer la propulsion ; à la rigueur à mettre fin à ses jours|
+    | Une caisse de lait en poudre|4|Plus encombrant que les aliments concentrés|
+    | Deux réservoirs de 50 kg d’oxygène chacun|15|Premier élément de survie : essentiel|
+    | Une carte céleste des constellations lunaires|13|Indispensable pour s’orienter|
+    | Un canot de sauvetage autogonflable|7|Peut servir de traîneau pour tracter des objets ; le gaz (CO) employé pour cet engin peut servir à la propulsion|
+    | Un compas magnétique|2|Sans utilité sur la lune, le champ magnétique n’y étant pas valorisé |
+    | 25 litres d’eau|14|Indispensable pour compenser une forte déshydratation due à la très grande chaleur sur la face éclairée de la lune|
+    | Une trousse médicale et des seringues hypodermiques|9|Les piqûres de vitamines, sérum, etc. nécessitent une ouverture spéciale (prévue par la NASA) dans la combinaison|
+    | Des signaux lumineux|6|Utiles quand la fusée-mère sera en vue|
+    | Un émetteur-récepteur fonctionnant sur l’énergie solaire|11|Utile pour essayer de communiquer avec la fusée-mère mais cet appareil n’a pas une grande portée|
 
 !!! example "structure"
+    === "Enoncé"
+        **Quelle(s) structure(s) algorithmique(s), vous paraissent pertinentes pour enregistrer vos valeurs ?** <br />
+        ▶️Codez une solution <br />
 
-    **Quelle(s) structure(s) algorithmique(s), vous paraissent pertinentes pour enregistrer vos valeurs ?**
+    === "Correction"
+        ```python
+        nasa=[('allumettes', 1), ('aliments', 12), ('corde', 10), ('parachute', 8), ('chauffage', 3), ('pistolets', 5), ('lait', 4), ('oxygène', 15), ('carte', 13), ('canot', 7), ('compas', 2), ('eau', 14), ('seringues', 9), ('signaux', 6), ('emetteur', 11)]
+        ```
+        et pour trier ce dictionnaire, nous allons utiliser la fonction sorted :
+        ```python
+        nasa_trie = sorted(liste, key=lambda x: x[1], reverse=True)
+        ```
+        La ligne fait trois choses en une :
 
-    - Codez l'une de vos solutions. <br />
-    - En vous aidant de la documentation Python, trier les par ordre décroissant de leur "valeur" (vous pouvez utiliser la fonction `sort` ou `sorted`de Python).
-
-??? tips "Correction"
-
-    ```python
-    #*complétez ici votre sructure de données.*
-
-    # J'ai choisi ici une liste de dictionnaire.
-    #Chaque dictionnaire représente un des objet NASA, pour chacun d'entre eux, 
-    #on note dans 'objet' le nom de l'objet et dans 'valeur' sa valeur attribuée.
-    liste=[{'objet': 'allumettes', 'valeur': '01'}, 
-            {'objet': 'aliments', 'valeur': '12'},
-            {'objet': 'corde', 'valeur': '10'}, 
-            {'objet': 'parachute', 'valeur': '08'}, 
-            {'objet': 'chauffage', 'valeur': '03'}, 
-            {'objet': 'pistolets', 'valeur': '05'},
-            {'objet': 'lait', 'valeur': '04'}, 
-            {'objet': 'oxygène', 'valeur': '15'}, 
-            {'objet': 'carte', 'valeur': '13'}, 
-            {'objet': 'canot', 'valeur': '07'}, 
-            {'objet': 'compas', 'valeur': '02'}, 
-            {'objet': 'eau', 'valeur': '14'}, 
-            {'objet': 'seringues', 'valeur': '09'}, 
-            {'objet': 'signaux', 'valeur': '06'}, 
-            {'objet': 'emetteur', 'valeur': '11'}]
-
-    #*Trier votre structure par ordre décroissant de la valeur
-    liste_ordo =sorted(liste, key=lambda d: d["valeur"], reverse=True)
-
-    #Autre solution plus simple (!) avec un dictionnaire.
-    nasa = {"allumette":1, 'carte': 13, 'emetteur':11}
-    nasa_trie= sorted(nasa.items(), key=lambda t: t[1], reverse=True)
-    ```
+        1. récupére l'objet à trier, ici ``liste``
+        2. key=lambda x: x[1] cible la valeur (index=1) comme critère de comparaison,
+        3. reverse=True trie du plus grand au plus petit.
 
 Revenons à notre résolution de problème, c'est à dire trouver les "meilleurs" objets pour la survie.
 
-<u>Idée :</u> La solution optimum est de prendre les :keycap_ten: valeurs les plus fortes. 
+⁉️ La solution optimum est de prendre les :keycap_ten: valeurs les plus fortes. Et à présent que la liste est triée par ordre décroissante, cela devrait être plus facile ! Il suffit de prendre les 10 premièrs objets.
 
-!!! example "tri" 
-    Codez l'affichage de vos 10 valeurs les plus fortes.
+!!! example "tri"
+    === "Enoncé"
+        Codez l'affichage des 10 objets les plus importants
 
-??? tips "correction"
+    === "Correction"
 
-    ```python linenums='1'
-    liste_sel = []
-    for i in range(10):
-        liste_sel.append(liste_ordo[i]['objet'])
-    print(liste_sel)
-    ```
+        ```python linenums='1'
+        liste_sel = []
+        for i in range(10):
+            liste_sel.append(liste_triee[i][0])
+        print(liste_sel)
+        ```
 
-Mais si l'on rajoute une contrainte de poids ? Les astronautes ne peuvent emporter que 200 kg de matériel. 
+Et si l'on rajoute une **contrainte de poids** ? Les astronautes ne peuvent emporter que **200 kg** de matériel.
 
 |Nom de l'objet|Valeur|Poids en kg|
 |:--:|:--:|:--:|
@@ -185,26 +128,50 @@ Mais si l'on rajoute une contrainte de poids ? Les astronautes ne peuvent emport
 | Des signaux lumineux|6|1|
 | Un émetteur-récepteur fonctionnant sur l’énergie solaire|11|5|
 
-!!! example "structure"
-
-    En partant la structure suivante `nasa = {"allumette":1, 'carte': 13, 'emetteur':11}`, comment ajouter la notion de poids ?
+❓ En partant la structure suivante `nasa=[('allumettes', 1), ('aliments', 12), ('corde', 10))`, comment ajouter la notion de poids ?
 
 ??? tips "Correction"
 
-        On peut utiliser un dictionnaire avec le nom de l'objet en clé et en valeur un tuple valeur/poids.
-
-        ```
-        nasa = {"allumettes" : (1, 0.1), "aliments" : (12, 2), "corde" : (10, 5), "parachute" : (8, 0.5), "chauffage" : (3, 25), "pistolets" : (5, 0.5), "lait" : (4, 5), "oxygène" : (15, 100), "carte" : (13, 0.1), "canot" : (7, 100), "compas" : (2, 0.5), "eau" : (14, 25)}
-
-        ```
+    ```python
+    liste = [
+        ('allumettes', 1,  0.1),
+        ('aliments',   12, 2),
+        ('corde',      10, 5),
+        ('parachute',  8,  0.5),
+        ('chauffage',  3,  25),
+        ('pistolets',  5,  0.5),
+        ('lait',       4,  5),
+        ('oxygène',    15, 100),
+        ('carte',      13, 0.1),
+        ('canot',      7,  100),
+        ('compas',     2,  0.5),
+        ('eau',        14, 25),
+        ('seringues',  9,  0.5),
+        ('signaux',    6,  1),
+        ('emetteur',   11, 5)
+    ]
+    ```
 
 **Quelle serait alors la combinaison optimum pour maximiser ses chances de survie ?**
 
 Plus difficile, non ? :skull:
 
-## Formulation mathématique du problème du sac à dos 
+## 2. le sac à dos
 
-Toute formulation commence par un énoncé des données. Dans notre cas, nous avons un sac à dos de poids maximal $W$ et $n$ objets. Pour chaque objet $i$, nous avons un poids $w_{i}$ et une valeur $w_{i}$.
+![](data/sac_a_dos.png){: .center width=50%}
+
+Le problème du sac à dos est un problème classique d'**optimisation** : on dispose d'un ensemble d'objets, chacun ayant une valeur et un poids, et d'un sac pouvant supporter un poids maximum. L'objectif est de choisir quels objets emporter pour maximiser la valeur totale sans dépasser la limite de poids.
+
+Lien vers l'article de [Wikipedia](https://fr.wikipedia.org/wiki/Probl%C3%A8me_du_sac_%C3%A0_dos) :
+
+En algorithmique, le problème du sac à dos, noté également KP (en anglais, Knapsack problem) est un **problème d'optimisation combinatoire**. ...<br />
+Ou plus simplement, les objets mis dans le sac à dos doivent maximiser la valeur totale, sans dépasser le poids maximum.
+
+C'est un problème du quotidien déguisé en maths : un cambrioleur qui choisit quoi voler, un randonneur qui prépare son sac, un directeur sportif qui recrute avec un budget limité...
+
+## 2.1 Formulation mathématique du problème du sac à dos 
+
+Toute formulation commence par un énoncé des données. Dans notre cas, nous avons un sac à dos de poids maximal $W$ et $n$ objets. Pour chaque objet $i$, nous avons un poids $w_{i}$ et une valeur $p_{i}$.
 
 Pour quatre objets ($n=4$) et un sac à dos d'un poids maximal de 30 kg ($W=30$), nous avons par exemple les données suivantes :</p>
 
@@ -229,63 +196,15 @@ Pour vérifier que la contrainte est respectée dans notre exemple, il suffit de
 Enfin, il faut exprimer la fonction qui traduit notre objectif : **maximiser la valeur totale des objets dans le sac**.<br />
 Pour $n$ objets, cela s’écrit : $Max \sum_{i=1}^{n} x_{i}*w_{i}$ <br />
     
-Dans notre exemple, la valeur totale contenue dans le sac est égale à $10$. Cette solution n’est pas la meilleure, car il existe une autre solution de valeur plus grande que $10$ : il faut prendre seulement les objets $1$ et $2$ qui donneront une valeur totale de $11$. Il n’existe pas de meilleure solution que cette dernière, nous dirons alors que cette solution est **optimale**.
+Dans notre exemple, la valeur totale contenue dans le sac est égale à $10$. Cette solution n’est pas la meilleure, car il existe une autre solution de valeur plus grande que $10$ : il faut prendre seulement les objets $1$ et $2$ qui donneront une valeur totale de $11$ pour un poids de $25$. Il n’existe pas de meilleure solution que cette dernière, nous dirons alors que cette solution est **optimale**.
 
-## Résolution algorithmique - Force brut
+## 2.2 Résolution par Force brute
 
 Dans un problème d'optimisation chaque solution possède une valeur, et on cherche à déterminer parmi toutes les solutions celle dont la valeur est optimale.
 
 La technique la plus basique pour résoudre ce type de problème consiste à énumérer de façon exhaustive toutes les solutions possibles, puis à choisir la meilleure. Cette approche est nommée par **force brute**.
 
-Vous trouverez ci dessous un extrait du code de résolution du problème de la NASA par force brut.
-
-??? note "Code par force brute"
-
-    ```python linenums='1'
-        # Structure contenant les objets de la NASA
-        dicoNasa2 = {"allumettes" : (1, 0.1), "aliments" : (12, 2), "corde" : (10, 5), "parachute" : (8, 0.5), "chauffage" : (3, 25), "pistolets" : (5, 0.5), "lait" : (4, 5), "oxygène" : (15, 100), "carte" : (13, 0.1), "canot" : (7, 100), "compas" : (2, 0.5), "eau" : (14, 25)}
-
-        #Initialisation des variables
-        # stockage de la meilleure solution
-        meilleur_valeur=0
-        # stockage de la meilleure combinaison
-        meilleur_comb=""
-        # stockage du meilleur poids
-        meilleur_poids=0
-
-        """
-        Paramètres de contrainte de l'algorithme du sac à dos
-            - poids_max : poids maximum autorisé
-            - max_objets : nombre maximum d'objets autorisés
-        """
-        # poids maximum autorisé
-        poids_max = 200
-        # nombre maximum d'objets autorisés
-        max_objets =10
-
-        # Extraire les items du dictionnaire (liste de tuples (clé, valeur))
-        items = list(dicoNasa2.items())
-
-        # Générer toutes les combinaisons possibles de longueurs différentes
-        for r in range(1, len(items) + 1):
-            # On utilise itertools pour générer toutes les combinaisons possibles de i objets
-            combinaisons = itertools.combinations(items, r)
-            for combinaison in combinaisons:
-                Comb = listeObjet2(combinaison)
-                valeurs = sommeValeur2(combinaison)
-                poids = sommePoids2(combinaison)
-                # On affiche la combinaison, la valeur et le poids 
-                print(Comb,' ',valeurs,' ',poids,'\n')
-                # On ne garde que les combinaisons qui respectent les contraintes
-                # dans notre cas : pas plus de 10 objets pour un poids inférieur à 200  
-                if valeurs>meilleur_valeur and poids<=poids_max and len(combinaison)<=max_objets:
-                    # solution retenue si surpasse la meilleure
-                    meilleur_comb = Comb   # maj meilleure solution
-                    meilleur_valeur = valeurs     # maj meilleure solution
-                    meilleur_poids = poids        # maj meilleure solution
-
-    ```
-Le principe de la résolution par force brut est de générer toutes les combinaisons possibles. Puis de sélectionner uniquement celle qui maximise la valeur, tout en respectant les contraintes données. 
+Le principe de la résolution par force brut est de générer toutes les combinaisons possibles. Puis de sélectionner uniquement celle qui maximise la valeur, tout en respectant les contraintes données.
 
 Pour résoudre cette problématique par force brute, la bibliothèque [itertools](https://docs.python.org/fr/3/library/itertools.html) pour générer toutes les combinaisons possibles.
 
@@ -298,13 +217,14 @@ allumettes\aliments\corde
 allumettes\aliments\parachute
 ...
 ```
-!!! example "Question"
+
+!!! question "Question"
     Combien y a t'il de combinaisons possible ?
 
 ??? tips "Réponse"
     Au rang $1$ : on a $1$ éléments dans la liste, il y a $15$ combinaisons possibles.<br />
-    Au rang $2$ : on a $2$ éléments dans la liste, il y a $105$ combinaisons possibles.(On ne compte pas les permutations : carte/eau est la même combinaison que eau/carte)<br />
-    
+    Au rang $2$ : on a $2$ éléments dans la liste, il y a $105$ combinaisons possibles.(On ne compte pas les permutations : carte/eau est la même combinaison que eau/carte)
+
     Au rang $p$ : cela fait appel à des notions mathématiques, non vu par vous en première.
     La formule est $\mathrm{C}_{n}^{p} = \frac{n!}{(n-p)!*p!}$ <br />
 
@@ -313,203 +233,166 @@ allumettes\aliments\parachute
 
     Ici, on cherche la somme de toutes ces combinaisons, et la formule est ici $2^{n}$.Donc $2^{15} = 32 768$
 
-!!! example "Question"
+!!! question "Question"
     Que pouvez vous en déduire sur la complexité de l'algorithme par force brut ?
 
 ??? tips "Réponse"
     La complexite de l'algorithme brut du problème du sac à dos est de l'ordre de $2^{n}$
 
-    | Temps |Type de complexité|Temps pour $n = 5$|Temps pour $n = 10$|	Temps pour $n = 20$|	Temps pour $n = 50$|	Temps pour $n = 250$|	 Temps pour $n = 1 000$|Temps pour $n = 10 000$	|Temps pour $n = 1 000 000$|	Problème exemple|
+    | Temps |Type de complexité|Temps pour $n = 5$|Temps pour $n = 10$|	Temps pour $n = 20$|Temps pour $n = 50$|	Temps pour $n = 250$|Temps pour $n = 1 000$|Temps pour $n = 10 000$	|Temps pour $n = 1 000 000$|Problème exemple|
     ||||||||||||
-    |$\displaystyle O\left(2^{\rm {{poly}(n)}}\right)$ |	complexité exponentielle |	320 ns |10 µs |	10 ms |130 jours |$\displaystyle 10^{59}$ ans	|... |	...	 |... |	problème du sac à dos par force brute |
+    |$\displaystyle O\left(2^{\rm {{poly}(n)}}\right)$ |complexité exponentielle |	320 ns |10 µs |	10 ms |130 jours |$\displaystyle 10^{59}$ ans|... |...	|... |problème du sac à dos par force brute |
 
     [Source wikipedia](https://fr.wikipedia.org/wiki/Analyse_de_la_complexit%C3%A9_des_algorithmes)
 
+Vous trouverez ci dessous le code de résolution du problème de la NASA par force brut.
 
-??? info "Code par force brut complet"
+??? note "Code par force brute"
 
     ```python linenums='1'
-        import itertools
+    ################################
+    #       --- Force brute ---    #        
+    ################################
+    print("--- Solution force brute ---")
+    # chaque tuple : (nom, valeur, poids)
+    #                 x[0]  x[1]   x[2]
 
-        def listeObjet2(liste):
-            """
-            Afffiche la liste des objets à partir d'un dictionnaire 
-            :param dico: liste de tuples
-            exemple : (('allumettes', (1, 0.1)),)
-            :return --> str: retourne la liste des objets
-            """
-            l = ""
-            for objet in liste :
-                l += objet[0]+str("/")
-            return l
+    # --- Contraintes ---
+    POIDS_MAX  = 200
+    MAX_OBJETS = 10
 
-        def sommeValeur2(liste):
-            """
-            Calcule la valeur totale de la liste d'objets
-            :param dico: liste de tuples
-            exemple : (('allumettes', (1, 0.1)),)
-            :return -> int: retourne la valeur totale de la liste d'objets passée en paramètre
-            """
-            force = 0
-            for objet in range(len(liste)):
-                force += int(liste[objet][1][0])
-            return force
-            
-        def sommePoids2(liste):
-            """"
-            Calcule le poids total de la liste d'objets
-            :param dico: liste de tuples
-            exemple : (('allumettes', (1, 0.1)),)
-            :return -> float: retourne le poids total    
-            """
-            cout = 0
-            for objet in range(len(liste)):
-                cout += float(liste[objet][1][1])
-            return cout 
-        """
-        PROGRAMME PRINCIPAL
-        note : 
-            Il existe de nombreuses manière de coder la force brut.
-            Il s'agit ci dessous de l'une de ces versions en utilisant la bibliothèqye itertools pour générer 
-            toutes les combinaisons possibles de l'ensemble des objets. 
-        """
-        # Ouverture du fichier contenant les objets de la NASA
-        dicoNasa2 = {"allumettes" : (1, 0.1), "aliments" : (12, 2), "corde" : (10, 5), "parachute" : (8, 0.5), "chauffage" : (3, 25), "pistolets" : (5, 0.5), "lait" : (4, 5), "oxygène" : (15, 100), "carte" : (13, 0.1), "canot" : (7, 100), "compas" : (2, 0.5), "eau" : (14, 25)}
+    # --- Initialisation ---
+    meilleur_valeur = 0
+    meilleur_comb   = []
+    meilleur_poids  = 0
 
-        #Initialisation des variables
-        # stockage de la meilleure solution
-        meilleur_valeur=0
-        # stockage de la meilleure combinaison
-        meilleur_comb=""
-        # stockage du meilleur poids
-        meilleur_poids=0
+    # --- Force brute ---
+    for r in range(1, MAX_OBJETS + 1):
+        for combinaison in itertools.combinations(liste, r):
+            print(f"Combinaison testée : {[objet[0] for objet in combinaison]}")
+            valeur_totale = sum(objet[1] for objet in combinaison)
+            poids_total   = sum(objet[2] for objet in combinaison)
 
-        """
-        Paramètres de contrainte de l'algorithme du sac à dos
-            - poids_max : poids maximum autorisé
-            - max_objets : nombre maximum d'objets autorisés
-        """
-        # poids maximum autorisé
-        poids_max = 200
-        # nombre maximum d'objets autorisés
-        max_objets =10
+            if poids_total <= POIDS_MAX and valeur_totale > meilleur_valeur:
+                meilleur_valeur = valeur_totale
+                meilleur_poids  = poids_total
+                meilleur_comb   = [objet[0] for objet in combinaison]
 
-        #version 2 en utilisant un dictionnaire
-        # On génère toutes les combinaisons possibles de i objets (1 objet, 2 objets, 3 objets, etc)
-
-
-        # Extraire les items du dictionnaire (liste de tuples (clé, valeur))
-        items = list(dicoNasa2.items())
-
-        # Générer toutes les combinaisons possibles de longueurs différentes
-        for r in range(1, len(items) + 1):
-            # On utilise itertools pour générer toutes les combinaisons possibles de i objets
-            combinaisons = itertools.combinations(items, r)
-            for combinaison in combinaisons:
-                Comb = listeObjet2(combinaison)
-                valeurs = sommeValeur2(combinaison)
-                poids = sommePoids2(combinaison)
-                # On affiche la combinaison, la valeur et le poids 
-                print(Comb,' ',valeurs,' ',poids,'\n')
-                # On ne garde que les combinaisons qui respectent les contraintes
-                # dans notre cas : pas plus de 10 objets pour un poids inférieur à 200  
-                if valeurs>meilleur_valeur and poids<=poids_max and len(combinaison)<=max_objets:
-                    # solution retenue si surpasse la meilleure
-                    meilleur_comb = Comb   # maj meilleure solution
-                    meilleur_valeur = valeurs     # maj meilleure solution
-                    meilleur_poids = poids        # maj meilleure solution
-
-        print(f"La meilleure sélection est {meilleur_comb} ; valeur = {meilleur_valeur}; poids = {meilleur_poids}")
+    # --- Résultat ---
+    print(f"Meilleure combinaison : {meilleur_comb}")
+    print(f"Valeur totale         : {meilleur_valeur}")
+    print(f"Poids total           : {meilleur_poids} kg")
     ```
 
-## Résolution algorithmique - Algorithme glouton
+## 3. Algorithmie "Glouton"
 
-### cours : principes et définitions
+!!! abstract "Définition :heart:"
+    Un algorithme est qualifié de **glouton** si le problème qu'il essaie de résoudre est décomposé en une succession de problèmes identiques pour lesquels l'algorithme va chercher une solution optimale.  
 
-Les algorithmes gloutons sont des algorithmes assez simples dans leur logique. Ainsi que leur nom le suggère, ils sont conçus pour prendre le maximum de ce qui est disponible à un moment donné.<br />
+La question (presque philosophique) est :
 
-L’algorithme glouton choisit la **solution optimale** qui se présente à lui à chaque instant, sans se préoccuper, ni du passé ni de l’avenir. Il répète cette même stratégie à chaque étape jusqu’à avoir entièrement résolu le problème. <br />
+*Lorsqu'on fait à chaque étape le meilleur choix possible, est-ce que la solution finale à laquelle on arrive est la meilleure possible ?*
+
+Formulé autrement :
+
+*Est-ce que faire le meilleur choix à chaque étape nous assure le meilleur choix global ?*
+
+Il existe dans la littérature informatique deux problèmes classiques, dont les informaticiens ont essayé de généraliser la résolution : le problème du sac à dos et celui du rendu de monnaie
+
+??? info "Le rendu de monnaie"
+
+    ![](data/monnaie.jpg){: .center width=50%}
+
+    Le problème du rendu de monnaie s’énonce de façon simple : étant donné un ensemble de pièces à disposition (je ne peux rendre que des pièces de 50 centimes, 1 euro, 2 euros…) et un montant à rendre, rendre ce montant avec un <u>nombre minimal de pièces</u> du système que l’on s’est donné. Les applications d’une solution à ce problème sont faciles à imaginer : nul n’a envie de récupérer 1 euro en pièces de 1 centime s’il s’est aventuré à payer 2 euros pour une malheureuse bouteille de soda à un distributeur !!
+
+    Lien vers l'article de [Wikipedia](https://fr.wikipedia.org/wiki/Probl%C3%A8me_du_rendu_de_monnaie) 
+
+### 3.1 principes et définitions
+
+Les algorithmes gloutons sont des algorithmes assez simples dans leur logique. Ainsi que leur nom le suggère, ils sont conçus pour prendre le **maximum** de ce qui est **disponible à un moment donné**.
+
+L’algorithme glouton choisit la **solution optimale** qui se présente à lui à chaque instant, sans se préoccuper, ni du passé ni de l’avenir. Il répète cette même stratégie à chaque étape jusqu’à avoir entièrement résolu le problème.
 
 !!! note "Définition"
-    Un algorithme glouton est un algorithme qui effectue à chaque instant, le meilleur choix possible sur le moment, sans retour en arrière ni anticipation des étapes suivantes, dans l’objectif d’atteindre au final un résultat optimal.<br />
+    Un algorithme glouton est un algorithme qui effectue à chaque instant, le meilleur choix possible sur le moment, sans retour en arrière ni anticipation des étapes suivantes, dans l’objectif d’atteindre au final un résultat optimal.
 
 Les algorithmes gloutons sont parfois appelés algorithmes gourmands ou encore algorithmes voraces.<br />
 La **répétition** de cette stratégie très simple, permet de résoudre rapidement et de manière souvent satisfaisante des problèmes d’optimisation sans avoir à tester systématiquement toutes les possibilités.
 
-```prompt
-Pseudo Algorithme :
-DEBUT
+!!! info "**NP-complet**"
+    Le problème du sac à dos est **NP-complet**.
+
+    **P** regroupe les problèmes résolubles rapidement (en temps polynomial). **NP** regroupe les problèmes dont on peut vérifier une solution rapidement, mais pas nécessairement en trouver une rapidement.
+
+### 3.2 Application
+
+!!! warning "Algorithme"
+    
+    ```text
     calculer la valeur (pi / wi) pour chaque objet i,
     trier tous les objets par ordre décroissant de cette valeur,
-    sélectionner les objets un à un dans l’ordre du tri et ajouter l’objet sélectionné dans le sac si le poids maximal reste respecté.
-FIN
-```
+    Boucle sur les objets dans l'ordre : 
+        ajouter l’objet sélectionné dans le sac si le poids maximal reste respecté.
+    ```
+
 ??? info "Code par la méthode gloutonne."
 
     ```python linenums='1'  
-        # Ouverture du fichier contenant les objets de la NASA
-        dicoNasa2 = {"allumettes" : (1, 0.1), "aliments" : (12, 2), "corde" : (10, 5), "parachute" : (8, 0.5), "chauffage" : (3, 25), "pistolets" : (5, 0.5), "lait" : (4, 5), "oxygène" : (15, 100), "carte" : (13, 0.1), "canot" : (7, 100), "compas" : (2, 0.5), "eau" : (14, 25)}
+    ################################
+    #       --- Glouton ---        #        
+    ################################
+    print("\n--- Solution gloutonne ---")
+    # --- Contraintes ---
+    POIDS_MAX  = 200
+    MAX_OBJETS = 10
 
-        #Initialisation des variables
-        # stockage de la meilleure solution
-        meilleur_valeur=0
-        # stockage de la meilleure combinaison
-        meilleur_comb=[]
-        # stockage du meilleur poids
-        meilleur_poids=0
+    # --- Étape 1 : tri par valeur décroissant ---
+    #liste_triee = sorted(liste, key=lambda x: x[1], reverse=True)
 
-        """
-        Paramètres de contrainte de l'algorithme du sac à dos
-            - poids_max : poids maximum autorisé
-            - max_objets : nombre maximum d'objets autorisés
-        """
-        # poids maximum autorisé
-        poids_max = 200
-        # nombre maximum d'objets autorisés
-        max_objets =10
+    # --- Étape 2 : sélection gloutonne ---
+    meilleur_valeur = 0
+    meilleur_poids  = 0
+    meilleur_comb   = []
 
-        # on trie la liste des objets par force décroissante  
-        nasa_ordo = sorted(dicoNasa2.items(), key=lambda x: x[1][0], reverse=True)
-        #ATTENTION : changement de la structure de la liste 
-        #nasa_ordo = [('oxygène', (15, 100)), ('eau', (14, 25)), ('carte', (13, 0.1)), ('aliments', (12, 2)), ('corde', (10, 5)), ('parachute', (8, 0.5)), ('canot', (7, 100)), ('pistolets', (5, 0.5)), ('lait', (4, 5)), ('chauffage', (3, 25)), ('compas', (2, 0.5)), ('allumettes', (1, 0.1))]
+    for objet in liste_triee:
+        if meilleur_poids + objet[2] <= POIDS_MAX and len(meilleur_comb) < MAX_OBJETS:
+            meilleur_valeur += objet[1]
+            meilleur_poids  += objet[2]
+            meilleur_comb.append(objet[0])
 
-        # on balaye sequentiellement la liste triée nasa_ordo
-        for objet in nasa_ordo:  
-            # on accumule tant que cela ne va pas dépasser le budget Poids
-            # et que l'on ne dépasse pas le nombre d'objet, fixé à 10 par nos contraintes
-            if (meilleur_poids + float(objet[1][1])) <= poids_max and len(meilleur_comb)<max_objets: 
-
-                meilleur_valeur += int(objet[1][0])  #calcul valeur gagnée
-                meilleur_comb.append(objet[0]) #complément liste des recrues
-                meilleur_poids += float(objet[1][1])  #calcul poids "dépensées"
-
-        #Affichage du résultat
-        print ("somme des valeurs : ",meilleur_valeur)
-        print ("nombre d'objet : ",)
-        print ("poids total : ",meilleur_poids)
-        print (f"liste des {len(meilleur_comb)} objets : {meilleur_comb}")
+    # --- Résultat ---
+    print(f"Meilleure combinaison : {meilleur_comb}")
+    print(f"Valeur totale         : {meilleur_valeur}")
+    print(f"Poids total           : {meilleur_poids} kg")
     ```
 
-!!! example "Question"
-    L'exécution du programme est il plus rapide ?
+!!! question "Question"
+    === "Enoncé"
+        L'exécution du programme est il plus rapide ?
+    === "Correction"
+        La méthode par glouton est beaucoup plus rapide.
 
-??? tips "Réponse"
-    La méthode par glouton est beaucoup plus rapide.
+*remarque :* Ici, on obtient le même résultat par force brute et par méthode gloutonne. Nous allons voir dans le TP mercato que ce n'est pas toujours le cas. Le problème fondamental est que le glouton ne revient jamais en arrière : un mauvais choix au début (prendre un objet un peu trop lourd) bloque des combinaisons potentiellement meilleures pour la suite.
 
-## Complexité
+## 4. Complexité
+**Algorithme force brute** : la génération de toutes les combinaisons possibles de $n$ objets produit $2^n$ combinaisons à évaluer. La complexité est donc **exponentielle** : $O(2^n)$. Elle devient rapidement ingérable quand $n$ grandit.
 
-**Algorithme force brute** : On trouve dans le programme une  boucle dont la limite dépend de $n$, on y imbrique une itération.<br />
-- pour le pointeur $i$ la gamme (range) est $n^{2}$, parcours de toute la liste<br />
-- pour le pointeur $p$ la gamme est $n$, nombre de combinaisons possibles<br />
-On peut conclure que le complexité de l’algorithme est $O(n^{3})$ <br />
-La complexité en temps croît donc rapidement **très** supérieur pour l’algorithme force brute<br />
+**Algorithme glouton** : deux opérations dominent le coût :
 
-**Algorithme glouton** : seules les lignes 24 à 30 contiennent des opérations dont le nombre dépend de $n$ (longueur de la liste ) si on néglige l’import préalable du fichier .csv<br />
-On distingue : <br />
-- le tri préalable de la liste selon le critère de valeur dont la complexité est $O(nlog(n))$<br />
-- puis le parcours de cette liste triée dont la complexité est $O(n)$ au pire cas<br />
-    
-On peut conclure que le complexité de l’algorithme entier est $O(n(log(n)+1)$ qui tend vers une complexité standard $O(nlog(n))$ si $n$ est grand
+- le **tri** préalable par ratio valeur/poids : $O(n \log n)$
+- le **parcours** de la liste triée : $O(n)$
+
+La complexité totale est $O(n \log n + n)$, ce qui se simplifie en $O(n \log n)$ car le terme $n$ devient négligeable devant $n \log n$ quand $n$ est grand.
+
+La différence est considérable en pratique :
+
+| $n$ | $O(n \log n)$ | $O(2^n)$ |
+|:--:|:--:|:--:|
+| 10 | 33 opérations | 1 024 |
+| 50 | 282 opérations | $10^{15}$ |
+| 100 | 664 opérations | $10^{30}$ |
+
+Le glouton reste **quasi-instantané** là où la force brute devient impossible à exécuter.
 
 ![Classe de complexite](./data/classes-de-complexité.png){: .center width=60%}
 

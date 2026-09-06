@@ -191,7 +191,7 @@ Pour cracker un mot de passe, le cybercriminel va chercher son empreinte dans la
 
 !!! note "Activité"
 
-    Prérequis : Manipulation de dictionnaire et CSV
+    **Prérequis :** Manipulation de dictionnaire et CSV
 
     🔽 Activité : [Manipulation d'une rainbow Table](./rainbow.md) <br />
 

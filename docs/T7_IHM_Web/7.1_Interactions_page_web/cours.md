@@ -12,7 +12,7 @@ Nous allons tout d'abord considérer le cas où le serveur renvoie une page uniq
 
 Exemple de page statique côté serveur et côté utilisateur :
 
-- cette [merveille](http://glassus1.free.fr/interesting.html){:target="_blank"} de page web.
+- cette [merveille](http://sofaugeras.com/interesting.html){:target="_blank"} de page web.
 - plus complète, mais tout aussi statique : cette page [Wikipedia](https://fr.wikipedia.org/wiki/John_Horton_Conway){:target="_blank"} consacrée à John Conway.
 
 ### 1.1 ```html```  pur
@@ -205,7 +205,7 @@ Les langages serveurs, parmi lesquels PHP (présent sur environ 80% des serveurs
 ### 3.1 Page statique (côté serveur) : 
 Lors d'une requête d'un client vers un serveur, si le client demande la page ```index.html```, une **copie exacte** du fichier ```index.html``` est transmise au client sur sa machine.  
 
-**Exemple :** la page [http://glassus1.free.fr/interesting.html](http://glassus1.free.fr/interesting.html){:target="_blank"} que vous avez déjà consultée se trouve **telle quelle** sur le serveur mis à disposition par Free pour l'hébergement des pages personnelles :
+**Exemple :** la page [http://sofaugeras.com/interesting.html](http://sofaugeras.com/interesting.html){:target="_blank"} que vous avez déjà consultée se trouve **telle quelle** sur le serveur mis à disposition par Free pour l'hébergement des pages personnelles :
 
 ![](data/extraitfree1.png){: .center}
 
@@ -214,7 +214,7 @@ Depuis votre navigateur, l'affichage du code-source (par Ctrl-U) vous donnera le
 ### 3.2  Page dynamique (côté serveur) :
 Lors d'une requête d'un client vers un serveur, si le client demande la page ```test.php```, un code html est généré à partir  du fichier ```test.php```  puis est transmise au client sur sa machine. Le fichier transmis ne contient plus de balises ```php```, il ne comporte que des balises ```html``` classiques.  
 
-**Exemple :** la consultation de la page [http://glassus1.free.fr/test.php](http://glassus1.free.fr/test.php){:target="_blank"} va renvoyer la page suivante :
+**Exemple :** la consultation de la page [http://sofaugeras.com/test.php](http://sofaugeras.com/test.php){:target="_blank"} va renvoyer la page suivante :
 
 ![](data/php1.png){: .center}
 

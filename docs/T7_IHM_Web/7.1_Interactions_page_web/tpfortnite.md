@@ -154,12 +154,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // TODO : Ajouter un événement 'mouseover' et 'mouseout' sur le formulaire pour changer la couleur de fond
 
 });
-
 ```
 
 ??? tips "Correction"
-  ```js
-  document.addEventListener('DOMContentLoaded', () => {
+
+    ```js
+    document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('inscriptionForm');
     const pseudo = document.getElementById('pseudo');
     const email = document.getElementById('email');
@@ -188,11 +188,10 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('mouseout', function() {
       form.style.backgroundColor = "transparent";
     });
-  });
+    });
+    ```
 
-  ```
-
-## 💡 Bonus 
+## 💡 Bonus
 
 - Ajouter un effet sonore lors du clic sur le bouton submit.
 - Faire apparaître une animation ou image Fortnite en cas d’inscription réussie.

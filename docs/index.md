@@ -1,11 +1,14 @@
-# Première NSI
+# Home
 
 !!! abstract ":star: Thèmes en cours d'étude :star:"
-    📌 [dichotomie](./T5_Algorithmique/5.5_Dichotomie/cours.md)<br /> 
-    ⌛️ A venir : [thème 7](./T7_IHM_Web/7.1_Interactions_page_web/cours.md) et TP fortnite <br />
+    📌  [Thème 1 : Démarrer en Python](./T1_Demarrer_en_Python/sommaire.md)  <br /> 
+    ⌛️ A venir :  [Thème 5 : Spécifications](./T5_Algorithmique/5.0_specifications/cours.md)  <br />
+    <br />
+    📆 Evaluation Python (TP) le 1er octobre<br />
+    😍 [Projet 1 : site web](./T8_Projets/1_SiteWeb/cours.md) pour le 5 novembre
 
 !!! warning "Mémo python"
-    le mémento Python est disponible ici : :snake: [mémento Python](./data/mementopython3.pdf)
+    le mémento Python est disponible ici : :snake: [mémento Python](./data/mementopython3.pdf){. target="_blank"}
 
 !!! info "Entraînement :running: "
     Vous trouverez ci dessous quelques sites pour vous entrainez en Python
@@ -18,8 +21,11 @@
 
 !!! note "*Thèmes traités*"
 
-    - [Thème 1 : Démarrer en Python](./T1_Demarrer_en_Python/sommaire.md) 
-    - [Thème 5 : Spécifications](./T5_Algorithmique/5.0_specifications/cours.md) 
+
+<!--
+Archives : 
+    
+    - 
     - [Thème 7 : IHM Web : HTML et CSS](./T7_IHM_Web/7.1_Interactions_page_web/cours.md) 
     - [Thème 2 : le binaire](./T2_Type_de_base/2.1_Binaire/cours.md)
     - [Thème 2 : codage des entiers](./T2_Type_de_base/2.2_Codage_entiers/cours.md) 
@@ -44,17 +50,16 @@
     - 🅿️ Projet : [Projet CSV 🐼](./T8_Projets/2_ProjetCSV/cours.md) 
     - [tri insertion](./T5_Algorithmique/5.3_Tri_par_insertion/cours.md)
     - [Ti sélection](./T5_Algorithmique/5.4_Tri_par_selection/cours.md)
-    
+    - [dichotomie](./T5_Algorithmique/5.5_Dichotomie/cours.md)
+    - [thème 7 : Interactions Web : js](./T7_IHM_Web/7.1_Interactions_page_web/cours.md) et [TP fortnite](./T7_IHM_Web/7.1_Interactions_page_web/tpfortnite.md)
+    - [IHM sur le Web](./T7_IHM_Web/7.3_Get_Post_Formulaires/cours.md) et [TP Cyber](./T7_IHM_Web/7.3_Get_Post_Formulaires/tpCyber.md)
+    - [Algorithme Glouton](./T5_Algorithmique/5.6_Algorithmes_gloutons/cours.md)
+    - [Algorithme KNN](./T5_Algorithmique/5.7_Algorithme_KNN/cours.md)
+    - [mini projet morpions](./T8_Projets/4_sockets/4.2_projet.md) et/ou [sockets ou TP Pyxel jeu de tir](./T8_Projets/5_pyxel/pyxel.md) 
+-->
 <!--
 !!! abstract ":beach: :sunny: Préparer sa rentrée en Terminale :sunny: :beach: "
-    Chers élèves de Première  voilà les chapitres à revoir en priorité pour aborder sereinement l'année de Terminale en NSI :
-    - Les listes, les tuples et les dictionnaires. À retrouver [ici](T3_Type_construit/sommaire.md){. target="_blank"}.
-    - Le plus important : les chapitres suivants d'algorithmique, à retrouver [ici](T5_Algorithmique/sommaire.md){. target="_blank"} :
-
-    - <br />
-    - 
-    - [IHM sur le Web](./T7_IHM_Web/7.3_Get_Post_Formulaires/cours/) et TP Cyber
-    - [Algorithme Glouton](./T5_Algorithmique/5.6_Algorithmes_gloutons/cours.md)<br />
-    - [Algorithme KNN](./T5_Algorithmique/5.7_Algorithme_KNN/cours.md)<br />
-    - mini projet morpions et sockets ou TP Pyxel jeu de tir
+    voilà les chapitres à revoir en priorité pour aborder sereinement l'année de Terminale en NSI :
+    - Les listes, les tuples et les dictionnaires. À retrouver [ici](./T3_Type_construit/sommaire.md){. target="_blank"}.
+    - Le plus important : les chapitres suivants d'algorithmique, à retrouver [ici](./T5_Algorithmique/sommaire.md){. target="_blank"} :
 -->
