@@ -1,0 +1,1 @@
+mkdocs-graphviz<2.0
