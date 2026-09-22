@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5596,7 +5596,7 @@
     <span class="k">assert</span> <span class="n">maxi</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span>
     <span class="k">assert</span> <span class="n">maxi</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>
     <span class="k">assert</span> <span class="n">maxi</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span> <span class="o">==</span> <span class="mi">7</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;tests ok&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"tests ok"</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div></p>
 </div>
 <div class="tabbed-block">
@@ -5630,10 +5630,10 @@
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_nb_voyelles</span><span class="p">():</span>
-    <span class="k">assert</span> <span class="n">nb_voyelles</span><span class="p">(</span><span class="s2">&quot;bonjour&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span>
-    <span class="k">assert</span> <span class="n">nb_voyelles</span><span class="p">(</span><span class="s2">&quot;fdjgdhk&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
-    <span class="k">assert</span> <span class="n">nb_voyelles</span><span class="p">(</span><span class="s2">&quot;au&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;tests ok&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">nb_voyelles</span><span class="p">(</span><span class="s2">"bonjour"</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span>
+    <span class="k">assert</span> <span class="n">nb_voyelles</span><span class="p">(</span><span class="s2">"fdjgdhk"</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="k">assert</span> <span class="n">nb_voyelles</span><span class="p">(</span><span class="s2">"au"</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"tests ok"</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div></p>
 </div>
 <div class="tabbed-block">
@@ -5645,7 +5645,7 @@
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">nb_voyelles</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
-    <span class="n">voyelles</span> <span class="o">=</span> <span class="s1">&#39;aeiouy&#39;</span>
+    <span class="n">voyelles</span> <span class="o">=</span> <span class="s1">'aeiouy'</span>
     <span class="n">nb</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">mot</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">voyelles</span><span class="p">:</span>
@@ -5664,10 +5664,10 @@
 <div class="tabbed-block">
 <p>Définissez une <strong>fonction</strong> <code>decale(lettre)</code> qui décale de 3 rangs dans l'alphabet la lettre majuscule <code>lettre</code> passée en argument (après Z, on recommencera à A..)</p>
 <p>Aide : 
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">ord</span><span class="p">(</span><span class="s1">'A'</span><span class="p">)</span>
 <span class="mi">65</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">chr</span><span class="p">(</span><span class="mi">65</span><span class="p">)</span>
-<span class="s1">&#39;A&#39;</span>
+<span class="s1">'A'</span>
 </code></pre></div></p>
 </div>
 <div class="tabbed-block">
@@ -5676,9 +5676,9 @@
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_decale</span><span class="p">():</span>
-    <span class="k">assert</span> <span class="n">decale</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;D&#39;</span>
-    <span class="k">assert</span> <span class="n">decale</span><span class="p">(</span><span class="s1">&#39;Z&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;C&#39;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tests ok !&#39;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">decale</span><span class="p">(</span><span class="s1">'A'</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'D'</span>
+    <span class="k">assert</span> <span class="n">decale</span><span class="p">(</span><span class="s1">'Z'</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'C'</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'tests ok !'</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div></p>
 </div>
 <div class="tabbed-block">
@@ -5712,10 +5712,10 @@
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_decale</span><span class="p">():</span>
-    <span class="k">assert</span> <span class="n">decale</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;D&#39;</span>
-    <span class="k">assert</span> <span class="n">decale</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;F&#39;</span>
-    <span class="k">assert</span> <span class="n">decale</span><span class="p">(</span><span class="s1">&#39;Z&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;A&#39;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;tests ok !&#39;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">decale</span><span class="p">(</span><span class="s1">'A'</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'D'</span>
+    <span class="k">assert</span> <span class="n">decale</span><span class="p">(</span><span class="s1">'A'</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'F'</span>
+    <span class="k">assert</span> <span class="n">decale</span><span class="p">(</span><span class="s1">'Z'</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'A'</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'tests ok !'</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div></p>
 </div>
 <div class="tabbed-block">
@@ -5753,10 +5753,10 @@
 <span class="normal">7</span>
 <span class="normal">8</span>
 <span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">decale_phrase</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="n">phrase_decalee</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">phrase_decalee</span> <span class="o">=</span> <span class="s1">''</span>
     <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">p</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">lettre</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
-            <span class="n">phrase_decalee</span> <span class="o">+=</span> <span class="s1">&#39; &#39;</span>
+        <span class="k">if</span> <span class="n">lettre</span> <span class="o">==</span> <span class="s1">' '</span><span class="p">:</span>
+            <span class="n">phrase_decalee</span> <span class="o">+=</span> <span class="s1">' '</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">nouvelle_lettre</span> <span class="o">=</span> <span class="n">decale</span><span class="p">(</span><span class="n">lettre</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
             <span class="n">phrase_decalee</span> <span class="o">+=</span> <span class="n">nouvelle_lettre</span>
@@ -5822,10 +5822,10 @@
     <span class="k">return</span> <span class="nb">chr</span><span class="p">(</span><span class="n">rang_nouvelle_lettre</span><span class="p">)</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">decale_phrase</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="n">phrase_decalee</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">phrase_decalee</span> <span class="o">=</span> <span class="s1">''</span>
     <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">p</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">lettre</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
-            <span class="n">phrase_decalee</span> <span class="o">+=</span> <span class="s1">&#39; &#39;</span>
+        <span class="k">if</span> <span class="n">lettre</span> <span class="o">==</span> <span class="s1">' '</span><span class="p">:</span>
+            <span class="n">phrase_decalee</span> <span class="o">+=</span> <span class="s1">' '</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">nouvelle_lettre</span> <span class="o">=</span> <span class="n">decale</span><span class="p">(</span><span class="n">lettre</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
             <span class="n">phrase_decalee</span> <span class="o">+=</span> <span class="n">nouvelle_lettre</span>
@@ -5836,23 +5836,23 @@
     <span class="k">for</span> <span class="n">decalage</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">25</span><span class="p">):</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">decale_phrase</span><span class="p">(</span><span class="n">msg_secret</span><span class="p">,</span> <span class="n">decalage</span><span class="p">))</span>
 
-<span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;RT BTHHPVT CT RDCIXTCI GXTC S XCITGTHHPCI&#39;</span>
+<span class="n">msg</span> <span class="o">=</span> <span class="s1">'RT BTHHPVT CT RDCIXTCI GXTC S XCITGTHHPCI'</span>
 
 <span class="n">decrypt</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
 
 <span class="c1"># cette méthode impose de tout lire pour y chercher une phrase ayant du sens.</span>
 <span class="c1"># Si on sait que la phrase sera en français, on peut chercher des mots du</span>
-<span class="c1"># dictionnaire. Si par exemple on sait que la phrase contiendra le mot &#39;MESSAGE&#39;,</span>
+<span class="c1"># dictionnaire. Si par exemple on sait que la phrase contiendra le mot 'MESSAGE',</span>
 <span class="c1"># le code peut devenir :</span>
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">decrypt2</span><span class="p">(</span><span class="n">msg_secret</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">decalage</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">25</span><span class="p">):</span>
         <span class="n">phrase_clair</span> <span class="o">=</span> <span class="n">decale_phrase</span><span class="p">(</span><span class="n">msg_secret</span><span class="p">,</span> <span class="n">decalage</span><span class="p">)</span>
-        <span class="k">if</span> <span class="s1">&#39;MESSAGE&#39;</span> <span class="ow">in</span> <span class="n">phrase_clair</span><span class="p">:</span>
+        <span class="k">if</span> <span class="s1">'MESSAGE'</span> <span class="ow">in</span> <span class="n">phrase_clair</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">phrase_clair</span><span class="p">)</span>
 
-<span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;RT BTHHPVT CT RDCIXTCI GXTC S XCITGTHHPCI&#39;</span>
+<span class="n">msg</span> <span class="o">=</span> <span class="s1">'RT BTHHPVT CT RDCIXTCI GXTC S XCITGTHHPCI'</span>
 
 <span class="n">decrypt2</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
@@ -6047,11 +6047,13 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
       

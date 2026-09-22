@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5594,7 +5594,7 @@
 <span class="n">passwords</span> <span class="o">=</span> <span class="p">{}</span>
 
 <span class="c1">#ouverture du fichier contenant les mots de passe</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./data/french_passwords_top1000.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"./data/french_passwords_top1000.txt"</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
     <span class="c1">#pour chaque mot de passe, on créé un hachage MD5 et on stocke le mot de passe et son hachage dans le dictionnaire</span>
     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>   
         <span class="n">password</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
@@ -5602,9 +5602,9 @@
         <span class="n">passwords</span><span class="p">[</span><span class="n">password</span><span class="p">]</span> <span class="o">=</span> <span class="n">password_hash</span> 
 
 <span class="c1">#Sauvegarde des hachages dans un fichier</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;./data/md5_passwords.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"./data/md5_passwords.csv"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">password</span><span class="p">,</span> <span class="nb">hash</span> <span class="ow">in</span> <span class="n">passwords</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">password</span> <span class="o">+</span> <span class="s1">&#39;;&#39;</span> <span class="o">+</span><span class="nb">hash</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">password</span> <span class="o">+</span> <span class="s1">';'</span> <span class="o">+</span><span class="nb">hash</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 
 <span class="c1">#fermeture du fichier</span>
 <span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
@@ -5629,11 +5629,11 @@
         <span class="c1">#si le hachage est dans le dictionnaire, on affiche le mot de passe correspondant</span>
         <span class="k">for</span> <span class="n">password</span><span class="p">,</span> <span class="n">password_hash</span> <span class="ow">in</span> <span class="n">passwords</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="k">if</span> <span class="n">password_hash</span> <span class="o">==</span> <span class="nb">hash</span><span class="p">:</span>
-                <span class="k">return</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Le mot de passe associé au hachage </span><span class="si">{</span><span class="nb">hash</span><span class="si">}</span><span class="s2"> est </span><span class="si">{</span><span class="n">password</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-            <span class="c1">#sinon on affiche que le mot de passe n&#39;a pas été trouvé</span>
-    <span class="k">return</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Le mot de passe associé au hachage </span><span class="si">{</span><span class="nb">hash</span><span class="si">}</span><span class="s2"> n&#39;a pas été trouvé&quot;</span><span class="p">)</span>
+                <span class="k">return</span> <span class="p">(</span><span class="sa">f</span><span class="s2">"Le mot de passe associé au hachage </span><span class="si">{</span><span class="nb">hash</span><span class="si">}</span><span class="s2"> est </span><span class="si">{</span><span class="n">password</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+            <span class="c1">#sinon on affiche que le mot de passe n'a pas été trouvé</span>
+    <span class="k">return</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Le mot de passe associé au hachage </span><span class="si">{</span><span class="nb">hash</span><span class="si">}</span><span class="s2"> n'a pas été trouvé"</span><span class="p">)</span>
 
-<span class="nb">hash</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="s2">&quot;secret&quot;</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span> <span class="c1">#5ebe2294ecd0e0f08eab7690d2a6ee69</span>
+<span class="nb">hash</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="s2">"secret"</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span> <span class="c1">#5ebe2294ecd0e0f08eab7690d2a6ee69</span>
 <span class="n">find_password</span><span class="p">(</span><span class="nb">hash</span><span class="p">)</span>
 </code></pre></div>
 <p>Exemple pour : 5ebe2294ecd0e0f08eab7690d2a6ee69</p>
@@ -5784,11 +5784,13 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
       

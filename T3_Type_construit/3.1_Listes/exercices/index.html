@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5618,10 +5618,10 @@ Résolvez le <strong>Pydéfi</strong> proposé à <a href="https://pydefis.calli
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>On donne la liste <code>jours</code> suivante :
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">jours</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;lundi&quot;</span><span class="p">,</span> <span class="s2">&quot;mardi&quot;</span><span class="p">,</span> <span class="s2">&quot;mercredi&quot;</span><span class="p">,</span> <span class="s2">&quot;jeudi&quot;</span><span class="p">,</span> <span class="s2">&quot;vendredi&quot;</span><span class="p">,</span> <span class="s2">&quot;samedi&quot;</span><span class="p">,</span> <span class="s2">&quot;dimanche&quot;</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">jours</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"lundi"</span><span class="p">,</span> <span class="s2">"mardi"</span><span class="p">,</span> <span class="s2">"mercredi"</span><span class="p">,</span> <span class="s2">"jeudi"</span><span class="p">,</span> <span class="s2">"vendredi"</span><span class="p">,</span> <span class="s2">"samedi"</span><span class="p">,</span> <span class="s2">"dimanche"</span><span class="p">]</span>
 </code></pre></div></p>
 <p>On rappelle que la fonction <code>len</code> permet d'obtenir le nombre de caractères d'une chaine de caractères :</p>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="s2">"test"</span><span class="p">)</span>
 <span class="mi">4</span>
 </code></pre></div>
 <ol>
@@ -5636,7 +5636,7 @@ Résolvez le <strong>Pydéfi</strong> proposé à <a href="https://pydefis.calli
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">lst1</span> <span class="o">=</span> <span class="p">[</span><span class="n">day</span> <span class="k">for</span> <span class="n">day</span> <span class="ow">in</span> <span class="n">jours</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">day</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span><span class="p">]</span>
 </code></pre></div>
 2.<br />
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">lst2</span> <span class="o">=</span> <span class="p">[</span><span class="n">day</span> <span class="k">for</span> <span class="n">day</span> <span class="ow">in</span> <span class="n">jours</span> <span class="k">if</span> <span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="n">day</span><span class="p">]</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">lst2</span> <span class="o">=</span> <span class="p">[</span><span class="n">day</span> <span class="k">for</span> <span class="n">day</span> <span class="ow">in</span> <span class="n">jours</span> <span class="k">if</span> <span class="s1">'a'</span> <span class="ow">in</span> <span class="n">day</span><span class="p">]</span>
 </code></pre></div></p>
 <ol>
 <li>
@@ -5648,7 +5648,7 @@ Résolvez le <strong>Pydéfi</strong> proposé à <a href="https://pydefis.calli
 <span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">compte_e</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
     <span class="n">compteur</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">mot</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">lettre</span> <span class="o">==</span> <span class="s1">&#39;e&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">lettre</span> <span class="o">==</span> <span class="s1">'e'</span><span class="p">:</span>
         <span class="n">compteur</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="n">compteur</span>
 </code></pre></div></td></tr></table></div>
@@ -5737,10 +5737,10 @@ Afficher successivement chaque ligne du tableau en respectant les règles suivan
 <span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="n">m</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">ligne</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">elt</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">'*'</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">''</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">' '</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s1">''</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 "
 ) }}</p>
@@ -5946,11 +5946,13 @@ Afficher successivement chaque ligne du tableau en respectant les règles suivan
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
       

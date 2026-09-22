@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5785,7 +5785,7 @@ si le point 1 a pour coordonnées (x1, y1) et le point 2 a pour coordonnées (x2
 <p>distance(point1, point2) = <span class="arithmatex">\(\sqrt{(x_{1}-x_{2})^2+(y_{1}-y_{2})^2}\)</span></p>
 <p><strong>Formulation de l'algorithme :</strong>
 Pour prédire si notre point d'interrogation est une "étoile rouge" ou un "triangle vert", on peut formuler l'algorithme de prédiction comme suit :</p>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>  1. Trouver, dans l&#39;échantillon, les _k_ plus proches voisins de notre point d&#39;interrogation.
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>  1. Trouver, dans l'échantillon, les _k_ plus proches voisins de notre point d'interrogation.
   2. Parmi ces proches_voisins, trouver la classification majoritaire
   3. Renvoyer la classification majoritaire.
 </code></pre></div>
@@ -5844,9 +5844,9 @@ Nous allons reprendre le jeu de données sur les joueurs du top14 utilisé dans 
 <p>Le jeu de données : <a class="md-button" href="../data/top14.csv" target="_blank">Top14</a></p>
 <details class="note">
 <summary>code lecture CSV</summary>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span> <span class="c1">#import du module pandas, abrégé classiquement par &quot;pd&quot;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span> <span class="c1">#import du module pandas, abrégé classiquement par "pd"</span>
 
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;top14.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'top14.csv'</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">'utf-8'</span><span class="p">)</span>
 </code></pre></div>
 </details>
 <h3 id="resultat-attendu">Résultat attendu :<a class="headerlink" href="#resultat-attendu" title="Permanent link">⚓︎</a></h3>
@@ -5855,26 +5855,26 @@ Nous allons reprendre le jeu de données sur les joueurs du top14 utilisé dans 
 <p><img alt="" src="../data/knn2.png" /></p>
 <details class="note">
 <summary>code fonction KNN</summary>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code>    <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span> <span class="c1">#import du module pandas, abrégé classiquement par &quot;pd&quot;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code>    <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span> <span class="c1">#import du module pandas, abrégé classiquement par "pd"</span>
     <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span> <span class="c1">#import de la fonction moyenne</span>
 
 
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;top14.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'top14.csv'</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">'utf-8'</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">knn</span><span class="p">(</span><span class="n">poids</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
         <span class="c1">#On ajoute une nouvelle colonne distance à notre jeu de données pandas</span>
         <span class="c1">#correspondant la la distance euclienne entre le nouveau et la ligne traitée</span>
-        <span class="n">calcul</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">taille</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">poids</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-        <span class="c1">#df[&#39;distance&#39;]=sqrt((int(df[&#39;Taille&#39;])-taille)**2+(int(df[&#39;Poids&#39;])-poids)**2)</span>
-        <span class="n">df</span><span class="p">[</span><span class="s1">&#39;distance&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">calcul</span>
+        <span class="n">calcul</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">df</span><span class="p">[</span><span class="s1">'Taille'</span><span class="p">]</span><span class="o">-</span><span class="n">taille</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'Poids'</span><span class="p">]</span><span class="o">-</span><span class="n">poids</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+        <span class="c1">#df['distance']=sqrt((int(df['Taille'])-taille)**2+(int(df['Poids'])-poids)**2)</span>
+        <span class="n">df</span><span class="p">[</span><span class="s1">'distance'</span><span class="p">]</span> <span class="o">=</span> <span class="n">calcul</span>
         <span class="c1"># On trie le jeu de donnée sur cette nouvelle colonne</span>
-        <span class="n">newdf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;distance&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">newdf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">'distance'</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-        <span class="c1">#On ne garde que les 6 premières lignes que l&#39;on &#39;copie&#39; dans un nouveau dataframe</span>
+        <span class="c1">#On ne garde que les 6 premières lignes que l'on 'copie' dans un nouveau dataframe</span>
         <span class="n">newdftri</span> <span class="o">=</span> <span class="n">newdf</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="c1">#on prend les 6 joueurs les plus proches physiquement</span>
 
         <span class="c1">#On ne garde que le poste le plus fréquent sur ces 6 lignes</span>
-        <span class="n">sol</span> <span class="o">=</span> <span class="n">newdftri</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">top</span>
+        <span class="n">sol</span> <span class="o">=</span> <span class="n">newdftri</span><span class="p">[</span><span class="s1">'Poste'</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">top</span>
         <span class="k">return</span> <span class="n">sol</span>
     <span class="n">knn</span><span class="p">(</span><span class="mi">93</span><span class="p">,</span><span class="mi">188</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
 </code></pre></div>
@@ -5897,10 +5897,10 @@ Nous allons reprendre le jeu de données sur les joueurs du top14 utilisé dans 
 <p>Dans le code précédent, on a travaillé avec <span class="arithmatex">\(k=6\)</span> et c'est le poste majoritaire parmi les 6 joueurs les plus proches qui a été donné par l'algorithme.<br />
 Modifions légèrement la fonction <code>knn()</code> afin d'observer l'influence du paramètre <span class="arithmatex">\(k\)</span> sur la prédiction :</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">knn</span><span class="p">(</span><span class="n">poids</span><span class="p">,</span> <span class="n">taille</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
-  <span class="n">df</span><span class="p">[</span><span class="s1">&#39;distance&#39;</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">taille</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">poids</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
-  <span class="n">newdf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;distance&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+  <span class="n">df</span><span class="p">[</span><span class="s1">'distance'</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'Taille'</span><span class="p">]</span><span class="o">-</span><span class="n">taille</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'Poids'</span><span class="p">]</span><span class="o">-</span><span class="n">poids</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+  <span class="n">newdf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">'distance'</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
   <span class="n">newdftri</span> <span class="o">=</span> <span class="n">newdf</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="c1">#on prend les k joueurs les plus proches physiquement</span>
-  <span class="n">sol</span> <span class="o">=</span> <span class="n">newdftri</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">top</span>
+  <span class="n">sol</span> <span class="o">=</span> <span class="n">newdftri</span><span class="p">[</span><span class="s1">'Poste'</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">top</span>
   <span class="k">return</span> <span class="n">sol</span>
 
 <span class="c1">#On boucle pour déterminer pour k allant de 1 à 20 pour observer le résultat obtenu</span>
@@ -5929,8 +5929,8 @@ Ailier
 </code></pre></div>
 <p>On s'aperçoit que la prédiction est très stable... sauf si <span class="arithmatex">\(k=1\)</span> !<br />
 Il se trouve qu'un joueur possède <strong>exactement</strong> ces caractéristiques physiques (Pierre-Louis BARASSI) et qu'il joue Centre :</p>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">&#39;distance&#39;</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">]</span><span class="o">-</span><span class="mi">188</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">]</span><span class="o">-</span><span class="mi">93</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
-<span class="n">newdf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;distance&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">df</span><span class="p">[</span><span class="s1">'distance'</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'Taille'</span><span class="p">]</span><span class="o">-</span><span class="mi">188</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'Poids'</span><span class="p">]</span><span class="o">-</span><span class="mi">93</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">newdf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">'distance'</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">newdf</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </code></pre></div>
 <p>On peut s'apercevoir aussi que jusqu'à <span class="arithmatex">\(k=5\)</span>, aucun poste n'est majoritaire : la prédiction pourrait aussi bien renvoyer Centre, 3ème ligne, ou Arrière. Ce n'est que grâce à l'ordre alphabétique que la réponse renvoyée est «Ailier». Par contre, dès que <span class="arithmatex">\(k \geqslant 5\)</span>, le poste d'Ailier est bien majoritaire parmi les <span class="arithmatex">\(k\)</span> plus proches voisins.</p>
@@ -6082,11 +6082,13 @@ k n'est pas un paramètre mais un <strong>hyperparamètre</strong>, c'est-à-dir
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
       

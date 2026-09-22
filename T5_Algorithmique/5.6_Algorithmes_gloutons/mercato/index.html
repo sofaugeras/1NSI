@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5869,21 +5869,21 @@ Codez la structure contenant les 10 joueurs avec leurs 4 attributs : compétitiv
 <summary>Correction</summary>
 <p>Un <strong>dictionnaire</strong> dont la clé est le nom du joueur et la valeur est un tuple <code>(compétitivité, condition, efficacité, prix)</code> est une bonne solution : accès direct par nom, structure compacte.</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">mercato</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;Martinez&quot;</span>  <span class="p">:</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">80</span><span class="p">),</span>
-    <span class="s2">&quot;Kowalski&quot;</span>  <span class="p">:</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">45</span><span class="p">),</span>
-    <span class="s2">&quot;Diallo&quot;</span>    <span class="p">:</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">35</span><span class="p">),</span>
-    <span class="s2">&quot;Fernandez&quot;</span> <span class="p">:</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">55</span><span class="p">),</span>
-    <span class="s2">&quot;Petrov&quot;</span>    <span class="p">:</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span>
-    <span class="s2">&quot;Okonkwo&quot;</span>   <span class="p">:</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">40</span><span class="p">),</span>
-    <span class="s2">&quot;Larsson&quot;</span>   <span class="p">:</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">25</span><span class="p">),</span>
-    <span class="s2">&quot;Mbeki&quot;</span>     <span class="p">:</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">60</span><span class="p">),</span>
-    <span class="s2">&quot;Reinholt&quot;</span>  <span class="p">:</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span>
-    <span class="s2">&quot;Stavros&quot;</span>   <span class="p">:</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+    <span class="s2">"Martinez"</span>  <span class="p">:</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">80</span><span class="p">),</span>
+    <span class="s2">"Kowalski"</span>  <span class="p">:</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">45</span><span class="p">),</span>
+    <span class="s2">"Diallo"</span>    <span class="p">:</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">35</span><span class="p">),</span>
+    <span class="s2">"Fernandez"</span> <span class="p">:</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">55</span><span class="p">),</span>
+    <span class="s2">"Petrov"</span>    <span class="p">:</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span>
+    <span class="s2">"Okonkwo"</span>   <span class="p">:</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">40</span><span class="p">),</span>
+    <span class="s2">"Larsson"</span>   <span class="p">:</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">25</span><span class="p">),</span>
+    <span class="s2">"Mbeki"</span>     <span class="p">:</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">60</span><span class="p">),</span>
+    <span class="s2">"Reinholt"</span>  <span class="p">:</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span>
+    <span class="s2">"Stavros"</span>   <span class="p">:</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
 <span class="p">}</span>
 <span class="c1"># tuple : (compétitivité, condition, efficacité, prix)</span>
 <span class="c1">#              [0]           [1]        [2]       [3]</span>
-<span class="c1"># Accès : mercato[&quot;Martinez&quot;][0] → compétitivité</span>
-<span class="c1">#         mercato[&quot;Martinez&quot;][3] → prix</span>
+<span class="c1"># Accès : mercato["Martinez"][0] → compétitivité</span>
+<span class="c1">#         mercato["Martinez"][3] → prix</span>
 </code></pre></div>
 </details>
 <h2 id="2-score-global">2. Score global<a class="headerlink" href="#2-score-global" title="Permanent link">⚓︎</a></h2>
@@ -6043,22 +6043,22 @@ Codez la structure contenant les 10 joueurs avec leurs 4 attributs : compétitiv
 <div class="admonition example">
 <p class="admonition-title">Question 2.2 — Fonction de calcul du score</p>
 <p>Écrivez une fonction <code>score_global(t)</code> qui prend en paramètre le <strong>tuple</strong> associé à un joueur et retourne son score global arrondi à 2 décimales.</p>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># Rappel : mercato[&quot;Martinez&quot;] renvoie le tuple (9, 8, 9, 80)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># Rappel : mercato["Martinez"] renvoie le tuple (9, 8, 9, 80)</span>
 <span class="c1">#                                                 [0] [1] [2] [3]</span>
 </code></pre></div>
 </div>
 <details class="tips">
 <summary>Correction</summary>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">score_global</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Calcule le score global d&#39;un joueur.</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Calcule le score global d'un joueur.</span>
 <span class="sd">    :param t: tuple (compétitivité, condition, efficacité, prix)</span>
 <span class="sd">    :return: float, moyenne des 3 critères arrondie à 2 décimales</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="k">return</span> <span class="nb">round</span><span class="p">((</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">t</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">/</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 
 <span class="c1"># Test</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">score_global</span><span class="p">(</span><span class="n">mercato</span><span class="p">[</span><span class="s2">&quot;Martinez&quot;</span><span class="p">]))</span>  <span class="c1"># → 8.67</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">score_global</span><span class="p">(</span><span class="n">mercato</span><span class="p">[</span><span class="s2">"Martinez"</span><span class="p">]))</span>  <span class="c1"># → 8.67</span>
 </code></pre></div>
 </details>
 <h2 id="3-conversion-en-liste-de-tuples">3. Conversion en liste de tuples<a class="headerlink" href="#3-conversion-en-liste-de-tuples" title="Permanent link">⚓︎</a></h2>
@@ -6070,7 +6070,7 @@ Codez la structure contenant les 10 joueurs avec leurs 4 attributs : compétitiv
 <p class="admonition-title">Question 3.1 — Construction de la liste</p>
 <p>En utilisant une compréhension de liste, construisez <code>liste_joueurs</code> contenant un tuple <code>(nom, score, prix)</code> pour chaque joueur du dictionnaire <code>mercato</code>.</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># Rappel : mercato.items() renvoie des paires (nom, tuple_stats)</span>
-<span class="c1"># Exemple : (&quot;Martinez&quot;, (9, 8, 9, 80))</span>
+<span class="c1"># Exemple : ("Martinez", (9, 8, 9, 80))</span>
 <span class="c1">#            nom          stats</span>
 <span class="c1">#                         stats[3] → prix</span>
 </code></pre></div>
@@ -6083,7 +6083,7 @@ Codez la structure contenant les 10 joueurs avec leurs 4 attributs : compétitiv
 <span class="p">]</span>
 
 <span class="c1"># Résultat :</span>
-<span class="c1"># [(&#39;Martinez&#39;, 8.67, 80), (&#39;Kowalski&#39;, 8.0, 45), (&#39;Diallo&#39;, 7.33, 35), ...]</span>
+<span class="c1"># [('Martinez', 8.67, 80), ('Kowalski', 8.0, 45), ('Diallo', 7.33, 35), ...]</span>
 </code></pre></div>
 </details>
 <div class="admonition example">
@@ -6099,9 +6099,9 @@ Affichez le classement (nom + score + prix).</p>
 <summary>Correction</summary>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">classement</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">liste_joueurs</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== Classement par score global ===&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"=== Classement par score global ==="</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">nom</span><span class="p">,</span> <span class="n">score</span><span class="p">,</span> <span class="n">prix</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">classement</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s2">2</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">nom</span><span class="si">:</span><span class="s2">10s</span><span class="si">}</span><span class="s2">  score : </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2">  prix : </span><span class="si">{</span><span class="n">prix</span><span class="si">}</span><span class="s2"> M€&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">i</span><span class="si">:</span><span class="s2">2</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">nom</span><span class="si">:</span><span class="s2">10s</span><span class="si">}</span><span class="s2">  score : </span><span class="si">{</span><span class="n">score</span><span class="si">}</span><span class="s2">  prix : </span><span class="si">{</span><span class="n">prix</span><span class="si">}</span><span class="s2"> M€"</span><span class="p">)</span>
 </code></pre></div>
 <p>Résultat :
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code> 1. Martinez   score : 8.67  prix : 80 M€
@@ -6343,15 +6343,15 @@ Affichez les joueurs recrutés, le score total, le budget dépensé et le budget
         <span class="n">score_total</span>    <span class="o">+=</span> <span class="n">score</span>
 
 <span class="c1">#  Affichage </span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== RÉSULTAT DU MERCATO GLOUTON ===&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Joueurs recrutés : </span><span class="si">{</span><span class="n">recrutement</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Score total      : </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">score_total</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Budget dépensé   : </span><span class="si">{</span><span class="n">budget_depense</span><span class="si">}</span><span class="s2"> M€&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Budget restant   : </span><span class="si">{</span><span class="n">BUDGET_MAX</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">budget_depense</span><span class="si">}</span><span class="s2"> M€&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"=== RÉSULTAT DU MERCATO GLOUTON ==="</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Joueurs recrutés : </span><span class="si">{</span><span class="n">recrutement</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Score total      : </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">score_total</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Budget dépensé   : </span><span class="si">{</span><span class="n">budget_depense</span><span class="si">}</span><span class="s2"> M€"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Budget restant   : </span><span class="si">{</span><span class="n">BUDGET_MAX</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">budget_depense</span><span class="si">}</span><span class="s2"> M€"</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>Résultat :
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>=== RÉSULTAT DU MERCATO GLOUTON ===
-Joueurs recrutés : [&#39;Stavros&#39;, &#39;Reinholt&#39;, &#39;Larsson&#39;, &#39;Petrov&#39;, &#39;Diallo&#39;]
+Joueurs recrutés : ['Stavros', 'Reinholt', 'Larsson', 'Petrov', 'Diallo']
 Score total      : 35.0
 Budget dépensé   : 125 M€
 Budget restant   : 25 M€
@@ -6471,10 +6471,10 @@ Rappel : <span class="arithmatex">\(\mathrm{C}_{n}^{p} = \frac{n!}{(n-p)! \times
             <span class="n">meilleure_comb</span> <span class="o">=</span> <span class="p">[</span><span class="n">nom</span> <span class="k">for</span> <span class="n">nom</span><span class="p">,</span> <span class="n">score</span><span class="p">,</span> <span class="n">prix</span> <span class="ow">in</span> <span class="n">combinaison</span><span class="p">]</span>
             <span class="n">meilleur_cout</span>  <span class="o">=</span> <span class="n">___</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== RÉSULTAT FORCE BRUTE ===&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Joueurs recrutés : </span><span class="si">{</span><span class="n">meilleure_comb</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Score total      : </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">meilleur_score</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Budget dépensé   : </span><span class="si">{</span><span class="n">meilleur_cout</span><span class="si">}</span><span class="s2"> M€&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"=== RÉSULTAT FORCE BRUTE ==="</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Joueurs recrutés : </span><span class="si">{</span><span class="n">meilleure_comb</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Score total      : </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">meilleur_score</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Budget dépensé   : </span><span class="si">{</span><span class="n">meilleur_cout</span><span class="si">}</span><span class="s2"> M€"</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <details class="tips">
@@ -6518,14 +6518,14 @@ Rappel : <span class="arithmatex">\(\mathrm{C}_{n}^{p} = \frac{n!}{(n-p)! \times
             <span class="n">meilleure_comb</span> <span class="o">=</span> <span class="p">[</span><span class="n">nom</span> <span class="k">for</span> <span class="n">nom</span><span class="p">,</span> <span class="n">score</span><span class="p">,</span> <span class="n">prix</span> <span class="ow">in</span> <span class="n">combinaison</span><span class="p">]</span>
             <span class="n">meilleur_cout</span>  <span class="o">=</span> <span class="n">cout_total</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== RÉSULTAT FORCE BRUTE ===&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Joueurs recrutés : </span><span class="si">{</span><span class="n">meilleure_comb</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Score total      : </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">meilleur_score</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Budget dépensé   : </span><span class="si">{</span><span class="n">meilleur_cout</span><span class="si">}</span><span class="s2"> M€&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"=== RÉSULTAT FORCE BRUTE ==="</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Joueurs recrutés : </span><span class="si">{</span><span class="n">meilleure_comb</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Score total      : </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">meilleur_score</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Budget dépensé   : </span><span class="si">{</span><span class="n">meilleur_cout</span><span class="si">}</span><span class="s2"> M€"</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>Résultat :
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>=== RÉSULTAT FORCE BRUTE ===
-Joueurs recrutés : [&#39;Petrov&#39;, &#39;Okonkwo&#39;, &#39;Larsson&#39;, &#39;Reinholt&#39;, &#39;Diallo&#39;]
+Joueurs recrutés : ['Petrov', 'Okonkwo', 'Larsson', 'Reinholt', 'Diallo']
 Score total      : 36.0
 Budget dépensé   : 150 M€
 </code></pre></div>
@@ -6815,11 +6815,13 @@ Ce qui confirme que la solution gloutonne (35.0) <strong>n'était pas optimale</
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
       

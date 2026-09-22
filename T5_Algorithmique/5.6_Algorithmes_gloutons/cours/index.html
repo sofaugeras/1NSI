@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5929,7 +5929,7 @@
 ▶️Codez une solution <br /></p>
 </div>
 <div class="tabbed-block">
-<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">nasa</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;allumettes&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;aliments&#39;</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;corde&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;parachute&#39;</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;chauffage&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;pistolets&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;lait&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;oxygène&#39;</span><span class="p">,</span> <span class="mi">15</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;carte&#39;</span><span class="p">,</span> <span class="mi">13</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;canot&#39;</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;compas&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;eau&#39;</span><span class="p">,</span> <span class="mi">14</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;seringues&#39;</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;signaux&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;emetteur&#39;</span><span class="p">,</span> <span class="mi">11</span><span class="p">)]</span>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">nasa</span><span class="o">=</span><span class="p">[(</span><span class="s1">'allumettes'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">'aliments'</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span> <span class="p">(</span><span class="s1">'corde'</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="p">(</span><span class="s1">'parachute'</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="p">(</span><span class="s1">'chauffage'</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="s1">'pistolets'</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="s1">'lait'</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="s1">'oxygène'</span><span class="p">,</span> <span class="mi">15</span><span class="p">),</span> <span class="p">(</span><span class="s1">'carte'</span><span class="p">,</span> <span class="mi">13</span><span class="p">),</span> <span class="p">(</span><span class="s1">'canot'</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="p">(</span><span class="s1">'compas'</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">'eau'</span><span class="p">,</span> <span class="mi">14</span><span class="p">),</span> <span class="p">(</span><span class="s1">'seringues'</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="p">(</span><span class="s1">'signaux'</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="p">(</span><span class="s1">'emetteur'</span><span class="p">,</span> <span class="mi">11</span><span class="p">)]</span>
 </code></pre></div>
 et pour trier ce dictionnaire, nous allons utiliser la fonction sorted :
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">nasa_trie</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -6057,21 +6057,21 @@ La ligne fait trois choses en une :</p>
 <details class="tips">
 <summary>Correction</summary>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">liste</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">(</span><span class="s1">&#39;allumettes&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>  <span class="mf">0.1</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;aliments&#39;</span><span class="p">,</span>   <span class="mi">12</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;corde&#39;</span><span class="p">,</span>      <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;parachute&#39;</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span>  <span class="mf">0.5</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;chauffage&#39;</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">25</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;pistolets&#39;</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mf">0.5</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;lait&#39;</span><span class="p">,</span>       <span class="mi">4</span><span class="p">,</span>  <span class="mi">5</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;oxygène&#39;</span><span class="p">,</span>    <span class="mi">15</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;carte&#39;</span><span class="p">,</span>      <span class="mi">13</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;canot&#39;</span><span class="p">,</span>      <span class="mi">7</span><span class="p">,</span>  <span class="mi">100</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;compas&#39;</span><span class="p">,</span>     <span class="mi">2</span><span class="p">,</span>  <span class="mf">0.5</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;eau&#39;</span><span class="p">,</span>        <span class="mi">14</span><span class="p">,</span> <span class="mi">25</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;seringues&#39;</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span>  <span class="mf">0.5</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;signaux&#39;</span><span class="p">,</span>    <span class="mi">6</span><span class="p">,</span>  <span class="mi">1</span><span class="p">),</span>
-    <span class="p">(</span><span class="s1">&#39;emetteur&#39;</span><span class="p">,</span>   <span class="mi">11</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+    <span class="p">(</span><span class="s1">'allumettes'</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span>  <span class="mf">0.1</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">'aliments'</span><span class="p">,</span>   <span class="mi">12</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">'corde'</span><span class="p">,</span>      <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">'parachute'</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span>  <span class="mf">0.5</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">'chauffage'</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">25</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">'pistolets'</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mf">0.5</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">'lait'</span><span class="p">,</span>       <span class="mi">4</span><span class="p">,</span>  <span class="mi">5</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">'oxygène'</span><span class="p">,</span>    <span class="mi">15</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">'carte'</span><span class="p">,</span>      <span class="mi">13</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">'canot'</span><span class="p">,</span>      <span class="mi">7</span><span class="p">,</span>  <span class="mi">100</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">'compas'</span><span class="p">,</span>     <span class="mi">2</span><span class="p">,</span>  <span class="mf">0.5</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">'eau'</span><span class="p">,</span>        <span class="mi">14</span><span class="p">,</span> <span class="mi">25</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">'seringues'</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span>  <span class="mf">0.5</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">'signaux'</span><span class="p">,</span>    <span class="mi">6</span><span class="p">,</span>  <span class="mi">1</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">'emetteur'</span><span class="p">,</span>   <span class="mi">11</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 <span class="p">]</span>
 </code></pre></div>
 </details>
@@ -6230,7 +6230,7 @@ Avec cette formule, on obtient bien 105.<br /></p>
 <span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">################################</span>
 <span class="c1">#       --- Force brute ---    #        </span>
 <span class="c1">################################</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;--- Solution force brute ---&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"--- Solution force brute ---"</span><span class="p">)</span>
 <span class="c1"># chaque tuple : (nom, valeur, poids)</span>
 <span class="c1">#                 x[0]  x[1]   x[2]</span>
 
@@ -6246,7 +6246,7 @@ Avec cette formule, on obtient bien 105.<br /></p>
 <span class="c1"># --- Force brute ---</span>
 <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">MAX_OBJETS</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">combinaison</span> <span class="ow">in</span> <span class="n">itertools</span><span class="o">.</span><span class="n">combinations</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Combinaison testée : </span><span class="si">{</span><span class="p">[</span><span class="n">objet</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">objet</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">combinaison</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Combinaison testée : </span><span class="si">{</span><span class="p">[</span><span class="n">objet</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">objet</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">combinaison</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
         <span class="n">valeur_totale</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">objet</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">objet</span> <span class="ow">in</span> <span class="n">combinaison</span><span class="p">)</span>
         <span class="n">poids_total</span>   <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">objet</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="k">for</span> <span class="n">objet</span> <span class="ow">in</span> <span class="n">combinaison</span><span class="p">)</span>
 
@@ -6256,9 +6256,9 @@ Avec cette formule, on obtient bien 105.<br /></p>
             <span class="n">meilleur_comb</span>   <span class="o">=</span> <span class="p">[</span><span class="n">objet</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">objet</span> <span class="ow">in</span> <span class="n">combinaison</span><span class="p">]</span>
 
 <span class="c1"># --- Résultat ---</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Meilleure combinaison : </span><span class="si">{</span><span class="n">meilleur_comb</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Valeur totale         : </span><span class="si">{</span><span class="n">meilleur_valeur</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Poids total           : </span><span class="si">{</span><span class="n">meilleur_poids</span><span class="si">}</span><span class="s2"> kg&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Meilleure combinaison : </span><span class="si">{</span><span class="n">meilleur_comb</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Valeur totale         : </span><span class="si">{</span><span class="n">meilleur_valeur</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Poids total           : </span><span class="si">{</span><span class="n">meilleur_poids</span><span class="si">}</span><span class="s2"> kg"</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </details>
 <h2 id="3-algorithmie-glouton">3. Algorithmie "Glouton"<a class="headerlink" href="#3-algorithmie-glouton" title="Permanent link">⚓︎</a></h2>
@@ -6296,7 +6296,7 @@ La <strong>répétition</strong> de cette stratégie très simple, permet de ré
 <p class="admonition-title">Algorithme</p>
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>calculer la valeur (pi / wi) pour chaque objet i,
 trier tous les objets par ordre décroissant de cette valeur,
-Boucle sur les objets dans l&#39;ordre : 
+Boucle sur les objets dans l'ordre : 
     ajouter l’objet sélectionné dans le sac si le poids maximal reste respecté.
 </code></pre></div>
 </div>
@@ -6330,7 +6330,7 @@ Boucle sur les objets dans l&#39;ordre :
 <span class="normal">26</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">################################</span>
 <span class="c1">#       --- Glouton ---        #        </span>
 <span class="c1">################################</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Solution gloutonne ---&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">--- Solution gloutonne ---"</span><span class="p">)</span>
 <span class="c1"># --- Contraintes ---</span>
 <span class="n">POIDS_MAX</span>  <span class="o">=</span> <span class="mi">200</span>
 <span class="n">MAX_OBJETS</span> <span class="o">=</span> <span class="mi">10</span>
@@ -6350,9 +6350,9 @@ Boucle sur les objets dans l&#39;ordre :
         <span class="n">meilleur_comb</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">objet</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 
 <span class="c1"># --- Résultat ---</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Meilleure combinaison : </span><span class="si">{</span><span class="n">meilleur_comb</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Valeur totale         : </span><span class="si">{</span><span class="n">meilleur_valeur</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Poids total           : </span><span class="si">{</span><span class="n">meilleur_poids</span><span class="si">}</span><span class="s2"> kg&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Meilleure combinaison : </span><span class="si">{</span><span class="n">meilleur_comb</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Valeur totale         : </span><span class="si">{</span><span class="n">meilleur_valeur</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Poids total           : </span><span class="si">{</span><span class="n">meilleur_poids</span><span class="si">}</span><span class="s2"> kg"</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </details>
 <div class="admonition question">
@@ -6576,11 +6576,13 @@ Boucle sur les objets dans l&#39;ordre :
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
       

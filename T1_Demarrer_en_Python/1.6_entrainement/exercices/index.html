@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5594,7 +5594,7 @@
     <span class="n">dé</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
     <span class="n">somme</span> <span class="o">=</span> <span class="n">somme</span> <span class="o">+</span> <span class="n">dé</span>
 <span class="n">moyenne</span> <span class="o">=</span> <span class="n">somme</span> <span class="o">/</span> <span class="mi">1000</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La moyenne des 1000 lancers est&quot;</span><span class="p">,</span><span class="n">moyenne</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"La moyenne des 1000 lancers est"</span><span class="p">,</span><span class="n">moyenne</span><span class="p">)</span>
 </code></pre></div>
 </div>
 </div>
@@ -5609,12 +5609,12 @@
 Remarque : il est interdit d'utiliser <code>**</code> ici! </p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Veuillez saisir la valeurs de a (la base) : &quot;</span><span class="p">))</span>
-<span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Veuillez saisir la valeur de n (l&#39;exponsant) : &quot;</span><span class="p">))</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Veuillez saisir la valeurs de a (la base) : "</span><span class="p">))</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Veuillez saisir la valeur de n (l'exponsant) : "</span><span class="p">))</span>
 <span class="n">puissance</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">puissance</span> <span class="o">=</span> <span class="n">puissance</span> <span class="o">*</span> <span class="n">a</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="s2">&quot;puissance&quot;</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="s2">&quot;est égal à&quot;</span><span class="p">,</span><span class="n">puissance</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="s2">"puissance"</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="s2">"est égal à"</span><span class="p">,</span><span class="n">puissance</span><span class="p">)</span>
 </code></pre></div>
 </div>
 </div>
@@ -5650,9 +5650,9 @@ Par exemple l'appel <code>rectangle(2,5,'A')</code> devra afficher :<br>
 AAAAA<br>
 AAAAA<br>
 Tester ensuite votre fonction avec divers appels.</p>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">rectangle</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>   <span class="c1"># appel en respectant l&#39;ordre des paramètres</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">rectangle</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="s1">'A'</span><span class="p">)</span>   <span class="c1"># appel en respectant l'ordre des paramètres</span>
 <span class="nb">print</span><span class="p">()</span>   <span class="c1"># ligne vide séparatrice</span>
-<span class="n">rectangle</span><span class="p">(</span><span class="n">caractère</span> <span class="o">=</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span><span class="n">nbLignes</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span><span class="n">nbColonnes</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>  <span class="c1"># appel sans respecter l&#39;ordre des paramètres</span>
+<span class="n">rectangle</span><span class="p">(</span><span class="n">caractère</span> <span class="o">=</span> <span class="s1">'K'</span><span class="p">,</span><span class="n">nbLignes</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span><span class="n">nbColonnes</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>  <span class="c1"># appel sans respecter l'ordre des paramètres</span>
 </code></pre></div>
 <p><strong>Remarque</strong> : En Python, il est possible de ne pas respecter l'ordre des paramètres d'une fonction lors de son appel. Dans ce cas, il faut préciser le rôle des paramètres comme par exemple : <code>rectangle( nbColonnes = 4, caractère = '+', nbLignes = 7)</code></p>
 </div>
@@ -5660,7 +5660,7 @@ Tester ensuite votre fonction avec divers appels.</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">rectangle</span><span class="p">(</span><span class="n">nbLignes</span><span class="p">,</span><span class="n">nbColonnes</span><span class="p">,</span><span class="n">caractère</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbLignes</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">colonne</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nbColonnes</span><span class="p">):</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">caractère</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">caractère</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s2">""</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">()</span>
 </code></pre></div>
 </div>
@@ -5724,13 +5724,13 @@ Le petit programme commenté ci-dessous permet d'obtenir un tracé intéressant 
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">turtle</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>      <span class="c1"># On importe la bibliothèque turtle</span>
 
 <span class="n">speed</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>                 <span class="c1"># On règle la vitesse du tracé (un entier compris entre 1 et 10)</span>
-<span class="n">color</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;yellow&#39;</span><span class="p">)</span>    <span class="c1"># On fixe la couleur du tracé à &#39;rouge&#39; et la couleur de rempissage à &#39;jaune&#39;</span>
+<span class="n">color</span><span class="p">(</span><span class="s1">'red'</span><span class="p">,</span> <span class="s1">'yellow'</span><span class="p">)</span>    <span class="c1"># On fixe la couleur du tracé à 'rouge' et la couleur de rempissage à 'jaune'</span>
 <span class="n">begin_fill</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">36</span><span class="p">):</span>
     <span class="n">forward</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>          <span class="c1"># La tortue avance de 200 pixels </span>
     <span class="n">left</span><span class="p">(</span><span class="mi">170</span><span class="p">)</span>             <span class="c1"># La tortue tourne vers la gauche de 170°</span>
 <span class="n">end_fill</span><span class="p">()</span>
-<span class="n">done</span><span class="p">()</span>                    <span class="c1"># Il faut terminer par done() pour lancer l&#39;exécution du tracé    </span>
+<span class="n">done</span><span class="p">()</span>                    <span class="c1"># Il faut terminer par done() pour lancer l'exécution du tracé    </span>
 </code></pre></div>
 <p>Voici quelques fonctionnalités de turtle :</p>
 <style>
@@ -5768,7 +5768,7 @@ Le petit programme commenté ci-dessous permet d'obtenir un tracé intéressant 
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">turtle</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
-<span class="n">color</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">)</span> 
+<span class="n">color</span><span class="p">(</span><span class="s1">'blue'</span><span class="p">,</span> <span class="s1">'green'</span><span class="p">)</span> 
 <span class="n">begin_fill</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
     <span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
@@ -5791,7 +5791,7 @@ Choisir une couleur de tracé et une couleur de remplissage.</p>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">turtle</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
-<span class="n">color</span><span class="p">(</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;pink&#39;</span><span class="p">)</span> 
+<span class="n">color</span><span class="p">(</span><span class="s1">'red'</span><span class="p">,</span> <span class="s1">'pink'</span><span class="p">)</span> 
 <span class="n">speed</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">begin_fill</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">):</span>
@@ -5813,7 +5813,7 @@ Choisir une couleur de tracé et une couleur de remplissage.</p>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">turtle</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
-<span class="n">color</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">)</span> 
+<span class="n">color</span><span class="p">(</span><span class="s1">'black'</span><span class="p">,</span> <span class="s1">'blue'</span><span class="p">)</span> 
 <span class="n">begin_fill</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
     <span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
@@ -5823,7 +5823,7 @@ Choisir une couleur de tracé et une couleur de remplissage.</p>
 <span class="n">end_fill</span><span class="p">()</span>
 <span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 
-<span class="n">color</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;white&#39;</span><span class="p">)</span> 
+<span class="n">color</span><span class="p">(</span><span class="s1">'black'</span><span class="p">,</span> <span class="s1">'white'</span><span class="p">)</span> 
 <span class="n">begin_fill</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
     <span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
@@ -5833,7 +5833,7 @@ Choisir une couleur de tracé et une couleur de remplissage.</p>
 <span class="n">end_fill</span><span class="p">()</span>
 <span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 
-<span class="n">color</span><span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">)</span> 
+<span class="n">color</span><span class="p">(</span><span class="s1">'black'</span><span class="p">,</span> <span class="s1">'red'</span><span class="p">)</span> 
 <span class="n">begin_fill</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
     <span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
@@ -5994,11 +5994,13 @@ Choisir une couleur de tracé et une couleur de remplissage.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
       

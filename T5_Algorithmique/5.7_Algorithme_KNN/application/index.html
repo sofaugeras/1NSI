@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5681,8 +5681,8 @@
 <p><img alt="▶" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/25b6.svg" title=":arrow_forward:" /> L’objectif de cet exercice est d’aider le choixpeau à déterminer la maison des nouveaux élèves.</p>
 <h2 id="partie-i-modeliser-un-eleve">Partie I : Modéliser un élève<a class="headerlink" href="#partie-i-modeliser-un-eleve" title="Permanent link">⚓︎</a></h2>
 <p>On décide de modéliser chaque élève par un dictionnaire avec les données à disposition. Par exemple : </p>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">adrian</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;nom&quot;</span> <span class="p">:</span> <span class="s2">&quot;Adrian&quot;</span><span class="p">,</span> <span class="s2">&quot;courage&quot;</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span><span class="s2">&quot;loyaute&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span><span class="s2">&quot;sagesse&quot;</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;malice&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="s2">&quot;maison&quot;</span><span class="p">:</span><span class="s2">&quot;serpentard&quot;</span><span class="p">}</span>
-<span class="n">hermione</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;nom&quot;</span> <span class="p">:</span> <span class="s2">&quot;Hermione&quot;</span><span class="p">,</span> <span class="s2">&quot;courage&quot;</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span><span class="s2">&quot;loyaute&quot;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span><span class="s2">&quot;sagesse&quot;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span><span class="s2">&quot;malice&quot;</span><span class="p">:</span><span class="mi">6</span><span class="p">}</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">adrian</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"nom"</span> <span class="p">:</span> <span class="s2">"Adrian"</span><span class="p">,</span> <span class="s2">"courage"</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span><span class="s2">"loyaute"</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span><span class="s2">"sagesse"</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span><span class="s2">"malice"</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="s2">"maison"</span><span class="p">:</span><span class="s2">"serpentard"</span><span class="p">}</span>
+<span class="n">hermione</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"nom"</span> <span class="p">:</span> <span class="s2">"Hermione"</span><span class="p">,</span> <span class="s2">"courage"</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span><span class="s2">"loyaute"</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span><span class="s2">"sagesse"</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span><span class="s2">"malice"</span><span class="p">:</span><span class="mi">6</span><span class="p">}</span>
 </code></pre></div>
 <div class="admonition example">
 <p class="admonition-title">Question 1</p>
@@ -5731,17 +5731,17 @@
 <ins>Note :</ins> la valeur absolue d’un nombre s’obtient par <code>abs(nombre)</code></p>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">adrian</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;nom&quot;</span> <span class="p">:</span> <span class="s2">&quot;Adrian&quot;</span><span class="p">,</span> <span class="s2">&quot;courage&quot;</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span><span class="s2">&quot;loyaute&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span><span class="s2">&quot;sagesse&quot;</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;malice&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="s2">&quot;maison&quot;</span><span class="p">:</span><span class="s2">&quot;serpentard&quot;</span><span class="p">}</span>
-<span class="n">hermione</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;nom&quot;</span> <span class="p">:</span> <span class="s2">&quot;Hermione&quot;</span><span class="p">,</span> <span class="s2">&quot;courage&quot;</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span><span class="s2">&quot;loyaute&quot;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span><span class="s2">&quot;sagesse&quot;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span><span class="s2">&quot;malice&quot;</span><span class="p">:</span><span class="mi">6</span><span class="p">}</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">adrian</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"nom"</span> <span class="p">:</span> <span class="s2">"Adrian"</span><span class="p">,</span> <span class="s2">"courage"</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span><span class="s2">"loyaute"</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span><span class="s2">"sagesse"</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span><span class="s2">"malice"</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="s2">"maison"</span><span class="p">:</span><span class="s2">"serpentard"</span><span class="p">}</span>
+<span class="n">hermione</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"nom"</span> <span class="p">:</span> <span class="s2">"Hermione"</span><span class="p">,</span> <span class="s2">"courage"</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span><span class="s2">"loyaute"</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span><span class="s2">"sagesse"</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span><span class="s2">"malice"</span><span class="p">:</span><span class="mi">6</span><span class="p">}</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">distance</span> <span class="p">(</span><span class="n">E1</span><span class="p">,</span><span class="n">E2</span><span class="p">)</span> <span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    prend en paramètres 2 élèves</span>
 <span class="sd">    @param : E1 : Dictionnaire</span>
 <span class="sd">    @param : E2 : Dictionnaire</span>
 <span class="sd">    @Returns : int : renvoie la distance de Manhattan entre les 2 eleves</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="n">E1</span><span class="p">[</span><span class="s2">&quot;courage&quot;</span><span class="p">]</span><span class="o">-</span><span class="n">E2</span><span class="p">[</span><span class="s2">&quot;courage&quot;</span><span class="p">])</span><span class="o">+</span><span class="nb">abs</span><span class="p">(</span><span class="n">E1</span><span class="p">[</span><span class="s2">&quot;loyaute&quot;</span><span class="p">]</span><span class="o">-</span><span class="n">E2</span><span class="p">[</span><span class="s2">&quot;loyaute&quot;</span><span class="p">])</span><span class="o">+</span><span class="nb">abs</span><span class="p">(</span><span class="n">E1</span><span class="p">[</span><span class="s2">&quot;sagesse&quot;</span><span class="p">]</span><span class="o">-</span><span class="n">E2</span><span class="p">[</span><span class="s2">&quot;sagesse&quot;</span><span class="p">])</span><span class="o">+</span><span class="nb">abs</span><span class="p">(</span><span class="n">E1</span><span class="p">[</span><span class="s2">&quot;malice&quot;</span><span class="p">]</span><span class="o">-</span><span class="n">E2</span><span class="p">[</span><span class="s2">&quot;malice&quot;</span><span class="p">])</span>
+<span class="sd">    """</span>
+    <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="n">E1</span><span class="p">[</span><span class="s2">"courage"</span><span class="p">]</span><span class="o">-</span><span class="n">E2</span><span class="p">[</span><span class="s2">"courage"</span><span class="p">])</span><span class="o">+</span><span class="nb">abs</span><span class="p">(</span><span class="n">E1</span><span class="p">[</span><span class="s2">"loyaute"</span><span class="p">]</span><span class="o">-</span><span class="n">E2</span><span class="p">[</span><span class="s2">"loyaute"</span><span class="p">])</span><span class="o">+</span><span class="nb">abs</span><span class="p">(</span><span class="n">E1</span><span class="p">[</span><span class="s2">"sagesse"</span><span class="p">]</span><span class="o">-</span><span class="n">E2</span><span class="p">[</span><span class="s2">"sagesse"</span><span class="p">])</span><span class="o">+</span><span class="nb">abs</span><span class="p">(</span><span class="n">E1</span><span class="p">[</span><span class="s2">"malice"</span><span class="p">]</span><span class="o">-</span><span class="n">E2</span><span class="p">[</span><span class="s2">"malice"</span><span class="p">])</span>
 
 <span class="k">assert</span> <span class="p">(</span><span class="n">distance</span><span class="p">(</span><span class="n">adrian</span><span class="p">,</span><span class="n">hermione</span><span class="p">))</span> <span class="o">==</span> <span class="mi">8</span>
 </code></pre></div>
@@ -5754,16 +5754,16 @@
 <p>Le jeu de données : <a class="md-button" href="../data/choixpeauMagique.csv" target="_blank">choipeau Magique</a></p>
 <details class="note">
 <summary>Code charger_eleve</summary>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span> <span class="c1">#import du module pandas, abrégé classiquement par &quot;pd&quot;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span> <span class="c1">#import du module pandas, abrégé classiquement par "pd"</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">charger_eleve</span><span class="p">(</span><span class="n">fichier</span><span class="p">)</span> <span class="p">:</span> 
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    permet de charger une liste d eleves d&#39;un fichier CSV</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    permet de charger une liste d eleves d'un fichier CSV</span>
 <span class="sd">    Return  : dataframe</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">fichier</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="sd">    """</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">fichier</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">'utf-8'</span><span class="p">)</span>
 
-<span class="n">poudlard</span> <span class="o">=</span> <span class="n">charger_eleve</span><span class="p">(</span><span class="s1">&#39;choixpeauMagique.csv&#39;</span><span class="p">)</span>
+<span class="n">poudlard</span> <span class="o">=</span> <span class="n">charger_eleve</span><span class="p">(</span><span class="s1">'choixpeauMagique.csv'</span><span class="p">)</span>
 </code></pre></div>
 </details>
 <div class="admonition example">
@@ -5796,7 +5796,7 @@ Name: 0, dtype: object
 <p>Indiquer le nombre d’élèves par maison</p>
 </div>
 <div class="tabbed-block">
-<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">poudlard</span><span class="p">[</span><span class="s1">&#39;Maison&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">poudlard</span><span class="p">[</span><span class="s1">'Maison'</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 </code></pre></div>
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Gryffondor     17
 Serpentard     12
@@ -5816,9 +5816,9 @@ Name: Maison, dtype: int64
 <p>Quel est la maison ayant le plus d’élève ? </p>
 </div>
 <div class="tabbed-block">
-<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">poudlard</span><span class="p">[</span><span class="s1">&#39;Maison&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">top</span>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">poudlard</span><span class="p">[</span><span class="s1">'Maison'</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">top</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>&#39;Gryffondor&#39;
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>'Gryffondor'
 </code></pre></div></p>
 </div>
 </div>
@@ -5830,13 +5830,13 @@ Ne pas oublier de préciser la documentation (docstring) et de donner au moins u
 <details class="tips">
 <summary>correction</summary>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">majoritaire</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Fonction renvoyant la maison majoritaire dans un DataFrame de données sur Poudlard.</span>
 <span class="sd">    @param : Data : DataFrame contenant les données sur les maisons des élèves de Poudlard.</span>
-<span class="sd">    @Returns: str: La maison la plus fréquente dans la colonne &#39;Maison&#39; du DataFrame.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">poudlard</span><span class="p">[</span><span class="s1">&#39;Maison&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">top</span>
-<span class="k">assert</span> <span class="n">majoritaire</span><span class="p">(</span><span class="n">poudlard</span><span class="p">)</span><span class="o">==</span> <span class="s1">&#39;Gryffondor&#39;</span>
+<span class="sd">    @Returns: str: La maison la plus fréquente dans la colonne 'Maison' du DataFrame.</span>
+<span class="sd">    """</span>
+    <span class="k">return</span> <span class="n">poudlard</span><span class="p">[</span><span class="s1">'Maison'</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">top</span>
+<span class="k">assert</span> <span class="n">majoritaire</span><span class="p">(</span><span class="n">poudlard</span><span class="p">)</span><span class="o">==</span> <span class="s1">'Gryffondor'</span>
 </code></pre></div>
 </details>
 <h2 id="partie-iv-sept-plus-proches-voisins">Partie IV : Sept plus proches voisins<a class="headerlink" href="#partie-iv-sept-plus-proches-voisins" title="Permanent link">⚓︎</a></h2>
@@ -5845,24 +5845,24 @@ Ne pas oublier de préciser la documentation (docstring) et de donner au moins u
 <details class="tips">
 <summary>Correction</summary>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">septPlusProches</span><span class="p">(</span><span class="n">cm</span><span class="p">,</span><span class="n">nouveau</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Fonction renvoyant la maison choisi par le choipeau par l&#39;algorithme des plus proches voisins.</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    Fonction renvoyant la maison choisi par le choipeau par l'algorithme des plus proches voisins.</span>
 <span class="sd">    @param : cm : DataFrame contenant les données sur les maisons des élèves de Poudlard.</span>
 <span class="sd">    @param : nouveau : dictionnaire contenant le nouvel élève à affecter à une maison</span>
 <span class="sd">    @Returns: str : La maison choisie</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="c1">#On ajoute une nouvelle colonne distance à notre jeu de données pandas</span>
     <span class="c1">#correspondant la la distance euclienne entre le nouveau et la ligne traitée</span>
-    <span class="n">cm</span><span class="p">[</span><span class="s1">&#39;distance&#39;</span><span class="p">]</span><span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">cm</span><span class="p">[</span><span class="s1">&#39;Courage&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">nouveau</span><span class="p">[</span><span class="s2">&quot;courage&quot;</span><span class="p">])</span><span class="o">+</span><span class="nb">abs</span><span class="p">(</span><span class="n">cm</span><span class="p">[</span><span class="s1">&#39;Loyaute&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">nouveau</span><span class="p">[</span><span class="s2">&quot;loyaute&quot;</span><span class="p">])</span><span class="o">+</span><span class="nb">abs</span><span class="p">(</span><span class="n">cm</span><span class="p">[</span><span class="s1">&#39;Sagesse&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">nouveau</span><span class="p">[</span><span class="s2">&quot;sagesse&quot;</span><span class="p">])</span><span class="o">+</span><span class="nb">abs</span><span class="p">(</span><span class="n">cm</span><span class="p">[</span><span class="s1">&#39;Malice&#39;</span><span class="p">]</span><span class="o">-</span><span class="n">nouveau</span><span class="p">[</span><span class="s2">&quot;malice&quot;</span><span class="p">])</span>
+    <span class="n">cm</span><span class="p">[</span><span class="s1">'distance'</span><span class="p">]</span><span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">cm</span><span class="p">[</span><span class="s1">'Courage'</span><span class="p">]</span><span class="o">-</span><span class="n">nouveau</span><span class="p">[</span><span class="s2">"courage"</span><span class="p">])</span><span class="o">+</span><span class="nb">abs</span><span class="p">(</span><span class="n">cm</span><span class="p">[</span><span class="s1">'Loyaute'</span><span class="p">]</span><span class="o">-</span><span class="n">nouveau</span><span class="p">[</span><span class="s2">"loyaute"</span><span class="p">])</span><span class="o">+</span><span class="nb">abs</span><span class="p">(</span><span class="n">cm</span><span class="p">[</span><span class="s1">'Sagesse'</span><span class="p">]</span><span class="o">-</span><span class="n">nouveau</span><span class="p">[</span><span class="s2">"sagesse"</span><span class="p">])</span><span class="o">+</span><span class="nb">abs</span><span class="p">(</span><span class="n">cm</span><span class="p">[</span><span class="s1">'Malice'</span><span class="p">]</span><span class="o">-</span><span class="n">nouveau</span><span class="p">[</span><span class="s2">"malice"</span><span class="p">])</span>
     <span class="c1"># On trie le jeu de donnée sur cette nouvelle colonne</span>
-    <span class="n">newcm</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;distance&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="c1">#On ne garde que les 7 premières lignes que l&#39;on &#39;copie&#39; dans un nouveau dataframe</span>
+    <span class="n">newcm</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">'distance'</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="c1">#On ne garde que les 7 premières lignes que l'on 'copie' dans un nouveau dataframe</span>
     <span class="n">newcmtri</span> <span class="o">=</span> <span class="n">newcm</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span> <span class="c1">#on prend les 7 eleves les plus proches</span>
     <span class="c1">#On ne garde que le poste le plus fréquent sur ces 7 lignes</span>
-    <span class="n">sol</span> <span class="o">=</span> <span class="n">newcmtri</span><span class="p">[</span><span class="s1">&#39;Maison&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">top</span>
+    <span class="n">sol</span> <span class="o">=</span> <span class="n">newcmtri</span><span class="p">[</span><span class="s1">'Maison'</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">top</span>
     <span class="k">return</span> <span class="n">sol</span>
-<span class="n">Harry</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;nom&quot;</span> <span class="p">:</span> <span class="s2">&quot;Harry&quot;</span><span class="p">,</span> <span class="s2">&quot;courage&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="s2">&quot;loyaute&quot;</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span><span class="s2">&quot;sagesse&quot;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span><span class="s2">&quot;malice&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span>
-<span class="k">assert</span> <span class="n">septPlusProches</span><span class="p">(</span><span class="n">poudlard</span><span class="p">,</span><span class="n">Harry</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;Gryffondor&#39;</span>
+<span class="n">Harry</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"nom"</span> <span class="p">:</span> <span class="s2">"Harry"</span><span class="p">,</span> <span class="s2">"courage"</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="s2">"loyaute"</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span><span class="s2">"sagesse"</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span><span class="s2">"malice"</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span>
+<span class="k">assert</span> <span class="n">septPlusProches</span><span class="p">(</span><span class="n">poudlard</span><span class="p">,</span><span class="n">Harry</span><span class="p">)</span> <span class="o">==</span> <span class="s1">'Gryffondor'</span>
 </code></pre></div>
 </details>
 
@@ -6010,11 +6010,13 @@ Ne pas oublier de préciser la documentation (docstring) et de donner au moins u
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
       

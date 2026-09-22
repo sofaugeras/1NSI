@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5850,8 +5850,8 @@
 <span class="mi">37</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">b</span>
 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-  <span class="n">File</span> <span class="s2">&quot;&lt;pyshell&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">NameError</span><span class="p">:</span> <span class="n">name</span> <span class="s1">&#39;b&#39;</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">defined</span>
+  <span class="n">File</span> <span class="s2">"&lt;pyshell&gt;"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">NameError</span><span class="p">:</span> <span class="n">name</span> <span class="s1">'b'</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">defined</span>
 </code></pre></div>
 <p>Remarquez bien l'erreur lorsqu'on a fait appel à une variable <code>b</code> qui n'avait jamais été définie, comme le dit explicitement le message <code>NameError: name 'b' is not defined</code> </p>
 <h2 id="b-le-fonctionnement-interne">B. Le fonctionnement interne<a class="headerlink" href="#b-le-fonctionnement-interne" title="Permanent link">⚓︎</a></h2>
@@ -6077,8 +6077,8 @@ C'est de nouveau un <em>sucre syntaxique</em>. Cette syntaxe nous dispense de cr
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Une petite erreur s'est glissée à Poudlard :
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maison_Harry</span> <span class="o">=</span> <span class="s2">&quot;Serpentard&quot;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">maison_Malfoy</span> <span class="o">=</span>  <span class="s2">&quot;Gryffondor&quot;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">maison_Harry</span> <span class="o">=</span> <span class="s2">"Serpentard"</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">maison_Malfoy</span> <span class="o">=</span>  <span class="s2">"Gryffondor"</span>
 </code></pre></div>
 Corriger cette erreur, de deux manières différentes.</p>
 </div>
@@ -6124,7 +6124,7 @@ ou plus rapidement :
 <tr>
 <td style="text-align: center;"><code>str</code></td>
 <td style="text-align: center;">chaîne de caractères (string)</td>
-<td style="text-align: center;"><code class="highlight"><span class="s2">&quot;NSI&quot;</span></code></td>
+<td style="text-align: center;"><code class="highlight"><span class="s2">"NSI"</span></code></td>
 </tr>
 <tr>
 <td style="text-align: center;"><code>bool</code></td>
@@ -6144,7 +6144,7 @@ ou plus rapidement :
 <tr>
 <td style="text-align: center;"><code>dict</code></td>
 <td style="text-align: center;">dictionnaire</td>
-<td style="text-align: center;"><code class="highlight"><span class="p">{</span><span class="s1">&#39;Homer&#39;</span><span class="p">:</span><span class="mi">43</span><span class="p">,</span> <span class="s1">&#39;Marge&#39;</span><span class="p">:</span><span class="mi">41</span><span class="p">,</span> <span class="s1">&#39;Bart&#39;</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span> <span class="s1">&#39;Lisa&#39;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;Maggie&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">}</span></code></td>
+<td style="text-align: center;"><code class="highlight"><span class="p">{</span><span class="s1">'Homer'</span><span class="p">:</span><span class="mi">43</span><span class="p">,</span> <span class="s1">'Marge'</span><span class="p">:</span><span class="mi">41</span><span class="p">,</span> <span class="s1">'Bart'</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span> <span class="s1">'Lisa'</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="s1">'Maggie'</span><span class="p">:</span><span class="mi">4</span><span class="p">}</span></code></td>
 </tr>
 <tr>
 <td style="text-align: center;"><code>function</code></td>
@@ -6158,7 +6158,7 @@ ou plus rapidement :
 Il suffit dans la console d'utiliser la fonction <code>type</code>.</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="err">&#39;</span><span class="nc">int</span><span class="s1">&#39;&gt;</span>
+<span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="err">'</span><span class="nc">int</span><span class="s1">'&gt;</span>
 </code></pre></div>
 <h3 id="c1-python-et-le-typage-dynamique">C.1 Python et le typage dynamique<a class="headerlink" href="#c1-python-et-le-typage-dynamique" title="Permanent link">⚓︎</a></h3>
 <p>Jusqu'à présent, nous ne nous sommes pas occupés de préciser à Python le type de notre variable.</p>
@@ -6169,16 +6169,16 @@ Il suffit dans la console d'utiliser la fonction <code>type</code>.</p>
 </code></pre></div>
 Cela signifie (pour le langage C) que notre variable <code>a</code> n'aura pas le droit de contenir autre chose qu'un nombre entier.</p>
 <p>Si on écrit ensuite
-<div class="highlight"><span class="filename">C</span><pre><span></span><code><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;test&quot;</span><span class="p">;</span>
+<div class="highlight"><span class="filename">C</span><pre><span></span><code><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"test"</span><span class="p">;</span>
 </code></pre></div></p>
 <p>Le compilateur C renverra une erreur : on ne peut pas stocker une chaîne de caractères dans une variable qu'on a créée comme étant de type entier.</p>
 <p>Et en Python ?</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="err">&#39;</span><span class="nc">int</span><span class="s1">&#39;&gt;</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;test&quot;</span>
+<span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="err">'</span><span class="nc">int</span><span class="s1">'&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="s2">"test"</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="err">&#39;</span><span class="nc">str</span><span class="s1">&#39;&gt;</span>
+<span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="err">'</span><span class="nc">str</span><span class="s1">'&gt;</span>
 </code></pre></div>
 <p>Python a changé tout seul le type de notre variable, sans intervention. On parle de <strong>typage dynamique</strong>.</p>
 <h2 id="d-bonnes-pratiques-de-nommage">D. Bonnes pratiques de nommage<a class="headerlink" href="#d-bonnes-pratiques-de-nommage" title="Permanent link">⚓︎</a></h2>
@@ -6391,11 +6391,13 @@ Mais comment former ces longs mots ?</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
       

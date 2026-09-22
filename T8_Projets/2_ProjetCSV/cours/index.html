@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5731,33 +5731,33 @@ Voici un petit bout de code, qui à partir d'un fichier CSV contenant une ville,
 <span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
 
 <span class="c1"># Charger le fichier CSV contenant les noms des pays avec les noms de leurs capitales</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;pays2.csv&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'pays2.csv'</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">'utf-8'</span><span class="p">)</span>
 
-<span class="c1"># Fonction pour obtenir les coordonnées géographiques d&#39;une capitale donnée</span>
+<span class="c1"># Fonction pour obtenir les coordonnées géographiques d'une capitale donnée</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">get_coordinates_city</span><span class="p">(</span><span class="n">city</span><span class="p">):</span>
-    <span class="c1"># Utilisation de l&#39;API openstreetmap </span>
-    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://nominatim.openstreetmap.org/search?city=</span><span class="si">{</span><span class="n">city</span><span class="si">}</span><span class="s2">&amp;format=json&quot;</span>
+    <span class="c1"># Utilisation de l'API openstreetmap </span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"https://nominatim.openstreetmap.org/search?city=</span><span class="si">{</span><span class="n">city</span><span class="si">}</span><span class="s2">&amp;format=json"</span>
     <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span> <span class="s1">&#39;Mozilla/5.0 (compatible; MyApp/1.0; +http://myapp.com)&#39;</span>
+        <span class="s1">'User-Agent'</span><span class="p">:</span> <span class="s1">'Mozilla/5.0 (compatible; MyApp/1.0; +http://myapp.com)'</span>
     <span class="p">}</span>
     <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
     <span class="k">if</span> <span class="n">data</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;lat&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">'lat'</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">'lon'</span><span class="p">]</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="c1"># Si on ne trouve pas la ville, renvoie None</span>
         <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">get_coordinates_country</span><span class="p">(</span><span class="n">country</span><span class="p">):</span>
-     <span class="c1"># Utilisation de l&#39;API openstreetmap </span>
-    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://nominatim.openstreetmap.org/search?country=</span><span class="si">{</span><span class="n">country</span><span class="si">}</span><span class="s2">&amp;format=json&quot;</span>
+     <span class="c1"># Utilisation de l'API openstreetmap </span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"https://nominatim.openstreetmap.org/search?country=</span><span class="si">{</span><span class="n">country</span><span class="si">}</span><span class="s2">&amp;format=json"</span>
     <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span> <span class="s1">&#39;Mozilla/5.0 (compatible; MyApp/1.0; +http://myapp.com)&#39;</span>
+        <span class="s1">'User-Agent'</span><span class="p">:</span> <span class="s1">'Mozilla/5.0 (compatible; MyApp/1.0; +http://myapp.com)'</span>
     <span class="p">}</span>
     <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
     <span class="k">if</span> <span class="n">data</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;lat&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">'lat'</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">'lon'</span><span class="p">]</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="c1"># Si on ne trouve pas le pays, renvoie None</span>
         <span class="k">return</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span>
@@ -5765,18 +5765,18 @@ Voici un petit bout de code, qui à partir d'un fichier CSV contenant une ville,
 <span class="c1"># Obtenir les coordonnées géographiques pour chaque capitale</span>
 <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df2</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
     <span class="c1"># Un petit rpint pour vérifier que le traitement avance ...</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Capital&#39;</span><span class="p">])</span>
-    <span class="c1"># Récupération des coordonnées en fonction d&#39;une ville</span>
-    <span class="n">latitude</span><span class="p">,</span> <span class="n">longitude</span> <span class="o">=</span> <span class="n">get_coordinates_city</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Capital&#39;</span><span class="p">])</span>
-    <span class="n">df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="s1">&#39;Latitude&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">latitude</span>
-    <span class="n">df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="s1">&#39;Longitude&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">longitude</span>
-    <span class="c1"># Récupération des coordonnées en fonction d&#39;un pays, coordonnées de la capitale</span>
-    <span class="n">latitude2</span><span class="p">,</span> <span class="n">longitude2</span> <span class="o">=</span> <span class="n">get_coordinates_country</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;pays&#39;</span><span class="p">])</span>
-    <span class="n">df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="s1">&#39;Latitude2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">latitude2</span>
-    <span class="n">df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="s1">&#39;Longitude2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">longitude2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">'Capital'</span><span class="p">])</span>
+    <span class="c1"># Récupération des coordonnées en fonction d'une ville</span>
+    <span class="n">latitude</span><span class="p">,</span> <span class="n">longitude</span> <span class="o">=</span> <span class="n">get_coordinates_city</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">'Capital'</span><span class="p">])</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="s1">'Latitude'</span><span class="p">]</span> <span class="o">=</span> <span class="n">latitude</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="s1">'Longitude'</span><span class="p">]</span> <span class="o">=</span> <span class="n">longitude</span>
+    <span class="c1"># Récupération des coordonnées en fonction d'un pays, coordonnées de la capitale</span>
+    <span class="n">latitude2</span><span class="p">,</span> <span class="n">longitude2</span> <span class="o">=</span> <span class="n">get_coordinates_country</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">'pays'</span><span class="p">])</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="s1">'Latitude2'</span><span class="p">]</span> <span class="o">=</span> <span class="n">latitude2</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">index</span><span class="p">,</span> <span class="s1">'Longitude2'</span><span class="p">]</span> <span class="o">=</span> <span class="n">longitude2</span>
 
 <span class="c1"># Enregistrer le nouveau dataset avec les coordonnées géographiques</span>
-<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;nouveau_dataset.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">"nouveau_dataset.csv"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </code></pre></div>
 
 
@@ -5923,11 +5923,13 @@ Voici un petit bout de code, qui à partir d'un fichier CSV contenant une ville,
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
       

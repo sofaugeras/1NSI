@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5765,11 +5765,11 @@
 <code>nom_de_ma_fonction.__doc__</code> (deux underscores de chaque côté). </p>
 <p>Exemple :</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">mettre_au_carre</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;renvoie le carré de x</span>
+<span class="w">    </span><span class="sd">"""renvoie le carré de x</span>
 
 <span class="sd">    Paramètres d’entrée : x -&gt; (int, float ou decimal) : un nombre quelconque</span>
 <span class="sd">    Paramètre de sortie : Un nombre -&gt; (int, float ou decimal)</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="k">return</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
 </code></pre></div>
 <div class="admonition faq">
@@ -5802,21 +5802,21 @@ J importe uniquement ce que je vais utiliser. Les fonctions sont chargées en m�
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="kn">import</span> <span class="n">cos</span><span class="p">,</span> <span class="n">pi</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">conversion_degre_radian</span><span class="p">(</span><span class="n">angle</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;renvoie la conversion des données en radians</span>
+<span class="w">    </span><span class="sd">"""renvoie la conversion des données en radians</span>
 
-<span class="sd">    Paramètres d&#39;entrée : x -&gt; int ou decimal : valeur de l&#39;angle de degré à convertir</span>
-<span class="sd">    Paramètres de sortie : retourne --&gt; int ou float : valeur de l&#39;angle en radian</span>
+<span class="sd">    Paramètres d'entrée : x -&gt; int ou decimal : valeur de l'angle de degré à convertir</span>
+<span class="sd">    Paramètres de sortie : retourne --&gt; int ou float : valeur de l'angle en radian</span>
 
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="k">return</span><span class="p">(</span><span class="n">angle</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">)</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">calcul_cosinus</span><span class="p">(</span><span class="n">angle</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;renvoie le cosinus d&#39;un angle</span>
+<span class="w">    </span><span class="sd">"""renvoie le cosinus d'un angle</span>
 
-<span class="sd">    Paramètres d&#39;entrée : x -&gt; int ou decimal : valeur de l&#39;angle en radian</span>
+<span class="sd">    Paramètres d'entrée : x -&gt; int ou decimal : valeur de l'angle en radian</span>
 <span class="sd">    Paramètres de sortie : retourne --&gt; int ou float : cosinus en radian</span>
 
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="k">return</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="n">conversion_degre_radian</span><span class="p">(</span><span class="n">angle</span><span class="p">)))</span>
 </code></pre></div>
 </div>
@@ -5835,14 +5835,14 @@ J importe uniquement ce que je vais utiliser. Les fonctions sont chargées en m�
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">pourcentage</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    renvoie le pourcentage de a par rapport à b</span>
-<span class="sd">    Paramètres d&#39;entrée : </span>
+<span class="sd">    Paramètres d'entrée : </span>
 <span class="sd">        a -&gt; int ou decimal : valeur du sous-ensemble</span>
-<span class="sd">        b -&gt; int ou decimal, b&gt;0 : valeur de l&#39;ensemble</span>
+<span class="sd">        b -&gt; int ou decimal, b&gt;0 : valeur de l'ensemble</span>
 <span class="sd">    Paramètres de sortie : retourne --&gt; int ou float : pourcentage</span>
 
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="k">assert</span> <span class="n">b</span> <span class="o">!=</span> <span class="mi">0</span>
     <span class="k">return</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="mi">100</span><span class="o">/</span><span class="n">b</span><span class="p">)</span>
 </code></pre></div>
@@ -5865,21 +5865,21 @@ J importe uniquement ce que je vais utiliser. Les fonctions sont chargées en m�
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">addition</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;renvoie l&#39;addition des 4 paramètres</span>
-<span class="sd">    Paramètres d&#39;entrée : </span>
+<span class="w">    </span><span class="sd">"""renvoie l'addition des 4 paramètres</span>
+<span class="sd">    Paramètres d'entrée : </span>
 <span class="sd">        a,b,c,d -&gt; int ou decimal : valeur à additionner</span>
 <span class="sd">    Paramètres de sortie : retourne --&gt; int ou float : addition</span>
 
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="k">return</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="o">+</span><span class="n">d</span><span class="p">)</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">division</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;renvoie la moyenne des 4 paramètres</span>
-<span class="sd">    Paramètres d&#39;entrée : </span>
+<span class="w">    </span><span class="sd">"""renvoie la moyenne des 4 paramètres</span>
+<span class="sd">    Paramètres d'entrée : </span>
 <span class="sd">        a,b,c,d -&gt; int ou decimal : valeur</span>
 <span class="sd">    Paramètres de sortie : retourne --&gt; int ou float : moyenne</span>
 
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="k">return</span><span class="p">(</span><span class="n">addition</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span>
 </code></pre></div>
 </div>
@@ -5899,35 +5899,35 @@ Que dois-je taper pour que le programme affiche le volume d'un pavé droit de me
 <span class="k">def</span><span class="w"> </span><span class="nf">fonction1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
     <span class="n">coefficient</span><span class="o">=</span><span class="mi">10</span>
     <span class="n">c</span><span class="o">=</span><span class="n">coefficient</span><span class="o">*</span><span class="n">coefficient</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">b</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;L&#39;aire d&#39;un rectangle de mesure&quot;</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="s2">&quot;et&quot;</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="s2">&quot;qui subit un agrandissement de coefficient&quot;</span><span class="p">,</span><span class="n">coefficient</span><span class="p">,</span><span class="s2">&quot;est&quot;</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"L'aire d'un rectangle de mesure"</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="s2">"et"</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="s2">"qui subit un agrandissement de coefficient"</span><span class="p">,</span><span class="n">coefficient</span><span class="p">,</span><span class="s2">"est"</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
 
-<span class="c1">#volume d&#39;un parallélépipède de coté a,b,c qui subit un agrandissement de coefficient d</span>
+<span class="c1">#volume d'un parallélépipède de coté a,b,c qui subit un agrandissement de coefficient d</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">fonction2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">):</span>
     <span class="k">return</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="o">*</span><span class="n">d</span><span class="o">*</span><span class="n">d</span><span class="o">*</span><span class="n">d</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">aire</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;renvoie l&#39;aire d&#39;un rectangle dont les 2 côtés adjacents sont passés en paramètres</span>
-<span class="sd">    Paramètres d&#39;entrée : </span>
+<span class="w">    </span><span class="sd">"""renvoie l'aire d'un rectangle dont les 2 côtés adjacents sont passés en paramètres</span>
+<span class="sd">    Paramètres d'entrée : </span>
 <span class="sd">        a -&gt; int ou decimal : côté</span>
 <span class="sd">        b -&gt; int ou decimal : côté adjacent</span>
 <span class="sd">    Paramètres de sortie : retourne --&gt; none</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="n">COEFFICIENT</span><span class="o">=</span><span class="mi">10</span>
     <span class="n">aire_rectangle</span><span class="o">=</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">COEFFICIENT</span><span class="o">**</span><span class="mi">2</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;L&#39;aire d&#39;un rectangle de mesure&quot;</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="s2">&quot;et&quot;</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="s2">&quot;qui subit un agrandissement de coefficient&quot;</span><span class="p">,</span><span class="n">COEFFICIENT</span><span class="p">,</span><span class="s2">&quot;est&quot;</span><span class="p">,</span><span class="n">aire_rectangle</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"L'aire d'un rectangle de mesure"</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="s2">"et"</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="s2">"qui subit un agrandissement de coefficient"</span><span class="p">,</span><span class="n">COEFFICIENT</span><span class="p">,</span><span class="s2">"est"</span><span class="p">,</span><span class="n">aire_rectangle</span><span class="p">)</span>
 
-<span class="c1">#volume d&#39;un parallélépipède de coté a,b,c qui subit un agrandissement de coefficient d</span>
+<span class="c1">#volume d'un parallélépipède de coté a,b,c qui subit un agrandissement de coefficient d</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">volume</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;renvoie le volume d&#39;un parallépipède dont les 2 côtés adjacents sont passés en paramètres</span>
-<span class="sd">    Paramètres d&#39;entrée : </span>
+<span class="w">    </span><span class="sd">"""renvoie le volume d'un parallépipède dont les 2 côtés adjacents sont passés en paramètres</span>
+<span class="sd">    Paramètres d'entrée : </span>
 <span class="sd">        a -&gt; int ou decimal : côté</span>
 <span class="sd">        b -&gt; int ou decimal : côté adjacent</span>
 <span class="sd">        c -&gt; int ou decimal : hauteur</span>
 <span class="sd">        d -&gt; Coefficient multiplicateur</span>
-<span class="sd">    Paramètres de sortie : retourne --&gt; volume du parallépipède doté d&#39;un cef multiplicateur</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    Paramètres de sortie : retourne --&gt; volume du parallépipède doté d'un cef multiplicateur</span>
+<span class="sd">    """</span>
     <span class="n">COEFFICIENT</span><span class="o">=</span><span class="n">d</span>
     <span class="k">return</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="o">*</span><span class="n">COEFFICIENT</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
 </code></pre></div>
@@ -5942,28 +5942,28 @@ Que dois-je taper pour que le programme affiche le volume d'un pavé droit de me
 <div class="tabbed-block">
 <p>Comprendre ce que fait le code suivant et corriger tous les problèmes de spécification</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">fonction1</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1 - jouer à la bataille navale&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2 - jouer au puissance 4&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3 - quitter&quot;</span><span class="p">)</span>
-    <span class="n">a</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Taper votre choix 1 ou 2 ou 3:&quot;</span><span class="p">)</span>
-    <span class="k">while</span> <span class="n">a</span><span class="o">!=</span><span class="s2">&quot;1&quot;</span> <span class="ow">or</span> <span class="n">a</span><span class="o">!=</span><span class="s2">&quot;2&quot;</span> <span class="ow">or</span> <span class="n">a</span><span class="o">!=</span><span class="s2">&quot;3&quot;</span><span class="p">:</span>
-        <span class="n">a</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Taper votre choix :&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"1 - jouer à la bataille navale"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"2 - jouer au puissance 4"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"3 - quitter"</span><span class="p">)</span>
+    <span class="n">a</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Taper votre choix 1 ou 2 ou 3:"</span><span class="p">)</span>
+    <span class="k">while</span> <span class="n">a</span><span class="o">!=</span><span class="s2">"1"</span> <span class="ow">or</span> <span class="n">a</span><span class="o">!=</span><span class="s2">"2"</span> <span class="ow">or</span> <span class="n">a</span><span class="o">!=</span><span class="s2">"3"</span><span class="p">:</span>
+        <span class="n">a</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Taper votre choix :"</span><span class="p">)</span>
     <span class="k">return</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">console_jeu_choix</span><span class="p">():</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Fonction de menu de la console de jeu</span>
-<span class="sd">    Paramètres d&#39;entrée : none</span>
+<span class="w">    </span><span class="sd">"""Fonction de menu de la console de jeu</span>
+<span class="sd">    Paramètres d'entrée : none</span>
 <span class="sd">    Paramètres de sortie : retourne --&gt; choix</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1 - jouer à la bataille navale&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2 - jouer au puissance 4&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3 - quitter&quot;</span><span class="p">)</span>
-    <span class="n">a</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Taper votre choix 1 ou 2 ou 3:&quot;</span><span class="p">))</span>
-    <span class="c1">#Tant que l&#39;utilisateur n&#39;a pas choisi son menu correctement, on l&#39;interroge</span>
-    <span class="k">while</span> <span class="n">a</span><span class="o">!=</span><span class="s2">&quot;1&quot;</span> <span class="ow">or</span> <span class="n">a</span><span class="o">!=</span><span class="s2">&quot;2&quot;</span> <span class="ow">or</span> <span class="n">a</span><span class="o">!=</span><span class="s2">&quot;3&quot;</span> <span class="p">:</span>
-        <span class="n">a</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Taper votre choix :&quot;</span><span class="p">))</span>
+<span class="sd">    """</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"1 - jouer à la bataille navale"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"2 - jouer au puissance 4"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"3 - quitter"</span><span class="p">)</span>
+    <span class="n">a</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Taper votre choix 1 ou 2 ou 3:"</span><span class="p">))</span>
+    <span class="c1">#Tant que l'utilisateur n'a pas choisi son menu correctement, on l'interroge</span>
+    <span class="k">while</span> <span class="n">a</span><span class="o">!=</span><span class="s2">"1"</span> <span class="ow">or</span> <span class="n">a</span><span class="o">!=</span><span class="s2">"2"</span> <span class="ow">or</span> <span class="n">a</span><span class="o">!=</span><span class="s2">"3"</span> <span class="p">:</span>
+        <span class="n">a</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Taper votre choix :"</span><span class="p">))</span>
     <span class="k">return</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </code></pre></div>
 </div>
@@ -5977,24 +5977,24 @@ Que dois-je taper pour que le programme affiche le volume d'un pavé droit de me
 <div class="tabbed-block">
 <p>Vous devez être capable de programmer une fonction à partir de sa spécification.</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code>    <span class="k">def</span><span class="w"> </span><span class="nf">encoder</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Encode une chaîne de caractère en son équivalent ASCII </span>
 
 <span class="sd">    Paramètres d’entrée : chaine de caractère -&gt; char</span>
 <span class="sd">    Paramètre de sortie : encodage ASCII -&gt; int</span>
-<span class="sd">    &quot;&quot;&quot;</span><span class="s2">&quot;</span>
+<span class="sd">    """</span><span class="s2">"</span>
         <span class="c1"># votre code ici</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">encoder</span><span class="p">(</span><span class="n">chaine</span><span class="p">):</span> 
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Encode une chaîne de caractère en son équivalent ASCII </span>
 <span class="sd">    Paramètres d’entrée : chaine de caractère -&gt; char </span>
 <span class="sd">    Paramètre de sortie : encodage ASCII -&gt; int</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1">#Initialisation de la chaine de caractère que l&#39;on utiliser pour concaténer</span>
-    <span class="n">machAscii</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="sd">    """</span>
+    <span class="c1">#Initialisation de la chaine de caractère que l'on utiliser pour concaténer</span>
+    <span class="n">machAscii</span> <span class="o">=</span> <span class="s1">''</span>
     <span class="c1">#Parcours par élément de la chaine de caractère passée en paramètre</span>
     <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">chaine</span> <span class="p">:</span>
         <span class="c1">#ord renvoie un entier, il faut caster en string pour pour concaténer</span>
@@ -6015,14 +6015,14 @@ Que dois-je taper pour que le programme affiche le volume d'un pavé droit de me
     <img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/27a1.svg" title=":arrow_right:" /> Cas limite <br /></p>
 <p><em>Exemple</em> avec la fonction qui teste si des nombres sont en ordres croissants.</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">croissant</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">):</span>
-<span class="w">  </span><span class="sd">&quot;&quot;&quot;Fonction de test de la croissance d’une suite de nombre</span>
-<span class="sd">  Paramètres d&#39;entrée : a,b,c -&gt; int ou float</span>
+<span class="w">  </span><span class="sd">"""Fonction de test de la croissance d’une suite de nombre</span>
+<span class="sd">  Paramètres d'entrée : a,b,c -&gt; int ou float</span>
 <span class="sd">  Paramètres de sortie : retourne -&gt; valeur booléenne </span>
 <span class="sd">                (True si a,b,c sont tels que a&lt;b&lt;c ; False sinon)</span>
-<span class="sd">  &quot;&quot;&quot;</span>
+<span class="sd">  """</span>
     <span class="n">Return</span> <span class="n">a</span><span class="o">&lt;</span><span class="n">b</span><span class="o">&lt;</span><span class="n">c</span>
 
-  <span class="c1"># Jeu d&#39;essai</span>
+  <span class="c1"># Jeu d'essai</span>
   <span class="k">assert</span><span class="p">(</span><span class="n">croissant</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span><span class="o">==</span><span class="kc">True</span><span class="p">)</span> <span class="c1">#je teste le cas où les nombres sont croissants --&gt; Cas normal</span>
   <span class="k">assert</span><span class="p">(</span><span class="n">croissant</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">==</span><span class="kc">False</span><span class="p">)</span> <span class="c1">#je teste le cas où les nombres ne sont pas croissants --&gt; Cas faux</span>
   <span class="k">assert</span><span class="p">(</span><span class="n">croissant</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span><span class="o">==</span><span class="kc">False</span><span class="p">)</span> <span class="c1">#je teste le cas où les nombres sont décroissants --&gt; Cas faux</span>
@@ -6035,7 +6035,7 @@ Que dois-je taper pour que le programme affiche le volume d'un pavé droit de me
   <span class="c1">#code ici</span>
   <span class="k">pass</span>
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">ma_fonction</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 </code></pre></div></p>
 <p>C'est généralement ce qu'on fait quand on développe. Ces tests doivent couvrir <strong>tous</strong> les cas possibles et être compréhensibles.</p>
@@ -6046,7 +6046,7 @@ Il est préférable de les remplacer par de vrais tests… </p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">assert</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">1</span> <span class="c1"># ne fait rien</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="k">assert</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">2</span> <span class="c1"># plante le programme</span>
 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
-  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s2">"&lt;stdin&gt;"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">AssertionError</span>
 </code></pre></div></p>
 <p>C'est le moyen le plus efficace et rapide de tester un programme ou une fonction.<br />
@@ -6055,12 +6055,12 @@ Il ne faut pas intégrer les assertions à la fonction elle-même. Il est préf�
 <p class="admonition-title">Un exemple sur la suite de Fibonacci</p>
 <p>Prenons la fonction qui affiche la suite de Fibonacci. Elle utilise une structure que vous connaissez la liste.</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code>    <span class="k">def</span><span class="w"> </span><span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    Liste des termes de la suite de Fibonacci de l&#39;indice 0 à l&#39;indice n inclus</span>
+<span class="w">    </span><span class="sd">'''</span>
+<span class="sd">    Liste des termes de la suite de Fibonacci de l'indice 0 à l'indice n inclus</span>
 
-<span class="sd">    Paramètres d’entrée :  n-&gt;int : l&#39;indice maximal voulu</span>
+<span class="sd">    Paramètres d’entrée :  n-&gt;int : l'indice maximal voulu</span>
 <span class="sd">    Paramètres de sortie : suite_fibonacci -&gt; list : la liste des termes</span>
-<span class="sd">    &#39;&#39;&#39;</span>
+<span class="sd">    '''</span>
     <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">int</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="kc">None</span>
     <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
@@ -6080,13 +6080,13 @@ Il ne faut pas intégrer les assertions à la fonction elle-même. Il est préf�
 <img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/27a1.svg" title=":arrow_right:" />   La propriété de Fibonacci : un+un+1=un+2<br />
 <img alt="➡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/27a1.svg" title=":arrow_right:" />   La sortie dans les cas impossibles : paramètre négatif, paramètre non entier</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">tester_fibonacci</span><span class="p">():</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">'''</span>
 <span class="sd">    Teste certaines propriétés de la fonction Fibonacci</span>
 
 <span class="sd">    Paramètres de sortie : None</span>
 <span class="sd">    Conditions d’utilisation : lève une exception AssertionError </span>
 <span class="sd">            si la fonction est mal programmée</span>
-<span class="sd">    &#39;&#39;&#39;</span>
+<span class="sd">    '''</span>
     <span class="n">fib_10</span> <span class="o">=</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 
     <span class="c1"># longueur de la liste</span>
@@ -6106,7 +6106,7 @@ Il ne faut pas intégrer les assertions à la fonction elle-même. Il est préf�
 
     <span class="c1"># Valeur de retour dans les cas impossibles</span>
     <span class="k">assert</span> <span class="n">fibonacci</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="kc">None</span>
-    <span class="k">assert</span> <span class="n">fibonacci</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="kc">None</span>
+    <span class="k">assert</span> <span class="n">fibonacci</span><span class="p">(</span><span class="s1">'a'</span><span class="p">)</span> <span class="o">==</span> <span class="kc">None</span>
     <span class="k">assert</span> <span class="n">fibonacci</span><span class="p">(</span><span class="mf">3.14</span><span class="p">)</span> <span class="o">==</span> <span class="kc">None</span>
 </code></pre></div>
 </div>
@@ -6114,22 +6114,22 @@ Il ne faut pas intégrer les assertions à la fonction elle-même. Il est préf�
 <p>Note : La rédaction de la Docstring est libre. Les deux notations suivantes sont correctes. Prenez celle qui vous paraît naturelle.</p>
 <div class="admonition abstract">
 <p class="admonition-title">Doctest de fibonacci</p>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="w">    </span><span class="sd">'''</span>
 <span class="sd">    Teste certaines propriétés de la fonction Fibonacci</span>
 
 <span class="sd">    Paramètres de sortie : None</span>
 <span class="sd">    Conditions d’utilisation : lève une exception AssertionError </span>
 <span class="sd">            si la fonction est mal programmée</span>
-<span class="sd">    &#39;&#39;&#39;</span>
+<span class="sd">    '''</span>
     <span class="n">ou</span>
 
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Calcule produit de a et b</span>
 <span class="sd">    @param a: (number, str, list) premier facteur</span>
 <span class="sd">    @param b: (number, str, list) second facteur</span>
 <span class="sd">    @return: (number, str, list) le produit</span>
 
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 </code></pre></div>
 </div>
 <p>Mais revenons à l’utilisation de <code>Doctest</code>, qui s’intègre naturellement à la <strong>docstring</strong>.
@@ -6139,7 +6139,7 @@ Pour les fonctions qui réalisent des calculs cela reste pratique.</p>
 <div class="admonition example">
 <p class="admonition-title">Un exemple qui fonctionne bien : </p>
 <p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">multiple</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Calcule produit de a et b</span>
 <span class="sd">    @param a: (number, str, list) premier facteur</span>
 <span class="sd">    @param b: (number, str, list) second facteur</span>
@@ -6147,36 +6147,36 @@ Pour les fonctions qui réalisent des calculs cela reste pratique.</p>
 
 <span class="sd">    &gt;&gt;&gt; multiply(4, 3)</span>
 <span class="sd">    12</span>
-<span class="sd">    &gt;&gt;&gt; multiply(&#39;a&#39;, 3)</span>
-<span class="sd">    &#39;aaa&#39;</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    &gt;&gt;&gt; multiply('a', 3)</span>
+<span class="sd">    'aaa'</span>
+<span class="sd">    """</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
     <span class="kn">import</span><span class="w"> </span><span class="nn">doctest</span>
-    <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span> <span class="c1"># s&#39;il ne se passe rien, les test sont justes</span>
+    <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span> <span class="c1"># s'il ne se passe rien, les test sont justes</span>
 </code></pre></div>
 Quand on exécute le programme, il ne se passe rien.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Un exemple qui échoue :</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">Fonction_mal_testee</span><span class="p">():</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="w">    </span><span class="sd">'''</span>
 <span class="sd">    Simple fonction qui echoue</span>
 <span class="sd">    &gt;&gt;&gt; Fonction_mal_testee()</span>
 <span class="sd">    3</span>
-<span class="sd">    &#39;&#39;&#39;</span>
+<span class="sd">    '''</span>
     <span class="k">return</span> <span class="mi">2</span>
 
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
     <span class="kn">import</span><span class="w"> </span><span class="nn">doctest</span>
-    <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>  <span class="c1"># s&#39;il ne se passe rien, les tests sont justes.</span>
+    <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">()</span>  <span class="c1"># s'il ne se passe rien, les tests sont justes.</span>
 </code></pre></div>
 <p>Voici la sortie d'un exemple qui échoue</p>
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>&gt;&gt;&gt; python3 2_tester_doctest.py
 **********************************************************************
-File &quot;/home/quentin/realiser_des_tests/2_tester_doctest.py&quot;, line 5,
+File "/home/quentin/realiser_des_tests/2_tester_doctest.py", line 5,
 in __main__.Fonction_mal_testee
 Failed example:
     Fonction_mal_testee()
@@ -6198,11 +6198,11 @@ Got:
 <div class="tabbed-block">
 <p>Reprendre le code de la fonction <code>mettre_au_carre</code> et indiquer les asserts nécessaires pour tester la fonction.</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">mettre_au_carre</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;renvoie le carré de x</span>
+<span class="w">    </span><span class="sd">"""renvoie le carré de x</span>
 
 <span class="sd">    Paramètres d’entrée : x -&gt; (int, float ou decimal) : un nombre quelconque</span>
 <span class="sd">    Paramètre de sortie : Un nombre -&gt; (int, float ou decimal)</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="k">return</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
 </code></pre></div>
 </div>
@@ -6365,11 +6365,13 @@ Got:
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
       

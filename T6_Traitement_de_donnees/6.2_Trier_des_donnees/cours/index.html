@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5715,7 +5715,7 @@
 <p>Nous reprenons notre fichier de joueurs de rugby du <a href="../../6.1_Manipulation_csv/data/top14.csv">Top14</a>. </p>
 <p>🔽 Télécharger le notebook de cours correspondant <a href="../data/02_Trier_des_donnees.zip">ici</a></p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
-<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data/top14.csv&#39;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'data/top14.csv'</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">'utf-8'</span><span class="p">)</span>
 <span class="n">donnees</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
 <span class="n">joueurs</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="n">donnees</span><span class="p">:</span>
@@ -5730,22 +5730,22 @@ La valeur renvoyée sera de type <code>liste de dictionnaire</code>.</p>
 <details class="tip">
 <summary>réponse</summary>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">joueursEquipe</span><span class="p">(</span><span class="n">joueurs</span><span class="p">,</span> <span class="n">equipe</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Filtre une liste de joueurs afin de ne conserver que ceux appartenant à une équipe donnée.</span>
 <span class="sd">    @params : joueurs : Liste de dictionnaires représentant les joueurs.</span>
-<span class="sd">    @params : equipe : str :  Nom de l&#39;équipe recherchée.</span>
-<span class="sd">    @return : list : Liste des dictionnaires correspondant aux joueurs de l&#39;équipe spécifiée.</span>
+<span class="sd">    @params : equipe : str :  Nom de l'équipe recherchée.</span>
+<span class="sd">    @return : list : Liste des dictionnaires correspondant aux joueurs de l'équipe spécifiée.</span>
 <span class="sd">    Exemple</span>
 <span class="sd">    -------</span>
-<span class="sd">    &gt;&gt;&gt; joueursEquipe(joueurs, &quot;Bordeaux&quot;)</span>
-<span class="sd">    [{&#39;Nom&#39;: &#39;Dupont&#39;, &#39;Equipe&#39;: &#39;Bordeaux&#39;}, ...]</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    &gt;&gt;&gt; joueursEquipe(joueurs, "Bordeaux")</span>
+<span class="sd">    [{'Nom': 'Dupont', 'Equipe': 'Bordeaux'}, ...]</span>
+<span class="sd">    """</span>
     <span class="n">lst_joueurs</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="p">:</span>
-        <span class="k">if</span> <span class="n">j</span><span class="p">[</span><span class="s1">&#39;Equipe&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">equipe</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="n">j</span><span class="p">[</span><span class="s1">'Equipe'</span><span class="p">]</span> <span class="o">==</span> <span class="n">equipe</span> <span class="p">:</span>
             <span class="n">lst_joueurs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">lst_joueurs</span>
-<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">joueursEquipe</span><span class="p">(</span><span class="n">joueurs</span><span class="p">,</span> <span class="s2">&quot;Bordeaux&quot;</span><span class="p">))</span> <span class="o">==</span> <span class="mi">37</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">joueursEquipe</span><span class="p">(</span><span class="n">joueurs</span><span class="p">,</span> <span class="s2">"Bordeaux"</span><span class="p">))</span> <span class="o">==</span> <span class="mi">37</span>
 </code></pre></div>
 </details>
 <p>❓  Définir de la même manière une fonction <code>joueursPoste(joueurs, poste)</code> qui qui prend en paramètre notre table Joueurs et qui renvoie une liste contentant tous les joueurs occupant le  <code>poste</code>.  Le paramètre <code>poste</code> sera donnée sous forme de chaîne de caractères. <br />
@@ -5753,22 +5753,22 @@ La valeur renvoyée sera de type <code>liste</code>.</p>
 <details class="tip">
 <summary>réponse</summary>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">joueursPoste</span><span class="p">(</span><span class="n">joueurs</span><span class="p">,</span> <span class="n">poste</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Filtre une liste de joueurs afin de ne conserver que ceux occupant un poste donné.</span>
 <span class="sd">    @params : joueurs : Liste de dictionnaires représentant les joueurs.</span>
 <span class="sd">    @params : poste : str : Nom du poste recherché.</span>
 <span class="sd">    @return : list : Liste des dictionnaires correspondant aux joueurs du poste spécifié.</span>
 <span class="sd">    Exemple</span>
 <span class="sd">    -------</span>
-<span class="sd">    &gt;&gt;&gt; joueursPoste(joueurs, &quot;Mêlée&quot;)</span>
-<span class="sd">    [{&#39;Nom&#39;: &#39;Dupont&#39;, &#39;Poste&#39;: &#39;Mêlée&#39;}, ...]</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    &gt;&gt;&gt; joueursPoste(joueurs, "Mêlée")</span>
+<span class="sd">    [{'Nom': 'Dupont', 'Poste': 'Mêlée'}, ...]</span>
+<span class="sd">    """</span>
     <span class="n">lst_joueurs</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">joueurs</span> <span class="p">:</span>
-        <span class="k">if</span> <span class="n">j</span><span class="p">[</span><span class="s1">&#39;Poste&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">poste</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="n">j</span><span class="p">[</span><span class="s1">'Poste'</span><span class="p">]</span> <span class="o">==</span> <span class="n">poste</span> <span class="p">:</span>
             <span class="n">lst_joueurs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">lst_joueurs</span>
-<span class="n">joueursPoste</span><span class="p">(</span><span class="n">joueurs</span><span class="p">,</span> <span class="s1">&#39;Mêlée&#39;</span><span class="p">)</span>
+<span class="n">joueursPoste</span><span class="p">(</span><span class="n">joueurs</span><span class="p">,</span> <span class="s1">'Mêlée'</span><span class="p">)</span>
 </code></pre></div>
 </details>
 <h2 id="utilisation-dune-fonction-de-tri">Utilisation d'une fonction de tri<a class="headerlink" href="#utilisation-dune-fonction-de-tri" title="Permanent link">⚓︎</a></h2>
@@ -5795,22 +5795,22 @@ Source : <a href="https://docs.python.org/fr/3/howto/sorting.html">doc python</a
     <span class="o">----&gt;</span> <span class="mi">1</span> <span class="n">test</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">joueurs</span><span class="p">)</span>
 
 
-    <span class="ne">TypeError</span><span class="p">:</span> <span class="s1">&#39;&lt;&#39;</span> <span class="ow">not</span> <span class="n">supported</span> <span class="n">between</span> <span class="n">instances</span> <span class="n">of</span> <span class="s1">&#39;dict&#39;</span> <span class="ow">and</span> <span class="s1">&#39;dict&#39;</span>
+    <span class="ne">TypeError</span><span class="p">:</span> <span class="s1">'&lt;'</span> <span class="ow">not</span> <span class="n">supported</span> <span class="n">between</span> <span class="n">instances</span> <span class="n">of</span> <span class="s1">'dict'</span> <span class="ow">and</span> <span class="s1">'dict'</span>
 </code></pre></div>
 <p>La tentative de tri sur un dictionnaire provoque une erreur. Un dictionnaire possède plusieurs clés différentes.
 Ici, plusieurs clés peuvent être des critères de tri : la taille, le poids.</p>
 <h3 id="un-exemple-de-tri-de-dictionnaire">Un exemple de tri de dictionnaire<a class="headerlink" href="#un-exemple-de-tri-de-dictionnaire" title="Permanent link">⚓︎</a></h3>
 <p>Prenons un nouveau jeu de données, contenant les informations sur la série Simpson.<br />
 Simpsons est de type <code>Liste de dictionnaires</code>.</p>
-<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">Simpsons</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">&quot;Prenom&quot;</span> <span class="p">:</span> <span class="s2">&quot;Bart&quot;</span><span class="p">,</span> <span class="s2">&quot;age estimé&quot;</span><span class="p">:</span> <span class="s2">&quot;10&quot;</span><span class="p">},</span>
-           <span class="p">{</span><span class="s2">&quot;Prenom&quot;</span> <span class="p">:</span> <span class="s2">&quot;Lisa&quot;</span><span class="p">,</span> <span class="s2">&quot;age estimé&quot;</span><span class="p">:</span> <span class="s2">&quot;8&quot;</span><span class="p">},</span>
-           <span class="p">{</span><span class="s2">&quot;Prenom&quot;</span> <span class="p">:</span> <span class="s2">&quot;Maggie&quot;</span><span class="p">,</span> <span class="s2">&quot;age estimé&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">},</span>
-           <span class="p">{</span><span class="s2">&quot;Prenom&quot;</span> <span class="p">:</span> <span class="s2">&quot;Homer&quot;</span><span class="p">,</span> <span class="s2">&quot;age estimé&quot;</span><span class="p">:</span> <span class="s2">&quot;38&quot;</span><span class="p">},</span>
-           <span class="p">{</span><span class="s2">&quot;Prenom&quot;</span> <span class="p">:</span> <span class="s2">&quot;Marge&quot;</span><span class="p">,</span> <span class="s2">&quot;age estimé&quot;</span><span class="p">:</span> <span class="s2">&quot;37&quot;</span><span class="p">}]</span>
+<p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">Simpsons</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">"Prenom"</span> <span class="p">:</span> <span class="s2">"Bart"</span><span class="p">,</span> <span class="s2">"age estimé"</span><span class="p">:</span> <span class="s2">"10"</span><span class="p">},</span>
+           <span class="p">{</span><span class="s2">"Prenom"</span> <span class="p">:</span> <span class="s2">"Lisa"</span><span class="p">,</span> <span class="s2">"age estimé"</span><span class="p">:</span> <span class="s2">"8"</span><span class="p">},</span>
+           <span class="p">{</span><span class="s2">"Prenom"</span> <span class="p">:</span> <span class="s2">"Maggie"</span><span class="p">,</span> <span class="s2">"age estimé"</span><span class="p">:</span> <span class="s2">"1"</span><span class="p">},</span>
+           <span class="p">{</span><span class="s2">"Prenom"</span> <span class="p">:</span> <span class="s2">"Homer"</span><span class="p">,</span> <span class="s2">"age estimé"</span><span class="p">:</span> <span class="s2">"38"</span><span class="p">},</span>
+           <span class="p">{</span><span class="s2">"Prenom"</span> <span class="p">:</span> <span class="s2">"Marge"</span><span class="p">,</span> <span class="s2">"age estimé"</span><span class="p">:</span> <span class="s2">"37"</span><span class="p">}]</span>
 </code></pre></div>
 On définit une fonction <code>age</code> permettant de renvoyer l'age estimé d'un personnage passé en paramètre.</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">age</span><span class="p">(</span><span class="n">personnage</span><span class="p">):</span>
-        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">personnage</span><span class="p">[</span><span class="s2">&quot;age estimé&quot;</span><span class="p">])</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">personnage</span><span class="p">[</span><span class="s2">"age estimé"</span><span class="p">])</span>
 <span class="n">age</span><span class="p">(</span><span class="n">Simpsons</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="mi">10</span>
 </code></pre></div>
@@ -5820,20 +5820,20 @@ On définit une fonction <code>age</code> permettant de renvoyer l'age estimé d
 <p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">triSimpsons</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">Simpsons</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">age</span><span class="p">)</span>
 
 <span class="n">triSimpsons</span>
-<span class="o">&gt;&gt;&gt;</span><span class="p">[{</span><span class="s1">&#39;Prenom&#39;</span><span class="p">:</span> <span class="s1">&#39;Maggie&#39;</span><span class="p">,</span> <span class="s1">&#39;age estimé&#39;</span><span class="p">:</span> <span class="s1">&#39;1&#39;</span><span class="p">},</span>
-    <span class="p">{</span><span class="s1">&#39;Prenom&#39;</span><span class="p">:</span> <span class="s1">&#39;Lisa&#39;</span><span class="p">,</span> <span class="s1">&#39;age estimé&#39;</span><span class="p">:</span> <span class="s1">&#39;8&#39;</span><span class="p">},</span>
-    <span class="p">{</span><span class="s1">&#39;Prenom&#39;</span><span class="p">:</span> <span class="s1">&#39;Bart&#39;</span><span class="p">,</span> <span class="s1">&#39;age estimé&#39;</span><span class="p">:</span> <span class="s1">&#39;10&#39;</span><span class="p">},</span>
-    <span class="p">{</span><span class="s1">&#39;Prenom&#39;</span><span class="p">:</span> <span class="s1">&#39;Marge&#39;</span><span class="p">,</span> <span class="s1">&#39;age estimé&#39;</span><span class="p">:</span> <span class="s1">&#39;37&#39;</span><span class="p">},</span>
-    <span class="p">{</span><span class="s1">&#39;Prenom&#39;</span><span class="p">:</span> <span class="s1">&#39;Homer&#39;</span><span class="p">,</span> <span class="s1">&#39;age estimé&#39;</span><span class="p">:</span> <span class="s1">&#39;38&#39;</span><span class="p">}]</span>
+<span class="o">&gt;&gt;&gt;</span><span class="p">[{</span><span class="s1">'Prenom'</span><span class="p">:</span> <span class="s1">'Maggie'</span><span class="p">,</span> <span class="s1">'age estimé'</span><span class="p">:</span> <span class="s1">'1'</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">'Prenom'</span><span class="p">:</span> <span class="s1">'Lisa'</span><span class="p">,</span> <span class="s1">'age estimé'</span><span class="p">:</span> <span class="s1">'8'</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">'Prenom'</span><span class="p">:</span> <span class="s1">'Bart'</span><span class="p">,</span> <span class="s1">'age estimé'</span><span class="p">:</span> <span class="s1">'10'</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">'Prenom'</span><span class="p">:</span> <span class="s1">'Marge'</span><span class="p">,</span> <span class="s1">'age estimé'</span><span class="p">:</span> <span class="s1">'37'</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">'Prenom'</span><span class="p">:</span> <span class="s1">'Homer'</span><span class="p">,</span> <span class="s1">'age estimé'</span><span class="p">:</span> <span class="s1">'38'</span><span class="p">}]</span>
 </code></pre></div>
 On peut aussi inverser l'ordre de tri en précision le sens de tri :</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">triSimpsons</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">Simpsons</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">age</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 <span class="n">triSimpsons</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="p">[{</span><span class="s1">&#39;Prenom&#39;</span><span class="p">:</span> <span class="s1">&#39;Homer&#39;</span><span class="p">,</span> <span class="s1">&#39;age estimé&#39;</span><span class="p">:</span> <span class="s1">&#39;38&#39;</span><span class="p">},</span>
-    <span class="p">{</span><span class="s1">&#39;Prenom&#39;</span><span class="p">:</span> <span class="s1">&#39;Marge&#39;</span><span class="p">,</span> <span class="s1">&#39;age estimé&#39;</span><span class="p">:</span> <span class="s1">&#39;37&#39;</span><span class="p">},</span>
-    <span class="p">{</span><span class="s1">&#39;Prenom&#39;</span><span class="p">:</span> <span class="s1">&#39;Bart&#39;</span><span class="p">,</span> <span class="s1">&#39;age estimé&#39;</span><span class="p">:</span> <span class="s1">&#39;10&#39;</span><span class="p">},</span>
-    <span class="p">{</span><span class="s1">&#39;Prenom&#39;</span><span class="p">:</span> <span class="s1">&#39;Lisa&#39;</span><span class="p">,</span> <span class="s1">&#39;age estimé&#39;</span><span class="p">:</span> <span class="s1">&#39;8&#39;</span><span class="p">},</span>
-    <span class="p">{</span><span class="s1">&#39;Prenom&#39;</span><span class="p">:</span> <span class="s1">&#39;Maggie&#39;</span><span class="p">,</span> <span class="s1">&#39;age estimé&#39;</span><span class="p">:</span> <span class="s1">&#39;1&#39;</span><span class="p">}]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">[{</span><span class="s1">'Prenom'</span><span class="p">:</span> <span class="s1">'Homer'</span><span class="p">,</span> <span class="s1">'age estimé'</span><span class="p">:</span> <span class="s1">'38'</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">'Prenom'</span><span class="p">:</span> <span class="s1">'Marge'</span><span class="p">,</span> <span class="s1">'age estimé'</span><span class="p">:</span> <span class="s1">'37'</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">'Prenom'</span><span class="p">:</span> <span class="s1">'Bart'</span><span class="p">,</span> <span class="s1">'age estimé'</span><span class="p">:</span> <span class="s1">'10'</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">'Prenom'</span><span class="p">:</span> <span class="s1">'Lisa'</span><span class="p">,</span> <span class="s1">'age estimé'</span><span class="p">:</span> <span class="s1">'8'</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">'Prenom'</span><span class="p">:</span> <span class="s1">'Maggie'</span><span class="p">,</span> <span class="s1">'age estimé'</span><span class="p">:</span> <span class="s1">'1'</span><span class="p">}]</span>
 </code></pre></div>
 </div>
 <p>❓   Trier les joueurs du top14 par taille.</p>
@@ -5841,7 +5841,7 @@ On peut aussi inverser l'ordre de tri en précision le sens de tri :</p>
 <summary>réponse</summary>
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```python
 def taillePlayer(player) :
-    return int(player[&#39;Taille&#39;])
+    return int(player['Taille'])
 joueurs_taille_croissant = sorted(joueurs, key = taillePlayer)
 ```
 </code></pre></div>
@@ -5851,7 +5851,7 @@ joueurs_taille_croissant = sorted(joueurs, key = taillePlayer)
 <summary>réponse</summary>
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```python
 def poidsPlayer(player) :
-    return int(player[&#39;Poids&#39;])
+    return int(player['Poids'])
 joueurs_poids_croissant = sorted(joueurs, key = poidsPlayer)
 ```
 </code></pre></div>
@@ -5861,10 +5861,10 @@ joueurs_poids_croissant = sorted(joueurs, key = poidsPlayer)
 <summary>réponse</summary>
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>```python
 def IMC(player):
-    masse = int(player[&#39;Poids&#39;])
-    taille_m = int(player[&#39;Taille&#39;]) / 100
+    masse = int(player['Poids'])
+    taille_m = int(player['Taille']) / 100
     return masse / taille_m**2
-joueursUBB = [k for k in joueurs if k[&#39;Equipe&#39;] == &#39;Bordeaux&#39;]
+joueursUBB = [k for k in joueurs if k['Equipe'] == 'Bordeaux']
 joueursUBB_tri = sorted(joueursUBB, key = IMC)
 ```
 </code></pre></div>
@@ -5877,10 +5877,10 @@ $$ d = (p_1-p_2)^2 + (t_1-t_2)^2$$</p>
 <details class="tip">
 <summary>réponse</summary>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">distance</span><span class="p">(</span><span class="n">joueur1</span><span class="p">,</span><span class="n">joueur2</span><span class="p">):</span>
-    <span class="n">p1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">joueur1</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span>
-    <span class="n">p2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">joueur2</span><span class="p">[</span><span class="s1">&#39;Poids&#39;</span><span class="p">])</span>
-    <span class="n">t1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">joueur1</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">])</span>
-    <span class="n">t2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">joueur2</span><span class="p">[</span><span class="s1">&#39;Taille&#39;</span><span class="p">])</span>
+    <span class="n">p1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">joueur1</span><span class="p">[</span><span class="s1">'Poids'</span><span class="p">])</span>
+    <span class="n">p2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">joueur2</span><span class="p">[</span><span class="s1">'Poids'</span><span class="p">])</span>
+    <span class="n">t1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">joueur1</span><span class="p">[</span><span class="s1">'Taille'</span><span class="p">])</span>
+    <span class="n">t2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">joueur2</span><span class="p">[</span><span class="s1">'Taille'</span><span class="p">])</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">p1</span><span class="o">-</span><span class="n">p2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span><span class="n">t1</span><span class="o">-</span><span class="n">t2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
 </code></pre></div>
 </details>
@@ -5889,16 +5889,16 @@ $$ d = (p_1-p_2)^2 + (t_1-t_2)^2$$</p>
 <details class="tip">
 <summary>réponse</summary>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">joueurs</span><span class="p">))</span> <span class="p">:</span>
-    <span class="k">if</span> <span class="n">joueurs</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="s1">&#39;Nom&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Baptiste SERIN&#39;</span> <span class="p">:</span>
+    <span class="k">if</span> <span class="n">joueurs</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="s1">'Nom'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'Baptiste SERIN'</span> <span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="mi">530</span>
 <span class="n">joueurs</span><span class="p">[</span><span class="mi">530</span><span class="p">]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="p">{</span><span class="s1">&#39;Equipe&#39;</span><span class="p">:</span> <span class="s1">&#39;Toulon&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Nom&#39;</span><span class="p">:</span> <span class="s1">&#39;Baptiste SERIN&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Poste&#39;</span><span class="p">:</span> <span class="s1">&#39;Mêlée&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Date de naissance&#39;</span><span class="p">:</span> <span class="s1">&#39;20/06/1994&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Taille&#39;</span><span class="p">:</span> <span class="s1">&#39;180&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;Poids&#39;</span><span class="p">:</span> <span class="s1">&#39;79&#39;</span><span class="p">}</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">{</span><span class="s1">'Equipe'</span><span class="p">:</span> <span class="s1">'Toulon'</span><span class="p">,</span>
+    <span class="s1">'Nom'</span><span class="p">:</span> <span class="s1">'Baptiste SERIN'</span><span class="p">,</span>
+    <span class="s1">'Poste'</span><span class="p">:</span> <span class="s1">'Mêlée'</span><span class="p">,</span>
+    <span class="s1">'Date de naissance'</span><span class="p">:</span> <span class="s1">'20/06/1994'</span><span class="p">,</span>
+    <span class="s1">'Taille'</span><span class="p">:</span> <span class="s1">'180'</span><span class="p">,</span>
+    <span class="s1">'Poids'</span><span class="p">:</span> <span class="s1">'79'</span><span class="p">}</span>
 </code></pre></div>
 </details>
 <p>Nous pouvons maintenant classer les joueurs suivant leur distance morphologique à Baptiste  SERIN :</p>
@@ -6057,11 +6057,13 @@ $$ d = (p_1-p_2)^2 + (t_1-t_2)^2$$</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
       

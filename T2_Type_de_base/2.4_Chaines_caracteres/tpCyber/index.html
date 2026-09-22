@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../xtra/fav1NSI.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5832,41 +5832,41 @@ Pour augmenter la sécurité du mot de passe, on peut décider de mettre aléato
 <h1 id="au-travail">Au travail !<a class="headerlink" href="#au-travail" title="Permanent link">⚓︎</a></h1>
 <p>Compléter la fonction <code>convertir_ponctuation</code> qui convertit les apostrophes et les signes de ponctuation de la phrase en espaces.</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">convertir_ponctuation</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span> <span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    convertir les apostrophes et les signes de ponctuation de la phrase en espaces</span>
-<span class="sd">    @param :  phrase--&gt; str : phrase saisie par l&#39;utilisateur</span>
-<span class="sd">    @return : str : phrase saisie par l&#39;utilisateur avec des espaces à la place des apostrophes et des signes de ponctuation</span>
+<span class="sd">    @param :  phrase--&gt; str : phrase saisie par l'utilisateur</span>
+<span class="sd">    @return : str : phrase saisie par l'utilisateur avec des espaces à la place des apostrophes et des signes de ponctuation</span>
 
 <span class="sd">    EXAMPLES </span>
 <span class="sd">    --------</span>
-<span class="sd">    &gt;&gt;&gt; convertir_ponctuation(&quot;J&#39;adore passer mes vacances à réaliser des devoirs maison.&quot;)</span>
-<span class="sd">    &quot;J adore passer mes vacances à réaliser des devoirs maison&quot;</span>
+<span class="sd">    &gt;&gt;&gt; convertir_ponctuation("J'adore passer mes vacances à réaliser des devoirs maison.")</span>
+<span class="sd">    "J adore passer mes vacances à réaliser des devoirs maison"</span>
 
-<span class="sd">    &gt;&gt;&gt; convertir_ponctuation(&quot;J&#39;&#39;aime avec une faute de frappe&quot;)</span>
-<span class="sd">    &quot;J  aime avec une faute de frappe&quot;</span>
+<span class="sd">    &gt;&gt;&gt; convertir_ponctuation("J''aime avec une faute de frappe")</span>
+<span class="sd">    "J  aime avec une faute de frappe"</span>
 
-<span class="sd">    &gt;&gt;&gt; convertir_ponctuation(&quot;Voilà : écoute, ce que je te dis !&quot;)</span>
-<span class="sd">    &quot;Voilà   écoute  ce que je te dis  &quot;</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">phrase_sans_ponctuation</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="sd">    &gt;&gt;&gt; convertir_ponctuation("Voilà : écoute, ce que je te dis !")</span>
+<span class="sd">    "Voilà   écoute  ce que je te dis  "</span>
+<span class="sd">    """</span>
+    <span class="n">phrase_sans_ponctuation</span> <span class="o">=</span> <span class="s2">""</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">phrase</span><span class="p">))</span> <span class="p">:</span>
-        <span class="k">if</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;&#39;&quot;</span><span class="p">,</span><span class="s2">&quot;:&quot;</span><span class="p">,</span><span class="s2">&quot;,&quot;</span><span class="p">,</span><span class="s2">&quot;;&quot;</span><span class="p">,</span><span class="s2">&quot;!&quot;</span><span class="p">,</span><span class="s2">&quot;.&quot;</span><span class="p">,</span><span class="s2">&quot;?&quot;</span><span class="p">]</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">"'"</span><span class="p">,</span><span class="s2">":"</span><span class="p">,</span><span class="s2">","</span><span class="p">,</span><span class="s2">";"</span><span class="p">,</span><span class="s2">"!"</span><span class="p">,</span><span class="s2">"."</span><span class="p">,</span><span class="s2">"?"</span><span class="p">]</span> <span class="p">:</span>
             <span class="n">phrase_sans_ponctuation</span> <span class="o">=</span> <span class="c1"># à compléter</span>
         <span class="c1">#à compléter</span>
 </code></pre></div>
 <details class="question">
 <summary>Correction</summary>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">convertir_ponctuation</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span> <span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    convertir les apostrophes et les signes de ponctuation de la phrase en espaces</span>
-<span class="sd">    @param :  phrase--&gt; str : phrase saisie par l&#39;utilisateur</span>
-<span class="sd">    @return : str : phrase saisie par l&#39;utilisateur avec des espaces à la place des apostrophes et des signes de ponctuation</span>
+<span class="sd">    @param :  phrase--&gt; str : phrase saisie par l'utilisateur</span>
+<span class="sd">    @return : str : phrase saisie par l'utilisateur avec des espaces à la place des apostrophes et des signes de ponctuation</span>
 
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">phrase_sans_ponctuation</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="sd">    """</span>
+    <span class="n">phrase_sans_ponctuation</span> <span class="o">=</span> <span class="s2">""</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">phrase</span><span class="p">))</span> <span class="p">:</span>
-        <span class="k">if</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;&#39;&quot;</span><span class="p">,</span><span class="s2">&quot;:&quot;</span><span class="p">,</span><span class="s2">&quot;,&quot;</span><span class="p">,</span><span class="s2">&quot;;&quot;</span><span class="p">,</span><span class="s2">&quot;!&quot;</span><span class="p">,</span><span class="s2">&quot;.&quot;</span><span class="p">,</span><span class="s2">&quot;?&quot;</span><span class="p">]</span> <span class="p">:</span>
-            <span class="n">phrase_sans_ponctuation</span> <span class="o">=</span> <span class="n">phrase_sans_ponctuation</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span>
+        <span class="k">if</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">"'"</span><span class="p">,</span><span class="s2">":"</span><span class="p">,</span><span class="s2">","</span><span class="p">,</span><span class="s2">";"</span><span class="p">,</span><span class="s2">"!"</span><span class="p">,</span><span class="s2">"."</span><span class="p">,</span><span class="s2">"?"</span><span class="p">]</span> <span class="p">:</span>
+            <span class="n">phrase_sans_ponctuation</span> <span class="o">=</span> <span class="n">phrase_sans_ponctuation</span> <span class="o">+</span> <span class="s2">" "</span>
         <span class="k">else</span> <span class="p">:</span>
             <span class="n">phrase_sans_ponctuation</span> <span class="o">=</span> <span class="n">phrase_sans_ponctuation</span> <span class="o">+</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">phrase_sans_ponctuation</span>
@@ -5874,12 +5874,12 @@ Pour augmenter la sécurité du mot de passe, on peut décider de mettre aléato
 </details>
 <p>Pour chaque fonction, vous devez tester les exemples proposés avant de poursuivre en ajoutant des tests.</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1"># tester les trois exemples proposés</span>
-<span class="n">convertir_ponctuation</span><span class="p">(</span><span class="s2">&quot;J&#39;adore passer mes vacances à réaliser des devoirs maison.&quot;</span><span class="p">)</span>
+<span class="n">convertir_ponctuation</span><span class="p">(</span><span class="s2">"J'adore passer mes vacances à réaliser des devoirs maison."</span><span class="p">)</span>
 </code></pre></div>
 <details class="question">
 <summary>Correction</summary>
-<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">convertir_ponctuation</span><span class="p">(</span><span class="s2">&quot;J&#39;&#39;aime avec une faute de frappe&quot;</span><span class="p">)</span>
-<span class="n">convertir_ponctuation</span><span class="p">(</span><span class="s2">&quot;Voilà : écoute, ce que je te dis !&quot;</span><span class="p">)</span>
+<div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="n">convertir_ponctuation</span><span class="p">(</span><span class="s2">"J''aime avec une faute de frappe"</span><span class="p">)</span>
+<span class="n">convertir_ponctuation</span><span class="p">(</span><span class="s2">"Voilà : écoute, ce que je te dis !"</span><span class="p">)</span>
 </code></pre></div>
 </details>
 <p>Il faut maintenant vérifier que la phrase contient <strong>plus de 8 mots</strong>.<br />
@@ -5887,32 +5887,32 @@ Pour compter le nombre de mots, on va compter le nombre de fois où on trouve un
 Dans ce cas, pour détecter le premier mot, il faut ajouter un espace au début de la phrase s'il n'y en a pas.  </p>
 <p>En suivant cette règle, compléter la fonction <code>verifier_plus_de_huit_mots</code>.</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">verifier_plus_de_huit_mots</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span> <span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    vérifier que la phrase contient plus de 8 mots</span>
-<span class="sd">    @PARAM: phrase --&gt; str : phrase saisie par l&#39;utilisateur où il n&#39;y a plus de ponctuation et chaque mot est séparé par des espaces</span>
+<span class="sd">    @PARAM: phrase --&gt; str : phrase saisie par l'utilisateur où il n'y a plus de ponctuation et chaque mot est séparé par des espaces</span>
 
 <span class="sd">    @RETURN : bool : vrai si la phrase contient plus de 8 mots</span>
 
 <span class="sd">    EXAMPLES </span>
 <span class="sd">    --------</span>
-<span class="sd">    &gt;&gt;&gt; verifier_plus_de_huit_mots(&quot;C est trop court&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; verifier_plus_de_huit_mots("C est trop court")</span>
 <span class="sd">    False</span>
-<span class="sd">    &gt;&gt;&gt; verifier_plus_de_huit_mots(&quot;C est trop         court&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; verifier_plus_de_huit_mots("C est trop         court")</span>
 <span class="sd">    False</span>
-<span class="sd">    &gt;&gt;&gt; verifier_plus_de_huit_mots(&quot;J adore passer mes vacances à réaliser des devoirs maison&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; verifier_plus_de_huit_mots("J adore passer mes vacances à réaliser des devoirs maison")</span>
 <span class="sd">    True</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># on ajoute un espace pour premier caractère s&#39;il n&#39;y en pas pas</span>
-    <span class="k">if</span> <span class="n">phrase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+<span class="sd">    """</span>
+    <span class="c1"># on ajoute un espace pour premier caractère s'il n'y en pas pas</span>
+    <span class="k">if</span> <span class="n">phrase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">' '</span><span class="p">:</span>
         <span class="c1"># à compléter</span>
 
     <span class="n">nb_mots</span> <span class="o">=</span> <span class="mi">0</span>
 
     <span class="c1"># pour compter le nombre de mots, on cherche le début de chaque mot</span>
     <span class="c1"># en testant chaque caractère de la phrase,</span>
-    <span class="c1"># on détecte le début d&#39;un mot parce qu&#39;il contient un espace suivi d&#39;une lettre </span>
+    <span class="c1"># on détecte le début d'un mot parce qu'il contient un espace suivi d'une lettre </span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span> <span class="ow">and</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">' '</span> <span class="ow">and</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">' '</span> <span class="p">:</span>
             <span class="c1"># à compléter</span>
 
 
@@ -5922,18 +5922,18 @@ Dans ce cas, pour détecter le premier mot, il faut ajouter un espace au début 
 <details class="question">
 <summary>Correction</summary>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">verifier_plus_de_huit_mots</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span> <span class="p">:</span>
-    <span class="c1"># on ajoute un espace pour premier caractère s&#39;il n&#39;y en pas pas</span>
-    <span class="k">if</span> <span class="n">phrase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
-        <span class="n">phrase</span> <span class="o">=</span>  <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">phrase</span>
+    <span class="c1"># on ajoute un espace pour premier caractère s'il n'y en pas pas</span>
+    <span class="k">if</span> <span class="n">phrase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">' '</span><span class="p">:</span>
+        <span class="n">phrase</span> <span class="o">=</span>  <span class="s1">' '</span> <span class="o">+</span> <span class="n">phrase</span>
     <span class="c1"># pour compter le nombre de mots, on cherche le début de chaque mot</span>
     <span class="c1"># en testant chaque caractère de la phrase,</span>
-    <span class="c1"># on détecte le début d&#39;un mot parce qu&#39;il contient un espace suivi d&#39;une lettre </span>
+    <span class="c1"># on détecte le début d'un mot parce qu'il contient un espace suivi d'une lettre </span>
     <span class="n">nb_mots</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span> <span class="ow">and</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">' '</span> <span class="ow">and</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">' '</span> <span class="p">:</span>
             <span class="n">nb_mots</span> <span class="o">=</span> <span class="n">nb_mots</span> <span class="o">+</span> <span class="mi">1</span>
     <span class="c1">#debug</span>
-    <span class="c1">#print(&quot;nb mots &quot;, nb_mots)</span>
+    <span class="c1">#print("nb mots ", nb_mots)</span>
     <span class="k">if</span> <span class="n">nb_mots</span> <span class="o">&lt;</span> <span class="mi">8</span> <span class="p">:</span>
         <span class="k">return</span> <span class="kc">False</span>
     <span class="k">else</span> <span class="p">:</span>
@@ -5943,9 +5943,9 @@ Dans ce cas, pour détecter le premier mot, il faut ajouter un espace au début 
 <p>On vérifie que le chiffre est bien un entier entre 0 et 9.<br />
 Compléter la fonction <code>verifier_chiffre</code>.</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">verifier_chiffre</span><span class="p">(</span><span class="n">chiffre</span><span class="p">)</span> <span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    vérifier que le chiffre est bien un entier entre 0 et 9.</span>
-<span class="sd">    @PARAM : chiffre --&gt; int : chiffre saisi par l&#39;utilisateur</span>
+<span class="sd">    @PARAM : chiffre --&gt; int : chiffre saisi par l'utilisateur</span>
 <span class="sd">    @RETURN : bool : vrai si le chiffre est bien un entier entre 0 et 9.</span>
 
 <span class="sd">    EXAMPLES </span>
@@ -5956,14 +5956,14 @@ Compléter la fonction <code>verifier_chiffre</code>.</p>
 <span class="sd">    True</span>
 <span class="sd">    &gt;&gt;&gt; verifier_chiffre(10)</span>
 <span class="sd">    AssertionError: Il faut nombre entier entre 0 et 9 !</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="c1"># à compléter</span>
 </code></pre></div>
 <details class="question">
 <summary>Correction</summary>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">verifier_chiffre</span><span class="p">(</span><span class="n">chiffre</span><span class="p">)</span> <span class="p">:</span>
-    <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">chiffre</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span> <span class="p">,</span> <span class="s2">&quot;Il faut donner un nombre entier !&quot;</span>
-    <span class="k">assert</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">chiffre</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;Il faut nombre entier entre 0 et 9 !&quot;</span>
+    <span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">chiffre</span><span class="p">)</span> <span class="o">==</span> <span class="nb">int</span> <span class="p">,</span> <span class="s2">"Il faut donner un nombre entier !"</span>
+    <span class="k">assert</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">chiffre</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="p">,</span> <span class="s2">"Il faut nombre entier entre 0 et 9 !"</span>
     <span class="k">return</span> <span class="kc">True</span>
 </code></pre></div>
 </details>
@@ -5971,29 +5971,29 @@ Compléter la fonction <code>verifier_chiffre</code>.</p>
 On détecte la première lettre de chaque mot de la même façon que pour la fonction <code>verifier_plus_de_huit_mots</code>.<br />
 Puis, on crée un algorithme de cumul qui concatène les premières lettres de chaque mot.</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">obtenir_premieres_lettres</span><span class="p">(</span><span class="n">phrase</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    créer un mot constitué des premières lettres de chaque mot de la phrase</span>
-<span class="sd">    @PARAM : phrase --&gt; str : phrase saisie par l&#39;utilisateur où chaque mot est séparé par des espaces</span>
+<span class="sd">    @PARAM : phrase --&gt; str : phrase saisie par l'utilisateur où chaque mot est séparé par des espaces</span>
 <span class="sd">    @RETURN : str : mot constitué des premières lettres de chaque mot de la phrase</span>
 
 <span class="sd">    EXAMPLES </span>
 <span class="sd">    --------</span>
-<span class="sd">    &gt;&gt;&gt; obtenir_premieres_lettres(&quot;J adore passer mes vacances à réaliser des devoirs maison&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; obtenir_premieres_lettres("J adore passer mes vacances à réaliser des devoirs maison")</span>
 <span class="sd">    Japmvàrddm</span>
-<span class="sd">    &gt;&gt;&gt; obtenir_premieres_lettres(&quot;Le petit chien s appelle            Idéfix&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; obtenir_premieres_lettres("Le petit chien s appelle            Idéfix")</span>
 <span class="sd">    LpcsaI</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># on ajoute un espace pour premier caractère s&#39;il n&#39;y en pas pas</span>
-    <span class="k">if</span> <span class="n">phrase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
+<span class="sd">    """</span>
+    <span class="c1"># on ajoute un espace pour premier caractère s'il n'y en pas pas</span>
+    <span class="k">if</span> <span class="n">phrase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">' '</span><span class="p">:</span>
         <span class="c1"># à compléter</span>
 
-    <span class="n">mot_de_passe</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">mot_de_passe</span> <span class="o">=</span> <span class="s2">""</span>
 
     <span class="c1"># en testant chaque caractère de la phrase,</span>
-    <span class="c1"># on détecte le début d&#39;un mot parce qu&#39;il contient un espace suivi d&#39;une lettre </span>
+    <span class="c1"># on détecte le début d'un mot parce qu'il contient un espace suivi d'une lettre </span>
     <span class="c1"># dans ce cas, on concatène les premières lettres pour créer le mot de passe</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span> <span class="ow">and</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">' '</span> <span class="ow">and</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">' '</span> <span class="p">:</span>
             <span class="c1"># à compléter</span>
 
     <span class="k">return</span> <span class="n">mot_de_passe</span>  
@@ -6001,17 +6001,17 @@ Puis, on crée un algorithme de cumul qui concatène les premières lettres de c
 <details class="question">
 <summary>Correction</summary>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">obtenir_premieres_lettres</span><span class="p">(</span><span class="n">phrase</span><span class="p">):</span>
-    <span class="c1"># on ajoute un espace pour premier caractère s&#39;il n&#39;y en pas pas</span>
-    <span class="k">if</span> <span class="n">phrase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span><span class="p">:</span>
-        <span class="n">phrase</span> <span class="o">=</span>  <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">phrase</span>
+    <span class="c1"># on ajoute un espace pour premier caractère s'il n'y en pas pas</span>
+    <span class="k">if</span> <span class="n">phrase</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">' '</span><span class="p">:</span>
+        <span class="n">phrase</span> <span class="o">=</span>  <span class="s1">' '</span> <span class="o">+</span> <span class="n">phrase</span>
 
-    <span class="n">mot_de_passe</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">mot_de_passe</span> <span class="o">=</span> <span class="s2">""</span>
 
     <span class="c1"># en testant chaque caractère de la phrase,</span>
-    <span class="c1"># on détecte le début d&#39;un mot parce qu&#39;il contient un espace suivi d&#39;une lettre </span>
+    <span class="c1"># on détecte le début d'un mot parce qu'il contient un espace suivi d'une lettre </span>
     <span class="c1"># on concatène les premières lettres pour créer le mot de passe</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39; &#39;</span> <span class="ow">and</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39; &#39;</span> <span class="p">:</span>
+        <span class="k">if</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">' '</span> <span class="ow">and</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">' '</span> <span class="p">:</span>
             <span class="n">mot_de_passe</span> <span class="o">=</span> <span class="n">mot_de_passe</span> <span class="o">+</span> <span class="n">phrase</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
 
     <span class="k">return</span> <span class="n">mot_de_passe</span>  
@@ -6030,23 +6030,23 @@ Pour convertir les minuscules accentuées en en leur équivalent non accentué :
 </li>
 </ol>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">convertir_sans_accent</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    convertir les lettres accentuées du mot en leur équivalent non accentué&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    convertir les lettres accentuées du mot en leur équivalent non accentué"</span>
 <span class="sd">    @PARAM : mot --&gt; str : une chaine de caractères</span>
 <span class="sd">    @RETURN : str : la même chaine de caractères sans les accents</span>
 
 <span class="sd">    EXAMPLES </span>
 <span class="sd">    --------</span>
-<span class="sd">    &gt;&gt;&gt; convertir_sans_accent(&quot;Japmvàrddm&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; convertir_sans_accent("Japmvàrddm")</span>
 <span class="sd">    Japmvarddm</span>
-<span class="sd">    &gt;&gt;&gt; convertir_sans_accent(&quot;àêïôù&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; convertir_sans_accent("àêïôù")</span>
 <span class="sd">    aeiou</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">mot_sans_accent</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="sd">    """</span>
+    <span class="n">mot_sans_accent</span> <span class="o">=</span> <span class="s2">""</span>
     <span class="k">for</span> <span class="n">caractere</span> <span class="ow">in</span> <span class="n">mot</span> <span class="p">:</span>
         <span class="c1"># on étudie tous les cas possibles</span>
-        <span class="k">if</span> <span class="n">caractere</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;à&#39;</span><span class="p">,</span><span class="s1">&#39;â&#39;</span><span class="p">]:</span>
-            <span class="n">nv_caractere</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
+        <span class="k">if</span> <span class="n">caractere</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'à'</span><span class="p">,</span><span class="s1">'â'</span><span class="p">]:</span>
+            <span class="n">nv_caractere</span> <span class="o">=</span> <span class="s1">'a'</span>
         <span class="k">elif</span>  <span class="c1"># à compléter</span>
 
 
@@ -6057,20 +6057,20 @@ Pour convertir les minuscules accentuées en en leur équivalent non accentué :
 <details class="question">
 <summary>Correction</summary>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">convertir_sans_accent</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
-    <span class="n">mot_sans_accent</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">mot_sans_accent</span> <span class="o">=</span> <span class="s2">""</span>
     <span class="k">for</span> <span class="n">caractere</span> <span class="ow">in</span> <span class="n">mot</span> <span class="p">:</span>
-        <span class="k">if</span> <span class="n">caractere</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;à&#39;</span><span class="p">,</span><span class="s1">&#39;â&#39;</span><span class="p">]:</span>
-            <span class="n">nv_caractere</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
-        <span class="k">elif</span> <span class="n">caractere</span> <span class="o">==</span> <span class="s1">&#39;ç&#39;</span><span class="p">:</span>
-            <span class="n">nv_caractere</span> <span class="o">=</span> <span class="s1">&#39;c&#39;</span>
-        <span class="k">elif</span> <span class="n">caractere</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;é&#39;</span><span class="p">,</span><span class="s1">&#39;è&#39;</span><span class="p">,</span><span class="s1">&#39;ê&#39;</span><span class="p">,</span><span class="s1">&#39;ë&#39;</span><span class="p">]:</span>
-            <span class="n">nv_caractere</span> <span class="o">=</span> <span class="s1">&#39;e&#39;</span>
-        <span class="k">elif</span> <span class="n">caractere</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;î&#39;</span><span class="p">,</span><span class="s1">&#39;ï&#39;</span><span class="p">]:</span>
-            <span class="n">nv_caractere</span> <span class="o">=</span> <span class="s1">&#39;i&#39;</span>
-        <span class="k">elif</span> <span class="n">caractere</span> <span class="o">==</span> <span class="s1">&#39;ô&#39;</span><span class="p">:</span>
-            <span class="n">nv_caractere</span> <span class="o">=</span> <span class="s1">&#39;o&#39;</span>
-        <span class="k">elif</span> <span class="n">caractere</span> <span class="ow">in</span><span class="p">[</span><span class="s1">&#39;ù&#39;</span><span class="p">,</span><span class="s1">&#39;û&#39;</span><span class="p">,</span><span class="s1">&#39;ü&#39;</span><span class="p">]:</span>
-            <span class="n">nv_caractere</span> <span class="o">=</span> <span class="s1">&#39;u&#39;</span>
+        <span class="k">if</span> <span class="n">caractere</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'à'</span><span class="p">,</span><span class="s1">'â'</span><span class="p">]:</span>
+            <span class="n">nv_caractere</span> <span class="o">=</span> <span class="s1">'a'</span>
+        <span class="k">elif</span> <span class="n">caractere</span> <span class="o">==</span> <span class="s1">'ç'</span><span class="p">:</span>
+            <span class="n">nv_caractere</span> <span class="o">=</span> <span class="s1">'c'</span>
+        <span class="k">elif</span> <span class="n">caractere</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'é'</span><span class="p">,</span><span class="s1">'è'</span><span class="p">,</span><span class="s1">'ê'</span><span class="p">,</span><span class="s1">'ë'</span><span class="p">]:</span>
+            <span class="n">nv_caractere</span> <span class="o">=</span> <span class="s1">'e'</span>
+        <span class="k">elif</span> <span class="n">caractere</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">'î'</span><span class="p">,</span><span class="s1">'ï'</span><span class="p">]:</span>
+            <span class="n">nv_caractere</span> <span class="o">=</span> <span class="s1">'i'</span>
+        <span class="k">elif</span> <span class="n">caractere</span> <span class="o">==</span> <span class="s1">'ô'</span><span class="p">:</span>
+            <span class="n">nv_caractere</span> <span class="o">=</span> <span class="s1">'o'</span>
+        <span class="k">elif</span> <span class="n">caractere</span> <span class="ow">in</span><span class="p">[</span><span class="s1">'ù'</span><span class="p">,</span><span class="s1">'û'</span><span class="p">,</span><span class="s1">'ü'</span><span class="p">]:</span>
+            <span class="n">nv_caractere</span> <span class="o">=</span> <span class="s1">'u'</span>
         <span class="k">else</span> <span class="p">:</span>
             <span class="n">nv_caractere</span> <span class="o">=</span> <span class="n">caractere</span>
         <span class="n">mot_sans_accent</span> <span class="o">=</span> <span class="n">mot_sans_accent</span> <span class="o">+</span> <span class="n">nv_caractere</span>   
@@ -6091,21 +6091,21 @@ P(80) et p(112) : 112 - 80 = 32  <br /></p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="kn">import</span> <span class="n">randint</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">convertir_majuscule_minuscule_aleatoire</span><span class="p">(</span><span class="n">lettre</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    convertir aléatoirement une lettre minuscule en majuscule ou minuscule</span>
-<span class="sd">    @PARAM : lettre --&gt; str : une lettre non accentuée de l&#39;alphabet</span>
+<span class="sd">    @PARAM : lettre --&gt; str : une lettre non accentuée de l'alphabet</span>
 <span class="sd">    @RETURN : str : la même lettre en majuscule ou en minuscule</span>
 
 <span class="sd">    EXAMPLES </span>
 <span class="sd">    --------</span>
-<span class="sd">    &gt;&gt;&gt; convertir_majuscule_minuscule_aleatoire(&quot;a&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; convertir_majuscule_minuscule_aleatoire("a")</span>
 <span class="sd">    a</span>
 
 <span class="sd">    ou aléatoirement</span>
 
-<span class="sd">    &gt;&gt;&gt; convertir_majuscule_minuscule_aleatoire(&quot;a&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; convertir_majuscule_minuscule_aleatoire("a")</span>
 <span class="sd">    A</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
     <span class="c1"># on choisit au hasard 0 ou 1</span>
     <span class="n">alea</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
     <span class="c1"># si le hasard a désigné 1 alors on convertit la lettre en majuscule</span>
@@ -6133,25 +6133,25 @@ P(80) et p(112) : 112 - 80 = 32  <br /></p>
 <li>renvoie un nouveau mot de passe avec des minuscules parfois modifiées en majuscules.</li>
 </ul>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">modifier_mot_majuscule_minuscule</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    convertir aléatoirement chaque lettre minuscule d&#39;un mot en majuscule ou minuscule, </span>
+<span class="w">    </span><span class="sd">"""</span>
+<span class="sd">    convertir aléatoirement chaque lettre minuscule d'un mot en majuscule ou minuscule, </span>
 <span class="sd">    ne pas la modifier si elle est en majuscule</span>
 <span class="sd">    @PARAM : mot --&gt; str : une chaine de caractères de lettres non accentuées</span>
 <span class="sd">    @RETURN : str : le même mot avec des majuscules et des minuscules aléatoires</span>
 
 <span class="sd">    EXAMPLES </span>
 <span class="sd">    --------</span>
-<span class="sd">    &gt;&gt;&gt; modifier_mot_majuscule_minuscule(&quot;Japmvarddm&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; modifier_mot_majuscule_minuscule("Japmvarddm")</span>
 <span class="sd">    JApMvARDdm</span>
 
 <span class="sd">    ou aleatoirement</span>
 
-<span class="sd">    &gt;&gt;&gt; modifier_mot_majuscule_minuscule(&quot;Japmvarddm&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; modifier_mot_majuscule_minuscule("Japmvarddm")</span>
 <span class="sd">    JaPMVarDDm</span>
-<span class="sd">    &gt;&gt;&gt; modifier_mot_majuscule_minuscule(&quot;ABCDefgh&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; modifier_mot_majuscule_minuscule("ABCDefgh")</span>
 <span class="sd">    ABCDeFgH</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">nv_mot</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="sd">    """</span>
+    <span class="n">nv_mot</span> <span class="o">=</span> <span class="s2">""</span>
     <span class="c1"># on itère sur chaque lettre du mot </span>
     <span class="c1"># à compléter</span>
 
@@ -6170,7 +6170,7 @@ P(80) et p(112) : 112 - 80 = 32  <br /></p>
 <details class="question">
 <summary>Correction</summary>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">modifier_mot_majuscule_minuscule</span><span class="p">(</span><span class="n">mot</span><span class="p">):</span>
-    <span class="n">nv_mot</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">nv_mot</span> <span class="o">=</span> <span class="s2">""</span>
     <span class="c1"># on itère sur chaque lettre du mot </span>
     <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">mot</span> <span class="p">:</span>
         <span class="c1"># si la lettre est une minuscule</span>
@@ -6187,7 +6187,7 @@ P(80) et p(112) : 112 - 80 = 32  <br /></p>
 </details>
 <p>Compléter la fonction <code>ajouter_chiffre</code> qui améliore la sécurité du mot de passe en ajoutant le chiffre quelque part dans le mot.</p>
 <div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">ajouter_chiffre</span><span class="p">(</span><span class="n">mot</span><span class="p">,</span><span class="n">chiffre</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    ajouter un chiffre quelque part dans le mot</span>
 <span class="sd">    @PARAM : mot --&gt; str : une chaine de caractères</span>
 <span class="sd">             chiffre --&gt; int : un chiffre</span>
@@ -6195,17 +6195,17 @@ P(80) et p(112) : 112 - 80 = 32  <br /></p>
 
 <span class="sd">    EXAMPLES </span>
 <span class="sd">    --------</span>
-<span class="sd">    &gt;&gt;&gt; ajouter_chiffre(&quot;JApMvARDdm&quot;,5)</span>
+<span class="sd">    &gt;&gt;&gt; ajouter_chiffre("JApMvARDdm",5)</span>
 <span class="sd">    JApM5vARDdm</span>
 
 <span class="sd">    ou aléatoiremment </span>
 
-<span class="sd">    &gt;&gt;&gt; ajouter_chiffre(&quot;JApMvARDdm&quot;,5)</span>
+<span class="sd">    &gt;&gt;&gt; ajouter_chiffre("JApMvARDdm",5)</span>
 <span class="sd">    JApMvARDdm5</span>
 
-<span class="sd">    &gt;&gt;&gt; ajouter_chiffre(&quot;aBcdEF&quot;,9)</span>
+<span class="sd">    &gt;&gt;&gt; ajouter_chiffre("aBcdEF",9)</span>
 <span class="sd">    a9BcdEF</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<span class="sd">    """</span>
 </code></pre></div>
 <details class="question">
 <summary>Correction</summary>
@@ -6220,23 +6220,23 @@ P(80) et p(112) : 112 - 80 = 32  <br /></p>
 <p><div class="highlight"><span class="filename">🐍 Python</span><pre><span></span><code><span class="c1">###################################################</span>
 <span class="c1">#####    PROGRAMME PRINCIPAL DE LA PHRASE     #####</span>
 <span class="c1">###################################################</span>
-<span class="n">chiffre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Saisir un chiffre (pas un nombre !) : &quot;</span><span class="p">))</span>
+<span class="n">chiffre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Saisir un chiffre (pas un nombre !) : "</span><span class="p">))</span>
 <span class="k">if</span> <span class="n">verifier_chiffre</span><span class="p">(</span><span class="n">chiffre</span><span class="p">)</span> <span class="p">:</span>
     <span class="n">verif</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">verif</span> <span class="p">:</span>
-        <span class="n">phrase</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Saisir votre phrase de code de plus de 8 mots : &quot;</span><span class="p">)</span>
+        <span class="n">phrase</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Saisir votre phrase de code de plus de 8 mots : "</span><span class="p">)</span>
         <span class="n">phrase</span> <span class="o">=</span> <span class="n">convertir_ponctuation</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span>
         <span class="n">verif</span> <span class="o">=</span> <span class="n">verifier_plus_de_huit_mots</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">verif</span> <span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Votre phrase est trop courte.&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Votre phrase est trop courte."</span><span class="p">)</span>
 <span class="n">mot_de_passe</span> <span class="o">=</span> <span class="n">obtenir_premieres_lettres</span><span class="p">(</span><span class="n">phrase</span><span class="p">)</span>
 <span class="n">mot_de_passe</span> <span class="o">=</span> <span class="n">convertir_sans_accent</span><span class="p">(</span><span class="n">mot_de_passe</span><span class="p">)</span>
 <span class="n">mot_de_passe</span> <span class="o">=</span> <span class="n">modifier_mot_majuscule_minuscule</span><span class="p">(</span><span class="n">mot_de_passe</span><span class="p">)</span>
 <span class="n">mot_de_passe</span> <span class="o">=</span> <span class="n">ajouter_chiffre</span><span class="p">(</span><span class="n">mot_de_passe</span><span class="p">,</span><span class="n">chiffre</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Votre mot de passe est : &quot;</span><span class="p">,</span> <span class="n">mot_de_passe</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Votre mot de passe est : "</span><span class="p">,</span> <span class="n">mot_de_passe</span><span class="p">)</span>
 </code></pre></div>
 <div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>Saisir un chiffre (pas un nombre !) : 4
-Saisir votre phrase de code de plus de 8 mots : J&#39;adore passer mes vacances à réaliser des devoirs maison.
+Saisir votre phrase de code de plus de 8 mots : J'adore passer mes vacances à réaliser des devoirs maison.
 Votre mot de passe est :  J4APMVARddm
 </code></pre></div></p>
 
@@ -6384,11 +6384,13 @@ Votre mot de passe est :  J4APMVARddm
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.expand", "navigation.top", "toc.integrate", "header.autohide", "content.code.annotate", "content.code.copy", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js"></script>
       
         <script src="https://unpkg.com/mermaid@10.9.0/dist/mermaid.min.js"></script>
       
