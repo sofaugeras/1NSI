@@ -18,7 +18,7 @@
         <link rel="prev" href="../../sommaire/">
       
       
-        <link rel="next" href="../tpfortnite/">
+        <link rel="next" href="../tp_site_informaticienne/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>7.1 Pages web et interactions - Saint Sauveur 1NSI</title>
+        <title>Cours - Saint Sauveur 1NSI</title>
       
     
     
@@ -132,7 +132,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              7.1 Pages web et interactions
+              Cours
             
           </span>
         </div>
@@ -4458,7 +4458,7 @@
   <span class="md-ellipsis">
     
   
-    7.1 Pages web et interactions
+    Cours
   
 
     
@@ -4476,7 +4476,7 @@
   <span class="md-ellipsis">
     
   
-    7.1 Pages web et interactions
+    Cours
   
 
     
@@ -4525,10 +4525,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-html-css" class="md-nav__link">
+  <a href="#12-images-liens-absolus-et-liens-relatifs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2 html + css
+        1.2 Images, liens absolus et liens relatifs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-html-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 html + css
       
     </span>
   </a>
@@ -4606,6 +4617,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../tp_site_informaticienne/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TP HTML et CSS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../tpfortnite/" class="md-nav__link">
         
   
@@ -4613,7 +4652,7 @@
   <span class="md-ellipsis">
     
   
-    TP Fortnite
+    TP javascript
   
 
     
@@ -5757,16 +5796,163 @@ Il a été inventé en 1992 par <a href="https://fr.wikipedia.org/wiki/Tim_Berne
 <p class="admonition-title">Exercice 1</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Énoncé</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
-</div>
-</div>
+<div class="tabbed-block">
 <ul>
-<li>Créez un dossier contenant un fichier <code>mapage.html</code>.</li>
-<li>Créez une page contenant une image et un lien vers le site du lycée.</li>
-<li>Vous pouvez aussi utiliser un éditeur en ligne avec rendu instantané, du type <a href="https://www.w3schools.com/tryit/" target="_blank">https://www.w3schools.com/tryit/</a></li>
+<li>Créez un dossier <code>monsite</code> contenant un fichier <code>mapage.html</code>.</li>
+<li>Créez une page contenant <strong>une image</strong> et un lien vers le site du lycée.</li>
+<li>L'image doit être <strong>stockée dans votre dossier</strong> (voir 1.2 ci-dessous), pas appelée depuis un autre site.</li>
+<li>Vous pouvez aussi utiliser un éditeur en ligne avec rendu instantané, du type <a href="https://www.w3schools.com/tryit/" target="_blank">https://www.w3schools.com/tryit/</a>. Mais attention : dans un éditeur en ligne, vous ne pouvez pas stocker vos images dans un dossier. <strong>Pour cet exercice, utilisez un éditeur local.</strong></li>
 </ul>
 </div>
-<h3 id="12-html-css">1.2 <code>html</code> + <code>css</code><a class="headerlink" href="#12-html-css" title="Permanent link">⚓︎</a></h3>
+</div>
+</div>
+</div>
+<h3 id="12-images-liens-absolus-et-liens-relatifs">1.2 Images, liens absolus et liens relatifs<a class="headerlink" href="#12-images-liens-absolus-et-liens-relatifs" title="Permanent link">⚓︎</a></h3>
+<p>Pour afficher une image, on utilise la balise <code>&lt;img&gt;</code> avec l'attribut <code>src</code> (<em>source</em>) qui indique <strong>où trouver le fichier</strong> :</p>
+<div class="highlight"><span class="filename">HTML</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"..."</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Description de l'image"</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>L'attribut <code>alt</code> est obligatoire : il s'affiche si l'image est introuvable, et il est lu par les lecteurs d'écran.</p>
+<p>Tout l'enjeu est la valeur de <code>src</code>, c'est-à-dire <strong>le chemin</strong> vers l'image. Il en existe deux familles.</p>
+<h4 id="le-lien-absolu">Le lien absolu<a class="headerlink" href="#le-lien-absolu" title="Permanent link">⚓︎</a></h4>
+<p>Un lien absolu donne l'adresse <strong>complète</strong>, qui ne dépend pas de l'endroit où se trouve votre page.</p>
+<div class="highlight"><span class="filename">HTML</span><pre><span></span><code><span class="cm">&lt;!-- URL absolue : l'image est hébergée sur un autre site --&gt;</span>
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://www.exemple.com/photos/chat.jpg"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Un chat"</span><span class="p">&gt;</span>
+
+<span class="cm">&lt;!-- Chemin absolu sur VOTRE disque dur : à ne JAMAIS faire --&gt;</span>
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"C:\Users\Léa\Documents\monsite\chat.jpg"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Un chat"</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Pourquoi c'est dangereux pour une image</p>
+<ul>
+<li><strong>URL absolue vers un autre site</strong> : si ce site supprime ou déplace l'image, votre page est cassée. Vous dépendez de sa disponibilité, et vous utilisez peut-être une image dont vous n'avez pas le droit.</li>
+<li><strong>Chemin absolu sur votre disque</strong> : cela fonctionne sur votre ordinateur, <strong>et uniquement chez vous</strong>. Dès que vous envoyez votre site à un camarade ou que vous le mettez en ligne, l'image disparaît.</li>
+</ul>
+</div>
+<h4 id="le-lien-relatif">Le lien relatif<a class="headerlink" href="#le-lien-relatif" title="Permanent link">⚓︎</a></h4>
+<p>Un lien relatif indique le chemin <strong>à partir de l'endroit où se trouve le fichier html</strong>. Si vous déplacez tout le dossier du site, tout continue de fonctionner.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Règle à retenir</p>
+<p><strong>Tout ce dont votre page a besoin (images, css, JavaScript) doit se trouver dans le dossier du site, et être appelé par un lien relatif.</strong></p>
+</div>
+<p>Organisation recommandée :</p>
+<div class="highlight"><span class="filename">📋 Texte</span><pre><span></span><code>monsite/
+├── index.html
+├── style.css
+├── img/
+│   ├── chat.jpg
+│   └── logo.png
+└── pages/
+    └── contact.html
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Depuis le fichier...</th>
+<th style="text-align: left;">Pour atteindre...</th>
+<th style="text-align: left;">On écrit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>index.html</code></td>
+<td style="text-align: left;"><code>chat.jpg</code></td>
+<td style="text-align: left;"><code>img/chat.jpg</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>index.html</code></td>
+<td style="text-align: left;"><code>style.css</code></td>
+<td style="text-align: left;"><code>style.css</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pages/contact.html</code></td>
+<td style="text-align: left;"><code>chat.jpg</code></td>
+<td style="text-align: left;"><code>../img/chat.jpg</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>pages/contact.html</code></td>
+<td style="text-align: left;"><code>index.html</code></td>
+<td style="text-align: left;"><code>../index.html</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>img/chat.jpg</code> : on entre dans le dossier <code>img</code>, puis on prend <code>chat.jpg</code>.</li>
+<li><code>../</code> signifie <strong>« remonter d'un dossier »</strong>.</li>
+</ul>
+<div class="highlight"><span class="filename">HTML</span><pre><span></span><code><span class="cm">&lt;!-- Dans index.html --&gt;</span>
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"img/chat.jpg"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Un chat"</span><span class="p">&gt;</span>
+
+<span class="cm">&lt;!-- Dans pages/contact.html --&gt;</span>
+<span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"../img/chat.jpg"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Un chat"</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Vous avez déjà utilisé un lien relatif sans le savoir : dans le <code>&lt;head&gt;</code>, <code>href="style.css"</code> est un lien relatif.</p>
+<div class="admonition info">
+<p class="admonition-title">Et les liens entre pages, et vers l'extérieur ?</p>
+<p>La même distinction s'applique aux balises <code>&lt;a&gt;</code> :</p>
+<ul>
+<li>un lien <strong>interne</strong> (vers une autre page de <strong>votre</strong> site) est un lien <strong>relatif</strong> : <code>&lt;a href="contact.html"&gt;Contact&lt;/a&gt;</code> ;</li>
+<li>un lien <strong>externe</strong> (vers le site d'un autre) est <strong>forcément absolu</strong> : <code>&lt;a href="https://fr.wikipedia.org/"&gt;Wikipedia&lt;/a&gt;</code>, car on ne peut pas deviner où se trouve ce site.</li>
+</ul>
+<p>Règle simple : <em>ce qui est à moi, je l'appelle en relatif ; ce qui est à un autre, je le cite en absolu.</em> Mais une <strong>image</strong>, elle, doit toujours être <strong>chez moi</strong> (dans <code>img/</code>).</p>
+</div>
+<h4 id="image-legendee-libre-de-droits">Image légendée, libre de droits<a class="headerlink" href="#image-legendee-libre-de-droits" title="Permanent link">⚓︎</a></h4>
+<p>Une image qui illustre un propos mérite une légende. Pour associer l'image et sa légende, on utilise <code>&lt;figure&gt;</code> et <code>&lt;figcaption&gt;</code> :</p>
+<div class="highlight"><span class="filename">HTML</span><pre><span></span><code><span class="p">&lt;</span><span class="nt">figure</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">"img/chat.jpg"</span> <span class="na">alt</span><span class="o">=</span><span class="s">"Un chat gris endormi sur un canapé"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">figcaption</span><span class="p">&gt;</span>Un chat gris. Photo : Prénom Nom, licence CC BY-SA 4.0, source Wikimedia Commons.<span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Droits d'auteur</p>
+<p>Une image trouvée sur Internet n'est pas libre pour autant. Cherchez sur <a href="https://commons.wikimedia.org/" target="_blank">Wikimedia Commons</a>, et <strong>notez toujours l'auteur, la licence et l'adresse d'origine</strong>. C'est une exigence de votre mini-projet.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Nommer ses fichiers</p>
+<ul>
+<li>pas d'espaces, pas d'accents, pas de majuscules : <code>mon_chat.jpg</code> et non <code>Mon Chat (1).JPG</code> ;</li>
+<li>toujours le <code>/</code> (et non le <code>\</code> de Windows) dans les chemins web ;</li>
+<li>des images légères (un fichier de 8 Mo ralentit tout le site).</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 1 bis</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Énoncé</label><label for="__tabbed_2_2">Questions de compréhension</label><label for="__tabbed_2_3">Correction</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>Dans votre dossier <code>monsite</code>, créez un sous-dossier <code>img</code> et placez-y deux images (téléchargées depuis Wikimedia Commons ou prises par vous).</li>
+<li>Affichez-les dans <code>mapage.html</code> avec des <strong>liens relatifs</strong>, chacune avec son <code>alt</code>.</li>
+<li>Transformez l'une des deux en image <strong>légendée</strong> (<code>&lt;figure&gt;</code> + <code>&lt;figcaption&gt;</code>) avec auteur et licence.</li>
+<li>Créez un sous-dossier <code>pages</code> contenant <code>galerie.html</code>, qui affiche aussi une image du dossier <code>img</code>. Ajoutez dans <code>mapage.html</code> un lien vers <code>galerie.html</code> et, dans <code>galerie.html</code>, un lien retour.</li>
+<li><strong>Test final</strong> : copiez tout le dossier <code>monsite</code> sur une clé USB ou dans un autre dossier, et ouvrez la page. Toutes les images s'affichent-elles ?</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Pourquoi <code>&lt;img src="C:\Users\Léa\chat.jpg"&gt;</code> ne fonctionne-t-il pas sur l'ordinateur d'un camarade ?</li>
+<li>Que signifie <code>../</code> ?</li>
+<li>Vous êtes dans <code>pages/contact.html</code>. Écrivez le chemin vers <code>img/logo.png</code>.</li>
+<li>Une image affichée avec <code>https://...</code> fonctionne sans connexion Internet : vrai ou faux ?</li>
+<li>Le lien vers le site du lycée est-il absolu ou relatif ? Pourquoi ne peut-il pas être autrement ?</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Ce chemin n'existe que sur l'ordinateur de Léa : c'est un chemin absolu sur son disque.</li>
+<li>Remonter d'un dossier parent.</li>
+<li><code>../img/logo.png</code></li>
+<li>Faux : il faut une connexion, et le site distant doit toujours héberger l'image.</li>
+<li>Absolu (<code>https://...</code>) : l'adresse du lycée est <strong>hors</strong> de votre dossier, il faut donc l'adresse complète.</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Attention avec l'IA</p>
+<p>Quand une IA génère une page web, elle propose très souvent des images par URL (<code>https://images.unsplash.com/...</code>) ou des chemins qui n'existent pas chez vous. <strong>Réflexe à avoir</strong> : téléchargez l'image dans <code>img/</code> et remplacez le lien par un lien relatif. Si votre page « marche » seulement avec Internet ou seulement sur votre machine, c'est qu'un lien est mal écrit.</p>
+</div>
+<h3 id="13-html-css">1.3 <code>html</code> + <code>css</code><a class="headerlink" href="#13-html-css" title="Permanent link">⚓︎</a></h3>
 <p>L'acronyme <code>css</code>  signifie <em>Cascading Style Sheets</em>. L'idée est de regrouper dans un seul fichier toutes les informations relatives à la mise en forme des éléments de la page html. 
 De manière très simplifiée, on peut dire que le fichier <code>html</code> s'occupe <em>du fond</em> tandis que le fichier <code>css</code> s'occupe de la <em>forme</em>.</p>
 <p>Le fichier <code>css</code> (souvent nommé <code>style.css</code> et appelé <strong>feuille de style</strong>) doit être référencé au début du fichier <code>html</code> , au sein de la balise <code>&lt;head&gt;</code>.</p>
@@ -5821,6 +6007,25 @@ De manière très simplifiée, on peut dire que le fichier <code>html</code> s'o
 <li>Allez sur le site <a href="https://www.ouest-france.fr/bretagne/redon-35600/" target="_blank">Ouest-france</a>, et affichez l'inspecteur d'élement de votre navigateur (généralement accessible en appuyant sur <code>F12</code> )</li>
 <li>Modifiez le plus possible les attributs de style de la page.</li>
 </ul>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Séparer le fond et la forme</p>
+<p>Dans vos pages html, n'écrivez <strong>jamais</strong> de mise en forme : pas d'attribut <code>style="..."</code>, pas d'attribut <code>align</code>, pas de <code>&lt;center&gt;</code> ni de <code>&lt;font&gt;</code>. Le html décrit le <strong>contenu</strong>, le css décrit l'<strong>apparence</strong>. C'est une exigence de votre mini-projet.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 3 bis : TP guidé</p>
+<p>Vous allez maintenant construire un site complet de 4 pages, en suivant pas à pas un TP guidé :
+<strong><a href="../tp_site_informaticienne/">TP : le site web d'une informaticienne</a></strong></p>
+<p>Ce TP est l'entraînement du <strong><a href="../../../T8_Projets/1_SiteWeb/cours/">Mini Projet : site Web</a></strong>, que vous réaliserez ensuite sur votre personnage.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Ce que vous savez faire à la fin de cette partie</p>
+<ul>
+<li>Écrire une page <code>html</code> valide, avec des titres, des listes, des liens et des images ;</li>
+<li>distinguer un lien <strong>absolu</strong> d'un lien <strong>relatif</strong>, et ranger vos fichiers pour que votre site soit <strong>déplaçable</strong> ;</li>
+<li>mettre en forme vos pages avec <strong>une feuille css</strong>, sans rien écrire de la forme dans le html.</li>
+</ul>
+<p>👉 Prochaine étape : le <a href="../tp_site_informaticienne/">TP guidé</a>, puis votre <a href="../../../T8_Projets/1_SiteWeb/cours/">mini-projet</a>.</p>
 </div>
 <h2 id="2-quand-le-client-peut-agir-sur-sa-page-exemple-avec-javascript">2. Quand le client peut agir sur sa page : exemple avec JavaScript<a class="headerlink" href="#2-quand-le-client-peut-agir-sur-sa-page-exemple-avec-javascript" title="Permanent link">⚓︎</a></h2>
 <p><img alt="" class="center" src="../data/dynclient.png" /></p>
